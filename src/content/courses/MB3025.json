@@ -1,0 +1,1582 @@
+{
+  "code": "MB 3025",
+  "title": "Recombinant DNA Technology and Applications",
+  "level": 3,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Cut, paste, copy, read and rewrite DNA: the toolkit that turned molecular biology into an engineering discipline.",
+  "overview": "This course teaches the logic and the tools of recombinant DNA technology. We begin with the enzymes and basic methods used to isolate and handle nucleic acids, then build up to vectors and transformation, DNA libraries, the polymerase chain reaction, DNA sequencing and blotting, expression of recombinant proteins, site-directed mutagenesis and genome editing with CRISPR, and finally applications in medicine, agriculture and industry, with a closing unit on biosafety, ethics and regulation. The content follows the standard coverage of a BSc Honours recombinant DNA course.",
+  "whyItMatters": "Recombinant DNA underlies insulin and vaccine production, gene therapy, diagnostics such as PCR tests, genetically improved crops and almost every experiment in a modern molecular biology lab. Understanding why each step works makes you able to troubleshoot, design and critically read experiments.",
+  "prerequisites": [
+    "FD 2102",
+    "FD 2103"
+  ],
+  "careerLinks": [
+    "Molecular diagnostics laboratories",
+    "Biopharmaceutical and vaccine manufacturing",
+    "Agricultural biotechnology and plant breeding",
+    "Genomics and sequencing facilities",
+    "Research in molecular and synthetic biology"
+  ],
+  "studyTips": [
+    "Practise by drawing a cloning experiment from start to finish on paper: choose the enzymes, the vector, the selection and the screen, then predict what each control would show.",
+    "Always ask what each reagent is for and what would happen without it; troubleshooting questions in exams are usually this in disguise.",
+    "Learn the classic selection and screening systems (antibiotic resistance, blue-white, insertional inactivation) as a family, noting what each tells you.",
+    "Use free software (NEBcutter, SnapGene Viewer, Primer-BLAST) on real sequences so the techniques stop being abstract."
+  ],
+  "units": [
+    {
+      "id": "enzymes-and-isolation",
+      "title": "Molecular scissors and glue: enzymes, nucleic acid isolation and gel electrophoresis",
+      "hours": 5,
+      "hook": "In the early 1970s a few teams discovered that bacteria carry molecular scissors that cut DNA at precise sequences, and a molecular glue that stitches the pieces back together. With those two tools, DNA from any organism could be joined to any other for the first time.",
+      "learningObjectives": [
+        "Describe the biological role of restriction-modification systems and the properties of type II restriction enzymes",
+        "Distinguish sticky (cohesive) and blunt ends and explain how each is ligated",
+        "Describe the roles of DNA ligase, DNA polymerases, polynucleotide kinase, phosphatases and nucleases in cloning",
+        "Explain the principles of plasmid and genomic DNA isolation and RNA isolation",
+        "Explain how agarose gel electrophoresis separates DNA and how to interpret a gel"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Restriction endonuclease (type II)",
+          "definition": "An enzyme from bacteria that cuts double-stranded DNA at or near a specific palindromic recognition sequence, typically 4-8 base pairs long, as part of a defence against phage."
+        },
+        {
+          "term": "Sticky and blunt ends",
+          "definition": "Some enzymes (EcoRI) cut so that single-stranded overhangs remain, which pair with each other; others (SmaI) cut straight through to leave blunt ends."
+        },
+        {
+          "term": "Isoschizomer and compatible ends",
+          "definition": "Enzymes recognising the same sequence are isoschizomers; enzymes that give the same overhang (for example BamHI and BglII) can be joined even though their recognition sites differ."
+        },
+        {
+          "term": "DNA ligase",
+          "definition": "An enzyme (commonly T4 DNA ligase) that forms a phosphodiester bond between a 5' phosphate and a 3' hydroxyl, in an ATP-dependent reaction."
+        },
+        {
+          "term": "Alkaline phosphatase",
+          "definition": "An enzyme that removes 5' phosphates from a cut vector so that it cannot re-ligate to itself."
+        },
+        {
+          "term": "Alkaline lysis",
+          "definition": "A plasmid miniprep method in which SDS and NaOH lyse cells and denature DNA, and neutralisation lets small plasmids renature while chromosomal DNA precipitates with proteins."
+        },
+        {
+          "term": "Agarose gel electrophoresis",
+          "definition": "A method that separates DNA by size in an electric field, since DNA is negatively charged and smaller fragments migrate faster through the gel matrix."
+        },
+        {
+          "term": "DNA ladder",
+          "definition": "A mixture of fragments of known sizes run alongside samples as a size reference."
+        }
+      ],
+      "deeper": {
+        "beginner": "Bacteria defend themselves against invading viruses with enzymes that cut the viral DNA at specific short sequences, while protecting their own DNA by marking it with methyl groups. Scientists borrowed these enzymes as scissors: each cuts only where it finds its own sequence. When a cut leaves short single-stranded overhangs, any two pieces cut with the same enzyme will stick together, and DNA ligase then seals them permanently. To check the result, we run the DNA through a jelly-like gel with an electric current; the DNA is pulled towards the positive end, with small pieces running faster than large ones, like small marbles through a sieve. The 'scissors' analogy fits, but each enzyme is picky about what it will cut.",
+        "intermediate": "Many type II enzymes recognise palindromic sites, meaning the sequence reads the same on both strands in the 5' to 3' direction, so the enzyme cuts both strands symmetrically; digestion reactions need the right buffer, Mg2+ and usually 37 C, and star activity (relaxed specificity) can occur with excess enzyme, high glycerol or wrong buffer. Directional cloning uses two different enzymes so that the insert can ligate in only one orientation, and dephosphorylating a single-enzyme-cut vector reduces self-ligation. Ligation of sticky ends is efficient because the pairing holds ends together before ligase seals them, whereas blunt ends rely on high concentrations of DNA and ligase. A gel's resolving range depends on the agarose percentage; supercoiled, linear and nicked plasmid DNA run differently, which is a frequent source of confusion when reading gels of uncut plasmids.",
+        "advanced": "Beyond type II enzymes, type IIS enzymes cut outside their recognition sequence and underlie Golden Gate assembly, while homing endonucleases and nicking enzymes provide specialised options. Linear molecules migrate approximately in proportion to the logarithm of their size over a limited range, and large fragments require pulsed-field gel electrophoresis because they reorient poorly in a constant field. The efficiency of ligation depends on the ratio of insert to vector ends and on the concentration of DNA: at low concentration, intramolecular circularisation dominates, at high concentration, concatemers form. Methylation sensitivity matters in practice, for example Dam and Dcm methylation in common E. coli strains can block cutting by some enzymes (such as XbaI at certain overlaps), which is why unmethylated DNA from dam- strains is sometimes needed. DNA quality assessments by absorbance ratios (A260/A280 near 1.8 for DNA) are rough guides, since contaminants can mislead."
+      },
+      "commonMistakes": [
+        "Assuming that all restriction enzymes give sticky ends or that the cut is at the centre of the recognition site; check each enzyme.",
+        "Forgetting that ligase needs ATP and a 5' phosphate; a dephosphorylated insert will not ligate to a dephosphorylated vector.",
+        "Reading a gel of uncut plasmid as if it were linear; supercoiled DNA runs faster than the same plasmid in linear form.",
+        "Thinking a bigger band always means a bigger gene; compare with the ladder and consider the DNA's form."
+      ],
+      "videos": [
+        {
+          "youtubeId": "kbLGr7O24ng",
+          "title": "Restriction Enzyme Cloning Explained: How It Works",
+          "channel": "SnapGene",
+          "level": "beginner",
+          "whyWatch": "A concise picture of how enzymes cut vector and insert and how ligation joins them."
+        },
+        {
+          "youtubeId": "xMBC3q_CbTA",
+          "title": "DNA Ligation",
+          "channel": "New England Biolabs",
+          "level": "beginner",
+          "whyWatch": "A short animation of how ligase seals the nick between two DNA ends."
+        },
+        {
+          "youtubeId": "lU8gHrA5QCQ",
+          "title": "Gel Electrophoresis",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Explains why DNA moves, how to load a gel and how to read the pattern."
+        },
+        {
+          "youtubeId": "MxV6FXPn6VU",
+          "title": "Extracting Plasmid DNA: How To Do a Miniprep",
+          "channel": "LabXchange",
+          "level": "intermediate",
+          "whyWatch": "Walks through the alkaline lysis miniprep steps so you see why each buffer is used."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0022-2836(70)90149-x",
+          "title": "A Restriction enzyme from Hemophilus influenzae",
+          "authors": "Smith HO, Wilcox KW",
+          "year": 1970,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "The report of the first type II restriction enzyme to cut DNA at a defined site; it opened the way to mapping and cloning DNA and earned a Nobel Prize in 1978."
+        },
+        {
+          "doi": "10.1073/pnas.69.10.2904",
+          "title": "Biochemical Method for Inserting New Genetic Information into DNA of Simian Virus 40: Circular SV40 Molecules Containing Lambda Phage Genes and the Galactose Operon of Escherichia coli",
+          "authors": "Jackson DA, Symons RH, Berg P",
+          "year": 1972,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "advanced",
+          "whyItMatters": "Describes the first in vitro joining of DNA from different organisms, the experiment that launched recombinant DNA technology and also raised the first biosafety concerns."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NEBcutter",
+          "provider": "New England Biolabs",
+          "type": "tool",
+          "url": "https://nc3.neb.com/NEBcutter/",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste a DNA sequence and see where commercially available enzymes cut; ideal for practising digest design."
+        },
+        {
+          "title": "Addgene Molecular Biology Reference",
+          "provider": "Addgene",
+          "type": "reference",
+          "url": "https://www.addgene.org/mol-bio-reference/",
+          "free": true,
+          "level": "beginner",
+          "note": "Plain-language guides to restriction digests, ligation, gel electrophoresis and plasmid preparation."
+        },
+        {
+          "title": "SnapGene Viewer",
+          "provider": "SnapGene",
+          "type": "tool",
+          "url": "https://www.snapgene.com/snapgene-viewer",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free software to view plasmid maps and simulate digests, a quick way to check a cloning plan."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why will a vector cut with a single enzyme and treated with alkaline phosphatase not re-ligate to itself?",
+          "options": [
+            "Its 5' ends lack the phosphate needed by ligase",
+            "Its ends are blunt",
+            "Ligase cannot use sticky ends",
+            "The vector has lost its origin"
+          ],
+          "answer": 0,
+          "explanation": "Ligase needs a 5' phosphate and a 3' hydroxyl; removing the vector's 5' phosphates blocks self-ligation while an insert with phosphates can still join."
+        },
+        {
+          "question": "After electrophoresis, which DNA fragments will be closest to the wells?",
+          "options": [
+            "The largest fragments",
+            "The smallest fragments",
+            "Single-stranded fragments only",
+            "Supercoiled plasmids only"
+          ],
+          "answer": 0,
+          "explanation": "Larger fragments move more slowly through the agarose matrix, so they remain nearer the wells."
+        },
+        {
+          "question": "Which pair of enzymes would give compatible cohesive ends?",
+          "options": [
+            "BamHI and BglII",
+            "EcoRI and SmaI",
+            "SmaI and HindIII",
+            "PstI and EcoRV"
+          ],
+          "answer": 0,
+          "explanation": "BamHI and BglII both leave 5' GATC overhangs, so their ends can be ligated together although the hybrid site is not recut by either enzyme."
+        }
+      ]
+    },
+    {
+      "id": "vectors-and-transformation",
+      "title": "Cloning vectors and getting DNA into cells",
+      "hours": 6,
+      "hook": "A cloning vector is a vehicle: it carries a stranger's DNA into a host cell and makes sure the DNA is copied each time the cell divides. Choose the wrong vehicle and your gene is lost; choose the right one and a single bacterium becomes a factory.",
+      "learningObjectives": [
+        "Describe the essential features of a plasmid cloning vector (origin, selectable marker, multiple cloning site)",
+        "Explain selection and screening systems such as antibiotic resistance, insertional inactivation and blue-white screening",
+        "Compare plasmids, phage lambda, cosmids, BACs and YACs by insert capacity and use",
+        "Describe methods of transformation: chemical competence, electroporation and others",
+        "Explain the difference between cloning vectors and expression vectors"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Origin of replication (ori)",
+          "definition": "The sequence that allows a plasmid to replicate in the host and determines its copy number and compatibility."
+        },
+        {
+          "term": "Selectable marker",
+          "definition": "A gene, usually antibiotic resistance, that lets only cells containing the vector grow on selective medium."
+        },
+        {
+          "term": "Multiple cloning site (polylinker)",
+          "definition": "A short region with many unique restriction sites where foreign DNA can be inserted."
+        },
+        {
+          "term": "Blue-white screening",
+          "definition": "A screen in which insertion of DNA into lacZ-alpha stops beta-galactosidase from cleaving X-gal, so recombinant colonies are white and non-recombinant colonies are blue."
+        },
+        {
+          "term": "Competent cells",
+          "definition": "Bacteria made able to take up DNA, by chemical treatment (for example calcium chloride and heat shock) or by electroporation."
+        },
+        {
+          "term": "Lambda vector and cosmid",
+          "definition": "Lambda phage vectors carry about 10-20 kb of insert; cosmids combine plasmid features with lambda cos sites and accept about 35-45 kb."
+        },
+        {
+          "term": "BAC and YAC",
+          "definition": "Bacterial and yeast artificial chromosomes that accept hundreds of kilobases (BACs) or up to about a megabase (YACs) and were used in genome projects."
+        },
+        {
+          "term": "Shuttle vector",
+          "definition": "A vector with origins and markers for two hosts (for example E. coli and yeast) so it can be built in one and used in another."
+        },
+        {
+          "term": "Expression vector",
+          "definition": "A vector that also carries a promoter, ribosome binding site and other signals so that the cloned gene is transcribed and translated."
+        }
+      ],
+      "deeper": {
+        "beginner": "A vector is a small circle of DNA, usually a plasmid, that a bacterium can copy. We open it with an enzyme, slot in our gene, seal it and then persuade bacteria to take it up. Because only a tiny fraction of bacteria take it up, we need a way to find them. The plasmid carries a gene for antibiotic resistance, so only cells with the plasmid survive when the antibiotic is in the dish. A second trick, blue-white screening, tells us which of those colonies actually contain an insert and which only resealed the empty vector. Think of the plasmid as a delivery van with a built-in tracking number; the analogy breaks since plasmids are also copied by the cell's own machinery.",
+        "intermediate": "In pUC-type vectors, the lacZ-alpha fragment is encoded on the plasmid while the host carries the complementary lacZ-omega (lacZDeltaM15), so alpha-complementation restores beta-galactosidase and cells turn blue on X-gal with IPTG; an insert in the polylinker interrupts the alpha peptide and the colony is white. Copy number is a property of the origin: pUC derivatives are high-copy, pBR322 is moderate and some vectors with pSC101 origins are low-copy, useful for toxic genes. Plasmids with the same incompatibility group cannot be kept together in one cell. Capacity matters: ordinary plasmids handle up to about 10 kb comfortably, lambda 10-20 kb, cosmids 35-45 kb, and BAC about 100-300 kb. Transformation efficiency (transformants per microgram DNA) depends on cell preparation and DNA form; electroporation is usually more efficient than chemical methods, and ligation mixes of large plasmids transform less efficiently.",
+        "advanced": "Vector design now makes use of modular, standardised systems such as Gateway recombination, Golden Gate and Gibson-based toolkits, which allow multiple parts to be assembled in one step and shuttled among vector backbones. In choosing a selection marker, keep in mind that beta-lactamase secreted by colonies degrades ampicillin around them, producing satellite colonies if plates are incubated for too long; carbenicillin or other markers are sometimes used to reduce this. Mobilisation and conjugative functions are intentionally removed from laboratory vectors, and some systems include containment features (for example auxotrophic host strains) as biosafety measures. For plants and animals, vectors derive from Agrobacterium Ti plasmids, retroviruses, lentiviruses and adeno-associated virus, and the choice depends on insert size, integration behaviour, host range and safety."
+      },
+      "commonMistakes": [
+        "Calling every white colony a correct clone; white colonies can contain deletions, wrong inserts or no vector at all, so check by colony PCR or digest.",
+        "Forgetting X-gal and IPTG both need to be present for blue-white screening, and the host must carry the lacZ-omega part.",
+        "Mixing up 'cloning vector' and 'expression vector': a cloning vector need not express the insert.",
+        "Assuming larger inserts are always better; insert size affects stability and transformation efficiency."
+      ],
+      "animation": "cloning-cut-paste",
+      "videos": [
+        {
+          "youtubeId": "NoyeCMmP5tw",
+          "title": "Molecular Cloning explained for Beginners",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A clear overview of the whole cloning pipeline from vector to colony screening."
+        },
+        {
+          "youtubeId": "u5H06cjO91M",
+          "title": "Blue-White Screen & Transformation",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Explains alpha-complementation and what the colony colours mean."
+        },
+        {
+          "youtubeId": "7Ul9RVYG5CM",
+          "title": "The Mechanism of Transformation with Competent Cells",
+          "channel": "New England Biolabs",
+          "level": "intermediate",
+          "whyWatch": "A short explanation of how heat shock and electroporation let DNA enter bacteria."
+        },
+        {
+          "youtubeId": "1PqWnu2uBrY",
+          "title": "Bacterial Transformations",
+          "channel": "Addgene",
+          "level": "intermediate",
+          "whyWatch": "Shows the practical steps and controls for a transformation experiment."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.70.11.3240",
+          "title": "Construction of Biologically Functional Bacterial Plasmids In Vitro",
+          "authors": "Cohen SN, Chang ACY, Boyer HW, Helling RB",
+          "year": 1973,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The first demonstration that a plasmid cut with a restriction enzyme, re-ligated and put back into E. coli still works, and the foundation of gene cloning.",
+          "readingQuestions": [
+            "How did the authors show that the new plasmid carried two antibiotic resistance genes?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Addgene Plasmid Guides and Protocols",
+          "provider": "Addgene",
+          "type": "tutorial",
+          "url": "https://www.addgene.org/protocols/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Practical protocols for transformation, cloning and screening, with troubleshooting tips."
+        },
+        {
+          "title": "Learn.Genetics: Gene cloning and related labs",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/labs/",
+          "free": true,
+          "level": "beginner",
+          "note": "Virtual labs on gel electrophoresis, PCR and other techniques, good for seeing the lab workflow before a practical."
+        },
+        {
+          "title": "Molecular Cell Biology (Lodish): Recombinant DNA chapter",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook treatment of vectors, libraries and DNA analysis with labelled figures."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "On a plate with ampicillin, X-gal and IPTG, a white colony of a pUC-transformed lacZDeltaM15 host most likely contains:",
+          "options": [
+            "A plasmid with an insert that disrupted lacZ-alpha",
+            "No plasmid",
+            "A plasmid without an insert",
+            "A non-recombinant plasmid with an intact lacZ-alpha"
+          ],
+          "answer": 0,
+          "explanation": "Cells without a plasmid would not grow on ampicillin, and an intact lacZ-alpha gives blue colonies; a white colony that grows has a plasmid whose lacZ-alpha is probably interrupted by an insert."
+        },
+        {
+          "question": "Which vector would you choose to clone a 150 kb fragment of human DNA?",
+          "options": [
+            "A BAC",
+            "A pUC plasmid",
+            "Lambda phage",
+            "A cosmid"
+          ],
+          "answer": 0,
+          "explanation": "BACs accept inserts of roughly 100-300 kb, well beyond the capacity of plasmids, lambda and cosmids."
+        },
+        {
+          "question": "Which component of an expression vector is absent from a basic cloning vector?",
+          "options": [
+            "Promoter and ribosome binding site for the insert",
+            "Origin of replication",
+            "Selectable marker",
+            "Multiple cloning site"
+          ],
+          "answer": 0,
+          "explanation": "Expression vectors add the signals needed for the cloned gene to be transcribed and translated in the host."
+        }
+      ]
+    },
+    {
+      "id": "dna-libraries",
+      "title": "DNA libraries and finding a gene",
+      "hours": 5,
+      "hook": "A genome library is like a collection of torn-up pages of an encyclopedia, each stored in its own bacterial colony; finding the page you want means knowing how to look. Library screening was how most genes were first isolated before genomes could be read at the click of a button.",
+      "learningObjectives": [
+        "Compare genomic and cDNA libraries and decide which is suitable for a purpose",
+        "Describe how mRNA is converted to cDNA with reverse transcriptase",
+        "Calculate the number of clones required for a library to represent a genome",
+        "Describe screening by nucleic acid hybridization, antibody screening and functional complementation",
+        "Explain the use of expression libraries and the role of probes"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Genomic library",
+          "definition": "A collection of clones containing fragments of the entire genome, including introns and regulatory regions."
+        },
+        {
+          "term": "cDNA library",
+          "definition": "A collection of clones of DNA copies of mRNA from one tissue or condition; it lacks introns and reflects expressed genes."
+        },
+        {
+          "term": "Reverse transcriptase",
+          "definition": "An RNA-dependent DNA polymerase used to make the first cDNA strand from an mRNA template, commonly primed on the poly(A) tail with oligo(dT)."
+        },
+        {
+          "term": "Library coverage",
+          "definition": "The number of clones N needed to have probability P of containing a given sequence is N = ln(1 - P) / ln(1 - f), where f is the fraction of the genome in one clone."
+        },
+        {
+          "term": "Colony or plaque hybridization",
+          "definition": "Transfer of colonies or plaques to a membrane, lysis and denaturation of DNA, and detection with a labelled complementary probe."
+        },
+        {
+          "term": "Probe",
+          "definition": "A labelled DNA or RNA sequence (radioactive, fluorescent or enzyme-labelled) that finds its complementary sequence by base pairing."
+        },
+        {
+          "term": "Expression library",
+          "definition": "A cDNA library in an expression vector so that clones make protein that can be detected by an antibody or by function."
+        },
+        {
+          "term": "Functional complementation",
+          "definition": "Identification of a gene by its ability to rescue a mutant phenotype in a host cell."
+        }
+      ],
+      "deeper": {
+        "beginner": "A genomic library contains the whole genome cut into pieces, each housed in a separate vector, while a cDNA library contains only copies of the messages the cell was reading when we collected it. If you want a gene of a given tissue without its introns, you use cDNA; if you want its promoter and the whole structure, you use genomic DNA. To find a particular clone among hundreds of thousands, we press a membrane onto the plates to lift copies of every colony, then dip it in a solution with a labelled piece of DNA that sticks to the gene of interest. Wherever the label lights up marks the clone we want.",
+        "intermediate": "A sensible genomic library is made by partial digestion with a frequently cutting enzyme (such as Sau3AI) to give overlapping large fragments, ligated into lambda or BAC vectors; the formula for coverage shows that to have a 99% chance of finding any sequence, a library from a 3 Gb genome in 20 kb fragments needs about 3 x 10^6 clones. cDNA synthesis uses oligo(dT) or random primers, reverse transcriptase to make the first strand, then RNase H and DNA polymerase I (or other methods) for the second strand, followed by linkers for cloning. cDNA libraries reflect relative mRNA abundance, so rare transcripts are under-represented unless normalised. When no probe is available, one can screen by antibody if the library is expressed, or use oligonucleotide probes designed from protein sequence, remembering that the genetic code is degenerate.",
+        "advanced": "Positional cloning and the Human Genome Project relied on overlapping BAC and YAC libraries, built into physical maps by fingerprinting, and sequencing of BAC ends. Today most cDNA and genomic questions are answered by direct sequencing, but library-based approaches persist, such as cDNA or CRISPR guide libraries screened by selection or by sequencing of barcodes in pooled screens. When creating pooled libraries, representation and bias need to be controlled, including PCR jackpotting and cloning bias against toxic or unstable sequences; sequencing the library to check uniformity is now standard. The formula for coverage assumes random, equal-probability fragments, which real libraries only approximate, so quoting a theoretical coverage should be accompanied by empirical validation."
+      },
+      "commonMistakes": [
+        "Expecting a cDNA library to contain promoters, introns or genes not expressed in the source tissue.",
+        "Forgetting that eukaryotic cDNA expressed in E. coli lacks splicing, so a genomic clone will not give the protein in bacteria.",
+        "Using the coverage formula with fragment size in the wrong units; use the fraction of the genome per clone.",
+        "Believing a positive hybridization signal proves a full-length clone; confirm by sequencing."
+      ],
+      "videos": [
+        {
+          "youtubeId": "SvjeCxVu2dI",
+          "title": "Genomic and cDNA Libraries | MIT 7.01SC Fundamentals of Biology",
+          "channel": "MIT OpenCourseWare",
+          "level": "intermediate",
+          "whyWatch": "A clear explanation of building and using genomic and cDNA libraries."
+        },
+        {
+          "youtubeId": "VvusmIcA6i0",
+          "title": "cDNA library vs Genomic DNA library",
+          "channel": "Animated biology With arpan",
+          "level": "beginner",
+          "whyWatch": "A quick animation comparing how each library is made and what it contains."
+        },
+        {
+          "youtubeId": "1HEF6lIJlb8",
+          "title": "Construction of Genomic Libraries",
+          "channel": "Vital Science",
+          "level": "beginner",
+          "whyWatch": "Shows partial digestion, insertion into vector and packaging to build a library."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.72.10.3961",
+          "title": "Colony hybridization: a method for the isolation of cloned DNAs that contain a specific gene",
+          "authors": "Grunstein M, Hogness DS",
+          "year": 1975,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Introduced the method of lifting colonies onto filters and probing them, which made it practical to find a single gene among thousands of clones."
+        },
+        {
+          "doi": "10.1126/science.322279",
+          "title": "Screening λgt Recombinant Clones by Hybridization to Single Plaques in Situ",
+          "authors": "Benton WD, Davis RW",
+          "year": 1977,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The plaque equivalent of colony hybridization for phage libraries, a method used for decades in gene isolation."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI Gene",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/gene/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up any gene's sequence, introns and transcripts to compare what a genomic versus a cDNA clone would contain."
+        },
+        {
+          "title": "DNA Learning Center",
+          "provider": "Cold Spring Harbor Laboratory",
+          "type": "interactive",
+          "url": "https://dnalc.cshl.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Animations and virtual labs explaining basic recombinant DNA concepts."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which library would you screen to find the promoter of a human gene?",
+          "options": [
+            "Genomic library",
+            "cDNA library from liver",
+            "cDNA library from brain",
+            "A poly(A) RNA library"
+          ],
+          "answer": 0,
+          "explanation": "Promoters and introns are present in genomic DNA but absent from cDNA, which derives from processed mRNA."
+        },
+        {
+          "question": "Oligo(dT) is used to prime cDNA synthesis because:",
+          "options": [
+            "Most eukaryotic mRNAs have a poly(A) tail",
+            "It binds the 5' cap",
+            "It anneals to rRNA",
+            "It is a DNA polymerase"
+          ],
+          "answer": 0,
+          "explanation": "Oligo(dT) anneals to the poly(A) tail, selectively priming reverse transcription from mRNAs."
+        },
+        {
+          "question": "A cDNA library is made from cells that do not express gene X. What is expected?",
+          "options": [
+            "Gene X will be absent or very rare",
+            "Gene X will be present with introns",
+            "Gene X will be at highest abundance",
+            "Gene X will be present in the genomic library only"
+          ],
+          "answer": 0,
+          "explanation": "cDNA libraries represent mRNAs present in the source cells, so non-expressed genes are not represented."
+        }
+      ]
+    },
+    {
+      "id": "pcr-and-assembly",
+      "title": "The polymerase chain reaction and modern DNA assembly",
+      "hours": 6,
+      "hook": "In 1983, on a night drive through the California hills, Kary Mullis imagined doubling a stretch of DNA again and again in a test tube. The polymerase chain reaction became the most widely used technique in molecular biology, and a basis of everything from forensic tests to infection diagnostics.",
+      "learningObjectives": [
+        "Explain the steps of a PCR cycle and the role of each component",
+        "Design primers using criteria of length, melting temperature and specificity",
+        "Explain the exponential nature of PCR and the factors that cause failure or contamination",
+        "Describe RT-PCR, quantitative PCR and the use of Ct values",
+        "Describe cloning by PCR and assembly methods such as Gibson assembly and Golden Gate",
+        "Interpret controls in a PCR experiment"
+      ],
+      "keyConcepts": [
+        {
+          "term": "PCR cycle",
+          "definition": "Denaturation (about 94-98 C), primer annealing (typically 50-65 C) and extension (about 72 C for Taq); repeated 25-35 times."
+        },
+        {
+          "term": "Thermostable DNA polymerase",
+          "definition": "An enzyme such as Taq (from Thermus aquaticus) that survives repeated heating; proofreading enzymes such as Pfu give higher fidelity."
+        },
+        {
+          "term": "Primer",
+          "definition": "A short oligonucleotide (commonly 18-25 nt) that anneals to the template and provides the 3' end for extension."
+        },
+        {
+          "term": "Melting temperature (Tm)",
+          "definition": "The temperature at which half of a primer-template duplex is melted; primer pairs should have similar Tm and annealing is set a few degrees below it."
+        },
+        {
+          "term": "RT-PCR",
+          "definition": "PCR performed after reverse transcription of RNA to cDNA; the term should be distinguished from real-time PCR."
+        },
+        {
+          "term": "Quantitative (real-time) PCR",
+          "definition": "PCR in which a fluorescent dye or probe reports product accumulation each cycle; the threshold cycle (Ct) is lower when more template was present."
+        },
+        {
+          "term": "Gibson assembly",
+          "definition": "An isothermal reaction using an exonuclease, a polymerase and a ligase to join DNA fragments with overlapping ends in one tube."
+        },
+        {
+          "term": "Golden Gate assembly",
+          "definition": "A one-pot method using a type IIS restriction enzyme and ligase to join multiple fragments in an ordered way through designed overhangs."
+        },
+        {
+          "term": "No-template control",
+          "definition": "A reaction without template that detects contamination; essential in any PCR experiment."
+        }
+      ],
+      "deeper": {
+        "beginner": "PCR is a way of making millions of copies of a chosen stretch of DNA. The ingredients are the DNA template, two short primers that mark the beginning and end of the stretch, a heat-stable polymerase, and the four DNA building blocks. A machine called a thermocycler repeats three temperature steps: heat to separate the strands, cool a little so the primers stick, and warm a bit so the polymerase builds new strands. Each cycle roughly doubles the amount of target, so after 30 cycles there is an enormously large amount. The 'photocopier' picture is useful, but since PCR copies the copies, any contamination is amplified just as faithfully.",
+        "intermediate": "In theory the amount doubles every cycle, so n cycles give 2^n copies, but in practice efficiency falls as reagents run out and products compete with primers, giving a plateau; this is why end-point band intensity is not a good measure of starting amount. Primer design requires 40-60% GC, no long runs of one base, avoiding self-complementarity that forms hairpins or primer-dimers, and checking specificity in a tool such as Primer-BLAST. In qPCR, quantification uses Ct values in the exponential phase, normalised to reference genes by the delta-delta-Ct method; SYBR Green detects any double-stranded product, so a melt curve is needed to confirm one product, while TaqMan probes add specificity. Gene cloning by PCR uses primers with restriction sites or homology tails, and Gibson and Golden Gate assemblies let several fragments be joined without depending on a single available restriction site.",
+        "advanced": "Fidelity differs widely between polymerases: Taq lacks 3'-5' proofreading and has an error rate on the order of 10^-5 per base per doubling, while proofreading enzymes can be about 10-50 times more accurate, which matters when cloning for protein expression. Applications include hot-start enzymes to reduce non-specific priming, touchdown and nested PCR to improve specificity, multiplex PCR, and digital PCR for absolute quantification by partitioning template molecules into thousands of droplets. For qPCR, publishing guidelines (MIQE) stress reporting efficiency, reference gene validation and the integrity of RNA. Clinical PCR assays require validation of limit of detection, specificity and protection from carry-over contamination, for example with dUTP and uracil-DNA glycosylase. Assembly design involves the calculation of overlap length and Tm, minimising secondary structure at junctions and avoiding internal sites for the type IIS enzyme used in Golden Gate."
+      },
+      "commonMistakes": [
+        "Confusing RT-PCR (reverse transcription PCR) with real-time PCR; they can be combined as RT-qPCR.",
+        "Setting the annealing temperature above the primer Tm; no product results, whereas too low gives non-specific bands.",
+        "Assuming a band means the PCR worked as intended; verify the size and sequence.",
+        "Omitting no-template and no-RT controls, which are needed to rule out contamination and genomic DNA carry-over."
+      ],
+      "animation": "pcr-cycles",
+      "videos": [
+        {
+          "youtubeId": "Q2847XA-Rfk",
+          "title": "PCR explained | biology animation",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A neat two-minute animation of the PCR cycle."
+        },
+        {
+          "youtubeId": "a5jmdh9AnS4",
+          "title": "PCR (Polymerase Chain Reaction)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Explains each step and why each temperature is needed in a friendly style."
+        },
+        {
+          "youtubeId": "OK7_ReXhVaQ",
+          "title": "Polymerase Chain Reaction (PCR) | MIT 7.01SC Fundamentals of Biology",
+          "channel": "MIT OpenCourseWare",
+          "level": "intermediate",
+          "whyWatch": "A lecturer's explanation with the exponential amplification and primer concepts."
+        },
+        {
+          "youtubeId": "1kvy17ugI4w",
+          "title": "Overview of qPCR",
+          "channel": "New England Biolabs",
+          "level": "intermediate",
+          "whyWatch": "Introduces fluorescence detection, Ct values and basic design choices for qPCR."
+        },
+        {
+          "youtubeId": "f0EewZ17hQE",
+          "title": "Gibson Assembly Explained: How It Works and When to Use It",
+          "channel": "SnapGene",
+          "level": "intermediate",
+          "whyWatch": "A short explanation of overlap-based assembly with exonuclease, polymerase and ligase."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.239.4839.487",
+          "title": "Primer-directed enzymatic amplification of DNA with a thermostable DNA polymerase",
+          "authors": "Saiki RK, Gelfand DH, Stoffel S, Scharf SJ, Higuchi R, Horn GT, Mullis KB, Erlich HA",
+          "year": 1988,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Showed that a heat-stable polymerase makes PCR automated and robust, turning an elegant idea into the everyday technique.",
+          "readingQuestions": [
+            "What advantages did the thermostable polymerase give over the Klenow fragment used earlier?"
+          ]
+        },
+        {
+          "doi": "10.1038/nmeth.1318",
+          "title": "Enzymatic assembly of DNA molecules up to several hundred kilobases",
+          "authors": "Gibson DG, Young L, Chuang RY, Venter JC, Hutchison CA, Smith HO",
+          "year": 2009,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "Describes the one-pot isothermal assembly now used everywhere to construct plasmids and even whole synthetic genomes."
+        },
+        {
+          "doi": "10.1373/clinchem.2008.112797",
+          "title": "The MIQE Guidelines: Minimum Information for Publication of Quantitative Real-Time PCR Experiments",
+          "authors": "Bustin SA, Benes V, Garson JA, Hellemans J, Huggett J, Kubista M, Mueller R, Nolan T, Pfaffl MW, Shipley GL, Vandesompele J, Wittwer CT",
+          "year": 2009,
+          "journal": "Clinical Chemistry",
+          "level": "advanced",
+          "whyItMatters": "Explains the pitfalls that make many qPCR results unreliable and the controls and reporting that make them trustworthy."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI Primer-BLAST",
+          "provider": "NCBI",
+          "type": "tool",
+          "url": "https://www.ncbi.nlm.nih.gov/tools/primer-blast/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Design primers and check at once that they amplify only your target; a standard tool for research labs."
+        },
+        {
+          "title": "Learn.Genetics Virtual Lab: PCR",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/labs/pcr/",
+          "free": true,
+          "level": "beginner",
+          "note": "A virtual PCR experiment that lets you set up reagents and see why each matters."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "After 10 perfectly efficient cycles of PCR starting with one template molecule, how many copies exist (ignoring product from the first cycles lacking defined ends)?",
+          "options": [
+            "About 1024",
+            "About 100",
+            "About 20",
+            "About 10000"
+          ],
+          "answer": 0,
+          "explanation": "Amplification doubles each cycle, so ten cycles give 2^10 = 1024 copies in an ideal case."
+        },
+        {
+          "question": "In a qPCR experiment, sample A has a lower Ct value than sample B for the same gene. This means:",
+          "options": [
+            "Sample A had more starting template",
+            "Sample B had more starting template",
+            "Sample A has a larger amplicon",
+            "Both have the same template amount"
+          ],
+          "answer": 0,
+          "explanation": "A lower Ct means that fluorescence crossed the threshold sooner, which happens when more template was present at the start."
+        },
+        {
+          "question": "Which control best detects contamination of PCR reagents with template DNA?",
+          "options": [
+            "A no-template control",
+            "A positive control",
+            "A ladder lane",
+            "An annealing temperature gradient"
+          ],
+          "answer": 0,
+          "explanation": "If the no-template reaction gives product, something in the reagents or environment contains amplifiable DNA."
+        }
+      ]
+    },
+    {
+      "id": "sequencing-and-blotting",
+      "title": "Reading DNA: sequencing and blotting techniques",
+      "hours": 5,
+      "hook": "The first genome sequenced, a small bacteriophage, took years in 1977; today a human genome can be read in a day for a few hundred dollars. Understanding how sequencing works shows why the cost curve changed so dramatically.",
+      "learningObjectives": [
+        "Explain the principle of Sanger chain-termination sequencing",
+        "Describe the workflow of short-read sequencing by synthesis and compare it with long-read approaches",
+        "Describe Southern, northern and western blotting and what each detects",
+        "Select an appropriate method for a defined question (variant check, whole genome, expression profile)",
+        "Interpret simple sequencing outputs and quality scores"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Dideoxynucleotide (ddNTP)",
+          "definition": "A nucleotide lacking the 3' hydroxyl, so that when it is incorporated into a growing strand, synthesis stops."
+        },
+        {
+          "term": "Sanger sequencing",
+          "definition": "Primer extension with a small proportion of fluorescent ddNTPs, producing a ladder of chain-terminated fragments separated by capillary electrophoresis and read by fluorescence."
+        },
+        {
+          "term": "Sequencing by synthesis",
+          "definition": "A short-read next-generation method in which fluorescent reversible terminators are added to clusters of identical templates, imaged and then unblocked, one base per cycle."
+        },
+        {
+          "term": "Long-read sequencing",
+          "definition": "Methods that read single molecules of many kilobases (for example nanopore and PacBio) useful for repeats, structural variants and assembly."
+        },
+        {
+          "term": "Read depth (coverage)",
+          "definition": "The average number of times each base in the genome is covered by reads; higher depth improves accuracy for variant calling."
+        },
+        {
+          "term": "Phred quality score",
+          "definition": "A logarithmic measure of base-call accuracy; Q30 means a 1 in 1000 chance of error."
+        },
+        {
+          "term": "Southern blot",
+          "definition": "Transfer of DNA from a gel to a membrane and detection of a specific sequence with a labelled probe."
+        },
+        {
+          "term": "Northern and western blots",
+          "definition": "Analogous methods for RNA (with a nucleic acid probe) and for proteins (with an antibody)."
+        }
+      ],
+      "deeper": {
+        "beginner": "To read a DNA sequence, the classic Sanger method copies the DNA but randomly stops the copy at each of the four bases using a special building block that blocks further extension. The result is a set of fragments each ending at a known letter, and sorting them by length reveals the sequence. Modern machines read millions of short fragments in parallel by watching a flash of colour each time a base is added. Blotting is different: it does not read sequence but detects a specific DNA, RNA or protein after it has been separated on a gel and transferred to a membrane, a way of finding the needle within a haystack. The name Southern, after Edwin Southern, is the only one that is a person's name; northern and western are playful extensions.",
+        "intermediate": "In Sanger sequencing with dye-labelled ddNTPs, one tube contains the template, a primer, polymerase, all four dNTPs and four fluorescent ddNTPs; fragments are separated in a capillary and the colour at each size gives the base. It reads up to about 800-1000 bases with high accuracy and remains the standard for verifying plasmids and PCR products. In sequencing by synthesis, DNA fragments with adapters are amplified on a flow cell into clusters and read cycle by cycle, producing hundreds of millions to billions of short reads that are aligned to a reference or assembled; paired reads help place repeats. Nanopore methods detect changes in ionic current as single DNA strands pass through a pore, and can read very long molecules. In blotting, the transfer step is by capillary action or electric field, the membrane is blocked, probed, washed and detected; stringency of washing controls how well matched the probe-target must be.",
+        "advanced": "Sequencing error profiles differ by technology: short-read platforms have low per-base error (mostly substitutions), whereas long-read methods have higher raw error that is improved by consensus and by newer chemistries. Applications drive the design: whole-genome sequencing, exome capture, RNA-seq (requiring reverse transcription and attention to library strandedness), ChIP-seq and amplicon sequencing of 16S rRNA genes all come with their own biases, such as GC bias and PCR duplicates. For variant calling, read depth, mapping quality and strand balance matter, and Sanger confirmation is often still used for clinically important calls. Blotting remains useful when orthogonal confirmation is wanted, for example Southern blots to determine transgene copy number and integration pattern or western blots to confirm the size and abundance of a protein; they are semi-quantitative unless carefully calibrated with loading controls and linear-range detection."
+      },
+      "commonMistakes": [
+        "Thinking ddNTPs are used in place of dNTPs; they are added in small proportion so that chain termination occurs at random positions.",
+        "Calling a western blot a nucleic acid technique, or mixing up which blot detects what.",
+        "Assuming higher read length always means better data; accuracy, throughput and cost determine the choice.",
+        "Treating a sequencing chromatogram as perfect; the first and last tens of bases are less reliable."
+      ],
+      "videos": [
+        {
+          "youtubeId": "e2G5zx-OJIw",
+          "title": "How does Sanger Sequencing Work? – Seq It Out #1",
+          "channel": "Thermo Fisher Scientific",
+          "level": "beginner",
+          "whyWatch": "A short animated explanation of chain termination and capillary electrophoresis."
+        },
+        {
+          "youtubeId": "fCd6B5HRaZ8",
+          "title": "Overview of Illumina Sequencing by Synthesis Workflow | Standard SBS chemistry",
+          "channel": "Illumina",
+          "level": "intermediate",
+          "whyWatch": "Shows the library, cluster generation and imaging steps of short-read sequencing from the manufacturer."
+        },
+        {
+          "youtubeId": "Zps2uH8aWVU",
+          "title": "Southern blot | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Explains the steps of a Southern blot and what the final bands mean."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.74.12.5463",
+          "title": "DNA sequencing with chain-terminating inhibitors",
+          "authors": "Sanger F, Nicklen S, Coulson AR",
+          "year": 1977,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the chain-termination method, which gave the world its first genomes and earned Sanger his second Nobel Prize."
+        },
+        {
+          "doi": "10.1016/s0022-2836(75)80083-0",
+          "title": "Detection of specific sequences among DNA fragments separated by gel electrophoresis",
+          "authors": "Southern EM",
+          "year": 1975,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "Introduced the transfer-and-probe method that bears the author's name, and the template for northern and western blots."
+        },
+        {
+          "doi": "10.1038/nature24286",
+          "title": "DNA sequencing at 40: past, present and future",
+          "authors": "Shendure J, Balasubramanian S, Church GM, Gilbert W, Rogers J, Schloss JA, Waterston RH",
+          "year": 2017,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A readable history and survey of sequencing technologies and applications by leaders in the field."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Illumina: Introduction to next-generation sequencing",
+          "provider": "Illumina",
+          "type": "tutorial",
+          "url": "https://www.illumina.com/science/technology/next-generation-sequencing.html",
+          "free": true,
+          "level": "beginner",
+          "note": "A vendor-neutral-style explainer with diagrams of sequencing workflows and applications; bear in mind it is written by a manufacturer."
+        },
+        {
+          "title": "EMBL-EBI Training",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free online courses on sequence data and analysis that build on the lab techniques covered here."
+        },
+        {
+          "title": "BLAST (Basic Local Alignment Search Tool)",
+          "provider": "NCBI",
+          "type": "tool",
+          "url": "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste a sequencing result and identify what it matches in the public databases."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why does the incorporation of a ddNTP stop DNA synthesis?",
+          "options": [
+            "It lacks a 3' hydroxyl group needed for the next phosphodiester bond",
+            "It is too large for polymerase",
+            "It denatures the template",
+            "It lacks a base"
+          ],
+          "answer": 0,
+          "explanation": "Without a 3'-OH, the polymerase cannot add the next nucleotide, so the chain terminates at that position."
+        },
+        {
+          "question": "Which technique would you use to detect a specific protein in a cell extract?",
+          "options": [
+            "Western blot",
+            "Southern blot",
+            "Northern blot",
+            "Colony hybridization"
+          ],
+          "answer": 0,
+          "explanation": "Western blots separate proteins by size and detect the target with an antibody."
+        },
+        {
+          "question": "A Phred score of Q30 means:",
+          "options": [
+            "An expected error rate of 1 in 1000",
+            "An error rate of 3 per cent",
+            "30 reads cover the base",
+            "A read length of 30 bases"
+          ],
+          "answer": 0,
+          "explanation": "Q = -10 log10(P error), so Q30 corresponds to P = 0.001."
+        }
+      ]
+    },
+    {
+      "id": "recombinant-protein-expression",
+      "title": "Making recombinant proteins in bacteria, yeast and mammalian cells",
+      "hours": 5,
+      "hook": "Before 1982 diabetics relied on insulin extracted from the pancreas of pigs and cattle. Putting the human insulin gene into bacteria meant a clean, reliable and abundant supply, and it began the biotechnology industry.",
+      "learningObjectives": [
+        "Describe the components of a bacterial expression system such as the T7 or lac promoter",
+        "Explain codon optimisation, inclusion bodies and strategies to improve soluble expression",
+        "Describe affinity tags and the purification of tagged proteins",
+        "Compare E. coli, yeast, insect and mammalian expression systems",
+        "Explain why post-translational modifications determine host choice"
+      ],
+      "keyConcepts": [
+        {
+          "term": "T7 expression system",
+          "definition": "A system in which the gene is under a T7 promoter and the host (such as BL21(DE3)) carries T7 RNA polymerase under lacUV5 control, so IPTG induces very high expression."
+        },
+        {
+          "term": "Inducible promoter",
+          "definition": "A promoter that is off until a chemical inducer (IPTG, arabinose, methanol, tetracycline) is added, allowing control of timing and toxicity."
+        },
+        {
+          "term": "Codon optimisation",
+          "definition": "Adjusting a coding sequence to match the codon preferences of the host without changing the protein sequence."
+        },
+        {
+          "term": "Inclusion body",
+          "definition": "An insoluble aggregate of overexpressed protein in bacteria, often misfolded; the protein can sometimes be refolded after solubilisation."
+        },
+        {
+          "term": "Affinity tag",
+          "definition": "A peptide or protein fused to the target for purification, such as polyhistidine (His-tag), GST or MBP."
+        },
+        {
+          "term": "Immobilised metal affinity chromatography (IMAC)",
+          "definition": "Purification of His-tagged proteins on a nickel or cobalt resin, with elution by imidazole."
+        },
+        {
+          "term": "Post-translational modification",
+          "definition": "Chemical changes after translation (glycosylation, disulfide bond formation, phosphorylation) that may be required for activity and differ between hosts."
+        },
+        {
+          "term": "Pichia pastoris",
+          "definition": "A methylotrophic yeast used for high-level secreted expression, with the AOX1 promoter induced by methanol."
+        }
+      ],
+      "deeper": {
+        "beginner": "To make a protein in large amounts, we clone its gene next to a strong promoter and place it into cells that act as tiny factories. In bacteria we usually add a chemical to switch the gene on once the culture is dense. The protein is often fused to a short tag that acts like a handle, so that we can fish it out of the cell contents on a column that sticks to the tag. Bacteria work well for many proteins but cannot add the sugars and other decorations that some human proteins need, so for those we use yeast, insect or mammalian cells. The 'factory' idea is good, but pushing a cell too hard can make the protein misfold into clumps.",
+        "intermediate": "In BL21(DE3) the T7 promoter is recognised only by T7 RNA polymerase, which is made when IPTG relieves lac repression; basal expression can be reduced with pLysS or pLysE, which express T7 lysozyme, an inhibitor of T7 RNA polymerase. If protein forms inclusion bodies, lowering the temperature to 16-25 C, reducing inducer concentration, using solubility tags (MBP, SUMO), co-expressing chaperones or using other strains may help. Codon bias, mRNA structure near the start codon and rare tRNAs can limit yield. His-tag purification binds the protein to Ni-NTA resin, washes with low imidazole and elutes with high imidazole; a protease cleavage site lets the tag be removed. Disulfide-rich secreted proteins may need the oxidising environment of the periplasm or strains such as Origami, or an alternative eukaryotic host.",
+        "advanced": "Choice of host reflects the protein: yeast systems provide glycosylation (though of high-mannose type different from humans), insect cells with baculovirus give high yield and many modifications, and mammalian cells (CHO, HEK293) give human-like glycoforms, important for therapeutic antibodies and for consistent pharmacokinetics. Industrial production adds fed-batch fermentation, process analytics and purification trains with ion exchange, hydrophobic interaction and size exclusion steps, and must demonstrate identity, purity and absence of endotoxin and host cell proteins. Biologics such as insulin analogues, growth hormone, erythropoietin and monoclonal antibodies each use the system that best delivers correct folding and modification. Cell-free expression systems provide an alternative for toxic or small-scale proteins and rapid prototyping."
+      },
+      "commonMistakes": [
+        "Assuming any protein can be made in E. coli; many eukaryotic proteins need chaperones or modifications absent in bacteria.",
+        "Blaming the induction for low yield when the real problem is plasmid instability or toxic leaky expression.",
+        "Forgetting to keep the reading frame when fusing a tag; an extra or missing base ruins the protein.",
+        "Using reducing agents or chelators that strip nickel from IMAC columns."
+      ],
+      "videos": [
+        {
+          "youtubeId": "YJr_Xtji5NE",
+          "title": "QMUL Science Alive: Protein expression and purification",
+          "channel": "QMULOfficial",
+          "level": "intermediate",
+          "whyWatch": "A laboratory walk-through of expressing and purifying a recombinant protein from E. coli."
+        },
+        {
+          "youtubeId": "BOo_lCIcPwI",
+          "title": "Recombinant protein expression and purification overview (quick version)",
+          "channel": "the bumbling biochemist",
+          "level": "intermediate",
+          "whyWatch": "An efficient summary of vectors, hosts, tags and purification choices."
+        },
+        {
+          "youtubeId": "rbcDxuc8TOw",
+          "title": "His tag protein purification | Application of his tag purification | Affinity chromatography",
+          "channel": "Animated biology With arpan",
+          "level": "beginner",
+          "whyWatch": "Illustrates how a His-tagged protein binds a nickel column and is eluted."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0022-2836(86)90385-2",
+          "title": "Use of bacteriophage T7 RNA polymerase to direct selective high-level expression of cloned genes",
+          "authors": "Studier FW, Moffatt BA",
+          "year": 1986,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "Describes the T7 expression system that remains the workhorse of recombinant protein production in E. coli."
+        },
+        {
+          "doi": "10.3389/fmicb.2014.00172",
+          "title": "Recombinant protein expression in Escherichia coli: advances and challenges",
+          "authors": "Rosano GL, Ceccarelli EA",
+          "year": 2014,
+          "journal": "Frontiers in Microbiology",
+          "level": "intermediate",
+          "whyItMatters": "A practical review of how to troubleshoot low yield, toxicity and insolubility in E. coli, written for working scientists."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Addgene: Protein expression resources",
+          "provider": "Addgene",
+          "type": "reference",
+          "url": "https://www.addgene.org/mol-bio-reference/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Background on expression vectors, promoters and tags that helps with choosing a system."
+        },
+        {
+          "title": "PDB-101: Molecule of the Month - Insulin",
+          "provider": "RCSB PDB-101",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/motm/14",
+          "free": true,
+          "level": "beginner",
+          "note": "Insulin's structure and medical story, which illustrates why correct folding matters for recombinant production."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In BL21(DE3), IPTG induces expression of a gene under a T7 promoter by:",
+          "options": [
+            "Inducing T7 RNA polymerase production from the lacUV5 promoter",
+            "Binding the T7 promoter directly",
+            "Activating sigma-70",
+            "Blocking T7 lysozyme"
+          ],
+          "answer": 0,
+          "explanation": "IPTG inactivates LacI so that T7 RNA polymerase is made, and it then transcribes the target gene from the T7 promoter."
+        },
+        {
+          "question": "A human glycoprotein therapeutic that needs human-like glycosylation is best made in:",
+          "options": [
+            "Mammalian cells such as CHO",
+            "E. coli",
+            "In vitro with Taq",
+            "Bacteriophage lambda"
+          ],
+          "answer": 0,
+          "explanation": "Mammalian cells perform complex glycosylation, while E. coli does not glycosylate proteins in a human-like way."
+        },
+        {
+          "question": "A protein is expressed in inclusion bodies at 37 C. Which change often increases the soluble fraction?",
+          "options": [
+            "Lowering the induction temperature",
+            "Raising the IPTG concentration",
+            "Using a stronger promoter",
+            "Adding antibiotic"
+          ],
+          "answer": 0,
+          "explanation": "Slowing synthesis at lower temperature gives more time for folding and often reduces aggregation."
+        }
+      ]
+    },
+    {
+      "id": "mutagenesis-and-genome-editing",
+      "title": "Rewriting genes: mutagenesis, gene targeting and CRISPR",
+      "hours": 6,
+      "hook": "Once we can read and copy genes, the next step is to change a single letter and see what happens. The tools have gone from laborious chemistry to a programmable molecular scissor guided by a short RNA, and that has changed what is possible within a few years.",
+      "learningObjectives": [
+        "Describe how site-directed mutagenesis is performed with PCR-based methods",
+        "Explain gene targeting by homologous recombination and knockout mouse production",
+        "Describe the mechanism of CRISPR-Cas9 and the repair pathways NHEJ and HDR",
+        "Compare base editing, prime editing and earlier nucleases (ZFN, TALEN)",
+        "Discuss off-target effects, delivery and the limits of genome editing"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Site-directed mutagenesis",
+          "definition": "Introducing a defined change (substitution, insertion, deletion) in a cloned gene, usually with primers containing the mismatch and a high-fidelity polymerase."
+        },
+        {
+          "term": "DpnI digestion",
+          "definition": "A step that removes the methylated parental plasmid so only newly synthesised, mutant plasmid DNA is transformed."
+        },
+        {
+          "term": "Homologous recombination",
+          "definition": "Exchange of DNA between sequences of similarity, harnessed in gene targeting using flanking homology arms."
+        },
+        {
+          "term": "Cas9 and guide RNA",
+          "definition": "Cas9 is a nuclease directed by a guide RNA (a crRNA-tracrRNA, or a single guide RNA) to a 20-nt target next to a PAM sequence (NGG for SpCas9) where it makes a double-strand break."
+        },
+        {
+          "term": "NHEJ and HDR",
+          "definition": "Non-homologous end joining repairs breaks imperfectly, giving small insertions and deletions that can knock out a gene; homology-directed repair uses a template to introduce precise changes."
+        },
+        {
+          "term": "Base editor",
+          "definition": "A fusion of a nickase or catalytically impaired Cas9 with a deaminase that converts one base to another without a double-strand break."
+        },
+        {
+          "term": "Prime editor",
+          "definition": "A Cas9 nickase fused to reverse transcriptase and programmed by a pegRNA that carries the desired edit."
+        },
+        {
+          "term": "Off-target effect",
+          "definition": "Cutting at sites resembling the target sequence; reduced by careful guide design, high-fidelity Cas9 variants and short exposure."
+        },
+        {
+          "term": "Knockout and knock-in",
+          "definition": "Alleles in which a gene is disrupted (knockout) or replaced or tagged with new sequence (knock-in)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Mutagenesis is the deliberate changing of a gene to test what a letter does. In the laboratory we can order short DNA fragments that contain the change we want and use them in a PCR to make a mutated copy of a plasmid. For whole genomes, CRISPR-Cas9 acts like a pair of scissors guided by a short RNA that matches the place to cut. When the cell repairs the cut, it often makes small errors that disable the gene, and if we also supply a template, the cell can copy the new sequence in. The 'find and replace' idea in a word processor is appealing, but the cell's repair is not always accurate, so it can make unintended changes.",
+        "intermediate": "For site-directed mutagenesis, two complementary primers carrying the change anneal to a plasmid and are extended around the whole plasmid with a proofreading polymerase; after DpnI removes methylated template, the nicked product is transformed into E. coli and repaired. In mouse gene targeting, a construct with homology arms and a selection cassette is introduced into embryonic stem cells, cells with correct recombination are selected, and injected into blastocysts to make chimeras; conditional approaches with Cre-lox allow tissue-specific or time-specific deletion. CRISPR-Cas9 requires only a guide RNA and Cas9, making it simpler than ZFNs and TALENs, which require a new protein for each target. Cas9 recognises the PAM, unwinds DNA, and cleaves with its two nuclease domains (HNH and RuvC); repair by NHEJ is efficient in most cells, while HDR is mostly active in dividing cells in S and G2.",
+        "advanced": "The discovery of Cas9 came from studies of bacterial adaptive immunity, in which spacers acquired from phage are transcribed into crRNAs that guide Cas proteins; the 2012 demonstration that a single guide RNA could reprogram Cas9 in vitro made it a genome engineering tool. Strategies for precise editing include nickase pairs to raise specificity, ribonucleoprotein delivery to shorten exposure, anti-CRISPR proteins, and new Cas variants with different PAM requirements. Base editors avoid double-strand breaks but can cause bystander edits within the editing window and deaminase off-target effects, while prime editors can make all twelve base-to-base changes and small indels with lower indel by-products, but often with lower efficiency. Safety issues include large deletions and chromosomal rearrangements at the cut site, mosaicism in embryos, immune responses to Cas9 and delivery limits; the first approved CRISPR therapy for sickle cell disease and beta-thalassaemia works ex vivo by editing a regulator of fetal haemoglobin. Evaluate claims by looking at how off-target effects were measured, since in silico prediction alone is insufficient."
+      },
+      "commonMistakes": [
+        "Believing that CRISPR always leaves a perfect edit; NHEJ produces a mixture of indels, and HDR efficiency is limited.",
+        "Forgetting that the target must be adjacent to a PAM; no PAM, no cut.",
+        "Assuming editing in a cell culture will carry over to an organism without checking delivery and mosaicism.",
+        "Confusing RNA interference (knockdown at RNA level) with CRISPR knockout (change in DNA)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "IiPL5HgPehs",
+          "title": "CRISPR-Cas9 Genome Editing Technology",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Covers the bacterial origin of CRISPR and how Cas9 is used to edit genomes."
+        },
+        {
+          "youtubeId": "iEA-NleJoqY",
+          "title": "Introduction to CRISPR-Cas9 Genome Editing",
+          "channel": "Innovative Genomics Institute – IGI",
+          "level": "beginner",
+          "whyWatch": "A short, clear explanation from one of the leading CRISPR research institutes."
+        },
+        {
+          "youtubeId": "7xFvaI7coyg",
+          "title": "Overview of the Q5® Site-Directed Mutagenesis Kit",
+          "channel": "New England Biolabs",
+          "level": "intermediate",
+          "whyWatch": "Shows the primer design and workflow of a PCR-based mutagenesis experiment."
+        },
+        {
+          "youtubeId": "BGDqhO0eHys",
+          "title": "What is a knockout mouse?",
+          "channel": "The Explorer's Guide to Biology",
+          "level": "beginner",
+          "whyWatch": "A brief overview of how knockout mice are made and why they are used."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1225829",
+          "title": "A Programmable Dual-RNA–Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+          "authors": "Jinek M, Chylinski K, Fonfara I, Hauer M, Doudna JA, Charpentier E",
+          "year": 2012,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Showed that Cas9 can be programmed with an RNA to cut chosen DNA sequences in vitro, the discovery that led to the 2020 Nobel Prize in Chemistry."
+        },
+        {
+          "doi": "10.1038/nprot.2013.143",
+          "title": "Genome engineering using the CRISPR-Cas9 system",
+          "authors": "Ran FA, Hsu PD, Wright J, Agarwala V, Scott DA, Zhang F",
+          "year": 2013,
+          "journal": "Nature Protocols",
+          "level": "intermediate",
+          "whyItMatters": "A step-by-step protocol that explains guide design, delivery and validation, useful for understanding how CRISPR experiments are really done."
+        },
+        {
+          "doi": "10.1038/s41587-020-0561-9",
+          "title": "Genome editing with CRISPR–Cas nucleases, base editors, transposases and prime editors",
+          "authors": "Anzalone AV, Koblan LW, Liu DR",
+          "year": 2020,
+          "journal": "Nature Biotechnology",
+          "level": "advanced",
+          "whyItMatters": "A review that organises the whole toolbox of CRISPR-derived editors and what each can and cannot do."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Addgene CRISPR Guide",
+          "provider": "Addgene",
+          "type": "reference",
+          "url": "https://www.addgene.org/crispr/guide/",
+          "free": true,
+          "level": "beginner",
+          "note": "A thorough, plain-English guide to CRISPR components, experimental design and plasmids."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2020 (CRISPR-Cas9)",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A popular-science account of how the genetic scissors were discovered and what they might be used for."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which step in PCR-based site-directed mutagenesis removes the parental plasmid template?",
+          "options": [
+            "Digestion with DpnI, which cuts methylated DNA",
+            "Gel purification",
+            "Heat denaturation",
+            "Ligation"
+          ],
+          "answer": 0,
+          "explanation": "DpnI cleaves methylated and hemimethylated DNA, which is the parental plasmid from E. coli, while the PCR product is unmethylated."
+        },
+        {
+          "question": "A CRISPR double-strand break repaired by NHEJ usually results in:",
+          "options": [
+            "Small insertions or deletions that can disrupt the gene",
+            "A precise insertion of a donor sequence",
+            "No change in the DNA",
+            "A chromosome-wide methylation"
+          ],
+          "answer": 0,
+          "explanation": "End joining is error-prone and frequently leaves indels, which makes it useful for gene knockout."
+        },
+        {
+          "question": "Which requirement must be met for SpCas9 to cleave a target?",
+          "options": [
+            "A PAM (NGG) adjacent to the target sequence",
+            "A TATA box at the target",
+            "A poly(A) tail",
+            "A methylated cytosine"
+          ],
+          "answer": 0,
+          "explanation": "SpCas9 needs the protospacer-adjacent motif NGG next to the 20-nt target for recognition and cleavage."
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "title": "Applications in medicine, agriculture and industry",
+      "hours": 4,
+      "hook": "A diabetic child injects insulin made by yeast or bacteria, a farmer plants cotton that makes its own insecticidal protein, and a patient with a blood disease receives corrected stem cells. Each of these is recombinant DNA technology doing what it was built to do.",
+      "learningObjectives": [
+        "Describe the production of recombinant insulin and other therapeutic proteins",
+        "Explain how recombinant and mRNA vaccines are made and how they work",
+        "Describe approaches to gene therapy using viral vectors and ex vivo editing",
+        "Explain the production of transgenic plants with Agrobacterium and examples such as Bt crops and Golden Rice",
+        "Describe how transgenic animals are used in research and production"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Recombinant insulin",
+          "definition": "Human insulin made in microbes; the first such product, marketed in 1982, was made in E. coli from separately produced A and B chains in the early process."
+        },
+        {
+          "term": "Recombinant subunit vaccine",
+          "definition": "A vaccine based on a protein made in a host system, such as the hepatitis B surface antigen produced in yeast."
+        },
+        {
+          "term": "mRNA vaccine",
+          "definition": "A vaccine in which an mRNA encoding an antigen (with modified nucleosides) in lipid nanoparticles instructs cells to make the antigen."
+        },
+        {
+          "term": "Gene therapy",
+          "definition": "Treatment by delivering or editing genetic material, either in vivo with vectors such as AAV or ex vivo by modifying cells and returning them to the patient."
+        },
+        {
+          "term": "Agrobacterium-mediated transformation",
+          "definition": "Use of Agrobacterium tumefaciens, which naturally transfers T-DNA from its Ti plasmid into plant cells, to introduce genes into plants."
+        },
+        {
+          "term": "Bt crop",
+          "definition": "A crop expressing a Cry protein from Bacillus thuringiensis that is toxic to specific insect pests."
+        },
+        {
+          "term": "Golden Rice",
+          "definition": "Rice engineered to accumulate provitamin A (beta-carotene) in the grain, intended to help address vitamin A deficiency."
+        },
+        {
+          "term": "Transgenic animal",
+          "definition": "An animal carrying a gene from another source, made by methods such as pronuclear injection or stem cell targeting."
+        }
+      ],
+      "deeper": {
+        "beginner": "Recombinant DNA technology is not only a laboratory skill; it is the way many medicines and crops are made. Human insulin is made by microbes carrying the human gene. Some vaccines contain a single protein from a virus made in yeast, and the newest ones deliver instructions as mRNA so that our own cells make a harmless piece of the virus. Plants can be given new genes using a soil bacterium that naturally moves DNA into plants, and some crops now make their own protection against pests. Gene therapy tries to correct or replace faulty genes in patients. Each application brings benefits and also questions about cost, access and safety.",
+        "intermediate": "Insulin was first made by expressing chemically synthesised A and B chain genes separately in E. coli and joining the chains; later processes express proinsulin and cleave it, in E. coli or in yeast. Therapeutic proteins include growth hormone, clotting factors, interferons, erythropoietin and monoclonal antibodies, many made in CHO cells. mRNA vaccines use modified nucleosides and lipid nanoparticles to improve stability and reduce innate immune activation. In gene therapy, AAV vectors deliver genes to non-dividing cells such as liver, muscle or retina with mostly episomal persistence, while lentiviral vectors integrate and are used for ex vivo modification of blood stem cells. In plants, T-DNA containing the gene of interest and a selectable marker is transferred from Agrobacterium to explants, which are regenerated into whole plants; Bt crops reduce certain pest damage and insecticide use, and Golden Rice incorporates phytoene synthase and a bacterial carotene desaturase to produce provitamin A.",
+        "advanced": "Product quality, scalability and economics decide outcomes: biologics need extensive characterisation and comparability testing, and biosimilars must show similarity to originator products. Viral vector gene therapy faces immune responses to capsids, limits on packaging capacity (about 4.7 kb for AAV), manufacturing costs and rare adverse events related to integration or high-dose toxicity. For crops, regulatory approval examines molecular characterisation of the insert, composition, allergenicity and environmental effects such as gene flow and resistance evolution; resistance management strategies (refuges, stacked traits) are central for Bt crops. Genome-edited crops that carry no foreign DNA are regulated differently from transgenic crops in some countries, which shows how law lags behind technology. When discussing benefits or risks, evidence from field trials, post-market monitoring and independent reviews should be distinguished from advocacy by any side."
+      },
+      "commonMistakes": [
+        "Treating all genetically modified crops as one thing; traits, species and regulation differ greatly.",
+        "Describing mRNA vaccines as altering DNA; the mRNA does not enter the nucleus or integrate into the genome.",
+        "Confusing gene therapy (modifying a patient's cells) with germline modification, which is prohibited or tightly restricted in many places.",
+        "Assuming all recombinant therapeutics are made in bacteria."
+      ],
+      "videos": [
+        {
+          "youtubeId": "rq18lAEjtgI",
+          "title": "Steps Involved in the production of Recombinant Insulin. How Recombinant Insulin is produced?",
+          "channel": "biologyexams4u",
+          "level": "intermediate",
+          "whyWatch": "Follows the production of recombinant insulin step by step."
+        },
+        {
+          "youtubeId": "xw8hcX-bwL4",
+          "title": "Bt Crops | Biotechnology and its Applications | Biology | Khan Academy",
+          "channel": "Khan Academy India - English",
+          "level": "beginner",
+          "whyWatch": "Explains how Bt toxin genes protect crops from insects."
+        },
+        {
+          "youtubeId": "Q6qk6Wh6cXU",
+          "title": "Viral Vectors Overview",
+          "channel": "ASGCT",
+          "level": "intermediate",
+          "whyWatch": "A concise overview of viral vectors used for gene therapy from the American Society of Gene and Cell Therapy."
+        },
+        {
+          "youtubeId": "mvA9gs5gxNY",
+          "title": "mRNA vaccines, explained",
+          "channel": "Vox",
+          "level": "beginner",
+          "whyWatch": "A clear explanation of how mRNA vaccines work and why they were developed so fast."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.76.1.106",
+          "title": "Expression in Escherichia coli of chemically synthesized genes for human insulin",
+          "authors": "Goeddel DV, Kleid DG, Bolivar F, Heyneker HL, Yansura DG, Crea R, Hirose T, Kraszewski A, Itakura K, Riggs AD",
+          "year": 1979,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The report that human insulin chains can be made in bacteria, the start of the recombinant pharmaceutical industry."
+        },
+        {
+          "doi": "10.1126/science.287.5451.303",
+          "title": "Engineering the Provitamin A (β-Carotene) Biosynthetic Pathway into (Carotenoid-Free) Rice Endosperm",
+          "authors": "Ye X, Al-Babili S, Klöti A, Zhang J, Lucca P, Beyer P, Potrykus I",
+          "year": 2000,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Describes the multi-gene engineering that produced Golden Rice, a case study that is often debated and is a good example of metabolic engineering."
+        },
+        {
+          "doi": "10.1126/science.aan4672",
+          "title": "Gene therapy comes of age",
+          "authors": "Dunbar CE, High KA, Joung JK, Kohn DB, Ozawa K, Sadelain M",
+          "year": 2018,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A balanced review of the successes of gene therapy and the challenges that were overcome to reach approved treatments."
+        }
+      ],
+      "resources": [
+        {
+          "title": "yourgenome: Gene therapy and genetic technologies",
+          "provider": "Wellcome Genome Campus",
+          "type": "tutorial",
+          "url": "https://www.yourgenome.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Short, well-illustrated articles on applications of genetics including therapy and genetic modification."
+        },
+        {
+          "title": "WHO: Food, genetically modified",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/health-topics/food-genetically-modified",
+          "free": true,
+          "level": "beginner",
+          "note": "An authoritative overview of how GM foods are assessed for safety and what the questions are."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which vector is commonly used to deliver genes in vivo to non-dividing cells with mostly episomal persistence?",
+          "options": [
+            "Adeno-associated virus (AAV)",
+            "Phage lambda",
+            "A YAC",
+            "A cosmid"
+          ],
+          "answer": 0,
+          "explanation": "AAV transduces dividing and non-dividing cells and its genome persists mainly as an episome, making it suited to tissues such as liver and retina."
+        },
+        {
+          "question": "Which statement about mRNA vaccines is correct?",
+          "options": [
+            "The mRNA is translated in the cytoplasm and does not integrate into the genome",
+            "They contain live attenuated virus",
+            "They change the recipient's DNA sequence",
+            "They only work in bacteria"
+          ],
+          "answer": 0,
+          "explanation": "mRNA vaccines instruct the cytoplasmic translation machinery to make an antigen and the mRNA is later degraded; there is no mechanism for integration."
+        },
+        {
+          "question": "Agrobacterium tumefaciens is used in plant biotechnology because it:",
+          "options": [
+            "Naturally transfers T-DNA into plant cells",
+            "Makes Bt toxin",
+            "Is a plant virus",
+            "Cuts DNA with restriction enzymes in plants"
+          ],
+          "answer": 0,
+          "explanation": "The Ti plasmid's T-DNA is transferred to plant cells and can be replaced by genes of interest."
+        }
+      ]
+    },
+    {
+      "id": "biosafety-and-ethics",
+      "title": "Biosafety, ethics and regulation of recombinant DNA",
+      "hours": 3,
+      "hook": "In 1975 the very scientists who had just invented gene cloning gathered at a California conference centre and voluntarily paused to ask whether their experiments were safe. That conversation, still going on, is part of the science itself.",
+      "learningObjectives": [
+        "Describe the history of the Asilomar conference and the origin of biosafety guidelines",
+        "Explain biosafety levels and the principle of physical and biological containment",
+        "Describe the aims of the Cartagena Protocol on Biosafety and risk assessment of GMOs",
+        "Discuss ethical issues such as germline editing, access and benefit sharing, and public engagement",
+        "Apply a simple risk assessment framework to a proposed experiment"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Asilomar conference (1975)",
+          "definition": "A meeting in which molecular biologists, lawyers and physicians discussed the hazards of recombinant DNA and proposed containment guidelines."
+        },
+        {
+          "term": "Biosafety level (BSL 1-4)",
+          "definition": "A set of containment practices, equipment and facility features matched to the risk of the agents handled."
+        },
+        {
+          "term": "Physical and biological containment",
+          "definition": "Using laboratory design and procedures (physical) and using disabled hosts and vectors that cannot survive outside the lab (biological)."
+        },
+        {
+          "term": "Living modified organism (LMO)",
+          "definition": "In the Cartagena Protocol, a living organism with a novel combination of genetic material obtained through modern biotechnology."
+        },
+        {
+          "term": "Cartagena Protocol on Biosafety",
+          "definition": "An international agreement under the Convention on Biological Diversity that regulates transboundary movement of LMOs, with advance informed agreement and precautionary provisions."
+        },
+        {
+          "term": "Risk assessment",
+          "definition": "A structured evaluation of the likelihood and consequences of harm, case by case, with reference to the organism, the trait and the receiving environment."
+        },
+        {
+          "term": "Precautionary principle",
+          "definition": "The idea that lack of full scientific certainty should not be used as a reason to postpone measures against serious or irreversible harm."
+        },
+        {
+          "term": "Germline editing",
+          "definition": "Heritable changes made to eggs, sperm or embryos, which raise distinctive ethical and safety concerns and are prohibited or restricted in many jurisdictions."
+        }
+      ],
+      "deeper": {
+        "beginner": "When recombinant DNA was invented, nobody could be sure whether combining genes from different organisms might create dangerous germs. Scientists themselves called for a pause and then agreed on rules, such as using disabled bacteria that could not live outside the lab. Today, laboratories are classified by how much protection is required, and international agreements govern how genetically modified organisms may cross borders. Beyond safety, there are questions of fairness: who profits from a new crop or drug, and who decides how far we should go with editing human embryos? These questions cannot be answered by laboratory skills alone, so public discussion matters.",
+        "intermediate": "Risk assessment for a GMO considers the properties of the host, the donor, the inserted gene and its product, the stability of the insert and the likely receiving environment, including potential for gene flow, effects on non-target organisms and allergenicity or toxicity of the new protein. In laboratories, institutional biosafety committees review projects, and the biosafety level rises with the pathogenicity and transmissibility of the agent. The Cartagena Protocol requires exporters to obtain advance informed agreement before first intentional transboundary movement of LMOs for release into the environment, and it provides for the exchange of information through the Biosafety Clearing-House. Ethical review covers human subjects and animal experimentation; consent, data protection and benefit sharing are important for work with human samples and genetic resources, including those under the Nagoya Protocol. Students should look up their own country's current biosafety framework and regulations, which are updated from time to time.",
+        "advanced": "Debate continues over how to treat new genome-edited organisms that carry no foreign DNA, with some countries regulating by the process of production and others by the characteristics of the product. Dual-use research concerns (work that could be misused) have led to policies on research with enhanced pathogens, and gene drives, which bias inheritance to spread a trait through a wild population, require staged testing, confinement strategies and community engagement before any release. The 2018 announcement of germline-edited babies drew widespread condemnation and highlighted the need for international governance, transparent oversight and consideration of safety evidence before clinical use. A rigorous approach separates technical risk (what can be measured), uncertainty (what cannot yet be measured) and values (what a society chooses to accept), and avoids presenting any of these as the others."
+      },
+      "commonMistakes": [
+        "Presenting biosafety rules as an obstacle to science; many were designed by scientists and enabled the field to continue.",
+        "Assuming 'natural' means safe and 'engineered' means unsafe, or the opposite; risk depends on the specific organism and trait.",
+        "Mixing up biosafety (protecting people and environment from organisms) with biosecurity (preventing misuse or theft).",
+        "Treating ethical questions as having a single scientific answer."
+      ],
+      "videos": [
+        {
+          "youtubeId": "QKuu4x1huxA",
+          "title": "Introduction to the Cartagena Protocol on Biosafety",
+          "channel": "Convention on Biological Diversity",
+          "level": "beginner",
+          "whyWatch": "A short official introduction to what the protocol covers and why it exists."
+        },
+        {
+          "youtubeId": "ulfKzt-3NLE",
+          "title": "The Cartagena Protocol on Biosafety",
+          "channel": "Alliance for Science",
+          "level": "intermediate",
+          "whyWatch": "Explains how the protocol affects trade and risk assessment of modified organisms."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.72.6.1981",
+          "title": "Summary statement of the Asilomar conference on recombinant DNA molecules",
+          "authors": "Berg P, Baltimore D, Brenner S, Roblin RO, Singer MF",
+          "year": 1975,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The statement in which researchers set out a framework of containment for recombinant DNA work, a model for self-governance in science."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biosafety Clearing-House: Cartagena Protocol",
+          "provider": "Convention on Biological Diversity",
+          "type": "reference",
+          "url": "https://bch.cbd.int/protocol/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The protocol text, parties and national biosafety information; look up your own country's framework here."
+        },
+        {
+          "title": "WHO Laboratory Biosafety Manual",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240011311",
+          "free": true,
+          "level": "intermediate",
+          "note": "The standard international guide to risk-based laboratory biosafety, including biosafety levels."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Biological containment of a recombinant experiment in the 1970s typically involved:",
+          "options": [
+            "Using host strains that could not survive outside the laboratory",
+            "Performing experiments only in plants",
+            "Avoiding antibiotic markers",
+            "Working at 4 C"
+          ],
+          "answer": 0,
+          "explanation": "Disabled hosts and vectors that were unable to survive or transfer in nature were designed as a safeguard in addition to physical containment."
+        },
+        {
+          "question": "The Cartagena Protocol primarily regulates:",
+          "options": [
+            "Transboundary movement of living modified organisms",
+            "Patents on recombinant proteins",
+            "Laboratory design",
+            "Human clinical trials"
+          ],
+          "answer": 0,
+          "explanation": "It covers safe transfer, handling and use of LMOs that may affect biodiversity, taking human health into account, and sets out advance informed agreement procedures."
+        },
+        {
+          "question": "Which pair is correctly matched?",
+          "options": [
+            "Biosafety: protecting people and environment from hazardous organisms; biosecurity: preventing misuse or loss of them",
+            "Biosafety: preventing misuse; biosecurity: lab design",
+            "Both mean identical things",
+            "Biosafety: patents; biosecurity: pricing"
+          ],
+          "answer": 0,
+          "explanation": "Biosafety concerns accidental exposure or release, while biosecurity concerns deliberate misuse, theft or loss."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "kVu37T6sB_E",
+      "title": "16. Recombinant DNA, Cloning, & Editing",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A full lecture that ties together enzymes, vectors, cloning and editing, useful as a revision overview."
+    },
+    {
+      "youtubeId": "CdAgzk5tQhs",
+      "title": "Basic Mechanisms of Cloning, excerpt 1 | MIT 7.01SC Fundamentals of Biology",
+      "channel": "MIT OpenCourseWare",
+      "level": "beginner",
+      "whyWatch": "An excerpt that builds the idea of cloning from first principles."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Molecular Cell Biology (Lodish et al.), 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free text with a full chapter on genetic analysis and recombinant DNA methods."
+    },
+    {
+      "title": "Biology 2e - Biotechnology and Genomics",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/17-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "An open textbook chapter introducing cloning, PCR, gel electrophoresis, transgenics and applications."
+    },
+    {
+      "title": "Addgene Molecular Biology Reference",
+      "provider": "Addgene",
+      "type": "reference",
+      "url": "https://www.addgene.org/mol-bio-reference/",
+      "free": true,
+      "level": "beginner",
+      "note": "A practical, always up-to-date companion to the lecture course for lab methods."
+    }
+  ]
+}

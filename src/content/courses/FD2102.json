@@ -1,0 +1,1639 @@
+{
+  "code": "FD 2102",
+  "title": "Genetics and Molecular Foundations",
+  "level": 2,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "From pea plants to PCR: how information is inherited, copied, read and engineered.",
+  "overview": "The content follows the standard genetics and molecular biology sequence at BSc level, chosen to prepare you for Level 3 Gene Expression and Regulation, Recombinant DNA Technology and Bioinformatics. We begin with Mendelian and chromosomal inheritance, then the experiments that proved DNA is the genetic material and how it is replicated. Mutation and repair lead into transcription, RNA processing, translation and the genetic code. Gene regulation is introduced through the lac operon and a first look at eukaryotic control. The module ends with the tools that turned this knowledge into technology: restriction enzymes, cloning, PCR, sequencing and the population-genetics ideas needed to interpret variation.",
+  "whyItMatters": "Gene Expression and Regulation, Recombinant DNA Technology and nearly every practical you will do at Level 3 assume that you can move comfortably between a pedigree, a DNA sequence and a protein. This module gives you that fluency and the habit of thinking in experiments: what was done, what was seen and what it proves.",
+  "prerequisites": [
+    "FD 1102",
+    "FD 1103"
+  ],
+  "careerLinks": [
+    "Genetic counselling and clinical genetics laboratories",
+    "Molecular diagnostics and public-health laboratories",
+    "Plant and animal breeding and agricultural biotechnology",
+    "Forensic science and biobanking",
+    "Genomics, bioinformatics and biotechnology research"
+  ],
+  "studyTips": [
+    "Practise genetics problems on paper every week; recognising a ratio is a skill, not something you absorb by reading.",
+    "For each classic experiment write three lines: the question, the clever design choice and what alternative explanation it ruled out.",
+    "Always write DNA and RNA sequences with 5' and 3' ends labelled, and say which strand is the template; most errors come from skipping this.",
+    "Draw the central dogma on one page and add every enzyme and signal you learn to it as the course progresses.",
+    "Use the free tools (NEBcutter, Primer-BLAST, ExPASy Translate) on real sequences so the techniques feel concrete before the practical classes."
+  ],
+  "units": [
+    {
+      "id": "mendelian-genetics",
+      "title": "Mendelian genetics and patterns of inheritance",
+      "hours": 5,
+      "hook": "Gregor Mendel counted thousands of pea plants in a monastery garden and found that traits were passed on as separate, countable units, long before anyone knew what a gene was. His 3 to 1 ratios are still the starting point for predicting everything from flower colour to the risk of cystic fibrosis.",
+      "learningObjectives": [
+        "State Mendel's laws of segregation and independent assortment and explain how they follow from meiosis.",
+        "Use Punnett squares and the product and sum rules of probability to predict offspring ratios.",
+        "Analyse monohybrid, dihybrid and test crosses.",
+        "Recognise incomplete dominance, codominance, multiple alleles, epistasis and sex-linked inheritance from data.",
+        "Interpret pedigrees to infer autosomal or X-linked, dominant or recessive inheritance."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Allele",
+          "definition": "One of the alternative versions of a gene at a given locus."
+        },
+        {
+          "term": "Genotype and phenotype",
+          "definition": "The genotype is the allele combination an individual carries; the phenotype is the observable trait that results from genotype and environment."
+        },
+        {
+          "term": "Law of segregation",
+          "definition": "The two alleles of a gene separate during gamete formation so that each gamete receives one."
+        },
+        {
+          "term": "Law of independent assortment",
+          "definition": "Alleles of genes on different chromosomes (or far apart on the same one) assort independently, giving a 9:3:3:1 ratio in a dihybrid cross."
+        },
+        {
+          "term": "Test cross",
+          "definition": "A cross of an individual of unknown genotype with a homozygous recessive; the offspring ratio reveals the unknown genotype."
+        },
+        {
+          "term": "Codominance and incomplete dominance",
+          "definition": "In codominance both alleles are expressed (AB blood group); in incomplete dominance the heterozygote is intermediate."
+        },
+        {
+          "term": "Epistasis",
+          "definition": "Interaction in which one gene masks or modifies the expression of another, changing the standard Mendelian ratios."
+        },
+        {
+          "term": "Pedigree",
+          "definition": "A family tree that traces a trait across generations and is used to infer modes of inheritance."
+        }
+      ],
+      "deeper": {
+        "beginner": "Mendel showed that organisms carry two copies of each hereditary factor and pass on only one copy per offspring. If a plant has one factor for purple flowers (dominant) and one for white (recessive), it looks purple, but half of its gametes carry the white factor. Crossing two such plants gives about three purple to one white. A Punnett square is a handy table for working out the possible combinations.",
+        "intermediate": "For two genes on different chromosomes the probability of any combination of genotypes is the product of the probabilities of each gene considered separately (the product rule), and the probability of alternative outcomes is their sum. A dihybrid cross of heterozygotes yields 9:3:3:1; deviations from these ratios hint at linkage, epistasis or lethal alleles. Chi-square tests allow you to judge whether observed counts are consistent with expected ratios. In humans, an autosomal recessive trait often appears in children of unaffected, related parents; X-linked recessive traits affect males more often and are passed through carrier females; mitochondrial traits pass maternally.",
+        "advanced": "Fisher's 1936 reanalysis noticed that Mendel's reported ratios fit expectations more closely than chance would predict, which raises questions about how the data were collected or reported but does not undermine the laws themselves. Most human traits are polygenic, with many genes of small effect plus environment, so simple ratios rarely apply; the same Mendelian logic underlies the more complex models of quantitative genetics. Penetrance, expressivity, genomic imprinting and anticipation are further complications that modify the apparent inheritance pattern of real disease alleles."
+      },
+      "commonMistakes": [
+        "Reading a 3:1 ratio as proof that the trait is 'dominant in the population'; dominance describes allele interaction in an individual, not frequency.",
+        "Multiplying probabilities when events are mutually exclusive (use addition) or adding when events are independent and joint (use multiplication).",
+        "Treating an observed 'nearly' 3:1 ratio from a small sample as an exact law; sampling variation is expected, so use a chi-square test.",
+        "Assuming a recessive allele cannot cause disease in a carrier; heterozygotes can have a mild or altered phenotype."
+      ],
+      "videos": [
+        {
+          "youtubeId": "OhYOfTczCk4",
+          "title": "Mendelian inheritance and Punnett squares | High school biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Introduces alleles, dominance and Punnett squares with clear examples."
+        },
+        {
+          "youtubeId": "ZkyX3TmmMag",
+          "title": "Dihybrid cross and the Law of Independent Assortment | High school biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Works through a dihybrid cross and shows where 9:3:3:1 comes from."
+        },
+        {
+          "youtubeId": "Gd09V2AkZv4",
+          "title": "Pedigrees",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Teaches how to read a pedigree and work out the mode of inheritance."
+        },
+        {
+          "youtubeId": "qtGHKiAROig",
+          "title": "13. Genetics 2 – Rules of Inheritance",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture that extends Mendelian rules to more complex cases and problem solving."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1080/00033793600200111",
+          "title": "Has Mendel's work been rediscovered?",
+          "authors": "Fisher RA",
+          "year": 1936,
+          "journal": "Annals of Science",
+          "level": "advanced",
+          "whyItMatters": "A statistician examines Mendel's experiments and notes that some of the data fit expectations suspiciously well. It is a good introduction to reading data critically and to the history of how Mendel's work was recognised.",
+          "readingQuestions": [
+            "What statistical feature of Mendel's results does Fisher find surprising?",
+            "Does Fisher's analysis undermine the validity of Mendel's laws? Why or why not?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Gregor Mendel and the Principles of Inheritance",
+          "provider": "Nature Scitable",
+          "type": "reference",
+          "url": "https://www.nature.com/scitable/topicpage/gregor-mendel-and-the-principles-of-inheritance-593/",
+          "free": true,
+          "level": "beginner",
+          "note": "A concise, well-illustrated explanation of Mendel's experiments and the principles that grew from them."
+        },
+        {
+          "title": "DNA from the Beginning",
+          "provider": "Cold Spring Harbor Laboratory",
+          "type": "interactive",
+          "url": "https://www.dnaftb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Animated primers on Mendel and the classic experiments that followed."
+        },
+        {
+          "title": "Genetics (MIT 7.03)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-03-genetics-fall-2004/",
+          "free": true,
+          "level": "advanced",
+          "note": "Problem sets and notes with worked solutions for extra practice."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Two heterozygous (Aa) parents are crossed. What proportion of the offspring is expected to be homozygous recessive?",
+          "options": [
+            "0",
+            "1/4",
+            "1/2",
+            "3/4"
+          ],
+          "answer": 1,
+          "explanation": "Each parent passes on a with probability 1/2, so aa has probability 1/2 x 1/2 = 1/4."
+        },
+        {
+          "question": "A dihybrid cross AaBb x AaBb with independently assorting genes gives what phenotypic ratio when A and B are completely dominant?",
+          "options": [
+            "3:1",
+            "1:2:1",
+            "9:3:3:1",
+            "1:1:1:1"
+          ],
+          "answer": 2,
+          "explanation": "Independent assortment of two genes with complete dominance gives 9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb."
+        },
+        {
+          "question": "A trait affects mostly males and is never passed from father to son. The most likely mode of inheritance is:",
+          "options": [
+            "Autosomal dominant",
+            "Autosomal recessive",
+            "X-linked recessive",
+            "Mitochondrial"
+          ],
+          "answer": 2,
+          "explanation": "Males receive their X chromosome from their mother, not from their father, and a single recessive allele is enough to cause the trait in males."
+        }
+      ]
+    },
+    {
+      "id": "chromosomes-meiosis-linkage",
+      "title": "Chromosomes, meiosis and linkage",
+      "hours": 5,
+      "hook": "Mendel's factors needed a physical home, and the home turned out to be chromosomes. In a cramped fly room in New York, Thomas Hunt Morgan's team noticed that some genes refused to assort independently, and that reluctance let them draw the first genetic maps, long before DNA could be read.",
+      "learningObjectives": [
+        "Compare mitosis and meiosis and explain how meiosis halves chromosome number and generates variation.",
+        "Explain crossing over and independent assortment as sources of genetic diversity.",
+        "Calculate recombination frequency and construct a simple genetic map from three-point or two-point data.",
+        "Describe sex-linked inheritance and the genetic basis of sex determination in humans.",
+        "Explain nondisjunction and how it leads to aneuploidy such as trisomy 21."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Homologous chromosomes",
+          "definition": "A pair of chromosomes, one from each parent, that carry the same genes in the same order, though they may carry different alleles."
+        },
+        {
+          "term": "Meiosis",
+          "definition": "Two successive divisions after one round of DNA replication that produce four haploid cells; homologues separate in meiosis I and sister chromatids in meiosis II."
+        },
+        {
+          "term": "Crossing over",
+          "definition": "Exchange of segments between non-sister chromatids of homologues during prophase I, producing recombinant chromosomes."
+        },
+        {
+          "term": "Linkage",
+          "definition": "The tendency of genes close together on a chromosome to be inherited together."
+        },
+        {
+          "term": "Recombination frequency",
+          "definition": "The proportion of offspring with recombinant genotypes; it is about 0.5 for unlinked genes and smaller for linked genes."
+        },
+        {
+          "term": "Map unit (centimorgan)",
+          "definition": "A unit of genetic distance where 1 map unit corresponds to 1 percent recombination."
+        },
+        {
+          "term": "Nondisjunction",
+          "definition": "Failure of chromosomes to separate properly, resulting in gametes with extra or missing chromosomes."
+        },
+        {
+          "term": "Sex-linked gene",
+          "definition": "A gene on the X or Y chromosome; X-linked genes show different inheritance patterns in males (one X) and females (two)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Before a cell divides it copies its chromosomes. In ordinary division (mitosis) each daughter cell gets a full set. In meiosis, which makes eggs and sperm, there are two divisions and the result is four cells with half the number of chromosomes each. The chromosome pairs shuffle and swap pieces, so every egg or sperm is different. Genes that sit close together on the same chromosome tend to stay together, which is called linkage.",
+        "intermediate": "In meiosis I, homologues pair (synapsis) and form chiasmata where crossing over has occurred; they then separate to opposite poles. Because each pair orients independently, a person can make 2^23, about 8.4 million, different chromosome combinations in gametes before accounting for crossing over. Recombination frequency (RF) between two loci equals the number of recombinant offspring divided by the total; RF has a maximum of 50 percent, because double crossovers hide recombination at large distances, so long distances are summed from short intervals in a map. In humans, nondisjunction in maternal meiosis I increases with maternal age and is the usual cause of trisomy 21. Sex determination in humans depends on the SRY gene on the Y chromosome.",
+        "advanced": "Morgan's 1910 white-eye mutant in Drosophila showed that a gene could be assigned to a particular chromosome, the first direct evidence supporting the chromosome theory of heredity, and Sturtevant's 1913 map, built in a single evening according to later accounts, showed that genes are arranged in a line. Crossover interference reduces the observed number of double crossovers relative to expectation. In many organisms recombination is not uniform: hotspots, regional suppression near centromeres, and sex differences in recombination rate are common, so genetic and physical maps do not match perfectly. Meiotic recombination is initiated by programmed double-strand breaks made by Spo11, tying this unit to DNA repair."
+      },
+      "commonMistakes": [
+        "Assuming linked genes can never be separated; crossing over breaks linkage at a rate proportional to distance.",
+        "Calling recombination frequency above 50 percent; unlinked genes assort at 50 percent, and observed values never exceed it.",
+        "Confusing homologous chromosomes with sister chromatids; homologues come from different parents, sisters are copies produced by replication.",
+        "Believing meiosis produces identical cells; each gamete is genetically distinct."
+      ],
+      "videos": [
+        {
+          "youtubeId": "IQJ4DBkCnco",
+          "title": "Comparing mitosis and meiosis | Cells | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Side-by-side comparison that clarifies the main differences in chromosome behaviour and outcome."
+        },
+        {
+          "youtubeId": "ZeATszO-6e0",
+          "title": "Gene mapping | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Explains how recombination frequencies are turned into a genetic map."
+        },
+        {
+          "youtubeId": "wrtLyLwt51o",
+          "title": "Gene Linkage and Genetic Maps",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "A concise explanation of linkage and how map distances are determined."
+        },
+        {
+          "youtubeId": "o_1dTvszV4Y",
+          "title": "Linkage and Recombination, Genetic maps | MIT 7.01SC Fundamentals of Biology",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture on recombination mapping with worked problems."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.32.812.120",
+          "title": "Sex Limited Inheritance in Drosophila",
+          "authors": "Morgan TH",
+          "year": 1910,
+          "journal": "Science",
+          "level": "beginner",
+          "whyItMatters": "The paper describing the white-eyed fly and its X-linked inheritance, which linked a specific gene to a specific chromosome and launched fly genetics. A short, readable account of discovery.",
+          "readingQuestions": [
+            "How did Morgan explain the unusual ratios of white-eyed males and females?",
+            "What other hypotheses might have fit the data?"
+          ]
+        },
+        {
+          "doi": "10.1002/jez.1400140104",
+          "title": "The linear arrangement of six sex-linked factors in Drosophila, as shown by their mode of association",
+          "authors": "Sturtevant AH",
+          "year": 1913,
+          "journal": "Journal of Experimental Zoology",
+          "level": "intermediate",
+          "whyItMatters": "The first genetic map. Sturtevant realised that recombination frequencies behave like distances along a line, an idea that remains the basis of linkage mapping today."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Genetics topic pages",
+          "provider": "Nature Scitable",
+          "type": "reference",
+          "url": "https://www.nature.com/scitable/topic/genetics-5/",
+          "free": true,
+          "level": "beginner",
+          "note": "Short, illustrated articles about meiosis, linkage and chromosomes."
+        },
+        {
+          "title": "Genetics library",
+          "provider": "LibreTexts Biology",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Genetics",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open textbooks with worked problems in linkage mapping and chromosome theory."
+        },
+        {
+          "title": "An Introduction to Genetic Analysis",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21766/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Classic genetics text, free in the NCBI Bookshelf; use its search for chromosome mapping examples."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In a test cross, 800 of 1000 offspring are parental types and 200 are recombinant. What is the map distance between the two genes?",
+          "options": [
+            "8 map units",
+            "20 map units",
+            "80 map units",
+            "200 map units"
+          ],
+          "answer": 1,
+          "explanation": "Recombination frequency is 200/1000 = 20 percent, and 1 percent recombination equals 1 map unit, so the distance is 20 map units."
+        },
+        {
+          "question": "During which stage of meiosis does crossing over occur?",
+          "options": [
+            "Prophase I",
+            "Metaphase II",
+            "Anaphase II",
+            "Interphase before meiosis I"
+          ],
+          "answer": 0,
+          "explanation": "Homologous chromosomes pair and exchange segments during prophase I."
+        },
+        {
+          "question": "Down syndrome (trisomy 21) most commonly arises from:",
+          "options": [
+            "A point mutation on chromosome 21",
+            "Nondisjunction during gamete formation",
+            "Crossing over between chromosomes 21 and 22",
+            "A deletion of the Y chromosome"
+          ],
+          "answer": 1,
+          "explanation": "Failure of chromosome 21 to separate in meiosis produces a gamete with two copies; fertilisation then gives three copies."
+        }
+      ]
+    },
+    {
+      "id": "dna-genetic-material-replication",
+      "title": "DNA as the genetic material and how it is replicated",
+      "hours": 6,
+      "hook": "For decades most biologists thought genes must be made of protein, because proteins seemed complex enough to carry information. Three elegant experiments, one with bacteria, one with viruses and one with heavy nitrogen, overturned that view and showed exactly how DNA copies itself.",
+      "learningObjectives": [
+        "Describe the experiments of Griffith, Avery-MacLeod-McCarty and Hershey-Chase and what each proved.",
+        "Explain the Meselson-Stahl experiment and the evidence for semi-conservative replication.",
+        "List the main enzymes of bacterial DNA replication and their roles.",
+        "Explain leading and lagging strand synthesis and the origin of Okazaki fragments.",
+        "Outline how proofreading and mismatch repair give high fidelity, and why telomeres are needed."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Transformation",
+          "definition": "Uptake of DNA from the environment that changes the genotype and phenotype of a bacterium, the basis of Avery's experiment."
+        },
+        {
+          "term": "Semi-conservative replication",
+          "definition": "Each daughter DNA molecule contains one old strand and one newly made strand."
+        },
+        {
+          "term": "Replication fork",
+          "definition": "The Y-shaped region where the parental double helix is unwound and new strands are synthesised."
+        },
+        {
+          "term": "DNA polymerase",
+          "definition": "An enzyme that adds nucleotides to the 3' end of a growing strand using a template, always synthesising 5' to 3'; it needs a primer and has proofreading activity (3' to 5' exonuclease)."
+        },
+        {
+          "term": "Helicase, primase, ligase, topoisomerase",
+          "definition": "Helicase unwinds the duplex, primase makes short RNA primers, ligase seals nicks and topoisomerase relieves the supercoiling ahead of the fork."
+        },
+        {
+          "term": "Leading and lagging strands",
+          "definition": "The leading strand is synthesised continuously towards the fork; the lagging strand is made discontinuously as Okazaki fragments."
+        },
+        {
+          "term": "Origin of replication",
+          "definition": "A specific DNA sequence where replication begins; bacteria usually have one, eukaryotic chromosomes have many."
+        },
+        {
+          "term": "Telomere",
+          "definition": "A repetitive sequence at the end of a linear eukaryotic chromosome; the end-replication problem is addressed by the enzyme telomerase."
+        }
+      ],
+      "deeper": {
+        "beginner": "Scientists used clever experiments to show that DNA, not protein, carries the instructions of life. When DNA copies itself, the double helix unzips and each strand serves as a template for a new partner strand, so every new molecule has one old strand and one new strand. Special enzymes unwind the helix, build the new strands and glue the pieces together.",
+        "intermediate": "Griffith (1928) showed that something from heat-killed virulent bacteria transformed harmless bacteria; Avery, MacLeod and McCarty (1944) purified the transforming principle and showed that it was destroyed by DNase but not by protease or RNase. Hershey and Chase (1952) labelled phage protein with 35S and phage DNA with 32P and found that the 32P entered the bacteria and appeared in progeny phage. Meselson and Stahl (1958) grew E. coli in 15N, transferred it to 14N and used CsCl density centrifugation to show hybrid DNA after one generation and equal hybrid and light DNA after two, consistent only with semi-conservative replication. DNA polymerase III is the main replicative enzyme in E. coli, with polymerase I removing primers; eukaryotes use polymerases alpha, delta and epsilon. Proofreading and mismatch repair reduce errors to about one in 10^9 to 10^10 bases.",
+        "advanced": "Avery's paper was cautious in its wording, partly because many contemporaries suspected contamination by trace protein, and it was the later work and the Hershey-Chase result that persuaded the field. In bacteria, the DnaA protein initiates replication at oriC and the replisome contains a sliding clamp that makes DNA polymerase III highly processive; in eukaryotes, the origin recognition complex, licensing factors and cell-cycle kinases ensure that each origin fires once per cycle. Telomerase, a ribonucleoprotein reverse transcriptase, extends telomeres in germ and stem cells, and its reactivation is a feature of most cancers."
+      },
+      "commonMistakes": [
+        "Saying that DNA polymerase can start a new chain without a primer; it can only extend an existing 3' end.",
+        "Describing the lagging strand as synthesised 3' to 5'; all synthesis is 5' to 3', but the lagging strand is made in short pieces away from the fork.",
+        "Remembering Hershey-Chase as showing that protein 'does nothing'; it showed that DNA enters the cell and directs phage production.",
+        "Confusing semi-conservative with conservative or dispersive models and not explaining how Meselson-Stahl excluded them."
+      ],
+      "videos": [
+        {
+          "youtubeId": "JcUQ_TZCG0w",
+          "title": "Meselson-Stahl Experiment",
+          "channel": "Bozeman Science",
+          "level": "beginner",
+          "whyWatch": "A short walkthrough of the density-labelling experiment and what each outcome would mean."
+        },
+        {
+          "youtubeId": "TNKWgcFPHqw",
+          "title": "DNA replication - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A 3D animation of the replication fork showing helicase, primase, polymerase and ligase at work."
+        },
+        {
+          "youtubeId": "Qqe4thU-os8",
+          "title": "DNA Replication (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "An accessible walk through the steps of replication with clear vocabulary."
+        },
+        {
+          "youtubeId": "8jLy33vbtYM",
+          "title": "7. Replication",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full MIT lecture that goes deeper into replisome mechanics and regulation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1084/jem.79.2.137",
+          "title": "Studies on the Chemical Nature of the Substance Inducing Transformation of Pneumococcal Types",
+          "authors": "Avery OT, MacLeod CM, McCarty M",
+          "year": 1944,
+          "journal": "Journal of Experimental Medicine",
+          "level": "intermediate",
+          "whyItMatters": "The first strong evidence that DNA is the genetic material. Notice how carefully the authors purify the transforming principle and test it with specific enzymes; it is a lesson in controls.",
+          "readingQuestions": [
+            "Which enzyme treatments were used and what did each result show?",
+            "Why were the authors cautious in their conclusions?"
+          ]
+        },
+        {
+          "doi": "10.1085/jgp.36.1.39",
+          "title": "Independent Functions of Viral Protein and Nucleic Acid in Growth of Bacteriophage",
+          "authors": "Hershey AD, Chase M",
+          "year": 1952,
+          "journal": "Journal of General Physiology",
+          "level": "intermediate",
+          "whyItMatters": "The famous 'blender experiment'. Its data are less clear-cut than the textbook version, which makes it a good case study in how a simplified story can differ from the original evidence."
+        },
+        {
+          "doi": "10.1073/pnas.44.7.671",
+          "title": "The replication of DNA in Escherichia coli",
+          "authors": "Meselson M, Stahl FW",
+          "year": 1958,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Called by many 'the most beautiful experiment in biology', it distinguishes three models of replication using only heavy nitrogen and a centrifuge.",
+          "readingQuestions": [
+            "What would a conservative model have predicted after one generation?",
+            "Why did the authors need to centrifuge in a caesium chloride gradient?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "DNA from the Beginning: DNA is the genetic material",
+          "provider": "Cold Spring Harbor Laboratory",
+          "type": "interactive",
+          "url": "https://www.dnaftb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Animated lessons on the classic experiments, narrated step by step."
+        },
+        {
+          "title": "yourgenome",
+          "provider": "Wellcome Sanger Institute",
+          "type": "tutorial",
+          "url": "https://www.yourgenome.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Clear articles and videos on DNA, replication and genomes."
+        },
+        {
+          "title": "An Introduction to Genetic Analysis",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21766/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook; use the search to find chapters on DNA structure and replication."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In the Hershey-Chase experiment, which radioactive label was found inside infected bacteria?",
+          "options": [
+            "35S, labelling protein",
+            "32P, labelling DNA",
+            "15N",
+            "14C"
+          ],
+          "answer": 1,
+          "explanation": "Phage DNA contains phosphorus but little sulfur; the 32P label entered the bacterial cells, showing that DNA is what the phage injects."
+        },
+        {
+          "question": "After one generation in 14N medium, E. coli DNA grown initially in 15N shows a single band of intermediate density. Which model does this exclude?",
+          "options": [
+            "Semi-conservative",
+            "Conservative",
+            "Both semi-conservative and dispersive",
+            "None of the models"
+          ],
+          "answer": 1,
+          "explanation": "A conservative model predicts two bands (fully heavy and fully light), so a single intermediate band excludes it; the second generation then separates semi-conservative from dispersive."
+        },
+        {
+          "question": "Why is the lagging strand synthesised in fragments?",
+          "options": [
+            "DNA polymerase can only add nucleotides in the 5' to 3' direction, away from the origin on that strand",
+            "The lagging strand lacks a template",
+            "Helicase can only open DNA in short stretches",
+            "Ligase prevents continuous synthesis"
+          ],
+          "answer": 0,
+          "explanation": "Because synthesis is only 5' to 3', the strand whose template runs the other way must be made as short Okazaki fragments as the fork opens up."
+        }
+      ]
+    },
+    {
+      "id": "mutation-and-dna-repair",
+      "title": "Mutation and DNA repair",
+      "hours": 5,
+      "hook": "A single human cell suffers many thousands of spontaneous DNA lesions every day, from water breaking bonds to sunlight fusing neighbouring bases. That we survive at all is a tribute to a set of molecular repair crews, and when they fail the result can be cancer, ageing or inherited disease.",
+      "learningObjectives": [
+        "Classify point mutations (silent, missense, nonsense) and frameshifts and predict their effects.",
+        "Distinguish spontaneous from induced mutation and describe common mutagens.",
+        "Describe the main repair pathways: direct reversal, base excision, nucleotide excision, mismatch repair and double-strand break repair.",
+        "Link defects in repair to disease, such as xeroderma pigmentosum and Lynch syndrome.",
+        "Explain the difference between germline and somatic mutations and why most mutations are neutral or harmful."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Point mutation",
+          "definition": "A change in a single base pair; transitions swap purine for purine or pyrimidine for pyrimidine, transversions swap between classes."
+        },
+        {
+          "term": "Silent, missense, nonsense",
+          "definition": "Silent changes do not alter the amino acid, missense changes substitute a different amino acid, nonsense changes create a premature stop codon."
+        },
+        {
+          "term": "Frameshift mutation",
+          "definition": "Insertion or deletion of a number of bases not divisible by three, altering the reading frame downstream."
+        },
+        {
+          "term": "Mutagen",
+          "definition": "Any agent that increases mutation rate: UV light, ionising radiation, base analogues, alkylating agents, intercalating dyes."
+        },
+        {
+          "term": "Pyrimidine dimer",
+          "definition": "Covalent link between adjacent thymines (or cytosines) caused by UV light, distorting the helix."
+        },
+        {
+          "term": "Base excision repair (BER)",
+          "definition": "Removes a single damaged base, such as deaminated cytosine (uracil), using a DNA glycosylase followed by gap filling."
+        },
+        {
+          "term": "Nucleotide excision repair (NER)",
+          "definition": "Removes a bulky lesion such as a UV dimer by cutting out a short oligonucleotide and resynthesising it."
+        },
+        {
+          "term": "Mismatch repair (MMR)",
+          "definition": "Corrects replication errors that escaped proofreading by recognising the new strand and replacing the mismatched region."
+        }
+      ],
+      "deeper": {
+        "beginner": "DNA is not perfectly stable. Heat and water, chemicals and sunlight can all change its bases, and copying mistakes happen too. A change in the DNA sequence is called a mutation. Some mutations do nothing; some change a protein; a few make a protein stop working. Cells have repair enzymes that proofread and fix damage, like an editor correcting typing mistakes.",
+        "intermediate": "Because the genetic code is redundant, many third-position changes are silent. A single base substitution that converts a codon to a stop codon truncates the protein (nonsense), while an insertion or deletion of one or two bases shifts the frame and usually produces a nonfunctional protein. Cytosine deamination to uracil is repaired by uracil-DNA glycosylase in BER; this is the reason DNA uses thymine rather than uracil, because a uracil in DNA is recognisably 'wrong'. UV-induced thymine dimers are repaired by NER, and people with xeroderma pigmentosum, defective in NER, develop severe skin cancers. Mismatch repair defects cause Lynch syndrome, a hereditary predisposition to colorectal cancer. Double-strand breaks are repaired by non-homologous end joining (error prone) or homologous recombination (accurate, needing a template).",
+        "advanced": "Lindahl's analysis of DNA's intrinsic chemical lability (hydrolysis, oxidation, methylation) argued that the genetic material is intrinsically unstable and that evolution of repair systems was essential for complex life; spontaneous depurination and cytosine deamination occur at rates measurable in thousands of events per cell per day. Mutation rates are not uniform: CpG sites mutate faster because methylated cytosine deaminates to thymine, and mutation spectra show signatures of specific processes that are used in cancer genomics. Many cancer therapies, such as cisplatin and PARP inhibitors, exploit the dependence of tumour cells on particular repair pathways."
+      },
+      "commonMistakes": [
+        "Assuming all mutations are harmful; most are neutral, and a few are beneficial.",
+        "Calling every change in the genome a 'mutation' without distinguishing it from a common polymorphism.",
+        "Mixing up silent and missense mutations: only missense changes the amino acid.",
+        "Believing that repair is perfect; errors that escape repair are the source of heritable variation and cancer."
+      ],
+      "videos": [
+        {
+          "youtubeId": "g02RnGXCXrQ",
+          "title": "An introduction to genetic mutations | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Defines the main types of mutations and how they differ in consequence."
+        },
+        {
+          "youtubeId": "xYOK-yzUWSI",
+          "title": "The different types of mutations | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Works through substitutions, insertions and deletions with sequence examples."
+        },
+        {
+          "youtubeId": "V6NzxmALhRM",
+          "title": "Mismatch Repair -- HHMI BioInteractive Video",
+          "channel": "HHMI BioInteractive",
+          "level": "intermediate",
+          "whyWatch": "A short animation showing how the mismatch repair machinery finds and replaces a wrongly paired base."
+        },
+        {
+          "youtubeId": "KM-XCrGVgtg",
+          "title": "Avoid confusion between - Nucleotide Excision repair vs Base excision repair vs Mismatch repair",
+          "channel": "Quick Biochemistry Basics",
+          "level": "intermediate",
+          "whyWatch": "A quick comparison of the three excision-type repair systems to help you tell them apart."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/362709a0",
+          "title": "Instability and decay of the primary structure of DNA",
+          "authors": "Lindahl T",
+          "year": 1993,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A classic review by a Nobel laureate arguing that DNA is chemically fragile and that cells must constantly repair it. It reframes mutation as a balance between damage and repair, not just rare accidents.",
+          "readingQuestions": [
+            "Which chemical reactions does the author highlight as most common in damaging DNA?",
+            "How does the instability of DNA relate to the survival of ancient DNA?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "DNA repair articles",
+          "provider": "Nature Scitable",
+          "type": "reference",
+          "url": "https://www.nature.com/scitable/topic/genetics-5/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Articles on mutation and repair processes with diagrams."
+        },
+        {
+          "title": "Genetics library",
+          "provider": "LibreTexts Biology",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Genetics",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open-access chapters on mutation and repair with questions."
+        },
+        {
+          "title": "dbSNP",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/snp/",
+          "free": true,
+          "level": "advanced",
+          "note": "Explore real human sequence variants and see how common they are."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A change from GAA (Glu) to GAG (Glu) is which type of mutation?",
+          "options": [
+            "Missense",
+            "Nonsense",
+            "Silent",
+            "Frameshift"
+          ],
+          "answer": 2,
+          "explanation": "Both codons code for glutamate, so the amino acid sequence is unchanged; this is a silent mutation."
+        },
+        {
+          "question": "Which repair pathway primarily removes UV-induced thymine dimers?",
+          "options": [
+            "Base excision repair",
+            "Nucleotide excision repair",
+            "Mismatch repair",
+            "Homologous recombination"
+          ],
+          "answer": 1,
+          "explanation": "Bulky helix-distorting lesions such as thymine dimers are removed by cutting out a short stretch of strand in nucleotide excision repair."
+        },
+        {
+          "question": "Why does DNA use thymine instead of uracil?",
+          "options": [
+            "Thymine pairs more strongly with adenine",
+            "Uracil from cytosine deamination can be recognised as an error and removed",
+            "Uracil cannot form hydrogen bonds",
+            "Thymine is cheaper to make"
+          ],
+          "answer": 1,
+          "explanation": "Since cytosine can deaminate into uracil, having thymine as the normal base means any uracil in DNA is an obvious lesion that repair enzymes can remove."
+        }
+      ]
+    },
+    {
+      "id": "transcription-rna-processing",
+      "title": "Transcription and RNA processing",
+      "hours": 6,
+      "hook": "In 1977 two laboratories found that messenger RNA was shorter than the gene that produced it, with large stretches of the gene missing from the final message. The cell cuts and pastes its own transcripts, and that surprise rewired our understanding of how genes work and how a single gene can make many proteins.",
+      "learningObjectives": [
+        "State the central dogma and its known exceptions.",
+        "Describe the stages of transcription in bacteria and in eukaryotes.",
+        "Identify template and coding strands and write the mRNA sequence from a DNA sequence.",
+        "Describe eukaryotic mRNA processing: capping, splicing and polyadenylation.",
+        "Explain alternative splicing and why it increases protein diversity."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Central dogma",
+          "definition": "Crick's statement that sequence information flows from nucleic acid to protein and not back from protein to nucleic acid or protein; DNA to RNA to protein is the general route, with reverse transcription and RNA replication as additional nucleic acid routes."
+        },
+        {
+          "term": "RNA polymerase",
+          "definition": "Enzyme that synthesises RNA 5' to 3' from a DNA template and, unlike DNA polymerase, needs no primer."
+        },
+        {
+          "term": "Promoter",
+          "definition": "A DNA sequence where RNA polymerase and transcription factors bind to initiate transcription; in bacteria it includes -10 and -35 elements recognised by a sigma factor."
+        },
+        {
+          "term": "Template and coding strands",
+          "definition": "RNA is made complementary to the template strand and therefore matches the sequence of the coding (sense) strand, with U replacing T."
+        },
+        {
+          "term": "5' cap and poly(A) tail",
+          "definition": "Modifications added to eukaryotic pre-mRNA that protect it, aid export and enhance translation."
+        },
+        {
+          "term": "Splicing",
+          "definition": "Removal of introns and joining of exons by the spliceosome, a complex of snRNAs and proteins."
+        },
+        {
+          "term": "Alternative splicing",
+          "definition": "Different combinations of exons are joined from the same pre-mRNA, producing different protein isoforms."
+        },
+        {
+          "term": "Operon and polycistronic mRNA",
+          "definition": "In bacteria, several genes can be transcribed together on a single mRNA; eukaryotic mRNA usually encodes one protein."
+        }
+      ],
+      "deeper": {
+        "beginner": "Transcription copies a gene into a messenger RNA. An enzyme called RNA polymerase attaches at a start signal, reads one strand of DNA and builds a matching strand of RNA. In bacteria the RNA is ready to use straight away. In human cells the first copy must be edited: the ends are capped, the useless sections (introns) are cut out, the useful sections (exons) are joined, and a tail is added.",
+        "intermediate": "Bacterial RNA polymerase core enzyme plus a sigma factor recognises the promoter, melts DNA and begins transcription; termination occurs through rho-dependent or intrinsic hairpin signals. Eukaryotes use three RNA polymerases (Pol I for most rRNA, Pol II for mRNA and many noncoding RNAs, Pol III for tRNA and 5S rRNA), and Pol II requires general transcription factors including TBP, which binds the TATA box in many promoters. The spliceosome recognises conserved 5' and 3' splice sites and a branch point adenine, carrying out two transesterification reactions. Alternative splicing affects most human multi-exon genes and allows tissue-specific protein isoforms. In the exercise of writing mRNA from DNA, remember that the mRNA has the same sequence as the coding strand (with U), and is antiparallel to the template.",
+        "advanced": "Berget, Moore and Sharp, and independently Chow and Roberts, discovered that adenovirus mRNA was composed of non-contiguous segments of the genome, which led to the Nobel Prize in 1993. Crick's 1970 statement of the central dogma clarified that it concerns the impossibility of transferring sequence information from protein, not an absolute one-way street for all information; reverse transcriptase and RNA-dependent RNA polymerases were already known. Beadle and Tatum's 1941 Neurospora work, 'one gene, one enzyme', is a precursor to this logic, although we now know that one gene can give many proteins and many genes give non-coding RNAs. Transcription is coupled to capping, splicing and polyadenylation through the C-terminal domain of RNA polymerase II."
+      },
+      "commonMistakes": [
+        "Mixing up the template strand with the coding strand: mRNA sequence matches the coding strand, not the template.",
+        "Forgetting that RNA polymerase reads the template 3' to 5' while synthesising RNA 5' to 3'.",
+        "Believing that all introns are removed in a fixed way; alternative splicing means that exons can also be skipped.",
+        "Thinking bacteria also splice mRNA in the same way; they generally do not have spliceosomal introns in mRNA."
+      ],
+      "videos": [
+        {
+          "youtubeId": "JQIwwJqF5D0",
+          "title": "Transcription and mRNA processing | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Goes through initiation, elongation, termination and the processing steps in one place."
+        },
+        {
+          "youtubeId": "-AnsJILjbz8",
+          "title": "DNA Transcription (Advanced Detail) | HHMI BioInteractive Video",
+          "channel": "HHMI BioInteractive",
+          "level": "intermediate",
+          "whyWatch": "A short, accurate animation of RNA polymerase working along DNA."
+        },
+        {
+          "youtubeId": "aVgwr0QpYNE",
+          "title": "RNA Splicing | DNA Learning Center",
+          "channel": "DNA Learning Center",
+          "level": "beginner",
+          "whyWatch": "Illustrates the removal of introns and the joining of exons in under two minutes."
+        },
+        {
+          "youtubeId": "6gUY5NoX1Lk",
+          "title": "DNA replication and RNA transcription and translation | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A big-picture view of how DNA, RNA and protein relate to each other."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/227561a0",
+          "title": "Central Dogma of Molecular Biology",
+          "authors": "Crick F",
+          "year": 1970,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "Crick restates what the central dogma does and does not claim, correcting a widespread simplification. Short and clear; an exercise in precise scientific language.",
+          "readingQuestions": [
+            "Which transfers of information does Crick describe as possible, and which as never observed?",
+            "How did reverse transcriptase affect the debate?"
+          ]
+        },
+        {
+          "doi": "10.1073/pnas.27.11.499",
+          "title": "Genetic Control of Biochemical Reactions in Neurospora",
+          "authors": "Beadle GW, Tatum EL",
+          "year": 1941,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Used mutants of bread mould to show that genes control individual steps in metabolism, which is the foundation of the idea that genes encode enzymes."
+        },
+        {
+          "doi": "10.1073/pnas.74.8.3171",
+          "title": "Spliced segments at the 5' terminus of adenovirus 2 late mRNA",
+          "authors": "Berget SM, Moore C, Sharp PA",
+          "year": 1977,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "advanced",
+          "whyItMatters": "One of the two discoveries of RNA splicing, showing by electron microscopy that mRNA contains segments joined from distant parts of the genome."
+        },
+        {
+          "doi": "10.1016/0092-8674(77)90180-5",
+          "title": "An amazing sequence arrangement at the 5' ends of adenovirus 2 messenger RNA",
+          "authors": "Chow LT, Gelinas RE, Broker TR, Roberts RJ",
+          "year": 1977,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "The companion discovery of splicing from Roberts's group; the title itself captures the surprise researchers felt."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Gene Expression Basics",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/gene-expression-basics",
+          "free": true,
+          "level": "beginner",
+          "note": "Play with transcription factors, polymerase and mRNA in a simple simulation."
+        },
+        {
+          "title": "yourgenome",
+          "provider": "Wellcome Sanger Institute",
+          "type": "tutorial",
+          "url": "https://www.yourgenome.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Clear explanations of gene expression, with animations."
+        },
+        {
+          "title": "Molecular Cell Biology (Lodish et al.), 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Detailed free textbook chapters on transcription and RNA processing."
+        }
+      ],
+      "animation": "central-dogma",
+      "selfCheck": [
+        {
+          "question": "The template strand of a gene reads 3'-TACGGT-5'. What is the sequence of the mRNA (5' to 3')?",
+          "options": [
+            "AUGCCA",
+            "TACGGT",
+            "UACGGU",
+            "ACCGUA"
+          ],
+          "answer": 0,
+          "explanation": "mRNA is complementary and antiparallel to the template: complementing 3'-TACGGT-5' gives 5'-AUGCCA-3' with U in place of T."
+        },
+        {
+          "question": "Which of these is added to eukaryotic pre-mRNA?",
+          "options": [
+            "A sigma factor",
+            "A 5' cap and a poly(A) tail",
+            "A Shine-Dalgarno sequence",
+            "A Pribnow box"
+          ],
+          "answer": 1,
+          "explanation": "Eukaryotic pre-mRNA receives a 5' methylguanosine cap and a 3' poly(A) tail in addition to splicing."
+        },
+        {
+          "question": "What is the main consequence of alternative splicing?",
+          "options": [
+            "More DNA is made",
+            "One gene can produce multiple protein isoforms",
+            "Introns are translated",
+            "Transcription is stopped"
+          ],
+          "answer": 1,
+          "explanation": "By joining different combinations of exons, one pre-mRNA can encode several related but distinct proteins."
+        }
+      ]
+    },
+    {
+      "id": "translation-genetic-code",
+      "title": "Translation and the genetic code",
+      "hours": 6,
+      "hook": "In 1961 Marshall Nirenberg and Heinrich Matthaei added a synthetic RNA made only of uracils to a test-tube extract and got a protein made only of phenylalanine. Overnight, the first word of the genetic code had been read, and within a few years the whole dictionary followed.",
+      "learningObjectives": [
+        "Explain how the triplet code is organised, including degeneracy, start and stop codons and near-universality.",
+        "Describe the roles of mRNA, tRNA, aminoacyl-tRNA synthetases and ribosomes.",
+        "Describe initiation, elongation and termination of translation in bacteria and eukaryotes.",
+        "Translate an mRNA sequence into a polypeptide using the codon table.",
+        "Explain wobble and why a cell does not need 61 different tRNAs."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Codon",
+          "definition": "A triplet of nucleotides in mRNA that specifies an amino acid or a stop signal; there are 64 codons, of which 61 code for amino acids and 3 (UAA, UAG, UGA) signal stop."
+        },
+        {
+          "term": "Degeneracy",
+          "definition": "Most amino acids are specified by more than one codon, so the code is redundant but unambiguous: a codon never specifies two amino acids."
+        },
+        {
+          "term": "Reading frame",
+          "definition": "The way the sequence is divided into triplets, set by the start codon (usually AUG)."
+        },
+        {
+          "term": "tRNA",
+          "definition": "An adaptor RNA carrying an amino acid at its 3' end and an anticodon that base-pairs with the codon."
+        },
+        {
+          "term": "Aminoacyl-tRNA synthetase",
+          "definition": "An enzyme that attaches the correct amino acid to its tRNA; their accuracy is the real 'translation' step of the genetic code."
+        },
+        {
+          "term": "Ribosome",
+          "definition": "A ribonucleoprotein machine made of rRNA and proteins with A, P and E sites; the rRNA catalyses peptide bond formation."
+        },
+        {
+          "term": "Wobble",
+          "definition": "Relaxed pairing at the third codon position that allows one tRNA to recognise more than one codon."
+        },
+        {
+          "term": "Release factor",
+          "definition": "A protein that recognises a stop codon in the A site and triggers release of the completed polypeptide."
+        }
+      ],
+      "deeper": {
+        "beginner": "The sequence of mRNA is read three letters at a time, and each three-letter word (codon) stands for one amino acid. Adaptor molecules called tRNAs carry the amino acids, and a ribosome moves along the mRNA, matching each codon with the right tRNA and joining the amino acids into a chain. The process starts at an AUG and ends at a stop codon.",
+        "intermediate": "Translation initiation in bacteria uses a Shine-Dalgarno sequence to position the small ribosomal subunit at the start codon, with formylmethionine as the first amino acid; in eukaryotes the small subunit binds the 5' cap and scans for the first AUG in a favourable context (Kozak sequence). During elongation, an aminoacyl-tRNA enters the A site (helped by EF-Tu in bacteria), the ribosome catalyses peptide bond formation by transferring the growing chain onto the A-site amino acid, and translocation shifts tRNAs to P and E sites. Termination happens when a release factor recognises a stop codon. Because the code is degenerate and the wobble rule allows flexible pairing at the third position, fewer than 61 tRNA species are needed. The code is nearly universal; mitochondria and some organisms use small variants.",
+        "advanced": "The peptidyl transferase reaction is catalysed by 23S (bacterial) or 28S (eukaryotic) rRNA, making the ribosome a ribozyme; this is strong evidence for an RNA world stage in evolution. Synthetases proofread by editing domains, keeping the error rate near one in 10^4 amino acids incorporated. Crick's wobble hypothesis explains the pairing of inosine in anticodons with U, C or A. Genetic code expansion lets researchers add unnatural amino acids by reassigning the amber stop codon using engineered tRNA-synthetase pairs; translation efficiency is also affected by codon usage bias, which matters when expressing a gene in a different species."
+      },
+      "commonMistakes": [
+        "Reading a codon table with DNA codons when starting from mRNA or vice versa; make sure U versus T matches.",
+        "Saying that tRNA 'reads' DNA; it pairs with mRNA codons only.",
+        "Starting translation at the first nucleotide of mRNA rather than the first AUG.",
+        "Saying that the code is ambiguous because it is degenerate; degeneracy means many codons per amino acid, not many amino acids per codon."
+      ],
+      "videos": [
+        {
+          "youtubeId": "ocAAkB32Hqs",
+          "title": "Translation (mRNA to protein) | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Details initiation, elongation and termination with the roles of the A, P and E sites."
+        },
+        {
+          "youtubeId": "LsEYgwuP6ko",
+          "title": "How to Read a Codon Chart",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Teaches you how to use the codon table, which you will do in every genetics problem."
+        },
+        {
+          "youtubeId": "gG7uCskUOrA",
+          "title": "From DNA to protein - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A 3D animation of transcription and translation, a good visual summary of the central dogma."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.47.10.1588",
+          "title": "The dependence of cell-free protein synthesis in E. coli upon naturally occurring or synthetic polyribonucleotides",
+          "authors": "Nirenberg MW, Matthaei JH",
+          "year": 1961,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The experiment that deciphered the first codon (UUU codes for phenylalanine). It shows how a cell-free system and synthetic RNA can answer a fundamental question.",
+          "readingQuestions": [
+            "What controls were used to show that synthesis depended on the added RNA?",
+            "How could the same approach be extended to other codons?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Translate tool",
+          "provider": "SIB Swiss Institute of Bioinformatics (ExPASy)",
+          "type": "tool",
+          "url": "https://web.expasy.org/translate/",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste a DNA sequence and see all six reading frames translated."
+        },
+        {
+          "title": "ORFfinder",
+          "provider": "NCBI",
+          "type": "tool",
+          "url": "https://www.ncbi.nlm.nih.gov/orffinder/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Find open reading frames in a sequence to practise identifying start and stop codons."
+        },
+        {
+          "title": "The Genetic Codes",
+          "provider": "NCBI Taxonomy",
+          "type": "reference",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi",
+          "free": true,
+          "level": "advanced",
+          "note": "Official tables of the standard genetic code and its variants in mitochondria and other organisms."
+        }
+      ],
+      "animation": "genetic-code",
+      "selfCheck": [
+        {
+          "question": "How many nucleotides specify one amino acid in the standard genetic code?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": 2,
+          "explanation": "The code is a triplet code, so each codon of three nucleotides specifies one amino acid or a stop."
+        },
+        {
+          "question": "Which molecule physically links an amino acid to its correct tRNA?",
+          "options": [
+            "Ribosome",
+            "Aminoacyl-tRNA synthetase",
+            "Release factor",
+            "RNA polymerase"
+          ],
+          "answer": 1,
+          "explanation": "Each aminoacyl-tRNA synthetase attaches its cognate amino acid to the matching tRNA, ensuring the code is read correctly."
+        },
+        {
+          "question": "An mRNA is 5'-AUGGCUUAAGGC-3'. How many amino acids are in the polypeptide?",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": 0,
+          "explanation": "AUG (Met), GCU (Ala), then UAA is a stop codon, so the polypeptide has two amino acids."
+        }
+      ]
+    },
+    {
+      "id": "gene-regulation-lac-operon",
+      "title": "Regulation of gene expression: the lac operon and beyond",
+      "hours": 5,
+      "hook": "A bacterium living in your gut does not waste energy making the enzymes to digest lactose until lactose appears, and only if its preferred sugar, glucose, is absent. The discovery of how it makes that decision earned Jacob and Monod a Nobel Prize and founded the whole field of gene regulation.",
+      "learningObjectives": [
+        "Describe the structure of the lac operon and its negative control by the lac repressor.",
+        "Explain positive control by CAP-cAMP and how glucose levels modulate expression.",
+        "Predict the outcome of regulatory mutations and merodiploid experiments.",
+        "Contrast bacterial and eukaryotic regulation, including enhancers, transcription factors and chromatin.",
+        "Define epigenetic marks such as DNA methylation and histone acetylation at an introductory level."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Operon",
+          "definition": "A cluster of genes transcribed together from a single promoter and controlled by a shared operator, typical of bacteria."
+        },
+        {
+          "term": "Repressor and operator",
+          "definition": "The repressor is a DNA-binding protein that blocks transcription by binding to the operator; the lac repressor is encoded by lacI."
+        },
+        {
+          "term": "Inducer",
+          "definition": "A small molecule (allolactose, or IPTG in the laboratory) that binds the repressor and releases it from the operator."
+        },
+        {
+          "term": "Catabolite repression",
+          "definition": "When glucose is plentiful, cAMP levels are low, CAP is inactive and the lac operon is expressed poorly even if lactose is present."
+        },
+        {
+          "term": "Cis and trans acting",
+          "definition": "Operator and promoter mutations affect only the DNA they are on (cis); repressor mutations affect all copies of the operon in the cell (trans)."
+        },
+        {
+          "term": "Enhancer",
+          "definition": "A eukaryotic DNA element, often distant from the promoter, that binds transcription factors and increases transcription."
+        },
+        {
+          "term": "Chromatin",
+          "definition": "DNA wrapped around histone octamers into nucleosomes; histone modifications and DNA methylation control accessibility."
+        },
+        {
+          "term": "Epigenetic mark",
+          "definition": "A chemical modification of DNA or histones that influences gene expression without changing the DNA sequence and can be inherited through cell division."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells do not use all of their genes all of the time. In the lac operon, a repressor protein sits on the DNA and stops the cell from making lactose-digesting enzymes. When lactose is around, a lactose by-product grabs the repressor and removes it, and the genes switch on. If there is plenty of glucose, the cell still keeps the genes mostly off because it prefers glucose.",
+        "intermediate": "The lac operon contains lacZ (beta-galactosidase), lacY (permease) and lacA (transacetylase), with the lacI gene encoding the repressor elsewhere. The repressor is active as a tetramer binding the operator and blocking RNA polymerase. Allolactose, a minor product of beta-galactosidase, binds the repressor and releases it. Full activation requires cAMP-CAP bound upstream of the promoter, which recruits RNA polymerase; glucose lowers cAMP. In partial diploids, a lacI- mutation is recessive (the repressor from the wild-type copy acts in trans), whereas lacO^c mutations act in cis, which was the key logic used by Jacob and Monod. In eukaryotes, regulation is combinatorial: activators and repressors bind enhancers and silencers, mediators connect them to the polymerase, and chromatin remodelling and histone modification determine whether the DNA is accessible.",
+        "advanced": "Jacob and Monod's 1961 paper introduced the concepts of operator, regulator gene and messenger RNA as an unstable intermediate. The lac switch is more subtle than a simple on-off: permease induction creates positive feedback that gives bistable all-or-none behaviour at the single-cell level at certain inducer concentrations. In eukaryotes, DNA methylation at CpG islands generally silences promoters, histone acetylation correlates with active chromatin, and long-range interactions between enhancers and promoters occur through looping within topologically associating domains. Epigenetic regulation underlies X-chromosome inactivation and genomic imprinting, and its misregulation is a hallmark of cancer."
+      },
+      "commonMistakes": [
+        "Saying that lactose directly binds the repressor; the inducer is allolactose (in lab, IPTG).",
+        "Treating glucose repression as acting on the repressor; it works through cAMP-CAP, a separate positive control.",
+        "Assuming that eukaryotic genes are organised into operons; polycistronic operons are the exception (though they occur in some organisms such as C. elegans).",
+        "Confusing cis and trans effects when interpreting merodiploids."
+      ],
+      "videos": [
+        {
+          "youtubeId": "LuOaEe89_HE",
+          "title": "Lac operon | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A clear first description of the operon and its induction by lactose."
+        },
+        {
+          "youtubeId": "N7_K0yl0Egk",
+          "title": "Operons and gene regulation in bacteria | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Places the lac operon in the wider context of bacterial regulation, including repressible operons."
+        },
+        {
+          "youtubeId": "ypH-hDKpCY0",
+          "title": "Regulation of transcription | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Contrasts bacterial control with eukaryotic enhancers, transcription factors and chromatin."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/S0022-2836(61)80072-7",
+          "title": "Genetic regulatory mechanisms in the synthesis of proteins",
+          "authors": "Jacob F, Monod J",
+          "year": 1961,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "A foundational paper that introduces the operon model through logical analysis of mutants. Read it to see how pure genetics can deduce molecular mechanism.",
+          "readingQuestions": [
+            "How do constitutive mutants of different kinds distinguish the regulator gene from the operator?",
+            "Which predictions of the model were later confirmed biochemically?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Gene Expression Basics",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/gene-expression-basics",
+          "free": true,
+          "level": "beginner",
+          "note": "Explore how transcription factors change the rate of mRNA production."
+        },
+        {
+          "title": "Gene regulation articles",
+          "provider": "Nature Scitable",
+          "type": "reference",
+          "url": "https://www.nature.com/scitable/topic/genetics-5/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Explanations of gene regulation and epigenetics in bacteria and eukaryotes."
+        },
+        {
+          "title": "EMBL-EBI online training",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/",
+          "free": true,
+          "level": "advanced",
+          "note": "Free courses that show how gene expression data are explored in public databases."
+        }
+      ],
+      "animation": "lac-operon",
+      "selfCheck": [
+        {
+          "question": "In an E. coli cell with lactose present and glucose absent, the lac operon is:",
+          "options": [
+            "Off, because the repressor is bound and CAP is inactive",
+            "On at a high level because the repressor is released and CAP-cAMP is active",
+            "Off, because lactose is a corepressor",
+            "On only if glucose is also present"
+          ],
+          "answer": 1,
+          "explanation": "Allolactose frees the operator and low glucose gives high cAMP, so CAP-cAMP stimulates transcription: full induction."
+        },
+        {
+          "question": "A mutation in lacI that prevents the repressor from binding the operator would cause:",
+          "options": [
+            "No expression of lacZ in any condition",
+            "Constitutive expression of the lac genes",
+            "Expression only with glucose",
+            "Enhanced repression"
+          ],
+          "answer": 1,
+          "explanation": "Without a functional repressor the operator is never blocked, so the operon is expressed even without lactose."
+        },
+        {
+          "question": "Which modification is generally associated with active chromatin in eukaryotes?",
+          "options": [
+            "Histone acetylation",
+            "Dense CpG methylation at promoters",
+            "Nucleosome compaction",
+            "Loss of all histones"
+          ],
+          "answer": 0,
+          "explanation": "Histone acetylation neutralises positive charges on histones, loosens DNA-histone contacts and is associated with active transcription."
+        }
+      ]
+    },
+    {
+      "id": "cutting-pasting-dna-cloning",
+      "title": "Cutting and pasting DNA: restriction enzymes and cloning",
+      "hours": 5,
+      "hook": "In the early 1970s, researchers discovered that bacteria carry molecular scissors that cut DNA at specific sequences, and that a second enzyme, ligase, can paste the pieces back together. Within a few years, a gene from one species was placed into a plasmid and made to work in another, and modern biotechnology was born.",
+      "learningObjectives": [
+        "Describe how type II restriction enzymes recognise and cut DNA, and the difference between sticky and blunt ends.",
+        "Outline the steps of cloning a gene into a plasmid: cut, ligate, transform, select.",
+        "Identify the essential parts of a cloning vector: origin of replication, selectable marker and multiple cloning site.",
+        "Explain blue-white screening and antibiotic selection.",
+        "Describe examples of recombinant products such as insulin and the basic safety considerations."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Restriction endonuclease",
+          "definition": "An enzyme from bacteria that cuts DNA at or near a short specific sequence, protecting the bacterium from phage; type II enzymes such as EcoRI recognise palindromic sequences."
+        },
+        {
+          "term": "Sticky and blunt ends",
+          "definition": "Staggered cuts leave single-stranded overhangs that can base-pair with matching overhangs; blunt cuts leave flush ends."
+        },
+        {
+          "term": "DNA ligase",
+          "definition": "Enzyme that forms phosphodiester bonds to join DNA fragments together, using ATP or NAD+."
+        },
+        {
+          "term": "Plasmid vector",
+          "definition": "A small circular DNA that replicates independently in bacteria and is engineered to carry foreign DNA."
+        },
+        {
+          "term": "Selectable marker",
+          "definition": "A gene, commonly for antibiotic resistance, that lets only cells containing the vector grow on selective medium."
+        },
+        {
+          "term": "Multiple cloning site (MCS)",
+          "definition": "A short region of a vector containing several unique restriction sites for inserting DNA."
+        },
+        {
+          "term": "Transformation",
+          "definition": "Introduction of plasmid DNA into bacterial cells, for example by heat shock of competent cells or electroporation."
+        },
+        {
+          "term": "Blue-white screening",
+          "definition": "A method in which insertion of DNA into the lacZ alpha fragment inactivates beta-galactosidase so colonies stay white on X-gal plates, while colonies with empty vector are blue."
+        }
+      ],
+      "deeper": {
+        "beginner": "Restriction enzymes are like scissors that cut DNA wherever they find a particular short sequence. If the same enzyme cuts both a plasmid and a piece of foreign DNA, the cut ends fit together, and ligase glues them. The new plasmid is put into bacteria, and the bacteria are grown on antibiotics so that only those carrying the plasmid survive. The bacteria then make copies of the plasmid, and of the gene it carries.",
+        "intermediate": "EcoRI recognises 5'-GAATTC-3' and cuts between G and A on each strand, leaving 5' AATT overhangs; because the sequence is palindromic, any two EcoRI fragments can anneal. A typical cloning plasmid carries an origin of replication, an antibiotic-resistance gene such as ampR, and an MCS within a lacZ alpha fragment. After transformation, colonies are selected on ampicillin; white colonies on X-gal plates contain inserts. Dephosphorylation of the vector reduces self-ligation. Expression vectors add a promoter, ribosome-binding site and often a tag for purification. Recombinant human insulin, produced in bacteria or yeast since the early 1980s, was one of the first major products, and modern gene editing builds on the same enzymatic logic.",
+        "advanced": "Cohen, Chang, Boyer and Helling's 1973 paper showed that plasmid DNA fragments could be joined in vitro and propagated in E. coli; the 1975 Asilomar conference then set safety principles for recombinant DNA research. Newer cloning approaches such as Gibson assembly, Golden Gate cloning and recombination-based systems avoid dependence on particular restriction sites and allow many fragments to be assembled in one step. Codon optimisation, solubility tags and choice of host determine whether a protein is expressed in an active form; eukaryotic proteins that need glycosylation or disulfide bonds often require yeast, insect or mammalian expression systems."
+      },
+      "commonMistakes": [
+        "Believing that any enzyme can be used for any DNA; the recognition site must be present, and must not cut inside the gene you want to clone.",
+        "Forgetting that ligase needs compatible ends and that vector self-ligation can produce many background colonies.",
+        "Misreading blue-white screening: white colonies indicate an insert disrupts lacZ, but occasionally contain errors, so the construct must be verified by PCR, digestion or sequencing.",
+        "Using the wrong antibiotic or plating on non-selective medium."
+      ],
+      "videos": [
+        {
+          "youtubeId": "5ffl-0OYVQU",
+          "title": "DNA cloning and recombinant DNA | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Explains the whole cloning workflow in a single walkthrough."
+        },
+        {
+          "youtubeId": "U2cKywEn6KY",
+          "title": "Restriction enzymes | khanacademymedicine",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Shows how restriction enzymes recognise palindromic sequences and make sticky ends."
+        },
+        {
+          "youtubeId": "PiJ3I-lFJUM",
+          "title": "Parts of cloning vector (ori, rop, cloning site, markers) | Biotechnology | Biology | Khan Academy",
+          "channel": "Khan Academy India - English",
+          "level": "beginner",
+          "whyWatch": "Labels the essential parts of a plasmid vector so you can read vector maps."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.70.11.3240",
+          "title": "Construction of Biologically Functional Bacterial Plasmids In Vitro",
+          "authors": "Cohen SN, Chang ACY, Boyer HW, Helling RB",
+          "year": 1973,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The foundational recombinant DNA paper, showing that DNA pieces cut with EcoRI could be joined and still function after being put back into E. coli.",
+          "readingQuestions": [
+            "How did the authors demonstrate that the new plasmid was functional?",
+            "What questions about safety did this work raise?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "NEBcutter",
+          "provider": "New England Biolabs",
+          "type": "tool",
+          "url": "https://nc3.neb.com/NEBcutter/",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste a sequence and see where restriction enzymes cut it."
+        },
+        {
+          "title": "Molecular Biology Reference",
+          "provider": "Addgene",
+          "type": "reference",
+          "url": "https://www.addgene.org/mol-bio-reference/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Plain-language guides to cloning, vectors and common lab procedures."
+        },
+        {
+          "title": "Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive labs on gene transfer and biotechnology."
+        }
+      ],
+      "animation": "cloning-cut-paste",
+      "selfCheck": [
+        {
+          "question": "EcoRI recognises GAATTC. How often would you expect it to cut a random DNA sequence (assuming equal base frequencies)?",
+          "options": [
+            "About once every 64 bp",
+            "About once every 256 bp",
+            "About once every 4,096 bp",
+            "About once every 1 million bp"
+          ],
+          "answer": 2,
+          "explanation": "A six-base recognition site occurs with probability (1/4)^6 = 1/4096, so on average roughly once every 4 kb."
+        },
+        {
+          "question": "In blue-white screening, a white colony on X-gal usually indicates:",
+          "options": [
+            "No plasmid",
+            "A plasmid with an insert disrupting lacZ alpha",
+            "An intact lacZ alpha gene in the vector",
+            "Antibiotic sensitivity"
+          ],
+          "answer": 1,
+          "explanation": "An insert in the MCS interrupts the lacZ alpha fragment, so beta-galactosidase is not made and X-gal stays uncleaved (colonies remain white)."
+        },
+        {
+          "question": "What is the function of DNA ligase in cloning?",
+          "options": [
+            "Cuts the vector",
+            "Joins the sugar-phosphate backbone of the insert and vector",
+            "Amplifies DNA",
+            "Introduces the plasmid into bacteria"
+          ],
+          "answer": 1,
+          "explanation": "Ligase makes the phosphodiester bonds that seal the nicks between the insert and the vector, producing a continuous molecule."
+        }
+      ]
+    },
+    {
+      "id": "pcr-sequencing-population-genetics",
+      "title": "PCR, sequencing and genetic variation in populations",
+      "hours": 6,
+      "hook": "A technique conceived by Kary Mullis on a night drive, using heat-stable polymerase from a hot-spring bacterium, lets a single DNA molecule be copied a billion-fold in a couple of hours. PCR now sits behind diagnostic tests, forensics and sequencing, and the variation it reveals is the raw material for population genetics.",
+      "learningObjectives": [
+        "Describe the three steps of a PCR cycle and the components of a reaction.",
+        "Calculate theoretical product amounts after n cycles and design primers with sensible properties.",
+        "Explain Sanger sequencing and the idea of next-generation sequencing at a conceptual level.",
+        "Describe common genetic markers such as SNPs and short tandem repeats and how they are used.",
+        "Apply the Hardy-Weinberg principle to calculate allele and genotype frequencies and state its assumptions."
+      ],
+      "keyConcepts": [
+        {
+          "term": "PCR cycle",
+          "definition": "Denaturation (about 95 degrees Celsius), annealing of primers (typically 50 to 65 degrees), and extension by a thermostable polymerase (about 72 degrees); each cycle at most doubles the target."
+        },
+        {
+          "term": "Primers",
+          "definition": "Short oligonucleotides (commonly 18 to 25 bases) complementary to the ends of the target that define its boundaries and provide the 3' end for extension."
+        },
+        {
+          "term": "Taq polymerase",
+          "definition": "A DNA polymerase from Thermus aquaticus that survives repeated heating, allowing automated cycling."
+        },
+        {
+          "term": "Gel electrophoresis",
+          "definition": "Separation of DNA fragments by size in an electric field through agarose, with smaller fragments migrating faster."
+        },
+        {
+          "term": "Sanger sequencing",
+          "definition": "A method using dideoxynucleotide chain terminators; fragments ending in each base are separated by size to read the sequence."
+        },
+        {
+          "term": "SNP and STR",
+          "definition": "A single nucleotide polymorphism is a single-base variant common in the population; short tandem repeats are variable-length repeats of 2 to 6 bases used in DNA profiling."
+        },
+        {
+          "term": "Hardy-Weinberg principle",
+          "definition": "In a large, randomly mating population without selection, mutation, migration or drift, allele frequencies p and q stay constant and genotype frequencies are p^2, 2pq and q^2."
+        },
+        {
+          "term": "Allele frequency",
+          "definition": "The proportion of all copies of a gene in a population that are a given allele."
+        }
+      ],
+      "deeper": {
+        "beginner": "PCR is a way of photocopying one small piece of DNA millions of times. You heat the DNA to separate the strands, cool it so short primers can stick to the ends of the target, and warm it a bit so a polymerase builds new strands. Repeat 30 times and you have billions of copies, enough to see on a gel. The technique is used to detect viruses, to diagnose genetic diseases and to make DNA for cloning or sequencing.",
+        "intermediate": "After n cycles, the maximum number of target copies is 2^n times the starting number, so 30 cycles give about a billion-fold amplification in theory; real efficiency is below 100 percent and plateaus late in the reaction. Good primers have similar melting temperatures, around 40 to 60 percent GC and no strong self-complementarity, and a primer pair should be checked against the genome using a tool such as Primer-BLAST. Quantitative PCR measures fluorescence during cycling to estimate starting amounts. In Sanger sequencing, a small fraction of dideoxy terminators labelled with different dyes stops synthesis at each base, producing a ladder read by capillary electrophoresis. For Hardy-Weinberg, if the frequency of a recessive condition q^2 is 1 in 10,000, then q = 0.01, p = 0.99 and the carrier frequency 2pq is about 1 in 50; this calculation assumes random mating and no selection, which hold only approximately.",
+        "advanced": "Mullis's idea became practical only after a thermostable polymerase eliminated the need to add fresh enzyme every cycle, and Saiki and colleagues' 1988 paper described the Taq-based method now in routine use. Next-generation sequencing platforms read millions of short fragments in parallel and reconstruct genomes by alignment or assembly, while long-read technologies resolve repeats and structural variants. Departures from Hardy-Weinberg proportions are informative: an excess of homozygotes suggests inbreeding or population structure, and genotyping errors can also create apparent deviations; in genome-wide association studies, such tests are a standard quality-control step."
+      },
+      "commonMistakes": [
+        "Forgetting negative controls in PCR; contamination by trace template can give false positives.",
+        "Assuming that PCR amplifies exponentially forever; reagents run out and the reaction plateaus.",
+        "Applying Hardy-Weinberg to a trait without checking that the population is mating randomly with respect to it.",
+        "Treating p^2 as the frequency of carriers; carriers are 2pq."
+      ],
+      "videos": [
+        {
+          "youtubeId": "nHi-3jP6Mvc",
+          "title": "Polymerase chain reaction (PCR) | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Explains each step of PCR and the role of primers and polymerase."
+        },
+        {
+          "youtubeId": "a5jmdh9AnS4",
+          "title": "PCR (Polymerase Chain Reaction)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly, well-illustrated introduction to what PCR does and why it is useful."
+        },
+        {
+          "youtubeId": "Jnk_4Maf5Fk",
+          "title": "DNA sequencing | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "A short overview of Sanger sequencing and how to read the output."
+        },
+        {
+          "youtubeId": "7S4WMwesMts",
+          "title": "Hardy-Weinberg Equilibrium",
+          "channel": "Amoeba Sisters",
+          "level": "intermediate",
+          "whyWatch": "Teaches the equation and its assumptions with worked examples."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.239.4839.487",
+          "title": "Primer-directed enzymatic amplification of DNA with a thermostable DNA polymerase",
+          "authors": "Saiki RK, Gelfand DH, Stoffel S, et al.",
+          "year": 1988,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The paper that made PCR practical by using Taq polymerase, enabling automation. It is a good case study of how a technical improvement turns an idea into a tool used everywhere.",
+          "readingQuestions": [
+            "What advantages did the thermostable polymerase give over the earlier enzyme?",
+            "How did the authors measure the specificity of amplification?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Primer-BLAST",
+          "provider": "NCBI",
+          "type": "tool",
+          "url": "https://www.ncbi.nlm.nih.gov/tools/primer-blast/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Design primers and check them against a genome for specificity."
+        },
+        {
+          "title": "dbSNP",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/snp/",
+          "free": true,
+          "level": "advanced",
+          "note": "Look up real SNPs and their population frequencies."
+        },
+        {
+          "title": "Natural Selection",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/natural-selection",
+          "free": true,
+          "level": "beginner",
+          "note": "Watch allele frequencies change in a population under selection, a contrast to Hardy-Weinberg conditions."
+        },
+        {
+          "title": "Genetics glossary",
+          "provider": "National Human Genome Research Institute",
+          "type": "reference",
+          "url": "https://www.genome.gov/genetics-glossary",
+          "free": true,
+          "level": "beginner",
+          "note": "Short definitions of genetics terms for quick checking."
+        }
+      ],
+      "animation": "pcr-cycles",
+      "selfCheck": [
+        {
+          "question": "Starting from a single template molecule, what is the theoretical maximum number of copies after 10 PCR cycles?",
+          "options": [
+            "20",
+            "100",
+            "1,024",
+            "10,000"
+          ],
+          "answer": 2,
+          "explanation": "Each cycle at most doubles the number of copies, so 2^10 = 1,024."
+        },
+        {
+          "question": "A recessive disease has frequency 1 in 10,000 in a population in Hardy-Weinberg equilibrium. What is the approximate carrier frequency?",
+          "options": [
+            "1 in 50",
+            "1 in 100",
+            "1 in 10,000",
+            "1 in 5"
+          ],
+          "answer": 0,
+          "explanation": "q^2 = 0.0001 so q = 0.01 and p = 0.99; carriers are 2pq = 2 x 0.99 x 0.01 = about 0.02, or 1 in 50."
+        },
+        {
+          "question": "Why is Taq polymerase used in PCR?",
+          "options": [
+            "It makes RNA primers",
+            "It remains active after repeated heating to about 95 degrees Celsius",
+            "It has no need for a template",
+            "It cuts DNA at specific sites"
+          ],
+          "answer": 1,
+          "explanation": "Taq comes from a thermophilic bacterium and survives the denaturation step, so no new enzyme is needed each cycle."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "rZjwF5z-Xfw",
+      "title": "12. Genetics 1 – Cell Division & Segregating Genetic Material",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A lecture linking cell division to the logic of inheritance."
+    },
+    {
+      "youtubeId": "qtGHKiAROig",
+      "title": "13. Genetics 2 – Rules of Inheritance",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "Continues with the rules of inheritance and problem-solving approaches."
+    },
+    {
+      "youtubeId": "8jLy33vbtYM",
+      "title": "7. Replication",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A deeper look at DNA replication once you have the basics from this module."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "An Introduction to Genetic Analysis",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21766/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic genetics text available free online through the NCBI Bookshelf."
+    },
+    {
+      "title": "Molecular Cell Biology (Lodish et al.), 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Detailed free chapters on gene expression, replication and molecular techniques."
+    },
+    {
+      "title": "Genetics library",
+      "provider": "LibreTexts Biology",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Genetics",
+      "free": true,
+      "level": "beginner",
+      "note": "Open textbooks and worked problems for genetics."
+    }
+  ]
+}

@@ -1,0 +1,1250 @@
+{
+  "code": "CH 3054",
+  "title": "Nutritional and Clinical Biochemistry",
+  "level": 3,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "What food does inside the body, what goes wrong when the supply or the machinery fails, and how a blood test tells the difference.",
+  "overview": "This course follows a molecule from the plate to the bloodstream to the laboratory report. The first half covers nutritional biochemistry: how energy needs are measured, how carbohydrates, lipids and proteins are digested and used, and what vitamins and minerals actually do at the enzyme level. The second half moves to clinical biochemistry: how reference intervals and test performance work, how diabetes and lipid disorders are diagnosed, and how liver, kidney, cardiac and acid-base tests are read. The seven units follow the standard content of nutritional and clinical biochemistry at BSc Honours level, with examples relevant to Sri Lanka (rice-based diets, iodine and iron deficiency, rising diabetes and heart disease). It assumes you know the main metabolic pathways from Metabolism I and are taking Metabolism II alongside.",
+  "whyItMatters": "Diet and laboratory medicine are where biochemistry touches daily life. A graduate who can explain why a fasting glucose, an HbA1c or a troponin result means what it does, and who can reason from a nutrient's chemistry to a deficiency disease, is useful in hospital laboratories, public-health nutrition, food and pharmaceutical industries and further study in medicine or dietetics.",
+  "prerequisites": [
+    "FD 2101",
+    "BC 3022"
+  ],
+  "careerLinks": [
+    "Medical laboratory scientist or clinical chemist in a hospital or diagnostic laboratory",
+    "Public-health nutritionist or programme officer in government and NGO nutrition programmes",
+    "Food science and quality assurance in the food and beverage industry",
+    "Research in metabolic disease, diabetes or cardiovascular biochemistry",
+    "Pathway into medicine, dietetics or postgraduate clinical biochemistry"
+  ],
+  "studyTips": [
+    "For every nutrient, ask three questions: what does it do chemically (which enzyme or cofactor), what happens when it is missing, and how would a laboratory detect that.",
+    "Learn reference ranges as approximate anchors with units, but spend your effort on why a value goes up or down. Interpretation questions are about mechanisms, not memory.",
+    "Redraw the pathway links from Metabolism I and II that nutrition depends on (for example thiamine and pyruvate dehydrogenase, biotin and carboxylases) so the vitamins stop being a list.",
+    "Use the interactive case approach: take a patient's results (glucose, creatinine, ALT) and write one sentence explaining each value and one test you would order next."
+  ],
+  "units": [
+    {
+      "id": "energy-and-nutrient-requirements",
+      "title": "Energy Balance and Nutrient Requirements",
+      "hours": 4,
+      "hook": "A cup of rice and a spoon of oil are both fuel, but the body measures them differently: some energy runs the heart and brain at rest, some warms you, and some moves you. Nutrition begins by asking where a person's energy goes and how much food they need to keep the books balanced.",
+      "learningObjectives": [
+        "Calculate the energy content of a food from its macronutrient composition using Atwater factors.",
+        "Define basal metabolic rate, thermic effect of food and physical activity level, and estimate total daily energy expenditure.",
+        "Explain how indirect calorimetry and the respiratory quotient reveal which fuel is being oxidised.",
+        "Assess nutritional status using BMI, waist measures and biochemical markers, noting cut-offs for Asian populations.",
+        "Interpret the idea of recommended intakes and why requirements differ between individuals."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Atwater factors",
+          "definition": "Average energy values for macronutrients: about 4 kcal per gram of carbohydrate and protein, 9 for fat and 7 for alcohol. One kcal equals 4.184 kJ."
+        },
+        {
+          "term": "Basal metabolic rate (BMR)",
+          "definition": "The energy used at complete rest, awake and fasted in a comfortable temperature, to run essential functions; usually the largest component (about 60 to 70 percent) of daily expenditure."
+        },
+        {
+          "term": "Thermic effect of food",
+          "definition": "The energy expended in digesting, absorbing and processing food, roughly 10 percent of intake on a mixed diet and higher for protein."
+        },
+        {
+          "term": "Physical activity level (PAL)",
+          "definition": "Total daily energy expenditure divided by BMR; values from about 1.4 (sedentary) to above 2 (very active)."
+        },
+        {
+          "term": "Respiratory quotient (RQ)",
+          "definition": "Volume of CO2 produced divided by volume of O2 consumed. About 1.0 for carbohydrate, about 0.7 for fat, and about 0.8 for protein; a mixed diet gives around 0.85."
+        },
+        {
+          "term": "Energy balance",
+          "definition": "Intake equals expenditure keeps weight stable; sustained positive balance is stored mainly as triacylglycerol in adipose tissue."
+        },
+        {
+          "term": "Body mass index (BMI)",
+          "definition": "Weight in kilograms divided by height in metres squared. WHO uses 18.5 to 24.9 as the normal range, with lower cut-offs (about 23 for overweight) suggested for Asian populations because of higher body fat and metabolic risk at the same BMI."
+        },
+        {
+          "term": "Dietary reference intakes",
+          "definition": "Population-level recommendations, derived from average requirements plus a margin, not personal prescriptions."
+        }
+      ],
+      "deeper": {
+        "beginner": "Your body is a continuously running engine. Even asleep, you burn energy to pump blood, breathe and keep ions across membranes. Add the cost of digesting food and the energy spent moving, and you get your daily total. If you eat more than you use, the surplus is stored; if you eat less, you draw on stores. Food labels give energy from the grams of carbohydrate, protein and fat using about 4, 4 and 9 kcal per gram.",
+        "intermediate": "BMR can be estimated from equations using age, sex, weight and height (such as Harris-Benedict, Mifflin-St Jeor, or the WHO/FAO equations), which are accurate only to within roughly 10 percent for an individual. Multiply by PAL to find total daily needs. In indirect calorimetry, oxygen consumption and carbon dioxide production are measured at the mouth and converted to energy using the Weir equation; RQ shows the mix of fuels because oxidising glucose yields one CO2 per O2 whereas a fatty acid like palmitate yields 16 CO2 for 23 O2 (RQ about 0.7). RQ above 1.0 can indicate net lipogenesis from carbohydrate. Assess nutritional status by combining anthropometry (BMI, waist circumference, skinfolds), diet history and biochemical markers (haemoglobin, albumin, transferrin, vitamins), recognising the limits of each.",
+        "advanced": "BMR scales with fat-free mass (especially organs such as liver and brain, which are metabolically expensive per kilogram) rather than total weight, and adaptive thermogenesis means energy expenditure falls beyond what body composition predicts after sustained weight loss. Food energy is not exactly additive: the Atwater system uses general factors, whereas metabolisable energy depends on digestibility, the food matrix and processing, and faecal energy loss varies with fibre and microbiota. Controlled feeding trials show that diets differing in processing can alter energy intake independently of declared macronutrient content, illustrating the difficulty of translating laboratory energy values to behaviour. Doubly labelled water, using isotopes of hydrogen and oxygen, is the reference method for total energy expenditure in free-living people and has been used to calibrate self-reported intake, which is systematically under-reported, especially at higher BMI."
+      },
+      "commonMistakes": [
+        "Treating BMR as total daily energy need; total expenditure includes activity and the thermic effect of food.",
+        "Applying Western BMI cut-offs to South Asian populations without noting that risk rises at lower BMI.",
+        "Assuming a food's calorie value is exactly what the body extracts, ignoring digestibility and fibre.",
+        "Confusing RQ (a ratio of gases) with energy expenditure itself."
+      ],
+      "videos": [
+        {
+          "youtubeId": "uFyv8pOC24Y",
+          "title": "Energy Considerations in Nutrition: BMR, RMR & Physical Activity - Nutrition | Lecturio",
+          "channel": "Lecturio Medical",
+          "level": "beginner",
+          "whyWatch": "Breaks total energy expenditure into its parts and shows how BMR and activity are combined to estimate needs."
+        },
+        {
+          "youtubeId": "TTSYaqjYpm8",
+          "title": "Exercise Physiology | Respiratory Quotient (RQ): What is it?",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Derives RQ from the stoichiometry of oxidising glucose and fat and shows what it reveals about fuel use."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.4.12.370",
+          "title": "A Biometric Study of Human Basal Metabolism",
+          "authors": "Harris JA, Benedict FG",
+          "year": 1918,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1091498/",
+          "whyItMatters": "The source of the classic BMR prediction equations still used in textbooks, a good example of how a regression on a modest number of measurements can become standard practice.",
+          "readingQuestions": [
+            "Which variables did the authors use to predict basal metabolism?",
+            "What limitations of their sample might affect use today?"
+          ]
+        },
+        {
+          "doi": "10.1016/j.cmet.2019.05.008",
+          "title": "Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain: An Inpatient Randomized Controlled Trial of Ad Libitum Food Intake",
+          "authors": "Hall KD, Ayuketah A, Brychta R, Cai H, Cassimatis T, Chen KY, Chung ST, Costa E, Courville A, Darcey V, et al.",
+          "year": 2019,
+          "journal": "Cell Metabolism",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7946062/",
+          "whyItMatters": "A tightly controlled inpatient trial showing that diets matched on offered macronutrients still led to different intake and weight change, which is a caution about reducing food to calories and nutrients alone."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Food-based dietary guidelines: Sri Lanka",
+          "provider": "FAO",
+          "type": "reference",
+          "url": "https://www.fao.org/nutrition/education/food-dietary-guidelines/regions/countries/sri-lanka/en/",
+          "free": true,
+          "level": "beginner",
+          "note": "The national dietary guidelines for Sri Lanka, useful for grounding energy and nutrient recommendations in local foods."
+        },
+        {
+          "title": "Healthy diet fact sheet",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+          "free": true,
+          "level": "beginner",
+          "note": "WHO's concise recommendations on energy, fat, sugar and salt intake for adults and children."
+        },
+        {
+          "title": "Human energy requirements: report of a joint FAO/WHO/UNU expert consultation",
+          "provider": "FAO",
+          "type": "reference",
+          "url": "https://www.fao.org/3/y5686e/y5686e00.htm",
+          "free": true,
+          "level": "advanced",
+          "note": "The international reference for how energy requirements are measured and set, including BMR equations and physical activity levels."
+        },
+        {
+          "title": "FoodData Central",
+          "provider": "USDA",
+          "type": "database",
+          "url": "https://fdc.nal.usda.gov/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up the nutrient composition of thousands of foods, handy for calculating energy and macronutrient intake."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A snack contains 20 g carbohydrate, 5 g protein and 10 g fat. Using Atwater factors, its energy content is about:",
+          "options": [
+            "35 kcal",
+            "290 kcal",
+            "450 kcal",
+            "190 kcal"
+          ],
+          "answer": 3,
+          "explanation": "20 x 4 + 5 x 4 + 10 x 9 = 80 + 20 + 90 = 190 kcal. Fat contributes the largest share despite being the smallest mass."
+        },
+        {
+          "question": "A subject's respiratory quotient is measured at 0.71. The main fuel being oxidised is most likely:",
+          "options": [
+            "Carbohydrate",
+            "Fat",
+            "Protein",
+            "Ethanol only"
+          ],
+          "answer": 1,
+          "explanation": "Fat oxidation produces about 0.7 CO2 per O2 consumed, whereas carbohydrate gives 1.0, so an RQ near 0.7 indicates predominantly fat oxidation."
+        },
+        {
+          "question": "Which component usually accounts for the largest share of total daily energy expenditure in a sedentary adult?",
+          "options": [
+            "Thermic effect of food",
+            "Basal metabolic rate",
+            "Exercise",
+            "Shivering"
+          ],
+          "answer": 1,
+          "explanation": "BMR, the cost of keeping organs and cells running at rest, typically makes up about 60 to 70 percent of total expenditure in sedentary people."
+        }
+      ]
+    },
+    {
+      "id": "carbohydrates-and-dietary-fibre",
+      "title": "Carbohydrates, Glycaemic Response and Dietary Fibre",
+      "hours": 4,
+      "hook": "Two meals can contain the same grams of carbohydrate yet send blood glucose on very different journeys. In a country where rice is the daily staple, understanding why is nutritional biochemistry with a direct line to diabetes prevention.",
+      "learningObjectives": [
+        "Trace the digestion of starch and disaccharides and the transporters that absorb glucose, galactose and fructose.",
+        "Explain lactose intolerance and why fructose is metabolised differently from glucose.",
+        "Define glycaemic index and glycaemic load and what influences them.",
+        "Describe types of dietary fibre and the role of fermentation to short-chain fatty acids.",
+        "Link carbohydrate quality to insulin response and long-term health outcomes."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Starch digestion",
+          "definition": "Salivary and pancreatic alpha-amylase hydrolyse starch to maltose, maltotriose and limit dextrins, which brush-border enzymes (maltase-glucoamylase, sucrase-isomaltase) reduce to glucose."
+        },
+        {
+          "term": "Intestinal sugar transport",
+          "definition": "Glucose and galactose enter enterocytes by sodium-coupled SGLT1; fructose enters by GLUT5; all leave across the basolateral membrane by GLUT2."
+        },
+        {
+          "term": "Lactase non-persistence",
+          "definition": "Reduced lactase activity in adulthood is the norm for most of the world's people; undigested lactose is fermented in the colon, causing gas and osmotic diarrhoea."
+        },
+        {
+          "term": "Glycaemic index (GI)",
+          "definition": "The incremental rise in blood glucose after a portion containing 50 g of available carbohydrate, relative to a reference food (glucose or white bread)."
+        },
+        {
+          "term": "Glycaemic load (GL)",
+          "definition": "GI multiplied by the grams of carbohydrate in a portion divided by 100; accounts for portion size."
+        },
+        {
+          "term": "Resistant starch",
+          "definition": "Starch that escapes digestion in the small intestine and is fermented in the colon; cooked-and-cooled rice and potato contain more of it."
+        },
+        {
+          "term": "Dietary fibre",
+          "definition": "Plant carbohydrates and lignin not digested by human enzymes; soluble, viscous fibres slow absorption, insoluble fibres add bulk."
+        },
+        {
+          "term": "Short-chain fatty acids",
+          "definition": "Acetate, propionate and butyrate produced by gut bacteria from fibre; butyrate is a preferred fuel of colonocytes."
+        }
+      ],
+      "deeper": {
+        "beginner": "Carbohydrates are broken into single sugars before they can be absorbed. Starch is cut by amylase in saliva and the small intestine, then enzymes on the gut lining finish the job, and the sugars cross into the blood. Foods that release glucose quickly (white bread, white rice) have a high glycaemic index; foods rich in intact fibre, protein or fat, or with firm cell structure (lentils, whole grains) release it slowly. Fibre cannot be digested by us, but gut bacteria ferment it.",
+        "intermediate": "GI depends on starch structure (amylose to amylopectin ratio, gelatinisation by cooking), particle size, the presence of fat, protein and acids, and the form of fibre; rice varieties differ substantially in GI. Fructose is largely extracted by the liver and phosphorylated by fructokinase, bypassing the main regulatory step of glycolysis at phosphofructokinase-1, so a high fructose load can drive lipogenesis and raise triacylglycerol. Fibre lowers post-meal glucose and cholesterol (soluble fibre binds bile acids), speeds transit and feeds bacteria. Meta-analyses of prospective studies and trials indicate that higher intakes of dietary fibre and whole grains are associated with lower risk of type 2 diabetes, cardiovascular disease and mortality, with benefits at intakes of around 25 to 30 g per day.",
+        "advanced": "GI values vary between individuals, and personalised responses to identical meals can differ markedly because of differences in insulin sensitivity, gut microbiota and meal context, so population GI tables describe average behaviour rather than a guaranteed response. The GI concept has methodological limitations (reference food choice, test portion of 50 g carbohydrate, variance between laboratories) and mixed-meal effects are not additive. The fermentation of fibre yields about 2 kcal per gram of energy via short-chain fatty acids, which also signal through GPR41 and GPR43 receptors and inhibit histone deacetylases, linking diet to gut hormones and epigenetic regulation. Sucrase-isomaltase deficiency, glucose-galactose malabsorption due to SGLT1 mutations and hereditary fructose intolerance (aldolase B deficiency) illustrate how defects at single steps give distinct clinical pictures."
+      },
+      "commonMistakes": [
+        "Equating a low GI with a healthy food; some energy-dense foods such as chocolate have moderate GI.",
+        "Forgetting that glycaemic load depends on portion size, so a high-GI food in a small portion can have a modest effect.",
+        "Believing all fibre is the same; soluble and insoluble fibre have different physiological effects.",
+        "Describing lactose intolerance as an allergy; it is an enzyme-activity issue, not an immune reaction."
+      ],
+      "videos": [
+        {
+          "youtubeId": "kukw5eVY9MM",
+          "title": "Carbohydrate Digestion & Absorption",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A thorough, clearly drawn walk through enzymes, brush-border digestion and transporters from mouth to enterocyte."
+        },
+        {
+          "youtubeId": "LWfXeCVp7Wk",
+          "title": "Starch (Carbohydrate) Digestion and Absorption",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "A concise hand-drawn summary that is easy to redraw from memory for revision."
+        },
+        {
+          "youtubeId": "wxzc_2c6GMg",
+          "title": "How do carbohydrates impact your health? - Richard J. Wood",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A short animated overview of simple versus complex carbohydrates and their health effects."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/ajcn/34.3.362",
+          "title": "Glycemic index of foods: a physiological basis for carbohydrate exchange",
+          "authors": "Jenkins DJ, Wolever TM, Taylor RH, Barker H, Fielden H, Baldwin JM, Bowling AC, Newman HC, Jenkins AL, Goff DV",
+          "year": 1981,
+          "journal": "The American Journal of Clinical Nutrition",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the glycaemic index, showing that foods with the same carbohydrate content give very different blood glucose curves."
+        },
+        {
+          "doi": "10.1016/S0140-6736(18)31809-9",
+          "title": "Carbohydrate quality and human health: a series of systematic reviews and meta-analyses",
+          "authors": "Reynolds A, Mann J, Cummings J, Winter N, Mete E, Te Morenga L",
+          "year": 2019,
+          "journal": "The Lancet",
+          "level": "intermediate",
+          "whyItMatters": "A large evidence synthesis commissioned for WHO guidelines linking higher fibre and whole-grain intake with lower risk of several chronic diseases."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nutrition Source",
+          "provider": "Harvard T.H. Chan School of Public Health",
+          "type": "reference",
+          "url": "https://nutritionsource.hsph.harvard.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Evidence-based, plainly written articles on carbohydrates, fibre, glycaemic index and diet and disease."
+        },
+        {
+          "title": "International GI Database",
+          "provider": "University of Sydney",
+          "type": "database",
+          "url": "https://www.glycemicindex.com/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search tested GI and GL values for foods, which is useful when comparing staples."
+        },
+        {
+          "title": "Anatomy and Physiology 2e: Nutrition and Metabolism",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "A free textbook chapter covering digestion, absorption and metabolism of macronutrients in a readable form."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which transporter moves fructose from the intestinal lumen into the enterocyte?",
+          "options": [
+            "SGLT1",
+            "GLUT5",
+            "GLUT4",
+            "Na+/K+-ATPase"
+          ],
+          "answer": 1,
+          "explanation": "GLUT5 is the apical fructose transporter; SGLT1 carries glucose and galactose with sodium, and GLUT4 is the insulin-regulated transporter in muscle and fat."
+        },
+        {
+          "question": "Why does a food with a high glycaemic index but a small carbohydrate portion often have a low glycaemic load?",
+          "options": [
+            "GI is measured per gram of fat",
+            "GL multiplies GI by the grams of carbohydrate in the portion",
+            "GL measures protein content",
+            "High GI foods have no sugars"
+          ],
+          "answer": 1,
+          "explanation": "Glycaemic load equals GI x grams of carbohydrate per portion / 100, so a small amount of carbohydrate limits the total glycaemic impact."
+        },
+        {
+          "question": "Which is a main product of colonic bacterial fermentation of fibre?",
+          "options": [
+            "Butyrate and other short-chain fatty acids",
+            "Glucose absorbed in the colon in large amounts",
+            "Cholesterol",
+            "Insulin"
+          ],
+          "answer": 0,
+          "explanation": "Fermentation yields short-chain fatty acids such as acetate, propionate and butyrate, which colonocytes use as fuel and which signal to the host."
+        }
+      ]
+    },
+    {
+      "id": "lipids-and-lipoproteins",
+      "title": "Dietary Lipids, Lipoproteins and Cholesterol",
+      "hours": 4,
+      "hook": "Fat is oil and cholesterol is wax, and neither dissolves in blood. Lipoproteins are the body's solution, little packages with a greasy core and a watery coat, and their traffic patterns explain heart disease and the logic of statins.",
+      "learningObjectives": [
+        "Describe the digestion and absorption of dietary fat, including the roles of bile salts, lipase and chylomicrons.",
+        "Distinguish essential fatty acids and the major classes of dietary fat and their effects on blood lipids.",
+        "Compare the composition and functions of chylomicrons, VLDL, LDL and HDL.",
+        "Explain the LDL receptor pathway and how statins lower LDL cholesterol.",
+        "Relate lipoprotein metabolism to atherosclerosis and familial hypercholesterolaemia."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Bile salts and micelles",
+          "definition": "Bile salts emulsify fat and, with pancreatic lipase and colipase, produce monoacylglycerols and free fatty acids that form mixed micelles for absorption."
+        },
+        {
+          "term": "Chylomicron",
+          "definition": "A triacylglycerol-rich lipoprotein built in enterocytes with apolipoprotein B-48, carried in lymph to the blood where lipoprotein lipase releases fatty acids."
+        },
+        {
+          "term": "VLDL and LDL",
+          "definition": "The liver exports triacylglycerol in VLDL (apoB-100); as lipase removes triacylglycerol, VLDL becomes IDL and then cholesterol-rich LDL, the main carrier of cholesterol to tissues."
+        },
+        {
+          "term": "HDL",
+          "definition": "Particles built around apoA-I that take up cholesterol from tissues and return it to the liver (reverse cholesterol transport), with LCAT esterifying it."
+        },
+        {
+          "term": "LDL receptor pathway",
+          "definition": "Cells take up LDL by receptor-mediated endocytosis; cholesterol released inside suppresses HMG-CoA reductase and LDL receptor synthesis through SREBP-2. PCSK9 promotes receptor degradation."
+        },
+        {
+          "term": "Statins",
+          "definition": "Inhibitors of HMG-CoA reductase, the rate-limiting enzyme of cholesterol synthesis; they lower intracellular cholesterol, increase LDL receptors and so lower plasma LDL."
+        },
+        {
+          "term": "Essential fatty acids",
+          "definition": "Linoleic acid (n-6) and alpha-linolenic acid (n-3) cannot be made by humans; they are precursors of longer polyunsaturated fatty acids and eicosanoids."
+        },
+        {
+          "term": "Trans fatty acids",
+          "definition": "Unsaturated fatty acids with at least one double bond in trans configuration, formed in partial hydrogenation, which raise LDL and lower HDL."
+        }
+      ],
+      "deeper": {
+        "beginner": "After a fatty meal, bile from the gallbladder breaks the fat into tiny droplets and enzymes from the pancreas cut it into fatty acids and monoglycerides, which are absorbed and reassembled inside intestinal cells. These are packed with proteins into chylomicrons that travel through the lymph to the blood. The liver sends out its own fat packages (VLDL), which end up as LDL, the particles that deliver cholesterol to cells. HDL does the reverse, collecting cholesterol and taking it back to the liver.",
+        "intermediate": "Short- and medium-chain fatty acids bypass chylomicrons and go to the liver via the portal vein. Dietary effects on blood lipids depend on the type of fat: saturated fat tends to raise LDL, trans fats raise LDL and lower HDL, and replacing saturated with polyunsaturated or monounsaturated fat lowers LDL; coconut oil, widely used in Sri Lanka, is rich in saturated fatty acids (mainly lauric acid), which raises LDL relative to unsaturated oils, a point worth weighing in dietary advice. The LDL receptor was characterised by Brown and Goldstein through studies of familial hypercholesterolaemia, where defective receptors leave LDL circulating at high concentrations and cause early coronary disease. Oxidised LDL is taken up by macrophage scavenger receptors, turning them into foam cells that form the core of atherosclerotic plaques.",
+        "advanced": "Cholesterol homeostasis is controlled by SREBP-2, an ER-bound transcription factor released by SCAP-mediated transport to the Golgi when sterol is low and sequestered when sterol is high; HMG-CoA reductase is additionally regulated by sterol-accelerated degradation. Genetic and trial evidence indicates that lowering LDL cholesterol lowers cardiovascular risk roughly in proportion to the absolute reduction, whereas raising HDL cholesterol by drugs did not reduce events, suggesting HDL concentration is a marker rather than a simple causal lever, with HDL function and particle number being more relevant. Apolipoprotein B counts atherogenic particles (one apoB per VLDL, IDL, LDL and lipoprotein(a) particle) and may predict risk better than LDL cholesterol when triacylglycerols are high. Omega-3 long-chain fatty acids (EPA and DHA) are made from alpha-linolenic acid with low efficiency in humans, so dietary sources such as oily fish matter, and competition between n-6 and n-3 for the same desaturases and elongases shapes eicosanoid balance."
+      },
+      "commonMistakes": [
+        "Calling LDL and HDL 'bad' and 'good' cholesterol as if they were different molecules; the cholesterol is the same, the carrier particles differ.",
+        "Assuming dietary cholesterol is the main driver of blood cholesterol for most people; saturated and trans fat intake often matter more.",
+        "Forgetting that chylomicrons travel in lymph first and not directly into the blood from the gut.",
+        "Describing statins as blocking cholesterol absorption; they inhibit its synthesis."
+      ],
+      "videos": [
+        {
+          "youtubeId": "PkKH8lTxvzA",
+          "title": "Physiology of Lipoproteins Cholesterol",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn map of chylomicron, VLDL, LDL and HDL pathways that is easy to reproduce under exam conditions."
+        },
+        {
+          "youtubeId": "9dghtf7Z7fw",
+          "title": "Cholesterol Metabolism, LDL, HDL and other Lipoproteins, Animation",
+          "channel": "Alila Medical Media",
+          "level": "beginner",
+          "whyWatch": "A clean animation of how lipoproteins move cholesterol around the body."
+        },
+        {
+          "youtubeId": "nurZ2nNovp8",
+          "title": "Metabolism | Cholesterol Metabolism",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "Detailed coverage of cholesterol synthesis and its regulation, including the target of statins."
+        },
+        {
+          "youtubeId": "-U8lXrLR-PU",
+          "title": "What are Omega-3 and Omega-6 fatty acids?",
+          "channel": "University of Manitoba",
+          "level": "beginner",
+          "whyWatch": "A brief explanation of why these two families of fatty acids are essential and how they differ."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2015.01.036",
+          "title": "A Century of Cholesterol and Coronaries: From Plaques to Genes to Statins",
+          "authors": "Goldstein JL, Brown MS",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "intermediate",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4525717/",
+          "whyItMatters": "The two scientists who discovered the LDL receptor tell the story of how cholesterol, familial hypercholesterolaemia and statins connect, a model of biochemistry leading to medicine.",
+          "readingQuestions": [
+            "Which observations about familial hypercholesterolaemia led to the receptor hypothesis?",
+            "How did understanding feedback regulation lead to statin design?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biochemistry, 5th edition (Berg, Tymoczko, Stryer)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on fatty acid and cholesterol metabolism, including lipoproteins and the LDL receptor."
+        },
+        {
+          "title": "The Nutrition Source: What Should You Eat?",
+          "provider": "Harvard T.H. Chan School of Public Health",
+          "type": "reference",
+          "url": "https://nutritionsource.hsph.harvard.edu/what-should-you-eat/",
+          "free": true,
+          "level": "beginner",
+          "note": "Entry point to evidence-based pages on fats, oils and healthy eating patterns."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which lipoprotein carries dietary triacylglycerol from the intestine through the lymph?",
+          "options": [
+            "HDL",
+            "LDL",
+            "Chylomicron",
+            "IDL"
+          ],
+          "answer": 2,
+          "explanation": "Chylomicrons are formed in enterocytes with apoB-48 and enter lymph before reaching the blood."
+        },
+        {
+          "question": "Statins lower plasma LDL cholesterol primarily by:",
+          "options": [
+            "Blocking bile-salt absorption",
+            "Inhibiting HMG-CoA reductase, which upregulates hepatic LDL receptors",
+            "Increasing HDL synthesis directly",
+            "Binding LDL in the gut"
+          ],
+          "answer": 1,
+          "explanation": "Reduced cholesterol synthesis in the liver activates SREBP-2, increasing LDL receptors that clear LDL from the blood."
+        },
+        {
+          "question": "A patient with familial hypercholesterolaemia due to defective LDL receptors would be expected to have:",
+          "options": [
+            "Low plasma LDL cholesterol",
+            "High plasma LDL cholesterol and early atherosclerosis",
+            "Absent chylomicrons",
+            "Low HDL only"
+          ],
+          "answer": 1,
+          "explanation": "Without functional receptors LDL is poorly cleared from plasma, so concentrations rise and cause premature coronary disease."
+        }
+      ]
+    },
+    {
+      "id": "protein-and-amino-acid-nutrition",
+      "title": "Protein and Amino Acid Nutrition and Malnutrition",
+      "hours": 4,
+      "hook": "Protein is not stored like fat or glycogen, so the body runs a constant, careful budget of amino acids. When the budget fails, whether from a monotonous diet or an illness, the results are among the most severe forms of malnutrition children face.",
+      "learningObjectives": [
+        "List the essential amino acids and explain why they must be supplied by diet.",
+        "Interpret nitrogen balance and calculate protein from nitrogen content.",
+        "Compare protein quality using PDCAAS and DIAAS and the idea of limiting amino acids.",
+        "Explain how complementary proteins such as rice and dhal improve quality.",
+        "Describe the biochemical and clinical features of marasmus and kwashiorkor and their limitations as categories."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Essential amino acids",
+          "definition": "Histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan and valine; humans cannot synthesise them in adequate amounts."
+        },
+        {
+          "term": "Nitrogen balance",
+          "definition": "Nitrogen intake minus nitrogen losses (urine, faeces, skin). Positive in growth and pregnancy, negative in injury, illness and starvation."
+        },
+        {
+          "term": "Protein factor",
+          "definition": "Proteins are about 16 percent nitrogen, so crude protein is estimated as nitrogen x 6.25; the Kjeldahl method measures nitrogen."
+        },
+        {
+          "term": "Limiting amino acid",
+          "definition": "The essential amino acid present in least amount relative to requirement, which restricts how well the protein supports synthesis. Cereals are typically low in lysine and legumes in methionine."
+        },
+        {
+          "term": "PDCAAS and DIAAS",
+          "definition": "Scores of protein quality: both compare a protein's essential amino acid pattern with a reference pattern and correct for digestibility, DIAAS using ileal digestibility of each amino acid."
+        },
+        {
+          "term": "Marasmus",
+          "definition": "Severe wasting from deficiency of total energy (and protein), with loss of fat and muscle and no oedema."
+        },
+        {
+          "term": "Kwashiorkor",
+          "definition": "Malnutrition with oedema, fatty liver and low serum albumin, classically from diets very low in protein relative to energy, though its cause is multifactorial."
+        },
+        {
+          "term": "Protein turnover",
+          "definition": "Body proteins are continuously degraded and resynthesised; amino acid pools connect diet, tissue protein and metabolism."
+        }
+      ],
+      "deeper": {
+        "beginner": "Your body builds its own proteins from the amino acids in food. Nine of them cannot be made by the body and must come from the diet. Animal foods supply all nine in good proportions; plant foods may be low in one. Combining foods, such as rice with lentils, supplies what each lacks. Adults need roughly 0.8 g of protein per kilogram of body weight per day; children, pregnant women and people recovering from illness need more per kilogram.",
+        "intermediate": "Nitrogen balance studies were used to set requirements: the minimal intake that avoids net loss is the basis of the roughly 0.8 g per kg per day recommendation for adults (WHO/FAO use a safe level near 0.83). Protein quality is judged against a reference pattern for the age group; cereals are limited by lysine, pulses by sulfur-containing amino acids, and mixing the two raises the combined score, which is why rice with dhal is nutritionally sound. Digestibility matters: antinutrients and food processing reduce availability, and DIAAS is replacing PDCAAS because it accounts for true ileal digestibility and does not truncate scores above 1. In malnutrition, low albumin reduces oncotic pressure and contributes to oedema, but the full mechanism of kwashiorkor involves oxidative stress, gut dysbiosis and infection as well as low protein.",
+        "advanced": "Amino acid requirements are measured with isotope methods (indicator amino acid oxidation) which suggest that requirements for some essential amino acids may be higher than historical nitrogen-balance values. Leucine acts as a signal through mTORC1 to stimulate muscle protein synthesis, linking the quantity and distribution of protein across meals to maintenance of muscle mass in older people. The distinction between marasmus and kwashiorkor is clinically useful but incomplete: children frequently show marasmic-kwashiorkor intermediates, and studies of discordant twins implicate the gut microbiome and metabolic differences, challenging the older model of simple protein deficiency. Severe acute malnutrition changes drug metabolism, immunity and electrolyte handling, and refeeding must be cautious because rapid shifts in phosphate, potassium and magnesium can be dangerous."
+      },
+      "commonMistakes": [
+        "Believing that plant proteins are incomplete in all cases; a varied plant diet can supply all essential amino acids.",
+        "Using nitrogen x 6.25 for every food without noting that factors vary slightly between foods.",
+        "Treating kwashiorkor as only a protein problem rather than a combination of dietary, infectious and metabolic factors.",
+        "Forgetting that amino acid requirements per kilogram are higher in growth, pregnancy and recovery."
+      ],
+      "videos": [
+        {
+          "youtubeId": "9ssCKw-7OvQ",
+          "title": "Proteins & Amino Acids | Biochemistry",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "Reviews amino acid structure, classification and the essential amino acids that anchor the rest of the unit."
+        },
+        {
+          "youtubeId": "8kZdm60v8SE",
+          "title": "Protein Quality Calculations",
+          "channel": "Dave Bridges",
+          "level": "intermediate",
+          "whyWatch": "A lecturer works through limiting amino acids and protein quality scores with calculations."
+        },
+        {
+          "youtubeId": "dJTM4a6VJt4",
+          "title": "Marasmus vs. Kwashiorkor - Protein Energy Malnutrition - Gastroenterology",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Compares the two classic syndromes, their biochemical basis and clinical signs side by side."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/ajcn/59.5.1203S",
+          "title": "Plant proteins in relation to human protein and amino acid nutrition",
+          "authors": "Young VR, Pellett PL",
+          "year": 1994,
+          "journal": "The American Journal of Clinical Nutrition",
+          "level": "intermediate",
+          "whyItMatters": "A careful review of how the amino acid profile and digestibility of plant proteins affect their value, directly relevant to rice-and-pulse diets."
+        },
+        {
+          "doi": "10.1016/S0140-6736(13)60937-X",
+          "title": "Maternal and child undernutrition and overweight in low-income and middle-income countries",
+          "authors": "Black RE, Victora CG, Walker SP, Bhutta ZA, Christian P, de Onis M, Ezzati M, Grantham-McGregor S, Katz J, Martorell R, Uauy R",
+          "year": 2013,
+          "journal": "The Lancet",
+          "level": "intermediate",
+          "whyItMatters": "A major analysis of how undernutrition shapes child survival and development, giving context for protein-energy malnutrition and micronutrient deficiencies in South Asia."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Malnutrition fact sheet",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/malnutrition",
+          "free": true,
+          "level": "beginner",
+          "note": "WHO overview of the forms of malnutrition, definitions and global burden, with notes on wasting and stunting."
+        },
+        {
+          "title": "Dietary protein quality evaluation in human nutrition",
+          "provider": "FAO",
+          "type": "reference",
+          "url": "https://openknowledge.fao.org/handle/20.500.14283/i3124e",
+          "free": true,
+          "level": "advanced",
+          "note": "The FAO expert consultation report that recommended DIAAS; useful for the reasoning behind protein quality scoring."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A food contains 3.2 g of nitrogen per 100 g. Its estimated protein content is:",
+          "options": [
+            "3.2 g",
+            "10 g",
+            "20 g",
+            "32 g"
+          ],
+          "answer": 2,
+          "explanation": "Protein = nitrogen x 6.25 = 3.2 x 6.25 = 20 g per 100 g."
+        },
+        {
+          "question": "Rice is typically limited in lysine while lentils are limited in methionine. Eating them together:",
+          "options": [
+            "Worsens the limiting amino acid in both",
+            "Improves overall protein quality because each supplies what the other lacks",
+            "Has no effect on protein quality",
+            "Removes the need for any other protein"
+          ],
+          "answer": 1,
+          "explanation": "Complementary proteins offset each other's limiting amino acids, producing a mixture with a better essential amino acid pattern."
+        },
+        {
+          "question": "Which feature distinguishes classic kwashiorkor from marasmus?",
+          "options": [
+            "Severe wasting with no oedema",
+            "Oedema with fatty liver and low serum albumin",
+            "Absence of any hair changes",
+            "Excess body fat"
+          ],
+          "answer": 1,
+          "explanation": "Kwashiorkor presents with pitting oedema, fatty liver and hypoalbuminaemia, whereas marasmus shows severe wasting without oedema."
+        }
+      ]
+    },
+    {
+      "id": "vitamins-and-minerals",
+      "title": "Vitamins, Minerals and Micronutrient Deficiency",
+      "hours": 5,
+      "hook": "Tiny amounts of the right molecule can decide whether an enzyme works. Scurvy sailors, bowed legs of rickets and the swollen necks of goitre were all puzzles of chemistry that nutrition solved, and the same deficiencies still shape health in many parts of the world.",
+      "learningObjectives": [
+        "Match each B vitamin to its coenzyme form and the reactions it supports.",
+        "Describe the functions and deficiency states of vitamins A, D, E, K and C.",
+        "Explain iron absorption and regulation (haem and non-haem iron, hepcidin) and the causes of iron-deficiency anaemia.",
+        "Describe the roles of iodine, calcium, zinc and selenium and the effects of deficiency.",
+        "Discuss public-health strategies such as salt iodisation and supplementation, and the limits of supplements."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Thiamine (B1)",
+          "definition": "Thiamine pyrophosphate is the coenzyme for pyruvate dehydrogenase, alpha-ketoglutarate dehydrogenase and transketolase; deficiency causes beriberi and Wernicke encephalopathy."
+        },
+        {
+          "term": "Niacin, riboflavin, pantothenate",
+          "definition": "Niacin forms NAD and NADP, riboflavin forms FAD and FMN, pantothenate forms coenzyme A; niacin deficiency causes pellagra."
+        },
+        {
+          "term": "Folate and vitamin B12",
+          "definition": "Folate carries one-carbon units for nucleotide synthesis, and deficiency causes megaloblastic anaemia and neural tube defects; B12 is needed for methionine synthase and methylmalonyl-CoA mutase."
+        },
+        {
+          "term": "Vitamin C",
+          "definition": "Cofactor for prolyl and lysyl hydroxylases that stabilise collagen; deficiency causes scurvy. Also a reducing agent that aids non-haem iron absorption."
+        },
+        {
+          "term": "Vitamin A",
+          "definition": "Retinal is the chromophore of rhodopsin, and retinoic acid regulates gene transcription; deficiency causes night blindness and xerophthalmia and increases infection severity."
+        },
+        {
+          "term": "Vitamin D",
+          "definition": "Made in skin from 7-dehydrocholesterol under UVB, hydroxylated in liver and kidney to calcitriol, which raises calcium and phosphate absorption; deficiency causes rickets in children and osteomalacia in adults."
+        },
+        {
+          "term": "Vitamin K",
+          "definition": "Cofactor for gamma-glutamyl carboxylase, which modifies clotting factors II, VII, IX and X; warfarin blocks regeneration of active vitamin K."
+        },
+        {
+          "term": "Hepcidin",
+          "definition": "A liver hormone that degrades the iron exporter ferroportin, reducing iron absorption and release from stores; raised in inflammation, explaining anaemia of chronic disease."
+        },
+        {
+          "term": "Iodine",
+          "definition": "A component of thyroid hormones T3 and T4; deficiency raises TSH, enlarges the thyroid (goitre) and impairs fetal brain development."
+        }
+      ],
+      "deeper": {
+        "beginner": "Vitamins are organic molecules that the body needs in small amounts but cannot make for itself, and most of them become the helpers (coenzymes) for enzymes. Minerals are elements such as iron, iodine, calcium and zinc. Missing a vitamin or mineral stops specific enzymes working: no iron means too little haemoglobin; no iodine means too little thyroid hormone; no vitamin D means weak bones. Eating a varied diet, using iodised salt and, where advised, taking supplements prevent most deficiencies.",
+        "intermediate": "Link vitamins to pathways you know: thiamine to the PDH complex and the pentose phosphate pathway, biotin to carboxylases (pyruvate, acetyl-CoA, propionyl-CoA), pantothenate to CoA, B6 as pyridoxal phosphate in transamination, niacin to NAD in dehydrogenases, and folate and B12 to one-carbon and homocysteine metabolism. Iron is absorbed as haem or as non-haem Fe2+ (aided by vitamin C and reduced by phytate and polyphenols in tea), stored in ferritin and transported by transferrin; deficiency shows as low ferritin and microcytic hypochromic anaemia, and the pattern of ferritin, transferrin saturation and inflammation markers separates iron deficiency from anaemia of chronic disease. Calcium homeostasis is controlled by PTH, calcitriol and calcitonin. Iodine deficiency was historically widespread in hill-country Sri Lanka and other mountainous regions; salt iodisation is the standard public-health response, and iodine intake needs monitoring because both deficiency and excess can cause thyroid disease.",
+        "advanced": "Vitamin D status is assessed by serum 25-hydroxyvitamin D, whose cut-offs are debated; benefits of supplementation are clear in deficiency and for bone health, but large trials in replete populations have not shown reductions in many chronic diseases. Iron regulation is post-translational and systemic: hepcidin binds ferroportin and triggers its internalisation and degradation, and hepcidin transcription is upregulated by BMP-SMAD signalling in iron excess and by IL-6 in inflammation, so low serum iron in infection is partly an adaptive response. Selenium is incorporated as selenocysteine into selenoproteins such as glutathione peroxidases and thyroid deiodinases, linking it to both antioxidant defence and thyroid hormone activation. Biofortification, food fortification and targeted supplementation each have trade-offs: for example, iron supplementation in malaria-endemic settings must be managed carefully, and folic acid fortification reduces neural tube defects but can mask B12 deficiency."
+      },
+      "commonMistakes": [
+        "Memorising deficiency diseases without linking them to the enzyme or process that fails.",
+        "Assuming that more is always better; fat-soluble vitamins A and D accumulate and can be toxic at high intakes.",
+        "Attributing all anaemia to iron deficiency; B12, folate, chronic disease and haemoglobinopathies also cause it.",
+        "Forgetting that vitamin D is a hormone precursor synthesised in skin and not only a dietary vitamin."
+      ],
+      "videos": [
+        {
+          "youtubeId": "yadAyuOvlkc",
+          "title": "B Vitamins | B1, B2, B3, B5, B6, B7, B9, B12",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "Organises the B vitamins by coenzyme role and deficiency, the best way to learn them as a system."
+        },
+        {
+          "youtubeId": "i6r4MGG4a50",
+          "title": "Vitamin A, K, and E",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "Covers function and deficiency of three fat-soluble vitamins, including the visual cycle and clotting."
+        },
+        {
+          "youtubeId": "JYQL7JEsF_4",
+          "title": "Calcium Homeostasis | Parathyroid Hormone and Vitamin D",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A short, clear account of how PTH and activated vitamin D keep blood calcium in range."
+        },
+        {
+          "youtubeId": "ahCy97FVUpM",
+          "title": "Iron Physiology",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Follows iron through absorption, transport, storage and recycling, with the regulatory logic."
+        },
+        {
+          "youtubeId": "tzIPjcHyQak",
+          "title": "Why iodine deficiency causes Goitre? | Chemical co-ordination | Biology Class 11 | Khan Academy",
+          "channel": "Khan Academy India - English",
+          "level": "beginner",
+          "whyWatch": "Explains the feedback loop that enlarges the thyroid when iodine is lacking."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1056/NEJMra070553",
+          "title": "Vitamin D Deficiency",
+          "authors": "Holick MF",
+          "year": 2007,
+          "journal": "New England Journal of Medicine",
+          "level": "intermediate",
+          "whyItMatters": "A clinical review of vitamin D synthesis, metabolism and deficiency, linking skin, liver, kidney and bone biochemistry."
+        },
+        {
+          "doi": "10.1016/S2213-8587(14)70225-6",
+          "title": "Iodine deficiency and thyroid disorders",
+          "authors": "Zimmermann MB, Boelaert K",
+          "year": 2015,
+          "journal": "The Lancet Diabetes & Endocrinology",
+          "level": "intermediate",
+          "whyItMatters": "An authoritative review of the biochemistry and epidemiology of iodine deficiency, including the effects of salt iodisation."
+        },
+        {
+          "doi": "10.1152/physrev.00008.2013",
+          "title": "Systemic Iron Homeostasis",
+          "authors": "Ganz T",
+          "year": 2013,
+          "journal": "Physiological Reviews",
+          "level": "advanced",
+          "whyItMatters": "A detailed account of how hepcidin and ferroportin regulate body iron, explaining anaemia of inflammation and iron overload."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Micronutrients",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/health-topics/micronutrients",
+          "free": true,
+          "level": "beginner",
+          "note": "WHO's entry page to guidance and data on vitamin and mineral deficiencies and their prevention."
+        },
+        {
+          "title": "Anaemia fact sheet",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/anaemia",
+          "free": true,
+          "level": "beginner",
+          "note": "Summarises causes of anaemia (including iron deficiency) and the groups most affected."
+        },
+        {
+          "title": "Dietary Supplement Fact Sheets",
+          "provider": "NIH Office of Dietary Supplements",
+          "type": "reference",
+          "url": "https://ods.od.nih.gov/factsheets/list-all/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Evidence-based fact sheets on each vitamin and mineral, with functions, sources, intakes and deficiency."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which vitamin is the cofactor for prolyl hydroxylase in collagen synthesis?",
+          "options": [
+            "Vitamin B6",
+            "Vitamin C",
+            "Vitamin K",
+            "Vitamin A"
+          ],
+          "answer": 1,
+          "explanation": "Ascorbic acid keeps the iron in prolyl and lysyl hydroxylases reduced; without it, collagen is unstable, producing scurvy."
+        },
+        {
+          "question": "In chronic inflammation, serum iron is low and ferritin is normal or high. The key regulator is:",
+          "options": [
+            "Increased transferrin synthesis",
+            "Increased hepcidin, which degrades ferroportin and traps iron in cells",
+            "Vitamin C deficiency",
+            "Excess dietary phytate"
+          ],
+          "answer": 1,
+          "explanation": "IL-6 induces hepcidin, which removes ferroportin from cell surfaces so iron is not released from stores or absorbed, lowering serum iron."
+        },
+        {
+          "question": "Warfarin acts by interfering with:",
+          "options": [
+            "Vitamin K recycling needed for gamma-carboxylation of clotting factors",
+            "Iron absorption",
+            "Calcium absorption",
+            "Vitamin A transport"
+          ],
+          "answer": 0,
+          "explanation": "Warfarin inhibits vitamin K epoxide reductase, so the reduced form needed by gamma-glutamyl carboxylase is not regenerated and clotting factors are inactive."
+        }
+      ]
+    },
+    {
+      "id": "clinical-biochemistry-principles-diabetes-lipids",
+      "title": "Clinical Biochemistry I: Principles, Diabetes and the Lipid Profile",
+      "hours": 4,
+      "hook": "A blood result is a sentence with a number in it, and the number only has meaning against the right comparison. This unit teaches how those comparisons are built and applies them to two of the most common tests in medicine: glucose and cholesterol.",
+      "learningObjectives": [
+        "Explain reference intervals, sensitivity, specificity and predictive value, and why 5 percent of healthy people fall outside a 95 percent interval.",
+        "Describe pre-analytical, analytical and post-analytical sources of error and the role of quality control.",
+        "State the diagnostic criteria for diabetes mellitus and interpret fasting glucose, OGTT and HbA1c.",
+        "Describe the biochemical differences between type 1 and type 2 diabetes and their acute complications.",
+        "Interpret a lipid profile and calculate LDL cholesterol using the Friedewald equation, noting its limits."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Reference interval",
+          "definition": "The range containing the central 95 percent of results in a healthy reference population; by definition about 1 in 20 healthy people will fall outside it for any single test."
+        },
+        {
+          "term": "Sensitivity and specificity",
+          "definition": "Sensitivity is the fraction of diseased people with a positive test; specificity is the fraction of healthy people with a negative test. Predictive values also depend on disease prevalence."
+        },
+        {
+          "term": "Pre-analytical error",
+          "definition": "Errors before the instrument measures: wrong tube (fluoride for glucose), delayed processing, haemolysis (raises potassium), and failure to fast; the largest source of laboratory errors."
+        },
+        {
+          "term": "Internal quality control",
+          "definition": "Known control samples run with patient samples and plotted over time (Levey-Jennings charts) to detect drift or sudden shifts."
+        },
+        {
+          "term": "Diabetes criteria (WHO)",
+          "definition": "Fasting plasma glucose of 7.0 mmol/L or more, 2-hour glucose of 11.1 mmol/L or more on a 75 g OGTT, or HbA1c of 48 mmol/mol (6.5 percent) or more, confirmed by repeat in the absence of clear symptoms."
+        },
+        {
+          "term": "HbA1c",
+          "definition": "Haemoglobin non-enzymatically glycated at the N-terminal valine of the beta chain; reflects average glucose over the red cell lifespan (about 2 to 3 months) but is unreliable in anaemia and some haemoglobinopathies."
+        },
+        {
+          "term": "Type 1 vs type 2 diabetes",
+          "definition": "Type 1 is autoimmune loss of beta cells with absolute insulin deficiency and risk of ketoacidosis; type 2 involves insulin resistance with relative insulin deficiency."
+        },
+        {
+          "term": "Lipid profile",
+          "definition": "Total cholesterol, HDL cholesterol and triacylglycerol are measured; LDL cholesterol is calculated (Friedewald: LDL-C = TC minus HDL-C minus TG/2.2 in mmol/L) or measured directly. The calculation fails when triacylglycerol is above about 4.5 mmol/L."
+        },
+        {
+          "term": "Metabolic syndrome",
+          "definition": "A cluster of central obesity, raised glucose, raised triacylglycerol, low HDL and high blood pressure that signals insulin resistance and raised cardiovascular risk."
+        }
+      ],
+      "deeper": {
+        "beginner": "A laboratory result is compared with a reference range from healthy people. A value outside the range is a signal to investigate, not a diagnosis. Diabetes is diagnosed from persistently high blood glucose: after an overnight fast, two hours after a sugary drink, or from a long-term marker called HbA1c. In diabetes, insulin is missing (type 1) or the body responds poorly to it (type 2). A lipid profile lists total cholesterol, HDL, LDL and triglycerides to estimate the risk of heart disease.",
+        "intermediate": "A test is useful only if it separates diseased from healthy people better than chance, and its positive predictive value falls as prevalence falls, which is why screening low-risk populations yields many false positives. Quality assurance covers sample collection, identification, analysis and reporting; internal QC uses controls with Westgard rules, while external quality assessment compares your laboratory with peers. For diabetes, venous plasma glucose must be collected into fluoride-oxalate tubes because red cells consume glucose in vitro; HbA1c does not need fasting but can mislead in iron deficiency, haemolysis and conditions such as thalassaemia and sickle haemoglobin, which are relevant in South Asia. In type 1 diabetes, insulin lack drives lipolysis, ketone body production and ketoacidosis; in type 2, hyperglycaemia reflects insulin resistance and beta-cell failure, and HOMA-IR estimates resistance from fasting glucose and insulin. Fasting lipid samples are standard for calculating LDL, though non-fasting results are acceptable for many risk assessments.",
+        "advanced": "Bayes' theorem links test performance to probability of disease: post-test probability depends on pre-test probability and likelihood ratios, so the same result means different things in different patients. Analytical performance is described by imprecision and bias, with total allowable error derived from biological variation; standardisation (for example of HbA1c to IFCC reference methods) allows results to be comparable across laboratories and over time. The Friedewald equation assumes a fixed ratio of VLDL cholesterol to triacylglycerol and is inaccurate at low LDL or high triacylglycerol; the Martin-Hopkins and Sampson equations and direct homogeneous assays are alternatives, and apolipoprotein B or non-HDL cholesterol are increasingly used. Newer glycaemic markers (fructosamine, glycated albumin, continuous glucose monitoring) address the blind spots of HbA1c, and reference intervals vary with age, sex, ethnicity and method, so local ranges matter."
+      },
+      "commonMistakes": [
+        "Calling any result outside the reference interval 'abnormal disease'; by construction a fraction of healthy people lie outside it.",
+        "Collecting glucose samples in plain tubes and leaving them unseparated, so glycolysis in red cells lowers the value.",
+        "Interpreting HbA1c in someone with anaemia or a haemoglobin variant without caution.",
+        "Applying the Friedewald equation to samples with very high triacylglycerol."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Z5TtopYX1Gc",
+          "title": "Sensitivity and Specificity Explained Clearly (Biostatistics)",
+          "channel": "MedCram - Medical Lectures Explained CLEARLY",
+          "level": "intermediate",
+          "whyWatch": "Explains test performance with worked tables, the core logic behind interpreting any laboratory test."
+        },
+        {
+          "youtubeId": "-B-RVybvffU",
+          "title": "Diabetes mellitus (type 1, type 2) & diabetic ketoacidosis (DKA)",
+          "channel": "Osmosis from Elsevier",
+          "level": "intermediate",
+          "whyWatch": "Compares type 1 and type 2 diabetes, the role of insulin and the biochemistry of ketoacidosis."
+        },
+        {
+          "youtubeId": "Iyr5zc-9clM",
+          "title": "HbA1c Test ( Glycosylation of haemoglobin) | Diabetes",
+          "channel": "Animated biology With arpan",
+          "level": "beginner",
+          "whyWatch": "Shows how glucose attaches to haemoglobin and why the HbA1c reflects average glycaemia."
+        },
+        {
+          "youtubeId": "ZZcTetviPJs",
+          "title": "Lipid Test: Risk Assessment for Heart Disease: Heart Attack and Stroke - Cholesterol, TG, HDL & LDL",
+          "channel": "Bio-Resource",
+          "level": "beginner",
+          "whyWatch": "Introduces the components of the lipid panel and how they relate to cardiovascular risk."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1007/BF00280883",
+          "title": "Homeostasis model assessment: insulin resistance and beta-cell function from fasting plasma glucose and insulin concentrations in man",
+          "authors": "Matthews DR, Hosker JP, Rudenski AS, Naylor BA, Treacher DF, Turner RC",
+          "year": 1985,
+          "journal": "Diabetologia",
+          "level": "advanced",
+          "whyItMatters": "The paper that introduced HOMA, still the commonest index of insulin resistance in research, showing how a model turns two fasting measurements into a physiological estimate."
+        },
+        {
+          "doi": "10.1093/clinchem/18.6.499",
+          "title": "Estimation of the Concentration of Low-Density Lipoprotein Cholesterol in Plasma, Without Use of the Preparative Ultracentrifuge",
+          "authors": "Friedewald WT, Levy RI, Fredrickson DS",
+          "year": 1972,
+          "journal": "Clinical Chemistry",
+          "level": "intermediate",
+          "whyItMatters": "The origin of the LDL equation used on almost every lipid report, with a plain statement of the assumptions that limit it."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Diabetes fact sheet",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+          "free": true,
+          "level": "beginner",
+          "note": "WHO overview of diabetes types, diagnosis, complications and global burden."
+        },
+        {
+          "title": "Clinical Methods: The History, Physical, and Laboratory Examinations",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK201/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free clinical text with chapters on laboratory tests, reference ranges and how clinicians use them."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A test has a 95 percent reference interval. In a healthy person, the probability that a single result falls outside it is approximately:",
+          "options": [
+            "0 percent",
+            "5 percent",
+            "50 percent",
+            "95 percent"
+          ],
+          "answer": 1,
+          "explanation": "Reference intervals contain the central 95 percent of healthy values, so about 5 percent of healthy people lie outside for any one test."
+        },
+        {
+          "question": "Which finding alone, confirmed on repeat testing, meets WHO criteria for diabetes?",
+          "options": [
+            "Fasting plasma glucose 5.5 mmol/L",
+            "HbA1c 5.5 percent",
+            "Fasting plasma glucose 7.4 mmol/L",
+            "2-hour OGTT glucose 7.0 mmol/L"
+          ],
+          "answer": 2,
+          "explanation": "A fasting plasma glucose of 7.0 mmol/L or more meets the criterion; the other values are below the diagnostic thresholds (2-hour OGTT cut-off is 11.1 mmol/L)."
+        },
+        {
+          "question": "Total cholesterol is 5.8 mmol/L, HDL is 1.2 mmol/L and triacylglycerol is 2.2 mmol/L. By Friedewald, LDL cholesterol is about:",
+          "options": [
+            "3.4 mmol/L",
+            "4.6 mmol/L",
+            "3.6 mmol/L",
+            "2.2 mmol/L"
+          ],
+          "answer": 2,
+          "explanation": "LDL-C = 5.8 - 1.2 - (2.2/2.2) = 5.8 - 1.2 - 1.0 = 3.6 mmol/L."
+        }
+      ]
+    },
+    {
+      "id": "clinical-biochemistry-organ-function-tests",
+      "title": "Clinical Biochemistry II: Liver, Kidney, Cardiac and Acid-Base Tests",
+      "hours": 5,
+      "hook": "When an organ is injured, its internal proteins leak into the blood, and when it fails, substances it normally clears pile up. Reading liver enzymes, creatinine, troponin and blood gases is detective work built on knowing which molecule lives where and what it is for.",
+      "learningObjectives": [
+        "Interpret ALT, AST, ALP, GGT, bilirubin and albumin in hepatocellular versus cholestatic patterns.",
+        "Explain how creatinine, urea and eGFR assess kidney function and their limitations.",
+        "Describe the use of cardiac troponin in diagnosing myocardial infarction.",
+        "Use the bicarbonate buffer equation to interpret simple acid-base disturbances.",
+        "Link the tests to the biochemistry of the organ concerned and to the pre-analytical issues that can mislead."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Aminotransferases (ALT, AST)",
+          "definition": "Enzymes that leak from damaged hepatocytes; ALT is more liver-specific, whereas AST is also found in heart and skeletal muscle."
+        },
+        {
+          "term": "ALP and GGT",
+          "definition": "Raised in cholestasis and biliary obstruction; ALP also comes from bone and placenta, and GGT helps to confirm a liver source."
+        },
+        {
+          "term": "Bilirubin",
+          "definition": "Haem breakdown product: unconjugated bilirubin rises in haemolysis or impaired uptake and conjugation, conjugated bilirubin in obstruction and hepatocellular disease."
+        },
+        {
+          "term": "Synthetic function",
+          "definition": "Albumin and clotting tests (prothrombin time) reflect how well the liver makes proteins; they fall in chronic and severe liver failure."
+        },
+        {
+          "term": "Creatinine and eGFR",
+          "definition": "Creatinine comes from muscle creatine and is cleared by glomerular filtration; eGFR equations (such as CKD-EPI) adjust for age and sex. Creatinine depends on muscle mass and rises only after substantial loss of function."
+        },
+        {
+          "term": "Urea",
+          "definition": "The nitrogen end-product of the urea cycle; rises in renal impairment but also with dehydration, high protein intake and gastrointestinal bleeding."
+        },
+        {
+          "term": "Cardiac troponin",
+          "definition": "Cardiac-specific regulatory proteins released after myocardial injury; rise after a few hours and stay raised for days. Diagnosis of infarction requires a rise and/or fall with clinical evidence of ischaemia."
+        },
+        {
+          "term": "Bicarbonate buffer system",
+          "definition": "pH = 6.1 + log([HCO3-]/(0.03 x pCO2)), with pCO2 in mmHg; the kidney regulates bicarbonate and the lungs regulate pCO2."
+        },
+        {
+          "term": "Anion gap",
+          "definition": "Sodium minus the sum of chloride and bicarbonate; raised in metabolic acidosis from unmeasured acids such as lactate and ketones."
+        }
+      ],
+      "deeper": {
+        "beginner": "Liver cells hold enzymes called ALT and AST; when cells are damaged, these leak into blood and the levels rise. If bile flow is blocked, ALP and bilirubin rise. For kidneys, creatinine in blood goes up when filtration falls. The heart releases troponin into the blood when heart muscle is injured. Blood gas results show whether the blood is too acidic or too alkaline and whether the cause lies in the lungs or the metabolism.",
+        "intermediate": "Pattern recognition is the key to liver tests: a hepatocellular pattern (ALT and AST up much more than ALP) suggests hepatitis or toxic injury; a cholestatic pattern (ALP and GGT up out of proportion) suggests obstruction or intrahepatic cholestasis. Isolated high conjugated bilirubin with dark urine and pale stools points to obstruction. Creatinine is a late and imprecise marker, so eGFR is calculated, and creatinine can be misleading in people with unusually low or high muscle mass; cystatin C is an alternative. High-sensitivity troponin assays detect small changes, so serial measurements and the rise or fall are used; troponin can also be raised in kidney failure, myocarditis, sepsis and pulmonary embolism, so the clinical context decides. For acid-base: low pH with low bicarbonate indicates metabolic acidosis (calculate the anion gap); low pH with high pCO2 indicates respiratory acidosis; compensation moves the other component in the same direction.",
+        "advanced": "The CKD-EPI equations are validated mainly in particular populations and have been revised to remove race coefficients; estimating GFR in children, older adults, extremes of body size and in South Asian populations remains imperfect, and drug dosing may require measured clearance. AST to ALT ratios, FIB-4 and other composite scores estimate liver fibrosis non-invasively, and aminotransferases can be normal in advanced cirrhosis because few hepatocytes remain. Troponin kinetics, assay-specific 99th percentile cut-offs by sex and the interpretation of chronic low-level elevation require care: the Fourth Universal Definition of Myocardial Infarction distinguishes type 1 (plaque rupture) from type 2 (supply-demand mismatch) and non-ischaemic myocardial injury. Stewart's physicochemical approach treats strong ion difference and weak acids (mostly albumin) as independent determinants of pH, offering a more complete description of complex acid-base disorders than bicarbonate alone, and explaining why hypoalbuminaemia lowers the anion gap."
+      },
+      "commonMistakes": [
+        "Assuming a high AST means liver disease; it can come from muscle (for example after intense exercise or injury) or heart.",
+        "Treating a normal creatinine as proof of normal kidney function in someone with low muscle mass.",
+        "Using a single troponin value without timing or serial measurement to rule in or out an infarction.",
+        "Interpreting blood gases without considering compensation or the anion gap."
+      ],
+      "videos": [
+        {
+          "youtubeId": "c4CvXTYimck",
+          "title": "Liver and pancreatic enzymes explained | AST, ALT, GGT, ALP, Amylase & Lipase",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Explains where each enzyme comes from and what patterns of elevation indicate."
+        },
+        {
+          "youtubeId": "zVXY7xLwNJQ",
+          "title": "Kidney Function Tests, Animation",
+          "channel": "Alila Medical Media",
+          "level": "beginner",
+          "whyWatch": "A concise animated overview of creatinine, urea and eGFR and how kidney function is assessed."
+        },
+        {
+          "youtubeId": "0vqzUwm4LhE",
+          "title": "Serum Creatinine vs GFR - How the kidneys works - Nephrology Labs",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Shows why creatinine rises only after substantial loss of filtration and how eGFR is derived."
+        },
+        {
+          "youtubeId": "gPHLeHUZE3k",
+          "title": "Understanding Arterial Blood Gases",
+          "channel": "Zero To Finals",
+          "level": "intermediate",
+          "whyWatch": "A step-by-step method for reading pH, pCO2 and bicarbonate to classify acid-base disorders."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.7326/0003-4819-150-9-200905050-00006",
+          "title": "A New Equation to Estimate Glomerular Filtration Rate",
+          "authors": "Levey AS, Stevens LA, Schmid CH, Zhang YL, Castro AF, Feldman HI, Kusek JW, Eggers P, Van Lente F, Greene T, Coresh J",
+          "year": 2009,
+          "journal": "Annals of Internal Medicine",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2763564/",
+          "whyItMatters": "Introduced the CKD-EPI equation used on most laboratory reports, comparing it with the MDRD equation and illustrating how an estimating formula is developed and validated."
+        },
+        {
+          "doi": "10.1161/CIR.0000000000000617",
+          "title": "Fourth Universal Definition of Myocardial Infarction (2018)",
+          "authors": "Thygesen K, Alpert JS, Jaffe AS, Chaitman BR, Bax JJ, Morrow DA, White HD",
+          "year": 2018,
+          "journal": "Circulation",
+          "level": "advanced",
+          "whyItMatters": "The international consensus on how troponin and clinical evidence are combined to define myocardial infarction, a practical case study in diagnostic biochemistry."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Clinical Methods: The History, Physical, and Laboratory Examinations",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK201/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free text with chapters on liver, renal and cardiac laboratory investigations and how clinicians use them."
+        },
+        {
+          "title": "Anatomy and Physiology 2e: Nutrition and Metabolism",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "Readable physiology background on liver and kidney function and metabolism, useful before tackling the tests."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A patient has ALT 600 U/L, AST 450 U/L and a normal ALP. The pattern is most consistent with:",
+          "options": [
+            "Cholestasis",
+            "Hepatocellular injury",
+            "Bone disease",
+            "Normal liver function"
+          ],
+          "answer": 1,
+          "explanation": "Marked rises in the aminotransferases with a normal ALP point to hepatocellular damage such as viral or toxic hepatitis."
+        },
+        {
+          "question": "Blood gas: pH 7.25, pCO2 28 mmHg, HCO3- 12 mmol/L. This is best described as:",
+          "options": [
+            "Respiratory acidosis",
+            "Metabolic acidosis with respiratory compensation",
+            "Metabolic alkalosis",
+            "Respiratory alkalosis"
+          ],
+          "answer": 1,
+          "explanation": "Low pH with low bicarbonate is metabolic acidosis; the low pCO2 shows the lungs are blowing off CO2 to compensate."
+        },
+        {
+          "question": "Why is serum creatinine a late marker of reduced kidney function?",
+          "options": [
+            "It is not filtered by the glomerulus",
+            "A large fall in GFR is needed before the concentration rises noticeably, and it also depends on muscle mass",
+            "It is destroyed in the blood",
+            "It is only measured in urine"
+          ],
+          "answer": 1,
+          "explanation": "Because the kidney has reserve and creatinine production depends on muscle, GFR can fall substantially before serum creatinine exceeds the reference interval; eGFR helps but has limits."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "HD6gDkWgyxs",
+      "title": "Vitamins | An Overview",
+      "channel": "Dr Matt & Dr Mike",
+      "level": "intermediate",
+      "whyWatch": "A long overview lecture on vitamins that you can use as a spine for the micronutrient unit and revisit before the exam."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry, 5th edition (Berg, Tymoczko, Stryer)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "The free standard biochemistry text; use it for the metabolic pathways behind nutrition and clinical tests."
+    },
+    {
+      "title": "Clinical Methods: The History, Physical, and Laboratory Examinations",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK201/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free clinical reference for how laboratory tests are used in diagnosis."
+    },
+    {
+      "title": "Anatomy and Physiology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "Free physiology textbook; the nutrition and metabolism chapter gives a clear overview of digestion and energy balance."
+    }
+  ]
+}

@@ -1,0 +1,1727 @@
+{
+  "code": "MB 4001",
+  "title": "Genomics and Proteomics",
+  "level": 4,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Read whole genomes, measure whole proteomes, and learn how to turn billions of data points into biology.",
+  "overview": "This course follows the arc from sequencing a genome to measuring its products. It covers genome organisation and the Human Genome Project, sequencing technologies, assembly and annotation, variation and GWAS, transcriptomics, functional genomics and epigenomics, metagenomics and comparative genomics, mass-spectrometry proteomics, and quantitative proteomics with interactomics. The units follow the standard content of a BSc Honours genomics and proteomics course.",
+  "whyItMatters": "Modern biology and medicine are data driven. Cancer genomics, rare-disease diagnosis, pathogen surveillance and biomarker discovery all depend on sequencing and proteomics, and the skills of reading these data critically transfer to any omics-based research project.",
+  "prerequisites": [
+    "BC 3053",
+    "MB 3022",
+    "MB 3025",
+    "BC 3025"
+  ],
+  "careerLinks": [
+    "Bioinformatics and computational biology",
+    "Clinical genomics and diagnostics",
+    "Pharmaceutical and biotech R&D",
+    "Microbiome and environmental genomics",
+    "Academic research (MPhil/PhD)"
+  ],
+  "studyTips": [
+    "Draw each workflow (sequencing, RNA-seq, bottom-up MS) as a flowchart from sample to figure, then say what could go wrong at each step.",
+    "Open real datasets in the Ensembl, UCSC and Human Protein Atlas browsers while you study; concepts stick when you see them on actual genes.",
+    "Learn to read the plots (Manhattan, volcano, UMAP, mass spectra) before you learn the maths behind them.",
+    "Keep a glossary of file formats (FASTQ, BAM, VCF, mzML) and what each one stores."
+  ],
+  "units": [
+    {
+      "id": "genome-organisation-and-hgp",
+      "title": "Genome Organisation and the Human Genome Project",
+      "hours": 5,
+      "hook": "In 1990 a few hundred scientists set out to read three billion letters of human DNA, and the first draft landed in 2001 as two rival papers published a few days apart. It took until 2022 for someone to read the whole thing end to end with no gaps. Before you can study genomes, you need a feel for what one actually looks like: mostly not genes, and mostly repetitive.",
+      "learningObjectives": [
+        "Define genome, chromosome, gene, exon, intron and intergenic region, and say roughly what fraction of the human genome each occupies.",
+        "Explain why genome size (the C-value) does not track organismal complexity.",
+        "Compare the architecture of prokaryotic, organellar and eukaryotic genomes.",
+        "Describe the two strategies used to sequence the human genome (hierarchical clone-by-clone vs whole-genome shotgun).",
+        "Classify the main repeat families (transposable elements, tandem repeats, segmental duplications) and say why they made assembly hard.",
+        "Say what the telomere-to-telomere (T2T) assembly added to earlier reference genomes."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Genome",
+          "definition": "The complete set of DNA in a cell or organism, including nuclear chromosomes, organelle genomes and any plasmids."
+        },
+        {
+          "term": "C-value paradox",
+          "definition": "Genome size varies enormously between species (some amphibians and plants have genomes many times larger than ours) without matching organismal complexity; the extra DNA is mostly repeats."
+        },
+        {
+          "term": "Protein-coding fraction",
+          "definition": "In humans only about 1 to 2 percent of the genome encodes protein; roughly 20,000 protein-coding genes are annotated."
+        },
+        {
+          "term": "Transposable element",
+          "definition": "A mobile DNA sequence (for example Alu and LINE-1 in humans) that copies or moves itself; together such elements derive roughly half of the human genome."
+        },
+        {
+          "term": "Tandem repeat",
+          "definition": "Short sequence units repeated head to tail, such as microsatellites, minisatellites and the alpha-satellite DNA of centromeres."
+        },
+        {
+          "term": "Segmental duplication",
+          "definition": "A large (over 1 kb) block of near-identical DNA copied to another place in the genome; a hotspot for rearrangement and a headache for assemblers."
+        },
+        {
+          "term": "Hierarchical shotgun",
+          "definition": "Clone large fragments (BACs), map them, then sequence each clone by shotgun; the public Human Genome Project approach."
+        },
+        {
+          "term": "Whole-genome shotgun",
+          "definition": "Shear the whole genome, sequence the pieces at random and assemble them computationally; the approach used by Celera and now standard."
+        },
+        {
+          "term": "T2T assembly",
+          "definition": "A gap-free, telomere-to-telomere human reference (CHM13) completed in 2022 using long reads, which added about 200 Mb of previously unresolved sequence."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of the genome as a library in which only a few shelves hold instruction manuals (genes). Much of the rest is regulatory notes, copies of the same page printed thousands of times (repeats), and sections whose purpose we are still working out. The Human Genome Project made the first draft catalogue of that library. Analogy break: a library has an index; the genome does not, which is why annotation is a whole discipline.",
+        "intermediate": "Human nuclear DNA is about 3.1 Gb in 23 chromosome pairs, with a 16.6 kb circular mitochondrial genome that is inherited maternally and carries 13 protein-coding genes. Bacterial genomes are compact (a few Mb, gene-dense, often a single circular chromosome with operons), whereas eukaryotic genomes carry introns, long intergenic stretches and abundant repeats. The initial human drafts were released in 2001; the finished euchromatic sequence followed in 2003, but centromeres, acrocentric short arms and large segmental duplications stayed unresolved until long-read assemblies.",
+        "advanced": "Short reads cannot span repeats longer than the read length, so near-identical copies collapse in the assembly or leave gaps. The T2T-CHM13 project used a haploid hydatidiform mole cell line (so there is one allele per locus), combined PacBio HiFi and Oxford Nanopore ultra-long reads, and resolved the centromeric satellite arrays and rDNA arrays. A single reference also biases analysis towards one ancestry, which is why pangenome references that represent many people are replacing the single-genome model."
+      },
+      "commonMistakes": [
+        "Equating genome size with gene number: a bigger genome mostly means more repeats, not more genes.",
+        "Saying 'junk DNA' means useless: a lot of non-coding DNA is regulatory, structural (centromeres, telomeres) or produces functional RNAs, and the fraction that is truly dispensable is still debated.",
+        "Thinking the 2001 draft was complete; it had thousands of gaps and the first gap-free human genome only appeared in 2022."
+      ],
+      "videos": [
+        {
+          "youtubeId": "AhsIF-cmoQQ",
+          "title": "The race to sequence the human genome - Tien Nguyen",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A five-minute narrative of the public-versus-private race and the shotgun idea that settled it."
+        },
+        {
+          "youtubeId": "MvuYATh7Y74",
+          "title": "How to sequence the human genome - Mark J. Kiel",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "Shows step by step how a genome is cut into fragments, read and stitched back together."
+        },
+        {
+          "youtubeId": "hL-FM20fgKg",
+          "title": "Eric Lander at MIT 2001 - The Human Genome Project and Beyond",
+          "channel": "MIT Video Productions",
+          "level": "intermediate",
+          "whyWatch": "A leader of the project explains in 2001 what the draft revealed about genes, repeats and evolution."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/35057062",
+          "title": "Initial sequencing and analysis of the human genome",
+          "authors": "International Human Genome Sequencing Consortium",
+          "year": 2001,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The public consortium's landmark paper; read the sections on repeats and gene counts to see how much of the genome is not protein-coding.",
+          "readingQuestions": [
+            "Which repeat classes make up the bulk of the genome?",
+            "How did the authors estimate gene number, and why was that hard?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.abj6987",
+          "title": "The complete sequence of a human genome",
+          "authors": "Nurk S, Koren S, Rhie A, et al.",
+          "year": 2022,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The first gapless human genome; it shows how long reads finally resolved centromeres and segmental duplications.",
+          "readingQuestions": [
+            "What kinds of sequence were missing from the earlier reference?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Genomics Fact Sheets and Genetics Glossary",
+          "provider": "NHGRI (genome.gov)",
+          "type": "reference",
+          "url": "https://www.genome.gov/about-genomics/fact-sheets",
+          "free": true,
+          "level": "beginner",
+          "note": "Short, accurate plain-language summaries on the genome, sequencing and the Human Genome Project."
+        },
+        {
+          "title": "Ensembl genome browser",
+          "provider": "EMBL-EBI / Wellcome Sanger",
+          "type": "database",
+          "url": "https://www.ensembl.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Open any gene and zoom out to see exons, introns and repeats in genomic context."
+        },
+        {
+          "title": "UCSC Genome Browser",
+          "provider": "UC Santa Cruz",
+          "type": "tool",
+          "url": "https://genome.ucsc.edu/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Turn on the RepeatMasker and conservation tracks to see how repetitive the genome really is."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Roughly what fraction of the human genome codes for protein?",
+          "options": [
+            "About 1 to 2 percent",
+            "About 25 percent",
+            "About 50 percent",
+            "About 98 percent"
+          ],
+          "answer": 0,
+          "explanation": "Exons of protein-coding genes cover only about 1-2 percent; most of the rest is introns, intergenic DNA and repeats."
+        },
+        {
+          "question": "Why were centromeres and large segmental duplications missing from early human reference assemblies?",
+          "options": [
+            "They contain no DNA",
+            "Short reads cannot be uniquely placed in long near-identical repeats",
+            "They are only found in mitochondria",
+            "They are RNA, not DNA"
+          ],
+          "answer": 1,
+          "explanation": "Highly repetitive, near-identical sequence collapses or leaves gaps when reads are shorter than the repeat; long reads solved this."
+        },
+        {
+          "question": "The C-value paradox refers to the observation that",
+          "options": [
+            "Genome size does not correlate with organismal complexity",
+            "All genomes are the same size",
+            "Genes are always longer than introns",
+            "Prokaryotes have larger genomes than eukaryotes"
+          ],
+          "answer": 0,
+          "explanation": "Some simple organisms have genomes far larger than ours; the difference is largely repetitive DNA."
+        }
+      ]
+    },
+    {
+      "id": "sequencing-technologies",
+      "title": "DNA Sequencing Technologies: Sanger to Long Reads",
+      "hours": 5,
+      "hook": "The first human genome cost around three billion dollars and a decade. Today a genome can be sequenced in a day for a few hundred dollars, and a pocket-sized device can read DNA in a hospital ward or a rainforest. The leaps came from changing the chemistry, not the goal.",
+      "learningObjectives": [
+        "Explain chain-termination (Sanger) sequencing and why it is still used for validation.",
+        "Describe Illumina sequencing by synthesis: library prep, bridge amplification, reversible terminators and imaging.",
+        "Explain how nanopore and PacBio HiFi sequencing read single molecules and what error profile each has.",
+        "Compare short- and long-read technologies for read length, accuracy, throughput and cost.",
+        "Interpret FASTQ files, Phred quality scores and read depth (coverage).",
+        "Choose a sequencing strategy for a given biological question (variant calling, de novo assembly, RNA-seq, structural variants)."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Chain termination",
+          "definition": "Sanger method: dideoxynucleotides (ddNTPs) lack a 3'-OH, so extension stops when one is incorporated, producing fragments that end at every position."
+        },
+        {
+          "term": "Sequencing by synthesis",
+          "definition": "Illumina chemistry: fluorescent reversible-terminator nucleotides are added one cycle at a time to clusters of identical DNA molecules and imaged."
+        },
+        {
+          "term": "Library preparation",
+          "definition": "Fragmenting DNA, repairing ends and ligating adapters so fragments can bind a flow cell, be amplified and be primed for sequencing."
+        },
+        {
+          "term": "Phred score",
+          "definition": "Q = -10 log10(P error). Q20 means a 1 percent chance the base is wrong; Q30 means 0.1 percent."
+        },
+        {
+          "term": "Coverage (depth)",
+          "definition": "The average number of reads covering each base; 30x is common for human whole-genome resequencing."
+        },
+        {
+          "term": "Nanopore sequencing",
+          "definition": "A DNA strand is threaded through a protein pore and changes in ionic current identify the bases passing through; reads can be extremely long."
+        },
+        {
+          "term": "PacBio HiFi",
+          "definition": "Circular consensus sequencing: a single molecule is read repeatedly in zero-mode waveguides to give reads of about 15-20 kb with accuracy above 99.9 percent."
+        },
+        {
+          "term": "FASTQ",
+          "definition": "A text format storing each read's sequence and per-base quality string."
+        }
+      ],
+      "deeper": {
+        "beginner": "A sequencer does not read a genome from start to finish. It reads millions of short snippets and software reassembles them. Short reads are cheap and accurate but ambiguous in repeats; long reads span repeats but each base is read with more noise (nanopore) or at higher cost (HiFi). Sanger sequencing reads one fragment at a time and is the gold standard for confirming a single variant.",
+        "intermediate": "Illumina reads (typically 75-300 bp, paired-end) have substitution errors at roughly 0.1 percent and enormous throughput, making them the workhorse for resequencing, RNA-seq and ChIP-seq. Nanopore reads can exceed 100 kb and can detect base modifications such as 5-methylcytosine directly from the signal; error rates have fallen steadily with new pores and basecallers. Read QC (FastQC, adapter trimming) comes before any analysis because contamination or quality drop-off biases everything downstream.",
+        "advanced": "Short-read PCR amplification introduces GC bias and duplicate reads; PCR-free libraries reduce this. Long-read platforms enable phased haplotypes, structural variant calling and complete assemblies, and direct RNA sequencing removes reverse-transcription artefacts. Error models differ (indels in homopolymers for nanopore, random errors for HiFi), so variant callers and assemblers are platform-specific, and hybrid strategies often combine accurate short reads with long scaffolding reads."
+      },
+      "commonMistakes": [
+        "Assuming a higher Phred score means more reads: it is a per-base error probability.",
+        "Thinking long reads are always better: for SNP calling at scale, accurate short reads are cheaper.",
+        "Ignoring that 30x coverage is an average; some regions (GC-extreme, repetitive) are covered far less."
+      ],
+      "videos": [
+        {
+          "youtubeId": "ONGdehkB8jU",
+          "title": "DNA Sequencing - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A clear 3D animation of how DNA sequencing reads are generated."
+        },
+        {
+          "youtubeId": "e2G5zx-OJIw",
+          "title": "How does Sanger Sequencing Work? - Seq It Out #1",
+          "channel": "Thermo Fisher Scientific",
+          "level": "beginner",
+          "whyWatch": "Walks through dideoxy termination and capillary electrophoresis in under four minutes."
+        },
+        {
+          "youtubeId": "fCd6B5HRaZ8",
+          "title": "Overview of Illumina Sequencing by Synthesis Workflow | Standard SBS chemistry",
+          "channel": "Illumina",
+          "level": "intermediate",
+          "whyWatch": "The manufacturer's own animation of clusters, reversible terminators and imaging cycles."
+        },
+        {
+          "youtubeId": "VxGliKyYuFQ",
+          "title": "How Oxford Nanopore sequencing works",
+          "channel": "Oxford Nanopore Technologies",
+          "level": "beginner",
+          "whyWatch": "A one-minute look at DNA passing through a pore and generating a signal."
+        },
+        {
+          "youtubeId": "xbpYvki4U64",
+          "title": "Introduction to Highly Accurate Long-Read Sequencing (HiFi Sequencing)",
+          "channel": "PacBio",
+          "level": "intermediate",
+          "whyWatch": "Explains circular consensus sequencing and why long reads can still be accurate."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.74.12.5463",
+          "title": "DNA sequencing with chain-terminating inhibitors",
+          "authors": "Sanger F, Nicklen S, Coulson AR",
+          "year": 1977,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The original dideoxy method that sequenced the first genomes and earned Sanger his second Nobel Prize; short and surprisingly readable."
+        },
+        {
+          "doi": "10.1146/annurev.genom.9.081307.164359",
+          "title": "Next-Generation DNA Sequencing Methods",
+          "authors": "Mardis ER",
+          "year": 2008,
+          "journal": "Annual Review of Genomics and Human Genetics",
+          "level": "intermediate",
+          "whyItMatters": "A clear early review of how the massively parallel platforms work and what trade-offs they introduced."
+        },
+        {
+          "doi": "10.1038/s41576-020-0236-x",
+          "title": "Long-read human genome sequencing and its applications",
+          "authors": "Logsdon GA, Vollger MR, Eichler EE",
+          "year": 2020,
+          "journal": "Nature Reviews Genetics",
+          "level": "advanced",
+          "whyItMatters": "Shows what long reads revealed that short reads missed: structural variants, repeats and phasing."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Sequencing technology overview and glossary",
+          "provider": "NHGRI (genome.gov)",
+          "type": "reference",
+          "url": "https://www.genome.gov/about-genomics/fact-sheets",
+          "free": true,
+          "level": "beginner",
+          "note": "Fact sheets on DNA sequencing and the fall in sequencing cost."
+        },
+        {
+          "title": "Galaxy Training Network: Quality Control",
+          "provider": "Galaxy Project",
+          "type": "tutorial",
+          "url": "https://training.galaxyproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Hands-on browser-based tutorials for FASTQ quality control, trimming and mapping, no installation required."
+        },
+        {
+          "title": "EMBL-EBI Training online courses",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free self-paced courses on NGS data formats and analysis."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In Sanger sequencing, chain termination occurs because ddNTPs",
+          "options": [
+            "Lack a 3'-OH group needed for the next phosphodiester bond",
+            "Lack a base",
+            "Are radioactive",
+            "Cannot pair with the template"
+          ],
+          "answer": 0,
+          "explanation": "Without a 3'-OH, DNA polymerase cannot add the next nucleotide, so each ddNTP stops the chain at a specific base."
+        },
+        {
+          "question": "A base with Phred score Q30 has an error probability of about",
+          "options": [
+            "1 in 10",
+            "1 in 100",
+            "1 in 1000",
+            "1 in 1,000,000"
+          ],
+          "answer": 2,
+          "explanation": "Q = -10 log10(P) so Q30 means P = 10^-3, or 0.1 percent."
+        },
+        {
+          "question": "Which is the main advantage of long-read sequencing for genome assembly?",
+          "options": [
+            "It always has lower per-base error",
+            "It can span repeats and resolve structural variants",
+            "It needs no DNA",
+            "It is always cheaper per base"
+          ],
+          "answer": 1,
+          "explanation": "Long reads cross repeated regions that short reads cannot place uniquely."
+        }
+      ]
+    },
+    {
+      "id": "assembly-and-annotation",
+      "title": "Genome Assembly and Annotation",
+      "hours": 5,
+      "hook": "A sequencer hands you billions of tiny fragments with no addresses. Putting them back together is a jigsaw where thousands of pieces are identical blue sky, and then you still have to write the captions: which stretches are genes, and what do they do?",
+      "learningObjectives": [
+        "Explain the overlap-layout-consensus and de Bruijn graph approaches to assembly and when each is used.",
+        "Interpret assembly quality metrics such as N50, contig count and BUSCO completeness.",
+        "Differentiate reference-guided mapping from de novo assembly.",
+        "Describe how scaffolding with long reads, Hi-C or optical maps orders and orients contigs.",
+        "Distinguish structural from functional annotation and explain ab initio, evidence-based and homology-based gene prediction.",
+        "Use a genome browser to inspect gene models and supporting evidence."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Contig",
+          "definition": "A contiguous stretch of sequence assembled from overlapping reads with no gaps."
+        },
+        {
+          "term": "Scaffold",
+          "definition": "Contigs ordered and oriented with estimated gap sizes using paired-end, long-range or Hi-C information."
+        },
+        {
+          "term": "de Bruijn graph",
+          "definition": "Reads are cut into k-mers; nodes are (k-1)-mers and edges are k-mers, and an assembly is a path through the graph; efficient for huge numbers of short reads."
+        },
+        {
+          "term": "Overlap-layout-consensus",
+          "definition": "Find pairwise overlaps between reads, lay them out, then call a consensus; suited to long reads."
+        },
+        {
+          "term": "N50",
+          "definition": "The contig length such that contigs of that length or longer contain half of the total assembled bases; a measure of contiguity, not correctness."
+        },
+        {
+          "term": "BUSCO",
+          "definition": "A score of how many expected single-copy conserved genes for a lineage are found complete in an assembly; a proxy for completeness."
+        },
+        {
+          "term": "Ab initio gene prediction",
+          "definition": "Using statistical models (for example hidden Markov models) to find signals such as start codons, splice sites and codon usage without external evidence."
+        },
+        {
+          "term": "Structural vs functional annotation",
+          "definition": "Structural annotation locates genes and features; functional annotation assigns names, domains, GO terms and pathways to them."
+        },
+        {
+          "term": "Reference mapping",
+          "definition": "Aligning reads to an existing genome instead of assembling from scratch; far cheaper but blind to sequence the reference lacks."
+        }
+      ],
+      "deeper": {
+        "beginner": "De novo assembly is like reassembling many copies of a shredded book: you look for passages that overlap and chain them. Repeated paragraphs (genomic repeats) confuse this. Annotation then marks up the finished book: where chapters (genes) begin and end, and what they are about. Analogy break: a book has one correct text, whereas a population has many valid genome sequences.",
+        "intermediate": "Short-read assemblers (SPAdes, MEGAHIT) use de Bruijn graphs, while long-read assemblers (Flye, hifiasm) use overlap-based methods. A good assembly has a high N50, few misassemblies and high BUSCO completeness, but N50 can be inflated by mistaken joins, so it should be read alongside the other metrics. Eukaryotic gene prediction combines ab initio tools (AUGUSTUS), RNA-seq alignments and protein homology, then manual curation for important genes; pipelines such as Ensembl and NCBI RefSeq publish the standard annotations.",
+        "advanced": "Repeats and heterozygosity create bubbles and branches in the graph; haplotype-resolved assemblers use HiFi reads and trio or Hi-C data to separate maternal and paternal haplotypes. Choosing k involves a trade-off: small k connects through low coverage but collapses repeats, large k resolves repeats but fragments at low coverage, so multiple k values are often used. Annotation accuracy depends on expression evidence: genes not expressed in your RNA-seq samples are often missed or mispredicted."
+      },
+      "commonMistakes": [
+        "Treating a high N50 as proof of a good assembly; it ignores correctness and completeness.",
+        "Believing a predicted gene is real without supporting transcript or protein evidence.",
+        "Assuming mapping to a reference finds all variation; sequence absent from the reference is invisible."
+      ],
+      "videos": [
+        {
+          "youtubeId": "B3Oc_3zZvTg",
+          "title": "de Bruijn graph assembly",
+          "channel": "SIPBSCompBiol",
+          "level": "intermediate",
+          "whyWatch": "A short worked example of building a de Bruijn graph from reads."
+        },
+        {
+          "youtubeId": "TNYZZKrjCSk",
+          "title": "ADS1: De Bruijn graphs and Eulerian walks",
+          "channel": "Ben Langmead",
+          "level": "advanced",
+          "whyWatch": "A lecturer's clear treatment of why assembly reduces to finding a walk through the graph."
+        },
+        {
+          "youtubeId": "eXrTw75fOhU",
+          "title": "Ab Initio Gene Annotation",
+          "channel": "DrLucyButler",
+          "level": "intermediate",
+          "whyWatch": "A quick introduction to how gene finders use statistical signals in raw sequence."
+        },
+        {
+          "youtubeId": "_u3UMTjkqG4",
+          "title": "Genome Annotation - Tim Hubbard / Serious Science",
+          "channel": "Serious Science",
+          "level": "intermediate",
+          "whyWatch": "A genome-annotation leader explains what annotation is and why it is never finished."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nbt.2023",
+          "title": "How to apply de Bruijn graphs to genome assembly",
+          "authors": "Compeau PEC, Pevzner PA, Tesler G",
+          "year": 2011,
+          "journal": "Nature Biotechnology",
+          "level": "intermediate",
+          "whyItMatters": "A gentle, well-illustrated primer that shows why the k-mer graph idea replaced overlap graphs for short reads.",
+          "readingQuestions": [
+            "Why does a repeat create a branching point in the graph?"
+          ]
+        },
+        {
+          "doi": "10.1186/1471-2105-7-62",
+          "title": "Gene prediction in eukaryotes with a generalized hidden Markov model that uses hints from external sources",
+          "authors": "Stanke M, Schoffmann O, Morgenstern B, Waack S",
+          "year": 2006,
+          "journal": "BMC Bioinformatics",
+          "level": "advanced",
+          "whyItMatters": "Describes AUGUSTUS and how evidence such as ESTs and proteins can be folded into an ab initio model."
+        },
+        {
+          "doi": "10.1093/nar/gkac958",
+          "title": "Ensembl 2023",
+          "authors": "Martin FJ, Amode MR, Aneja A, et al.",
+          "year": 2022,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "An update from the main genome annotation resource; useful for seeing how annotations are produced and distributed."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Bioinformatics Algorithms: an Active Learning Approach",
+          "provider": "Compeau and Pevzner",
+          "type": "course",
+          "url": "https://www.bioinformaticsalgorithms.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free, interactive explanations of assembly, graphs and motif finding with programming exercises."
+        },
+        {
+          "title": "Rosalind: Learn Bioinformatics by Problem Solving",
+          "provider": "Rosalind",
+          "type": "interactive",
+          "url": "https://rosalind.info/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Solve small assembly, k-mer and alignment problems in the language of your choice."
+        },
+        {
+          "title": "NCBI Datasets: Genome",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/",
+          "free": true,
+          "level": "beginner",
+          "note": "Download reference genomes and annotations for thousands of species."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In a de Bruijn graph assembler, the nodes and edges are built from",
+          "options": [
+            "Whole reads",
+            "k-mers",
+            "Chromosomes",
+            "Protein domains"
+          ],
+          "answer": 1,
+          "explanation": "Reads are decomposed into k-mers; a (k-1)-mer overlap defines how k-mers are connected."
+        },
+        {
+          "question": "N50 measures",
+          "options": [
+            "Contiguity of an assembly",
+            "The number of genes",
+            "Sequencing accuracy",
+            "GC content"
+          ],
+          "answer": 0,
+          "explanation": "N50 is a length statistic of contigs or scaffolds; it says nothing about correctness or completeness by itself."
+        },
+        {
+          "question": "Which evidence most improves eukaryotic gene prediction beyond ab initio models?",
+          "options": [
+            "More repeats",
+            "RNA-seq alignments and protein homology",
+            "A lower GC content",
+            "A bigger FASTQ file"
+          ],
+          "answer": 1,
+          "explanation": "Transcript and homologous protein alignments mark real exon boundaries that statistical models alone often miss."
+        }
+      ]
+    },
+    {
+      "id": "variation-and-gwas",
+      "title": "Human Genetic Variation and GWAS",
+      "hours": 5,
+      "hook": "Any two people differ at roughly one position in a thousand, and every one of those spots is a small clue about ancestry, disease risk or drug response. Genome-wide association studies turned that variation into a map of where in the genome common diseases begin.",
+      "learningObjectives": [
+        "Differentiate SNPs, indels, copy-number variants and structural variants.",
+        "Describe a variant-calling workflow from reads to a VCF file.",
+        "Explain linkage disequilibrium and why a GWAS hit is rarely the causal variant.",
+        "Interpret a Manhattan plot, a QQ plot and the genome-wide significance threshold of 5 x 10^-8.",
+        "Discuss polygenic scores and the bias that arises from ancestry-skewed cohorts.",
+        "Use population databases (1000 Genomes, gnomAD) to judge whether a variant is rare."
+      ],
+      "keyConcepts": [
+        {
+          "term": "SNP",
+          "definition": "A single-nucleotide polymorphism: a position where two or more bases are common in a population."
+        },
+        {
+          "term": "Structural variant",
+          "definition": "A rearrangement larger than about 50 bp: deletions, duplications, insertions, inversions and translocations."
+        },
+        {
+          "term": "VCF",
+          "definition": "Variant Call Format: a text file listing variant positions, alleles and genotype calls per sample."
+        },
+        {
+          "term": "Linkage disequilibrium",
+          "definition": "Non-random association between alleles at nearby loci because they are inherited together in haplotype blocks."
+        },
+        {
+          "term": "GWAS",
+          "definition": "A study testing hundreds of thousands to millions of variants across many individuals for association with a trait."
+        },
+        {
+          "term": "Genome-wide significance",
+          "definition": "A p-value threshold of 5 x 10^-8, which accounts for about a million independent tests."
+        },
+        {
+          "term": "Allele frequency",
+          "definition": "How common an allele is in a population; rare variants tend to have larger effects and common variants small ones."
+        },
+        {
+          "term": "Polygenic risk score",
+          "definition": "A weighted sum of many risk alleles used to estimate a person's genetic liability to a trait."
+        },
+        {
+          "term": "Fine mapping",
+          "definition": "Statistical and functional analysis to pick out the likely causal variant inside an associated LD block."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine comparing the spelling of one sentence across thousands of people. If people with a disease tend to spell a word one way, that word is flagged, but the flagged word may simply sit next to the real culprit because they are always copied together. A GWAS gives you a neighbourhood, not a street address.",
+        "intermediate": "Variant calling aligns reads to the reference, marks duplicates, recalibrates, then calls differences (for example GATK or DeepVariant). A GWAS then uses regression of the trait on genotype with covariates (age, sex, principal components for ancestry), tested at each SNP. The Manhattan plot shows -log10 p by position; a QQ plot checks whether inflation suggests population stratification. The 1000 Genomes Project (2,504 individuals from 26 populations) provided the LD and frequency reference used for imputation.",
+        "advanced": "Most GWAS signals are non-coding and enriched in regulatory elements, so linking them to genes needs eQTL colocalisation, chromatin conformation or CRISPR perturbation. Heritability is spread over thousands of variants of tiny effect (polygenicity), and the proportion captured by significant SNPs is only part of the total; rare variants and structural variants account for some of the rest. Polygenic scores trained mostly in European-ancestry cohorts transfer poorly to other ancestries, a scientific and an equity problem."
+      },
+      "commonMistakes": [
+        "Calling the lead GWAS SNP 'the causal variant' without fine mapping.",
+        "Interpreting an association as causation or as individual-level prediction.",
+        "Ignoring population stratification, which can create false positives."
+      ],
+      "videos": [
+        {
+          "youtubeId": "sOP8WacfBM8",
+          "title": "Genome-Wide Association Study - An Explanation for Beginners",
+          "channel": "Nuno Carvalho",
+          "level": "beginner",
+          "whyWatch": "A clear step-by-step explanation of the logic of a GWAS and how to read the result."
+        },
+        {
+          "youtubeId": "LGevar2v_3c",
+          "title": "Genome-Wide Association Studies (GWAS), Part 1",
+          "channel": "Biology For All",
+          "level": "intermediate",
+          "whyWatch": "Covers case-control design, LD and the Manhattan plot in more depth."
+        },
+        {
+          "youtubeId": "83-yKXuRDGc",
+          "title": "18. SNPs & Human genetics",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture on SNPs, haplotypes and the genetics of common disease."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature15393",
+          "title": "A global reference for human genetic variation",
+          "authors": "The 1000 Genomes Project Consortium",
+          "year": 2015,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The reference catalogue of human variation used to impute genotypes and to judge how common a variant is."
+        },
+        {
+          "doi": "10.1038/s43586-021-00056-9",
+          "title": "Genome-wide association studies",
+          "authors": "Uffelmann E, Huang QQ, Munung NS, et al.",
+          "year": 2021,
+          "journal": "Nature Reviews Methods Primers",
+          "level": "intermediate",
+          "whyItMatters": "A recent, structured primer on design, quality control, interpretation and limitations of GWAS."
+        },
+        {
+          "doi": "10.1093/nar/gky1120",
+          "title": "The NHGRI-EBI GWAS Catalog of published genome-wide association studies, targeted arrays and summary statistics 2019",
+          "authors": "Buniello A, MacArthur JAL, Cerezo M, et al.",
+          "year": 2018,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Describes the database where you can look up every published association for a trait or locus."
+        }
+      ],
+      "resources": [
+        {
+          "title": "GWAS Catalog",
+          "provider": "NHGRI-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/gwas/",
+          "free": true,
+          "level": "beginner",
+          "note": "Search a disease or gene and see the published associations and effect sizes."
+        },
+        {
+          "title": "gnomAD browser",
+          "provider": "Broad Institute",
+          "type": "database",
+          "url": "https://gnomad.broadinstitute.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Check allele frequency of any variant across more than a hundred thousand sequenced people."
+        },
+        {
+          "title": "Galaxy Training Network",
+          "provider": "Galaxy Project",
+          "type": "tutorial",
+          "url": "https://training.galaxyproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes variant calling and genetics tutorials that run entirely in the browser."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why is the standard GWAS significance threshold 5 x 10^-8?",
+          "options": [
+            "It corrects for roughly a million independent common-variant tests",
+            "It is the lowest number a computer can store",
+            "It equals 95 percent confidence",
+            "It is chosen separately for each disease"
+          ],
+          "answer": 0,
+          "explanation": "With about a million independent tests, 0.05 divided by a million is approximately 5 x 10^-8."
+        },
+        {
+          "question": "A GWAS lead SNP is usually not the causal variant because of",
+          "options": [
+            "Linkage disequilibrium",
+            "RNA splicing",
+            "DNA methylation only",
+            "PCR bias"
+          ],
+          "answer": 0,
+          "explanation": "Variants inherited together in a haplotype all show association; fine mapping is required to find the causal one."
+        },
+        {
+          "question": "Polygenic scores built from European-ancestry cohorts tend to",
+          "options": [
+            "Perform equally well in all ancestries",
+            "Perform worse in other ancestries",
+            "Predict infectious disease only",
+            "Have no environmental component"
+          ],
+          "answer": 1,
+          "explanation": "Differences in LD and allele frequencies reduce the transferability of weights across ancestries."
+        }
+      ]
+    },
+    {
+      "id": "transcriptomics",
+      "title": "Transcriptomics: Microarrays, RNA-seq and Single Cells",
+      "hours": 5,
+      "hook": "Every cell in your body has the same genome but reads it differently. A neuron and a hepatocyte differ because of which genes are being transcribed, and the transcriptome is the readout of that decision at one moment in time.",
+      "learningObjectives": [
+        "Contrast microarrays with RNA-seq in terms of dynamic range, novelty detection and cost.",
+        "Outline an RNA-seq workflow: RNA extraction, library prep (poly-A selection vs rRNA depletion), sequencing, alignment, counting.",
+        "Explain why raw counts must be normalised and name common units (CPM, TPM) and models (negative binomial).",
+        "Describe differential expression analysis, multiple-testing correction and what a volcano plot shows.",
+        "Explain how droplet single-cell RNA-seq uses cell barcodes and UMIs, and what clustering reveals.",
+        "State the main limitations of bulk and single-cell transcriptomics."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Transcriptome",
+          "definition": "The complete set of RNA transcripts present in a cell or tissue under defined conditions."
+        },
+        {
+          "term": "Microarray",
+          "definition": "A chip carrying thousands of fixed DNA probes; labelled cDNA hybridises and fluorescence intensity reports abundance of known sequences."
+        },
+        {
+          "term": "RNA-seq",
+          "definition": "Sequencing of cDNA made from RNA, giving digital counts of reads per transcript and the ability to discover novel transcripts and isoforms."
+        },
+        {
+          "term": "Poly-A selection vs rRNA depletion",
+          "definition": "Two ways of removing the 80-90 percent of RNA that is ribosomal: capturing polyadenylated mRNA or removing rRNA to keep non-polyadenylated species."
+        },
+        {
+          "term": "TPM",
+          "definition": "Transcripts per million: read counts normalised for gene length and sequencing depth so values are comparable between genes in a sample."
+        },
+        {
+          "term": "Differential expression",
+          "definition": "Statistical testing for genes whose expression differs between conditions, usually with count-based models (DESeq2, edgeR) and false discovery rate control."
+        },
+        {
+          "term": "UMI",
+          "definition": "Unique molecular identifier: a random barcode added before amplification so duplicate reads can be collapsed to one original molecule."
+        },
+        {
+          "term": "Single-cell RNA-seq",
+          "definition": "Profiling the transcriptome of thousands of individual cells, usually by isolating each cell in a droplet with a barcoded bead."
+        },
+        {
+          "term": "Batch effect",
+          "definition": "Technical variation between runs or days that can mimic or hide biological differences if not controlled in design and analysis."
+        }
+      ],
+      "deeper": {
+        "beginner": "A microarray asks, for genes you already know about, how bright is each spot. RNA-seq counts molecules directly and can discover transcripts you did not know existed. Single-cell RNA-seq goes one step further by asking what each individual cell is doing, which matters because a tissue average can hide rare cell types entirely.",
+        "intermediate": "Reads are aligned with splice-aware aligners (STAR, HISAT2) or pseudo-aligned (Salmon, kallisto) and assigned to genes. Counts depend on library size and gene length, so comparisons use normalisation (size factors in DESeq2, TMM in edgeR). Thousands of genes are tested, so p-values are adjusted (Benjamini-Hochberg FDR). In single-cell data, cell barcodes identify the droplet, UMIs correct amplification bias, and dimensionality reduction (PCA, UMAP) plus clustering reveals cell types.",
+        "advanced": "Bulk RNA-seq counts are modelled with the negative binomial because variance exceeds the mean (overdispersion). Single-cell data are sparse because of low capture efficiency, which is partly technical dropout and partly biology, so methods model zero inflation or use ambient-RNA correction. Replicates are essential: pseudo-replication across cells within a single donor inflates significance. Spatial transcriptomics and multi-ome assays are extending this to tissue location and chromatin state."
+      },
+      "commonMistakes": [
+        "Using FPKM or TPM values for statistical testing instead of raw counts with a count model.",
+        "Skipping biological replicates and treating cells as independent samples.",
+        "Reading UMAP distances literally: cluster shapes and gaps in the plot are not quantitative."
+      ],
+      "videos": [
+        {
+          "youtubeId": "tlf6wYJrwKY",
+          "title": "StatQuest: A gentle introduction to RNA-seq",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "A friendly walkthrough of the RNA-seq pipeline from RNA to a table of counts."
+        },
+        {
+          "youtubeId": "3hPyrQFTUuk",
+          "title": "Ask a Scientist: How does RNA Sequencing Work?",
+          "channel": "RocheSequencingUSA",
+          "level": "beginner",
+          "whyWatch": "A short, clear conceptual summary of the technique and what it can tell you."
+        },
+        {
+          "youtubeId": "Hv5flUOsE0s",
+          "title": "Gene Expression Analysis and DNA Microarray Assays",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Explains probes, hybridisation and how microarray intensities report expression."
+        },
+        {
+          "youtubeId": "k9VFNLLQP8c",
+          "title": "Single Cell Sequencing - Eric Chow (UCSF)",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A practitioner lectures on how droplets and barcodes capture the transcriptome of single cells."
+        },
+        {
+          "youtubeId": "6UVOdCc1Q7I",
+          "title": "Single-cell sequencing explained in 2 minutes",
+          "channel": "Sanbomics",
+          "level": "beginner",
+          "whyWatch": "A quick recap of the concept before diving into the full lecture."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nmeth.1226",
+          "title": "Mapping and quantifying mammalian transcriptomes by RNA-Seq",
+          "authors": "Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B",
+          "year": 2008,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "One of the first papers to show that RNA-seq can quantify expression and reveal new exons and isoforms in mammals."
+        },
+        {
+          "doi": "10.1038/nrg2484",
+          "title": "RNA-Seq: a revolutionary tool for transcriptomics",
+          "authors": "Wang Z, Gerstein M, Snyder M",
+          "year": 2009,
+          "journal": "Nature Reviews Genetics",
+          "level": "intermediate",
+          "whyItMatters": "A classic review of the advantages and challenges of RNA-seq compared with arrays."
+        },
+        {
+          "doi": "10.1016/j.cell.2015.05.002",
+          "title": "Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets",
+          "authors": "Macosko EZ, Basu A, Satija R, et al.",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Introduced Drop-seq, the droplet-and-barcode idea behind many modern single-cell platforms."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Expression Atlas",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/gxa/home",
+          "free": true,
+          "level": "beginner",
+          "note": "Browse where genes are expressed across tissues, cell types and conditions."
+        },
+        {
+          "title": "NCBI GEO",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Public repository of microarray and RNA-seq datasets you can reanalyse for practice."
+        },
+        {
+          "title": "EMBL-EBI: Functional genomics II",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free online course on transcriptomic technologies and analysis methods."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the main purpose of a UMI in single-cell RNA-seq?",
+          "options": [
+            "To label the cell type",
+            "To count original molecules by collapsing PCR duplicates",
+            "To enrich poly-A RNA",
+            "To remove rRNA"
+          ],
+          "answer": 1,
+          "explanation": "UMIs are added before amplification so reads sharing the same UMI and gene are counted as one molecule."
+        },
+        {
+          "question": "Why is multiple-testing correction needed in differential expression?",
+          "options": [
+            "Thousands of genes are tested at once, producing many false positives by chance",
+            "Counts are always normally distributed",
+            "Replicates are always identical",
+            "Alignment is slow"
+          ],
+          "answer": 0,
+          "explanation": "At p < 0.05 about 5 percent of non-changing genes would appear significant; FDR control limits this."
+        },
+        {
+          "question": "A key advantage of RNA-seq over microarrays is that RNA-seq",
+          "options": [
+            "Needs prior knowledge of every sequence",
+            "Can detect novel transcripts and has a wider dynamic range",
+            "Cannot measure low-abundance genes",
+            "Requires no computing"
+          ],
+          "answer": 1,
+          "explanation": "Sequencing does not depend on predefined probes and saturates less at high expression."
+        }
+      ]
+    },
+    {
+      "id": "functional-genomics-epigenomics",
+      "title": "Functional Genomics and Epigenomics",
+      "hours": 5,
+      "hook": "Knowing the sequence is like owning a dictionary without knowing which words are used where. Functional genomics asks which parts of the sequence are active, which are switched off, and what happens if you break them.",
+      "learningObjectives": [
+        "Explain what ENCODE and Roadmap Epigenomics set out to map and summarise the debate about 'percent functional'.",
+        "Describe ChIP-seq and ATAC-seq and what each tells you about regulation.",
+        "Explain how bisulfite sequencing detects DNA methylation.",
+        "Describe Hi-C and how three-dimensional genome organisation links enhancers to genes.",
+        "Explain pooled CRISPR knockout, CRISPRi and CRISPRa screens and how hits are scored.",
+        "Choose an assay to answer a given regulatory question."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Epigenome",
+          "definition": "The collection of chemical modifications and chromatin states (DNA methylation, histone marks, accessibility) that regulate gene activity without changing the DNA sequence."
+        },
+        {
+          "term": "ChIP-seq",
+          "definition": "Chromatin immunoprecipitation followed by sequencing: antibodies pull down DNA bound by a protein or histone mark, and reads map to where it sits."
+        },
+        {
+          "term": "ATAC-seq",
+          "definition": "Uses the Tn5 transposase to insert adapters preferentially into open chromatin, mapping accessible regulatory regions."
+        },
+        {
+          "term": "Bisulfite sequencing",
+          "definition": "Treating DNA with bisulfite converts unmethylated cytosine to uracil (read as T) while 5-methylcytosine is protected, revealing methylation by comparison with the reference."
+        },
+        {
+          "term": "Enhancer",
+          "definition": "A distal regulatory element that increases transcription of a target gene, often marked by H3K27ac and accessible chromatin."
+        },
+        {
+          "term": "Hi-C",
+          "definition": "A proximity-ligation method that captures which genomic regions contact each other in 3D, revealing loops and topologically associating domains."
+        },
+        {
+          "term": "CRISPR screen",
+          "definition": "A pooled library of guide RNAs perturbs thousands of genes at once; guide abundance before and after selection shows which genes affect a phenotype."
+        },
+        {
+          "term": "eQTL",
+          "definition": "A variant associated with expression level of a gene; a bridge between GWAS signals and gene regulation."
+        },
+        {
+          "term": "Peak calling",
+          "definition": "Statistical identification of regions with more mapped reads than background in ChIP-seq or ATAC-seq."
+        }
+      ],
+      "deeper": {
+        "beginner": "Each cell type switches on a different set of regulatory regions, and chemical tags on DNA and histones help decide which ones are open. Functional genomics assays photograph that state, and CRISPR screens test it by disabling genes one at a time. ENCODE's headline was that most of the genome shows some biochemical activity, but whether biochemical activity equals biological function is still argued.",
+        "intermediate": "ChIP-seq needs a good antibody and an input control; ATAC-seq needs far fewer cells and no antibody. Histone marks have rules of thumb: H3K4me3 at active promoters, H3K27ac at active enhancers and promoters, H3K27me3 for Polycomb repression, H3K9me3 for heterochromatin. Hi-C shows that enhancers often act over tens to hundreds of kb by looping. In a CRISPR knockout screen, essential genes drop out of the population over time, and tools such as MAGeCK rank genes by guide depletion.",
+        "advanced": "Bisulfite damage fragments DNA and cannot distinguish 5mC from 5hmC, whereas enzymatic (EM-seq) and nanopore methods preserve DNA or read modifications directly. ENCODE's 80 percent figure used a broad definition of 'biochemical event'; evolutionary conservation suggests that a smaller fraction, perhaps up to roughly 10 percent, is under selection, so definitions of function matter. CRISPRi/a screens (dCas9 fused to KRAB or activators) perturb regulatory elements without cutting DNA, so non-coding enhancers can be tested at scale."
+      },
+      "commonMistakes": [
+        "Equating a ChIP-seq peak with a functional regulatory element without perturbation evidence.",
+        "Forgetting that bisulfite conversion does not tell 5mC from 5hmC.",
+        "Assuming a CRISPR knockout always gives a complete loss of function (in-frame edits, copy number and gene redundancy confound results)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Y3V2thsJ1Wc",
+          "title": "ENCODE: Encyclopedia Of DNA Elements",
+          "channel": "nature video",
+          "level": "beginner",
+          "whyWatch": "A short introduction to what ENCODE mapped and why it made headlines."
+        },
+        {
+          "youtubeId": "nkWGmaYRues",
+          "title": "StatQuest: A gentle introduction to ChIP-Seq",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Explains the ChIP-seq protocol and how to read the peaks."
+        },
+        {
+          "youtubeId": "OcIazFGQv0g",
+          "title": "Bisulfite Sequencing - detect DNA Methylation",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A short animation of how bisulfite conversion reveals which cytosines were methylated."
+        },
+        {
+          "youtubeId": "PsV_sEDSE2o",
+          "title": "ENCODE: The Encyclopedia of DNA Elements",
+          "channel": "National Human Genome Research Institute",
+          "level": "intermediate",
+          "whyWatch": "The NHGRI summary of what ENCODE found and how the data is used."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature11247",
+          "title": "An integrated encyclopedia of DNA elements in the human genome",
+          "authors": "The ENCODE Project Consortium",
+          "year": 2012,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The flagship ENCODE paper; read it alongside the criticism of its 'functional' language to learn how to judge a headline claim.",
+          "readingQuestions": [
+            "What evidence was used to call a region 'functional'?",
+            "Why did critics disagree with the headline percentage?"
+          ]
+        },
+        {
+          "doi": "10.1038/nature14248",
+          "title": "Integrative analysis of 111 reference human epigenomes",
+          "authors": "Roadmap Epigenomics Consortium",
+          "year": 2015,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Shows how histone marks and DNA methylation define cell-type-specific regulatory landscapes and disease links."
+        },
+        {
+          "doi": "10.1126/science.1247005",
+          "title": "Genome-Scale CRISPR-Cas9 Knockout Screening in Human Cells",
+          "authors": "Shalem O, Sanjana NE, Hartenian E, et al.",
+          "year": 2014,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "One of the papers that launched genome-wide pooled CRISPR screens as a standard functional genomics tool."
+        }
+      ],
+      "resources": [
+        {
+          "title": "ENCODE portal",
+          "provider": "ENCODE Consortium",
+          "type": "database",
+          "url": "https://www.encodeproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search and download ChIP-seq, ATAC-seq and RNA-seq datasets for human and mouse tissues."
+        },
+        {
+          "title": "UCSC Genome Browser",
+          "provider": "UC Santa Cruz",
+          "type": "tool",
+          "url": "https://genome.ucsc.edu/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Display regulatory tracks (H3K27ac, DNase hypersensitivity, ENCODE cCREs) on any gene."
+        },
+        {
+          "title": "EMBL-EBI online courses",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free short courses on functional genomics and regulatory data resources."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In bisulfite sequencing, unmethylated cytosines are",
+          "options": [
+            "Protected and read as C",
+            "Converted to uracil and read as T after PCR",
+            "Deleted",
+            "Converted to methylcytosine"
+          ],
+          "answer": 1,
+          "explanation": "Bisulfite deaminates unmethylated C to U, which becomes T on amplification; methylated C remains C."
+        },
+        {
+          "question": "Which assay maps regions of open chromatin using a transposase?",
+          "options": [
+            "ChIP-seq",
+            "ATAC-seq",
+            "RNA-seq",
+            "Western blot"
+          ],
+          "answer": 1,
+          "explanation": "ATAC-seq uses Tn5 to insert adapters into accessible DNA."
+        },
+        {
+          "question": "In a pooled CRISPR knockout screen, an essential gene is identified by",
+          "options": [
+            "Enrichment of its guides over time",
+            "Depletion of its guides over time",
+            "Increase in methylation",
+            "Longer read length"
+          ],
+          "answer": 1,
+          "explanation": "Cells with disrupted essential genes grow poorly, so their guide RNAs decline in abundance."
+        }
+      ]
+    },
+    {
+      "id": "metagenomics-comparative-genomics",
+      "title": "Metagenomics and Comparative Genomics",
+      "hours": 5,
+      "hook": "A spoonful of soil or a drop of seawater holds thousands of microbial species, and the vast majority will never grow in a Petri dish. Metagenomics lets us sequence the community directly, and comparative genomics lets us read what evolution has kept and discarded across species.",
+      "learningObjectives": [
+        "Differentiate 16S amplicon sequencing from shotgun metagenomics and say what each can and cannot tell you.",
+        "Describe a metagenomic workflow, including assembly, binning and metagenome-assembled genomes.",
+        "Interpret alpha and beta diversity measures at an introductory level.",
+        "Define core genome, accessory genome and pangenome.",
+        "Use synteny and orthology to compare genomes and infer conserved function.",
+        "Explain how comparative genomics identifies conserved non-coding elements and lineage-specific genes."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Metagenome",
+          "definition": "The collective genomes of all organisms in an environmental sample, sequenced without culturing."
+        },
+        {
+          "term": "16S rRNA sequencing",
+          "definition": "Amplifying and sequencing hypervariable regions of the 16S ribosomal RNA gene to identify bacteria and archaea; cheap, but gives taxonomy and not function."
+        },
+        {
+          "term": "Shotgun metagenomics",
+          "definition": "Sequencing all DNA in a sample; allows species- or strain-level profiling and functional gene content."
+        },
+        {
+          "term": "MAG",
+          "definition": "A metagenome-assembled genome: a draft genome reconstructed by binning contigs from a metagenomic assembly."
+        },
+        {
+          "term": "Alpha and beta diversity",
+          "definition": "Alpha is diversity within a sample (richness, evenness); beta is how much composition differs between samples."
+        },
+        {
+          "term": "Pangenome",
+          "definition": "All genes found across a species, divided into the core genome (in every strain) and the accessory genome (in some)."
+        },
+        {
+          "term": "Synteny",
+          "definition": "Conserved order of genes along chromosomes between species."
+        },
+        {
+          "term": "Orthologs and paralogs",
+          "definition": "Orthologs arise by speciation, paralogs by duplication within a lineage."
+        },
+        {
+          "term": "Conserved non-coding element",
+          "definition": "A non-coding sequence retained across species far more than expected by chance, suggesting a regulatory role."
+        }
+      ],
+      "deeper": {
+        "beginner": "Metagenomics asks who is there and what can they do, by sequencing everything without growing it. Comparative genomics lines up genomes and asks what changed. Regions that stay the same across hundreds of millions of years of evolution are probably doing something important, even if we do not yet know what.",
+        "intermediate": "16S profiling clusters reads into ASVs or OTUs and assigns taxonomy by database matching, but resolution is typically at genus level and copy number of 16S varies. Shotgun data allow gene-level and pathway-level profiling and strain tracking. Binning uses coverage and composition (tetranucleotide frequency) to group contigs; MAGs are assessed with tools like CheckM for completeness and contamination. For comparative work, orthologs are inferred by tools such as OrthoFinder and genome alignments reveal synteny breaks from rearrangements.",
+        "advanced": "Compositional data are a trap: relative abundances sum to one, so an increase in one taxon forces apparent decreases in others, and methods that respect compositionality (CLR transforms, ANCOM) are preferred. Horizontal gene transfer shapes bacterial pangenomes, which are often open, meaning new genes keep appearing with each new strain sequenced. In vertebrates, ultraconserved elements and cross-species alignments (phastCons, phyloP) are used to prioritise non-coding variants from GWAS and clinical sequencing."
+      },
+      "commonMistakes": [
+        "Treating 16S relative abundance as absolute cell counts.",
+        "Assuming a MAG represents a single clean genome without checking contamination and completeness.",
+        "Mixing up orthologs (speciation) and paralogs (duplication) when transferring annotation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "RcYXTpNS_XU",
+          "title": "Metagenomics principles and workflow",
+          "channel": "European Molecular Biology Laboratory (EMBL)",
+          "level": "beginner",
+          "whyWatch": "A concise EMBL overview of how a metagenomic experiment is designed and analysed."
+        },
+        {
+          "youtubeId": "rl-VagT9EtI",
+          "title": "Lecture 11, concept 10: Homologs, orthologs & paralogs",
+          "channel": "Erik Lindahl",
+          "level": "intermediate",
+          "whyWatch": "A short, rigorous explanation of the three terms that underpin comparative genomics."
+        },
+        {
+          "youtubeId": "eMbKfsi_DwU",
+          "title": "2A. Intro 2: Biological Side of Computational Biology. Comparative Genomics, Models & Algorithms",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture introducing comparative genomics and the questions it answers."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature11234",
+          "title": "Structure, function and diversity of the healthy human microbiome",
+          "authors": "The Human Microbiome Project Consortium",
+          "year": 2012,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The large reference survey of microbes in healthy people, using both 16S and shotgun sequencing."
+        },
+        {
+          "doi": "10.1146/annurev.genet.38.072902.091216",
+          "title": "Metagenomics: Genomic Analysis of Microbial Communities",
+          "authors": "Handelsman J",
+          "year": 2004,
+          "journal": "Annual Review of Genetics",
+          "level": "intermediate",
+          "whyItMatters": "An early and influential statement of the aims and methods of metagenomics."
+        },
+        {
+          "doi": "10.1186/s13059-019-1832-y",
+          "title": "OrthoFinder: phylogenetic orthology inference for comparative genomics",
+          "authors": "Emms DM, Kelly S",
+          "year": 2019,
+          "journal": "Genome Biology",
+          "level": "advanced",
+          "whyItMatters": "Explains a widely used pipeline for assigning orthogroups across genomes."
+        }
+      ],
+      "resources": [
+        {
+          "title": "EMBL-EBI MGnify",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/metagenomics/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse and analyse thousands of public metagenomic and amplicon datasets."
+        },
+        {
+          "title": "Ensembl genome browser",
+          "provider": "EMBL-EBI / Wellcome Sanger",
+          "type": "database",
+          "url": "https://www.ensembl.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Use the Compara tracks to view orthologs, paralogs and synteny between species."
+        },
+        {
+          "title": "Galaxy Training Network: Metagenomics",
+          "provider": "Galaxy Project",
+          "type": "tutorial",
+          "url": "https://training.galaxyproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Step-by-step tutorials for 16S and shotgun metagenomic analysis in the browser."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A main advantage of shotgun metagenomics over 16S sequencing is that shotgun sequencing",
+          "options": [
+            "Is always cheaper",
+            "Gives information on gene content and function",
+            "Only detects archaea",
+            "Needs a reference genome for each sample"
+          ],
+          "answer": 1,
+          "explanation": "Because it sequences all DNA, shotgun data allow functional profiling and finer taxonomic resolution."
+        },
+        {
+          "question": "The accessory genome is",
+          "options": [
+            "Genes present in every strain",
+            "Genes present in only some strains of a species",
+            "Genes on mitochondria",
+            "Non-coding RNA only"
+          ],
+          "answer": 1,
+          "explanation": "The core genome is shared by all strains; the accessory genome varies between them."
+        },
+        {
+          "question": "Orthologs differ from paralogs in that orthologs",
+          "options": [
+            "Arise from gene duplication within a species",
+            "Arise from speciation",
+            "Never share function",
+            "Are always on the same chromosome"
+          ],
+          "answer": 1,
+          "explanation": "Orthologs diverged when species split; paralogs diverged after a duplication event."
+        }
+      ]
+    },
+    {
+      "id": "proteomics-mass-spectrometry",
+      "title": "Proteomics I: Separation and Mass Spectrometry",
+      "hours": 5,
+      "hook": "The genome is the script, but proteins are the actors, and one gene can yield many different proteoforms through splicing and chemical modification. Proteomics identifies and counts those actors, and mass spectrometry is the tool that made it possible.",
+      "learningObjectives": [
+        "Explain why the proteome is more complex and dynamic than the genome.",
+        "Describe protein and peptide separation by 2D gel electrophoresis and liquid chromatography.",
+        "Explain ionisation by ESI and MALDI and the principle of mass analysers (TOF, Orbitrap, quadrupole).",
+        "Outline a bottom-up proteomics workflow from sample to peptide-spectrum matches.",
+        "Contrast data-dependent (DDA) and data-independent (DIA) acquisition.",
+        "Explain how false discovery rate is controlled with a target-decoy database."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Proteome",
+          "definition": "All proteins expressed by a cell, tissue or organism at a given time, including isoforms and modifications."
+        },
+        {
+          "term": "Proteoform",
+          "definition": "A specific molecular form of a protein, defined by its sequence variant, splice isoform and post-translational modifications."
+        },
+        {
+          "term": "Bottom-up proteomics",
+          "definition": "Proteins are digested (usually with trypsin) into peptides that are analysed by LC-MS/MS and used to infer the proteins."
+        },
+        {
+          "term": "Trypsin",
+          "definition": "A protease that cleaves after lysine and arginine (except when followed by proline), giving peptides of a convenient size and charge for MS."
+        },
+        {
+          "term": "ESI and MALDI",
+          "definition": "Soft ionisation methods that turn peptides or proteins into gas-phase ions without breaking them; electrospray (ESI) is coupled to liquid chromatography, MALDI uses a laser on a matrix."
+        },
+        {
+          "term": "MS/MS",
+          "definition": "A selected peptide ion is fragmented and the fragment masses form a pattern that reveals its amino acid sequence."
+        },
+        {
+          "term": "Peptide-spectrum match",
+          "definition": "A scored assignment of an observed MS/MS spectrum to a peptide sequence in a database."
+        },
+        {
+          "term": "Target-decoy FDR",
+          "definition": "Searching spectra against real (target) and reversed or shuffled (decoy) sequences to estimate how many matches are false."
+        },
+        {
+          "term": "DIA",
+          "definition": "Data-independent acquisition: all precursors in broad m/z windows are fragmented, giving more complete and reproducible data at the cost of complex spectra."
+        }
+      ],
+      "deeper": {
+        "beginner": "A mass spectrometer is a very precise scale for molecules. You chop proteins into peptides, weigh them, break them in a controlled way and weigh the pieces; the pattern of piece masses spells the sequence. Software then matches those patterns to a database to say which protein each peptide came from.",
+        "intermediate": "2D gel electrophoresis separates proteins by isoelectric point and then size, and was the early workhorse, but modern proteomics usually digests the whole mixture and separates peptides by reverse-phase LC before ESI. High-resolution instruments such as the Orbitrap or time-of-flight analysers measure m/z with parts-per-million accuracy. Search engines (Mascot, MaxQuant, MSFragger) match spectra to predicted fragment ions; a 1 percent FDR at peptide and protein level is conventional.",
+        "advanced": "The proteome has a huge dynamic range (in plasma about ten orders of magnitude between the most and least abundant proteins), so depletion, fractionation or faster instruments are needed to see low-abundance proteins. In bottom-up work the protein inference problem arises because shared peptides may map to multiple proteins. Top-down proteomics analyses intact proteins to preserve proteoform information but is harder for large proteins. Machine-learned predictors of retention time and fragment intensity now improve identification, particularly in DIA."
+      },
+      "commonMistakes": [
+        "Assuming one gene equals one protein; splicing and modification create many proteoforms.",
+        "Believing that no peptide detected means the protein is absent: it may be below the detection limit.",
+        "Ignoring false discovery control: unfiltered search results contain many wrong matches."
+      ],
+      "videos": [
+        {
+          "youtubeId": "wx4F6kGy1Fs",
+          "title": "MS-based proteomics: A short introduction to the core concepts of proteomics and mass spectrometry",
+          "channel": "Lars Juhl Jensen",
+          "level": "beginner",
+          "whyWatch": "A clear tour of the bottom-up workflow by a computational biologist."
+        },
+        {
+          "youtubeId": "6O_85tKfZHc",
+          "title": "Mass Spectrometry explained - how it works",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "An animation of ionisation, separation by m/z and detection."
+        },
+        {
+          "youtubeId": "MXNwBqK5AzA",
+          "title": "Isoelectric Focusing and 2D gel electrophoresis",
+          "channel": "Quick Biochemistry Basics",
+          "level": "beginner",
+          "whyWatch": "Shows how two properties (pI and mass) separate complex protein mixtures."
+        },
+        {
+          "youtubeId": "OyJYsRL2Hwc",
+          "title": "MALDI-TOF Mass Spectrometry Explained",
+          "channel": "Lucas Learns",
+          "level": "beginner",
+          "whyWatch": "Explains how a laser, matrix and flight tube combine to give a mass spectrum."
+        },
+        {
+          "youtubeId": "gvFRzkAU9u4",
+          "title": "Unlocking the Proteome: a glimpse into Mass Spectrometry-Based Proteomics",
+          "channel": "EPFL School of Life Sciences",
+          "level": "beginner",
+          "whyWatch": "A short overview of what proteomics measures and why it matters."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature01511",
+          "title": "Mass spectrometry-based proteomics",
+          "authors": "Aebersold R, Mann M",
+          "year": 2003,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The classic review that laid out the concepts and the potential of MS-based proteomics."
+        },
+        {
+          "doi": "10.1038/nature19949",
+          "title": "Mass-spectrometric exploration of proteome structure and function",
+          "authors": "Aebersold R, Mann M",
+          "year": 2016,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "An updated review that shows how the field moved from lists of proteins towards structure, interactions and dynamics."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PRIDE Archive",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/pride/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Public repository of raw mass spectrometry proteomics data you can download and reanalyse."
+        },
+        {
+          "title": "EMBL-EBI: Proteomics, an introduction",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/proteomics-an-introduction/",
+          "free": true,
+          "level": "beginner",
+          "note": "A free self-paced online introduction to MS proteomics and its data."
+        },
+        {
+          "title": "Human Protein Atlas",
+          "provider": "Human Protein Atlas",
+          "type": "database",
+          "url": "https://www.proteinatlas.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "See which proteins have been detected in which tissues, a good sanity check on MS results."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Trypsin cleaves proteins C-terminal to",
+          "options": [
+            "Aspartate and glutamate",
+            "Lysine and arginine",
+            "Phenylalanine only",
+            "Cysteine only"
+          ],
+          "answer": 1,
+          "explanation": "Trypsin cuts after K or R (not before proline), giving peptides suited to positive-mode MS."
+        },
+        {
+          "question": "A decoy database is used in proteomics to",
+          "options": [
+            "Increase sensitivity",
+            "Estimate the false discovery rate",
+            "Digest proteins",
+            "Calibrate the laser"
+          ],
+          "answer": 1,
+          "explanation": "Matches to reversed or shuffled sequences are false by construction and allow FDR estimation."
+        },
+        {
+          "question": "The main practical difference between ESI and MALDI is that",
+          "options": [
+            "ESI generates ions from solution and couples to LC; MALDI uses a laser on a solid matrix",
+            "ESI uses a laser; MALDI uses a liquid",
+            "Only MALDI is soft",
+            "Only ESI detects peptides"
+          ],
+          "answer": 0,
+          "explanation": "Both are soft ionisation techniques; ESI is easily coupled to liquid chromatography."
+        }
+      ]
+    },
+    {
+      "id": "quantitative-proteomics-ptm-interactions",
+      "title": "Proteomics II: Quantitation, Modifications and Interactions",
+      "hours": 5,
+      "hook": "Knowing which proteins are present is only half the story. A cell responds to a signal in minutes by adding phosphate groups to existing proteins, and proteins rarely work alone. Quantitative proteomics, PTM mapping and interactomics put numbers and wiring diagrams on the proteome, and multi-omics ties it all to the genome.",
+      "learningObjectives": [
+        "Compare label-free, SILAC, TMT/iTRAQ and targeted (SRM/PRM) quantitation.",
+        "Explain how phosphopeptides are enriched and localised to specific residues.",
+        "Describe yeast two-hybrid, affinity purification MS, proximity labelling and cross-linking MS for protein interactions.",
+        "Explain how protein and mRNA levels can disagree and why.",
+        "Describe the Human Protein Atlas and Human Proteome Project as community resources.",
+        "Outline how genomic, transcriptomic and proteomic data can be integrated, with an example."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Label-free quantitation",
+          "definition": "Comparing peptide signal intensity or spectral counts between separate runs; flexible but sensitive to run-to-run variation."
+        },
+        {
+          "term": "SILAC",
+          "definition": "Cells grown in media containing heavy isotope-labelled lysine and arginine are mixed with light controls before processing, giving accurate relative quantitation."
+        },
+        {
+          "term": "TMT / iTRAQ",
+          "definition": "Isobaric chemical tags label peptides from several samples, which are pooled; reporter ions released in MS/MS give relative abundance (affected by ratio compression)."
+        },
+        {
+          "term": "Targeted proteomics",
+          "definition": "SRM/MRM or PRM monitors predefined peptides with high sensitivity and reproducibility for validation."
+        },
+        {
+          "term": "PTM",
+          "definition": "Post-translational modification such as phosphorylation, ubiquitination, acetylation or glycosylation that changes protein activity, location or stability."
+        },
+        {
+          "term": "Phosphopeptide enrichment",
+          "definition": "Using TiO2 or immobilised metal affinity chromatography to capture low-abundance phosphopeptides before MS."
+        },
+        {
+          "term": "AP-MS",
+          "definition": "Affinity purification of a bait protein with its interaction partners followed by MS identification."
+        },
+        {
+          "term": "Yeast two-hybrid",
+          "definition": "A genetic assay in which bait-prey interaction reconstitutes a transcription factor and activates a reporter gene."
+        },
+        {
+          "term": "Proximity labelling",
+          "definition": "Fusing an enzyme (BioID, APEX) to a bait so nearby proteins are biotinylated and later purified and identified."
+        }
+      ],
+      "deeper": {
+        "beginner": "Quantitative proteomics is a before-and-after photograph of the proteome: which proteins rise when a cell is stressed, treated or infected. PTM proteomics focuses on the switches. Interactomics maps who touches whom. Then integration asks whether the changes in RNA and protein agree, and where they do not, that is often where post-transcriptional regulation lives.",
+        "intermediate": "SILAC gives the most accurate relative quantitation in cultured cells because samples are combined early, minimising handling variation. TMT multiplexes up to 18 samples in one run but suffers from ratio compression due to co-isolated peptides, which MS3 or ion-mobility methods reduce. Phosphoproteomics typically identifies tens of thousands of sites and uses localisation scores (for example Ascore, PTMProphet) to assign the modified residue. Y2H detects binary interactions but with many false positives and negatives; AP-MS detects complexes in near-native conditions but cannot tell direct from indirect contacts.",
+        "advanced": "mRNA and protein levels correlate only moderately, with the discrepancies attributed to translation rate, protein half-life and technical noise, so protein-level evidence is needed for functional claims. Cross-linking MS gives distance restraints between residues and complements cryo-EM and AlphaFold structural models. Multi-omics integration (for example proteogenomics, which searches MS data against a sample-specific genomic database) can find variant peptides and novel coding regions. The Human Protein Atlas combines antibody-based imaging with MS and RNA data to map where each protein is expressed in tissues and cells."
+      },
+      "commonMistakes": [
+        "Assuming mRNA level predicts protein level or activity.",
+        "Treating a Y2H positive as proof of interaction in vivo without orthogonal validation.",
+        "Forgetting that phosphoproteomic changes may reflect changes in protein abundance rather than increased phosphorylation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "FqBYBy_PDyY",
+          "title": "B4B: Module 10 - Intro Quantitative Proteomics",
+          "channel": "IUSM-CCBB",
+          "level": "intermediate",
+          "whyWatch": "A bioinformatics-core lecture comparing quantitation strategies."
+        },
+        {
+          "youtubeId": "c4mGpWNR3-0",
+          "title": "SILAC | Stable isotope labeling by amino acids in cell culture | applications of SILAC | Limitations",
+          "channel": "Animated biology With arpan",
+          "level": "beginner",
+          "whyWatch": "An animated step-by-step of the SILAC labelling and mixing logic."
+        },
+        {
+          "youtubeId": "w5Pvri4-cUA",
+          "title": "Yeast-two-hybrid screen (Y2H)",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Shows how bait, prey and a reporter gene reveal a protein-protein interaction."
+        },
+        {
+          "youtubeId": "g4Ype5QTf4s",
+          "title": "8A. Protein 2: Mass Spectrometry, Post-synthetic Modifications, Quantitation of Proteins",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture on PTMs and quantitative MS with integration into computational biology."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1260419",
+          "title": "Tissue-based map of the human proteome",
+          "authors": "Uhlen M, Fagerberg L, Hallstrom BM, et al.",
+          "year": 2015,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The Human Protein Atlas paper; shows how tissue expression maps help interpret which proteins are tissue-specific."
+        },
+        {
+          "doi": "10.1038/nature13302",
+          "title": "A draft map of the human proteome",
+          "authors": "Kim MS, Pinto SM, Getnet D, et al.",
+          "year": 2014,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "One of the first MS-based draft maps of the human proteome, with evidence for proteins from many tissues and cell types."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Human Protein Atlas",
+          "provider": "Human Protein Atlas",
+          "type": "database",
+          "url": "https://www.proteinatlas.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "See where a protein is expressed in tissues and subcellular compartments."
+        },
+        {
+          "title": "STRING protein interaction database",
+          "provider": "STRING Consortium",
+          "type": "database",
+          "url": "https://string-db.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Build interaction networks and test whether a gene list is enriched for pathways."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "The reference resource for protein sequences, domains, modifications and function."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A well-known limitation of TMT/iTRAQ quantitation is",
+          "options": [
+            "Ratio compression from co-isolated peptides",
+            "Inability to multiplex",
+            "No need for MS/MS",
+            "Requires metabolic labelling in cells"
+          ],
+          "answer": 0,
+          "explanation": "Co-eluting peptides contribute reporter ions, compressing measured ratios towards 1."
+        },
+        {
+          "question": "In SILAC, samples are mixed",
+          "options": [
+            "After digestion",
+            "Early, before processing",
+            "Only at the detector",
+            "Never"
+          ],
+          "answer": 1,
+          "explanation": "Mixing light and heavy cells early means both undergo the same handling, giving more accurate ratios."
+        },
+        {
+          "question": "Why can mRNA abundance be a poor predictor of protein abundance?",
+          "options": [
+            "mRNA is always degraded instantly",
+            "Translation rate and protein stability also control protein levels",
+            "Proteins are not made from mRNA",
+            "MS cannot measure proteins"
+          ],
+          "answer": 1,
+          "explanation": "Post-transcriptional regulation, translation efficiency and protein turnover decouple RNA and protein levels."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "X_6i7j_TDVU",
+      "title": "Lecture 1: Genomic Introduction",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A full lecture introducing genome organisation and the questions genomics asks."
+    },
+    {
+      "youtubeId": "g4Ype5QTf4s",
+      "title": "8A. Protein 2: Mass Spectrometry, Post-synthetic Modifications, Quantitation of Proteins",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A full lecture covering proteomics from MS basics to quantitation."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Bioinformatics Algorithms: an Active Learning Approach",
+      "provider": "Compeau and Pevzner",
+      "type": "textbook",
+      "url": "https://www.bioinformaticsalgorithms.org/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free interactive text that builds the algorithms behind sequencing and assembly."
+    },
+    {
+      "title": "Molecular Biology of the Cell (4th ed.)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free standard reference for chapters on genome structure, DNA technology and gene expression."
+    },
+    {
+      "title": "UniProt",
+      "provider": "UniProt Consortium",
+      "type": "database",
+      "url": "https://www.uniprot.org/",
+      "free": true,
+      "level": "beginner",
+      "note": "The central protein knowledgebase to keep open while studying proteomics."
+    }
+  ]
+}

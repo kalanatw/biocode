@@ -1,0 +1,1779 @@
+{
+  "code": "BC 4001",
+  "title": "Research Project",
+  "level": 4,
+  "semester": 1,
+  "credits": 8,
+  "hours": "240P",
+  "kind": "project",
+  "provenance": "official",
+  "tagline": "A year with one question: how to ask it well, test it fairly, and tell the truth about what you found.",
+  "overview": "BC 4001 is the final-year research project, carried out under the supervision of a staff member and normally written up as a thesis and defended orally. The specific topic differs for every student, so this page does not teach project content; it walks you through the skills that every project needs, in the order you will meet them: forming a question, searching the literature, designing experiments with proper controls, using statistics honestly, keeping reproducible records, reading papers critically, writing, making figures, working ethically and presenting. The units reflect standard good practice for an undergraduate honours research project.",
+  "whyItMatters": "The project is where you stop learning what is known and start finding out what is not. The habits you build here, such as precise questions, honest controls and clear writing, are the same ones used in graduate research, industry labs, diagnostics, teaching and policy, and they are the skills employers and examiners notice first.",
+  "prerequisites": [],
+  "careerLinks": [
+    "Postgraduate research (MPhil/PhD)",
+    "Research assistant / laboratory scientist",
+    "Quality control and R&D in biotech and pharma",
+    "Medical and clinical laboratory science",
+    "Science communication and teaching"
+  ],
+  "studyTips": [
+    "Meet your supervisor early, agree expectations in writing and bring a short agenda to each meeting.",
+    "Write a bit every week: methods and background notes made now become thesis chapters later.",
+    "Back up your data and notebook on a fixed day each week, in more than one place.",
+    "Plan backwards from the submission and viva dates, and leave a buffer of at least two weeks for failed experiments.",
+    "Ask for feedback on drafts early; the second draft is when most clarity appears."
+  ],
+  "units": [
+    {
+      "id": "research-question",
+      "title": "Forming a Research Question and Hypothesis",
+      "hours": 4,
+      "hook": "Every thesis that ends well began as a question someone could actually answer in one year with the equipment down the corridor. Most stalled projects began as a topic ('something about oxidative stress') that never became a question. This unit is about the narrowing that turns curiosity into a plan.",
+      "learningObjectives": [
+        "Distinguish a topic, a research question, a hypothesis and an aim",
+        "Turn a broad interest into a focused, answerable question using prior literature",
+        "Write a falsifiable hypothesis with a clear prediction and null hypothesis",
+        "Judge whether a question is feasible given time, budget, equipment and ethics",
+        "Define primary outcome measures before collecting data"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Research question",
+          "definition": "A specific, answerable question that your project can address, usually naming a system, a variable you change and an outcome you measure."
+        },
+        {
+          "term": "Hypothesis",
+          "definition": "A proposed explanation or prediction that can be tested and could turn out to be wrong."
+        },
+        {
+          "term": "Null hypothesis",
+          "definition": "The default statement of no effect or no difference that your statistical test tries to reject."
+        },
+        {
+          "term": "Falsifiability",
+          "definition": "A claim is useful in science only if some possible result would count against it."
+        },
+        {
+          "term": "Aims and objectives",
+          "definition": "Aims state the overall purpose; objectives are the concrete, checkable steps that deliver it."
+        },
+        {
+          "term": "Feasibility",
+          "definition": "Whether the question can be answered with the time, skills, reagents, ethics approvals and sample access you actually have."
+        },
+        {
+          "term": "Primary outcome",
+          "definition": "The single measurement you decide in advance will answer the main question; fixing it early limits after-the-fact selection of results."
+        }
+      ],
+      "deeper": {
+        "beginner": "Begin with something you can name: an enzyme, a pathway, a pathogen, a plant extract. Ask what is not known about it, then rewrite that gap as a question starting with 'does', 'how' or 'what'. Then write what you would expect to see if your idea were right and what you would see if it were wrong. If you cannot picture a result that would change your mind, the question needs sharpening.",
+        "intermediate": "Move from the general to the specific using the literature: read two or three recent reviews to find open problems, then primary papers to see what has been tried. Convert the gap into a hypothesis with a measurable prediction (for example, 'knocking down gene X lowers glucose uptake by at least 20% in cell line Y'). Check feasibility by listing every reagent, instrument, sample number and week required, and discuss it with your supervisor before committing.",
+        "advanced": "Platt's idea of strong inference suggests framing the project as a contest between alternative hypotheses, designing experiments whose outcomes exclude at least one. Distinguish exploratory work (generating hypotheses, flexible analysis) from confirmatory work (pre-specified prediction and analysis), and label each honestly in the thesis. Where possible, record the primary outcome and analysis plan in a dated document or registry before data collection."
+      },
+      "commonMistakes": [
+        "Stating a topic ('the role of curcumin') and calling it a question",
+        "Writing a hypothesis that no result could contradict",
+        "Choosing a project that needs three months of reagent delivery you do not have",
+        "Changing the main outcome after seeing which comparison looks significant"
+      ],
+      "videos": [
+        {
+          "youtubeId": "N6IAzlugWw0",
+          "title": "The scientific method",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Clarifies how observations, hypotheses and predictions fit together before you attempt your own."
+        },
+        {
+          "youtubeId": "71-GucBaM8U",
+          "title": "How to Develop a STRONG Research Question",
+          "channel": "Scribbr",
+          "level": "beginner",
+          "whyWatch": "A four-minute walkthrough of narrowing a topic into a focused, researchable question."
+        },
+        {
+          "youtubeId": "mYlSzNyrVO8",
+          "title": "How To Write A Research Question/Hypothesis & Template",
+          "channel": "Dr Amina Yonis",
+          "level": "beginner",
+          "whyWatch": "A researcher shows the difference between questions and hypotheses with a fill-in template."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.146.3642.347",
+          "title": "Strong Inference",
+          "authors": "Platt JR",
+          "year": 1964,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A short, famous argument that science moves fastest when you design experiments that can rule out competing hypotheses, not just pile up support for a favourite one. Reading it changes how you plan the next experiment.",
+          "readingQuestions": [
+            "What does Platt mean by an experiment that gives a 'clean' answer?",
+            "Think of a project in your own field: what are two rival hypotheses you could separate with one experiment?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Seeing Theory",
+          "provider": "Brown University",
+          "type": "interactive",
+          "url": "https://seeing-theory.brown.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive visualisations of probability, sampling and inference that build intuition for p-values and confidence intervals."
+        },
+        {
+          "title": "Open Science Framework",
+          "provider": "Center for Open Science",
+          "type": "tool",
+          "url": "https://osf.io/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free place to keep project files, protocols and preregistrations under version history, and to share them when you are ready."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which of these is a hypothesis rather than a topic?",
+          "options": [
+            "Heat stress in rice",
+            "Oxidative stress and ageing",
+            "Pre-treating rice seedlings at 40 C for 2 h raises catalase activity during later heat stress",
+            "The biochemistry of stress"
+          ],
+          "answer": 2,
+          "explanation": "Only the third option states a manipulation, an outcome and a prediction that data could contradict. The others are broad subject areas."
+        },
+        {
+          "question": "What is the main purpose of a null hypothesis?",
+          "options": [
+            "To state what you hope to prove",
+            "To provide a default 'no effect' claim that a statistical test can try to reject",
+            "To make the project easier to publish",
+            "To describe the methods"
+          ],
+          "answer": 1,
+          "explanation": "The null is the claim the data are tested against. Rejecting it provides evidence for an effect; it is not itself what you hope to find."
+        },
+        {
+          "question": "A supervisor asks you to name your primary outcome before starting. Why?",
+          "options": [
+            "Because it determines the font in your thesis",
+            "To reduce the temptation to pick the most favourable result after the experiments are done",
+            "Because only one measurement is allowed",
+            "To avoid needing statistics"
+          ],
+          "answer": 1,
+          "explanation": "Specifying the main outcome in advance limits flexible analysis and makes the final p-value easier to interpret honestly."
+        }
+      ]
+    },
+    {
+      "id": "literature-search",
+      "title": "Searching the Literature: PubMed and Europe PMC",
+      "hours": 4,
+      "hook": "A project that rediscovers a published result is not a failure of effort but of searching. Ten disciplined minutes with the right keywords and controlled vocabulary can tell you whether your idea is new, which methods work and who to cite.",
+      "learningObjectives": [
+        "Break a question into concepts and generate synonyms for each",
+        "Combine terms with Boolean operators, phrase searching and truncation",
+        "Use MeSH terms, field tags and filters in PubMed",
+        "Use Europe PMC to find open-access full texts and preprints",
+        "Use citation chaining (references and cited-by) to expand a search",
+        "Record your search strategy so it can be repeated"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Boolean operators",
+          "definition": "AND narrows a search, OR widens it by allowing synonyms, NOT excludes terms (use carefully)."
+        },
+        {
+          "term": "MeSH",
+          "definition": "Medical Subject Headings, the controlled vocabulary used to index PubMed records so that different wording maps to one concept."
+        },
+        {
+          "term": "Field tags",
+          "definition": "Codes such as [tiab] (title/abstract) or [au] (author) that restrict where a term must appear."
+        },
+        {
+          "term": "Truncation and phrases",
+          "definition": "An asterisk finds word endings (inhibit*), and quotation marks search an exact phrase."
+        },
+        {
+          "term": "Primary vs review article",
+          "definition": "Primary papers report original experiments; reviews summarise and interpret many of them and are the best entry point."
+        },
+        {
+          "term": "Citation chaining",
+          "definition": "Following a good paper's reference list backwards and its citing papers forwards."
+        },
+        {
+          "term": "Preprint",
+          "definition": "A manuscript posted before peer review; it can be very recent but its claims need extra caution."
+        }
+      ],
+      "deeper": {
+        "beginner": "Write your question, circle the two or three key ideas, and list synonyms for each (for example, 'glucose uptake', 'glucose transport', 'GLUT4'). Join synonyms with OR inside brackets, and join the different ideas with AND. Start with a review article, then use its references to find the primary papers. Always save the papers you read in a reference manager as you go.",
+        "intermediate": "In PubMed, combine MeSH terms with free-text words in title/abstract so that you capture both well-indexed and very recent papers (which may not be indexed yet). Use filters for date, article type and species. In Europe PMC, search full text where the method or reagent name may not appear in the abstract, and use the open-access filter. Keep a log of query, database, date and number of hits so your search can be described in the thesis.",
+        "advanced": "Understand why different databases give different answers: indexing delays, coverage, and how automatic term mapping expands a query. For a systematic approach, state inclusion and exclusion criteria, search at least two databases and add citation chaining and preprint servers, noting search dates. Beware survivorship and publication bias: negative results are under-represented, so absence from the literature is not proof of absence."
+      },
+      "commonMistakes": [
+        "Searching a single phrase and giving up when there are too few results",
+        "Using only abstract searches and missing papers where the method is in the full text",
+        "Citing a review for a primary finding without reading the original paper",
+        "Not recording the search, so it cannot be repeated or updated"
+      ],
+      "videos": [
+        {
+          "youtubeId": "qBV9HsPKXi0",
+          "title": "PubMed: Basics of Searching",
+          "channel": "Welch Medical Library",
+          "level": "beginner",
+          "whyWatch": "A librarian walks through a real PubMed search, including filters and saving results."
+        },
+        {
+          "youtubeId": "SmberGmF2Tw",
+          "title": "PubMed: Using MeSH Terminology (part 1 of 2)",
+          "channel": "University of Alabama Libraries",
+          "level": "intermediate",
+          "whyWatch": "Shows how MeSH headings find papers that use different words for the same concept."
+        },
+        {
+          "youtubeId": "NZIYeEpbRLg",
+          "title": "Searching and browsing scientific publications with the new Europe PMC",
+          "channel": "EMBL-EBI",
+          "level": "beginner",
+          "whyWatch": "EMBL-EBI trainers demonstrate Europe PMC search, filtering and full-text features."
+        },
+        {
+          "youtubeId": "u0KVJ0lj8rw",
+          "title": "How to Search for Relevant Literature FAST Using Boolean Operators",
+          "channel": "Scribbr",
+          "level": "beginner",
+          "whyWatch": "A three-minute refresher on AND, OR, NOT and phrase searching."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "PubMed User Guide",
+          "provider": "NCBI / NLM",
+          "type": "reference",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/help/",
+          "free": true,
+          "level": "beginner",
+          "note": "The official guide to field tags, filters, MeSH and the search builder; the quickest way to understand why a search returned what it did."
+        },
+        {
+          "title": "MeSH Browser",
+          "provider": "NLM",
+          "type": "database",
+          "url": "https://meshb.nlm.nih.gov/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up controlled vocabulary terms and their synonyms so that your search captures papers that use different words for the same idea."
+        },
+        {
+          "title": "Europe PMC",
+          "provider": "EMBL-EBI / Europe PMC",
+          "type": "database",
+          "url": "https://europepmc.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free search of abstracts and full texts, including preprints and text-mined links to data, with a convenient open-access filter."
+        },
+        {
+          "title": "bioRxiv",
+          "provider": "Cold Spring Harbor Laboratory",
+          "type": "database",
+          "url": "https://www.biorxiv.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The main preprint server for biology; useful for the newest work, but remember preprints are not yet peer reviewed."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "You are searching for papers on 'glucose uptake' and want to include 'glucose transport'. Which Boolean operator joins them?",
+          "options": [
+            "AND",
+            "OR",
+            "NOT",
+            "NEAR"
+          ],
+          "answer": 1,
+          "explanation": "OR widens the search by allowing either synonym, and AND would require both phrases to appear."
+        },
+        {
+          "question": "Why combine MeSH terms with free-text title/abstract words in PubMed?",
+          "options": [
+            "MeSH terms are always wrong",
+            "New papers may not be indexed with MeSH yet and authors may use different wording",
+            "Free text is not allowed in PubMed",
+            "It reduces the number of results to zero"
+          ],
+          "answer": 1,
+          "explanation": "MeSH catches indexed papers with varying wording, while free text catches recent or unindexed records. Together they improve recall."
+        },
+        {
+          "question": "What is a sensible first step into an unfamiliar topic?",
+          "options": [
+            "Read only the newest preprint",
+            "Find a recent review and follow its references",
+            "Search one keyword and read the first result",
+            "Ask an AI to list citations and trust them"
+          ],
+          "answer": 1,
+          "explanation": "A recent review gives structure and a reference list to the primary papers. Citations must always be checked in the real database."
+        }
+      ]
+    },
+    {
+      "id": "experimental-design",
+      "title": "Experimental Design and Controls",
+      "hours": 5,
+      "hook": "A band appears on the gel and everyone is delighted until someone asks what the same lane looks like without the drug. Controls are the questions you ask your own result before a reviewer does, and good design decides whether an experiment can ever be believed.",
+      "learningObjectives": [
+        "Identify independent, dependent and confounding variables in an experiment",
+        "Choose appropriate negative, positive, vehicle and loading controls",
+        "Explain randomisation, blinding and replication and when each is needed",
+        "Decide what counts as a biological versus a technical replicate",
+        "Plan a pilot experiment and a simple sample-size justification",
+        "Write a protocol that another student could follow"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Independent and dependent variables",
+          "definition": "The independent variable is what you deliberately change; the dependent variable is what you measure in response."
+        },
+        {
+          "term": "Negative control",
+          "definition": "A sample where no effect is expected, showing that the assay does not give a signal on its own."
+        },
+        {
+          "term": "Positive control",
+          "definition": "A sample where an effect is known to occur, showing the assay is able to detect it."
+        },
+        {
+          "term": "Vehicle control",
+          "definition": "Treatment with the solvent alone (for example DMSO) so the effect of the compound can be separated from the effect of its carrier."
+        },
+        {
+          "term": "Confounder",
+          "definition": "A hidden variable (batch, plate position, operator, day) that changes both treatment and outcome and can mimic an effect."
+        },
+        {
+          "term": "Randomisation and blinding",
+          "definition": "Random allocation spreads unknown confounders evenly; blinding stops expectations from shaping measurements."
+        },
+        {
+          "term": "Biological vs technical replicate",
+          "definition": "A biological replicate is an independent sample of the system (different animals, cultures, preparations); a technical replicate repeats a measurement on the same sample."
+        },
+        {
+          "term": "Pilot experiment",
+          "definition": "A small trial run to find problems and estimate variability before the main study."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine you want to test whether a plant extract lowers enzyme activity. You need a sample without extract (negative control), a known inhibitor (positive control), the extract's solvent alone (vehicle control), and repeats on different days. Write down what each control would tell you if it went wrong. If the answer is 'nothing', the control is not useful.",
+        "intermediate": "Plan the layout before you pipette: randomise sample positions across plates or gels and include controls on every plate or blot so that batch effects can be seen. Define the unit of replication: three wells from one culture are technical repeats, whereas three independent cultures prepared on different days are biological replicates. Use a pilot to estimate variance and to check that the positive control gives the expected signal.",
+        "advanced": "Link design to inference: pseudoreplication inflates sample size and makes p-values misleading, so analysis must match the way samples were drawn (blocked, paired or nested designs call for different tests). Use power analysis with a realistic effect size from pilot data or literature to justify n, and consider blocking or factorial designs to learn more from fewer samples. Documenting exclusion criteria, randomisation method and blinding in advance follows reporting standards such as ARRIVE."
+      },
+      "commonMistakes": [
+        "Testing a drug dissolved in DMSO without a DMSO-only control",
+        "Running the controls on a different day from the treated samples",
+        "Treating three wells from one flask as n = 3",
+        "Using a positive control that does not work and carrying on regardless"
+      ],
+      "videos": [
+        {
+          "youtubeId": "lgcFk9xjg4o",
+          "title": "Experimental Design",
+          "channel": "Bozeman Science",
+          "level": "beginner",
+          "whyWatch": "A clear 18-minute review of variables, controls and replication with worked examples."
+        },
+        {
+          "youtubeId": "KXOvPVc6zeE",
+          "title": "Experimental Design Negative Controls",
+          "channel": "Experimental Design for Biologists",
+          "level": "beginner",
+          "whyWatch": "A short lesson on what a negative control can and cannot tell you in a biology experiment."
+        },
+        {
+          "youtubeId": "ZHTqxczEY6Y",
+          "title": "Experimental Design Positive Controls",
+          "channel": "Experimental Design for Biologists",
+          "level": "beginner",
+          "whyWatch": "A companion lesson showing why a positive control proves your assay can work at all."
+        },
+        {
+          "youtubeId": "lyfwKSriYW4",
+          "title": "Positive and Negative Controls and Why They Are Important",
+          "channel": "Science Ready",
+          "level": "beginner",
+          "whyWatch": "Uses plain examples to separate the two kinds of control and why each matters."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1136/bmjos-2020-100115",
+          "title": "The ARRIVE guidelines 2.0: updated guidelines for reporting animal research",
+          "authors": "Percie du Sert N, Hurst V, Ahluwalia A et al",
+          "year": 2020,
+          "journal": "BMJ Open Science",
+          "level": "intermediate",
+          "whyItMatters": "A checklist of what a good experimental report must state: sample size, randomisation, blinding, exclusions and so on. Even if you never use animals, the 'Essential 10' items are a handy audit of any experiment you design.",
+          "openAccessUrl": "https://doi.org/10.1136/bmjos-2020-100115"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Experimental Design Assistant",
+          "provider": "NC3Rs",
+          "type": "tool",
+          "url": "https://eda.nc3rs.org.uk/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free web tool that helps you draw your experimental plan and checks it for problems such as pseudoreplication and missing controls."
+        },
+        {
+          "title": "ARRIVE Guidelines",
+          "provider": "NC3Rs",
+          "type": "reference",
+          "url": "https://arriveguidelines.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The Essential 10 checklist and explanations; use it as a design audit for any experiment."
+        },
+        {
+          "title": "protocols.io",
+          "provider": "protocols.io",
+          "type": "tool",
+          "url": "https://www.protocols.io/",
+          "free": true,
+          "level": "beginner",
+          "note": "A library of step-by-step lab protocols with version control; good for seeing how a detailed, reproducible protocol is written."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "You test a compound dissolved in DMSO on cells. Which control separates the compound's effect from its solvent?",
+          "options": [
+            "Untouched incubator",
+            "A vehicle control with DMSO only",
+            "A larger n",
+            "A second wash step"
+          ],
+          "answer": 1,
+          "explanation": "Solvent alone can affect cells, so a vehicle control receives the same amount of DMSO without the compound."
+        },
+        {
+          "question": "Three wells are taken from the same flask of cells and treated alike. These are best described as:",
+          "options": [
+            "Three biological replicates",
+            "Three technical replicates",
+            "Three independent experiments",
+            "Three negative controls"
+          ],
+          "answer": 1,
+          "explanation": "They share the same biological source, so they measure pipetting and assay noise rather than independent biological variation."
+        },
+        {
+          "question": "Why include a positive control in a new assay?",
+          "options": [
+            "To confirm the assay is capable of detecting a real effect",
+            "To increase the p-value",
+            "To replace the negative control",
+            "To avoid replicates"
+          ],
+          "answer": 0,
+          "explanation": "If the known effect is not detected, a negative result in your samples is uninformative."
+        },
+        {
+          "question": "What does randomising sample positions on a plate help to prevent?",
+          "options": [
+            "Contamination by bacteria",
+            "Systematic position effects being confused with treatment effects",
+            "Pipette tip waste",
+            "The need for statistics"
+          ],
+          "answer": 1,
+          "explanation": "Edge effects and gradients can mimic a treatment; randomisation spreads them across groups."
+        }
+      ]
+    },
+    {
+      "id": "statistics-basics",
+      "title": "Statistics Basics for Biochemical Data",
+      "hours": 6,
+      "hook": "Three bands, three numbers and a smiling asterisk. Then a statistician asks what your n is, and the whole result wobbles. A small amount of statistical thinking early in a project saves you from over-claiming later and helps you design experiments that can actually answer a question.",
+      "learningObjectives": [
+        "Describe data with mean, median, standard deviation and standard error and know which to plot",
+        "Explain what a p-value is and what it is not",
+        "Choose among t-test, paired t-test, ANOVA and non-parametric alternatives for simple designs",
+        "Interpret confidence intervals and effect sizes alongside p-values",
+        "Recognise pseudoreplication and multiple-testing problems",
+        "Explain statistical power and why small samples mislead"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Standard deviation",
+          "definition": "A measure of how spread out the individual measurements are around their mean."
+        },
+        {
+          "term": "Standard error of the mean",
+          "definition": "An estimate of how precisely the sample mean estimates the population mean; it shrinks as n grows."
+        },
+        {
+          "term": "p-value",
+          "definition": "The probability of obtaining data at least as extreme as yours if the null hypothesis and all model assumptions were true; it is not the probability that the hypothesis is true."
+        },
+        {
+          "term": "Confidence interval",
+          "definition": "A range computed so that, over many repeats of the experiment, a stated percentage of such intervals would contain the true value."
+        },
+        {
+          "term": "Effect size",
+          "definition": "How big the difference is in meaningful units, independent of how many samples you measured."
+        },
+        {
+          "term": "Type I and Type II error",
+          "definition": "False positive (rejecting a true null) and false negative (missing a real effect)."
+        },
+        {
+          "term": "Statistical power",
+          "definition": "The probability of detecting an effect of a given size when it truly exists; it depends on n, variability and effect size."
+        },
+        {
+          "term": "Multiple testing",
+          "definition": "Running many tests increases the chance of false positives unless corrected (for example with false discovery rate methods)."
+        },
+        {
+          "term": "Pseudoreplication",
+          "definition": "Treating non-independent measurements as independent, which artificially inflates n."
+        }
+      ],
+      "deeper": {
+        "beginner": "Start by plotting every data point. Report the mean and standard deviation to describe variation, and use a t-test to compare two groups when the data are roughly bell-shaped and the samples are independent. A small p-value says your data would be surprising if there were no difference; it does not say how big or important the difference is.",
+        "intermediate": "Match the test to the design: unpaired t-test for two independent groups, paired t-test for before/after measurements on the same units, one-way ANOVA with a post-hoc test for several groups. Report effect sizes with confidence intervals. When you run many comparisons (for example many genes), correct for multiple testing. Decide on n using an estimate of variability from a pilot or literature rather than 'three because that is what everyone does'.",
+        "advanced": "Distinguish a statistical model from its assumptions: independence, distribution of residuals and equal variance. Where samples are clustered (cells within dishes, animals within cages, repeated measures) use nested or mixed-effects models, or analyse at the level of the independent unit. Be sceptical of p-values near 0.05 from underpowered studies; low power also exaggerates the estimates that do reach significance. Prefer pre-specified analyses and report all comparisons you made."
+      },
+      "commonMistakes": [
+        "Using standard error bars to make the scatter look smaller without saying so",
+        "Treating p < 0.05 as proof and p > 0.05 as proof of no effect",
+        "Using cells or wells as n instead of independent experiments",
+        "Running many tests and reporting only the significant ones"
+      ],
+      "videos": [
+        {
+          "youtubeId": "vemZtEM63GY",
+          "title": "p-values: What they are and how to interpret them",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "A friendly walk through what a p-value measures and common ways to misread it."
+        },
+        {
+          "youtubeId": "Exk0OoRG0PQ",
+          "title": "The Difference Between Technical and Biological Replicates",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "A concise explanation of replicate types, directly relevant to choosing n."
+        },
+        {
+          "youtubeId": "A82brFpdr9g",
+          "title": "Standard Deviation vs Standard Error, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Settles the SD versus SE confusion in under three minutes."
+        },
+        {
+          "youtubeId": "Rsc5znwR5FA",
+          "title": "Statistical Power, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Builds intuition for power and why small experiments miss real effects."
+        },
+        {
+          "youtubeId": "TqOeMYtOc1w",
+          "title": "Confidence Intervals, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Explains what a confidence interval does and does not tell you."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nmeth.2698",
+          "title": "Significance, P values and t-tests",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2013,
+          "journal": "Nature Methods",
+          "level": "beginner",
+          "whyItMatters": "A two-page, picture-led introduction to what a p-value and a t-test actually compute. It is the quickest honest explanation of the logic behind the most-used test in lab biology."
+        },
+        {
+          "doi": "10.1371/journal.pbio.2005282",
+          "title": "What exactly is 'N' in cell culture and animal experiments?",
+          "authors": "Lazic SE, Clarke-Williams CJ, Munafo MR",
+          "year": 2018,
+          "journal": "PLOS Biology",
+          "level": "intermediate",
+          "whyItMatters": "Shows, with concrete cell-culture and animal examples, how to decide what counts as an independent replicate. Mistaking wells, technical repeats or cells for independent samples is the most common statistical error in bench projects.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pbio.2005282"
+        },
+        {
+          "doi": "10.1136/bmj.331.7521.903",
+          "title": "Standard deviations and standard errors",
+          "authors": "Altman DG, Bland JM",
+          "year": 2005,
+          "journal": "BMJ",
+          "level": "beginner",
+          "whyItMatters": "A brief note on a confusion every error bar invites: standard deviation describes the spread of your data, standard error describes the precision of your estimate of the mean. Read it before you choose what to plot."
+        },
+        {
+          "doi": "10.1080/00031305.2016.1154108",
+          "title": "The ASA Statement on p-Values: Context, Process, and Purpose",
+          "authors": "Wasserstein RL, Lazar NA",
+          "year": 2016,
+          "journal": "The American Statistician",
+          "level": "advanced",
+          "whyItMatters": "The American Statistical Association's six principles on what a p-value does and does not tell you. Useful for the moment when a supervisor or examiner asks, 'so what does p = 0.04 actually mean?'"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Seeing Theory",
+          "provider": "Brown University",
+          "type": "interactive",
+          "url": "https://seeing-theory.brown.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive visualisations of probability, sampling and inference that build intuition for p-values and confidence intervals."
+        },
+        {
+          "title": "Points of Significance (Statistics for Biologists)",
+          "provider": "Nature Methods / Nature Collections",
+          "type": "reference",
+          "url": "https://www.nature.com/collections/qghhqm",
+          "free": true,
+          "level": "intermediate",
+          "note": "A series of concise columns on the statistics biologists actually use, written with clear figures."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What does a p-value of 0.03 tell you?",
+          "options": [
+            "There is a 97% chance the hypothesis is true",
+            "If the null hypothesis were true, data this extreme would occur about 3% of the time",
+            "The effect is large",
+            "The experiment is reproducible"
+          ],
+          "answer": 1,
+          "explanation": "The p-value is conditional on the null hypothesis and the model. It is not the probability that the hypothesis is correct and says nothing about effect size."
+        },
+        {
+          "question": "You grow three flasks of cells, treat each, and measure each flask in triplicate. What is your n?",
+          "options": [
+            "9",
+            "3",
+            "1",
+            "6"
+          ],
+          "answer": 1,
+          "explanation": "The flasks are the independent units; the triplicate measurements are technical replicates. Counting nine would be pseudoreplication."
+        },
+        {
+          "question": "Which statement about standard error is correct?",
+          "options": [
+            "It describes how spread out the individual data points are",
+            "It gets smaller as the sample size increases",
+            "It is always larger than the standard deviation",
+            "It replaces the need for plotting the data"
+          ],
+          "answer": 1,
+          "explanation": "SE = SD divided by the square root of n, so it shrinks as n grows; it describes precision of the mean, not spread of the data."
+        },
+        {
+          "question": "Why is an underpowered study a problem even when the result is significant?",
+          "options": [
+            "It cannot produce significant results",
+            "Significant results from small, noisy studies tend to overestimate the true effect",
+            "It makes p-values negative",
+            "It increases the sample size"
+          ],
+          "answer": 1,
+          "explanation": "Small studies only reach significance when chance exaggerates the effect, so the published estimate is inflated."
+        }
+      ]
+    },
+    {
+      "id": "notebooks-data",
+      "title": "Reproducible Lab Notebooks and Data Management",
+      "hours": 4,
+      "hook": "Six months from now you, not a stranger, will be the person who cannot decipher the notes. A notebook that records what was actually done, with dates, lots and raw data, is the most valuable thing you will produce after the thesis itself.",
+      "learningObjectives": [
+        "Keep a dated, complete lab record of procedures, deviations and observations",
+        "Record reagents, lot numbers, instrument settings and sample identities",
+        "Organise raw, processed and analysed data in a clear file structure with consistent names",
+        "Back up data and keep raw data unaltered",
+        "Describe what makes an analysis reproducible (scripts, versions, parameters)",
+        "Explain the FAIR principles in practical terms"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Primary record",
+          "definition": "The contemporaneous, dated account of what was done and observed; it should let someone else repeat the work."
+        },
+        {
+          "term": "Metadata",
+          "definition": "Data about the data: who, when, which sample, which buffer, which instrument settings."
+        },
+        {
+          "term": "Raw data",
+          "definition": "The original instrument output or images, kept unaltered; all processing is done on copies."
+        },
+        {
+          "term": "Naming convention",
+          "definition": "A consistent scheme for files and samples (date, experiment, sample, replicate) that sorts and searches well."
+        },
+        {
+          "term": "Version control",
+          "definition": "Tracking changes to files or code so that earlier versions can be recovered and changes explained."
+        },
+        {
+          "term": "Reproducibility",
+          "definition": "Obtaining the same result from the same data and analysis steps; replicability means getting a similar result in a new experiment."
+        },
+        {
+          "term": "FAIR data",
+          "definition": "Findable, Accessible, Interoperable, Reusable: principles for making data usable by others and by your future self."
+        },
+        {
+          "term": "3-2-1 backup",
+          "definition": "Keep three copies on two kinds of media with one off-site."
+        }
+      ],
+      "deeper": {
+        "beginner": "Write the date at the top of each page, state the aim in a line, then record what you did while you do it, not afterwards from memory. Include exact volumes, concentrations, lot numbers and anything that went wrong. Paste or tape in raw readouts, or give the exact file name where they are saved. Test: could a classmate repeat the experiment from your notes alone?",
+        "intermediate": "Create a project folder with sub-folders for raw data, processed data, analysis scripts, figures and documents. Use names such as 2026-03-12_BSA-assay_plate2_raw.csv, avoiding spaces and 'final_final2'. If you use spreadsheets, keep a read-me sheet explaining columns and units; never overwrite raw values. Back up on a schedule, and note each analysis step (software version, parameters) so that figures can be regenerated.",
+        "advanced": "Consider electronic lab notebooks and version-controlled repositories for analysis code, with an environment file recording package versions. Link each figure in the thesis to the exact data and script that produced it. Understand institutional rules on data ownership and retention, and the difference between data being shareable and being FAIR: a deposited spreadsheet with no metadata is accessible but not reusable. Sensitive human data need consent-aware handling and anonymisation."
+      },
+      "commonMistakes": [
+        "Writing notes on loose paper or phones and 'copying them up later'",
+        "Editing the raw data spreadsheet and saving over the original",
+        "Recording the result but not the reagent lot, buffer recipe or instrument setting",
+        "Keeping the only copy of the data on a personal laptop"
+      ],
+      "videos": [
+        {
+          "youtubeId": "sW9YBcDAAvI",
+          "title": "What is a Lab Notebook?!",
+          "channel": "Alex Dainis",
+          "level": "beginner",
+          "whyWatch": "A working scientist explains how and why she keeps a notebook."
+        },
+        {
+          "youtubeId": "42QuXLucH3Q",
+          "title": "Is Most Published Research Wrong?",
+          "channel": "Veritasium",
+          "level": "beginner",
+          "whyWatch": "Gives the wider picture of why careful records and reproducible methods matter."
+        },
+        {
+          "youtubeId": "5OeCrQE3HhE",
+          "title": "The FAIR principles explained",
+          "channel": "Maastricht University",
+          "level": "beginner",
+          "whyWatch": "A two-minute overview of what findable, accessible, interoperable and reusable mean."
+        },
+        {
+          "youtubeId": "QrUiUGrBwIc",
+          "title": "Keeping a Laboratory Notebook",
+          "channel": "Forsyth Tech CTLE",
+          "level": "beginner",
+          "whyWatch": "A quick demonstration of notebook layout and the essentials to record."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1004385",
+          "title": "Ten Simple Rules for a Computational Biologist's Laboratory Notebook",
+          "authors": "Schnell S",
+          "year": 2015,
+          "journal": "PLOS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Practical habits for dating, linking and organising notes so that you (or a stranger) can rebuild what you did months later. The advice applies equally to wet-lab notebooks and analysis folders.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1004385"
+        },
+        {
+          "doi": "10.1038/533452a",
+          "title": "1,500 scientists lift the lid on reproducibility",
+          "authors": "Baker M",
+          "year": 2016,
+          "journal": "Nature",
+          "level": "beginner",
+          "whyItMatters": "A survey report showing that most researchers have failed to reproduce someone else's experiment, and many have failed to reproduce their own. It makes the case for careful records better than any lecture."
+        },
+        {
+          "doi": "10.1038/sdata.2016.18",
+          "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+          "authors": "Wilkinson MD, Dumontier M, Aalbersberg IJ et al",
+          "year": 2016,
+          "journal": "Scientific Data",
+          "level": "intermediate",
+          "whyItMatters": "The founding statement of the FAIR idea: data should be Findable, Accessible, Interoperable and Reusable. It explains why file names, metadata and repositories are part of the science and not an afterthought.",
+          "openAccessUrl": "https://doi.org/10.1038/sdata.2016.18"
+        }
+      ],
+      "resources": [
+        {
+          "title": "protocols.io",
+          "provider": "protocols.io",
+          "type": "tool",
+          "url": "https://www.protocols.io/",
+          "free": true,
+          "level": "beginner",
+          "note": "A library of step-by-step lab protocols with version control; good for seeing how a detailed, reproducible protocol is written."
+        },
+        {
+          "title": "Open Science Framework",
+          "provider": "Center for Open Science",
+          "type": "tool",
+          "url": "https://osf.io/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free place to keep project files, protocols and preregistrations under version history, and to share them when you are ready."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "When should observations be written in a lab notebook?",
+          "options": [
+            "At the end of the week",
+            "At the time of the experiment",
+            "Only if the experiment works",
+            "Just before the thesis is submitted"
+          ],
+          "answer": 1,
+          "explanation": "Contemporaneous entries are more accurate and are the standard expected of a primary record."
+        },
+        {
+          "question": "What should you do with the original instrument output file?",
+          "options": [
+            "Overwrite it after cleaning",
+            "Keep it unaltered and do all processing on copies",
+            "Delete it once a graph is made",
+            "Rename it every day"
+          ],
+          "answer": 1,
+          "explanation": "Raw data are the evidence behind everything else, so they must stay unchanged and backed up."
+        },
+        {
+          "question": "What is the difference between reproducing and replicating a result?",
+          "options": [
+            "There is none",
+            "Reproducing re-runs the same analysis on the same data; replicating repeats the experiment and gets a similar result",
+            "Replicating uses a different species always",
+            "Reproducing needs a larger n"
+          ],
+          "answer": 1,
+          "explanation": "Reproducibility concerns computation and records; replication tests whether the finding holds in a new experiment."
+        }
+      ]
+    },
+    {
+      "id": "reading-papers",
+      "title": "Reading Papers Critically",
+      "hours": 4,
+      "hook": "A paper is a polished story written by people who want you to believe it. Reading critically does not mean being cynical; it means asking, calmly and every time, 'what exactly did they measure, and does it support what they say?'",
+      "learningObjectives": [
+        "Read a primary paper in layers: title, abstract, figures, methods, then discussion",
+        "Identify the question, system, key comparison and main claim of a paper",
+        "Judge whether controls, replication and statistics support the conclusion",
+        "Separate results from interpretation and spot over-reach",
+        "Recognise signs of weak evidence such as small n, missing controls and cherry-picked images",
+        "Summarise a paper in a few sentences in your own words"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Primary vs secondary source",
+          "definition": "Primary sources report original data; secondary sources (reviews, textbooks) interpret them."
+        },
+        {
+          "term": "Peer review",
+          "definition": "Evaluation by independent experts before publication; a quality filter but not a guarantee."
+        },
+        {
+          "term": "Claim vs evidence",
+          "definition": "The statement the authors make versus the specific data that are meant to support it."
+        },
+        {
+          "term": "Representative image",
+          "definition": "A micrograph or blot chosen to illustrate a result; it should be backed by quantification across replicates."
+        },
+        {
+          "term": "Supplementary data",
+          "definition": "Extra figures and methods often holding the controls and details needed to judge the work."
+        },
+        {
+          "term": "Impact factor fallacy",
+          "definition": "A journal's prestige is not a measure of the correctness of any single paper in it."
+        },
+        {
+          "term": "Conflict of interest",
+          "definition": "A financial or other relationship that could influence how research is done or reported."
+        }
+      ],
+      "deeper": {
+        "beginner": "First read the title and abstract and write down in one sentence what the authors claim. Then look only at the figures and legends, asking what is being compared in each panel. Next read the methods for the experiments that matter most. Finally read the discussion and compare it with what you saw in the figures: did they claim more than they showed?",
+        "intermediate": "For each key figure, ask: what is the control; how many independent replicates; what error bars represent; what test was used; are image controls or loading controls shown? Check that the conclusion in the text follows from the figure rather than from a hope. Look at the supplementary material, the data availability statement and the funding and competing-interest notes. Write a half-page critique listing strengths, weaknesses and what experiment you would ask for next.",
+        "advanced": "Evaluate the study design against the question: correlation versus causation, appropriate unit of analysis, risk of confounding and selection, multiple comparisons and whether the analysis plan was fixed in advance. Consider base rates and prior plausibility, replication by independent groups, and signs of publication bias. Check cited sources to see whether they really say what the authors state. Use post-publication tools such as PubPeer and retraction databases to see whether concerns have been raised."
+      },
+      "commonMistakes": [
+        "Reading the abstract and discussion only and trusting the conclusions",
+        "Assuming a paper in a famous journal must be correct",
+        "Confusing 'significant' with 'important'",
+        "Reading from the first line to the last instead of using the figures to guide you"
+      ],
+      "videos": [
+        {
+          "youtubeId": "Gv5ku0eoY6k",
+          "title": "How To Read A Paper Quickly & Effectively",
+          "channel": "Dr Amina Yonis",
+          "level": "beginner",
+          "whyWatch": "A practical order for reading a paper without drowning in details."
+        },
+        {
+          "youtubeId": "jrjz0QyvON8",
+          "title": "How to Read a Scientific Paper",
+          "channel": "Kyle Hill",
+          "level": "beginner",
+          "whyWatch": "A science communicator describes how to approach papers, including spotting red flags."
+        },
+        {
+          "youtubeId": "_rBKgaBHvoY",
+          "title": "How To Critically Read Scientific Papers",
+          "channel": "Grad School Advice",
+          "level": "intermediate",
+          "whyWatch": "Shows how to question methods and conclusions systematically."
+        },
+        {
+          "youtubeId": "ClfwnVh8z6s",
+          "title": "The life of a Nature paper",
+          "channel": "Nature Video",
+          "level": "beginner",
+          "whyWatch": "Shows what editors and referees do before a paper appears, and what peer review can and cannot do."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1008032",
+          "title": "Ten simple rules for reading a scientific paper",
+          "authors": "Carey MA, Steiner KL, Petri WA",
+          "year": 2020,
+          "journal": "PLOS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "A student-friendly routine for reading a paper in layers: question first, then figures, then methods, and only then the authors' interpretation. A good habit to adopt before the literature review starts.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1008032"
+        },
+        {
+          "doi": "10.1136/bmj.315.7102.243",
+          "title": "How to read a paper: getting your bearings (deciding what the paper is about)",
+          "authors": "Greenhalgh T",
+          "year": 1997,
+          "journal": "BMJ",
+          "level": "beginner",
+          "whyItMatters": "The first of a classic series on appraising papers. It teaches you to ask what question was asked, whether the design could answer it and whether the paper is worth your time."
+        },
+        {
+          "doi": "10.1371/journal.pmed.0020124",
+          "title": "Why Most Published Research Findings Are False",
+          "authors": "Ioannidis JPA",
+          "year": 2005,
+          "journal": "PLoS Medicine",
+          "level": "advanced",
+          "whyItMatters": "A provocative argument that small studies, flexible analyses and a bias to publish positive results make many 'significant' findings unreliable. Whether or not you accept the strong claim, it gives you a checklist of reasons to doubt a result.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pmed.0020124"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Europe PMC",
+          "provider": "EMBL-EBI / Europe PMC",
+          "type": "database",
+          "url": "https://europepmc.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free search of abstracts and full texts, including preprints and text-mined links to data, with a convenient open-access filter."
+        },
+        {
+          "title": "Zotero Documentation",
+          "provider": "Zotero",
+          "type": "tutorial",
+          "url": "https://www.zotero.org/support/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free, open-source reference manager with a browser connector and Word/LibreOffice plug-ins; the manual is the best place to start."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is a good first step in reading a primary research paper?",
+          "options": [
+            "Read the discussion",
+            "State the paper's main claim from the title and abstract, then study the figures",
+            "Read the references",
+            "Check the journal's impact factor"
+          ],
+          "answer": 1,
+          "explanation": "Knowing the claim lets you test whether the figures support it. Discussion sections are written to persuade."
+        },
+        {
+          "question": "A figure shows one blot as 'representative'. What should you look for?",
+          "options": [
+            "Quantification over several independent experiments",
+            "A brighter band",
+            "A larger font",
+            "A longer legend"
+          ],
+          "answer": 0,
+          "explanation": "One image can be chosen to look good. Quantification from independent replicates shows whether it is typical."
+        },
+        {
+          "question": "Why is peer review not a guarantee of correctness?",
+          "options": [
+            "Reviewers never read the paper",
+            "Reviewers are volunteers who usually cannot see raw data or repeat the work",
+            "Journals do not use review",
+            "All reviewers are biased"
+          ],
+          "answer": 1,
+          "explanation": "Peer review improves papers and catches many problems, but it is limited by what reviewers can see and the time they have."
+        }
+      ]
+    },
+    {
+      "id": "scientific-writing",
+      "title": "Scientific Writing: Report and Thesis",
+      "hours": 5,
+      "hook": "A thesis is not a diary of what you did; it is an argument that your question mattered, your methods fit, your data say something and you understand its limits. Readers should be able to find that argument without hunting for it.",
+      "learningObjectives": [
+        "Plan the structure of a thesis or paper around one central story",
+        "Write an introduction that moves from broad context to a specific question",
+        "Write a methods section detailed enough for replication",
+        "Present results in logical order and keep them separate from interpretation",
+        "Write a discussion that addresses limitations and future work honestly",
+        "Edit for clarity, concision and consistent terminology"
+      ],
+      "keyConcepts": [
+        {
+          "term": "IMRaD",
+          "definition": "The standard structure: Introduction, Methods, Results and Discussion, preceded by an abstract."
+        },
+        {
+          "term": "Abstract",
+          "definition": "A short stand-alone summary of the question, approach, main results and conclusion."
+        },
+        {
+          "term": "Introduction funnel",
+          "definition": "Broad context, what is known, the gap, then your aim and approach."
+        },
+        {
+          "term": "Reproducible methods",
+          "definition": "A methods section that gives amounts, sources, conditions and analysis steps so that others can repeat the work."
+        },
+        {
+          "term": "Results vs discussion",
+          "definition": "Results report what was found; the discussion interprets what it means and compares it with other work."
+        },
+        {
+          "term": "Limitations",
+          "definition": "Honest statement of what the study could not show (sample size, model system, assumptions)."
+        },
+        {
+          "term": "Active voice and precision",
+          "definition": "Clear, direct sentences with specific nouns and verbs read faster and invite less misunderstanding."
+        }
+      ],
+      "deeper": {
+        "beginner": "Before you write, write one sentence for each chapter or section saying what the reader should believe by the end of it. Draft the figures and tables first, then write the results around them. Methods can be written early while details are fresh. Leave the introduction and abstract until you know what the story is.",
+        "intermediate": "Structure each section as a short argument. In the introduction, cite primary sources and state your aim. In results, give a transitional sentence stating why each experiment was done, then the finding, then the figure reference. In the discussion, start with the main finding, compare it with the literature, address alternative explanations and be explicit about limitations. Cut sentences that do not carry weight and define abbreviations at first use. Ask a friend to read for understanding, not for typos.",
+        "advanced": "Make the thesis a single coherent narrative: the question from the introduction should be answerable by the discussion. Calibrate language to evidence (distinguish 'is associated with', 'is consistent with' and 'causes'). Keep a consistent reference style, check every reference against the original, and describe any use of editing or AI tools according to your institution's policy. Plan time for several rounds of revision with supervisor feedback, because the second draft is usually where the clarity appears."
+      },
+      "commonMistakes": [
+        "Writing the introduction as a general review with no link to the project",
+        "Mixing results and interpretation in the same paragraph",
+        "Leaving out the details that would make methods replicable",
+        "Claiming more than the data support in the abstract or conclusion"
+      ],
+      "videos": [
+        {
+          "youtubeId": "2F1ZX5PElNA",
+          "title": "Making scientific writing painless",
+          "channel": "iBiology",
+          "level": "beginner",
+          "whyWatch": "A researcher explains habits that make the writing process less painful."
+        },
+        {
+          "youtubeId": "udJ3AnS2veU",
+          "title": "How to Write a Scientific Paper from Start to Finish",
+          "channel": "Scientific Writing with Karen L. McKee",
+          "level": "beginner",
+          "whyWatch": "A section-by-section tour of a scientific paper."
+        },
+        {
+          "youtubeId": "lbCh94nJqIo",
+          "title": "How to Write a Clear & Concise Abstract",
+          "channel": "Scribbr",
+          "level": "beginner",
+          "whyWatch": "A short guide to writing an abstract that summarises the whole study."
+        },
+        {
+          "youtubeId": "caCWp7cya-o",
+          "title": "How To Write The Introduction Chapter To A Thesis Or Dissertation",
+          "channel": "Academic English Now",
+          "level": "beginner",
+          "whyWatch": "Breaks down the structure of a thesis introduction with examples."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1005619",
+          "title": "Ten simple rules for structuring papers",
+          "authors": "Mensh B, Kording K",
+          "year": 2017,
+          "journal": "PLOS Computational Biology",
+          "level": "intermediate",
+          "whyItMatters": "Argues that a paper should tell one clear story, with the introduction, results and discussion each built around a single contribution. Excellent for structuring a thesis chapter or essay as well.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1005619"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Scientific Reports (writing guide)",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/scientific-reports/",
+          "free": true,
+          "level": "beginner",
+          "note": "Section-by-section advice on writing lab and research reports: what belongs in the introduction, methods, results and discussion."
+        },
+        {
+          "title": "Writing Center Tips and Tools",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+        },
+        {
+          "title": "Purdue Online Writing Lab",
+          "provider": "Purdue University",
+          "type": "reference",
+          "url": "https://owl.purdue.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Reliable explanations of grammar, citation styles and paper structure."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which section should report what was found without interpreting it?",
+          "options": [
+            "Introduction",
+            "Results",
+            "Discussion",
+            "Acknowledgements"
+          ],
+          "answer": 1,
+          "explanation": "Results state the findings; interpreting them and comparing them with other work belongs in the discussion."
+        },
+        {
+          "question": "What is the main test of a good methods section?",
+          "options": [
+            "It is as short as possible",
+            "Another competent scientist could repeat the work from it",
+            "It uses the passive voice",
+            "It lists every instrument in the department"
+          ],
+          "answer": 1,
+          "explanation": "Methods exist so that others can evaluate and replicate the work."
+        },
+        {
+          "question": "Why draft the figures before writing the results?",
+          "options": [
+            "Figures do not need text",
+            "They show what story the data actually tell and organise the text",
+            "Examiners read figures first only",
+            "It saves paper"
+          ],
+          "answer": 1,
+          "explanation": "The figures define the logical sequence of evidence, and the text then explains that sequence."
+        }
+      ]
+    },
+    {
+      "id": "figures",
+      "title": "Figures, Tables and Data Visualisation",
+      "hours": 4,
+      "hook": "A reader will usually look at your figure before reading a word of your text. If the figure can be understood on its own, with honest axes, clear labels and colours that everyone can tell apart, your work gets a fair hearing.",
+      "learningObjectives": [
+        "Choose the right plot for the data (points, box plots, line plots, heat maps)",
+        "Show individual data points and appropriate error measures",
+        "Use axes, units, scales and labels correctly",
+        "Choose colour palettes that are accessible to people with colour-vision deficiency",
+        "Prepare multi-panel figures with legends that stand alone",
+        "Handle microscopy and blot images without improper manipulation"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Data-ink ratio",
+          "definition": "Spend ink on data rather than decoration: remove 3D effects, heavy gridlines and unneeded colours."
+        },
+        {
+          "term": "Show the data",
+          "definition": "For small samples plot every point so readers can see spread and outliers."
+        },
+        {
+          "term": "Error bars",
+          "definition": "State in the legend whether they show SD, SE or a confidence interval, and what n is."
+        },
+        {
+          "term": "Axis integrity",
+          "definition": "Axes should start at a sensible baseline (bars especially at zero) and be labelled with units."
+        },
+        {
+          "term": "Colour-blind-safe palette",
+          "definition": "Colours chosen so that people with red-green deficiency can still distinguish categories."
+        },
+        {
+          "term": "Figure legend",
+          "definition": "A caption that states the aim, what is shown, n, statistics and abbreviations so the figure is understandable alone."
+        },
+        {
+          "term": "Image integrity",
+          "definition": "Adjustments to brightness or contrast must be applied to the whole image, be disclosed if needed and never remove or add features."
+        }
+      ],
+      "deeper": {
+        "beginner": "Decide the one message of the figure before plotting. Show each replicate as a dot over the mean, label axes with units, and add a legend that explains n and error bars. Do not use red and green alone to distinguish groups. Keep fonts large enough to read when the figure is reduced to column width.",
+        "intermediate": "Select plots by data type: scatter plots for two continuous variables, box or dot plots for group comparisons, line plots for time courses, heat maps for large matrices. Export vector graphics (PDF/SVG) for plots and lossless formats for images. In panels, align and label (A, B, C) consistently. For blots and gels, keep full uncropped originals and show size markers; for micrographs, include scale bars and describe processing.",
+        "advanced": "Understand how different data can produce identical bar charts, which is why distribution-revealing plots are preferred. Consider scales (log versus linear), normalisation choices and what is hidden by averaging. Build figures with scripts so they can be regenerated when data change, and test them in greyscale and with a colour-vision simulator. Journals and institutions increasingly screen images for duplication and manipulation, so keep raw files and an edit log."
+      },
+      "commonMistakes": [
+        "Using bar charts with SE bars for n = 3 and no individual points",
+        "Truncating a bar chart axis so a small difference looks huge",
+        "Labelling error bars without saying what they are",
+        "Relying on red/green colour pairs"
+      ],
+      "videos": [
+        {
+          "youtubeId": "iQh63DH9H5w",
+          "title": "How to create scientific graphics: an inside look from Nature",
+          "channel": "Nature Portfolio",
+          "level": "beginner",
+          "whyWatch": "Shows how a professional journal team thinks about turning data into clear graphics."
+        },
+        {
+          "youtubeId": "L9qo2XZiQ4Y",
+          "title": "Dear professor: How do I make high quality figures for my scientific publication?",
+          "channel": "Prof. Jean Fan",
+          "level": "intermediate",
+          "whyWatch": "A working professor demonstrates concrete choices for making publication-quality figures."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1003833",
+          "title": "Ten Simple Rules for Better Figures",
+          "authors": "Rougier NP, Droettboom M, Bourne PE",
+          "year": 2014,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Concrete rules on knowing your message, choosing the right plot, avoiding chart junk and using colour carefully. Short enough to read once and check every figure against afterwards.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1003833"
+        },
+        {
+          "doi": "10.1371/journal.pbio.1002128",
+          "title": "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm",
+          "authors": "Weissgerber TL, Milic NM, Winham SJ et al",
+          "year": 2015,
+          "journal": "PLOS Biology",
+          "level": "intermediate",
+          "whyItMatters": "Demonstrates that very different datasets can produce the same bar chart, and recommends plotting individual points for small samples. A persuasive reason to stop defaulting to bars with error bars.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pbio.1002128"
+        }
+      ],
+      "resources": [
+        {
+          "title": "ColorBrewer",
+          "provider": "Cynthia Brewer / Penn State",
+          "type": "tool",
+          "url": "https://colorbrewer2.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Pick colour palettes that are print-safe and colour-blind safe for figures."
+        },
+        {
+          "title": "Color Universal Design (Okabe-Ito palette)",
+          "provider": "Okabe & Ito, University of Tokyo",
+          "type": "reference",
+          "url": "https://jfly.uni-koeln.de/color/",
+          "free": true,
+          "level": "beginner",
+          "note": "The origin of the widely used colour-blind-safe palette, with examples of how figures look to people with different colour vision."
+        },
+        {
+          "title": "Inkscape",
+          "provider": "Inkscape Project",
+          "type": "tool",
+          "url": "https://inkscape.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free vector editor for assembling multi-panel figures that stay sharp at any size."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why are individual data points recommended for small-sample experiments?",
+          "options": [
+            "They look more colourful",
+            "They reveal spread, outliers and distribution that a bar and error bar hide",
+            "They remove the need for statistics",
+            "They make the figure smaller"
+          ],
+          "answer": 1,
+          "explanation": "Different distributions can give the same mean and error bar. Plotting points lets readers judge the data themselves."
+        },
+        {
+          "question": "What should a figure legend state about error bars?",
+          "options": [
+            "Nothing; they are standard",
+            "What they represent (SD, SE or CI) and the n behind them",
+            "Only the colour",
+            "The software version only"
+          ],
+          "answer": 1,
+          "explanation": "Without knowing what the bars mean and how many independent samples they summarise, readers cannot interpret the result."
+        },
+        {
+          "question": "Which image adjustment is acceptable?",
+          "options": [
+            "Erasing a smudge from a blot",
+            "Applying a linear brightness change to the entire image and reporting it where needed",
+            "Moving a lane from another gel without marking it",
+            "Cloning a cell from one field to another"
+          ],
+          "answer": 1,
+          "explanation": "Uniform adjustments that do not hide or create information are acceptable if disclosed when required; selective editing is manipulation."
+        }
+      ]
+    },
+    {
+      "id": "ethics-integrity",
+      "title": "Research Ethics and Integrity",
+      "hours": 4,
+      "hook": "Most research misconduct does not begin with a villain; it begins with a tired student, a failed repeat and a convenient 'outlier'. Knowing the rules and the reasons behind them makes the right choice easier when it is also the hard one.",
+      "learningObjectives": [
+        "Define fabrication, falsification and plagiarism and recognise questionable research practices",
+        "Apply good practice in data recording, image handling and authorship",
+        "Explain the principle of informed consent and ethical review for human and animal work",
+        "Apply the 3Rs (replace, reduce, refine) to animal research",
+        "Describe laboratory safety, biosafety and waste responsibilities",
+        "Declare conflicts of interest and acknowledge contributions appropriately"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fabrication",
+          "definition": "Making up data or results."
+        },
+        {
+          "term": "Falsification",
+          "definition": "Manipulating materials, equipment, processes, images or data so the record is not accurate."
+        },
+        {
+          "term": "Plagiarism",
+          "definition": "Presenting someone else's words, ideas or results as your own."
+        },
+        {
+          "term": "Questionable research practices",
+          "definition": "Behaviours such as dropping inconvenient data, p-hacking, selective reporting or gift authorship that distort the record without being outright fabrication."
+        },
+        {
+          "term": "Authorship criteria",
+          "definition": "Authors should make substantial contributions, draft or revise the work, approve it and accept accountability for it."
+        },
+        {
+          "term": "Informed consent",
+          "definition": "Participants agree freely after understanding the aims, procedures, risks and their right to withdraw."
+        },
+        {
+          "term": "Ethics committee approval",
+          "definition": "Independent review required before research on humans or animals starts."
+        },
+        {
+          "term": "3Rs",
+          "definition": "Replacement, Reduction and Refinement: principles for using animals only when necessary, in the smallest numbers and with least suffering."
+        },
+        {
+          "term": "Conflict of interest",
+          "definition": "A circumstance that could appear to bias the research and must be disclosed."
+        }
+      ],
+      "deeper": {
+        "beginner": "Integrity means your lab record can be trusted. If an experiment fails, you record it; if a point looks like an outlier, you decide using a rule fixed in advance and you report it. Credit others for their ideas and text, and keep the raw data. If you are unsure, ask your supervisor before you act, not after.",
+        "intermediate": "Learn your your institution's policies: data retention, authorship, safety training, ethical clearance and plagiarism rules. For any project with human samples, animals, genetically modified organisms or hazardous agents, confirm approvals and risk assessments before starting. Keep records of consent and sample provenance. Decide authorship and acknowledgements early and in writing, and acknowledge technical help and funding.",
+        "advanced": "Distinguish honest error from misconduct, and see how incentives (publish-or-perish, positive-result bias) shape behaviour. Understand the process for raising concerns and the protection of whistle-blowers. Consider the broader ethics of research: benefit sharing, data from vulnerable populations, dual-use research, environmental impact and the responsible use of AI tools in analysis and writing, always disclosed as your institution's policy requires."
+      },
+      "commonMistakes": [
+        "Dropping a replicate because it spoiled the picture and not saying so",
+        "Copying a sentence from a paper 'just for the background'",
+        "Adding a senior person as an author who did not contribute",
+        "Starting work before approvals are in place"
+      ],
+      "videos": [
+        {
+          "youtubeId": "mtLPd2u4DiA",
+          "title": "Research Ethics | Ethics in Research",
+          "channel": "SciToons",
+          "level": "beginner",
+          "whyWatch": "An animated overview of core research ethics principles."
+        },
+        {
+          "youtubeId": "AV9tkVGUXAc",
+          "title": "TENK: Responsible conduct of research",
+          "channel": "Tiedetv",
+          "level": "beginner",
+          "whyWatch": "A short video from the Finnish research integrity board explaining responsible conduct."
+        },
+        {
+          "youtubeId": "ckOFga6Eyvc",
+          "title": "What are the 3Rs in research with animals?",
+          "channel": "Swiss 3RCC",
+          "level": "beginner",
+          "whyWatch": "Explains replacement, reduction and refinement in a minute and a half."
+        },
+        {
+          "youtubeId": "MC4tcNcRfb8",
+          "title": "University of Hull Biology - Academic Integrity and Avoiding Plagiarism",
+          "channel": "Katharine Hubbard",
+          "level": "beginner",
+          "whyWatch": "A biology lecturer shows plagiarism examples and how to avoid them."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pone.0005738",
+          "title": "How Many Scientists Fabricate and Falsify Research? A Systematic Review and Meta-Analysis of Survey Data",
+          "authors": "Fanelli D",
+          "year": 2009,
+          "journal": "PLoS ONE",
+          "level": "intermediate",
+          "whyItMatters": "Pools survey studies to estimate how often researchers admit to, or observe, fabrication, falsification and questionable practices. It shows that integrity is a day-to-day matter of small choices, not just rare scandals.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pone.0005738"
+        },
+        {
+          "doi": "10.1128/mBio.00809-16",
+          "title": "The Prevalence of Inappropriate Image Duplication in Biomedical Research Publications",
+          "authors": "Bik EM, Casadevall A, Fang FC",
+          "year": 2016,
+          "journal": "mBio",
+          "level": "intermediate",
+          "whyItMatters": "A systematic screen of thousands of published papers for duplicated blot and micrograph images. It explains why journals now inspect images and why you must keep raw image files and record every adjustment.",
+          "openAccessUrl": "https://doi.org/10.1128/mbio.00809-16"
+        },
+        {
+          "doi": "10.1371/journal.pbio.1000412",
+          "title": "Improving Bioscience Research Reporting: The ARRIVE Guidelines for Reporting Animal Research",
+          "authors": "Kilkenny C, Browne WJ, Cuthill IC et al",
+          "year": 2010,
+          "journal": "PLoS Biology",
+          "level": "intermediate",
+          "whyItMatters": "The original ARRIVE paper, which links poor reporting to wasted animals and irreproducible work. A concrete way into the 3Rs and why transparent reporting is itself an ethical duty.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pbio.1000412"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Office of Research Integrity (ORI)",
+          "provider": "US Department of Health & Human Services",
+          "type": "reference",
+          "url": "https://ori.hhs.gov/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Definitions of fabrication, falsification and plagiarism, case summaries and training material."
+        },
+        {
+          "title": "Retraction Watch Database",
+          "provider": "Center for Scientific Integrity",
+          "type": "database",
+          "url": "https://retractiondatabase.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search retracted papers and reasons for retraction; sobering and educational."
+        },
+        {
+          "title": "ICMJE Recommendations",
+          "provider": "International Committee of Medical Journal Editors",
+          "type": "reference",
+          "url": "https://www.icmje.org/recommendations/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The standard criteria for authorship and guidance on conflicts of interest, and on declaring AI-assisted writing."
+        },
+        {
+          "title": "Committee on Publication Ethics (COPE)",
+          "provider": "COPE",
+          "type": "reference",
+          "url": "https://publicationethics.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Guidance and flowcharts on authorship disputes, data problems and misconduct handling in publishing."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Removing a data point because it spoils the trend, without saying so, is best described as:",
+          "options": [
+            "Good data cleaning",
+            "Questionable practice or falsification",
+            "Normalisation",
+            "Statistical power"
+          ],
+          "answer": 1,
+          "explanation": "Selective removal without a pre-set rule and disclosure distorts the record. Outlier handling must be principled and reported."
+        },
+        {
+          "question": "What do the 3Rs stand for?",
+          "options": [
+            "Read, Record, Report",
+            "Replace, Reduce, Refine",
+            "Repeat, Randomise, Replicate",
+            "Reagents, Results, Review"
+          ],
+          "answer": 1,
+          "explanation": "They guide the ethical use of animals: avoid them if possible, use as few as needed and minimise suffering."
+        },
+        {
+          "question": "Who should be listed as an author?",
+          "options": [
+            "Anyone who was in the lab",
+            "People who made substantial contributions and take accountability for the work",
+            "Only the supervisor",
+            "Whoever has the highest title"
+          ],
+          "answer": 1,
+          "explanation": "Authorship reflects intellectual contribution and responsibility, not seniority or friendship."
+        }
+      ]
+    },
+    {
+      "id": "presenting-defending",
+      "title": "Presenting and Defending Your Project",
+      "hours": 4,
+      "hook": "After a year of work you will have about fifteen minutes to make a room of tired examiners care. Presenting is not a performance; it is deciding what matters most, saying it clearly and being honest when you do not know.",
+      "learningObjectives": [
+        "Structure a project talk around a clear question, key results and take-home message",
+        "Design slides that support rather than replace speaking",
+        "Prepare a poster or short abstract for the same material",
+        "Anticipate and answer questions, including those you cannot answer",
+        "Rehearse to time and manage nerves",
+        "Explain your project to a non-specialist in two minutes"
+      ],
+      "keyConcepts": [
+        {
+          "term": "One-message talk",
+          "definition": "Organise the presentation so that the audience leaves able to repeat one central finding."
+        },
+        {
+          "term": "Slide hierarchy",
+          "definition": "One idea per slide, readable fonts, minimal text and figures that you point to and explain."
+        },
+        {
+          "term": "Signposting",
+          "definition": "Short statements that tell listeners where the talk is going and why."
+        },
+        {
+          "term": "Q&A strategy",
+          "definition": "Listen fully, restate the question, answer directly and briefly, and say clearly when you do not know."
+        },
+        {
+          "term": "Elevator pitch",
+          "definition": "A 60-120 second summary for someone outside your field."
+        },
+        {
+          "term": "Viva or defence",
+          "definition": "An oral examination where examiners explore what you did, why, and what it means."
+        }
+      ],
+      "deeper": {
+        "beginner": "Write the take-home message first as one sentence. Then plan the talk as a story: why the question matters, what you did, what you found, what it means. Use few words on slides and large figures; speak the explanation. Practise out loud with a timer and a friend.",
+        "intermediate": "Begin by orienting the audience (a simple diagram of the system), state the question and then show only the key experiments, each with control and result. Label axes and highlight the comparison you want people to see. Prepare backup slides for likely questions such as sample sizes, controls or alternative explanations. For the viva, re-read your thesis, know every figure and be ready to explain limitations and what you would do next.",
+        "advanced": "Anticipate examiners' lines of attack: unit of replication, controls, alternative interpretations, over-claiming and relevance of the model system. Treat criticism as information, answer with evidence and be willing to say 'that is a limitation and here is how I would test it'. Reflect on how the narrative changes for different audiences (peers, examiners, lay people) while the facts stay the same."
+      },
+      "commonMistakes": [
+        "Putting the whole thesis into the slides and reading them aloud",
+        "Ending with 'thank you' and no conclusion slide",
+        "Guessing an answer rather than admitting uncertainty",
+        "Not practising with a timer and running over"
+      ],
+      "videos": [
+        {
+          "youtubeId": "SFxVihJ1KSo",
+          "title": "How to give a good scientific talk",
+          "channel": "EMBL",
+          "level": "beginner",
+          "whyWatch": "EMBL scientists give crisp tips on structure and delivery of a research talk."
+        },
+        {
+          "youtubeId": "V_TqB9VF57E",
+          "title": "The Importance of Giving a Good Talk",
+          "channel": "iBiology",
+          "level": "beginner",
+          "whyWatch": "Why a good talk matters and how to start planning one."
+        },
+        {
+          "youtubeId": "Hp7Id3Yb9XQ",
+          "title": "Designing effective scientific presentations",
+          "channel": "Science Communication Lab",
+          "level": "intermediate",
+          "whyWatch": "A longer lecture by a Stanford neurobiologist on designing slides and talks that audiences follow."
+        },
+        {
+          "youtubeId": "lfiNFNTwFGU",
+          "title": "Q & A Questions: How to Answer Any Presentation Question",
+          "channel": "Rule The Room",
+          "level": "beginner",
+          "whyWatch": "Practical techniques for handling questions calmly and clearly."
+        },
+        {
+          "youtubeId": "dh0pJdgY6Lc",
+          "title": "2014 Three Minute Thesis winning presentation",
+          "channel": "University of South Australia",
+          "level": "beginner",
+          "whyWatch": "A model of explaining a research project to a non-specialist in three minutes."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.0030077",
+          "title": "Ten Simple Rules for Making Good Oral Presentations",
+          "authors": "Bourne PE",
+          "year": 2007,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Short, practical rules on knowing your audience, telling one story and keeping slides supportive rather than dominant. Handy to re-read the night before any talk.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.0030077"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Writing Center Tips and Tools",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+        },
+        {
+          "title": "ColorBrewer",
+          "provider": "Cynthia Brewer / Penn State",
+          "type": "tool",
+          "url": "https://colorbrewer2.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Pick colour palettes that are print-safe and colour-blind safe for figures."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the best first step in planning a project talk?",
+          "options": [
+            "Choose a slide template",
+            "Decide the one message the audience should leave with",
+            "Write every detail you did",
+            "Add animations"
+          ],
+          "answer": 1,
+          "explanation": "A single central message gives a filter for which results to include."
+        },
+        {
+          "question": "An examiner asks something you do not know. What is best?",
+          "options": [
+            "Make up a plausible answer",
+            "Say you do not know, explain how you would find out and relate it to what you do know",
+            "Change the subject",
+            "Argue that the question is unfair"
+          ],
+          "answer": 1,
+          "explanation": "Honesty with a reasoned approach shows scientific maturity and is far better than a guess."
+        },
+        {
+          "question": "What is the role of slides in a good talk?",
+          "options": [
+            "To hold the full script",
+            "To support the explanation with figures and key phrases",
+            "To replace the speaker",
+            "To show every dataset"
+          ],
+          "answer": 1,
+          "explanation": "Slides are visual aids for the spoken argument."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "GKGtkzgKfkc",
+      "title": "The Scientific Method",
+      "channel": "Bozeman Science",
+      "level": "beginner",
+      "whyWatch": "A compact review of the scientific method that frames the whole project."
+    },
+    {
+      "youtubeId": "42QuXLucH3Q",
+      "title": "Is Most Published Research Wrong?",
+      "channel": "Veritasium",
+      "level": "beginner",
+      "whyWatch": "A popular explanation of why design, statistics and transparency matter in research."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (5th ed.)",
+      "provider": "NCBI Bookshelf (Berg, Tymoczko, Stryer)",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic full-text biochemistry textbook; excellent for metabolism, enzymes and signalling."
+    },
+    {
+      "title": "Molecular Biology of the Cell (4th ed.)",
+      "provider": "NCBI Bookshelf (Alberts et al.)",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A full free textbook of cell and molecular biology to revise any topic in depth."
+    },
+    {
+      "title": "PubMed Quick Start Tutorial",
+      "provider": "NLM",
+      "type": "tutorial",
+      "url": "https://www.nlm.nih.gov/bsd/disted/pubmedtutorial/cover.html",
+      "free": true,
+      "level": "beginner",
+      "note": "A short, step-by-step official tutorial covering searching, filters and saving results."
+    }
+  ]
+}

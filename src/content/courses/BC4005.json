@@ -1,0 +1,1215 @@
+{
+  "code": "BC 4005",
+  "title": "Advanced Topics in Biochemistry and Molecular Biology",
+  "level": 4,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Five frontier technologies that changed how we see, predict, rewrite and engineer biological molecules.",
+  "overview": "Advanced Topics is a window onto the research frontier, and the specific topics vary from year to year with the staff teaching it. We therefore chose five well-established frontier areas rather than guessing one year's list: cryo-electron microscopy, AI-driven protein structure prediction and design, CRISPR genome editing, single-cell and spatial omics, and synthetic biology. This course is deliberately the 'tools and engineering' half of the pair; its companion BC 4006 covers the 'regulation and chemistry' half (epigenetics, RNA biology, chemical biology, protein degradation and condensates). Each unit tells you how the method works, what it has already changed, where it fails, and how to read a primary paper that uses it.",
+  "whyItMatters": "Most of the methods that will define your first decade as a scientist did not exist when your lecturers were students. Knowing how a cryo-EM map, an AlphaFold model, a base-editing experiment, a single-cell atlas or a genetic circuit is actually produced lets you judge what it can and cannot tell you, which is the core skill of an honours graduate in biochemistry and molecular biology.",
+  "prerequisites": [
+    "BC 3025",
+    "MB 3022",
+    "MB 3025",
+    "BC 3053"
+  ],
+  "careerLinks": [
+    "Structural biology and drug discovery (CROs, pharma, academic labs)",
+    "Genomics and bioinformatics core facilities",
+    "Gene and cell therapy companies",
+    "Synthetic biology and bioindustry start-ups",
+    "Postgraduate research (MPhil/PhD) in molecular life sciences"
+  ],
+  "studyTips": [
+    "For every method, draw a one-page flowchart from sample to final figure; examiners love 'what could go wrong at each step'.",
+    "Read one primary paper per unit slowly: figure 1 first, then methods, then the abstract last.",
+    "Keep a running table of 'what this method can see' versus 'what it is blind to' (e.g. cryo-EM sees averages; scRNA-seq loses spatial context).",
+    "Use the free databases (EMDB, PDB, AlphaFold DB, CELLxGENE) hands-on; ten minutes of clicking beats an hour of rereading notes.",
+    "Because topics vary by year, treat this site as background and prioritise your lecturers' slides and assigned papers."
+  ],
+  "units": [
+    {
+      "id": "cryo-em",
+      "title": "Cryo-electron microscopy: seeing molecules frozen in action",
+      "hours": 6,
+      "hook": "For decades the first step to a protein structure was persuading it to form a perfect crystal, and many of the most interesting molecular machines simply refused. Then people learned to flash-freeze molecules in a whisper of glassy ice and photograph them one by one, and structures that had been out of reach for a generation appeared on the screen almost routinely.",
+      "learningObjectives": [
+        "Explain why vitrification and low electron dose are needed to image hydrated biomolecules",
+        "Describe the single-particle workflow from grid preparation to a refined 3D map",
+        "Interpret resolution (Fourier shell correlation) and local-resolution maps critically",
+        "Compare cryo-EM with X-ray crystallography and NMR for different kinds of target",
+        "Explain what cryo-electron tomography and subtomogram averaging add",
+        "Identify common failure modes such as preferred orientation, heterogeneity and beam-induced motion"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Vitrification",
+          "definition": "Plunge-freezing a thin aqueous film so fast that water forms amorphous (glass-like) ice rather than crystals, preserving molecules in a near-native hydrated state."
+        },
+        {
+          "term": "Radiation damage and dose",
+          "definition": "Electrons break chemical bonds in the sample, so images must be taken with a very low dose per area, which is why raw images are extremely noisy."
+        },
+        {
+          "term": "Direct electron detector",
+          "definition": "A camera that counts electrons directly with high sensitivity and records short movies, enabling correction of motion during exposure; a key part of the 'resolution revolution'."
+        },
+        {
+          "term": "Contrast transfer function (CTF)",
+          "definition": "The way the microscope optics modulate image information at different spatial frequencies depending on defocus; it must be estimated and corrected during processing."
+        },
+        {
+          "term": "2D and 3D classification",
+          "definition": "Computational sorting of particle images into groups with similar views or conformations so that only homogeneous subsets are averaged."
+        },
+        {
+          "term": "Single-particle reconstruction",
+          "definition": "Combining hundreds of thousands of noisy 2D projections of identical particles in random orientations into one 3D density map."
+        },
+        {
+          "term": "Fourier shell correlation (FSC)",
+          "definition": "A statistic comparing two independently reconstructed half-maps at each spatial frequency; the resolution is read where correlation falls below a chosen threshold (commonly 0.143)."
+        },
+        {
+          "term": "Preferred orientation",
+          "definition": "A problem where particles stick to the air-water interface in only a few orientations, leaving gaps in the 3D data and anisotropic maps."
+        },
+        {
+          "term": "Cryo-electron tomography (cryo-ET)",
+          "definition": "Tilting a frozen specimen and collecting a series of images to build a 3D volume, allowing structures to be seen inside cells or organelles."
+        },
+        {
+          "term": "Subtomogram averaging",
+          "definition": "Extracting many copies of the same complex from tomograms and averaging them to reach higher resolution than a single tomogram gives."
+        },
+        {
+          "term": "Model building and validation",
+          "definition": "Fitting an atomic model into the density and checking geometry and fit to map (for example with map-model correlation) before deposition in EMDB and PDB."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine trying to photograph a snowflake that melts the moment light hits it. Cryo-EM freezes the molecules so quickly that they are trapped in glassy ice, then fires a gentle beam of electrons through them. Each picture is faint and grainy, but because there are thousands of identical copies lying in different directions, a computer can combine them into a sharp 3D shape, like reconstructing a statue from a pile of blurry photos taken from every angle. Where the analogy breaks: the computer cannot simply stack the photos; it first has to work out from which direction each one was taken.",
+        "intermediate": "A sample is applied to a holey carbon grid, blotted and plunged into liquid ethane. Thousands of movies are collected automatically, motion-corrected, and the CTF is estimated. Particles are picked, subjected to 2D classification to remove junk, and then refined in 3D against an initial model with half-sets kept independent to avoid overfitting. Beyond the global resolution, you should look at local resolution, because flexible domains and peripheral regions are usually worse than the core. The method's big advantage over crystallography is that it needs no crystals and small amounts of sample, can capture several conformational states from one dataset, and handles large complexes such as ribosomes, spliceosomes and membrane transporters. Its weaknesses are small targets (below roughly 50 kDa are hard without scaffolds), heterogeneous samples, and the cost of equipment.",
+        "advanced": "Modern workflows (RELION, cryoSPARC and related packages) use Bayesian or stochastic gradient approaches for ab initio reconstruction and refinement, with per-particle CTF refinement, Ewald-sphere and higher-order aberration correction pushing resolution below 2 angstroms, and apoferritin reaching about 1.2 angstroms with improved electron sources, energy filters and detectors. Heterogeneity analysis (multi-body refinement, 3D variability and deep-learning approaches) turns a single dataset into a conformational landscape, linking structure to mechanism. Risks include model bias (template-induced features), overfitting through non-independent half-sets, over-sharpening, and over-interpretation of low-resolution density when building side chains. Cryo-ET with focused ion beam milling of lamellae and subtomogram averaging now provides in situ structures that you should compare against purified-complex structures. Always cross-check unusual claims with half-map FSC, local resolution, map-model FSC and the deposited raw data when available."
+      },
+      "commonMistakes": [
+        "Quoting a single global resolution as if every region of the map were that good; flexible regions are often much worse.",
+        "Assuming cryo-EM maps are 'pictures' of single molecules; they are averages over many particles after classification choices.",
+        "Treating cryo-EM as always better than crystallography; small, rigid, easily crystallised proteins are often faster and higher resolution by X-ray.",
+        "Forgetting that the specimen is frozen in a thin film and may be perturbed by the air-water interface."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Qq8DO-4BnIY",
+          "title": "What is Cryo-Electron Microscopy (Cryo-EM)?",
+          "channel": "UC San Francisco (UCSF)",
+          "level": "beginner",
+          "whyWatch": "A two-and-a-half minute orientation to what the technique does and why people are excited about it."
+        },
+        {
+          "youtubeId": "026rzTXb1zw",
+          "title": "The 2017 Nobel Prize in Chemistry: Cryo-electron microscopy explained",
+          "channel": "Chemical & Engineering News",
+          "level": "beginner",
+          "whyWatch": "Short story of how the three laureates' contributions (vitrification, image processing, electron detection) fit together."
+        },
+        {
+          "youtubeId": "BJKkC0W-6Qk",
+          "title": "A 3 minute introduction to CryoEM",
+          "channel": "Gabe Lander",
+          "level": "intermediate",
+          "whyWatch": "A practitioner's quick walk through grid, microscope, particle images and reconstruction."
+        },
+        {
+          "youtubeId": "Bk5lBvwSe-s",
+          "title": "Yifan Cheng (UCSF & HHMI) 1: Single Particle Cryo-EM",
+          "channel": "iBiology",
+          "level": "advanced",
+          "whyWatch": "A researcher explains the technical principles and the progress in resolution in more depth, ideal before reading methods sections."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1251652",
+          "title": "The Resolution Revolution",
+          "authors": "Kuhlbrandt W",
+          "year": 2014,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A short, readable perspective that explains why direct electron detectors suddenly made near-atomic structures routine; a good first paper for this unit.",
+          "readingQuestions": [
+            "Which hardware change had the largest effect on resolution, and why?",
+            "Which classes of protein benefited first?"
+          ]
+        },
+        {
+          "doi": "10.1016/j.cell.2015.03.050",
+          "title": "A Primer to Single-Particle Cryo-Electron Microscopy",
+          "authors": "Cheng Y, Grigorieff N, Penczek PA, Walz T",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1016/j.cell.2015.03.050",
+          "whyItMatters": "Written by four method developers, it walks through each stage of the single-particle pipeline and the pitfalls at each, a practical companion to your lecture notes."
+        },
+        {
+          "doi": "10.1038/s41586-020-2833-4",
+          "title": "Atomic-resolution protein structure determination by cryo-EM",
+          "authors": "Yip KM, Fischer N, Paknia E, Chari A, Stark H",
+          "year": 2020,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Shows what happens at the technical limit: individual atoms and even hydrogens become visible in a well-behaved test protein, which shows how far the method has come and what limits it."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Electron Microscopy Data Bank (EMDB)",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/emdb/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Download real maps and half-maps and look at their reported resolution and validation reports."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Filter entries by method (electron microscopy) to see how fast cryo-EM structures are accumulating."
+        },
+        {
+          "title": "PDB-101: Learn about structural biology",
+          "provider": "RCSB PDB",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Friendly illustrated introductions to molecules and methods, good for building intuition before the research literature."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2017: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2017/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear lay account of the history behind the technique and its key innovations."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why are cryo-EM samples vitrified rather than slowly frozen?",
+          "options": [
+            "To produce large ice crystals that scatter electrons strongly",
+            "To trap molecules in amorphous ice that preserves hydrated structure without crystal damage",
+            "To remove all water so the sample is dry",
+            "To make the protein crystallise on the grid"
+          ],
+          "answer": 1,
+          "explanation": "Rapid plunge-freezing yields glass-like amorphous ice. Crystalline ice would damage the molecules and give strong diffraction artefacts, so vitrification is essential for preserving near-native structure."
+        },
+        {
+          "question": "What does the Fourier shell correlation between two independent half-maps tell you?",
+          "options": [
+            "The molecular mass of the complex",
+            "How reproducible the map is at each spatial frequency, from which a resolution is estimated",
+            "The number of particles picked",
+            "Whether the protein is membrane-bound"
+          ],
+          "answer": 1,
+          "explanation": "FSC compares independently reconstructed half-datasets; the frequency where correlation falls below a threshold gives the nominal resolution, a measure of consistency, not necessarily of local quality."
+        },
+        {
+          "question": "Which problem is most characteristic of particles adhering to the air-water interface?",
+          "options": [
+            "Chromatic aberration in the lens",
+            "Preferred orientation giving incomplete angular coverage",
+            "Over-expression of the protein",
+            "Failure of the CTF to exist"
+          ],
+          "answer": 1,
+          "explanation": "When particles lie in only a few orientations the 3D reconstruction is anisotropic. Solutions include detergents, tilting the stage, or different grid supports."
+        },
+        {
+          "question": "What is the main reason to use cryo-electron tomography with subtomogram averaging?",
+          "options": [
+            "To avoid freezing the sample",
+            "To study structures in situ inside cells and average repeated copies for higher resolution",
+            "To replace the need for any computation",
+            "To measure enzyme kinetics"
+          ],
+          "answer": 1,
+          "explanation": "Tomography records a tilt series of a given specimen; repeated complexes can be extracted and averaged, giving molecular structures in their cellular context."
+        }
+      ]
+    },
+    {
+      "id": "ai-protein-structure-design",
+      "title": "AI for protein structure prediction and design",
+      "hours": 6,
+      "hook": "For fifty years, predicting how an amino acid sequence folds was called a grand challenge, and in 2020 a neural network matched experimental accuracy in a blind competition. Within two years predicted structures for hundreds of millions of proteins were freely downloadable, and designers began asking the reverse question: if we can predict structure from sequence, can we write sequences for structures nature never made?",
+      "learningObjectives": [
+        "Explain what problem AlphaFold-type models solve and how the CASP benchmark measures it",
+        "Interpret pLDDT and predicted aligned error to judge how far to trust a model",
+        "Distinguish structure prediction, inverse folding and generative backbone design",
+        "Describe how protein language models learn from sequences without structures",
+        "List the main limits of current methods (dynamics, ligands, disorder, novelty, accuracy of side chains)",
+        "Use the AlphaFold Database and a prediction server responsibly in a small project"
+      ],
+      "keyConcepts": [
+        {
+          "term": "CASP",
+          "definition": "Critical Assessment of protein Structure Prediction, a biennial blind contest in which predictors model proteins whose structures are not yet public."
+        },
+        {
+          "term": "Multiple sequence alignment (MSA) and co-evolution",
+          "definition": "Aligning homologous sequences reveals residue pairs that mutate together, hinting that they touch in 3D; a major information source for modern predictors."
+        },
+        {
+          "term": "Attention-based network",
+          "definition": "A neural architecture in which each residue (or residue pair) updates its representation by weighting information from all others, allowing long-range structural reasoning."
+        },
+        {
+          "term": "pLDDT",
+          "definition": "Per-residue confidence score (0 to 100) predicted by AlphaFold; low values often mark flexible or disordered regions rather than 'wrong' ones."
+        },
+        {
+          "term": "Predicted aligned error (PAE)",
+          "definition": "A matrix estimating how well the relative position of two residues is predicted, useful for judging domain arrangement and complexes."
+        },
+        {
+          "term": "Protein language model",
+          "definition": "A neural network trained on millions of protein sequences to predict masked residues, from which structural and functional information can be extracted."
+        },
+        {
+          "term": "Inverse folding",
+          "definition": "Designing a sequence expected to fold into a specified backbone structure (for example with ProteinMPNN)."
+        },
+        {
+          "term": "Diffusion-based backbone generation",
+          "definition": "Generating new protein backbones by iteratively denoising random coordinates, optionally conditioned on a binding site or motif (for example RFdiffusion)."
+        },
+        {
+          "term": "De novo design",
+          "definition": "Creating proteins with sequences and folds not found in nature, followed by experimental testing of folding, stability and function."
+        },
+        {
+          "term": "Design-build-test loop",
+          "definition": "Computational designs must be expressed, purified and measured; typical success rates and the need for screening remain central."
+        }
+      ],
+      "deeper": {
+        "beginner": "A protein is a chain of amino acids that folds into a specific 3D shape, and the shape decides what the protein does. Predicting that shape from the sequence alone used to be extremely hard. AI systems such as AlphaFold learn patterns from known structures and from related sequences across species, and now give shape predictions that are often as good as experimental ones for well-behaved proteins. Think of it like a very good student who has studied every solved structure; it can handle questions that look like what it has seen but can still be wrong on unfamiliar ones, and it gives a confidence score to tell you when to doubt it.",
+        "intermediate": "AlphaFold 2 combined evolutionary information from MSAs with a neural network that iteratively refines both residue-pair and structure representations, producing coordinates with confidence metrics. RoseTTAFold used a related three-track idea. Protein language models such as ESM learn evolutionary constraints from single sequences and can predict structure faster, at some cost in accuracy for orphan proteins. On the design side, diffusion models (RFdiffusion) generate backbones around a target or motif, and ProteinMPNN proposes sequences to fit them; designed binders, enzymes and symmetric assemblies have then been validated experimentally. Always remember that a prediction is a hypothesis: it gives one static, usually ground-state conformation, may miss ligands, metal ions, post-translational modifications and conformational switches, and low pLDDT segments should not be read as structure.",
+        "advanced": "Beyond monomers, AlphaFold-Multimer and AlphaFold 3 extend to complexes, nucleic acids and small molecules, with diffusion-based all-atom generation; however, evaluating them requires benchmarks that avoid training-set leakage and that test conformational ensembles rather than single structures. Researchers probe accuracy through novel folds, orphan families, effects of point mutations (where predictors are generally poor at stability change), and ensemble methods such as MSA subsampling to elicit alternative states. In design, success depends on filtering by predicted confidence, in silico self-consistency (folding the designed sequence and comparing back to the intended backbone), and high-throughput experimental screening; affinities and catalytic efficiency commonly need further optimisation by directed evolution. Biosecurity and dual-use considerations for generative design are an active policy topic you should be able to discuss."
+      },
+      "commonMistakes": [
+        "Treating a high-confidence prediction as proof of function or of the biologically relevant conformation.",
+        "Interpreting low pLDDT regions as incorrect structure rather than likely disorder or flexibility.",
+        "Assuming predicted structures replace experiments; they guide experiments and often need validation.",
+        "Using AlphaFold to predict the effect of a single point mutation on stability as if it were a reliable ddG calculator."
+      ],
+      "animation": "protein-folding",
+      "videos": [
+        {
+          "youtubeId": "7q8Uw3rmXyE",
+          "title": "What Is AlphaFold?",
+          "channel": "NEJM Group",
+          "level": "beginner",
+          "whyWatch": "A five-minute overview of what AlphaFold does and why biologists care."
+        },
+        {
+          "youtubeId": "P_fHJIYENdI",
+          "title": "AlphaFold - The Most Useful Thing AI Has Ever Done",
+          "channel": "Veritasium",
+          "level": "beginner",
+          "whyWatch": "A well-told history of the protein-folding problem, CASP and the breakthrough, with good intuition about what the network learns."
+        },
+        {
+          "youtubeId": "PJLT0cAPNfs",
+          "title": "5 challenges we could solve by designing new proteins",
+          "channel": "TED",
+          "level": "intermediate",
+          "whyWatch": "David Baker explains de novo protein design and what new proteins could be used for."
+        },
+        {
+          "youtubeId": "KbDvQgsOI-E",
+          "title": "Nobel Prize lecture: David Baker, Nobel Prize in Chemistry 2024",
+          "channel": "Nobel Prize",
+          "level": "advanced",
+          "whyWatch": "The laureate's own account of computational design from early Rosetta work to deep-learning methods."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A et al",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1038/s41586-021-03819-2",
+          "whyItMatters": "The paper behind the CASP14 result. Focus on the overview figures and the description of confidence metrics rather than every network detail.",
+          "readingQuestions": [
+            "What inputs does the network use besides the sequence?",
+            "How does the paper justify using pLDDT as a confidence measure?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.abj8754",
+          "title": "Accurate prediction of protein structures and interactions using a three-track neural network",
+          "authors": "Baek M, DiMaio F, Anishchenko I et al",
+          "year": 2021,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "An independent open approach reaching similar accuracy and extending naturally to protein complexes, helpful for seeing that the idea is not unique to one lab."
+        },
+        {
+          "doi": "10.1038/s41586-023-06415-8",
+          "title": "De novo design of protein structure and function with RFdiffusion",
+          "authors": "Watson JL, Juergens D, Bennett NR et al",
+          "year": 2023,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1038/s41586-023-06415-8",
+          "whyItMatters": "Shows generative design of binders, symmetric assemblies and functional-site scaffolds with experimental validation, illustrating how prediction networks were repurposed to create."
+        },
+        {
+          "doi": "10.1038/s41586-024-07487-w",
+          "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+          "authors": "Abramson J, Adler J, Dunger J et al",
+          "year": 2024,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1038/s41586-024-07487-w",
+          "whyItMatters": "Extends prediction beyond proteins to nucleic acids, ligands and ions; read the limitations section to see what remains unsolved."
+        }
+      ],
+      "resources": [
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI / Google DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up your favourite protein, colour by pLDDT and inspect the PAE plot to practise judging confidence."
+        },
+        {
+          "title": "AlphaFold online course",
+          "provider": "EMBL-EBI Training",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/",
+          "free": true,
+          "level": "beginner",
+          "note": "A free self-paced course on how AlphaFold works, how to use the database and how to interpret its confidence scores."
+        },
+        {
+          "title": "ColabFold",
+          "provider": "Sergey Ovchinnikov, Martin Steinegger and colleagues",
+          "type": "tool",
+          "url": "https://github.com/sokrypton/ColabFold",
+          "free": true,
+          "level": "intermediate",
+          "note": "Run predictions in a notebook without local GPUs; good for testing your own sequence or a mutant."
+        },
+        {
+          "title": "Nobel Prize in Chemistry 2024: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2024/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable summary of the computational protein design and structure prediction achievements."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A residue range in an AlphaFold model has pLDDT below 50. What is the best interpretation?",
+          "options": [
+            "It is certainly a beta sheet",
+            "The prediction there is low confidence and may be disordered or flexible",
+            "It is a transmembrane helix",
+            "The region was experimentally determined"
+          ],
+          "answer": 1,
+          "explanation": "Low pLDDT often corresponds to intrinsically disordered or flexible segments; the coordinates should not be read as a reliable folded structure."
+        },
+        {
+          "question": "Which task is ProteinMPNN designed for?",
+          "options": [
+            "Predicting protein structure from sequence",
+            "Proposing sequences that fit a given backbone structure",
+            "Sequencing proteins by mass spectrometry",
+            "Predicting gene expression"
+          ],
+          "answer": 1,
+          "explanation": "ProteinMPNN solves the inverse folding problem: given a backbone, it proposes amino acid sequences likely to adopt it."
+        },
+        {
+          "question": "Why can co-evolution information in a multiple sequence alignment help structure prediction?",
+          "options": [
+            "Mutations in residues that contact each other tend to be correlated across homologues",
+            "Aligned sequences are always identical",
+            "It reveals the gene's promoter",
+            "It measures protein concentration"
+          ],
+          "answer": 0,
+          "explanation": "If two residues interact, a mutation at one is often compensated at the other during evolution, so correlated changes indicate spatial proximity."
+        },
+        {
+          "question": "Which statement about predicted structures is most accurate?",
+          "options": [
+            "They fully replace experimental structure determination",
+            "They are static hypotheses that often miss ligands, modifications and alternative conformations",
+            "They always show the active site conformation",
+            "They are unaffected by training data"
+          ],
+          "answer": 1,
+          "explanation": "Predictions are powerful but usually give one conformation and can overlook cofactors, post-translational modifications and dynamics, so experimental validation remains important."
+        }
+      ]
+    },
+    {
+      "id": "crispr-genome-editing",
+      "title": "CRISPR and genome editing: from bacterial immunity to medicine",
+      "hours": 6,
+      "hook": "Bacteria have been fighting viruses for billions of years, and one of their weapons turned out to be a programmable DNA scissors that a student can retarget by changing about twenty letters of RNA. Within a decade that curiosity moved from a basic microbiology puzzle to approved treatments for sickle cell disease and beta-thalassaemia.",
+      "learningObjectives": [
+        "Explain the bacterial CRISPR-Cas adaptive immune system and how Cas9 was repurposed",
+        "Describe the roles of guide RNA, PAM and DNA double-strand break repair pathways",
+        "Compare nuclease editing, base editing and prime editing in mechanism and outcomes",
+        "Discuss off-target effects, delivery methods and mosaicism as practical challenges",
+        "Summarise the logic of the first approved CRISPR therapy for sickle cell disease and beta-thalassaemia",
+        "Outline key ethical positions on somatic versus heritable editing"
+      ],
+      "keyConcepts": [
+        {
+          "term": "CRISPR array and spacers",
+          "definition": "Repeats interspersed with short sequences acquired from past invaders; transcribed to guide Cas proteins to matching foreign DNA."
+        },
+        {
+          "term": "Cas9 and guide RNA",
+          "definition": "A single-guide RNA (fusion of crRNA and tracrRNA) directs Cas9 to a complementary DNA site, where it cuts both strands."
+        },
+        {
+          "term": "PAM (protospacer adjacent motif)",
+          "definition": "A short sequence next to the target (NGG for the commonly used SpCas9) that Cas9 must recognise before it can unwind DNA and test the guide match."
+        },
+        {
+          "term": "NHEJ versus HDR",
+          "definition": "Two repair routes for double-strand breaks: error-prone end joining (insertions and deletions, useful for gene knockout) and homology-directed repair using a template (precise changes, less efficient and cell-cycle dependent)."
+        },
+        {
+          "term": "Base editor",
+          "definition": "A fusion of a deaminase with a Cas protein that cannot make double-strand breaks, converting one base to another (C-to-T or A-to-G) within a narrow window."
+        },
+        {
+          "term": "Prime editor",
+          "definition": "A nickase Cas9 fused to a reverse transcriptase and programmed by a pegRNA that carries both target information and the desired edit, allowing small insertions, deletions and many substitutions."
+        },
+        {
+          "term": "Off-target editing",
+          "definition": "Cutting or modification at sites resembling the guide sequence; detected by genome-wide assays and reduced by high-fidelity variants and careful design."
+        },
+        {
+          "term": "Delivery",
+          "definition": "Getting editors into the right cells: electroporation of ribonucleoproteins ex vivo, or lipid nanoparticles and viral vectors in vivo."
+        },
+        {
+          "term": "Somatic versus germline editing",
+          "definition": "Somatic edits affect only the treated individual; germline edits would be inherited and are widely considered ethically contentious."
+        },
+        {
+          "term": "Cas12 and Cas13",
+          "definition": "Other CRISPR effectors with different PAMs and substrates, Cas13 targeting RNA; both are exploited for diagnostics and RNA editing."
+        }
+      ],
+      "deeper": {
+        "beginner": "Bacteria keep short snippets of DNA from viruses that attacked them, and use these records to teach a protein called Cas9 what to look for. In the lab, scientists swap in their own guide RNA, so Cas9 goes to any matching spot in a genome and cuts. The cell then repairs the cut, and the repair can switch a gene off or, if a template is given, fix a mistake. Think of it as a word processor's find-and-replace, but one that sometimes makes typos or cuts the wrong word, which is why accuracy is the main engineering challenge.",
+        "intermediate": "In S. pyogenes Cas9, the guide RNA pairs with a 20-nucleotide target adjacent to an NGG PAM; cleavage by the HNH and RuvC domains yields a blunt double-strand break. Cells typically repair via NHEJ, producing indels that disrupt reading frames, while HDR requires a donor template. Base editors avoid double-strand breaks by using a catalytically impaired Cas9 fused to a cytidine or adenine deaminase, enabling point-mutation corrections with fewer indels. Prime editing extends this with a pegRNA and reverse transcriptase to write defined edits. For the sickle cell and thalassaemia therapy, a patient's blood stem cells are edited ex vivo in the BCL11A erythroid enhancer to reactivate fetal haemoglobin, then returned after conditioning; this illustrates why choosing a target that is a regulatory switch can be easier than fixing each patient's mutation.",
+        "advanced": "Specificity depends on guide mismatch tolerance, chromatin accessibility, and nuclease concentration and duration; high-fidelity Cas9 variants, truncated guides and transient RNP delivery reduce off-target events, while assays such as GUIDE-seq, CIRCLE-seq and whole-genome sequencing characterise them. Large rearrangements, chromothripsis and p53-mediated selection are recognised consequences of double-strand breaks, motivating break-free editors. Base editors can cause bystander edits in the activity window and guide-independent deamination, and prime editing efficiency varies with pegRNA design and mismatch repair, which is sometimes evaded by additional components. In vivo delivery is currently dominated by lipid nanoparticles to liver and AAV to other tissues, each with immunogenicity and payload limits. Regulatory evaluation of CRISPR therapies hinges on long-term follow-up, off-target risk assessment, and manufacturing quality, not just efficacy."
+      },
+      "commonMistakes": [
+        "Saying Cas9 'cuts at the gene you want' without mentioning the PAM requirement and off-target possibility.",
+        "Assuming HDR is the default outcome of a cut; NHEJ is usually much more frequent.",
+        "Equating base editing with prime editing; they differ in what they can write and in their components.",
+        "Treating the ex vivo therapy for blood disorders as a correction of the sickle mutation; it reactivates fetal haemoglobin instead."
+      ],
+      "videos": [
+        {
+          "youtubeId": "2pp17E4E-O8",
+          "title": "Genome Editing with CRISPR-Cas9",
+          "channel": "McGovern Institute",
+          "level": "beginner",
+          "whyWatch": "A clear animated explanation of how Cas9 and the guide RNA find and cut DNA and how the cell repairs it."
+        },
+        {
+          "youtubeId": "SuAxDVBt7kQ",
+          "title": "Jennifer Doudna (UC Berkeley / HHMI): Genome Engineering with CRISPR-Cas9",
+          "channel": "iBiology",
+          "level": "intermediate",
+          "whyWatch": "A co-discoverer tells the story of the mechanism and the early genome-engineering applications."
+        },
+        {
+          "youtubeId": "0W-_BmrdH-M",
+          "title": "How Base Editing Works",
+          "channel": "Boston Children's Hospital",
+          "level": "intermediate",
+          "whyWatch": "A concise animation of editing a single base without a double-strand break."
+        },
+        {
+          "youtubeId": "yG8QfhbWpYU",
+          "title": "David Liu: Base Editing and Prime Editing (Correcting Mutations that Cause Genetic Disease)",
+          "channel": "Oligonucleotide Therapeutics Society",
+          "level": "advanced",
+          "whyWatch": "The inventor of base and prime editors explains their design logic, performance and therapeutic prospects."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1225829",
+          "title": "A Programmable Dual-RNA-Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+          "authors": "Jinek M, Chylinski K, Fonfara I, Hauer M, Doudna JA, Charpentier E",
+          "year": 2012,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The in vitro biochemistry paper showing that Cas9 cuts DNA guided by RNA and that the guide can be engineered into one molecule; the foundation of everything that followed.",
+          "readingQuestions": [
+            "Which experiments show that both RNAs are needed for cleavage?",
+            "What did the authors predict about using the system as a tool?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.1231143",
+          "title": "Multiplex Genome Engineering Using CRISPR/Cas Systems",
+          "authors": "Cong L, Ran FA, Cox D et al",
+          "year": 2013,
+          "journal": "Science",
+          "level": "intermediate",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3795411/",
+          "whyItMatters": "Demonstrates that Cas9 works in human and mouse cells and that several guides can be used at once, the step that opened the toolkit to mammalian biology."
+        },
+        {
+          "doi": "10.1038/s41586-019-1711-4",
+          "title": "Search-and-replace genome editing without double-strand breaks or donor DNA",
+          "authors": "Anzalone AV, Randolph PB, Davis JR et al",
+          "year": 2019,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6907074/",
+          "whyItMatters": "Introduces prime editing; a good example of an engineering paper where figure 1's schematic explains the entire concept."
+        },
+        {
+          "doi": "10.1056/NEJMoa2031054",
+          "title": "CRISPR-Cas9 Gene Editing for Sickle Cell Disease and beta-Thalassemia",
+          "authors": "Frangoul H, Altshuler D, Cappellini MD et al",
+          "year": 2021,
+          "journal": "New England Journal of Medicine",
+          "level": "advanced",
+          "whyItMatters": "Early clinical evidence for the strategy behind the first approved CRISPR therapy; useful for seeing how translational data are reported, including follow-up and safety."
+        }
+      ],
+      "resources": [
+        {
+          "title": "CRISPR guide",
+          "provider": "Addgene",
+          "type": "tutorial",
+          "url": "https://www.addgene.org/crispr/guide/",
+          "free": true,
+          "level": "beginner",
+          "note": "Practical, well-organised overview of CRISPR components and experimental design from a non-profit plasmid repository."
+        },
+        {
+          "title": "CRISPRpedia",
+          "provider": "Innovative Genomics Institute",
+          "type": "reference",
+          "url": "https://innovativegenomics.org/crisprpedia/",
+          "free": true,
+          "level": "beginner",
+          "note": "Short explainers on mechanism, ethics and applications written by an academic institute."
+        },
+        {
+          "title": "CRISPOR guide design tool",
+          "provider": "CRISPOR (Concordet and Haeussler)",
+          "type": "tool",
+          "url": "http://crispor.gi.ucsc.edu/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Paste a sequence to see candidate guides, predicted off-targets and efficiency scores; a hands-on way to learn guide design."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2020: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear lay account of how CRISPR-Cas9 was discovered and turned into a genome-editing tool."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which feature must be present next to the target site for SpCas9 to cut?",
+          "options": [
+            "A TATA box",
+            "An NGG PAM",
+            "A poly(A) signal",
+            "A Shine-Dalgarno sequence"
+          ],
+          "answer": 1,
+          "explanation": "SpCas9 needs an adjacent NGG protospacer adjacent motif; without it, Cas9 does not initiate DNA unwinding even if the guide matches."
+        },
+        {
+          "question": "What is the principal difference between a base editor and a standard Cas9 nuclease?",
+          "options": [
+            "Base editors cut both strands more efficiently",
+            "Base editors chemically convert a base without making a double-strand break",
+            "Base editors only work in bacteria",
+            "Base editors insert large genes"
+          ],
+          "answer": 1,
+          "explanation": "Base editors fuse a deaminase to a Cas protein that does not make a double-strand break, converting C to T or A to G within an editing window."
+        },
+        {
+          "question": "The approved ex vivo therapy for sickle cell disease acts mainly by:",
+          "options": [
+            "Correcting the beta-globin point mutation in every cell",
+            "Editing a regulatory element to raise fetal haemoglobin",
+            "Deleting the sickle haemoglobin gene on both chromosomes",
+            "Replacing red blood cells with platelets"
+          ],
+          "answer": 1,
+          "explanation": "Editing the BCL11A erythroid enhancer reduces repression of gamma-globin, increasing fetal haemoglobin, which compensates for defective adult haemoglobin."
+        },
+        {
+          "question": "After a Cas9-induced double-strand break with no donor template, the most common repair outcome is:",
+          "options": [
+            "Perfect HDR restoration",
+            "Small insertions or deletions from NHEJ",
+            "Chromosome duplication",
+            "Spontaneous mRNA splicing"
+          ],
+          "answer": 1,
+          "explanation": "Without a template and in many cell states, NHEJ predominates and creates indels; this is why nuclease editing is efficient for knockouts."
+        }
+      ]
+    },
+    {
+      "id": "single-cell-spatial-omics",
+      "title": "Single-cell and spatial omics",
+      "hours": 6,
+      "hook": "A tissue sample ground up for sequencing gives you an average, like blending a fruit salad and trying to tell how many strawberries there were. Single-cell methods keep each cell separate, and spatial methods keep each cell in its neighbourhood, so a tissue stops being a smoothie and becomes a map.",
+      "learningObjectives": [
+        "Describe how droplet and plate-based scRNA-seq capture, barcode and sequence individual cells",
+        "Explain the role of UMIs and cell barcodes and the consequences of sparsity and dropout",
+        "Outline the standard analysis pipeline from quality control to clustering and annotation",
+        "Distinguish sequencing-based from imaging-based spatial transcriptomics",
+        "Recognise limitations such as dissociation bias, doublets, batch effects and over-interpreted UMAPs",
+        "Explain how cell atlases are being built and used"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Cell barcode",
+          "definition": "A short nucleotide tag added to all transcripts from one cell (or droplet) so reads can be assigned back to individual cells after pooled sequencing."
+        },
+        {
+          "term": "UMI (unique molecular identifier)",
+          "definition": "A random tag attached to each captured mRNA molecule before amplification so duplicates can be collapsed and counts reflect molecules rather than PCR copies."
+        },
+        {
+          "term": "Droplet-based capture",
+          "definition": "Microfluidic partitioning of cells into nanolitre droplets with barcoded beads, allowing thousands of cells per run at low cost per cell."
+        },
+        {
+          "term": "Sparsity and dropout",
+          "definition": "Most genes in most cells have zero counts because only a fraction of each cell's mRNA is captured; many zeros are technical, not biological absence."
+        },
+        {
+          "term": "Quality control",
+          "definition": "Filtering cells by number of detected genes and UMIs and by the fraction of mitochondrial reads, and flagging doublets."
+        },
+        {
+          "term": "Normalisation and highly variable genes",
+          "definition": "Adjusting for sequencing depth and selecting genes with biological variation to reduce noise before dimensionality reduction."
+        },
+        {
+          "term": "PCA, graph clustering and UMAP",
+          "definition": "Typical steps to reduce dimensions, build a neighbourhood graph, cluster cells and visualise them in two dimensions; the plot is an aid, not a quantitative map."
+        },
+        {
+          "term": "Pseudotime",
+          "definition": "A computational ordering of cells along an inferred continuum such as differentiation; it is a model, not measured time."
+        },
+        {
+          "term": "Spatial transcriptomics",
+          "definition": "Methods that measure gene expression while preserving tissue location, either by capturing mRNA on barcoded slides or by imaging individual transcripts in situ."
+        },
+        {
+          "term": "Cell atlas",
+          "definition": "A reference catalogue of cell types and states in an organism or organ, such as the Human Cell Atlas initiative."
+        }
+      ],
+      "deeper": {
+        "beginner": "Instead of mixing all the cells of a tissue and measuring the average, single-cell RNA-seq gives each cell a unique barcode so that its messenger RNAs can be counted separately. The result is a table with genes in rows and cells in columns. Cells that look alike are grouped, and the groups are matched to known cell types by their marker genes. Spatial methods add a map, showing which cell types sit next to each other. The analogy of a map has a limit: single-cell data are snapshots taken after cells are destroyed, so you infer changes over time rather than watching them.",
+        "intermediate": "In a typical droplet workflow, cells are loaded with barcoded beads so that each droplet contains one cell; mRNA is captured by poly(T) primers carrying the cell barcode and a UMI, reverse transcribed, amplified and sequenced. After alignment and counting, quality control removes empty droplets, dying cells with high mitochondrial reads, and probable doublets. Counts are normalised and log-transformed, highly variable genes selected, PCA performed, and a nearest-neighbour graph used for clustering; UMAP visualises clusters. Cluster annotation uses marker genes and reference datasets. Plate-based methods (for example Smart-seq) give full-length transcripts and higher sensitivity per cell but fewer cells. Spatial technologies such as barcoded-slide capture give transcriptome-wide data at spot resolution, whereas in situ hybridisation or sequencing methods (MERFISH, seqFISH) resolve individual transcripts in subcellular positions for targeted gene panels.",
+        "advanced": "Analysis choices strongly influence conclusions. Over-clustering produces spurious subtypes, while batch effects across donors or runs must be handled by integration methods without erasing genuine biology. Differential expression between conditions should use pseudo-bulk approaches across biological replicates, because treating cells as independent samples inflates significance (pseudoreplication). Count models such as negative binomial or variance-stabilising transforms address overdispersion, and RNA velocity or trajectory inference rely on assumptions about splicing kinetics or manifold structure. Multimodal assays (CITE-seq for surface proteins, scATAC-seq for chromatin accessibility, joint RNA and ATAC) and spatial deconvolution link cell state to regulation and location. Reference-based annotation can propagate errors, so validation by orthogonal methods such as imaging, flow cytometry or perturbation is essential."
+      },
+      "commonMistakes": [
+        "Reading distances in a UMAP plot as quantitative; clusters can be pushed apart or squeezed together by the algorithm.",
+        "Testing differential expression across cells rather than across biological replicates, giving unrealistically small p-values.",
+        "Assuming a zero count means a gene is not expressed in that cell.",
+        "Ignoring that tissue dissociation can stress cells and bias which cell types survive."
+      ],
+      "videos": [
+        {
+          "youtubeId": "k9VFNLLQP8c",
+          "title": "Single Cell Sequencing - Eric Chow (UCSF)",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A methods specialist explains how single cells are isolated, barcoded and sequenced and what the data look like."
+        },
+        {
+          "youtubeId": "_ND6pEsf5Kg",
+          "title": "Single cell transcriptomics - Introduction to single cell RNA-seq (1 of 10)",
+          "channel": "SIB Swiss Institute of Bioinformatics",
+          "level": "advanced",
+          "whyWatch": "A lecture introducing the analysis pipeline and its statistical issues in more depth."
+        },
+        {
+          "youtubeId": "q74euInZqm4",
+          "title": "Spatial Transcriptomics",
+          "channel": "Journal of Investigative Dermatology",
+          "level": "intermediate",
+          "whyWatch": "A short explanation of how location information is added to expression data, using tissue examples."
+        },
+        {
+          "youtubeId": "nkGeWvLm9Mc",
+          "title": "Human Cell Atlas - Reading biology",
+          "channel": "Broad Institute",
+          "level": "beginner",
+          "whyWatch": "A brief introduction to the motivation for charting every cell type in the human body."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nmeth.1315",
+          "title": "mRNA-Seq whole-transcriptome analysis of a single cell",
+          "authors": "Tang F, Barbacioru C, Wang Y et al",
+          "year": 2009,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "The first demonstration of RNA-seq from a single cell, showing why single-cell data revealed expression patterns that bulk averages hide."
+        },
+        {
+          "doi": "10.1016/j.cell.2015.05.002",
+          "title": "Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets",
+          "authors": "Macosko EZ, Basu A, Satija R et al",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "Introduced Drop-seq, which made profiling thousands of cells affordable through droplet barcoding, the conceptual ancestor of commercial platforms."
+        },
+        {
+          "doi": "10.7554/eLife.27041",
+          "title": "The Human Cell Atlas",
+          "authors": "Regev A, Teichmann SA, Lander ES et al",
+          "year": 2017,
+          "journal": "eLife",
+          "level": "beginner",
+          "whyItMatters": "A white-paper style article describing the aims and design of the Human Cell Atlas; easy to read and helpful for seeing the bigger scientific goal."
+        },
+        {
+          "doi": "10.15252/msb.20188746",
+          "title": "Current best practices in single-cell RNA-seq analysis: a tutorial",
+          "authors": "Luecken MD, Theis FJ",
+          "year": 2019,
+          "journal": "Molecular Systems Biology",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.15252/msb.20188746",
+          "whyItMatters": "A thorough, practical walk-through of each analysis step with advice on choices; ideal if you plan to analyse data yourself."
+        },
+        {
+          "doi": "10.1126/science.aaf2403",
+          "title": "Visualization and analysis of gene expression in tissue sections by spatial transcriptomics",
+          "authors": "Stahl PL, Salmen F, Vickovic S et al",
+          "year": 2016,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "An early barcoded-array method for capturing transcripts in tissue sections that led to commercial spatial platforms."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Single-cell best practices",
+          "provider": "Single-cell community open textbook",
+          "type": "textbook",
+          "url": "https://www.sc-best-practices.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "An open, practical book covering QC, normalisation, integration, trajectories and multimodal analysis with code."
+        },
+        {
+          "title": "Orchestrating Single-Cell Analysis with Bioconductor",
+          "provider": "Bioconductor",
+          "type": "textbook",
+          "url": "https://bioconductor.org/books/release/OSCA/",
+          "free": true,
+          "level": "advanced",
+          "note": "A rigorous R-based online book that explains statistical reasoning behind each step."
+        },
+        {
+          "title": "Human Cell Atlas data portal and resources",
+          "provider": "Human Cell Atlas",
+          "type": "database",
+          "url": "https://www.humancellatlas.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Entry point to the global atlas initiative, with datasets and project overviews."
+        },
+        {
+          "title": "CZ CELLxGENE Discover",
+          "provider": "Chan Zuckerberg Initiative",
+          "type": "tool",
+          "url": "https://cellxgene.cziscience.com/",
+          "free": true,
+          "level": "beginner",
+          "note": "Explore published single-cell datasets in the browser without any coding; excellent for building intuition."
+        },
+        {
+          "title": "Single Cell Expression Atlas",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/gxa/sc/home",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search genes or cell types across curated single-cell experiments from many species."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the purpose of a UMI in a scRNA-seq library?",
+          "options": [
+            "To identify which cell a read came from",
+            "To identify individual captured mRNA molecules so PCR duplicates can be collapsed",
+            "To tag the sample donor",
+            "To increase sequencing depth"
+          ],
+          "answer": 1,
+          "explanation": "The cell barcode identifies the cell. The UMI is a random tag per molecule that lets analysts count molecules rather than amplified copies."
+        },
+        {
+          "question": "A scientist finds zero reads for a gene in most cells of a cluster. What is the most cautious conclusion?",
+          "options": [
+            "The gene is not expressed in the cluster",
+            "The gene could be low expressed and simply not captured; zeros are partly technical",
+            "The gene is mitochondrial",
+            "The sample was contaminated"
+          ],
+          "answer": 1,
+          "explanation": "scRNA-seq captures only part of each cell's mRNA, so many zeros reflect sampling rather than true absence, particularly for low-abundance genes."
+        },
+        {
+          "question": "Why is pseudo-bulk analysis often recommended for differential expression between conditions?",
+          "options": [
+            "It makes plots prettier",
+            "Cells from the same donor are not independent replicates, so statistics should be done across donors",
+            "It increases the number of cells",
+            "It eliminates sequencing"
+          ],
+          "answer": 1,
+          "explanation": "Treating thousands of cells from a few individuals as independent inflates significance. Aggregating per sample respects the true replication."
+        },
+        {
+          "question": "Which technology resolves individual transcripts in situ for a targeted gene panel?",
+          "options": [
+            "Bulk RNA-seq",
+            "MERFISH or similar imaging-based methods",
+            "Western blotting",
+            "Northern blotting"
+          ],
+          "answer": 1,
+          "explanation": "Multiplexed fluorescence in situ hybridisation methods such as MERFISH image individual RNA molecules with subcellular position in a defined panel of genes."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-biology",
+      "title": "Synthetic biology: engineering circuits, pathways and genomes",
+      "hours": 6,
+      "hook": "A yeast cell now makes the precursor of an antimalarial drug that used to depend on a plant harvest, and some bacteria blink on and off like tiny clocks because someone wired three repressors into a ring. Synthetic biology asks whether living cells can be treated as engineering platforms, and it keeps discovering where that analogy holds and where biology refuses to cooperate.",
+      "learningObjectives": [
+        "Describe the design-build-test-learn cycle and the parts-devices-systems abstraction",
+        "Explain the logic of the genetic toggle switch and the repressilator",
+        "Compare common DNA assembly methods such as Golden Gate and Gibson assembly",
+        "Explain how metabolic engineering rewires pathways, using artemisinic acid as a case",
+        "Discuss synthetic and minimal genomes and what they show about essential genes",
+        "Evaluate biosafety and containment strategies for engineered organisms"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Design-build-test-learn (DBTL)",
+          "definition": "An iterative engineering loop in which a design is built, measured, and the results used to improve the next design."
+        },
+        {
+          "term": "Parts, devices, systems",
+          "definition": "An abstraction hierarchy: DNA parts (promoters, RBS, coding sequences, terminators) combine into devices and then larger systems."
+        },
+        {
+          "term": "Genetic toggle switch",
+          "definition": "Two repressors that inhibit each other's promoters, producing a bistable circuit that can be flipped between two stable states by transient signals."
+        },
+        {
+          "term": "Repressilator",
+          "definition": "A ring of three repressors, each inhibiting the next, producing oscillations in gene expression in single cells."
+        },
+        {
+          "term": "Chassis",
+          "definition": "The host organism (for example E. coli, yeast or a minimal cell) that supplies the machinery for a synthetic construct."
+        },
+        {
+          "term": "Orthogonality",
+          "definition": "Designing parts that interact with each other but not with host components, to reduce unwanted crosstalk."
+        },
+        {
+          "term": "Metabolic burden",
+          "definition": "The drain on a cell's resources (ribosomes, ATP, precursors) from expressing foreign genes, often reducing growth and shifting evolution toward loss of the construct."
+        },
+        {
+          "term": "DNA assembly",
+          "definition": "Methods such as Golden Gate (type IIS restriction enzymes and ligase) and Gibson assembly (overlap-based, isothermal) that join multiple fragments in one reaction."
+        },
+        {
+          "term": "Minimal genome",
+          "definition": "A genome reduced to genes needed for life under defined conditions; the JCVI-syn3.0 cell has about half a megabase and roughly 470 genes."
+        },
+        {
+          "term": "Biocontainment and kill switch",
+          "definition": "Engineered dependencies (such as synthetic auxotrophy) or toxin-antitoxin circuits intended to prevent survival or spread outside laboratory or industrial settings."
+        }
+      ],
+      "deeper": {
+        "beginner": "Synthetic biology treats genes like building blocks. You choose a switch (a promoter), an instruction (a coding sequence) and a stop signal (a terminator), join them, and put them into a cell such as E. coli. Early successes include a switch that stays on or off and a circuit that makes a protein pulse in a regular rhythm. The engineering comparison with electronics helps, but cells are crowded, noisy, mutating and growing, so a part that works in one setting may behave differently in another.",
+        "intermediate": "Designing a circuit means choosing regulatory parts with known behaviour, modelling dynamics with ordinary differential equations, and assembling the DNA by Golden Gate or Gibson methods. In the toggle switch, mutual repression with sufficient cooperativity creates two stable steady states; in the repressilator, delayed negative feedback around a three-node ring creates oscillations, although individual cells show noisy, variable periods. Metabolic engineering applies the same logic to pathways: for artemisinic acid, the yeast mevalonate pathway was upregulated and plant enzymes introduced, and later work completed the route to semi-synthetic artemisinin. The Build and Test phases are increasingly automated in biofoundries, while the Learn phase benefits from machine-learning models trained on measured libraries.",
+        "advanced": "Real constructs must be tuned for context. Burden and resource competition couple otherwise independent circuits, so insulators, feedback controllers and orthogonal ribosomes or RNA polymerases have been developed. Evolutionary stability is a major limit: mutants that drop a costly pathway outgrow producers, motivating addiction systems and genome integration. Large-scale genome writing projects, from JCVI synthetic bacterial genomes to the yeast Sc2.0 effort, show that designed genomes can be chemically built, assembled and booted, while also revealing unexpected essential genes in minimal cells. Cell-free systems offer faster prototyping without growth constraints. Governance includes risk assessment, containment strategies and responsible innovation frameworks, since horizontal gene transfer and ecosystem release cannot be fully predicted from laboratory data."
+      },
+      "commonMistakes": [
+        "Assuming parts are plug-and-play; context, burden and host interactions change performance.",
+        "Calling the repressilator a 'clock' without noting that oscillations in individual cells are noisy and damped.",
+        "Describing minimal-genome cells as 'life created from scratch'; the chemically synthesised genome was transplanted into an existing cell cytoplasm.",
+        "Ignoring evolutionary instability when proposing industrial strains."
+      ],
+      "videos": [
+        {
+          "youtubeId": "0ksvU6Bckbk",
+          "title": "Toggle Switch and Repressilator",
+          "channel": "J. Christopher Anderson",
+          "level": "intermediate",
+          "whyWatch": "A concise academic walk-through of the two founding synthetic circuits and the logic behind their behaviour."
+        },
+        {
+          "youtubeId": "ku9_0NIhRPc",
+          "title": "Synthetic Biology: Principles and Applications - Jan Roelof van der Meer",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A researcher outlines how biosensors and engineered organisms are designed and applied."
+        },
+        {
+          "youtubeId": "zUG5n-nOTzU",
+          "title": "How Synthetic Biology Revolutionized the Production of Artemisinin",
+          "channel": "SITN Harvard",
+          "level": "intermediate",
+          "whyWatch": "A case study explaining the engineered yeast pathway for the antimalarial precursor."
+        },
+        {
+          "youtubeId": "5_z1gG-m96A",
+          "title": "Synthetic Biology: An Emerging Engineering Discipline - Timothy Lu",
+          "channel": "iBiology Techniques",
+          "level": "advanced",
+          "whyWatch": "An overview talk on circuit design, diagnostics and therapeutic applications from a leader in the field."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/35002131",
+          "title": "Construction of a genetic toggle switch in Escherichia coli",
+          "authors": "Gardner TS, Cantor CR, Collins JJ",
+          "year": 2000,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A landmark paper that combined mathematical modelling with construction of a bistable circuit, setting the template for the field.",
+          "readingQuestions": [
+            "What property of the repressors makes bistability possible?",
+            "How did the authors flip the switch?"
+          ]
+        },
+        {
+          "doi": "10.1038/35002125",
+          "title": "A synthetic oscillatory network of transcriptional regulators",
+          "authors": "Elowitz MB, Leibler S",
+          "year": 2000,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "Describes the repressilator and shows oscillations in single cells; essential for understanding noise and dynamics in gene networks."
+        },
+        {
+          "doi": "10.1038/nature12051",
+          "title": "High-level semi-synthetic production of the potent antimalarial artemisinin",
+          "authors": "Paddon CJ, Westfall PJ, Pitera DJ et al",
+          "year": 2013,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1038/nature12051",
+          "whyItMatters": "A real example of metabolic engineering scaled for production, with the chemical steps linked to the engineered yeast pathway."
+        },
+        {
+          "doi": "10.1126/science.aad6253",
+          "title": "Design and synthesis of a minimal bacterial genome",
+          "authors": "Hutchison CA, Chuang RY, Noskov VN et al",
+          "year": 2016,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Shows the design, build and test cycle at genome scale, and the surprising number of genes of unknown function even in a minimal cell."
+        },
+        {
+          "doi": "10.1038/nmeth.1318",
+          "title": "Enzymatic assembly of DNA molecules up to several hundred kilobases",
+          "authors": "Gibson DG, Young L, Chuang RY, Venter JC, Hutchison CA, Smith HO",
+          "year": 2009,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "The paper behind a method used in labs worldwide to join overlapping DNA fragments in a single isothermal reaction."
+        }
+      ],
+      "resources": [
+        {
+          "title": "iGEM Registry of Standard Biological Parts",
+          "provider": "iGEM Foundation",
+          "type": "database",
+          "url": "https://parts.igem.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Browse real genetic parts and read documentation from student teams worldwide."
+        },
+        {
+          "title": "iGEM competition",
+          "provider": "iGEM Foundation",
+          "type": "reference",
+          "url": "https://igem.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "See past student projects in synthetic biology, including ideas that address local problems."
+        },
+        {
+          "title": "Addgene plasmid repository",
+          "provider": "Addgene",
+          "type": "database",
+          "url": "https://www.addgene.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up plasmid maps and sequences for toolkits used in synthetic biology publications."
+        },
+        {
+          "title": "Biology textbook: Molecular Biology of the Cell",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The chapters on gene regulation and cell signalling underlie circuit design and are freely available."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What feature allows the genetic toggle switch to maintain two stable states?",
+          "options": [
+            "Mutual repression between two genes with sufficient cooperativity",
+            "Constitutive expression of both genes",
+            "A single activator controlling two genes",
+            "A random mutation each generation"
+          ],
+          "answer": 0,
+          "explanation": "Each repressor shuts off the other's promoter, so one dominant state reinforces itself, creating bistability."
+        },
+        {
+          "question": "Which description of Golden Gate assembly is correct?",
+          "options": [
+            "It uses type IIS restriction enzymes and ligase to assemble multiple fragments in one pot",
+            "It uses PCR to copy RNA",
+            "It depends on Cas9 cleavage",
+            "It requires cell division to join fragments"
+          ],
+          "answer": 0,
+          "explanation": "Type IIS enzymes cut outside their recognition site, creating custom overhangs so that several fragments can be ligated in the right order in one reaction."
+        },
+        {
+          "question": "Why do engineered production strains often lose their pathway during long cultures?",
+          "options": [
+            "Metabolic burden favours mutants that discard the costly construct",
+            "DNA is unstable in water",
+            "Pathways always cross-react with the medium",
+            "Evolution does not act on bacteria"
+          ],
+          "answer": 0,
+          "explanation": "Cells that no longer carry the expression burden grow faster and can outcompete producers, so evolutionary stability must be engineered."
+        },
+        {
+          "question": "The JCVI-syn1.0 experiment is best described as:",
+          "options": [
+            "Creating a cell entirely from non-living chemicals",
+            "Transplanting a chemically synthesised genome into a recipient cell that then ran under that genome",
+            "Editing the genome of a plant",
+            "Cloning an animal"
+          ],
+          "answer": 1,
+          "explanation": "The genome was synthesised and assembled, then transplanted into a cell of a related species; the cytoplasmic machinery was pre-existing."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "HnT1VWzdFWc",
+      "title": "2024 Nobel Prize lectures in chemistry | David Baker, Demis Hassabis and John Jumper",
+      "channel": "Nobel Prize",
+      "level": "advanced",
+      "whyWatch": "The three laureates describe in their own words how computational design and AI prediction changed protein science."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Molecular Biology of the Cell (4th edition)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free standard reference that provides the cell and molecular background for all five topics."
+    },
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free textbook with strong coverage of protein structure and methods useful before the structural units."
+    },
+    {
+      "title": "Orchestrating Single-Cell Analysis with Bioconductor",
+      "provider": "Bioconductor",
+      "type": "textbook",
+      "url": "https://bioconductor.org/books/release/OSCA/",
+      "free": true,
+      "level": "advanced",
+      "note": "Open book covering the statistics and workflow of single-cell analysis."
+    }
+  ]
+}

@@ -1,0 +1,1575 @@
+{
+  "code": "FD 2104",
+  "title": "Analytical & Instrumental Techniques",
+  "level": 2,
+  "semester": 2,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "Turn a clear tube of liquid into numbers you can defend: how the instruments of a biochemistry lab actually work.",
+  "overview": "A foundation module on the measurements that underpin biochemistry and molecular biology. It begins with the habits of good measurement (accuracy, precision, error, solution and buffer preparation, calibration) and then works through the main families of technique: UV-visible spectrophotometry and protein and nucleic acid assays, fluorescence, infrared and circular dichroism, centrifugation, chromatography, electrophoresis, mass spectrometry and NMR, and immunoassays with labelled detection. Each unit is organised as a skills-and-technique module: what the instrument measures, the principle, how to prepare a sample, how to calibrate, how to read the result and what usually goes wrong. The topics are the standard content of a Level 2 analytical and instrumental techniques course for biochemistry students.",
+  "whyItMatters": "Every claim in biochemistry rests on a measurement: an enzyme rate, a protein concentration, a band on a gel, a peak in a chromatogram, a mass. If you understand how the instrument produces the number, you can tell when to trust it and when something has gone wrong, and that judgement is the difference between a technician and a scientist.",
+  "prerequisites": [
+    "FD 1101",
+    "FD 1103"
+  ],
+  "careerLinks": [
+    "Analytical and quality control laboratories in pharmaceutical, food and beverage industries",
+    "Research assistant or laboratory scientist in biochemistry, proteomics and molecular biology",
+    "Clinical biochemistry and diagnostic laboratories",
+    "Environmental testing and public-health laboratories",
+    "Instrument application specialist or technical sales in life-science companies"
+  ],
+  "studyTips": [
+    "For each technique write a one-line answer to four questions: what is measured, what is the principle, what is the calibration, what are the interferences. Revise from these cards.",
+    "Do the arithmetic yourself first (dilutions, Beer-Lambert, Rf, molecular weight from a gel) and only then check against a tool. Calculation errors are the commonest practical mistakes.",
+    "Sketch a block diagram of every instrument (source, sample, selector, detector, readout). Many different instruments follow this same pattern.",
+    "In every practical, record units, blanks and replicates. If a result looks odd, the notes you kept will be the way you find out why.",
+    "Always ask: what would a failed experiment look like in this technique? Knowing the failure pattern teaches the principle."
+  ],
+  "units": [
+    {
+      "id": "measurement-solutions-buffers",
+      "title": "Measurement, Error, Solutions and Buffers",
+      "hours": 5,
+      "hook": "Two students run the same assay with the same enzyme and get answers that differ by thirty percent. Neither made an obvious mistake; one pipetted a viscous solution quickly, the other made a buffer at the wrong temperature. Good analysis begins with the unglamorous craft of measuring and mixing properly.",
+      "learningObjectives": [
+        "Distinguish accuracy from precision and random from systematic error, and give examples from a biochemistry lab",
+        "Report results with sensible significant figures, units and an estimate of uncertainty (mean, standard deviation, replicates)",
+        "Prepare solutions of a stated molarity, percent and dilution using C1V1 = C2V2",
+        "Choose and prepare a buffer for a target pH using the Henderson-Hasselbalch equation",
+        "Calibrate a pH meter and use it correctly, including the effect of temperature",
+        "Use micropipettes correctly and check their performance"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Accuracy and precision",
+          "definition": "Accuracy is closeness to the true value; precision is closeness of repeated measurements to each other. A miscalibrated balance can give very precise but inaccurate results."
+        },
+        {
+          "term": "Random and systematic error",
+          "definition": "Random errors scatter results about the mean and are reduced by replicates; systematic errors push all results the same way (a zero error, a wrong standard) and are found only by calibration and controls."
+        },
+        {
+          "term": "Standard deviation and replicates",
+          "definition": "The standard deviation describes the spread of repeated measurements. Technical replicates test the measurement; biological replicates test the variability of the system."
+        },
+        {
+          "term": "Significant figures",
+          "definition": "The digits that carry information. Report a result no more precisely than the least precise measurement that went into it."
+        },
+        {
+          "term": "Molarity and dilution",
+          "definition": "Molarity is moles per litre. When diluting, moles are conserved so C1V1 = C2V2; a dilution factor is the final volume divided by the aliquot volume."
+        },
+        {
+          "term": "Henderson-Hasselbalch equation",
+          "definition": "pH = pKa + log([A-]/[HA]). A buffer is most effective within about one pH unit of its pKa, where both forms are present in comparable amounts."
+        },
+        {
+          "term": "Buffer choice",
+          "definition": "Choose a buffer whose pKa is near the desired pH and that does not interfere with the assay (phosphate inhibits some enzymes and precipitates calcium; Tris is amine-reactive and its pH shifts with temperature)."
+        },
+        {
+          "term": "Temperature dependence of pH",
+          "definition": "The pKa of some buffers changes with temperature; Tris falls by roughly 0.03 pH units for each degree of warming, so adjust the pH at the temperature of use."
+        },
+        {
+          "term": "Calibration and blank",
+          "definition": "A calibration relates instrument response to known standards. A blank contains everything except the analyte, and is used to subtract background."
+        }
+      ],
+      "deeper": {
+        "beginner": "Measuring is like cooking from a recipe: if the cup is the wrong size every dish will be consistently wrong (systematic error), and if you eyeball the amount each time the results will wobble (random error). A buffer is a chemical shock absorber that keeps pH steady when small amounts of acid or base enter; it works best near its pKa. Where the analogy breaks: a shock absorber has a fixed capacity, and so does a buffer, so a buffer at too low a concentration will fail when the reaction produces enough acid.",
+        "intermediate": "Hands-on skills: (1) Check a micropipette by dispensing water onto a balance (1 mL of water weighs about 1 g at room temperature) and calculate mean and coefficient of variation of ten dispenses. Practise reverse pipetting for viscous liquids such as glycerol. (2) Prepare 100 mL of 50 mM Tris-HCl pH 7.5 starting from solid Tris base and HCl: weigh Tris, dissolve in most of the volume, adjust pH with HCl at the temperature of use, make up to volume. (3) Prepare a 10x stock and dilute to 1x, calculating volumes with C1V1 = C2V2. (4) Calibrate a pH meter with two or three standard buffers that bracket the target pH, rinse the electrode between buffers, and check the slope. (5) Calculate the ratio of base to acid forms needed for a pH 7.0 phosphate buffer (pKa2 is about 7.2). Always label the date, composition and storage conditions on every solution you make.",
+        "advanced": "Real buffer behaviour deviates from the ideal because pKa depends on ionic strength and temperature and because activity, not concentration, determines pH; this is why you should adjust pH after adding salts and avoid diluting a concentrated stock without re-checking. Buffer capacity is greatest at pH = pKa and scales with total buffer concentration. Some buffers interact with the system: borate binds cis-diols, phosphate and citrate chelate divalent metal ions, Good's buffers such as HEPES can form radicals under light and interfere with some assays. Uncertainty analysis combines contributions from pipetting, weighing and readings; for a calculated result you propagate errors (relative errors add in quadrature for products and quotients). Method validation uses terms such as limit of detection, limit of quantification, linearity, recovery and repeatability, and these appear in regulated laboratories."
+      },
+      "commonMistakes": [
+        "Quoting results with more decimal places than the measurement can support.",
+        "Adjusting the pH of a buffer at one temperature and using it at another, especially with Tris.",
+        "Calibrating a pH meter with a single standard or with expired buffers.",
+        "Using a pipette outside its stated range or with a poorly seated tip and then trusting the volume."
+      ],
+      "animation": "titration-curve",
+      "videos": [
+        {
+          "youtubeId": "KEeSQvMCPLg",
+          "title": "Accuracy and Precision | It's Easy!",
+          "channel": "2 Minute Classroom",
+          "level": "beginner",
+          "whyWatch": "A quick, clear contrast of accuracy and precision with a simple picture to remember."
+        },
+        {
+          "youtubeId": "MG86IFZi_XM",
+          "title": "How to Dilute a Solution",
+          "channel": "Carolina Science",
+          "level": "beginner",
+          "whyWatch": "Shows a dilution done correctly at the bench, matching what the C1V1 = C2V2 formula means in practice."
+        },
+        {
+          "youtubeId": "S6bgIeM5wSQ",
+          "title": "Preparing Tris Buffer",
+          "channel": "BioNetwork",
+          "level": "beginner",
+          "whyWatch": "A laboratory demonstration of making a Tris buffer from solid, including pH adjustment."
+        },
+        {
+          "youtubeId": "1TZxS7A6Y1Q",
+          "title": "How to calibrate your pH electrode",
+          "channel": "MetrohmTV",
+          "level": "intermediate",
+          "whyWatch": "From a pH meter manufacturer, it shows multi-point calibration and what the slope tells you about electrode health."
+        },
+        {
+          "youtubeId": "9lCiNrvcz6s",
+          "title": "How To: Measure pH with a pH Meter",
+          "channel": "LabXchange",
+          "level": "beginner",
+          "whyWatch": "Demonstrates correct handling, rinsing and reading technique with a pH meter."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Analytical Chemistry 2.1 (Harvey)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free, rigorous textbook with excellent early chapters on measurements, statistics, calibration and solutions."
+        },
+        {
+          "title": "Chemistry 2e (OpenStax)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "beginner",
+          "note": "Reference for concentration units, acids and bases and buffers if you need to revise Level 1 chemistry."
+        },
+        {
+          "title": "Laboratory Fundamentals in Biological Engineering (MIT OCW 20.109)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/20-109-laboratory-fundamentals-in-biological-engineering-spring-2010/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Course materials showing how professional labs structure measurements, controls and record keeping."
+        },
+        {
+          "title": "Bio-protocol",
+          "provider": "Bio-protocol",
+          "type": "reference",
+          "url": "https://bio-protocol.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Step-by-step peer-reviewed protocols with notes on reagents, useful models of how to write down a method."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A balance consistently reads 0.5 g too high. Repeated weighings of a standard give very similar values. This is best described as:",
+          "options": [
+            "High accuracy, low precision",
+            "High precision, low accuracy (systematic error)",
+            "Random error",
+            "High accuracy, high precision"
+          ],
+          "answer": 1,
+          "explanation": "Results cluster tightly (precise) but away from the true value (inaccurate) because of a systematic offset that calibration would reveal."
+        },
+        {
+          "question": "You need 200 mL of 10 mM NaCl from a 1 M stock. What volume of stock do you take?",
+          "options": [
+            "0.2 mL",
+            "2 mL",
+            "20 mL",
+            "10 mL"
+          ],
+          "answer": 1,
+          "explanation": "C1V1 = C2V2 gives V1 = (10 mM x 200 mL) / 1000 mM = 2 mL, which is then made up to 200 mL with water."
+        },
+        {
+          "question": "Which buffer is the best choice for holding pH 5.0?",
+          "options": [
+            "Tris (pKa about 8.1)",
+            "Acetate (pKa about 4.8)",
+            "Bicarbonate (pKa about 10.3)",
+            "Glycine (pKa2 about 9.6)"
+          ],
+          "answer": 1,
+          "explanation": "A buffer works best within about one pH unit of its pKa, and acetate's pKa is closest to pH 5.0."
+        }
+      ]
+    },
+    {
+      "id": "uv-vis-spectrophotometry",
+      "title": "UV-Visible Spectrophotometry, Beer-Lambert and Quantitative Assays",
+      "hours": 6,
+      "hook": "Shine a beam of light through a cuvette and the proportion that survives tells you how much of something is there. This one idea underlies protein assays, DNA quantification, most enzyme assays and a large share of clinical chemistry.",
+      "learningObjectives": [
+        "Explain the components of a spectrophotometer (source, monochromator, cuvette, detector) and what each does",
+        "State and apply the Beer-Lambert law, A = epsilon c l, and convert between absorbance and transmittance",
+        "Record an absorbance spectrum, choose lambda max and prepare a blank correctly",
+        "Quantify nucleic acids and proteins from A260 and A280 and interpret purity ratios",
+        "Build a calibration (standard) curve, fit a line and calculate unknown concentrations with uncertainty",
+        "Run and interpret the Bradford and BCA protein assays and recognise their interferences"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Absorbance and transmittance",
+          "definition": "Transmittance T = I/I0; absorbance A = log10(I0/I) = -log10(T). Absorbance is dimensionless and is additive for several absorbing species at one wavelength."
+        },
+        {
+          "term": "Beer-Lambert law",
+          "definition": "A = epsilon x c x l, where epsilon is the molar absorptivity (M^-1 cm^-1), c the concentration and l the path length (usually 1 cm). It holds when the light is monochromatic and the solution is dilute and non-interacting."
+        },
+        {
+          "term": "Molar absorptivity (epsilon)",
+          "definition": "A property of a molecule at a given wavelength and solvent. For NADH at 340 nm it is 6220 M^-1 cm^-1, which allows direct calculation of NADH concentration and is the basis of many dehydrogenase assays."
+        },
+        {
+          "term": "Blank",
+          "definition": "A cuvette containing everything except the analyte, used to set zero absorbance and remove contributions from buffer, reagents and cuvette."
+        },
+        {
+          "term": "Nucleic acid quantification",
+          "definition": "An A260 of 1.0 corresponds roughly to 50 micrograms per millilitre of double-stranded DNA and about 40 micrograms per millilitre of RNA. A260/A280 near 1.8 suggests pure DNA and near 2.0 pure RNA; lower values suggest protein or phenol contamination."
+        },
+        {
+          "term": "A280 for protein",
+          "definition": "Tryptophan and tyrosine absorb near 280 nm, so concentration can be estimated if the extinction coefficient is known (computable from sequence); it is quick but fails if nucleic acid or other absorbers are present."
+        },
+        {
+          "term": "Standard (calibration) curve",
+          "definition": "A plot of response against known concentrations. Unknowns must fall within the range of the standards, which is also within the linear range of the instrument."
+        },
+        {
+          "term": "Bradford assay",
+          "definition": "Coomassie Brilliant Blue G-250 binds proteins (especially basic and aromatic residues) and shifts its absorbance maximum from about 465 nm to 595 nm; sensitive but affected by detergents and varies between proteins."
+        },
+        {
+          "term": "BCA assay",
+          "definition": "Proteins reduce Cu2+ to Cu+ under alkaline conditions, and bicinchoninic acid then complexes Cu+ to give a purple product near 562 nm; tolerant of detergents but sensitive to reducing agents and copper chelators."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of a coloured drink: the darker it is, the less light gets through. Doubling the concentration doubles the absorbance, so a straight-line graph lets you read an unknown concentration from a drink of known strengths. The 'blank' is the clear water you use to tell the machine what zero looks like. Where the analogy breaks: the proportionality holds only in a limited range; very dark samples bend the line, so you must dilute them.",
+        "intermediate": "Hands-on skills: (1) Record an absorbance spectrum (for example of potassium dichromate or a coloured dye) and identify lambda max. (2) Quantify a plasmid or genomic DNA sample by diluting 1 in 50 in buffer, reading A260 and A280, and calculating concentration (A260 x dilution factor x 50 ng per microlitre) and purity ratio. (3) Prepare a BSA standard series (for example 0, 0.1, 0.2, 0.4, 0.6, 0.8 and 1.0 mg/mL) and run a Bradford assay in triplicate; plot A595 against concentration, fit a line through the linear region (or a quadratic if the curve bends), and calculate the concentration of an unknown protein, accounting for its dilution. (4) Measure NADH-dependent activity by following A340 over time and convert the slope to micromoles per minute using epsilon. Always check that sample absorbance falls within the standards, that the blank is correct and that cuvettes are matched and clean (use quartz below about 340 nm).",
+        "advanced": "Deviations from Beer-Lambert arise from stray light, polychromatic illumination (the finite bandwidth of the monochromator), chemical equilibria that change with concentration, fluorescence, scattering and refractive-index effects; absorbance measurements above about 1.5 to 2 are unreliable on many instruments. Scattering by turbid samples adds an apparent absorbance that is wavelength dependent, and is corrected by measuring at a wavelength where the analyte does not absorb. Microvolume spectrophotometers use very short path lengths and require careful handling. Protein assays differ in chemistry and bias: Bradford depends on the amino-acid composition (arginine, lysine, aromatic residues), BCA on the peptide backbone, cysteine, tyrosine and tryptophan; therefore a BSA standard may over- or underestimate a different protein, and the assay should be matched to the buffer. Calibration curves should be fitted with appropriate weighting and checked for residual structure; report the confidence interval of the predicted concentration, not just the best-fit value."
+      },
+      "commonMistakes": [
+        "Reading samples with absorbance far above the highest standard and extrapolating the line.",
+        "Using the wrong cuvette (plastic below 340 nm for UV measurements) or fingerprinted or scratched cuvettes.",
+        "Blanking with water when the sample is in buffer or contains reagent colour.",
+        "Using A280 or A260 on a sample that contains both protein and nucleic acid, then trusting the number."
+      ],
+      "videos": [
+        {
+          "youtubeId": "zuUvQN8KXOk",
+          "title": "Spectrophotometry and Beer's Law",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A clean introduction to the Beer-Lambert law and its use in finding concentration."
+        },
+        {
+          "youtubeId": "fJRJLUYZe9c",
+          "title": "Spectrophotometry and the Beer-Lambert Law | AP Chemistry",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Worked examples converting between absorbance and concentration."
+        },
+        {
+          "youtubeId": "pxC6F7bK8CU",
+          "title": "How does a spectrophotometer work?",
+          "channel": "BioNetwork",
+          "level": "beginner",
+          "whyWatch": "A short look at the optical path of the instrument you will use in the lab."
+        },
+        {
+          "youtubeId": "7o65va089S4",
+          "title": "How to determine the Protein Concentration with the Bradford Assay",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Walks through preparing standards, running the assay and reading the unknown from a standard curve."
+        },
+        {
+          "youtubeId": "vfY3mVOlGBU",
+          "title": "Bradford Assay",
+          "channel": "Bio-Rad Laboratories",
+          "level": "intermediate",
+          "whyWatch": "From the reagent manufacturer, includes practical tips about interfering substances and linear range."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0003-2697(76)90527-3",
+          "title": "A rapid and sensitive method for the quantitation of microgram quantities of protein utilizing the principle of protein-dye binding",
+          "authors": "Bradford MM",
+          "year": 1976,
+          "journal": "Analytical Biochemistry",
+          "level": "intermediate",
+          "whyItMatters": "The original Bradford assay paper, among the most cited papers in science. It is short and clearly shows how a method is validated against standards and interferences."
+        },
+        {
+          "doi": "10.1016/0003-2697(85)90442-7",
+          "title": "Measurement of protein using bicinchoninic acid",
+          "authors": "Smith PK, Krohn RI, Hermanson GT et al",
+          "year": 1985,
+          "journal": "Analytical Biochemistry",
+          "level": "intermediate",
+          "whyItMatters": "Introduces the BCA assay and compares it with other protein assays, so you can see why it tolerates detergents but not reducing agents."
+        }
+      ],
+      "resources": [
+        {
+          "title": "ExPASy ProtParam",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "tool",
+          "url": "https://web.expasy.org/protparam/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Computes a protein's molar extinction coefficient at 280 nm from its sequence, which you need for A280 concentration estimates."
+        },
+        {
+          "title": "Analytical Chemistry 2.1 (Harvey): Spectroscopic methods",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Detailed explanations of absorption spectroscopy, instrument design and limits of the Beer-Lambert law."
+        },
+        {
+          "title": "Instrumental Analysis (LibreTexts)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free text on instrumental methods that covers UV-Vis, IR and fluorescence instruments in more depth."
+        },
+        {
+          "title": "Biology 2e (OpenStax)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "beginner",
+          "note": "Background on the biomolecules whose absorbance you will be measuring."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A solution has transmittance of 10 percent at 595 nm. What is its absorbance?",
+          "options": [
+            "0.1",
+            "1.0",
+            "2.0",
+            "10"
+          ],
+          "answer": 1,
+          "explanation": "A = -log10(T) = -log10(0.10) = 1.0."
+        },
+        {
+          "question": "A DNA sample diluted 1 in 20 has A260 of 0.50. About what is the DNA concentration in the undiluted sample?",
+          "options": [
+            "25 micrograms per mL",
+            "250 micrograms per mL",
+            "500 micrograms per mL",
+            "1000 micrograms per mL"
+          ],
+          "answer": 2,
+          "explanation": "0.50 x 50 micrograms per mL x 20 = 500 micrograms per mL, using A260 of 1 as about 50 micrograms per mL for double-stranded DNA."
+        },
+        {
+          "question": "Which is a valid reason to prefer the BCA assay over Bradford for a lysate containing detergent?",
+          "options": [
+            "BCA is unaffected by reducing agents",
+            "BCA is generally more tolerant of detergents than Bradford",
+            "BCA does not need a standard curve",
+            "BCA measures only albumin"
+          ],
+          "answer": 1,
+          "explanation": "Detergents interfere with the Coomassie dye in the Bradford assay, while BCA tolerates many detergents; but BCA is sensitive to reducing agents and chelators."
+        }
+      ]
+    },
+    {
+      "id": "fluorescence-ir-cd",
+      "title": "Fluorescence, Infrared and Circular Dichroism Spectroscopy",
+      "hours": 5,
+      "hook": "Absorbance tells you that a molecule soaked up light. Fluorescence asks what it did next. Infrared asks how its bonds vibrate, and circular dichroism asks how its shape twists the light. Together they let you watch a protein fold without ever touching it.",
+      "learningObjectives": [
+        "Explain fluorescence using the energy-level (Jablonski) picture, including Stokes shift and quantum yield",
+        "Distinguish excitation and emission spectra and choose suitable wavelengths and filters",
+        "Describe how intrinsic tryptophan fluorescence, quenching and FRET are used to study proteins",
+        "Explain the basis of infrared (including FTIR) spectroscopy and identify characteristic absorptions",
+        "Describe circular dichroism and interpret far-UV spectra for secondary structure",
+        "Compare absorption, fluorescence, IR and CD in terms of sensitivity, information and sample requirements"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fluorescence",
+          "definition": "Emission of a photon when an excited molecule relaxes from its lowest excited singlet state to the ground state, typically within nanoseconds, at a longer wavelength than the light it absorbed."
+        },
+        {
+          "term": "Stokes shift",
+          "definition": "The difference between the maxima of the excitation and emission spectra; it lets emission be separated from the exciting light by filters."
+        },
+        {
+          "term": "Quantum yield",
+          "definition": "The fraction of absorbed photons that are re-emitted as fluorescence; it depends strongly on the environment of the fluorophore."
+        },
+        {
+          "term": "Intrinsic fluorescence",
+          "definition": "Tryptophan, excited near 280 nm, emits near 330 to 350 nm; emission shifts to longer wavelength when the residue is exposed to water, so unfolding can be followed."
+        },
+        {
+          "term": "Quenching",
+          "definition": "Decrease in fluorescence due to collisions or complex formation with another molecule; can be used to measure accessibility and binding."
+        },
+        {
+          "term": "FRET",
+          "definition": "Resonance energy transfer from an excited donor to a nearby acceptor, with efficiency falling steeply with distance (typically sensitive over 1 to 10 nanometres), so it works as a molecular ruler."
+        },
+        {
+          "term": "Infrared (vibrational) spectroscopy",
+          "definition": "Absorption of infrared light excites vibrations of chemical bonds; the position is expressed in wavenumbers (cm^-1) and depends on the bond and its environment, giving functional-group fingerprints."
+        },
+        {
+          "term": "FTIR and amide I",
+          "definition": "Fourier-transform IR is a fast form of IR measurement. The amide I band near 1650 cm^-1 of proteins is sensitive to secondary structure."
+        },
+        {
+          "term": "Circular dichroism (CD)",
+          "definition": "The difference in absorption of left and right circularly polarised light by chiral molecules. Far-UV CD (about 190 to 250 nm) reports secondary structure; alpha-helices give negative bands near 208 and 222 nm."
+        }
+      ],
+      "deeper": {
+        "beginner": "Fluorescence is like a glow-in-the-dark toy: it absorbs one colour of light and gives back another, slightly lower-energy, colour. That change in colour lets an instrument detect the glow against a dark background, which makes the method extremely sensitive. IR spectroscopy is like listening to the notes of bond vibrations, and CD is like checking how a molecule handles twisted light, which depends on its shape. Where the analogy breaks: a toy glows reliably; a fluorophore's brightness depends on pH, solvent, temperature and quenchers, so a change in signal may not mean a change in amount.",
+        "intermediate": "Hands-on skills: (1) Record the emission spectrum of a fluorescent standard (for example a dilute fluorescein solution in basic buffer) and identify excitation and emission maxima; then measure a dilution series and notice where the signal stops being linear because of the inner-filter effect. (2) Follow protein unfolding by tryptophan fluorescence with increasing urea or guanidine concentration and plot the shift in emission maximum. (3) Look at a CD spectrum of a helical protein and a mostly beta-sheet protein and describe the differences; note that the buffer must be transparent in the far UV (low-chloride phosphate buffers are preferred over Tris and chloride-rich buffers). (4) Using an FTIR spectrum of a simple compound, identify O-H, C=O and N-H stretches. Keep absorbance at the excitation wavelength below about 0.1 to avoid inner-filter effects, and always subtract the buffer spectrum.",
+        "advanced": "Fluorescence lifetimes and anisotropy report on dynamics and binding (a large complex rotates slowly and keeps polarisation); time-resolved and single-molecule measurements reveal heterogeneity hidden in ensemble averages. FRET efficiency depends on the sixth power of distance, E = 1 / (1 + (r/R0)^6), with R0 the Forster distance for the pair, so small distance changes near R0 give large signal changes; orientation factors and photobleaching complicate quantitation. CD secondary-structure estimation uses deconvolution against reference spectra (for example CDSSTR, SELCON3 or BeStSel), and results depend on the quality of the concentration measurement and path length; near-UV CD reports on tertiary-structure asymmetry around aromatic residues. IR of aqueous protein samples is complicated by the strong absorption of water, usually overcome with D2O or attenuated total reflectance. For choosing a technique, consider that fluorescence has very high sensitivity but low structural information, CD gives global structure content in solution at modest concentration, and IR gives bond-level information with minimal sample prep."
+      },
+      "commonMistakes": [
+        "Using too concentrated a sample for fluorescence, so that absorption of excitation light (inner-filter effect) distorts the signal.",
+        "Reading a CD spectrum in a chloride-rich or Tris buffer that absorbs strongly below 200 nm.",
+        "Assuming a drop in fluorescence always means less protein; it can mean quenching, pH change or photobleaching.",
+        "Interpreting IR peak positions without considering the solvent and hydrogen bonding."
+      ],
+      "videos": [
+        {
+          "youtubeId": "oVxpaUfTuXI",
+          "title": "Molecular Probes Tutorial Series - Anatomy of Fluorescence Spectra",
+          "channel": "Thermo Fisher Scientific",
+          "level": "beginner",
+          "whyWatch": "A short, clear tutorial on excitation and emission spectra and Stokes shift from a maker of fluorescent dyes."
+        },
+        {
+          "youtubeId": "j1Krn0kkSUg",
+          "title": "Widefield and Confocal Fluorescence Microscopy",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Shows how fluorescence is used in imaging and why confocal optics improve contrast."
+        },
+        {
+          "youtubeId": "aOTq81l8VmA",
+          "title": "Tutorial of Circular dichroism",
+          "channel": "NSERC PROMOTE McGill",
+          "level": "intermediate",
+          "whyWatch": "A tutorial on how CD works and how spectra are interpreted."
+        },
+        {
+          "youtubeId": "_TmevMf-Zgs",
+          "title": "IR Spectroscopy",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Clear overview of bond vibrations and how to read an IR spectrum."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nprot.2006.202",
+          "title": "Using circular dichroism spectra to estimate protein secondary structure",
+          "authors": "Greenfield NJ",
+          "year": 2006,
+          "journal": "Nature Protocols",
+          "level": "intermediate",
+          "whyItMatters": "A practical protocol that explains sample preparation, buffer choice and analysis, ideal if you will run CD in a project."
+        },
+        {
+          "doi": "10.1038/nmeth817",
+          "title": "Fluorescence microscopy",
+          "authors": "Lichtman JW, Conchello JA",
+          "year": 2005,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "An accessible review of the principles of fluorescence imaging, including widefield, confocal and multiphoton methods, and what limits each."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Instrumental Analysis (LibreTexts)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on molecular fluorescence, IR and instrument design."
+        },
+        {
+          "title": "Spectral Database for Organic Compounds (SDBS)",
+          "provider": "AIST Japan",
+          "type": "database",
+          "url": "https://sdbs.db.aist.go.jp/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free reference IR, NMR and mass spectra of thousands of compounds to compare with your own."
+        },
+        {
+          "title": "NIST Chemistry WebBook",
+          "provider": "NIST",
+          "type": "database",
+          "url": "https://webbook.nist.gov/chemistry/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Reference IR and mass spectra and thermochemical data for many small molecules."
+        },
+        {
+          "title": "PDB-101",
+          "provider": "RCSB PDB",
+          "type": "reference",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Helps relate secondary-structure content from CD to the structures of real proteins."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why can fluorescence emission be detected even though it is weak?",
+          "options": [
+            "It occurs at the same wavelength as excitation",
+            "Emission is at a longer wavelength than excitation, so it can be isolated with filters from the exciting light",
+            "It is stronger than absorption",
+            "It needs no light source"
+          ],
+          "answer": 1,
+          "explanation": "The Stokes shift separates emission from excitation, and detection against a dark background gives high sensitivity."
+        },
+        {
+          "question": "A protein's far-UV CD spectrum shows strong negative bands near 208 and 222 nm. What does this indicate?",
+          "options": [
+            "Predominantly alpha-helical structure",
+            "Predominantly random coil",
+            "Absence of secondary structure",
+            "Presence of a heme group only"
+          ],
+          "answer": 0,
+          "explanation": "Double minima near 208 and 222 nm are the signature of alpha-helical content."
+        },
+        {
+          "question": "FRET efficiency changes strongly with:",
+          "options": [
+            "The colour of the sample tube",
+            "The distance between donor and acceptor (inverse sixth power dependence)",
+            "The molecular mass of the protein only",
+            "The pH of the water bath"
+          ],
+          "answer": 1,
+          "explanation": "Energy transfer falls with the sixth power of donor-acceptor distance, making FRET a sensitive measure of nanometre-scale distances."
+        }
+      ]
+    },
+    {
+      "id": "centrifugation",
+      "title": "Centrifugation and Cell Fractionation",
+      "hours": 4,
+      "hook": "Spin a tube fast enough and the contents sort themselves by size and density: nuclei, then mitochondria, then membrane fragments, then the soluble cytoplasm. Much of what we know about where biochemistry happens in the cell came from this simple trick.",
+      "learningObjectives": [
+        "Calculate relative centrifugal force (RCF, in x g) from rotor radius and speed, and explain why g, not rpm, must be reported",
+        "Distinguish differential centrifugation, rate-zonal and isopycnic (equilibrium) density-gradient centrifugation",
+        "Describe how cells are homogenised and fractionated and how fractions are checked with marker enzymes",
+        "Select an appropriate rotor type and speed for pelleting cells, organelles or macromolecules",
+        "Apply safety rules, including rotor balancing, for centrifuge use",
+        "Explain how the Meselson-Stahl experiment used density-gradient centrifugation"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Relative centrifugal force (RCF)",
+          "definition": "RCF = 1.118 x 10^-5 x r x (rpm)^2 with r the radius in cm. The same rpm gives different forces in different rotors, so protocols specify x g."
+        },
+        {
+          "term": "Sedimentation coefficient (S)",
+          "definition": "A measure of how fast a particle sediments under a given force, in Svedberg units (10^-13 seconds). It depends on mass, shape and density, and is not additive (ribosome subunits 30S + 50S form a 70S particle)."
+        },
+        {
+          "term": "Differential centrifugation",
+          "definition": "Repeated spins at increasing force: low speed pellets nuclei and cell debris, medium speed pellets mitochondria and lysosomes, high speed pellets microsomes (ER fragments), and the supernatant is the cytosol."
+        },
+        {
+          "term": "Rate-zonal centrifugation",
+          "definition": "Sample is layered on top of a pre-formed gradient (usually sucrose) and separated by sedimentation rate; the run is stopped before the particles reach the bottom."
+        },
+        {
+          "term": "Isopycnic centrifugation",
+          "definition": "Particles move through a gradient (for example caesium chloride or iodixanol) until they reach the position where their density equals that of the medium, so separation depends only on buoyant density."
+        },
+        {
+          "term": "Homogenisation",
+          "definition": "Gentle disruption of cells in an isotonic, buffered, cold medium, so that organelles remain intact and enzymes remain active."
+        },
+        {
+          "term": "Marker enzymes",
+          "definition": "Enzymes characteristic of a compartment, used to assess purity and yield of a fraction (for example succinate dehydrogenase for mitochondria, catalase for peroxisomes, lactate dehydrogenase for cytosol)."
+        },
+        {
+          "term": "Rotor types",
+          "definition": "Swing-bucket rotors give clean separations in gradients; fixed-angle rotors give shorter pelleting paths and are used for high-speed pelleting; vertical rotors shorten isopycnic runs."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine swirling muddy water until the heavy sand drops and the lighter silt stays suspended. A centrifuge is a way of making gravity much stronger so that even tiny particles settle in minutes. Spinning at low speed pulls down the big, heavy things first; each faster spin collects smaller things. Where the analogy breaks: cell parts overlap in size and density, so each fraction is enriched rather than perfectly pure, which is why marker enzymes are used.",
+        "intermediate": "Hands-on skills: (1) Convert a protocol written as 12,000 x g to rpm for your rotor using the manufacturer's radius, and vice versa. (2) Perform a differential centrifugation of liver or a plant tissue homogenate (or analyse provided data): spin at 600 to 1,000 x g to pellet nuclei, then 10,000 to 15,000 x g to pellet mitochondria, then about 100,000 x g to pellet microsomes. (3) Assay a marker enzyme in each fraction and calculate recovery (total activity in fractions divided by total in the homogenate) and enrichment (specific activity in the fraction divided by the starting specific activity). (4) Weigh and balance tubes to within the tolerance specified for the rotor; never run an unbalanced rotor. Keep samples at 4 degrees Celsius unless told otherwise, and check that tubes are rated for the speed and solvent used.",
+        "advanced": "Sedimentation is described by the Svedberg equation, s = M(1 - v-bar rho) / (N f), where M is molar mass, v-bar the partial specific volume, rho the density of the medium, N Avogadro's number and f the frictional coefficient; analytical ultracentrifugation uses optical detection to measure sedimentation velocity and equilibrium directly in solution, giving mass, shape and binding information without matrix interactions. Density gradients can be self-forming (CsCl, iodixanol) or pre-formed (sucrose), each with its osmotic effects on organelles. Subcellular fractionation is increasingly combined with proteomics (for example LOPIT and related methods) to assign proteins to compartments, relying on statistical clustering because no fraction is pure. Safety and maintenance include rotor life limits, corrosion checks and use of aerosol-tight tubes when handling infectious material."
+      },
+      "commonMistakes": [
+        "Reporting a centrifugation in rpm without the rotor or radius, so it cannot be repeated.",
+        "Running with unbalanced tubes or tubes that are not rated for the speed, risking rotor failure.",
+        "Treating a pellet as pure; contaminants co-sediment and must be assessed with markers.",
+        "Homogenising too violently or in a hypotonic medium, which breaks organelles and releases enzymes."
+      ],
+      "videos": [
+        {
+          "youtubeId": "F-DjWHM2IFQ",
+          "title": "A-Level Biology - Cell Fractionation & Ultracentrifugation",
+          "channel": "Cognito",
+          "level": "beginner",
+          "whyWatch": "A clear summary of homogenisation, filtration and ultracentrifugation steps and the order in which organelles sediment."
+        },
+        {
+          "youtubeId": "Z6UvUA9INBg",
+          "title": "differential centrifuge",
+          "channel": "Quick Biochemistry Basics",
+          "level": "beginner",
+          "whyWatch": "A short animation of repeated spins at increasing speed, showing which fraction appears at each stage."
+        },
+        {
+          "youtubeId": "D9Th5N-ubJ8",
+          "title": "Density gradient centrifugation",
+          "channel": "Quick Biochemistry Basics",
+          "level": "intermediate",
+          "whyWatch": "Explains the difference between rate-zonal and isopycnic separations in a gradient."
+        },
+        {
+          "youtubeId": "_Y6Bzgkm6x8",
+          "title": "How to study cells - Cell fractionation and ultracentrifugation for AQA A-level Biology",
+          "channel": "Miss Estruch Biology",
+          "level": "beginner",
+          "whyWatch": "Step-by-step walkthrough useful as revision for the practical procedure and the reasons behind each condition."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.44.7.671",
+          "title": "The replication of DNA in Escherichia coli",
+          "authors": "Meselson M, Stahl FW",
+          "year": 1958,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "A classic use of density-gradient centrifugation in caesium chloride with heavy nitrogen to show that DNA replicates semi-conservatively. The beautiful logic shows why a measurement technique can answer a deep biological question."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biology 2e (OpenStax): Studying cells and cell fractionation",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "beginner",
+          "note": "Background on organelles and how they are studied."
+        },
+        {
+          "title": "Biochemistry bookshelf (LibreTexts)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open biochemistry textbooks with sections on separation and purification techniques."
+        },
+        {
+          "title": "Laboratory Fundamentals in Biological Engineering (MIT OCW 20.109)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/20-109-laboratory-fundamentals-in-biological-engineering-spring-2010/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Lab modules including sample preparation and centrifugation steps in real protocols."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why should centrifugation protocols give speed in x g rather than rpm?",
+          "options": [
+            "x g is a smaller number",
+            "The force depends on rotor radius as well as rpm, so rpm alone does not specify the same force in different rotors",
+            "rpm is not a unit",
+            "x g is only used for DNA"
+          ],
+          "answer": 1,
+          "explanation": "RCF depends on both speed and radius; reporting x g makes the protocol reproducible with any rotor."
+        },
+        {
+          "question": "In differential centrifugation of a tissue homogenate, which fraction pellets first (at the lowest speed)?",
+          "options": [
+            "Ribosomes",
+            "Microsomes",
+            "Nuclei and unbroken cells",
+            "Soluble proteins"
+          ],
+          "answer": 2,
+          "explanation": "The largest, densest structures such as nuclei and unbroken cells sediment at low force; smaller particles require progressively higher force."
+        },
+        {
+          "question": "Isopycnic centrifugation separates particles according to:",
+          "options": [
+            "Their sedimentation rate",
+            "Their buoyant density",
+            "Their charge",
+            "Their colour"
+          ],
+          "answer": 1,
+          "explanation": "Particles move until the gradient density equals their own buoyant density, so shape and mass do not matter at equilibrium."
+        }
+      ]
+    },
+    {
+      "id": "chromatography",
+      "title": "Chromatography: TLC, Column, Ion Exchange, Size Exclusion, Affinity and HPLC",
+      "hours": 7,
+      "hook": "Pour a mixture onto a column and the components come out one after another, as if each had been given a different pace. That simple idea built protein purification, drug analysis, blood tests and much of modern biochemistry.",
+      "learningObjectives": [
+        "Explain the basic principle of chromatography in terms of stationary phase, mobile phase and partitioning",
+        "Calculate Rf and retention time, and describe how resolution depends on efficiency, selectivity and retention",
+        "Perform and interpret thin-layer chromatography",
+        "Describe the mechanisms of ion exchange, size exclusion, affinity, hydrophobic interaction and reversed-phase chromatography",
+        "Design a simple multi-step purification of a protein and keep a purification table (yield, specific activity, fold purification)",
+        "Describe the components and operation of an HPLC system and interpret a chromatogram"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Stationary and mobile phase",
+          "definition": "In chromatography, the sample is carried by a mobile phase (liquid or gas) over a stationary phase. Components that interact more strongly with the stationary phase move more slowly."
+        },
+        {
+          "term": "Rf and retention time",
+          "definition": "In TLC, Rf = distance moved by the spot / distance moved by the solvent front (between 0 and 1). In column methods, retention time is the time between injection and the peak maximum."
+        },
+        {
+          "term": "Resolution",
+          "definition": "How well two peaks are separated, combining peak spacing and peak width. A resolution of 1.5 or more is generally considered baseline separation."
+        },
+        {
+          "term": "Ion-exchange chromatography",
+          "definition": "Separates by net charge. A cation exchanger (negatively charged resin, for example carboxymethyl) binds positively charged proteins; elution uses increasing salt or a pH change. Whether a protein binds depends on pH relative to its pI."
+        },
+        {
+          "term": "Size-exclusion (gel filtration) chromatography",
+          "definition": "Molecules are separated by size as they pass through porous beads; large molecules, which cannot enter the pores, elute first, followed by smaller ones. Used for polishing, desalting and estimating size."
+        },
+        {
+          "term": "Affinity chromatography",
+          "definition": "Uses a specific interaction: for example His-tagged proteins bind nickel-NTA resin and are eluted with imidazole, GST-tagged proteins bind glutathione, and antibodies bind Protein A. Very high selectivity in one step."
+        },
+        {
+          "term": "Hydrophobic interaction and reversed-phase",
+          "definition": "Hydrophobic interaction chromatography uses high salt to promote binding to a mildly hydrophobic resin. Reversed-phase HPLC (for example a C18 column) uses a nonpolar stationary phase and a polar mobile phase with an organic gradient, widely used for peptides and small molecules."
+        },
+        {
+          "term": "HPLC",
+          "definition": "High-performance liquid chromatography forces the mobile phase through a tightly packed column at high pressure with a pump, injector, column and detector (UV, fluorescence, or mass spectrometer), giving fast, reproducible, quantitative separations."
+        },
+        {
+          "term": "Purification table",
+          "definition": "A record at each step of total protein, total activity, specific activity (activity per mg), yield (percent activity recovered) and purification fold (specific activity relative to the crude extract)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Chromatography is like a race through varied terrain: runners (molecules) who like the mud (stationary phase) run slowly, while those who prefer the open track (mobile phase) run fast. Over a long course they spread out and cross the finishing line one by one. In protein purification, you choose terrain that suits one feature: charge, size or a specific tag. Where the analogy breaks: molecules do not run at a steady pace but constantly jump between phases, which is what causes peaks to widen.",
+        "intermediate": "Hands-on skills: (1) Run TLC of plant pigments or amino acids, mark the solvent front before drying, calculate Rf and visualise (ninhydrin for amino acids). (2) Pack or use a pre-packed gel-filtration column, apply a mixture of blue dextran (excluded volume), a coloured protein and a small dye, and collect fractions to determine elution volumes; use standards of known size to make a calibration curve of log molecular weight against elution volume. (3) Design an ion-exchange step: for a protein with pI 6.0 you could use an anion exchanger at pH 8 (the protein is negatively charged) and elute with a salt gradient. (4) Complete a purification table from provided data: from crude extract to a final affinity eluate, calculate specific activity, yield and fold. (5) Read an HPLC chromatogram, identify peaks by retention time against standards and quantify from peak area using a calibration curve. Equilibrate columns before use, degas and filter solvents and never let a column run dry.",
+        "advanced": "Retention in liquid chromatography is described by the retention factor k = (tR - t0) / t0, selectivity alpha = k2/k1 and plate number N, which combine in the resolution equation Rs = (sqrt(N)/4) x ((alpha - 1)/alpha) x (k/(1 + k)); this tells you whether to improve efficiency (smaller particles, longer columns), selectivity (change phase or solvent) or retention. Gradient elution compresses peaks and shortens analyses of complex samples. In protein work, multi-step purification schemes use orthogonal principles (for example affinity, ion exchange, size exclusion) to remove different contaminants, and each step is balanced against yield and activity. Detection choices include UV absorbance, fluorescence, refractive index, conductivity and mass spectrometry; LC-MS combines separation with identification. Gas chromatography separates volatile compounds (or derivatives) and is common for fatty acids and metabolites. Analytical method validation covers specificity, linearity, accuracy, precision and robustness."
+      },
+      "commonMistakes": [
+        "Forgetting to mark the solvent front on a TLC plate before the solvent evaporates, so Rf cannot be calculated.",
+        "Overloading a column, which broadens peaks and ruins resolution; size-exclusion in particular needs small sample volumes.",
+        "Ignoring the pH relative to the protein's pI in ion exchange, so the protein binds the wrong way or not at all.",
+        "Reporting purification only as yield and not specific activity: a high yield of an impure protein is not a good purification."
+      ],
+      "videos": [
+        {
+          "youtubeId": "462CmolEFhc",
+          "title": "Thin Layer Chromatography",
+          "channel": "NC State Undergraduate Organic Chemistry Teaching Laboratories - S.M.A.R.T. Lab Videos",
+          "level": "beginner",
+          "whyWatch": "A short demonstration of spotting, developing and visualising a TLC plate."
+        },
+        {
+          "youtubeId": "nVy5jC0-xYk",
+          "title": "Chromatography for Visual Learners",
+          "channel": "Chemistorian",
+          "level": "beginner",
+          "whyWatch": "A visual explanation of the general principle that makes sense of all the chromatographic modes."
+        },
+        {
+          "youtubeId": "MRIVrlObarY",
+          "title": "Protein chromatography - an overview of affinity, ion exchange, and size exclusion chromatography",
+          "channel": "the bumbling biochemist",
+          "level": "intermediate",
+          "whyWatch": "A long, expert walkthrough of the three major protein chromatography modes and how to combine them in a purification plan."
+        },
+        {
+          "youtubeId": "jwks-ov7bEE",
+          "title": "Quickly Understand High Performance Liquid Chromatography (HPLC)",
+          "channel": "Lucas Learns",
+          "level": "beginner",
+          "whyWatch": "A concise animation of the parts of an HPLC and how a separation proceeds."
+        },
+        {
+          "youtubeId": "8_7cdfNO7OY",
+          "title": "Affinity chromatography",
+          "channel": "Quick Biochemistry Basics",
+          "level": "beginner",
+          "whyWatch": "Shows the bind-wash-elute cycle of affinity purification, including tags."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1042/bj0351358",
+          "title": "A new form of chromatogram employing two liquid phases",
+          "authors": "Martin AJP, Synge RLM",
+          "year": 1941,
+          "journal": "Biochemical Journal",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced partition chromatography (and was recognised with a Nobel Prize). It shows how amino acids could be separated on a simple column, and its logic underlies every modern chromatographic method."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Analytical Chemistry 2.1 (Harvey): Chromatographic and electrophoretic methods",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Detailed treatment of retention, resolution and the main chromatographic techniques with worked examples."
+        },
+        {
+          "title": "Instrumental Analysis (LibreTexts)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes modules on HPLC and gas chromatography instrumentation."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 1952 (Martin and Synge)",
+          "provider": "Nobel Prize Outreach",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1952/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "A summary of the invention of partition chromatography and why it mattered."
+        },
+        {
+          "title": "Bio-protocol",
+          "provider": "Bio-protocol",
+          "type": "reference",
+          "url": "https://bio-protocol.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for protein purification protocols to see how real purification schemes are written."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In size-exclusion chromatography, which molecules elute first?",
+          "options": [
+            "The smallest molecules",
+            "The largest molecules, which are excluded from the pores",
+            "The most positively charged molecules",
+            "Those with the highest pI"
+          ],
+          "answer": 1,
+          "explanation": "Large molecules cannot enter the bead pores and take the shortest path, so they elute before smaller ones."
+        },
+        {
+          "question": "A spot travels 3.0 cm while the solvent front travels 5.0 cm. What is its Rf?",
+          "options": [
+            "0.30",
+            "0.60",
+            "1.67",
+            "0.15"
+          ],
+          "answer": 1,
+          "explanation": "Rf = 3.0 / 5.0 = 0.60."
+        },
+        {
+          "question": "A protein has pI 5.0 and is in a buffer at pH 8.0. Which ion exchanger would bind it?",
+          "options": [
+            "A cation exchanger, because the protein is positively charged",
+            "An anion exchanger, because the protein is negatively charged",
+            "Neither, because proteins have no charge",
+            "Both equally"
+          ],
+          "answer": 1,
+          "explanation": "At a pH above its pI the protein carries a net negative charge, so it binds a positively charged anion-exchange resin."
+        }
+      ]
+    },
+    {
+      "id": "electrophoresis",
+      "title": "Electrophoresis: Agarose, SDS-PAGE, Isoelectric Focusing and 2D Gels",
+      "hours": 6,
+      "hook": "A tiny current, a slab of gel, and a mixture of molecules begins to march. In an hour you have a ladder of bands that tells you the size of a DNA fragment, the purity of a protein preparation, or whether your experiment worked at all.",
+      "learningObjectives": [
+        "Explain how charge, size and shape determine the migration of molecules in an electric field and a gel matrix",
+        "Choose agarose or polyacrylamide and the appropriate gel percentage for a given DNA or protein size range",
+        "Run and interpret agarose gel electrophoresis of DNA, including the use of size markers and stains",
+        "Explain how SDS-PAGE separates proteins by size, including the roles of SDS, reducing agent and the stacking and resolving gels",
+        "Estimate molecular weight from a standard curve of log MW against relative mobility",
+        "Describe isoelectric focusing, 2D electrophoresis and native PAGE and when each is used"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Electrophoretic mobility",
+          "definition": "The velocity of a molecule per unit electric field, determined by its charge, size and shape and by the medium. In a gel, smaller molecules move faster than larger ones of the same charge density."
+        },
+        {
+          "term": "Agarose gel",
+          "definition": "A polysaccharide gel with large pores, suited to DNA and RNA from about 100 base pairs to tens of kilobases. Lower percentages (0.7 percent) resolve large fragments; higher percentages (2 percent) resolve small ones."
+        },
+        {
+          "term": "DNA migration",
+          "definition": "DNA is uniformly negatively charged through its phosphate backbone, so it moves toward the positive electrode (anode) and its mobility is approximately proportional to the logarithm of its length."
+        },
+        {
+          "term": "Polyacrylamide gel",
+          "definition": "A cross-linked synthetic gel with smaller, adjustable pores, used for proteins and for small DNA or RNA fragments needing single-base resolution. Acrylamide in solution is a neurotoxin, so wear gloves."
+        },
+        {
+          "term": "SDS-PAGE",
+          "definition": "Sodium dodecyl sulfate binds proteins in a roughly constant ratio, denaturing them and giving a uniform negative charge per unit mass. With a reducing agent that breaks disulfide bonds, migration depends mainly on polypeptide size."
+        },
+        {
+          "term": "Stacking and resolving gels",
+          "definition": "In the Laemmli system, a low-percentage, pH 6.8 stacking gel concentrates the sample into a sharp band before it enters the higher-percentage, pH 8.8 resolving gel where separation occurs."
+        },
+        {
+          "term": "Molecular weight standards",
+          "definition": "A ladder of proteins or DNA fragments of known size run in the same gel. A plot of log MW against relative mobility (Rf) gives a calibration for estimating unknowns."
+        },
+        {
+          "term": "Isoelectric focusing (IEF)",
+          "definition": "Proteins migrate in a pH gradient until they reach the pH equal to their pI, where their net charge is zero and they stop; this separates by pI."
+        },
+        {
+          "term": "2D gel electrophoresis",
+          "definition": "IEF in the first dimension followed by SDS-PAGE in the second, spreading thousands of proteins in a plane by pI and size."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of a crowd walking through a forest with a steady wind pushing them forward: small people slip between the trees and travel far, large people get stuck and travel less. The gel is the forest, the electric field is the wind, and the bands are groups of people of the same size. SDS makes every protein carry the same charge per unit size so that only size matters. Where the analogy breaks: with unmodified (native) proteins, charge and shape also matter, so native gels do not give clean size information.",
+        "intermediate": "Hands-on skills: (1) Agarose gel: prepare a 1 percent gel in TAE or TBE with a safe nucleic acid stain, load a DNA ladder and your samples with loading dye, run at a constant voltage (for example 5 to 8 V per cm of gel length) until the dye front has migrated far enough, and image. Estimate fragment sizes against the ladder. (2) Digest a plasmid with one or two restriction enzymes and predict the band pattern before running it. (3) SDS-PAGE: mix protein with sample buffer containing SDS and a reducing agent, heat, load alongside a protein ladder, run, and stain with Coomassie. Plot log MW against Rf for the standards, fit a straight line and calculate the size of an unknown band. (4) Troubleshoot: smiling bands (uneven heating), smeared lanes (overloading or degraded sample), no bands (wrong polarity, stain failure, little sample). Treat gel stains and acrylamide as hazardous and dispose of them properly.",
+        "advanced": "In Laemmli discontinuous electrophoresis, chloride (leading ion) and glycine (trailing ion) create a moving boundary that stacks proteins in a thin zone because of the different mobilities at pH 6.8 and 8.8; proteins then unstack as glycine overtakes them in the resolving gel. SDS binding is on the order of 1.4 g per gram of protein, but glycoproteins, membrane proteins and highly basic or acidic proteins can run anomalously. Native PAGE and blue-native PAGE preserve complexes, and capillary electrophoresis offers high resolution and automation, as in modern DNA sequencers. For nucleic acids, pulsed-field gel electrophoresis separates megabase fragments by changing the field direction. Quantification of bands requires linear response of the stain (Coomassie, silver, fluorescent dyes have different dynamic ranges). 2D electrophoresis reveals post-translational modifications through shifts in pI, though it has been largely supplemented by mass-spectrometry-based proteomics for depth."
+      },
+      "commonMistakes": [
+        "Connecting the electrodes the wrong way round so that DNA runs off the gel into the buffer (DNA moves toward the positive electrode).",
+        "Overloading a lane, giving smeared, distorted bands that are impossible to size.",
+        "Forgetting the reducing agent or the heating step in SDS-PAGE sample preparation, giving extra bands from disulfide-linked complexes.",
+        "Using a single band position as a precise molecular weight; gel estimates are usually only accurate to about 10 percent."
+      ],
+      "videos": [
+        {
+          "youtubeId": "vq759wKCCUQ",
+          "title": "Agarose Gel Electrophoresis",
+          "channel": "Bio-Rad Laboratories",
+          "level": "beginner",
+          "whyWatch": "Step-by-step guide to pouring, loading and running an agarose gel."
+        },
+        {
+          "youtubeId": "lU8gHrA5QCQ",
+          "title": "Gel Electrophoresis",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A short, clear explanation of why DNA fragments separate by size in a gel."
+        },
+        {
+          "youtubeId": "MILiO1XnuqQ",
+          "title": "SDS-PAGE explained - Protein Separation Technique",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Animation of how SDS gives proteins a uniform charge and how bands form."
+        },
+        {
+          "youtubeId": "kdAxT9EWxkE",
+          "title": "Understand SDS-PAGE In Under 4 Minutes",
+          "channel": "Lucas Learns",
+          "level": "beginner",
+          "whyWatch": "A fast, accurate overview of the whole SDS-PAGE workflow for revision."
+        },
+        {
+          "youtubeId": "aa2OSzXpXOQ",
+          "title": "SDS PAGE | Stacking vs Resolving gel",
+          "channel": "Quick Biochemistry Basics",
+          "level": "intermediate",
+          "whyWatch": "Explains why the stacking gel sharpens bands before they enter the resolving gel."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/227680a0",
+          "title": "Cleavage of Structural Proteins during the Assembly of the Head of Bacteriophage T4",
+          "authors": "Laemmli UK",
+          "year": 1970,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the discontinuous SDS-PAGE system used in every biochemistry lab, remarkable because the technique was a methods advance inside a phage biology study."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Gel electrophoresis virtual lab",
+          "provider": "University of Utah Learn.Genetics",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/labs/gel/",
+          "free": true,
+          "level": "beginner",
+          "note": "An interactive simulation that lets you load and run a gel before you do it for real."
+        },
+        {
+          "title": "Analytical Chemistry 2.1 (Harvey): Electrophoresis",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Theory of electrophoretic mobility and capillary methods."
+        },
+        {
+          "title": "Addgene protocols",
+          "provider": "Addgene",
+          "type": "reference",
+          "url": "https://www.addgene.org/protocols/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Practical protocols and troubleshooting notes for gel electrophoresis and related molecular biology methods."
+        },
+        {
+          "title": "Bio-protocol",
+          "provider": "Bio-protocol",
+          "type": "reference",
+          "url": "https://bio-protocol.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Peer-reviewed protocols for gels, staining and blotting with notes on recipes and pitfalls."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In SDS-PAGE with reducing agent, what mainly determines how far a protein migrates?",
+          "options": [
+            "Its isoelectric point",
+            "Its polypeptide size (molecular mass)",
+            "Its enzymatic activity",
+            "The number of disulfide bonds"
+          ],
+          "answer": 1,
+          "explanation": "SDS gives a uniform charge-to-mass ratio and the reducing agent breaks disulfides, so smaller polypeptides move faster through the gel."
+        },
+        {
+          "question": "Which gel is more appropriate for resolving DNA fragments of 100 to 300 base pairs?",
+          "options": [
+            "0.5 percent agarose",
+            "2 percent agarose or a polyacrylamide gel",
+            "A native protein gel",
+            "No gel is suitable"
+          ],
+          "answer": 1,
+          "explanation": "Smaller fragments need smaller pores, achieved with higher percentage agarose or polyacrylamide."
+        },
+        {
+          "question": "In isoelectric focusing a protein stops moving when:",
+          "options": [
+            "It reaches the end of the gel",
+            "It reaches the pH equal to its pI where its net charge is zero",
+            "The current is turned off",
+            "It has been denatured"
+          ],
+          "answer": 1,
+          "explanation": "A protein in a pH gradient migrates until it reaches the position where its net charge is zero."
+        }
+      ]
+    },
+    {
+      "id": "mass-spectrometry-nmr",
+      "title": "Mass Spectrometry and NMR Spectroscopy",
+      "hours": 6,
+      "hook": "Weigh a molecule so precisely that you can tell which amino acid it contains, or listen to the magnetic whisper of its atoms to map out its structure. These two tools are how modern biochemistry identifies and characterises molecules too small to see.",
+      "learningObjectives": [
+        "Describe the three stages of a mass spectrometer (ionisation, mass analysis, detection) and the m/z concept",
+        "Distinguish ESI and MALDI ionisation and name common analysers (quadrupole, time-of-flight, ion trap, Orbitrap)",
+        "Explain tandem MS (MS/MS) and how peptide sequences are obtained, including the bottom-up proteomics workflow",
+        "Interpret simple mass spectra, including multiply charged ESI envelopes and isotope patterns",
+        "Explain the basic principle of NMR (nuclear spin, magnetic field, resonance, chemical shift) and interpret a simple 1H NMR spectrum",
+        "Compare MS and NMR in terms of sensitivity, information, sample requirements and typical applications"
+      ],
+      "keyConcepts": [
+        {
+          "term": "m/z",
+          "definition": "Mass-to-charge ratio, the quantity measured by a mass spectrometer. For an ion carrying z charges, m/z is the mass (in daltons) divided by z."
+        },
+        {
+          "term": "Electrospray ionisation (ESI)",
+          "definition": "A soft ionisation method in which a liquid sample is sprayed through a charged needle, producing multiply charged ions of intact proteins and peptides; easily coupled to liquid chromatography."
+        },
+        {
+          "term": "MALDI",
+          "definition": "Matrix-assisted laser desorption/ionisation: the sample is co-crystallised with a light-absorbing matrix and a laser pulse generates mostly singly charged ions; often paired with a time-of-flight analyser."
+        },
+        {
+          "term": "Mass analysers",
+          "definition": "Quadrupoles filter ions by m/z, time-of-flight (TOF) analysers time how long ions take to cross a flight tube, ion traps and Orbitraps store ions and measure their oscillation to give very high resolution and accuracy."
+        },
+        {
+          "term": "Tandem MS (MS/MS)",
+          "definition": "A selected ion is fragmented (for example by collision with gas) and the fragments are measured. For peptides, fragments produced at the peptide bonds give a ladder from which the sequence can be read or matched to a database."
+        },
+        {
+          "term": "Bottom-up proteomics",
+          "definition": "Proteins are digested with a protease (usually trypsin, which cuts after lysine and arginine, except before proline), peptides are separated by LC and analysed by MS/MS, and spectra are matched to a protein sequence database."
+        },
+        {
+          "term": "Nuclear magnetic resonance",
+          "definition": "Nuclei with spin (1H, 13C, 15N, 31P) in a strong magnetic field absorb radio-frequency radiation at frequencies that depend on their chemical environment."
+        },
+        {
+          "term": "Chemical shift",
+          "definition": "The resonance position (in ppm, relative to a reference) that reflects the electronic environment of a nucleus; for example, protons next to electronegative atoms or in aromatic rings resonate at higher ppm."
+        },
+        {
+          "term": "Integration and splitting",
+          "definition": "In a 1H NMR spectrum, peak area is proportional to the number of equivalent protons, and spin-spin coupling splits peaks into patterns that reveal neighbouring protons (n neighbours give n+1 lines)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Mass spectrometry is a very precise set of scales for molecules: it turns them into charged particles, flings them through a field, and measures how they respond, giving their mass. NMR places molecules in a strong magnet and checks which radio frequencies their atomic nuclei respond to, which gives a fingerprint of the atoms' surroundings. Where the analogy breaks: mass spectrometers weigh ions in a vacuum, not molecules in water, so the sample must be ionised without destroying it, which took decades to develop for large biomolecules.",
+        "intermediate": "Hands-on and interpretation skills: (1) Calculate m/z for a peptide at +1, +2 and +3 charge states, given its mass and the mass of a proton (1.007 Da). (2) Given a list of m/z values forming a multiply charged envelope, work out the charge of adjacent peaks and the molecular mass of the protein. (3) Walk through the bottom-up proteomics workflow on a gel band: in-gel digestion with trypsin, peptide extraction, LC-MS/MS, database search, and reporting protein identification with a false discovery rate. (4) Interpret a simple 1H NMR spectrum of ethanol or ethyl acetate, assigning peaks from chemical shift, integration and splitting. (5) Discuss which technique you would choose to confirm the identity of a purified recombinant protein (intact mass by ESI-MS plus peptide mapping) and which to determine the 3D structure of a small protein in solution (multi-dimensional NMR).",
+        "advanced": "Mass accuracy in parts per million and resolving power determine whether you can distinguish molecules of similar mass; high-resolution instruments (Orbitrap, FT-ICR) can separate isotopic peaks and assign elemental composition. Quantitative proteomics uses isotope labelling (SILAC, TMT) or label-free methods, with data-dependent or data-independent acquisition, and requires statistical control of false discovery rate through target-decoy strategies. Post-translational modifications are located by their mass shifts in MS/MS spectra. In NMR, the signal arises from the small excess of spins aligned with the field (Boltzmann distribution) and is intrinsically insensitive, so higher fields and cryoprobes help; protein NMR uses isotope-labelled (15N, 13C) samples and multidimensional experiments such as HSQC, which gives one peak per backbone N-H pair and serves as a fingerprint of folding and ligand binding. Both techniques are core to metabolomics, structural biology and drug discovery, and increasingly complement cryo-EM and X-ray crystallography."
+      },
+      "commonMistakes": [
+        "Confusing m/z with mass: for multiply charged ions, the observed m/z is much smaller than the molecular mass.",
+        "Believing a database match is certain; protein identifications come with a score and a false discovery rate that must be reported.",
+        "Interpreting NMR peaks by chemical shift alone without integration and splitting.",
+        "Treating MS as automatically quantitative; ionisation efficiency varies between molecules and needs standards."
+      ],
+      "videos": [
+        {
+          "youtubeId": "6O_85tKfZHc",
+          "title": "Mass Spectrometry explained - how it works",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A concise animation of ionisation, separation by m/z and detection."
+        },
+        {
+          "youtubeId": "wx4F6kGy1Fs",
+          "title": "MS-based proteomics: A short introduction to the core concepts of proteomics and mass spectrometry",
+          "channel": "Lars Juhl Jensen",
+          "level": "intermediate",
+          "whyWatch": "A researcher's short introduction showing how peptides are identified from MS/MS spectra."
+        },
+        {
+          "youtubeId": "bS78rIYvFBE",
+          "title": "Lecture mass spectrometry basics - Part 1 of 7",
+          "channel": "CompOmics",
+          "level": "advanced",
+          "whyWatch": "A lecture series on the principles of mass spectrometry for proteomics, if you want depth beyond the animations."
+        },
+        {
+          "youtubeId": "SBir5wUS3Bo",
+          "title": "NMR Spectroscopy",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Introduces nuclear spin, chemical shift and splitting with worked examples."
+        },
+        {
+          "youtubeId": "Liit4blsrqM",
+          "title": "How to Identify Molecules - Proton NMR: Crash Course Organic Chemistry #26",
+          "channel": "CrashCourse",
+          "level": "intermediate",
+          "whyWatch": "Practice reading a proton NMR spectrum step by step."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.2675315",
+          "title": "Electrospray Ionization for Mass Spectrometry of Large Biomolecules",
+          "authors": "Fenn JB, Mann M, Meng CK, Wong SF, Whitehouse CM",
+          "year": 1989,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The breakthrough that made it possible to weigh intact proteins, recognised by the 2002 Nobel Prize in Chemistry. Look at the multiply charged spectra in the figures to see what 'soft ionisation' achieved."
+        },
+        {
+          "doi": "10.1038/nature01511",
+          "title": "Mass spectrometry-based proteomics",
+          "authors": "Aebersold R, Mann M",
+          "year": 2003,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A widely read review of how proteins are identified and quantified by MS, useful for understanding the workflow behind most proteomics papers."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Chemistry 2002",
+          "provider": "Nobel Prize Outreach",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2002/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "Summary of the development of soft ionisation methods for mass spectrometry and NMR for biomolecules."
+        },
+        {
+          "title": "PRIDE Archive",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/pride/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The public repository of mass-spectrometry proteomics data; browse real datasets to see what raw experiments look like."
+        },
+        {
+          "title": "PRIDE Quick Tour",
+          "provider": "EMBL-EBI Training",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/pride-quick-tour/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A short guided introduction to searching and using proteomics data."
+        },
+        {
+          "title": "Spectral Database for Organic Compounds (SDBS)",
+          "provider": "AIST Japan",
+          "type": "database",
+          "url": "https://sdbs.db.aist.go.jp/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Reference 1H and 13C NMR, IR and mass spectra to practise interpretation."
+        },
+        {
+          "title": "NIST Chemistry WebBook",
+          "provider": "NIST",
+          "type": "database",
+          "url": "https://webbook.nist.gov/chemistry/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Mass spectra and other data for small molecules to compare with unknowns."
+        },
+        {
+          "title": "Instrumental Analysis (LibreTexts)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on mass spectrometry and NMR instrumentation and interpretation."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A protein ion appears at m/z 1000 with a charge of +20. What is its approximate mass?",
+          "options": [
+            "1000 Da",
+            "20 kDa",
+            "50 Da",
+            "200 kDa"
+          ],
+          "answer": 1,
+          "explanation": "Mass is approximately m/z x z (minus the small mass of the added protons): 1000 x 20 = 20,000 Da, or about 20 kDa."
+        },
+        {
+          "question": "Why is trypsin the standard protease for bottom-up proteomics?",
+          "options": [
+            "It cuts after lysine and arginine, producing peptides with a basic C-terminus that ionise and fragment well",
+            "It cuts at random positions",
+            "It never leaves peptides",
+            "It is the only protease available"
+          ],
+          "answer": 0,
+          "explanation": "Trypsin cleaves C-terminal to Lys and Arg (except before proline), giving peptides of suitable length and charge for MS/MS."
+        },
+        {
+          "question": "In a 1H NMR spectrum, the integral (area) of a peak is proportional to:",
+          "options": [
+            "The number of equivalent protons giving the signal",
+            "The molecular mass",
+            "The chemical shift",
+            "The number of carbons"
+          ],
+          "answer": 0,
+          "explanation": "Integration gives the relative number of hydrogens responsible for each signal."
+        }
+      ]
+    },
+    {
+      "id": "immunoassays-labelled-detection",
+      "title": "Immunoassays, Western Blotting and Labelled Detection",
+      "hours": 6,
+      "hook": "Antibodies are nature's molecular recognition tools, so specific that an assay built on them can detect a hormone at picomolar concentrations in a drop of blood. Add an enzyme, a fluorescent dye or a radioactive atom to the antibody, and the invisible becomes a measurable colour or click.",
+      "learningObjectives": [
+        "Explain antibody-antigen binding and the roles of primary and secondary antibodies",
+        "Describe the formats and logic of direct, indirect, sandwich and competitive ELISA",
+        "Design the plate layout, controls and standard curve for a quantitative ELISA and analyse the data",
+        "Carry out and interpret a Western blot (transfer, blocking, antibody incubation, detection) including loading controls",
+        "Compare detection labels: enzymes (HRP, alkaline phosphatase), fluorophores and radioisotopes",
+        "Describe how radioisotopes are detected and the safety principles for handling them"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Antibody specificity and affinity",
+          "definition": "Specificity is the ability to recognise one target among many; affinity is the strength of binding. Polyclonal antibodies recognise multiple epitopes; monoclonal antibodies recognise one epitope."
+        },
+        {
+          "term": "Primary and secondary antibody",
+          "definition": "The primary antibody binds the target; a labelled secondary antibody binds the primary, amplifying signal and allowing one labelled reagent to detect many primaries."
+        },
+        {
+          "term": "Direct, indirect, sandwich, competitive ELISA",
+          "definition": "Direct: labelled antibody detects antigen on the plate. Indirect: labelled secondary detects the primary. Sandwich: capture antibody, antigen, then detection antibody (most specific and sensitive). Competitive: signal falls as antigen in the sample increases."
+        },
+        {
+          "term": "Enzyme labels and substrates",
+          "definition": "Horseradish peroxidase (HRP) with TMB produces a blue product that turns yellow on acid and is read at 450 nm; alkaline phosphatase with p-nitrophenyl phosphate gives a yellow product read at 405 nm."
+        },
+        {
+          "term": "Controls in immunoassays",
+          "definition": "Blanks (no antigen), negative and positive controls, and omission of the primary antibody identify non-specific binding and confirm the assay works."
+        },
+        {
+          "term": "Western blotting",
+          "definition": "Proteins separated by SDS-PAGE are transferred to a nitrocellulose or PVDF membrane, blocked to prevent non-specific binding, probed with primary and enzyme-labelled secondary antibodies and detected by chemiluminescence or fluorescence."
+        },
+        {
+          "term": "Loading control",
+          "definition": "A protein expected to be constant (for example actin, tubulin or GAPDH, or total protein stain) used to check that equal amounts were loaded when comparing samples."
+        },
+        {
+          "term": "Radioisotope labelling",
+          "definition": "Isotopes such as 3H, 14C, 32P, 35S and 125I allow extremely sensitive tracing of molecules, detected by liquid scintillation counting or autoradiography; use is restricted and regulated."
+        },
+        {
+          "term": "Half-life",
+          "definition": "The time for half the radioactive atoms to decay (for example 14C about 5,730 years, 32P about 14.3 days, 35S about 87 days, 3H about 12.3 years); it affects planning, signal and waste handling."
+        }
+      ],
+      "deeper": {
+        "beginner": "An antibody is a lock-and-key molecule that recognises one specific shape. To make that recognition visible you attach something measurable to it: an enzyme that makes a coloured product, a fluorescent dye or a radioactive atom. In an ELISA, antibodies catch the target on a plastic plate and the colour that develops tells you how much is there. Where the analogy breaks: the lock is rarely perfect; an antibody may also bind other proteins weakly, which is why controls are so important.",
+        "intermediate": "Hands-on skills: (1) Plan a sandwich ELISA on a 96-well plate: coat with capture antibody, block, add standards and samples in duplicate or triplicate, add detection antibody, add enzyme conjugate, wash thoroughly between steps, add substrate, stop the reaction and read absorbance at 450 nm. Include blanks and zero standards. (2) Plot absorbance against log concentration for standards, fit a four-parameter logistic curve (or a linear region), and calculate unknowns, ensuring samples fall within the curve and applying dilution factors. (3) Run a Western blot: after SDS-PAGE, transfer protein to a membrane, check transfer by reversible staining, block with milk or BSA, incubate with primary then secondary antibody, wash with buffer containing mild detergent, develop with chemiluminescent substrate and image. Normalise band intensities to a loading control. (4) Troubleshoot high background (insufficient blocking or washing, too much antibody), weak signal (inactive antibody, poor transfer) and non-specific bands (cross-reactivity, degradation). (5) Discuss safety, shielding, monitoring and waste for radioisotope experiments.",
+        "advanced": "ELISA data are non-linear and best fitted with a four- or five-parameter logistic model; the working range, limit of detection and quantification, and the hook effect (falsely low signal at very high antigen in sandwich assays) must be considered. Assay validation includes spike-and-recovery, parallelism with dilution and cross-reactivity testing. Antibody validation is a major reproducibility issue: knockout or knock-down controls, orthogonal methods and recombinant antibodies give more confidence than catalogue descriptions. Western blot quantification requires signals within the linear range; chemiluminescence saturates easily, and fluorescent secondary antibodies or total-protein normalisation offer better linearity. Radiolabel experiments (for example pulse-chase, binding assays with 125I or 3H ligands) remain unmatched in sensitivity for some questions, but are being replaced where possible by non-radioactive alternatives. Immunoassays also form the basis of lateral-flow tests and clinical analysers."
+      },
+      "commonMistakes": [
+        "Using too little washing between ELISA steps, causing high background and poor reproducibility.",
+        "Interpreting a faint Western band as quantitative proof of protein level without a loading control or a linear detection range.",
+        "Running samples outside the standard curve and extrapolating, especially at the plateau where the curve is flat.",
+        "Assuming an antibody that works in one application (for example ELISA) will work in another (for example Western blot or immunofluorescence) without validation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "ERk0hwqhyDw",
+          "title": "ELISA (Enzyme-linked Immunosorbent Assay)",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A concise animated explanation of the steps and colour read-out of an ELISA."
+        },
+        {
+          "youtubeId": "RYVV1R8ywXM",
+          "title": "ELISA | Enzyme linked immonosorbent assay | ELISA test | Types of ELISA | Direct and Indirect ELISA",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Compares the main ELISA formats side by side, useful when you must choose the right format."
+        },
+        {
+          "youtubeId": "qT_AqI-MKJc",
+          "title": "Western Blot / Protein Immunoblot explained",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Shows each stage from gel to detection of the target band."
+        },
+        {
+          "youtubeId": "CEEekahiqMo",
+          "title": "Western blot protocol video",
+          "channel": "Abcam",
+          "level": "intermediate",
+          "whyWatch": "A bench demonstration with practical tips on transfer, blocking and antibody incubation."
+        },
+        {
+          "youtubeId": "s0TtHjuEE5Y",
+          "title": "Intro to radioisotopes",
+          "channel": "Goucher College Biological Sciences",
+          "level": "intermediate",
+          "whyWatch": "An introduction to radioisotope use in biology and the safety thinking that goes with it."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0019-2791(71)90454-X",
+          "title": "Enzyme-linked immunosorbent assay (ELISA) quantitative assay of immunoglobulin G",
+          "authors": "Engvall E, Perlmann P",
+          "year": 1971,
+          "journal": "Immunochemistry",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the ELISA by replacing radioactive labels with enzymes, making sensitive immunoassays accessible to ordinary laboratories."
+        },
+        {
+          "doi": "10.1073/pnas.76.9.4350",
+          "title": "Electrophoretic transfer of proteins from polyacrylamide gels to nitrocellulose sheets: procedure and some applications",
+          "authors": "Towbin H, Staehelin T, Gordon J",
+          "year": 1979,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Describes the transfer technique that became the Western blot. It is brief and shows how the method was first applied to detect specific proteins with antibodies."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Addgene protocols",
+          "provider": "Addgene",
+          "type": "reference",
+          "url": "https://www.addgene.org/protocols/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Protocols and troubleshooting guides for Western blotting and related techniques."
+        },
+        {
+          "title": "Bio-protocol",
+          "provider": "Bio-protocol",
+          "type": "reference",
+          "url": "https://bio-protocol.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for ELISA and Western protocols with detailed notes on reagents and controls."
+        },
+        {
+          "title": "Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive background material on antibodies and the immune system."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which ELISA format uses two antibodies that bind different epitopes on the same antigen?",
+          "options": [
+            "Direct ELISA",
+            "Indirect ELISA",
+            "Sandwich ELISA",
+            "Competitive ELISA"
+          ],
+          "answer": 2,
+          "explanation": "A sandwich ELISA uses a capture antibody and a detection antibody binding distinct epitopes, which gives high specificity."
+        },
+        {
+          "question": "Why is a loading control used in a Western blot?",
+          "options": [
+            "To make bands darker",
+            "To confirm roughly equal protein was loaded in each lane when comparing samples",
+            "To remove non-specific binding",
+            "To label the antibody"
+          ],
+          "answer": 1,
+          "explanation": "Comparing target band intensity requires evidence that the amount of total protein loaded was similar between lanes."
+        },
+        {
+          "question": "In a competitive ELISA, what happens to the signal as the amount of antigen in the sample increases?",
+          "options": [
+            "It increases",
+            "It decreases",
+            "It stays constant",
+            "It becomes blue"
+          ],
+          "answer": 1,
+          "explanation": "Sample antigen competes with labelled antigen for limited antibody sites, so more sample antigen means less label bound and a weaker signal."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "guqjF_DQu0s",
+      "title": "An Introduction to Instrumental Methods",
+      "channel": "Vidya-mitra",
+      "level": "beginner",
+      "whyWatch": "A full lecture introducing how instrumental methods are organised (source, sample, detector) and how signals relate to concentration."
+    },
+    {
+      "youtubeId": "EHtOYlvWE6k",
+      "title": "R4. Purification of Native and Mutant Ribosomes, Protein Purification",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A recitation that works through the logic of protein purification steps, tying together centrifugation, chromatography and gels."
+    },
+    {
+      "youtubeId": "60m8qBOD_nM",
+      "title": "R11. Mass Spectrometry",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "An MIT recitation on mass spectrometry concepts and problem-solving, for students who want to go beyond the introductory animations."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Analytical Chemistry 2.1 (Harvey)",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free, comprehensive text on analytical methods, statistics and instrumentation."
+    },
+    {
+      "title": "Instrumental Analysis (LibreTexts)",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free modules on spectroscopy, chromatography and mass spectrometry."
+    },
+    {
+      "title": "Chemistry 2e (OpenStax)",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/chemistry-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "Refresher on the chemistry behind solutions, acids and bases and spectroscopy."
+    },
+    {
+      "title": "Biochemistry bookshelf (LibreTexts)",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "Open biochemistry texts with sections on purification and characterisation of biomolecules."
+    }
+  ]
+}

@@ -1,0 +1,1191 @@
+{
+  "code": "MB 3024",
+  "title": "Topics in Molecular Cell Biology",
+  "level": 3,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "How a cell listens, decides, divides, dies and moves: the molecular logic behind everything a cell does.",
+  "overview": "This page covers six well-established themes that nearly every molecular cell biology course returns to: cell signalling, the cell cycle, cell death and autophagy, the molecular basis of cancer, membrane trafficking and protein sorting, and the cytoskeleton with its molecular motors.",
+  "whyItMatters": "Nearly every disease, from diabetes to cancer to neurodegeneration, is a failure of one of these cellular systems, and most modern drugs act on a receptor, a kinase, a cell cycle regulator or a trafficking step. Knowing the molecular wiring of the cell lets you read the research literature and understand why therapies work.",
+  "prerequisites": [
+    "FD 1102",
+    "FD 2101",
+    "FD 2102"
+  ],
+  "careerLinks": [
+    "Cancer biology and drug discovery",
+    "Cell culture and biopharmaceutical research",
+    "Academic research in cell and developmental biology",
+    "Diagnostic and clinical research laboratories",
+    "Science communication and teaching"
+  ],
+  "studyTips": [
+    "For every pathway, write the sequence as 'signal, receptor, transducer, effector, response' and then add where it is switched off; the off-switches are what examiners love.",
+    "Learn the logic of molecular switches (GTP/GDP, phosphorylation, ubiquitination) once and then recognise them everywhere in the course.",
+    "Pair each disease or drug with the step it affects, such as imatinib with BCR-ABL or taxol with microtubules, to make facts memorable.",
+    "Watch animations of trafficking and motors twice: first for the story, then to name each protein."
+  ],
+  "units": [
+    {
+      "id": "cell-signalling",
+      "title": "Cell signalling: receptors, second messengers and kinase cascades",
+      "hours": 6,
+      "hook": "A cell cannot see, hear or touch; everything it knows about the outside world arrives as molecules landing on receptors. A single molecule of adrenaline can make a liver cell release millions of glucose molecules, and the secret is amplification inside the cell.",
+      "learningObjectives": [
+        "Classify receptors (GPCRs, receptor tyrosine kinases, ion channels, cytokine receptors, nuclear receptors) and their ligands",
+        "Describe the G protein cycle and the cAMP and phosphoinositide second messenger pathways",
+        "Explain how RTKs activate the Ras-MAPK and PI3K-Akt pathways",
+        "Explain how signals are amplified, integrated and switched off",
+        "Describe examples of signalling defects in disease and the drugs that target them"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Ligand and receptor",
+          "definition": "A ligand is a signalling molecule (hormone, growth factor, neurotransmitter); a receptor is the protein that binds it and changes conformation to start a response."
+        },
+        {
+          "term": "G protein-coupled receptor (GPCR)",
+          "definition": "A seven-transmembrane receptor that activates heterotrimeric G proteins by promoting GDP release and GTP binding on the alpha subunit."
+        },
+        {
+          "term": "Second messenger",
+          "definition": "A small intracellular molecule or ion (cAMP, IP3, DAG, Ca2+) whose concentration rises on receptor activation and spreads the signal."
+        },
+        {
+          "term": "Receptor tyrosine kinase (RTK)",
+          "definition": "A receptor that dimerises on ligand binding and autophosphorylates tyrosines, creating docking sites for SH2-domain proteins."
+        },
+        {
+          "term": "Ras and MAP kinase cascade",
+          "definition": "A small GTPase (Ras) that, when GTP-bound, activates Raf, then MEK, then ERK in a phosphorylation cascade that regulates transcription and growth."
+        },
+        {
+          "term": "PI3K-Akt pathway",
+          "definition": "PI3K converts PIP2 to PIP3 at the membrane, recruiting Akt for activation; PTEN reverses the step, and the pathway promotes survival and growth."
+        },
+        {
+          "term": "Molecular switch",
+          "definition": "A protein that toggles between active and inactive forms, either by GTP/GDP exchange or by phosphorylation and dephosphorylation."
+        },
+        {
+          "term": "Desensitisation",
+          "definition": "Reduction of response to a continuing stimulus, for example by receptor phosphorylation and arrestin binding."
+        },
+        {
+          "term": "Signal amplification",
+          "definition": "Each activated enzyme in a cascade activates many downstream molecules, so a few receptors can give a large response."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells communicate using chemical messages. A message molecule lands on a receptor protein in the cell membrane, which changes shape and passes the news inward by activating other proteins, a bit like a row of dominoes where each one can knock down many more. Along the way, small molecules called second messengers spread the news quickly through the cell. The cell also needs ways to switch the signal off, otherwise it would respond forever; enzymes remove the phosphate tags and proteins hydrolyse the GTP that keeps switches on. The domino picture shows the passing on of signals but fails to show the amplification, because one domino can topple many.",
+        "intermediate": "In a GPCR pathway, ligand binding promotes the receptor to act as a guanine nucleotide exchange factor for the G protein; Galpha-GTP and Gbetagamma separate and act on effectors. Gs stimulates adenylyl cyclase to make cAMP, which activates protein kinase A; Gq activates phospholipase C-beta, which splits PIP2 into IP3 (releasing Ca2+ from the ER) and DAG (activating protein kinase C). The signal ends when the alpha subunit hydrolyses GTP, a reaction that is accelerated by RGS proteins, and cholera toxin causes disease by locking Gs in its active state. RTKs, such as the EGF receptor, recruit Grb2 and SOS, which activate Ras; Ras-GTP then initiates the Raf-MEK-ERK cascade. Parallel signalling through PI3K produces PIP3 and activates Akt, which phosphorylates targets that promote survival and growth, and the pathway cross-talks with MAPK and mTOR.",
+        "advanced": "Quantitatively, signalling networks implement computation: ultrasensitive responses (as in multi-site phosphorylation or the MAPK cascade), feedback loops giving oscillations or bistability, and scaffolds that organise cascades and insulate them from crosstalk. Receptor activation is dynamic, and the duration of ERK activation (transient versus sustained) can lead cells to different fates, as shown in PC12 cells with EGF versus NGF. Structural work has shown how agonist binding rearranges transmembrane helices to open a cleft for the G protein, as in the beta-2 adrenergic receptor-Gs complex, and has enabled structure-based drug design; biased agonism, in which ligands favour G protein or arrestin signalling, is of interest for safer drugs. Oncogenic mutations in RTKs, Ras (the most commonly mutated oncogene family in human cancer) and PI3K show how a loss of off-switches lead to constitutive signalling, and drugs such as imatinib (BCR-ABL) and gefitinib or erlotinib (EGFR) block specific kinases, although resistance mutations develop and feedback or bypass pathways limit single-agent benefit."
+      },
+      "commonMistakes": [
+        "Thinking that the ligand enters the cell; for cell-surface receptors it does not, and the signal is relayed by proteins and second messengers.",
+        "Assuming that cAMP is always stimulatory; the effect depends on the cell type and downstream targets.",
+        "Saying a G protein is active when bound to GDP; the active form carries GTP and the intrinsic GTPase activity ends the signal.",
+        "Forgetting that phosphatases and GTPase-activating proteins are as important as kinases and exchange factors."
+      ],
+      "videos": [
+        {
+          "youtubeId": "XIdBJm8DaFo",
+          "title": "GPCR cAMP signaling || Second messenger cAMP || 4K Animation",
+          "channel": "Rethink Biology",
+          "level": "beginner",
+          "whyWatch": "A clear animation of the G protein cycle and the cAMP second messenger pathway."
+        },
+        {
+          "youtubeId": "8-cub2zRQoA",
+          "title": "Receptor Tyrosine Kinase || MAPK Pathway",
+          "channel": "Nonstop Neuron",
+          "level": "intermediate",
+          "whyWatch": "Follows an RTK from ligand binding to the MAP kinase cascade, naming each step."
+        },
+        {
+          "youtubeId": "WDVjRU8Ko4A",
+          "title": "PI3K-AKT Pathway Explained",
+          "channel": "Bio-Rad Laboratories",
+          "level": "intermediate",
+          "whyWatch": "A short explanation of PIP3 generation, Akt activation and the role of PTEN."
+        },
+        {
+          "youtubeId": "5ejPI6QqKBU",
+          "title": "20. Cell Signaling 1 – Overview",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture that sets signalling in a quantitative, systems-oriented context."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2010.06.011",
+          "title": "Cell Signaling by Receptor Tyrosine Kinases",
+          "authors": "Lemmon MA, Schlessinger J",
+          "year": 2010,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "The standard review of how RTKs are activated and regulated, with the structural logic and the links to cancer drugs.",
+          "readingQuestions": [
+            "What different mechanisms of RTK activation are described, and which is typical for the EGF receptor?"
+          ]
+        },
+        {
+          "doi": "10.1038/nature10361",
+          "title": "Crystal structure of the β2 adrenergic receptor–Gs protein complex",
+          "authors": "Rasmussen SGF, DeVree BT, Zou Y, Kruse AC, Chung KY, Kobilka TS, Thian FS, Chae PS, Pardon E, Calinski D, Mathiesen JM, Shah STA, Lyons JA, Caffrey M, Gellman SH, Steyaert J, Skiniotis G, Weis WI, Sunahara RK, Kobilka BK",
+          "year": 2011,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The first atomic picture of a GPCR bound to its G protein, showing how the receptor pulls open the G protein to release GDP."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Cell signaling (Khan Academy)",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/biology/cell-signaling",
+          "free": true,
+          "level": "beginner",
+          "note": "Structured lessons on receptors, second messengers and signalling pathways with practice questions."
+        },
+        {
+          "title": "Reactome Pathway Browser",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Explore curated maps of the MAPK, PI3K-Akt and GPCR pathways and see how proteins connect."
+        },
+        {
+          "title": "Biology 2e: Cell Communication",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/9-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "An open textbook chapter that introduces signalling concepts with clear diagrams."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Cholera toxin causes severe diarrhoea mainly because it:",
+          "options": [
+            "Keeps Gs alpha in the active state so cAMP stays high",
+            "Blocks adenylyl cyclase",
+            "Degrades PIP2",
+            "Inhibits Ras"
+          ],
+          "answer": 0,
+          "explanation": "The toxin modifies Gs alpha so that it cannot hydrolyse GTP, causing persistent adenylyl cyclase activation and elevated cAMP in intestinal cells."
+        },
+        {
+          "question": "Which molecule is produced by PI3K and recruits Akt to the plasma membrane?",
+          "options": [
+            "PIP3",
+            "IP3",
+            "DAG",
+            "cAMP"
+          ],
+          "answer": 0,
+          "explanation": "PI3K phosphorylates PIP2 to make PIP3, which binds the PH domain of Akt; PTEN removes the phosphate again."
+        },
+        {
+          "question": "Which pair of second messengers is generated by phospholipase C-beta action on PIP2?",
+          "options": [
+            "IP3 and DAG",
+            "cAMP and cGMP",
+            "PIP3 and Ca2+",
+            "ATP and GTP"
+          ],
+          "answer": 0,
+          "explanation": "PLC cleaves PIP2 into soluble IP3, which releases calcium from the ER, and membrane-bound DAG, which activates protein kinase C."
+        },
+        {
+          "question": "What is the immediate role of Grb2 and SOS in RTK signalling?",
+          "options": [
+            "They activate Ras by promoting GDP-GTP exchange",
+            "They degrade the receptor",
+            "They make cAMP",
+            "They phosphorylate Akt"
+          ],
+          "answer": 0,
+          "explanation": "Grb2 binds phosphotyrosines through its SH2 domain and brings SOS, a GEF, to Ras, which becomes GTP-bound."
+        }
+      ]
+    },
+    {
+      "id": "cell-cycle",
+      "title": "The cell cycle and its checkpoints",
+      "hours": 5,
+      "hook": "Every second your body makes millions of new cells, and each one has to copy about three billion base pairs exactly once before dividing. That requires a clock, a set of brakes and a series of quality inspectors, and when the inspectors fail, cancer is one possible result.",
+      "learningObjectives": [
+        "Describe the phases of the cell cycle and the main events of mitosis",
+        "Explain how cyclin-CDK complexes drive the cycle and how they are regulated",
+        "Describe the Rb-E2F pathway and the restriction point",
+        "Explain the DNA damage checkpoints and the spindle assembly checkpoint",
+        "Explain how replication is restricted to once per cycle and how APC/C triggers anaphase"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Cell cycle phases",
+          "definition": "G1 (growth), S (DNA synthesis), G2 (preparation) and M (mitosis and cytokinesis); cells can leave to a resting state G0."
+        },
+        {
+          "term": "Cyclin and CDK",
+          "definition": "Cyclin-dependent kinases are active only when bound to their partner cyclins, whose levels rise and fall through the cycle; examples are cyclin D-CDK4/6, cyclin E-CDK2 and cyclin B-CDK1."
+        },
+        {
+          "term": "CDK inhibitor (CKI)",
+          "definition": "Proteins such as p21, p27 and p16 that bind and inhibit cyclin-CDK complexes, imposing arrest."
+        },
+        {
+          "term": "Restriction point",
+          "definition": "A late G1 point after which a cell is committed to the cycle and no longer depends on growth factors; linked to phosphorylation of Rb."
+        },
+        {
+          "term": "Rb and E2F",
+          "definition": "Hypophosphorylated Rb binds E2F transcription factors and blocks S-phase genes; cyclin-CDK phosphorylation of Rb releases E2F."
+        },
+        {
+          "term": "DNA damage checkpoint",
+          "definition": "A pathway in which ATM or ATR kinases detect damage and activate p53 and Chk kinases, producing arrest through p21 or Cdc25 inhibition."
+        },
+        {
+          "term": "Spindle assembly checkpoint",
+          "definition": "A surveillance system that delays anaphase until all kinetochores are attached to spindle microtubules, by inhibiting the APC/C activator Cdc20."
+        },
+        {
+          "term": "APC/C",
+          "definition": "The anaphase-promoting complex, a ubiquitin ligase that targets securin and cyclin B for destruction to allow sister chromatid separation and mitotic exit."
+        },
+        {
+          "term": "Replication licensing",
+          "definition": "Loading of MCM helicase on origins in G1, which can only happen when CDK activity is low; this prevents re-replication in S and G2."
+        }
+      ],
+      "deeper": {
+        "beginner": "A cell goes through a cycle of growing, copying its DNA, checking the copy and then dividing in two. Proteins called cyclins rise and fall during the cycle and partner with enzymes called CDKs; when a cyclin-CDK pair is active, it pushes the cell into the next stage. At several points, inspection systems stop the cycle if something is wrong, for example if DNA is damaged or the chromosomes are not properly attached to the spindle. Think of it as a production line with quality control stations. The analogy is incomplete because the stations themselves are made of proteins that can be mutated, and in cancer the line may keep running even when inspections fail.",
+        "intermediate": "Growth factors raise cyclin D, which with CDK4/6 begins phosphorylating Rb; cyclin E-CDK2 completes the process, E2F then turns on S-phase genes including cyclin E and A, creating a positive feedback loop that makes the commitment switch-like. Cyclin A-CDK2 drives DNA replication and cyclin B-CDK1 (originally called maturation or M-phase promoting factor) triggers entry into mitosis, controlled by the inhibitory kinase Wee1 and the activating phosphatase Cdc25. After DNA damage, ATM and ATR phosphorylate Chk2 and Chk1 and stabilise p53, which induces p21 to arrest the cycle in G1; in G2, Chk1 phosphorylates and inhibits Cdc25. At metaphase, once all kinetochores are attached, the checkpoint proteins (Mad2, BubR1) release Cdc20, APC/C-Cdc20 ubiquitinates securin and cyclin B, separase cleaves cohesin and sister chromatids separate.",
+        "advanced": "Cell cycle transitions are bistable switches generated by feedback and double-negative loops, such as CDK1 activation by Cdc25 and inhibition of Wee1, which gives hysteresis and makes each transition irreversible in practice. Fission yeast work by Nurse and budding yeast work by Hartwell, with sea urchin studies by Hunt, defined the conserved machinery and earned the 2001 Nobel Prize. In human cells, the Rb pathway is disrupted in most cancers (through cyclin D amplification, CDK4 mutation, p16 loss or Rb loss), which explains the clinical use of CDK4/6 inhibitors such as palbociclib in hormone receptor-positive breast cancer. Re-replication control combines CDK-dependent phosphorylation of licensing factors, geminin and Cdt1 degradation, and it shows how oscillation of CDK activity ensures that each origin fires once. Interpretation of synchronisation experiments needs care, as drugs used to synchronise cells (for example nocodazole or thymidine) can themselves induce stress responses."
+      },
+      "commonMistakes": [
+        "Describing cyclins as enzymes; they are regulatory partners of CDKs, which are the kinases.",
+        "Saying that CDK levels oscillate; it is mainly cyclin levels and phosphorylation states that oscillate, whereas CDK concentration remains fairly constant.",
+        "Equating G0 with G1; G0 is an exit from the cycle, typically reversible, whereas G1 is a stage within it.",
+        "Believing the spindle checkpoint monitors DNA damage; it monitors chromosome attachment to the spindle."
+      ],
+      "videos": [
+        {
+          "youtubeId": "QVCjdNxJreE",
+          "title": "The Cell Cycle (and cancer) [Updated]",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly overview of the phases, checkpoints and how cancer relates to the cycle."
+        },
+        {
+          "youtubeId": "LxyIidj-3Ts",
+          "title": "Cyclin and CDK in cell cycle progression | How Cyclin CDK works?",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Explains how different cyclin-CDK pairs drive each transition and are regulated."
+        },
+        {
+          "youtubeId": "l65EBi2xp4k",
+          "title": "Spindle Assembly Checkpoint | Mitotic Checkpoint",
+          "channel": "Hussain Biology",
+          "level": "intermediate",
+          "whyWatch": "A concise animation of how unattached kinetochores prevent APC/C activation."
+        },
+        {
+          "youtubeId": "iz7rWK5cqjE",
+          "title": "23. Cell Cycle and Checkpoints",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture that covers the regulation of the cell cycle in depth with experiments."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.2683079",
+          "title": "Checkpoints: Controls That Ensure the Order of Cell Cycle Events",
+          "authors": "Hartwell LH, Weinert TA",
+          "year": 1989,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Introduced the concept of checkpoints as dependency relationships between cell cycle events, a framework that remains central to the field.",
+          "readingQuestions": [
+            "How do the authors distinguish a checkpoint from a simple dependency in the order of events?"
+          ]
+        },
+        {
+          "doi": "10.1016/s0092-8674(00)81684-0",
+          "title": "A Long Twentieth Century of the Cell Cycle and Beyond",
+          "authors": "Nurse P",
+          "year": 2000,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A readable personal history by a Nobel laureate that shows how the idea of universal CDK control was reached."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2001 (cell cycle regulators)",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2001/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "The discovery story of cyclins and CDKs, written for a general audience."
+        },
+        {
+          "title": "Biology 2e: Cell Reproduction",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/10-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "An open textbook chapter on the cell cycle, mitosis and checkpoints."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition (cell cycle chapter)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free full text of a classic reference; search for the cell cycle and cell division chapter for depth."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which event follows phosphorylation of Rb by cyclin-CDK complexes?",
+          "options": [
+            "E2F is released and activates S-phase genes",
+            "E2F is degraded",
+            "p53 is activated",
+            "Cohesin is cleaved"
+          ],
+          "answer": 0,
+          "explanation": "Hyperphosphorylated Rb no longer binds E2F, which then drives transcription of genes needed for S phase."
+        },
+        {
+          "question": "The spindle assembly checkpoint delays anaphase by inhibiting:",
+          "options": [
+            "APC/C-Cdc20",
+            "Cyclin D",
+            "p21",
+            "MCM helicase"
+          ],
+          "answer": 0,
+          "explanation": "Unattached kinetochores generate a signal that sequesters Cdc20, so securin and cyclin B are not degraded until attachment is complete."
+        },
+        {
+          "question": "After DNA damage in G1, the CDK inhibitor induced by p53 is:",
+          "options": [
+            "p21",
+            "Cyclin E",
+            "Cdc25",
+            "Wee1"
+          ],
+          "answer": 0,
+          "explanation": "p53 activates transcription of p21, which binds and inhibits cyclin-CDK complexes, arresting cells in G1."
+        }
+      ]
+    },
+    {
+      "id": "cell-death-and-autophagy",
+      "title": "Cell death and recycling: apoptosis and autophagy",
+      "hours": 5,
+      "hook": "A tadpole loses its tail and a human embryo loses the webbing between its fingers, not by injury but by orderly self-destruction. Cells carry a suicide programme that is so tightly controlled that the same machinery also protects us from cancer.",
+      "learningObjectives": [
+        "Distinguish apoptosis from necrosis by morphology and mechanism",
+        "Describe the intrinsic (mitochondrial) and extrinsic (death receptor) pathways of apoptosis",
+        "Explain the roles of BCL-2 family proteins, caspases and IAPs",
+        "Describe the main steps of macroautophagy and its regulation by nutrient signalling",
+        "Discuss how defects in cell death and autophagy contribute to disease"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Apoptosis",
+          "definition": "A regulated form of cell death with cell shrinkage, chromatin condensation, membrane blebbing and packaging into apoptotic bodies that are engulfed without inflammation."
+        },
+        {
+          "term": "Caspase",
+          "definition": "A family of cysteine proteases that cleave after aspartate; initiator caspases (8, 9) activate executioner caspases (3, 6, 7) that dismantle the cell."
+        },
+        {
+          "term": "BCL-2 family",
+          "definition": "Proteins that control mitochondrial outer membrane permeabilisation: anti-apoptotic (BCL-2, BCL-XL), pore-forming (BAX, BAK) and BH3-only sensors (BIM, PUMA, BAD)."
+        },
+        {
+          "term": "Apoptosome",
+          "definition": "A wheel-shaped complex of Apaf-1 and cytochrome c that activates caspase-9."
+        },
+        {
+          "term": "Death receptor pathway",
+          "definition": "Ligands such as FasL or TNF bind receptors that recruit adaptors and procaspase-8 to form a death-inducing signalling complex (DISC)."
+        },
+        {
+          "term": "IAP",
+          "definition": "Inhibitor of apoptosis proteins that bind and inhibit caspases; antagonised by mitochondrial proteins such as Smac/DIABLO."
+        },
+        {
+          "term": "Autophagy",
+          "definition": "A process in which cytoplasmic material is enclosed in a double-membrane autophagosome and delivered to the lysosome for degradation."
+        },
+        {
+          "term": "Atg proteins and LC3",
+          "definition": "Autophagy-related proteins that build the autophagosome; LC3 is conjugated to phosphatidylethanolamine (LC3-II) and used as a marker."
+        },
+        {
+          "term": "Necroptosis and pyroptosis",
+          "definition": "Regulated forms of lytic, inflammatory cell death mediated by RIPK3/MLKL and by gasdermins respectively."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells are built with an off switch. When a cell is damaged beyond repair, or no longer needed, it can undergo a tidy self-destruction called apoptosis: it shrinks, its DNA is cut up and neighbouring cells swallow the remains without causing inflammation. This is different from necrosis, where a cell bursts after injury and spills its contents. A second process, autophagy, is a recycling system in which the cell wraps worn-out parts or unneeded material inside a membrane bag and delivers it to the lysosome to be broken down, which is especially important during starvation. The tidy suicide picture is accurate, but it should be noted that there are other regulated ways to die, some of which are inflammatory.",
+        "intermediate": "In the intrinsic pathway, stresses such as DNA damage or growth factor withdrawal activate BH3-only proteins that inhibit BCL-2 or BCL-XL and activate BAX and BAK, which oligomerise and permeabilise the outer mitochondrial membrane; cytochrome c is released and, with Apaf-1 and dATP, assembles the apoptosome to activate caspase-9, which cleaves and activates caspase-3 and caspase-7. In the extrinsic pathway, death receptors recruit FADD and procaspase-8 to form the DISC; in some cells caspase-8 cleaves BID to link to the mitochondrial pathway. The caspase cascade cleaves hundreds of substrates, including the inhibitor of the DNase CAD, leading to DNA laddering, and exposes phosphatidylserine as an 'eat me' signal. Autophagy begins when ULK1 is released from mTORC1 inhibition under nutrient stress, the phagophore expands with the help of Atg proteins and LC3-II, and the autophagosome fuses with a lysosome; selective forms (mitophagy, aggrephagy) use receptors such as p62.",
+        "advanced": "Genetic work in C. elegans identified egl-1, ced-9, ced-4 and ced-3 as an ordered pathway, with CED-9 being homologous to BCL-2 and CED-3 to caspases, which revealed the conservation of the machinery from worms to humans. The decision to die depends on the balance of pro- and anti-survival BCL-2 proteins and is exploited therapeutically: the BH3 mimetic venetoclax, which inhibits BCL-2, is used in chronic lymphocytic leukaemia. Apoptosis is not an absolute category: sublethal caspase activity has non-apoptotic roles, and cells defective in apoptosis can die by necroptosis through RIPK1-RIPK3-MLKL. Autophagy has context-dependent roles in cancer, suppressing initiation by clearing damaged organelles but supporting established tumours under metabolic stress, which is why both activators and inhibitors are under investigation. Be cautious when reporting autophagy: LC3-II increase can indicate either induction or blocked degradation, so autophagic flux assays with lysosomal inhibitors are required."
+      },
+      "commonMistakes": [
+        "Calling apoptosis 'cell death caused by injury'; that describes necrosis, whereas apoptosis is an active, regulated programme.",
+        "Assuming that all BCL-2 family proteins prevent death; some promote it.",
+        "Concluding that an increase in LC3-II proves more autophagy; it can also reflect reduced lysosomal clearance.",
+        "Treating autophagy as always protective or always harmful; its effect depends on context."
+      ],
+      "videos": [
+        {
+          "youtubeId": "bZqPOoUKAPE",
+          "title": "Extrinsic Pathway of Apoptosis || 4K Animation",
+          "channel": "Rethink Biology",
+          "level": "intermediate",
+          "whyWatch": "Animates the death receptor, DISC and caspase-8 sequence."
+        },
+        {
+          "youtubeId": "8kbAQq_Pp8g",
+          "title": "Mechanism of Apoptosis | Intrinsic Pathway",
+          "channel": "Hussain Biology",
+          "level": "intermediate",
+          "whyWatch": "Shows mitochondrial permeabilisation, cytochrome c release and the apoptosome."
+        },
+        {
+          "youtubeId": "Hqs1WzTwBEU",
+          "title": "Autophagy - Nobel Prize in Physiology or Medicine 2016",
+          "channel": "simpleshow foundation",
+          "level": "beginner",
+          "whyWatch": "A short explanation of autophagy and Yoshinori Ohsumi's discovery."
+        },
+        {
+          "youtubeId": "EJ6Sjn1c04Y",
+          "title": "24. Stem Cells, Apoptosis, & Tissue Homeostasis",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture linking cell death to tissue maintenance and disease."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/bjc.1972.33",
+          "title": "Apoptosis: A Basic Biological Phenomenon with Wideranging Implications in Tissue Kinetics",
+          "authors": "Kerr JFR, Wyllie AH, Currie AR",
+          "year": 1972,
+          "journal": "British Journal of Cancer",
+          "level": "intermediate",
+          "whyItMatters": "The paper that named apoptosis and described its distinctive morphology, opening a field that became central to cancer and developmental biology."
+        },
+        {
+          "doi": "10.1016/0092-8674(86)90004-8",
+          "title": "Genetic control of programmed cell death in the nematode C. elegans",
+          "authors": "Ellis HM, Horvitz HR",
+          "year": 1986,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Identified the genes ced-3 and ced-4 as essential for programmed cell death, the first step towards the caspase pathway recognised by a 2002 Nobel Prize."
+        },
+        {
+          "doi": "10.1083/jcb.119.2.301",
+          "title": "Autophagy in yeast demonstrated with proteinase-deficient mutants and conditions for its induction",
+          "authors": "Takeshige K, Baba M, Tsuboi S, Noda T, Ohsumi Y",
+          "year": 1992,
+          "journal": "The Journal of Cell Biology",
+          "level": "advanced",
+          "whyItMatters": "Showed that yeast carry out autophagy and gave a system for genetic screening, which led to the identification of the ATG genes and Ohsumi's 2016 Nobel Prize."
+        },
+        {
+          "doi": "10.1038/nature06639",
+          "title": "Autophagy fights disease through cellular self-digestion",
+          "authors": "Mizushima N, Levine B, Cuervo AM, Klionsky DJ",
+          "year": 2008,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A review of autophagy's roles in infection, neurodegeneration, cancer and ageing."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2016 (autophagy)",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2016/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "A popular account of how autophagy genes were found and why they matter."
+        },
+        {
+          "title": "Molecular Cell Biology (Lodish et al.), cell death and regulation chapters",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook text with a clear treatment of apoptosis pathways and their regulation."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which event is the key commitment step in the intrinsic apoptotic pathway?",
+          "options": [
+            "BAX/BAK-mediated permeabilisation of the outer mitochondrial membrane",
+            "Caspase-8 activation at the DISC",
+            "LC3 lipidation",
+            "Cyclin B degradation"
+          ],
+          "answer": 0,
+          "explanation": "MOMP releases cytochrome c and other factors, committing the cell to caspase activation through the apoptosome."
+        },
+        {
+          "question": "A loss-of-function mutation in ced-9 (BCL-2 homologue) in C. elegans would be expected to:",
+          "options": [
+            "Cause excessive cell death",
+            "Prevent all cell death",
+            "Abolish autophagy only",
+            "Have no effect"
+          ],
+          "answer": 0,
+          "explanation": "CED-9 restrains CED-4, so without it the death pathway is unrestrained, and ced-9 loss is lethal because cells die inappropriately."
+        },
+        {
+          "question": "Under nutrient starvation, autophagy is induced mainly because:",
+          "options": [
+            "mTORC1 activity falls and ULK1 is activated",
+            "mTORC1 is activated",
+            "BAX is inhibited",
+            "Caspase-3 is cleaved"
+          ],
+          "answer": 0,
+          "explanation": "mTORC1 normally suppresses ULK1; when nutrients are low it is inhibited, releasing ULK1 to start autophagosome formation."
+        }
+      ]
+    },
+    {
+      "id": "molecular-basis-of-cancer",
+      "title": "The molecular basis of cancer",
+      "hours": 5,
+      "hook": "Cancer is not one disease but the result of a cell's own rules being rewritten, one mutation at a time, until it grows, survives and spreads where it should not. Understanding the rules explains why some cancers can be treated with a tablet that hits a single protein.",
+      "learningObjectives": [
+        "Explain cancer as a multi-step, clonal process of mutation and selection",
+        "Distinguish proto-oncogenes/oncogenes from tumour suppressor genes and give examples of each",
+        "Explain Knudson's two-hit hypothesis and the role of Rb and p53",
+        "Describe the hallmarks of cancer framework",
+        "Describe how targeted therapies exploit cancer-specific molecular changes"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Proto-oncogene and oncogene",
+          "definition": "A normal growth-promoting gene (for example RAS, MYC, ERBB2) and its mutated or overexpressed, gain-of-function form that drives uncontrolled growth."
+        },
+        {
+          "term": "Tumour suppressor gene",
+          "definition": "A gene whose product restrains growth or promotes repair or apoptosis (RB1, TP53, APC, BRCA1/2); cancers usually need loss of both alleles."
+        },
+        {
+          "term": "Knudson two-hit hypothesis",
+          "definition": "Inherited predisposition (one germline hit) plus a somatic mutation of the other allele explains early-onset familial cancers such as retinoblastoma."
+        },
+        {
+          "term": "Driver and passenger mutations",
+          "definition": "Driver mutations give a selective growth advantage; passengers accumulate without functional consequence."
+        },
+        {
+          "term": "Hallmarks of cancer",
+          "definition": "A framework of acquired capabilities: sustained proliferative signalling, evading growth suppressors, resisting cell death, replicative immortality, angiogenesis, invasion and metastasis, with reprogrammed metabolism and immune evasion among later additions."
+        },
+        {
+          "term": "p53",
+          "definition": "A transcription factor, the 'guardian of the genome', stabilised after DNA damage, which induces arrest, repair or apoptosis; mutated in roughly half of human cancers."
+        },
+        {
+          "term": "Genomic instability",
+          "definition": "Increased mutation rate or chromosomal change, often from defects in DNA repair (for example BRCA1/2) or checkpoints, that speeds the accumulation of mutations."
+        },
+        {
+          "term": "Synthetic lethality",
+          "definition": "A situation where loss of either of two genes is tolerated but loss of both is lethal; PARP inhibitors kill BRCA-deficient cells."
+        },
+        {
+          "term": "Targeted therapy",
+          "definition": "Drugs designed against a particular molecular alteration in the tumour, such as imatinib for BCR-ABL."
+        }
+      ],
+      "deeper": {
+        "beginner": "A normal cell grows only when it is told to and stops when told to. Cancer arises when changes in its genes break these controls. Some genes act like accelerators, and mutations can jam them in the 'on' position; others act like brakes, and mutations can cut the brake lines. Usually many such changes accumulate in a single lineage of cells over time, which is why cancer risk rises with age. Because cancer cells carry specific changes, some modern drugs can target those changes while sparing most normal cells. The accelerator-and-brake idea is useful, but cancers also involve the surrounding tissue, the immune system and the cells' own metabolism.",
+        "intermediate": "Cancer evolves by Darwinian selection among cells: a mutation that increases survival or division gives a clone an advantage, and further mutations arise in its descendants. Classic oncogenic activations include point mutations (RAS G12 codon), gene amplification (MYC, HER2) and translocations (BCR-ABL, the Philadelphia chromosome, producing a constitutively active tyrosine kinase). Tumour suppressors such as RB1 and TP53 act recessively at the cellular level but are inherited in a dominant manner as predispositions, as in hereditary retinoblastoma and Li-Fraumeni syndrome. p53 is kept low by MDM2-mediated ubiquitination, and DNA damage stabilises it by ATM-dependent phosphorylation; it then induces p21 for arrest or PUMA and NOXA for apoptosis. Treatments exploit these changes: imatinib inhibits the BCR-ABL kinase in chronic myeloid leukaemia, trastuzumab targets HER2, and PARP inhibitors exploit synthetic lethality in BRCA-mutant tumours.",
+        "advanced": "Tumours are heterogeneous, and subclones carrying resistance mutations (for example the T315I mutation in BCR-ABL or EGFR T790M) can be selected under therapy; liquid biopsies of circulating tumour DNA track such evolution. Large sequencing projects such as TCGA catalogued driver genes, mutational signatures (UV, tobacco, APOBEC activity, mismatch repair deficiency) and showed that tumour types differ widely in mutational burden. Non-genetic mechanisms contribute: epigenetic silencing of tumour suppressors by promoter methylation, altered splicing, microRNA changes and metabolic reprogramming (the Warburg effect). Immune checkpoint inhibitors against PD-1/PD-L1 and CTLA-4 reveal that evasion of immune destruction is a major hallmark, with response related to tumour mutational burden and microenvironment. When reading cancer genomics data, note the difference between a statistically recurrent mutation and one shown experimentally to be a driver."
+      },
+      "commonMistakes": [
+        "Calling oncogenes and tumour suppressors the same thing; the first are gain-of-function, the second loss-of-function.",
+        "Thinking one mutation causes cancer; typically several cooperating changes are needed.",
+        "Describing p53 as an oncogene because it is mutated in cancer; it is a tumour suppressor.",
+        "Assuming a targeted drug works for everyone with the same cancer type; it needs the relevant target alteration."
+      ],
+      "videos": [
+        {
+          "youtubeId": "1mo80kTZgW4",
+          "title": "Oncogenetics - Mechanism of Cancer (tumor suppressor genes and oncogenes)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn walk through oncogenes, tumour suppressors and the multi-step basis of cancer."
+        },
+        {
+          "youtubeId": "_Isvd01XvSs",
+          "title": "p53: Guardian of the Genome",
+          "channel": "nature video",
+          "level": "beginner",
+          "whyWatch": "A short animation of how p53 responds to DNA damage and why its loss matters."
+        },
+        {
+          "youtubeId": "cSXFjUpACWE",
+          "title": "Oncogenes and Tumor Suppressor Genes - Tumor Genetics",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Contrasts accelerator-like and brake-like genes with clear diagrams."
+        },
+        {
+          "youtubeId": "L4tEwAsVW0I",
+          "title": "25. Cancer 1",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture on the genetic and cellular basis of cancer."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2011.02.013",
+          "title": "Hallmarks of Cancer: The Next Generation",
+          "authors": "Hanahan D, Weinberg RA",
+          "year": 2011,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "The most cited framework for organising the biology of cancer, and a map that makes the diverse cancer literature easier to read.",
+          "readingQuestions": [
+            "Which hallmarks were added in 2011 compared with the original list?",
+            "How can one drug target more than one hallmark?"
+          ]
+        },
+        {
+          "doi": "10.1158/2159-8290.cd-21-1059",
+          "title": "Hallmarks of Cancer: New Dimensions",
+          "authors": "Hanahan D",
+          "year": 2022,
+          "journal": "Cancer Discovery",
+          "level": "advanced",
+          "whyItMatters": "An update that adds phenotypic plasticity, senescent cells, polymorphic microbiomes and non-mutational epigenetic reprogramming to the framework."
+        },
+        {
+          "doi": "10.1073/pnas.68.4.820",
+          "title": "Mutation and Cancer: Statistical Study of Retinoblastoma",
+          "authors": "Knudson AG",
+          "year": 1971,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "A short statistical argument that two hits explain inherited and sporadic retinoblastoma, the logic that predicted tumour suppressor genes before they were cloned."
+        },
+        {
+          "doi": "10.1038/nrm2147",
+          "title": "p53 in health and disease",
+          "authors": "Vousden KH, Lane DP",
+          "year": 2007,
+          "journal": "Nature Reviews Molecular Cell Biology",
+          "level": "intermediate",
+          "whyItMatters": "A readable review of how p53 is regulated and what it controls, including its role beyond arrest and apoptosis."
+        }
+      ],
+      "resources": [
+        {
+          "title": "cBioPortal for Cancer Genomics",
+          "provider": "Memorial Sloan Kettering / DFCI",
+          "type": "tool",
+          "url": "https://www.cbioportal.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Explore real tumour mutation data for genes such as TP53 or KRAS across cancer types and see how often they are altered."
+        },
+        {
+          "title": "What is cancer? (National Cancer Institute)",
+          "provider": "NCI",
+          "type": "reference",
+          "url": "https://www.cancer.gov/about-cancer/understanding/what-is-cancer",
+          "free": true,
+          "level": "beginner",
+          "note": "A reliable plain-language overview of cancer biology and terminology."
+        },
+        {
+          "title": "Human Protein Atlas",
+          "provider": "SciLifeLab",
+          "type": "database",
+          "url": "https://www.proteinatlas.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up protein expression in normal tissue and cancers to connect oncogene and suppressor biology to data."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "The Philadelphia chromosome produces:",
+          "options": [
+            "A BCR-ABL fusion with constitutive tyrosine kinase activity",
+            "A loss of p53",
+            "A deletion of RB1",
+            "An amplification of MYC"
+          ],
+          "answer": 0,
+          "explanation": "The t(9;22) translocation joins BCR to ABL, creating a fusion kinase that drives chronic myeloid leukaemia and is the target of imatinib."
+        },
+        {
+          "question": "In Knudson's two-hit model of hereditary retinoblastoma, affected children inherit:",
+          "options": [
+            "One defective RB1 allele in every cell",
+            "Two defective RB1 alleles",
+            "An activated RAS gene",
+            "A mutation in MDM2"
+          ],
+          "answer": 0,
+          "explanation": "They begin with one germline hit, so only one additional somatic hit is needed in a retinal cell, which explains early onset and multiple tumours."
+        },
+        {
+          "question": "PARP inhibitors are effective in BRCA1/2-mutated cancers because of:",
+          "options": [
+            "Synthetic lethality",
+            "Activation of p53",
+            "Blocking of EGFR",
+            "Telomerase inhibition"
+          ],
+          "answer": 0,
+          "explanation": "Cells lacking BRCA function rely on PARP-dependent repair; blocking it leaves too much unrepaired damage, so only tumour cells die."
+        },
+        {
+          "question": "Which statement about p53 is correct?",
+          "options": [
+            "It is a tumour suppressor kept low by MDM2 in unstressed cells",
+            "It is a proto-oncogene",
+            "It is a kinase of the MAPK cascade",
+            "It is stabilised by MDM2"
+          ],
+          "answer": 0,
+          "explanation": "MDM2 ubiquitinates p53 for degradation; DNA damage disrupts this, stabilising p53 so that it can act on its targets."
+        }
+      ]
+    },
+    {
+      "id": "membrane-trafficking",
+      "title": "Membrane trafficking, protein sorting and nuclear transport",
+      "hours": 5,
+      "hook": "A cell makes thousands of different proteins and has to deliver each one to the right address: the membrane, a lysosome, the outside world or the nucleus. This unit is about the postal service of the cell, with its zip codes, vans and sorting offices.",
+      "learningObjectives": [
+        "Describe the secretory pathway from ER to Golgi to plasma membrane and the role of signal peptides",
+        "Explain co-translational translocation and the roles of SRP and the Sec61 translocon",
+        "Describe vesicle formation by COPII, COPI and clathrin coats",
+        "Explain how Rab GTPases and SNAREs ensure specific vesicle docking and fusion",
+        "Explain protein import into the nucleus through nuclear pores and the Ran cycle",
+        "Describe how lysosomal enzymes are sorted by mannose 6-phosphate"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Signal peptide and SRP",
+          "definition": "An N-terminal hydrophobic sequence on secretory and membrane proteins that is recognised by the signal recognition particle, which pauses translation and docks the ribosome at the ER."
+        },
+        {
+          "term": "Sec61 translocon",
+          "definition": "A channel in the ER membrane through which nascent polypeptides are threaded into the lumen or laterally released into the membrane."
+        },
+        {
+          "term": "ER quality control",
+          "definition": "Chaperones such as BiP and calnexin help folding in the ER; misfolded proteins are retained and eventually retrotranslocated for degradation."
+        },
+        {
+          "term": "COPII, COPI and clathrin",
+          "definition": "Coat proteins that shape budding vesicles: COPII from ER to Golgi, COPI for retrograde Golgi-to-ER and intra-Golgi traffic, and clathrin for endocytosis and trans-Golgi network sorting."
+        },
+        {
+          "term": "Rab GTPase",
+          "definition": "A family of small GTPases that act as identity markers of membranes and recruit tethering factors and motors."
+        },
+        {
+          "term": "SNARE proteins",
+          "definition": "Membrane proteins (v-SNAREs and t-SNAREs) that zipper together to drive membrane fusion, giving specificity to vesicle docking."
+        },
+        {
+          "term": "Mannose 6-phosphate tag",
+          "definition": "A modification added to lysosomal enzymes in the Golgi that is recognised by receptors that route them to lysosomes; its absence causes I-cell disease."
+        },
+        {
+          "term": "Nuclear localisation signal (NLS)",
+          "definition": "A short basic sequence recognised by importin alpha/beta that targets cargo through the nuclear pore complex."
+        },
+        {
+          "term": "Ran GTPase gradient",
+          "definition": "Ran-GTP is high in the nucleus and Ran-GDP is high in the cytosol, and this gradient gives directionality to nuclear import and export."
+        }
+      ],
+      "deeper": {
+        "beginner": "Proteins destined for secretion or for the membrane begin their journey in the endoplasmic reticulum. A short 'address label' at one end of the protein tells the cell to send it there. From the ER, proteins travel in small bubbles called vesicles to the Golgi, which sorts and modifies them, and onwards to their final destination. Each vesicle must go to the correct place and fuse only with the right membrane, which is achieved by matching protein pairs on the vesicle and its target. Proteins that belong in the nucleus carry a different label and pass through special gates called nuclear pores. The postal analogy works, though the vesicles are not guided by a central office; they rely on molecular recognition.",
+        "intermediate": "When a signal peptide emerges from the ribosome, SRP binds it and halts translation; the SRP-ribosome complex docks with the SRP receptor at the ER, and the nascent chain is transferred to Sec61 and translation resumes, threading the protein into the lumen. In the lumen, signal peptidase cleaves the signal peptide, oligosaccharyl transferase adds N-linked glycans, and chaperones help folding. Cargo exits the ER in COPII-coated vesicles, passes through the ER-Golgi intermediate compartment and the Golgi stack, where glycans are modified; ER-resident proteins with a KDEL signal are retrieved by COPI. At the trans-Golgi network, proteins are sorted into constitutive secretory vesicles, regulated secretory granules or endosomes, and lysosomal enzymes carrying mannose 6-phosphate bind receptors in clathrin-coated vesicles. Vesicle docking uses Rab effectors, and fusion needs SNAREs, with NSF and SNAP disassembling the used SNARE complexes. For nuclear import, importin alpha recognises the NLS, importin beta mediates docking at the pore, and Ran-GTP in the nucleus dissociates the complex.",
+        "advanced": "The 2013 Nobel Prize in Physiology or Medicine recognised work from yeast genetics (Schekman's sec mutants), cell-free systems (Rothman's work on Golgi transport and the SNARE hypothesis) and neurotransmitter release (Südhof's studies of synaptotagmin as the calcium sensor). Membrane proteins are inserted by diverse mechanisms: tail-anchored proteins use the GET/TRC40 pathway, and mitochondrial proteins cross membranes through TOM and TIM complexes, so 'the' secretory pathway is only one of several targeting systems. In the ER, three arms of the unfolded protein response (IRE1, PERK, ATF6) adjust folding capacity, tying this unit to translational control. Lysosomal storage diseases, cystic fibrosis (misfolded CFTR retained and degraded) and many neurodegenerative conditions illustrate how errors in trafficking and quality control cause disease. Pharmacological correctors that help CFTR fold, such as those in current cystic fibrosis therapies, show how understanding trafficking leads directly to treatment."
+      },
+      "commonMistakes": [
+        "Believing all proteins pass through the ER; cytosolic, nuclear, and mitochondrial proteins use other routes.",
+        "Confusing COPI and COPII directions; COPII moves cargo out of the ER, COPI mostly retrieves proteins back.",
+        "Forgetting that the signal peptide is usually cleaved off and is not part of the mature protein.",
+        "Saying SNAREs alone provide all specificity; Rab proteins and tethers contribute as well."
+      ],
+      "videos": [
+        {
+          "youtubeId": "r9-VwqEYRGk",
+          "title": "Protein translocation to ER | Cotranslational translocation to ER",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Illustrates the SRP cycle and threading of the nascent chain through the translocon."
+        },
+        {
+          "youtubeId": "qGnx_P7YBmo",
+          "title": "COP II and COP I vesicle mediated vesicle transport between ER and Golgi",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Compares the two coat types and the direction of traffic."
+        },
+        {
+          "youtubeId": "NKnxfBCSxa0",
+          "title": "SNARE complex and Vesicle fusion | Vesicle trafficking and fusion | Synaptic vesicle fusion & SNARE",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Shows how v- and t-SNAREs zipper together and how NSF recycles them."
+        },
+        {
+          "youtubeId": "NilAgJ67tBc",
+          "title": "Mechanism of Nuclear Transport | RAN GTPase Cycle",
+          "channel": "Hussain Biology",
+          "level": "intermediate",
+          "whyWatch": "Explains importins, exportins and the Ran gradient that makes transport directional."
+        },
+        {
+          "youtubeId": "wJyUtbn0O5Y",
+          "title": "The Inner Life of the Cell Animation",
+          "channel": "XVIVO Scientific Animation",
+          "level": "beginner",
+          "whyWatch": "A cinematic animation of vesicle transport along microtubules that puts the whole unit into a living picture."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0092-8674(80)90128-2",
+          "title": "Identification of 23 complementation groups required for post-translational events in the yeast secretory pathway",
+          "authors": "Novick P, Field C, Schekman R",
+          "year": 1980,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "The yeast genetic screen that identified the sec genes, showing that the secretory pathway can be dissected by mutants, work recognised by the 2013 Nobel Prize."
+        },
+        {
+          "doi": "10.1083/jcb.67.3.835",
+          "title": "Transfer of proteins across membranes. I. Presence of proteolytically processed and unprocessed nascent immunoglobulin light chains on membrane-bound ribosomes of murine myeloma",
+          "authors": "Blobel G, Dobberstein B",
+          "year": 1975,
+          "journal": "The Journal of Cell Biology",
+          "level": "advanced",
+          "whyItMatters": "The original evidence for the signal hypothesis, in which an N-terminal sequence directs a nascent protein across the ER membrane."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2013 (vesicle traffic)",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2013/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "A popular account of the discovery of the cell's transport system, with background on SNAREs and yeast secretion mutants."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition (membrane trafficking chapter)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free, detailed diagrams of vesicle budding, docking, fusion and protein sorting."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which structure recognises the signal peptide as it emerges from the ribosome?",
+          "options": [
+            "Signal recognition particle (SRP)",
+            "Importin alpha",
+            "COPII coat",
+            "Clathrin"
+          ],
+          "answer": 0,
+          "explanation": "SRP binds the hydrophobic signal sequence, pauses translation and targets the ribosome-nascent chain complex to the ER membrane."
+        },
+        {
+          "question": "Which signal retrieves ER-resident proteins that have escaped to the Golgi?",
+          "options": [
+            "KDEL sequence recognised by the KDEL receptor in COPI vesicles",
+            "Mannose 6-phosphate",
+            "NLS",
+            "Signal peptide"
+          ],
+          "answer": 0,
+          "explanation": "The C-terminal KDEL motif is bound by a receptor in the Golgi, which returns the protein to the ER through COPI vesicles."
+        },
+        {
+          "question": "The directionality of nuclear import depends on:",
+          "options": [
+            "A Ran-GTP gradient high in the nucleus and low in the cytosol",
+            "A proton gradient",
+            "Cytosolic calcium",
+            "ATP-dependent flippases"
+          ],
+          "answer": 0,
+          "explanation": "Ran-GTP in the nucleus binds importin beta to release cargo, and the gradient is maintained by RanGEF in the nucleus and RanGAP in the cytosol."
+        }
+      ]
+    },
+    {
+      "id": "cytoskeleton-and-motors",
+      "title": "The cytoskeleton and molecular motors",
+      "hours": 4,
+      "hook": "A cell is not a bag of soup. It has a skeleton that it builds and dismantles within minutes, and motor proteins that walk along its tracks carrying cargo, a network that lets an immune cell chase a bacterium and a neuron carry cargo along a metre-long axon.",
+      "learningObjectives": [
+        "Describe the structure and dynamics of actin filaments and microtubules",
+        "Explain treadmilling and dynamic instability and the role of nucleotide hydrolysis",
+        "Describe the roles of intermediate filaments",
+        "Explain how kinesin, dynein and myosin move along their tracks",
+        "Describe how Rho family GTPases and actin assembly drive cell migration",
+        "Explain the action of drugs that target the cytoskeleton"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Actin filament",
+          "definition": "A polarised double helix of actin monomers with a fast-growing barbed (plus) end; ATP hydrolysis after incorporation regulates stability."
+        },
+        {
+          "term": "Treadmilling",
+          "definition": "Net addition at one end of a filament and loss at the other at steady state, so that the filament seems to move through its length."
+        },
+        {
+          "term": "Microtubule",
+          "definition": "A hollow tube of 13 protofilaments of alpha/beta tubulin heterodimers, with a plus end that grows fast and a minus end anchored in the centrosome."
+        },
+        {
+          "term": "Dynamic instability",
+          "definition": "The stochastic switching of microtubule ends between growth and rapid shrinkage, controlled by a cap of GTP-tubulin."
+        },
+        {
+          "term": "Intermediate filament",
+          "definition": "Rope-like, non-polar filaments (keratins, vimentin, lamins) that provide mechanical strength."
+        },
+        {
+          "term": "Kinesin and dynein",
+          "definition": "Microtubule motors; most kinesins walk towards the plus end and cytoplasmic dynein towards the minus end, using ATP hydrolysis."
+        },
+        {
+          "term": "Myosin",
+          "definition": "Actin-based motor proteins; myosin II powers muscle contraction and cytokinesis, and other myosins carry cargo."
+        },
+        {
+          "term": "Arp2/3 complex and formins",
+          "definition": "Actin nucleators that make branched networks (Arp2/3, as in lamellipodia) or long unbranched filaments (formins)."
+        },
+        {
+          "term": "Rho GTPases",
+          "definition": "Small GTPases (Rho, Rac, Cdc42) that organise the actin cytoskeleton, driving stress fibres, lamellipodia and filopodia respectively."
+        }
+      ],
+      "deeper": {
+        "beginner": "The cytoskeleton is a network of protein threads that gives cells their shape, lets them move and provides tracks for transport. Actin forms thin flexible filaments that push on the cell edge or form contracting bundles, while microtubules are stiff hollow tubes that act as long-distance highways. Motor proteins use the energy of ATP to walk along these tracks, hauling cargo like vesicles or organelles; during cell division, microtubules also build the spindle that pulls chromosomes apart. The railway picture is good for the motors, but unlike a railway the tracks are constantly built and taken apart.",
+        "intermediate": "Actin monomers bind ATP, polymerise, and hydrolyse ATP in the filament, so older parts carry ADP and are more likely to depolymerise; profilin promotes addition at barbed ends, cofilin severs and depolymerises older filaments, and Arp2/3 nucleates new branches from the side of existing ones, which pushes the leading edge of a motile cell. Microtubules nucleate from gamma-tubulin ring complexes in the centrosome; GTP-tubulin at the growing end forms a stabilising cap, and when GTP is hydrolysed the lattice destabilises (catastrophe), leading to rapid shrinking until rescue. Kinesin-1 is a dimer that walks hand-over-hand in 8-nm steps carrying vesicles to the plus end, whereas cytoplasmic dynein, with the dynactin complex and adaptors, carries cargo towards the minus end. In migration, Rac drives lamellipodia and Cdc42 filopodia at the front, while Rho promotes contractile myosin II-actin bundles and focal adhesions, and integrins link the cytoskeleton to the extracellular matrix.",
+        "advanced": "Dynamic instability can be explained by the structural change in tubulin on GTP hydrolysis, and regulators such as XMAP215 (growth), EB proteins (end tracking) and kinesin-13 (depolymerisation) tune it; microtubule-targeting drugs such as paclitaxel (stabilising) and vinca alkaloids or colchicine (destabilising) block mitosis by suppressing dynamics, which explains their use as anti-cancer agents and some of their side effects on neurons. Single-molecule experiments with optical traps reveal that kinesin steps against loads of a few piconewtons and that motors can coordinate, as in tug-of-war on cargo carrying both kinesin and dynein. Actin dynamics produce force by a Brownian ratchet mechanism for polymerisation at membranes, and cell migration emerges from feedback between Rho GTPase signalling and cytoskeletal mechanics, with distinct modes (mesenchymal, amoeboid) used by cancer cells in invasion. Mutations in cytoskeletal and motor genes cause diseases ranging from cardiomyopathies (myosin) to neuropathies (kinesin, tubulin) to skin blistering (keratins), showing the functional demands placed on these systems."
+      },
+      "commonMistakes": [
+        "Assuming microtubules and actin filaments are fixed structures; they turn over rapidly in living cells.",
+        "Saying that all kinesins move towards the plus end; some move towards the minus end.",
+        "Thinking intermediate filaments are polar and used as tracks for motors; they are non-polar and mainly structural.",
+        "Mixing up which drugs stabilise and which destabilise filaments: taxol stabilises microtubules, colchicine prevents polymerisation, cytochalasin blocks actin assembly, phalloidin stabilises actin."
+      ],
+      "videos": [
+        {
+          "youtubeId": "SgR4ojtPw5Q",
+          "title": "Motor Proteins: Tiny Pirates in Your Cells",
+          "channel": "SciShow",
+          "level": "beginner",
+          "whyWatch": "A lively introduction to kinesin, dynein and myosin as cellular transporters."
+        },
+        {
+          "youtubeId": "j7nH9-nGF58",
+          "title": "Molecular Motors : Kinesin, Dynein and Myosin (Animation)",
+          "channel": "Dr.G Bhanu Prakash Animated Medical Videos",
+          "level": "beginner",
+          "whyWatch": "An animation of each motor walking on its track and carrying cargo."
+        },
+        {
+          "youtubeId": "O3MqraaLTsc",
+          "title": "Cell locomotion | cell motility | cell migration | Rho-Rac-Cdc42 signaling in cell locomotion",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Explains how Rho GTPases coordinate protrusion, adhesion and contraction in a moving cell."
+        },
+        {
+          "youtubeId": "tO-W8mvBa78",
+          "title": "Cell Organelles: Cytoskeleton (2014) Drew Berry wehi.tv",
+          "channel": "WEHImovies",
+          "level": "beginner",
+          "whyWatch": "A brief, beautiful animation by Drew Berry showing the cytoskeleton in action."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/s0092-8674(03)00111-9",
+          "title": "The Molecular Motor Toolbox for Intracellular Transport",
+          "authors": "Vale RD",
+          "year": 2003,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A highly readable review of kinesin, dynein and myosin families, how they move and how they are used to carry cargo."
+        },
+        {
+          "doi": "10.1016/s0092-8674(03)00120-x",
+          "title": "Cellular Motility Driven by Assembly and Disassembly of Actin Filaments",
+          "authors": "Pollard TD, Borisy GG",
+          "year": 2003,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "Presents the dendritic nucleation model that explains how actin assembly pushes the leading edge of motile cells."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Molecular Cell Biology (Lodish et al.), cytoskeleton chapters",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free textbook treatment of microtubules, actin, motors and cell migration."
+        },
+        {
+          "title": "iBiology: free talks by leading cell biologists",
+          "provider": "iBiology",
+          "type": "course",
+          "url": "https://www.ibiology.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search the cell biology collection for talks on the cytoskeleton and motors by researchers who built the field."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about dynamic instability is correct?",
+          "options": [
+            "Microtubule ends switch between growth and rapid shrinkage, controlled by a GTP cap",
+            "Actin filaments alternate between polarity states",
+            "Intermediate filaments hydrolyse ATP",
+            "It requires myosin II"
+          ],
+          "answer": 0,
+          "explanation": "Microtubules with a GTP-tubulin cap grow; loss of the cap leads to catastrophe, and later rescue returns the end to growth."
+        },
+        {
+          "question": "Paclitaxel (taxol) kills dividing cells mainly by:",
+          "options": [
+            "Stabilising microtubules so the spindle cannot function",
+            "Blocking DNA replication",
+            "Inhibiting actin polymerisation",
+            "Cleaving kinetochores"
+          ],
+          "answer": 0,
+          "explanation": "By suppressing microtubule dynamics, taxol disrupts mitotic spindle function and activates the spindle checkpoint, leading to mitotic arrest and cell death."
+        },
+        {
+          "question": "Which Rho family GTPase is most associated with lamellipodia formation at the leading edge?",
+          "options": [
+            "Rac",
+            "Rho",
+            "Ran",
+            "Ras"
+          ],
+          "answer": 0,
+          "explanation": "Rac activates the WAVE complex and Arp2/3-driven branched actin networks that push out lamellipodia; Rho drives stress fibres and Cdc42 drives filopodia."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "wJyUtbn0O5Y",
+      "title": "The Inner Life of the Cell Animation",
+      "channel": "XVIVO Scientific Animation",
+      "level": "beginner",
+      "whyWatch": "A cinematic tour of molecular events in the cell that makes a motivating overview before the lectures."
+    },
+    {
+      "youtubeId": "5ejPI6QqKBU",
+      "title": "20. Cell Signaling 1 – Overview",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A complete lecture on signalling that is useful as a companion to unit 1."
+    },
+    {
+      "youtubeId": "iz7rWK5cqjE",
+      "title": "23. Cell Cycle and Checkpoints",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A lecture that deepens the cell cycle and checkpoint content in unit 2."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Molecular Biology of the Cell, 4th edition (Alberts et al.)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free full text of a classic textbook that covers all six units in detail."
+    },
+    {
+      "title": "Molecular Cell Biology (Lodish et al.), 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free full text with strong chapters on signalling, cell cycle, cancer and the cytoskeleton."
+    },
+    {
+      "title": "Biology 2e - Cell Communication and Cell Reproduction",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/9-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "An accessible open textbook, useful for first reading before more advanced material."
+    }
+  ]
+}

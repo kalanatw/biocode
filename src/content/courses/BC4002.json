@@ -1,0 +1,1255 @@
+{
+  "code": "BC 4002",
+  "title": "Seminar and Essay",
+  "level": 4,
+  "semester": 1,
+  "credits": 3,
+  "hours": "90P",
+  "kind": "seminar",
+  "provenance": "official",
+  "tagline": "Learn to read widely, think critically and then say something clear in writing and out loud.",
+  "overview": "BC 4002 is a practical, skills-based course in which each student prepares a written essay (a short critical review) and presents a seminar on a topic in biochemistry and molecular biology. The topic is chosen with staff and varies by student, so this page focuses on the skills the course assesses: scoping a topic, searching and managing the literature, synthesising sources, structuring and writing an essay, citing correctly and ethically (including responsible use of AI tools), designing slides and delivering a talk. The units follow standard good practice for an honours-level seminar and essay.",
+  "whyItMatters": "Scientists spend more of their working life reading, writing and presenting than pipetting. A clear review essay and a confident seminar are also the closest things in your degree to what graduate admissions panels, employers and examiners will ask you to do, and they teach you to think about evidence rather than memorise it.",
+  "prerequisites": [],
+  "careerLinks": [
+    "Postgraduate study (MPhil/PhD, MSc)",
+    "Scientific writing and editing",
+    "Teaching and academic careers",
+    "Regulatory and medical affairs",
+    "Science communication"
+  ],
+  "studyTips": [
+    "Start the reading list in week one and update it weekly; do not leave searching until the deadline.",
+    "Keep notes in your own words from the beginning to avoid accidental copying.",
+    "Write a messy first draft early; editing is easier than starting.",
+    "Practise the seminar aloud with friends who will ask questions.",
+    "Check the marking criteria and fit your essay and talk to them."
+  ],
+  "units": [
+    {
+      "id": "topic-scope",
+      "title": "Choosing and Scoping a Seminar or Essay Topic",
+      "hours": 5,
+      "hook": "A seminar topic that is too broad ('cancer metabolism') produces a lecture nobody can follow, and one that is too narrow leaves you with nothing to say. The craft lies in finding a question with enough literature to be answerable and enough tension to be interesting.",
+      "learningObjectives": [
+        "Turn a broad interest into a focused question for a review-style essay or talk",
+        "Check that sufficient recent primary and review literature exists",
+        "Define the scope: what is in, what is out and why",
+        "Write a one-paragraph plan with a working thesis statement",
+        "Agree the plan with your supervisor or coordinator",
+        "Distinguish a descriptive summary from an argument"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Scope",
+          "definition": "The boundaries of what the essay or seminar will cover, set so that it can be done well in the time and word limit."
+        },
+        {
+          "term": "Review question",
+          "definition": "A focused question that a literature review sets out to answer, such as 'How does X regulate Y, and what is uncertain?'"
+        },
+        {
+          "term": "Thesis statement",
+          "definition": "A one-sentence claim that your essay or talk argues for, rather than a topic label."
+        },
+        {
+          "term": "Narrative review",
+          "definition": "A critical overview of a topic that organises findings around themes or questions."
+        },
+        {
+          "term": "Gap",
+          "definition": "A question the literature has not yet answered or answers inconsistently."
+        },
+        {
+          "term": "Inclusion criteria",
+          "definition": "Rules for deciding which papers belong in your review, for example date, organism or type of evidence."
+        }
+      ],
+      "deeper": {
+        "beginner": "Start with a topic you find interesting from a lecture, then ask three questions about it: what is known, what is disputed and what is new. A good seminar question usually has a 'how' or 'why' in it, and it is narrow enough that you can name five to ten central papers. Write your thesis statement as a sentence you could be asked to defend.",
+        "intermediate": "Use a recent review to map the field and note its sub-topics. Pick a thread (a mechanism, a controversy, a technology) and test the question with a quick search to see how many primary papers exist from the past five to ten years. State the scope in writing: organism, time period, types of evidence. Discuss it with your coordinator before investing in reading.",
+        "advanced": "Frame the essay as a contribution: synthesise findings to resolve or sharpen a controversy, compare competing models, or evaluate methods. Decide the organising principle (chronological, mechanistic, by model system, by evidence strength) and consider how that choice affects the conclusion. Be explicit about what the essay will not cover so that its omissions are principled."
+      },
+      "commonMistakes": [
+        "Choosing a topic as broad as a textbook chapter",
+        "Writing a descriptive tour of papers with no thesis",
+        "Relying only on a single review as the whole source base",
+        "Not checking whether recent primary literature exists"
+      ],
+      "videos": [
+        {
+          "youtubeId": "zIYC6zG265E",
+          "title": "How to Write a Literature Review: 3 Minute Step-by-step Guide",
+          "channel": "Scribbr",
+          "level": "beginner",
+          "whyWatch": "A quick overview of finding sources, spotting themes and structuring a review."
+        },
+        {
+          "youtubeId": "bhXA0emLH-k",
+          "title": "How To Write A Literature Review From Start To Finish",
+          "channel": "Academic English Now",
+          "level": "beginner",
+          "whyWatch": "A longer walkthrough of planning and writing a literature review."
+        },
+        {
+          "youtubeId": "71-GucBaM8U",
+          "title": "How to Develop a STRONG Research Question",
+          "channel": "Scribbr",
+          "level": "beginner",
+          "whyWatch": "Shows how to narrow a broad interest into a focused question."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1003149",
+          "title": "Ten Simple Rules for Writing a Literature Review",
+          "authors": "Pautasso M",
+          "year": 2013,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Advice on defining your question, searching widely, being critical and synthesising rather than listing. It is almost a checklist for a review essay.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1003149"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Europe PMC",
+          "provider": "EMBL-EBI / Europe PMC",
+          "type": "database",
+          "url": "https://europepmc.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free search of abstracts and full texts, including preprints and text-mined links to data, with a convenient open-access filter."
+        },
+        {
+          "title": "PubMed User Guide",
+          "provider": "NCBI / NLM",
+          "type": "reference",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/help/",
+          "free": true,
+          "level": "beginner",
+          "note": "The official guide to field tags, filters, MeSH and the search builder; the quickest way to understand why a search returned what it did."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which is the best seminar title?",
+          "options": [
+            "Cancer",
+            "Metabolism",
+            "How do tumour cells rewire glucose metabolism, and is the Warburg effect a cause or a consequence of transformation?",
+            "Famous scientists in biochemistry"
+          ],
+          "answer": 2,
+          "explanation": "It is a focused question with a clear controversy that can be argued with evidence."
+        },
+        {
+          "question": "What is the role of a thesis statement in an essay?",
+          "options": [
+            "To list the sections",
+            "To state the central claim the essay argues for",
+            "To thank the supervisor",
+            "To define abbreviations"
+          ],
+          "answer": 1,
+          "explanation": "It gives the essay direction and lets the reader judge whether you delivered."
+        },
+        {
+          "question": "Why state what is out of scope?",
+          "options": [
+            "To reduce the word count",
+            "To show the boundaries are deliberate and the question is manageable",
+            "To avoid references",
+            "To hide gaps"
+          ],
+          "answer": 1,
+          "explanation": "Explicit boundaries prevent a sprawling essay and show you made choices consciously."
+        }
+      ]
+    },
+    {
+      "id": "search-references",
+      "title": "Systematic Searching and Reference Management",
+      "hours": 5,
+      "hook": "By the fifth essay you will have a thousand PDFs named 'paper(3).pdf' and no memory of which one said what. A reference manager and a repeatable search turn that pile into a library you can trust and cite correctly in minutes.",
+      "learningObjectives": [
+        "Plan a search with synonyms, Boolean operators and appropriate databases",
+        "Use PubMed and Europe PMC filters to find reviews and recent primary papers",
+        "Capture references into Zotero (or a similar tool) with notes and tags",
+        "Generate in-text citations and a reference list in the required style",
+        "Check that every cited paper exists and says what you claim",
+        "Keep a log of your search"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Search strategy",
+          "definition": "The planned combination of keywords, operators, filters and databases used to find sources."
+        },
+        {
+          "term": "Reference manager",
+          "definition": "Software that stores bibliographic details, PDFs and notes and formats citations automatically."
+        },
+        {
+          "term": "Citation style",
+          "definition": "A set of rules (Vancouver, Harvard, APA, journal-specific) for how references appear in text and in the list."
+        },
+        {
+          "term": "DOI",
+          "definition": "A persistent identifier for a paper that resolves to its web location."
+        },
+        {
+          "term": "Snowballing",
+          "definition": "Finding more sources by following references in good papers and papers that cite them."
+        },
+        {
+          "term": "Grey literature",
+          "definition": "Reports, theses and preprints not formally published in journals; useful but needs careful judgement."
+        }
+      ],
+      "deeper": {
+        "beginner": "Pick two databases (PubMed and Europe PMC are free) and write the key concepts with synonyms before searching. Install Zotero and its browser connector, and save each paper you intend to use with one click. Add a note on why it matters when you save it, not later.",
+        "intermediate": "Use filters for review articles and date ranges, then follow reference lists for primary papers. Tag items by essay section or theme and store notes in the reference manager. Use the word-processor plug-in to insert citations, choose the style your coordinator requires and check the output for errors such as missing DOIs or wrong author names. Record the date and query of each search.",
+        "advanced": "Learn the limits of automatic metadata: check titles, years and journals against the source, and watch for retracted papers (reference managers can flag some). Consider shared libraries for group work and export backups regularly. Distinguish a citation to a paper you have read from a secondary citation, and cite the original when you can. Never cite a reference you have not located yourself, including any suggested by a text generator, because such tools can invent plausible-looking references."
+      },
+      "commonMistakes": [
+        "Citing a paper from its abstract alone without reading the methods or results",
+        "Typing references by hand and introducing errors",
+        "Copying a reference list from a review without checking the originals",
+        "Not backing up the reference library"
+      ],
+      "videos": [
+        {
+          "youtubeId": "JG7Uq_JFDzE",
+          "title": "How To Use Zotero (A Complete Beginner's Guide)",
+          "channel": "Steven Bradburn",
+          "level": "beginner",
+          "whyWatch": "A step-by-step introduction to collecting, organising and citing with Zotero."
+        },
+        {
+          "youtubeId": "tnbwKj6-pD8",
+          "title": "How To Use Zotero (Including Zotero Connector) - Full Tutorial With Examples",
+          "channel": "Grad Coach",
+          "level": "beginner",
+          "whyWatch": "A longer tutorial including the browser connector and word-processor integration."
+        },
+        {
+          "youtubeId": "-Xmc4CJ12WA",
+          "title": "Using Europe PMC for effective literature research",
+          "channel": "EMBL-EBI",
+          "level": "intermediate",
+          "whyWatch": "A detailed training webinar on advanced searching and text-mined links in Europe PMC."
+        },
+        {
+          "youtubeId": "bCAULDuMcso",
+          "title": "How Library Stuff Works: Boolean Operators (AND OR NOT)",
+          "channel": "McMaster Libraries",
+          "level": "beginner",
+          "whyWatch": "A short visual explanation of Boolean logic in searching."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Zotero Documentation",
+          "provider": "Zotero",
+          "type": "tutorial",
+          "url": "https://www.zotero.org/support/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free, open-source reference manager with a browser connector and Word/LibreOffice plug-ins; the manual is the best place to start."
+        },
+        {
+          "title": "PubMed Quick Start Tutorial",
+          "provider": "NLM",
+          "type": "tutorial",
+          "url": "https://www.nlm.nih.gov/bsd/disted/pubmedtutorial/cover.html",
+          "free": true,
+          "level": "beginner",
+          "note": "A short, step-by-step official tutorial covering searching, filters and saving results."
+        },
+        {
+          "title": "MeSH Browser",
+          "provider": "NLM",
+          "type": "database",
+          "url": "https://meshb.nlm.nih.gov/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up controlled vocabulary terms and their synonyms so that your search captures papers that use different words for the same idea."
+        },
+        {
+          "title": "Europe PMC",
+          "provider": "EMBL-EBI / Europe PMC",
+          "type": "database",
+          "url": "https://europepmc.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free search of abstracts and full texts, including preprints and text-mined links to data, with a convenient open-access filter."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the main benefit of a reference manager?",
+          "options": [
+            "It writes the essay",
+            "It stores sources and formats citations consistently",
+            "It replaces reading",
+            "It guarantees correct citations without checking"
+          ],
+          "answer": 1,
+          "explanation": "It saves time and reduces formatting errors, but you still need to verify the details."
+        },
+        {
+          "question": "A text-generating tool gives you a reference with a plausible author and title. What should you do?",
+          "options": [
+            "Cite it",
+            "Search PubMed or the publisher to confirm it exists and says what is claimed",
+            "Add a DOI that looks right",
+            "Cite it as a secondary source"
+          ],
+          "answer": 1,
+          "explanation": "Such tools can fabricate references, so every citation must be traced to a real paper that you have read."
+        },
+        {
+          "question": "What is snowballing?",
+          "options": [
+            "Deleting old references",
+            "Finding more sources through the reference lists and citing papers of key papers",
+            "Searching in one database",
+            "Citing the same paper repeatedly"
+          ],
+          "answer": 1,
+          "explanation": "Following references backwards and forwards is a quick way to find the core literature."
+        }
+      ]
+    },
+    {
+      "id": "reading-synthesis",
+      "title": "Reading and Synthesising Sources",
+      "hours": 5,
+      "hook": "A weak essay is a series of paper summaries stapled together. A strong one asks what the papers say together: where they agree, where they conflict and why. That step is called synthesis, and it is where the thinking happens.",
+      "learningObjectives": [
+        "Extract question, methods, result and limitation from each key paper efficiently",
+        "Organise notes in a matrix by theme rather than by paper",
+        "Identify agreements, contradictions and gaps across sources",
+        "Weigh evidence by design, sample size and consistency",
+        "Paraphrase accurately and attribute ideas",
+        "Draw a conclusion that follows from the evidence you assembled"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Synthesis",
+          "definition": "Combining information from several sources to create a new understanding that no single source gives."
+        },
+        {
+          "term": "Evidence matrix",
+          "definition": "A table with papers as rows and themes or questions as columns, used to compare findings."
+        },
+        {
+          "term": "Paraphrase",
+          "definition": "Re-expressing an idea in your own words and structure while still crediting the source."
+        },
+        {
+          "term": "Hierarchy of evidence",
+          "definition": "A rough ranking of study designs by how well they control bias and chance."
+        },
+        {
+          "term": "Consistency",
+          "definition": "Whether independent studies using different methods point in the same direction."
+        },
+        {
+          "term": "Critical appraisal",
+          "definition": "Systematically judging the quality and relevance of evidence."
+        }
+      ],
+      "deeper": {
+        "beginner": "For each paper, write four lines: the question, what was done, what was found and one limitation. Then lay the papers side by side under headings such as 'mechanism', 'model system' and 'conflicts'. If two papers disagree, ask whether they used different cells, doses or methods.",
+        "intermediate": "Build an evidence matrix in a spreadsheet or table, with notes in your own words, and tag each cell with a page or figure reference. Group sources by sub-question and decide what the combined evidence supports, with what confidence. Mark where evidence is only correlative or only from one model system. Write your paragraph topic sentences from the matrix, not from individual papers.",
+        "advanced": "Move from description to argument: propose a model that reconciles the conflicting results, or explain why the question remains unresolved. Consider confounders in comparing studies (different strains, assay sensitivity, endpoints), publication bias and the weight to give review claims that cite the same few original papers. Recognise when the best conclusion is a calibrated uncertainty, and say what experiment or data would resolve it."
+      },
+      "commonMistakes": [
+        "Writing one paragraph per paper with no comparison between them",
+        "Copying phrases from the abstract with a few words changed",
+        "Treating all evidence as equally strong",
+        "Ignoring a paper that contradicts your favoured view"
+      ],
+      "videos": [
+        {
+          "youtubeId": "IeaD0ZaUJ3Y",
+          "title": "How to Read a Paper Efficiently (By Prof. Pete Carr)",
+          "channel": "Surviving and Thriving in Higher Education",
+          "level": "beginner",
+          "whyWatch": "A professor's efficient method for extracting what you need from a paper."
+        },
+        {
+          "youtubeId": "rk_jgtdJOD0",
+          "title": "Literature Review - Step by Step Guide For Graduate Students",
+          "channel": "Prof. David Stuckler",
+          "level": "intermediate",
+          "whyWatch": "Shows how to organise sources by theme and move from summary to synthesis."
+        },
+        {
+          "youtubeId": "_rBKgaBHvoY",
+          "title": "How To Critically Read Scientific Papers",
+          "channel": "Grad School Advice",
+          "level": "intermediate",
+          "whyWatch": "Ways to question methods and conclusions as you read."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1008032",
+          "title": "Ten simple rules for reading a scientific paper",
+          "authors": "Carey MA, Steiner KL, Petri WA",
+          "year": 2020,
+          "journal": "PLOS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "A student-friendly routine for reading a paper in layers: question first, then figures, then methods, and only then the authors' interpretation. A good habit to adopt before the literature review starts.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1008032"
+        },
+        {
+          "doi": "10.1136/bmj.315.7102.243",
+          "title": "How to read a paper: getting your bearings (deciding what the paper is about)",
+          "authors": "Greenhalgh T",
+          "year": 1997,
+          "journal": "BMJ",
+          "level": "beginner",
+          "whyItMatters": "The first of a classic series on appraising papers. It teaches you to ask what question was asked, whether the design could answer it and whether the paper is worth your time."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Writing Center Tips and Tools",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+        },
+        {
+          "title": "Europe PMC",
+          "provider": "EMBL-EBI / Europe PMC",
+          "type": "database",
+          "url": "https://europepmc.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free search of abstracts and full texts, including preprints and text-mined links to data, with a convenient open-access filter."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the key difference between summarising and synthesising?",
+          "options": [
+            "Synthesis is shorter",
+            "Synthesis combines sources to answer a question, while a summary reports each one separately",
+            "Summary needs citations only",
+            "There is no difference"
+          ],
+          "answer": 1,
+          "explanation": "Synthesis creates a point that no single paper makes alone."
+        },
+        {
+          "question": "Two papers disagree. What is the first useful question?",
+          "options": [
+            "Which one is more famous?",
+            "Did they use different systems, doses or methods that could explain the difference?",
+            "Which is newer?",
+            "Which has longer methods?"
+          ],
+          "answer": 1,
+          "explanation": "Differences in conditions often explain conflicts and can become the interesting part of your essay."
+        },
+        {
+          "question": "Which is an acceptable way of using wording from a source?",
+          "options": [
+            "Copy and change a few words",
+            "Understand it, restate in your own structure and cite it",
+            "Copy it without quotes but cite",
+            "Use it without citing since it is common"
+          ],
+          "answer": 1,
+          "explanation": "Genuine paraphrase plus citation respects both understanding and attribution."
+        }
+      ]
+    },
+    {
+      "id": "essay-structure",
+      "title": "Structuring a Scientific Essay or Review",
+      "hours": 5,
+      "hook": "Readers decide in the first paragraph whether an essay is going somewhere. A clear structure, with an introduction that states the question and body sections that each carry one idea, is a kindness to your reader and a discipline for your own thinking.",
+      "learningObjectives": [
+        "Plan a scientific essay with introduction, body and conclusion",
+        "Write topic sentences that state each paragraph's point",
+        "Use headings and transitions to guide the reader",
+        "Integrate figures, tables and mechanisms into the argument",
+        "Write a conclusion that answers the question and notes limits and future directions",
+        "Revise using a reverse outline"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Reverse outline",
+          "definition": "After drafting, list the main point of each paragraph to see whether the argument is logical and complete."
+        },
+        {
+          "term": "Topic sentence",
+          "definition": "The first sentence of a paragraph, stating its main claim."
+        },
+        {
+          "term": "Transition",
+          "definition": "Words or sentences that connect ideas and show how one part leads to the next."
+        },
+        {
+          "term": "Signposting",
+          "definition": "Telling the reader what is coming and why."
+        },
+        {
+          "term": "Original figure",
+          "definition": "A diagram you draw yourself to explain a mechanism; copying published figures requires permission or a citation."
+        },
+        {
+          "term": "Outlook",
+          "definition": "A short section on what remains unknown and what could be done next."
+        }
+      ],
+      "deeper": {
+        "beginner": "Begin with an outline: an introduction that gives context and your question, three or four body sections each answering part of the question, and a conclusion that states your answer. Write one claim per paragraph and support it with evidence from specific sources. Add a diagram of the central mechanism if it helps.",
+        "intermediate": "Draft the body first, then write the introduction. After the first draft, make a reverse outline: if you cannot state the point of a paragraph in a sentence, rewrite or remove it. Check that the order of sections follows a logic (cause then effect, general then specific, controversy then resolution). Make figure legends self-contained and cite their sources.",
+        "advanced": "Think about the argument's architecture: steelman opposing views before responding, calibrate claims to evidence, and make sure the conclusion does not introduce new claims. Balance breadth with depth by giving more space to the best-evidenced and most contested points. Edit for economy, since a review's value is in selection and judgement rather than the number of references."
+      },
+      "commonMistakes": [
+        "Starting with a long history of the field before reaching the question",
+        "Paragraphs that contain several unrelated points",
+        "Conclusions that only repeat the introduction",
+        "Reusing a published figure without citation or permission"
+      ],
+      "videos": [
+        {
+          "youtubeId": "UuOWNNvupik",
+          "title": "How to Write an Essay: 4 Minute Step-by-step Guide",
+          "channel": "Scribbr",
+          "level": "beginner",
+          "whyWatch": "A quick look at planning, drafting and revising an essay."
+        },
+        {
+          "youtubeId": "Eqf3TaihsOI",
+          "title": "How I wrote 1st class essays at Cambridge University (how to write the best essay)",
+          "channel": "Doctor Shaene",
+          "level": "beginner",
+          "whyWatch": "A student's approach to planning and arguing an essay."
+        },
+        {
+          "youtubeId": "ZoM_LQ6vdv4",
+          "title": "How to Plan a University Essay (Science Degrees)",
+          "channel": "Exam Busters ~ Biology with Gracie",
+          "level": "beginner",
+          "whyWatch": "Shows planning an essay specifically for a science degree."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1005619",
+          "title": "Ten simple rules for structuring papers",
+          "authors": "Mensh B, Kording K",
+          "year": 2017,
+          "journal": "PLOS Computational Biology",
+          "level": "intermediate",
+          "whyItMatters": "Argues that a paper should tell one clear story, with the introduction, results and discussion each built around a single contribution. Excellent for structuring a thesis chapter or essay as well.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1005619"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Writing Center Tips and Tools",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+        },
+        {
+          "title": "Scientific Reports (writing guide)",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/scientific-reports/",
+          "free": true,
+          "level": "beginner",
+          "note": "Section-by-section advice on writing lab and research reports: what belongs in the introduction, methods, results and discussion."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What does a reverse outline reveal?",
+          "options": [
+            "The word count",
+            "Whether each paragraph has a clear point and the argument flows",
+            "The reference style",
+            "The number of figures"
+          ],
+          "answer": 1,
+          "explanation": "By listing each paragraph's main point you can spot gaps, repetition and weak ordering."
+        },
+        {
+          "question": "Where should the answer to the essay's question appear?",
+          "options": [
+            "Only in the title",
+            "Clearly in the conclusion and prepared by the body",
+            "Nowhere; the reader should infer it",
+            "Only in the references"
+          ],
+          "answer": 1,
+          "explanation": "The conclusion should state the answer your evidence supports, with limitations."
+        },
+        {
+          "question": "Why draw your own mechanism diagram?",
+          "options": [
+            "Because diagrams are not allowed",
+            "It shows your understanding and avoids copying issues",
+            "Because it is faster than writing",
+            "To fill space"
+          ],
+          "answer": 1,
+          "explanation": "Drawing forces you to understand each step and avoids reproducing someone else's figure."
+        }
+      ]
+    },
+    {
+      "id": "scientific-style",
+      "title": "Clear Scientific Writing Style",
+      "hours": 4,
+      "hook": "Good scientific prose is invisible: the reader sees the idea, not the sentence. That clarity is learnable, through short, concrete sentences, careful verbs and ruthless trimming of words that add nothing.",
+      "learningObjectives": [
+        "Write concise, precise sentences with the key information first",
+        "Use consistent terminology and define abbreviations at first use",
+        "Choose verbs that match the strength of the evidence",
+        "Use numbers, units and symbols correctly",
+        "Edit for clarity and trim redundant words",
+        "Proofread for grammar, spelling and formatting"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hedging",
+          "definition": "Wording that signals the strength of evidence, such as 'suggests', 'indicates' or 'demonstrates'."
+        },
+        {
+          "term": "Nominalisation",
+          "definition": "Turning a verb into a noun ('the inhibition of' instead of 'inhibit'), which often makes sentences heavier."
+        },
+        {
+          "term": "Consistent terminology",
+          "definition": "Using one term for one concept so that the reader is not misled into thinking two things are different."
+        },
+        {
+          "term": "SI units and symbols",
+          "definition": "Standard scientific units with a space between value and unit (5 mM, 37 C), italics for gene symbols and correct case."
+        },
+        {
+          "term": "Plain language",
+          "definition": "Choosing familiar words where they carry the meaning as well as technical ones."
+        },
+        {
+          "term": "Proofreading",
+          "definition": "A final pass for errors, best done on a printout or after a break."
+        }
+      ],
+      "deeper": {
+        "beginner": "Shorten any sentence that runs to three lines. Put the subject and the verb near the start and the new information at the end. Replace vague words ('a lot', 'very') with numbers or specific terms. Read your draft aloud: where you stumble, the reader will too.",
+        "intermediate": "Match claim strength to evidence: say 'is required for' only if loss of the molecule blocks the process, and 'is associated with' if you only have correlation. Check consistency of abbreviations, units and gene/protein formatting. Cut empty phrases ('it is interesting to note that') and combine short choppy sentences when ideas are linked. Get a peer to mark where they got lost.",
+        "advanced": "Study how strong papers structure paragraphs: old information first, new information at the end of a sentence, stress position for the main point. Be aware of discipline conventions, such as passive voice in methods, and of the pitfalls of non-native idioms and machine paraphrasing. When using editing or language tools, you remain responsible for accuracy and must follow disclosure rules."
+      },
+      "commonMistakes": [
+        "Using 'proves' when the data only 'suggest'",
+        "Switching between two names for the same protein in one essay",
+        "Leaving long strings of noun phrases that hide the action",
+        "Skipping proofreading because the deadline is close"
+      ],
+      "videos": [
+        {
+          "youtubeId": "udJ3AnS2veU",
+          "title": "How to Write a Scientific Paper from Start to Finish",
+          "channel": "Scientific Writing with Karen L. McKee",
+          "level": "beginner",
+          "whyWatch": "Covers style and structure across the sections of a scientific paper."
+        },
+        {
+          "youtubeId": "Vky9PDKx5KU",
+          "title": "How to write a scientific paper",
+          "channel": "Global Health with Greg Martin",
+          "level": "beginner",
+          "whyWatch": "A short guide from a journal editor's perspective."
+        },
+        {
+          "youtubeId": "2F1ZX5PElNA",
+          "title": "Making scientific writing painless",
+          "channel": "iBiology",
+          "level": "beginner",
+          "whyWatch": "Advice from a working scientist on the process of writing."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.1005619",
+          "title": "Ten simple rules for structuring papers",
+          "authors": "Mensh B, Kording K",
+          "year": 2017,
+          "journal": "PLOS Computational Biology",
+          "level": "intermediate",
+          "whyItMatters": "Argues that a paper should tell one clear story, with the introduction, results and discussion each built around a single contribution. Excellent for structuring a thesis chapter or essay as well.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1005619"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Purdue Online Writing Lab",
+          "provider": "Purdue University",
+          "type": "reference",
+          "url": "https://owl.purdue.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Reliable explanations of grammar, citation styles and paper structure."
+        },
+        {
+          "title": "Scientific Reports (writing guide)",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/scientific-reports/",
+          "free": true,
+          "level": "beginner",
+          "note": "Section-by-section advice on writing lab and research reports: what belongs in the introduction, methods, results and discussion."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which is the most careful wording for a correlation seen in a single experiment?",
+          "options": [
+            "X proves Y",
+            "X is associated with Y",
+            "X causes Y",
+            "X is the only cause of Y"
+          ],
+          "answer": 1,
+          "explanation": "A single correlational experiment supports association; causation needs stronger evidence."
+        },
+        {
+          "question": "Why use one term consistently for one concept?",
+          "options": [
+            "To increase word count",
+            "To avoid readers thinking different terms mean different things",
+            "Because synonyms are banned",
+            "To make the text harder"
+          ],
+          "answer": 1,
+          "explanation": "Variation can confuse readers about whether you refer to the same entity."
+        },
+        {
+          "question": "What does a space between number and unit (5 mM) reflect?",
+          "options": [
+            "Personal preference",
+            "SI formatting convention",
+            "A word processor setting",
+            "Journal-only rule"
+          ],
+          "answer": 1,
+          "explanation": "Standard scientific style separates the value from the unit."
+        }
+      ]
+    },
+    {
+      "id": "citation-integrity-ai",
+      "title": "Citation, Plagiarism and Responsible Use of AI",
+      "hours": 4,
+      "hook": "You will rarely be tempted to copy a whole essay. The real risks are smaller: a sentence lifted from a review, an uncited idea, a reference you never opened. Understanding exactly where the line is makes you safer and a better scholar.",
+      "learningObjectives": [
+        "Recognise forms of plagiarism including patchwriting and self-plagiarism",
+        "Cite sources for facts, ideas, data and figures in the correct style",
+        "Use quotation sparingly and appropriately in a science essay",
+        "Describe the main risks of using text-generating AI for essays",
+        "Follow your institution's policy on disclosure and permitted tools",
+        "Respond appropriately if you make a mistake"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Plagiarism",
+          "definition": "Presenting another person's words, ideas or data as your own without attribution."
+        },
+        {
+          "term": "Patchwriting",
+          "definition": "Copying a source and changing a few words or the order, still too close to the original."
+        },
+        {
+          "term": "Self-plagiarism",
+          "definition": "Reusing your own earlier submitted work without disclosure."
+        },
+        {
+          "term": "Common knowledge",
+          "definition": "Facts that are widely known and undisputed need no citation, but when in doubt cite."
+        },
+        {
+          "term": "Hallucinated reference",
+          "definition": "A citation produced by a text generator that looks real but does not exist or does not say what is claimed."
+        },
+        {
+          "term": "Similarity report",
+          "definition": "Software output showing text overlap with other sources; it needs human interpretation."
+        }
+      ],
+      "deeper": {
+        "beginner": "If an idea, number or sentence is not yours, cite where it came from. Write your notes in your own words so that you do not drift into copying. Use direct quotes rarely, in quotation marks, with a citation. If you are not sure whether something needs citing, cite it or ask.",
+        "intermediate": "Understand your institution's plagiarism policy and the penalties. Keep your notes organised by source, so that you know whose idea is whose. Use the reference manager for consistent citation. Declare any permitted assistance, for example language editing, as policy asks. Treat AI output as untrusted: it may be wrong, may copy text, and cannot replace reading the papers.",
+        "advanced": "Consider why attribution matters: it lets readers trace evidence, gives credit and protects you from repeating errors. Think about the ethics of authorship and the difference between permitted help (proofreading, discussion) and outsourcing the thinking that the assessment is designed to measure. Check the credibility of journals before citing from them and be cautious with predatory outlets."
+      },
+      "commonMistakes": [
+        "Believing that changing a few words makes copied text acceptable",
+        "Citing only at the end of a paragraph so that the source of each claim is unclear",
+        "Trusting an AI-generated reference list without checking",
+        "Reusing a previous assignment without permission"
+      ],
+      "videos": [
+        {
+          "youtubeId": "MC4tcNcRfb8",
+          "title": "University of Hull Biology - Academic Integrity and Avoiding Plagiarism",
+          "channel": "Katharine Hubbard",
+          "level": "beginner",
+          "whyWatch": "A biology lecturer shows real examples of acceptable and unacceptable use of sources."
+        },
+        {
+          "youtubeId": "bH2MLTMVbxg",
+          "title": "Academic Integrity - What is plagiarism?",
+          "channel": "OpenLearn from The Open University",
+          "level": "beginner",
+          "whyWatch": "A very short definition of plagiarism with examples."
+        },
+        {
+          "youtubeId": "FhMlZQ0jW9w",
+          "title": "Plagiarism and Academic Integrity",
+          "channel": "CSUDH Library",
+          "level": "beginner",
+          "whyWatch": "A library explanation of why attribution matters and how to do it."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pone.0005738",
+          "title": "How Many Scientists Fabricate and Falsify Research? A Systematic Review and Meta-Analysis of Survey Data",
+          "authors": "Fanelli D",
+          "year": 2009,
+          "journal": "PLoS ONE",
+          "level": "intermediate",
+          "whyItMatters": "Pools survey studies to estimate how often researchers admit to, or observe, fabrication, falsification and questionable practices. It shows that integrity is a day-to-day matter of small choices, not just rare scandals.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pone.0005738"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Think. Check. Submit.",
+          "provider": "Think. Check. Submit. initiative",
+          "type": "tool",
+          "url": "https://thinkchecksubmit.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "A checklist to judge whether a journal is trustworthy before you cite from it or submit to it."
+        },
+        {
+          "title": "ICMJE Recommendations",
+          "provider": "International Committee of Medical Journal Editors",
+          "type": "reference",
+          "url": "https://www.icmje.org/recommendations/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The standard criteria for authorship and guidance on conflicts of interest, and on declaring AI-assisted writing."
+        },
+        {
+          "title": "Committee on Publication Ethics (COPE)",
+          "provider": "COPE",
+          "type": "reference",
+          "url": "https://publicationethics.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Guidance and flowcharts on authorship disputes, data problems and misconduct handling in publishing."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which is plagiarism?",
+          "options": [
+            "Quoting a sentence with quotation marks and a citation",
+            "Copying a paragraph and replacing a few words without citation",
+            "Paraphrasing and citing the source",
+            "Citing a review for a general point"
+          ],
+          "answer": 1,
+          "explanation": "Changing a few words without attribution is patchwriting, which is still plagiarism."
+        },
+        {
+          "question": "A tool generates a reference that sounds right. What should you do?",
+          "options": [
+            "Cite it",
+            "Check that it exists and supports the claim before using it",
+            "Alter the year",
+            "Assume it is correct if the journal is real"
+          ],
+          "answer": 1,
+          "explanation": "Generated references can be fabricated. Only cite what you have found and read."
+        },
+        {
+          "question": "Why cite common-sense facts rarely but specific numbers always?",
+          "options": [
+            "Numbers are harder to read",
+            "Specific data and claims need a traceable source, while universally known facts do not",
+            "Numbers are always wrong",
+            "It is a style whim"
+          ],
+          "answer": 1,
+          "explanation": "Readers must be able to check data and contested claims."
+        }
+      ]
+    },
+    {
+      "id": "slides-visuals",
+      "title": "Designing Slides and Visuals for a Seminar",
+      "hours": 4,
+      "hook": "Slides are not the talk; you are. The best seminar slides do three things: orient the audience, show the evidence, and get out of the way so people listen to you.",
+      "learningObjectives": [
+        "Plan the sequence of slides from a story outline",
+        "Limit text and use large, readable fonts",
+        "Create clear diagrams of mechanisms and pathways",
+        "Display data with simple, labelled figures",
+        "Cite sources on slides without clutter",
+        "Check the deck for accessibility and for timing"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Storyboard",
+          "definition": "A sketch of the talk slide by slide before opening presentation software."
+        },
+        {
+          "term": "Signal-to-noise on slides",
+          "definition": "Each element should help the message; remove decorative or redundant items."
+        },
+        {
+          "term": "Mechanism diagram",
+          "definition": "A simple labelled schematic that shows steps and arrows consistently."
+        },
+        {
+          "term": "Build or reveal",
+          "definition": "Showing parts of a figure in steps so attention follows the explanation."
+        },
+        {
+          "term": "Accessibility",
+          "definition": "Readable contrast, colour-blind-safe colours and alt text where relevant."
+        },
+        {
+          "term": "Backup slides",
+          "definition": "Extra slides after the end for anticipated questions."
+        }
+      ],
+      "deeper": {
+        "beginner": "Write the title of each slide as the message (a sentence), then make the slide show it. Aim for roughly one slide per minute, with minimal text. Use one diagram at a time and point to each part as you talk. Use the same colour for the same thing throughout.",
+        "intermediate": "Build pathway diagrams with consistent shapes and arrow styles, and use highlights to guide the eye. Enlarge data figures and label axes; show the comparison that matters. Put citations in small text at the bottom. Practise with the slides to check pace, and cut anything that you do not plan to talk about. Export a PDF as a backup.",
+        "advanced": "Study how experienced speakers use visuals to carry complex relationships: build slides in layers, reduce cognitive load, and prepare analogies that you can mention explicitly as limited. Reconsider animations: they are useful only if they make a process clearer. Adapt the same content to a poster, a short talk and an extended seminar, changing the depth but not the message."
+      },
+      "commonMistakes": [
+        "Slides filled with paragraphs of text that the speaker reads",
+        "Tiny, unreadable axis labels",
+        "Different colours for the same protein on different slides",
+        "No time left for the conclusion"
+      ],
+      "videos": [
+        {
+          "youtubeId": "Hp7Id3Yb9XQ",
+          "title": "Designing effective scientific presentations",
+          "channel": "Science Communication Lab",
+          "level": "intermediate",
+          "whyWatch": "A detailed lecture by a Stanford neurobiologist on designing slides and talks for clarity."
+        },
+        {
+          "youtubeId": "V_TqB9VF57E",
+          "title": "The Importance of Giving a Good Talk",
+          "channel": "iBiology",
+          "level": "beginner",
+          "whyWatch": "Why a good talk matters and the principles behind effective ones."
+        },
+        {
+          "youtubeId": "iQh63DH9H5w",
+          "title": "How to create scientific graphics: an inside look from Nature",
+          "channel": "Nature Portfolio",
+          "level": "beginner",
+          "whyWatch": "Shows how professional graphics are planned to communicate clearly."
+        },
+        {
+          "youtubeId": "swIWHuIpubI",
+          "title": "How to give a great oral presentation",
+          "channel": "Microbiology Society",
+          "level": "beginner",
+          "whyWatch": "Short, practical tips for scientific oral presentations."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pcbi.0030077",
+          "title": "Ten Simple Rules for Making Good Oral Presentations",
+          "authors": "Bourne PE",
+          "year": 2007,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Short, practical rules on knowing your audience, telling one story and keeping slides supportive rather than dominant. Handy to re-read the night before any talk.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.0030077"
+        },
+        {
+          "doi": "10.1371/journal.pcbi.1003833",
+          "title": "Ten Simple Rules for Better Figures",
+          "authors": "Rougier NP, Droettboom M, Bourne PE",
+          "year": 2014,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Concrete rules on knowing your message, choosing the right plot, avoiding chart junk and using colour carefully. Short enough to read once and check every figure against afterwards.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1003833"
+        }
+      ],
+      "resources": [
+        {
+          "title": "ColorBrewer",
+          "provider": "Cynthia Brewer / Penn State",
+          "type": "tool",
+          "url": "https://colorbrewer2.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Pick colour palettes that are print-safe and colour-blind safe for figures."
+        },
+        {
+          "title": "Color Universal Design (Okabe-Ito palette)",
+          "provider": "Okabe & Ito, University of Tokyo",
+          "type": "reference",
+          "url": "https://jfly.uni-koeln.de/color/",
+          "free": true,
+          "level": "beginner",
+          "note": "The origin of the widely used colour-blind-safe palette, with examples of how figures look to people with different colour vision."
+        },
+        {
+          "title": "Inkscape",
+          "provider": "Inkscape Project",
+          "type": "tool",
+          "url": "https://inkscape.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free vector editor for assembling multi-panel figures that stay sharp at any size."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A good slide title in a scientific talk is usually:",
+          "options": [
+            "A single word label",
+            "A sentence stating the slide's message",
+            "The name of the software",
+            "A long quotation"
+          ],
+          "answer": 1,
+          "explanation": "A message title tells the audience what to take from the slide."
+        },
+        {
+          "question": "Why use consistent colours across slides?",
+          "options": [
+            "It looks cheaper",
+            "It helps the audience track the same entity throughout",
+            "It saves memory",
+            "It is required by law"
+          ],
+          "answer": 1,
+          "explanation": "Stable visual coding reduces effort for the viewer."
+        },
+        {
+          "question": "What is the main purpose of backup slides?",
+          "options": [
+            "To lengthen the talk",
+            "To have ready answers for likely questions",
+            "To show the references",
+            "To advertise"
+          ],
+          "answer": 1,
+          "explanation": "They are kept at the end for anticipated questions without cluttering the main talk."
+        }
+      ]
+    },
+    {
+      "id": "delivering-seminar",
+      "title": "Delivering the Seminar and Handling Questions",
+      "hours": 5,
+      "hook": "Delivery is where nerves meet preparation. Most of what makes a speaker seem confident is rehearsal, a clear opening and the willingness to pause, and none of that is a talent you must be born with.",
+      "learningObjectives": [
+        "Open the talk with context and a clear question",
+        "Manage time and pacing",
+        "Use voice, pauses and eye contact deliberately",
+        "Explain complex mechanisms step by step with the audience in mind",
+        "Respond calmly to questions and admit uncertainty honestly",
+        "Give and receive constructive peer feedback"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hook and roadmap",
+          "definition": "An opening that tells the audience why the topic matters and how the talk is organised."
+        },
+        {
+          "term": "Pacing",
+          "definition": "Spending time in proportion to importance, and practising to finish within the limit."
+        },
+        {
+          "term": "Pause",
+          "definition": "A deliberate silence that gives the audience time to absorb a point."
+        },
+        {
+          "term": "Restating the question",
+          "definition": "Repeating a question briefly so everyone hears it and you check you understood it."
+        },
+        {
+          "term": "Chairing and discussion",
+          "definition": "Seminars often include chair-led discussion; answer to the room, not only to the questioner."
+        },
+        {
+          "term": "Peer feedback",
+          "definition": "Specific observations on content, clarity and delivery to help the speaker improve."
+        }
+      ],
+      "deeper": {
+        "beginner": "Practise out loud at least three times, once to an audience, and time yourself. Open with one clear sentence on why the topic matters. Slow down at key points and pause. If a question is unclear, ask for clarification; if you do not know, say so and offer what you do know.",
+        "intermediate": "Plan the first minute and last minute word for word. Create transitions between sections and rehearse them. Prepare answers to likely questions (what is the evidence, what are the limits, what next). During questions, listen to the end, restate, answer briefly and check that you answered. Give feedback to peers with one strength and one suggestion.",
+        "advanced": "Treat delivery as communication design: adapt level and vocabulary to the audience, use analogies but state where they fail, and deal with hostile or off-topic questions by returning to evidence. After the talk, reflect on recordings or feedback and set one improvement goal for the next one. Think about how to present when you disagree with a prominent paper without being dismissive."
+      },
+      "commonMistakes": [
+        "Speaking too quickly because of nerves",
+        "Memorising a script and losing the place when interrupted",
+        "Answering a different question from the one asked",
+        "Running over time and skipping the conclusion"
+      ],
+      "videos": [
+        {
+          "youtubeId": "SFxVihJ1KSo",
+          "title": "How to give a good scientific talk",
+          "channel": "EMBL",
+          "level": "beginner",
+          "whyWatch": "Quick pointers from scientists on talk structure and delivery."
+        },
+        {
+          "youtubeId": "LzIJFD-ddoI",
+          "title": "How To Prepare an Oral Research Presentation",
+          "channel": "Michigan State University - Undergraduate Research",
+          "level": "beginner",
+          "whyWatch": "An undergraduate-focused guide to preparing and giving a research talk."
+        },
+        {
+          "youtubeId": "lfiNFNTwFGU",
+          "title": "Q & A Questions: How to Answer Any Presentation Question",
+          "channel": "Rule The Room",
+          "level": "beginner",
+          "whyWatch": "Practical techniques for handling questions with composure."
+        },
+        {
+          "youtubeId": "IVNVd-Rp0rg",
+          "title": "Craftiest ways to answer tough questions after your presentation [8 easy options]",
+          "channel": "Andy Stapleton",
+          "level": "beginner",
+          "whyWatch": "Options for answering difficult questions, including those you cannot answer."
+        },
+        {
+          "youtubeId": "dh0pJdgY6Lc",
+          "title": "2014 Three Minute Thesis winning presentation",
+          "channel": "University of South Australia",
+          "level": "beginner",
+          "whyWatch": "A model of clarity and pacing in a very short talk."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Writing Center Tips and Tools",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is a good response when you are asked something you do not know?",
+          "options": [
+            "Guess confidently",
+            "Say you do not know, share related knowledge and say how you would find out",
+            "Ignore the question",
+            "Blame the previous speaker"
+          ],
+          "answer": 1,
+          "explanation": "Honest, reasoned answers build credibility."
+        },
+        {
+          "question": "Why restate a question before answering?",
+          "options": [
+            "To waste time",
+            "To ensure the audience heard it and you understood it",
+            "To change the subject",
+            "To show authority"
+          ],
+          "answer": 1,
+          "explanation": "It clarifies the question and gives you thinking time."
+        },
+        {
+          "question": "The most useful rehearsal includes:",
+          "options": [
+            "Reading slides silently",
+            "Speaking aloud with a timer, ideally to a listener",
+            "Only memorising",
+            "Skipping the introduction"
+          ],
+          "answer": 1,
+          "explanation": "Spoken practice reveals timing and awkward phrasing."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "Hp7Id3Yb9XQ",
+      "title": "Designing effective scientific presentations",
+      "channel": "Science Communication Lab",
+      "level": "intermediate",
+      "whyWatch": "A full lecture on planning and presenting a scientific talk that audiences can follow."
+    },
+    {
+      "youtubeId": "zIYC6zG265E",
+      "title": "How to Write a Literature Review: 3 Minute Step-by-step Guide",
+      "channel": "Scribbr",
+      "level": "beginner",
+      "whyWatch": "A short overview of the process behind a review essay."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Writing Center Tips and Tools",
+      "provider": "UNC Writing Center",
+      "type": "tutorial",
+      "url": "https://writingcenter.unc.edu/tips-and-tools/",
+      "free": true,
+      "level": "beginner",
+      "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+    },
+    {
+      "title": "Purdue Online Writing Lab",
+      "provider": "Purdue University",
+      "type": "reference",
+      "url": "https://owl.purdue.edu/",
+      "free": true,
+      "level": "beginner",
+      "note": "Reliable explanations of grammar, citation styles and paper structure."
+    },
+    {
+      "title": "Zotero Documentation",
+      "provider": "Zotero",
+      "type": "tutorial",
+      "url": "https://www.zotero.org/support/",
+      "free": true,
+      "level": "beginner",
+      "note": "Free, open-source reference manager with a browser connector and Word/LibreOffice plug-ins; the manual is the best place to start."
+    }
+  ]
+}

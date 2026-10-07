@@ -1,0 +1,1252 @@
+{
+  "code": "BC 3022",
+  "title": "Metabolism I",
+  "level": 3,
+  "semester": 1,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "How a cell turns food into usable energy: the logic of energy transfer, and the pathways that burn, build and rebalance glucose.",
+  "overview": "Metabolism I lays the thermodynamic and chemical foundations of cellular energy conversion and then follows carbohydrate through the core ATP-generating machinery: glycolysis and fermentation, gluconeogenesis, glycogen, the pentose phosphate pathway, pyruvate oxidation, the citric acid cycle and oxidative phosphorylation. The content follows the standard BSc Honours treatment, with lipid, amino acid and nucleotide metabolism, photosynthesis and whole-body integration deliberately left for Metabolism II. Throughout, the emphasis is on why each reaction is arranged the way it is: which steps are irreversible, where control is exerted, and what the cell gains by organising chemistry into pathways.",
+  "whyItMatters": "Almost every disease with a biochemical flavour (diabetes, cancer, inherited enzyme deficiencies, mitochondrial disorders, ischaemia) is, at root, a story about metabolic flux going wrong. Understanding carbohydrate metabolism and energy coupling also gives you the vocabulary to read any later paper in physiology, pharmacology, biotechnology or nutrition.",
+  "prerequisites": [
+    "FD 2101"
+  ],
+  "careerLinks": [
+    "Clinical biochemistry and diagnostic laboratories (glucose, lactate, enzyme assays)",
+    "Pharmaceutical and drug discovery research (metabolic disease targets)",
+    "Nutrition, sports science and food technology",
+    "Biotechnology and fermentation industries",
+    "Postgraduate research in cancer metabolism or mitochondrial biology"
+  ],
+  "studyTips": [
+    "Draw each pathway from memory on a blank page, then check; recall beats re-reading. Start with the skeleton (names of intermediates and carbon count) and add enzymes and cofactors on a second pass.",
+    "For every pathway ask three questions: where does it start and end, which steps are irreversible, and what signal switches it on or off. Exams reward those answers more than reciting ten enzyme names.",
+    "Keep a running ledger of ATP, NADH, FADH2 and GTP for each stage and add it up for one glucose; being able to explain why the textbook totals are approximate is a mark of real understanding.",
+    "Use KEGG or Reactome beside your notes so you can see how each pathway connects to the rest of the cell's chemistry."
+  ],
+  "units": [
+    {
+      "id": "bioenergetics-and-metabolic-design",
+      "title": "Bioenergetics and the design of metabolism",
+      "hours": 4,
+      "hook": "A cell is a tiny, warm, watery thing that nevertheless builds proteins uphill, pumps ions against gradients and copies its genome, all without ever combusting. The trick is that it never burns fuel in one violent step; it hands energy along in small, manageable parcels, and the parcel most often used is ATP.",
+      "learningObjectives": [
+        "Distinguish between standard free energy change (delta G zero prime) and the actual free energy change in the cell, and explain why the second decides direction",
+        "Explain how an unfavourable reaction is driven by coupling to ATP hydrolysis or another favourable reaction through a shared intermediate",
+        "Explain why ATP hydrolysis is strongly exergonic in terms of the structure of ATP and its products",
+        "Describe the roles of NAD+/NADH, NADP+/NADPH and FAD/FADH2 as carriers of reducing equivalents",
+        "Outline the three stages of catabolism and contrast anabolic and catabolic design principles",
+        "Describe the main levels at which flux through a pathway is regulated"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Free energy (delta G)",
+          "definition": "The change in Gibbs free energy tells you whether a reaction can proceed spontaneously under the conditions you actually have; a negative value means it can do useful work and proceeds forwards."
+        },
+        {
+          "term": "Standard transformed free energy (delta G zero prime)",
+          "definition": "The free energy change when all reactants and products are at 1 M (except H+ at pH 7, water taken as 1); it is a fixed reference value linked to the equilibrium constant, not a prediction of what happens in the cell."
+        },
+        {
+          "term": "Mass-action ratio and delta G",
+          "definition": "The real delta G equals delta G zero prime plus RT ln of the mass-action ratio, so a reaction with a positive standard value can still run forward if the products are kept scarce."
+        },
+        {
+          "term": "Energetic coupling",
+          "definition": "A reaction with positive delta G is made to proceed by being linked, through a common intermediate or an enzyme-catalysed group transfer, to a reaction with a larger negative delta G."
+        },
+        {
+          "term": "ATP as energy currency",
+          "definition": "ATP carries energy not as a store but as a high group-transfer potential: it moves phosphoryl or adenylyl groups onto other molecules, which activates them for the next step."
+        },
+        {
+          "term": "High-energy phosphate compounds",
+          "definition": "Compounds such as phosphoenolpyruvate, 1,3-bisphosphoglycerate and creatine phosphate have a higher phosphoryl-transfer potential than ATP and so can phosphorylate ADP; glucose 6-phosphate has a lower one and so is made at the expense of ATP."
+        },
+        {
+          "term": "Reducing equivalents",
+          "definition": "Oxidation of fuels is carried out by dehydrogenases that pass a hydride ion and a proton to NAD+ or FAD, forming NADH and FADH2, which later donate electrons to the respiratory chain."
+        },
+        {
+          "term": "NADH versus NADPH",
+          "definition": "NADH is mainly an oxidising-direction carrier feeding ATP production, while NADPH is held mostly reduced and feeds biosynthetic and antioxidant reductions; the cell keeps the two pools separate by using different enzymes."
+        },
+        {
+          "term": "Stages of catabolism",
+          "definition": "Large polymers are first broken into monomers, these are funnelled to a few common intermediates such as acetyl-CoA, and finally acetyl-CoA is oxidised to CO2 with the electrons captured as NADH and FADH2."
+        },
+        {
+          "term": "Near-equilibrium versus regulated steps",
+          "definition": "Most steps in a pathway operate close to equilibrium and follow the flux; a few steps far from equilibrium (large negative delta G) are the control points where enzymes are regulated."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of ATP as a rechargeable battery that is charged in one part of the cell (by burning fuel) and spent in another (muscle contraction, pumping ions, making proteins). The 'battery' works because ATP has three negatively charged phosphates crowded close together; when the last one is removed, the crowding is relieved and the products are stabilised by water and resonance, which releases energy. Whenever the cell needs to do something uphill, it uses ATP to give that process a push.",
+        "intermediate": "The sign of delta G, not delta G zero prime, determines direction. In a living cell the ATP/ADP/Pi ratio is held far from equilibrium, so the real free energy of ATP hydrolysis is substantially more negative (roughly -50 kJ/mol or beyond) than the standard value of about -30 kJ/mol. Coupling is not simply 'adding the numbers': the enzyme must transfer a phosphoryl group so that a phosphorylated intermediate forms, as in glutamine synthesis or hexokinase. Phosphoryl-transfer potentials explain the direction of coupling inside glycolysis, where phosphoenolpyruvate can drive ATP formation but glucose 6-phosphate cannot. Pathway control is concentrated on non-equilibrium reactions: committed steps typically have large negative delta G, are catalysed by enzymes with allosteric sites, and are often reversed by a different enzyme in the opposite pathway.",
+        "advanced": "ATP hydrolysis is far from equilibrium because ATP is regenerated and its concentration is buffered by adenylate kinase (2 ADP to ATP plus AMP) and, in some tissues, creatine kinase, so the adenylate energy charge and the AMP/ATP ratio act as sensitive signals, for instance to AMPK and to phosphofructokinase-1. Magnesium complexes with ATP, and the free energy of hydrolysis depends on pH, [Mg2+] and ionic strength, so quoted values vary between sources. Flux control analysis shows that control is distributed over several enzymes rather than a single 'rate-limiting step'; the textbook notion of one pacemaker enzyme is a useful teaching approximation. The thermodynamic driving force of a pathway as a whole, rather than of a single step, also matters: pulling a near-equilibrium step forward needs a downstream irreversible reaction, which is why many pathways end in a strongly exergonic step."
+      },
+      "commonMistakes": [
+        "Saying that ATP 'contains' a high-energy bond that releases energy when broken; bond breaking costs energy, and the net release comes from the products being better stabilised than the reactants",
+        "Using delta G zero prime to predict whether a reaction goes forward in the cell; the actual concentrations decide",
+        "Treating ATP as an energy store; the cell holds only seconds' worth and turns over its own body weight of ATP each day",
+        "Assuming a single rate-limiting enzyme controls a pathway; most control is shared, though some enzymes are clear regulatory sites"
+      ],
+      "videos": [
+        {
+          "youtubeId": "76O8KpO_4Zw",
+          "title": "ATP hydrolysis: Gibbs free energy | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A short, clear walk through why ATP hydrolysis releases free energy and how the cell's real conditions change the number."
+        },
+        {
+          "youtubeId": "P2WD9jFePwo",
+          "title": "Bioenergetics: The transformation of free energy in living systems | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Connects entropy, enthalpy and free energy to what happens when cells couple reactions."
+        },
+        {
+          "youtubeId": "LmRDCBx42Ew",
+          "title": "What is NAD+?",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "Explains the NAD+/NADH redox couple and why it sits at the centre of catabolism."
+        },
+        {
+          "youtubeId": "ST1UWnenOo0",
+          "title": "Overview of metabolism: Anabolism and catabolism | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A tidy map of how catabolic and anabolic pathways relate before you meet the individual pathways."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.nutr.26.061505.111258",
+          "title": "Fuel Metabolism in Starvation",
+          "authors": "Cahill GF Jr",
+          "year": 2006,
+          "journal": "Annual Review of Nutrition",
+          "level": "intermediate",
+          "whyItMatters": "A classic readable review by the physician who measured human fuel use in prolonged fasting; it shows how the principles of energy supply and demand play out across the whole body.",
+          "readingQuestions": [
+            "Which tissues switch fuels during fasting, and what does each switch to?",
+            "How does the brain's changing fuel mix reduce the demand for protein breakdown?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free online edition with clear chapters on the design of metabolism and the role of ATP; searchable from one page."
+        },
+        {
+          "title": "Biology 2e: Energy and Metabolism",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/6-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "A gentle introduction to energy, enzymes and ATP if you need to refresh the general chemistry before the biochemistry."
+        },
+        {
+          "title": "KEGG PATHWAY database",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Clickable maps of the whole metabolic network; use it to see how the pathways in this course connect."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A reaction has a positive delta G zero prime but runs forward in the cell. What is the most likely explanation?",
+          "options": [
+            "Enzymes lower the free energy change of the reaction",
+            "The product is removed rapidly so the real delta G is negative",
+            "Temperature in the cell is higher than the standard state",
+            "The standard value is wrong for reactions in water"
+          ],
+          "answer": 1,
+          "explanation": "The actual delta G includes the mass-action ratio; keeping products scarce (for instance by a fast following reaction) can make the real delta G negative even if the standard value is positive. Enzymes change rate, not delta G."
+        },
+        {
+          "question": "Which statement best explains why ATP can drive an unfavourable reaction?",
+          "options": [
+            "ATP stores energy in its adenine ring",
+            "ATP hydrolysis in the cell is highly exergonic and the enzyme couples it to the reaction through a shared intermediate",
+            "ATP bonds release energy when they are broken",
+            "ATP acts as a catalyst and lowers activation energy"
+          ],
+          "answer": 1,
+          "explanation": "Coupling works by enzymes transferring a phosphoryl group, so the overall pair of reactions has a negative delta G. Bond breaking itself is endergonic; the net release arises from product stabilisation."
+        },
+        {
+          "question": "Which carrier is kept mostly in its reduced form and mainly provides electrons for biosynthesis?",
+          "options": [
+            "NADH",
+            "NADPH",
+            "FAD",
+            "Coenzyme Q"
+          ],
+          "answer": 1,
+          "explanation": "NADPH is maintained at a high NADPH/NADP+ ratio so it can donate hydride in reductive biosynthesis and antioxidant defence, whereas NADH is mostly oxidised and feeds the respiratory chain."
+        }
+      ]
+    },
+    {
+      "id": "glycolysis-and-fermentation",
+      "title": "Glycolysis and the fates of pyruvate",
+      "hours": 5,
+      "hook": "Glycolysis is probably the oldest metabolic pathway on Earth, running in the cytosol of nearly every living cell without needing oxygen or any organelle. A sprinter's muscle, a yeast cell in a wine vat and a fast-growing tumour all lean on it, and each one makes a different choice about what to do with the pyruvate at the end.",
+      "learningObjectives": [
+        "Write the ten reactions of glycolysis in order, naming the substrates, enzymes and the ATP/NADH accounting",
+        "Identify the three irreversible steps and explain why they are the sites of regulation",
+        "Explain allosteric and hormonal control of hexokinase/glucokinase, phosphofructokinase-1 and pyruvate kinase",
+        "Explain why fermentation regenerates NAD+ and compare lactate and ethanol fermentation",
+        "Describe how fructose and galactose enter the pathway",
+        "Explain the Warburg effect and why aerobic glycolysis can still be advantageous to a proliferating cell"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Investment and payoff phases",
+          "definition": "The first five reactions spend two ATP to phosphorylate and split a hexose into two triose phosphates; the last five convert each triose phosphate to pyruvate and yield four ATP and two NADH, for a net of two ATP per glucose."
+        },
+        {
+          "term": "Hexokinase and glucokinase",
+          "definition": "Hexokinase has a low Km and is inhibited by its product glucose 6-phosphate, while liver glucokinase has a high Km and is not product-inhibited, so the liver takes up glucose in proportion to blood glucose after a meal."
+        },
+        {
+          "term": "Phosphofructokinase-1 (PFK-1)",
+          "definition": "The committed step; it is activated by AMP and fructose 2,6-bisphosphate and inhibited by ATP and citrate, so it senses both energy need and the availability of other fuels."
+        },
+        {
+          "term": "Fructose 2,6-bisphosphate",
+          "definition": "A regulatory molecule made by PFK-2 whose level is raised by insulin and lowered by glucagon; it strongly activates PFK-1 and inhibits fructose 1,6-bisphosphatase, reciprocally controlling glycolysis and gluconeogenesis."
+        },
+        {
+          "term": "Glyceraldehyde 3-phosphate dehydrogenase",
+          "definition": "Oxidises the aldehyde and attaches inorganic phosphate to make 1,3-bisphosphoglycerate, a high-energy mixed anhydride, so oxidation is directly coupled to phosphoryl-transfer potential."
+        },
+        {
+          "term": "Substrate-level phosphorylation",
+          "definition": "ATP is made by transferring a phosphoryl group from a high-energy intermediate (1,3-bisphosphoglycerate, phosphoenolpyruvate) to ADP, without needing a proton gradient."
+        },
+        {
+          "term": "Pyruvate kinase",
+          "definition": "Catalyses the third irreversible step; it is activated feed-forward by fructose 1,6-bisphosphate, and in liver is switched off by glucagon-triggered phosphorylation."
+        },
+        {
+          "term": "Fermentation",
+          "definition": "Pyruvate is reduced (to lactate by lactate dehydrogenase, or to ethanol through acetaldehyde in yeast) purely to oxidise NADH back to NAD+ so glycolysis can continue without a respiratory chain."
+        },
+        {
+          "term": "Warburg effect",
+          "definition": "Many cancer and rapidly dividing cells convert a large fraction of glucose to lactate even with oxygen present; one view is that this diverts glycolytic intermediates to biosynthesis of nucleotides, amino acids and lipids."
+        },
+        {
+          "term": "Entry of other sugars",
+          "definition": "Fructose enters via fructose 1-phosphate in liver and bypasses PFK-1 control; galactose is converted to glucose 1-phosphate through the Leloir pathway, and defects cause galactosaemia."
+        }
+      ],
+      "animation": "glycolysis-flow",
+      "deeper": {
+        "beginner": "Glycolysis takes one six-carbon glucose and breaks it into two three-carbon pyruvates. Along the way the cell spends two ATP to get started and earns four back, so the net gain is two ATP, plus two NADH, which the cell can later cash in for more energy if oxygen is available. If there is no oxygen, the NADH must be recycled by turning pyruvate into lactate or ethanol, otherwise glycolysis would stop for lack of NAD+.",
+        "intermediate": "The three non-equilibrium steps (hexokinase, PFK-1, pyruvate kinase) are where regulation is concentrated; the other seven reactions are near-equilibrium and run in both directions in gluconeogenesis. Aldolase cleaves fructose 1,6-bisphosphate into DHAP and glyceraldehyde 3-phosphate, and triose phosphate isomerase interconverts them, so both halves of the hexose are processed. GAPDH couples a thermodynamically unfavourable oxidation to a thermodynamically favourable phosphorylation through an enzyme-bound thioester intermediate. Under anaerobic conditions in muscle, lactate dehydrogenase maintains the NAD+/NADH ratio; the lactate is exported and can be recycled to glucose in the liver. Hormonal control integrates with allosteric control: in liver, glucagon through cAMP and PKA lowers fructose 2,6-bisphosphate and inactivates pyruvate kinase, so glycolysis slows during fasting.",
+        "advanced": "PFK-1 is a tetramer showing cooperativity; ATP at the substrate site is a substrate but at an allosteric site lowers its affinity for fructose 6-phosphate, and AMP and fructose 2,6-bisphosphate relieve this inhibition. The bifunctional PFK-2/FBPase-2 enzyme in liver is phosphorylated by PKA to turn off kinase and turn on phosphatase activity, whereas in heart it is phosphorylated to activate the kinase, a tissue-specific design. Pyruvate kinase M2 can switch between a low-activity dimer and an active tetramer, an idea used to explain how proliferating cells accumulate upstream intermediates. The Warburg effect is not simply a respiratory defect; most tumour mitochondria function, and explanations involve demand for biosynthetic precursors and NADPH, not only ATP, which is why the Vander Heiden, Cantley and Thompson review is a good entry point. Glycolytic flux per ATP is fast but ATP-inefficient, so rate and yield trade off; rapidly dividing cells often favour rate."
+      },
+      "commonMistakes": [
+        "Reporting the yield as 4 ATP per glucose; the net is 2 ATP because 2 are spent in the investment phase",
+        "Forgetting that glycolysis in the payoff phase runs twice per glucose because each hexose gives two triose phosphates",
+        "Saying that fermentation produces ATP; it only regenerates NAD+, and all the ATP comes from glycolysis itself",
+        "Describing lactate as a dead-end waste product; it is a mobile fuel that other tissues oxidise or the liver converts back to glucose"
+      ],
+      "videos": [
+        {
+          "youtubeId": "ArmlWtDnuys",
+          "title": "Steps of glycolysis | Cellular respiration | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Slow, step-by-step tour of the ten reactions that you can pause and copy onto your own pathway diagram."
+        },
+        {
+          "youtubeId": "gggC9vctvBQ",
+          "title": "Metabolism | Glycolysis",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A full lecture-length treatment with structures, enzyme names and ATP accounting, drawn out on a board."
+        },
+        {
+          "youtubeId": "xoqyF6DJZ-Y",
+          "title": "Metabolism | Regulation of Glycolysis",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "Follows hexokinase, PFK-1 and pyruvate kinase control, including fructose 2,6-bisphosphate and hormonal signals."
+        },
+        {
+          "youtubeId": "bdzkbzscQm8",
+          "title": "Anaerobic Respiration and Fermentation",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Quick comparison of lactate and ethanol fermentation and why both exist."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1160809",
+          "title": "Understanding the Warburg Effect: The Metabolic Requirements of Cell Proliferation",
+          "authors": "Vander Heiden MG, Cantley LC, Thompson CB",
+          "year": 2009,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2849637/",
+          "whyItMatters": "Shows that glycolysis is not just an energy pathway: proliferating cells use it to supply carbon and reducing power for building new cells. A good example of how a textbook pathway keeps producing new questions.",
+          "readingQuestions": [
+            "What does a dividing cell need besides ATP, and which glycolytic intermediates supply it?",
+            "Why might fast, ATP-inefficient glycolysis be advantageous?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Glycolysis and gluconeogenesis chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook with structures of every intermediate and a section on regulation; navigate to the glycolysis chapter from the contents."
+        },
+        {
+          "title": "Cellular Respiration (Biology 2e)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/7-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "An accessible chapter on glycolysis and respiration with diagrams, useful as a first read before the lecture."
+        },
+        {
+          "title": "Metabolic Pathways chart",
+          "provider": "ExPASy / Biochemical Pathways",
+          "type": "reference",
+          "url": "https://web.expasy.org/pathways/",
+          "free": true,
+          "level": "intermediate",
+          "note": "An interactive version of the classic wall-chart of metabolism, good for seeing where glycolysis sits among other pathways."
+        },
+        {
+          "title": "Reactome pathway browser",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org",
+          "free": true,
+          "level": "advanced",
+          "note": "Curated human pathways with enzyme complexes, regulation and disease links; search for glycolysis to explore."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which enzyme catalyses the committed step of glycolysis and is inhibited by high ATP and citrate?",
+          "options": [
+            "Hexokinase",
+            "Phosphofructokinase-1",
+            "Pyruvate kinase",
+            "Triose phosphate isomerase"
+          ],
+          "answer": 1,
+          "explanation": "PFK-1 converts fructose 6-phosphate to fructose 1,6-bisphosphate and is the main control point; ATP and citrate signal that energy and fuel are plentiful, whereas AMP and fructose 2,6-bisphosphate activate it."
+        },
+        {
+          "question": "What is the metabolic purpose of reducing pyruvate to lactate in anaerobic muscle?",
+          "options": [
+            "To make additional ATP by substrate-level phosphorylation",
+            "To regenerate NAD+ so that glycolysis can continue",
+            "To remove excess protons from the cytosol permanently",
+            "To store carbon for later gluconeogenesis only"
+          ],
+          "answer": 1,
+          "explanation": "GAPDH needs NAD+; without a respiratory chain the cell must oxidise NADH back to NAD+, and lactate dehydrogenase does this by reducing pyruvate. The lactate step itself makes no ATP."
+        },
+        {
+          "question": "What is the net ATP yield of glycolysis from one glucose through substrate-level phosphorylation?",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "8"
+          ],
+          "answer": 1,
+          "explanation": "Four ATP are made but two are consumed by hexokinase and PFK-1, so the net is two ATP. The NADH formed can yield more ATP later only when oxygen and the respiratory chain are available."
+        },
+        {
+          "question": "Why does the liver take up glucose in proportion to its blood concentration after a meal?",
+          "options": [
+            "Glucokinase has a high Km and is not inhibited by glucose 6-phosphate",
+            "Hexokinase is absent in liver",
+            "Insulin directly phosphorylates glucose",
+            "Glucose transporters in liver require ATP"
+          ],
+          "answer": 0,
+          "explanation": "Glucokinase has a high Km, so its activity rises across the physiological glucose range, and lacks product inhibition, letting the liver act as a glucose buffer."
+        }
+      ]
+    },
+    {
+      "id": "gluconeogenesis",
+      "title": "Gluconeogenesis: making glucose from non-carbohydrates",
+      "hours": 4,
+      "hook": "Your brain runs mostly on glucose, and it does not take a day off when you skip a meal. Every night while you sleep, your liver is quietly building new glucose from lactate, amino acids and glycerol so that your blood sugar stays steady until breakfast.",
+      "learningObjectives": [
+        "List the substrates for gluconeogenesis and the tissues in which it occurs",
+        "Describe the four bypass reactions that circumvent the irreversible steps of glycolysis",
+        "Calculate the energetic cost of making glucose from two pyruvate and compare it with glycolysis",
+        "Explain the reciprocal regulation of glycolysis and gluconeogenesis",
+        "Describe the Cori and glucose-alanine cycles and why they matter",
+        "Explain why even-chain fatty acids cannot provide a net carbon supply for glucose in animals"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Gluconeogenesis",
+          "definition": "The synthesis of glucose from non-carbohydrate precursors; it occurs mainly in liver and to a lesser extent kidney cortex, and shares seven near-equilibrium reactions with glycolysis."
+        },
+        {
+          "term": "Pyruvate carboxylase",
+          "definition": "A biotin-dependent mitochondrial enzyme that converts pyruvate to oxaloacetate using ATP; it is activated by acetyl-CoA, which signals that fatty acid oxidation is supplying energy."
+        },
+        {
+          "term": "PEP carboxykinase (PEPCK)",
+          "definition": "Converts oxaloacetate to phosphoenolpyruvate with GTP and loss of CO2; the carboxylation then decarboxylation sequence makes an otherwise unfavourable conversion workable."
+        },
+        {
+          "term": "Fructose 1,6-bisphosphatase",
+          "definition": "Reverses the PFK-1 step by simple hydrolysis; it is inhibited by AMP and fructose 2,6-bisphosphate, mirroring the control on PFK-1."
+        },
+        {
+          "term": "Glucose 6-phosphatase",
+          "definition": "Located in the endoplasmic reticulum of liver and kidney, it releases free glucose into the blood; muscle lacks it, so muscle glycogen cannot directly supply blood glucose."
+        },
+        {
+          "term": "Energy cost",
+          "definition": "Making one glucose from two pyruvate uses four ATP, two GTP and two NADH, six nucleoside triphosphates in total, compared with the two ATP gained in glycolysis; the cost is why the pathway needs strong energy supply and regulation."
+        },
+        {
+          "term": "Cori cycle",
+          "definition": "Lactate from muscle or red cells is carried to the liver and converted to glucose, which returns to the blood; the liver pays ATP so the muscle can keep glycolysing anaerobically."
+        },
+        {
+          "term": "Glucose-alanine cycle",
+          "definition": "Muscle transaminates pyruvate to alanine, which the liver converts back to pyruvate and then glucose, also transporting nitrogen to the urea cycle."
+        },
+        {
+          "term": "Glycerol and propionate entry",
+          "definition": "Glycerol from triacylglycerol enters at dihydroxyacetone phosphate after phosphorylation, and propionyl-CoA from odd-chain fatty acids enters through succinyl-CoA; acetyl-CoA itself cannot give net glucose in animals."
+        }
+      ],
+      "deeper": {
+        "beginner": "When glucose from food runs out, the liver builds new glucose from other raw materials. Mostly it runs glycolysis backwards, but three of the steps cannot simply be reversed, so special enzymes bypass them. This costs a lot of energy, which is why the body only does it when there is plenty of energy from fat breakdown, and why glycolysis and gluconeogenesis are never fully active together.",
+        "intermediate": "Four enzymes provide bypasses: pyruvate carboxylase and PEPCK for pyruvate kinase, fructose 1,6-bisphosphatase for PFK-1, and glucose 6-phosphatase for hexokinase. Oxaloacetate cannot cross the mitochondrial membrane, so it is shuttled out as malate or aspartate, which also moves reducing equivalents to the cytosol for the GAPDH step. Acetyl-CoA activates pyruvate carboxylase, linking fatty acid oxidation to glucose synthesis. In the fed state insulin and high fructose 2,6-bisphosphate favour glycolysis, while in fasting glucagon lowers fructose 2,6-bisphosphate and induces PEPCK and glucose 6-phosphatase gene expression. The Cori cycle is energetically costly at the whole-body level (liver spends about six ATP equivalents, muscle gains two) but it relocates the metabolic burden from the muscle to the liver.",
+        "advanced": "Regulation is multi-level: fast allosteric effects (acetyl-CoA, AMP, fructose 2,6-bisphosphate), covalent modification through the PKA pathway, and slower transcriptional control by glucagon/cAMP/CREB, glucocorticoids and the coactivator PGC-1 alpha acting on PEPCK and G6Pase promoters. Hepatic gluconeogenesis is also affected by insulin signalling through FOXO1 exclusion from the nucleus, and insulin resistance with persistent hepatic glucose output is a hallmark of type 2 diabetes; metformin partly acts by lowering hepatic gluconeogenesis, though its mechanisms are still debated. Glucose 6-phosphatase works as a multi-component system with a transporter delivering glucose 6-phosphate into the ER, and defects cause von Gierke disease with severe fasting hypoglycaemia. Mitochondrial and cytosolic PEPCK isoforms let the cell choose where to decarboxylate oxaloacetate, which affects the NADH supply."
+      },
+      "commonMistakes": [
+        "Describing gluconeogenesis as simply glycolysis in reverse; three glycolytic steps have different enzymes, and the total energy cost is much higher",
+        "Claiming that fatty acids can be converted into glucose in animals; acetyl-CoA enters the cycle in a way that gives no net oxaloacetate, so only glycerol and odd-chain propionyl-CoA contribute",
+        "Forgetting that skeletal muscle lacks glucose 6-phosphatase and so cannot release glucose into the blood",
+        "Confusing the Cori cycle (lactate) with the glucose-alanine cycle (alanine)"
+      ],
+      "videos": [
+        {
+          "youtubeId": "YpV96faQOZc",
+          "title": "Metabolism | Gluconeogenesis",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Walks through every reaction and cofactor of gluconeogenesis with a clear emphasis on the bypass steps."
+        },
+        {
+          "youtubeId": "FJkxYCVwJO0",
+          "title": "Gluconeogenesis: the big picture | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A high-level view of why and where the body makes glucose and how it relates to glycolysis."
+        },
+        {
+          "youtubeId": "TdR5ps6p1BU",
+          "title": "Gluconeogenesis",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "Short, friendly explanation of substrates and the main enzymes, useful as a revision recap."
+        },
+        {
+          "youtubeId": "ORIx2WYNWqs",
+          "title": "Metabolism | Regulation of Gluconeogenesis",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "Shows how acetyl-CoA, fructose 2,6-bisphosphate and hormones switch gluconeogenesis on and off."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Gluconeogenesis and Glycolysis sections, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Contains a detailed discussion of the bypass reactions and reciprocal regulation, with figures."
+        },
+        {
+          "title": "MIT 5.07SC Biological Chemistry I (video lectures and notes)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "Lecture videos and problem sets; includes carbohydrate biosynthesis and gluconeogenesis segments."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which enzyme pair bypasses the pyruvate kinase step of glycolysis?",
+          "options": [
+            "Hexokinase and glucose 6-phosphatase",
+            "Pyruvate carboxylase and PEP carboxykinase",
+            "PFK-1 and fructose 1,6-bisphosphatase",
+            "Lactate dehydrogenase and aldolase"
+          ],
+          "answer": 1,
+          "explanation": "Pyruvate is first carboxylated to oxaloacetate and then decarboxylated and phosphorylated to PEP. This two-step route overcomes the very large negative delta G of the pyruvate kinase reaction."
+        },
+        {
+          "question": "Why is acetyl-CoA an activator of pyruvate carboxylase?",
+          "options": [
+            "It indicates that fatty acids are being oxidised, so pyruvate should be converted to oxaloacetate for glucose or the cycle rather than burned",
+            "It is a substrate for the carboxylation",
+            "It inhibits pyruvate dehydrogenase directly in the cytosol",
+            "It converts biotin to its active form"
+          ],
+          "answer": 0,
+          "explanation": "High acetyl-CoA signals plentiful fatty acid-derived energy; activating pyruvate carboxylase diverts pyruvate towards oxaloacetate, supporting gluconeogenesis and anaplerosis."
+        },
+        {
+          "question": "Which substrate cannot give a net gain of glucose carbon in animals?",
+          "options": [
+            "Lactate",
+            "Glycerol",
+            "Acetyl-CoA from even-chain fatty acids",
+            "Alanine"
+          ],
+          "answer": 2,
+          "explanation": "Two carbons enter the citric acid cycle as acetyl-CoA but two carbons leave as CO2, so there is no net oxaloacetate for gluconeogenesis; lactate, glycerol and glucogenic amino acids can supply net carbon."
+        }
+      ]
+    },
+    {
+      "id": "glycogen-metabolism",
+      "title": "Glycogen metabolism and hormonal control",
+      "hours": 4,
+      "hook": "Glycogen is the body's short-term pantry: a huge branched sugar polymer packed into granules in liver and muscle that can be mobilised in seconds. When you sprint for a bus, adrenaline reaches your muscle, a phosphorylation cascade fires and thousands of glucose units begin leaving each granule simultaneously.",
+      "learningObjectives": [
+        "Describe the structure of glycogen, including alpha-1,4 chains and alpha-1,6 branches, and why branching matters",
+        "Outline the reactions of glycogenolysis and the roles of phosphorylase and the debranching enzyme",
+        "Outline glycogen synthesis, including the role of UDP-glucose, glycogenin, glycogen synthase and the branching enzyme",
+        "Explain the cAMP cascade through which glucagon and adrenaline activate glycogen breakdown and inhibit synthesis",
+        "Contrast liver and muscle glycogen regulation and function",
+        "Relate selected glycogen storage diseases to specific enzyme defects"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Glycogen structure",
+          "definition": "A highly branched polymer of glucose with alpha-1,4 links in chains and alpha-1,6 links at branch points about every 8 to 12 residues, which gives many non-reducing ends where enzymes can act simultaneously."
+        },
+        {
+          "term": "Glycogen phosphorylase",
+          "definition": "Uses inorganic phosphate to cleave glucose units from the non-reducing ends as glucose 1-phosphate, conserving the energy of the glycosidic bond; it needs pyridoxal phosphate as a cofactor."
+        },
+        {
+          "term": "Debranching enzyme",
+          "definition": "A bifunctional enzyme that moves a block of three glucose units from a branch to a chain end (transferase) and then hydrolyses the remaining alpha-1,6-linked glucose, releasing free glucose."
+        },
+        {
+          "term": "UDP-glucose",
+          "definition": "The activated glucose donor for glycogen synthesis, made from glucose 1-phosphate and UTP by UDP-glucose pyrophosphorylase; pyrophosphate hydrolysis makes the step essentially irreversible."
+        },
+        {
+          "term": "Glycogenin",
+          "definition": "A self-glucosylating protein that primes the glycogen granule by attaching the first glucose units to a tyrosine residue so glycogen synthase has a primer to extend."
+        },
+        {
+          "term": "Glycogen synthase and branching enzyme",
+          "definition": "Synthase extends chains with alpha-1,4 links, while the branching enzyme moves a short segment of an existing chain to create an alpha-1,6 link."
+        },
+        {
+          "term": "cAMP cascade",
+          "definition": "Glucagon (liver) and adrenaline (liver, muscle) raise cAMP, activating PKA, which phosphorylates and activates phosphorylase kinase, which in turn phosphorylates and activates phosphorylase, while also phosphorylating and inhibiting glycogen synthase."
+        },
+        {
+          "term": "Reciprocal control",
+          "definition": "The same phosphorylation cascade turns breakdown on and synthesis off; insulin does the opposite by promoting dephosphorylation through protein phosphatase 1 and inhibiting GSK3."
+        },
+        {
+          "term": "Liver versus muscle glycogen",
+          "definition": "Liver glycogen is used to maintain blood glucose and is responsive to glucagon, whereas muscle glycogen is a private fuel for the muscle itself, responding to adrenaline, calcium and the AMP signal of contraction."
+        },
+        {
+          "term": "Glycogen storage diseases",
+          "definition": "Inherited defects in glycogen enzymes, such as glucose 6-phosphatase (von Gierke), muscle phosphorylase (McArdle) and debranching enzyme (Cori/Forbes), cause characteristic fasting hypoglycaemia or exercise intolerance."
+        }
+      ],
+      "deeper": {
+        "beginner": "Glycogen is how animals store glucose: thousands of glucose units linked in a tree-like shape. After a meal, insulin tells the liver and muscle to build glycogen; between meals or in a fright, glucagon and adrenaline tell them to break it down. Branching matters because it gives many tips from which glucose can be removed at the same time, so energy is released quickly.",
+        "intermediate": "Glycogen breakdown and synthesis use different enzymes, a theme repeated across metabolism. Phosphorylase produces glucose 1-phosphate, which phosphoglucomutase converts to glucose 6-phosphate; in the liver glucose 6-phosphatase releases free glucose, while in muscle it enters glycolysis. In synthesis, UDP-glucose donates glucose, with the pyrophosphate released being hydrolysed to make the reaction irreversible. Control is both hormonal and allosteric: phosphorylase a is the active form in liver and is directly inhibited by glucose, so the liver stops releasing glucose when blood glucose is high, while muscle phosphorylase b is activated by AMP and inhibited by ATP and glucose 6-phosphate. Calcium released during contraction also activates phosphorylase kinase, matching glycogen breakdown to muscle activity.",
+        "advanced": "The cascade amplifies the signal at each step: one hormone molecule yields many cAMP, which activate many PKA, phosphorylase kinase and phosphorylase molecules, so a tiny stimulus releases large amounts of glucose. Termination relies on phosphodiesterase, which degrades cAMP, and on protein phosphatase 1 targeted to the glycogen particle by scaffold proteins such as GM and GL. Glycogen synthase is regulated by multi-site phosphorylation; glucose 6-phosphate is a potent allosteric activator even of the phosphorylated enzyme, tying synthesis to glucose supply. Modern work also shows glycogen particles are structured by glycogenin and branching, with a limit size, and that abnormal glycogen (polyglucosan) accumulates in some diseases such as Lafora disease. Understanding GSDs requires linking the enzyme defect to tissue expression: McArdle patients lack muscle phosphorylase and hit a metabolic wall in early exercise, but have normal liver glycogenolysis."
+      },
+      "commonMistakes": [
+        "Saying phosphorylase uses ATP; it uses inorganic phosphate to cleave the bond, and no ATP is consumed in glycogen breakdown",
+        "Assuming glycogen synthesis is just the reverse of breakdown, when it uses UDP-glucose and glycogen synthase",
+        "Suggesting muscle glycogen can raise blood glucose; muscle lacks glucose 6-phosphatase",
+        "Forgetting that phosphorylation activates phosphorylase and inactivates glycogen synthase, the opposite effects of the same kinase cascade"
+      ],
+      "videos": [
+        {
+          "youtubeId": "2XBVUKn_I5w",
+          "title": "Glycogen metabolism",
+          "channel": "Osmosis from Elsevier",
+          "level": "beginner",
+          "whyWatch": "Compact animated overview of glycogenesis and glycogenolysis and the hormones that control them."
+        },
+        {
+          "youtubeId": "YQV_ODVCzQQ",
+          "title": "Metabolism | Glycogenolysis",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Detailed enzymes and structures of glycogen breakdown, including the debranching enzyme."
+        },
+        {
+          "youtubeId": "zVGbd-df7Y8",
+          "title": "Metabolism | Glycogenesis",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Step-by-step glycogen synthesis showing glycogenin, UDP-glucose and the branching enzyme."
+        },
+        {
+          "youtubeId": "NL6ETs9k3Wk",
+          "title": "Metabolism | Regulation of Glycogen Metabolism",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "Explains the cAMP cascade and reciprocal control that make liver and muscle respond to hormones."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Glycogen Metabolism chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A textbook explanation of the regulation cascade with diagrams; find the glycogen chapter in the contents."
+        },
+        {
+          "title": "Metabolic Pathways chart",
+          "provider": "ExPASy / Biochemical Pathways",
+          "type": "reference",
+          "url": "https://web.expasy.org/pathways/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Useful to see glycogen metabolism as a branch off glucose 6-phosphate in the wider network."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the immediate product of glycogen phosphorylase action?",
+          "options": [
+            "Glucose",
+            "Glucose 1-phosphate",
+            "UDP-glucose",
+            "Glucose 6-phosphate"
+          ],
+          "answer": 1,
+          "explanation": "Phosphorylase cleaves the alpha-1,4 bond by phosphorolysis with inorganic phosphate, releasing glucose 1-phosphate. Phosphoglucomutase then converts it to glucose 6-phosphate."
+        },
+        {
+          "question": "Glucagon binding to a liver cell leads to which change in the glycogen enzymes?",
+          "options": [
+            "Phosphorylase activated and glycogen synthase inhibited",
+            "Phosphorylase inhibited and glycogen synthase activated",
+            "Both activated",
+            "Both inhibited by dephosphorylation"
+          ],
+          "answer": 0,
+          "explanation": "Via cAMP and PKA, phosphorylase kinase phosphorylates phosphorylase (activating) while PKA and other kinases phosphorylate glycogen synthase (inactivating), giving net glycogen breakdown."
+        },
+        {
+          "question": "A patient has painful cramps on exercise and no lactate rise during ischaemic forearm exercise, but normal fasting glucose. Which enzyme is most likely deficient?",
+          "options": [
+            "Liver glucose 6-phosphatase",
+            "Muscle glycogen phosphorylase",
+            "Hepatic debranching enzyme",
+            "Glycogen synthase"
+          ],
+          "answer": 1,
+          "explanation": "This describes McArdle disease: muscle cannot mobilise its own glycogen, so lactate does not rise during exercise, while liver glycogenolysis and blood glucose are normal."
+        }
+      ]
+    },
+    {
+      "id": "pentose-phosphate-pathway",
+      "title": "The pentose phosphate pathway and NADPH",
+      "hours": 3,
+      "hook": "Some metabolic pathways exist to make energy; this one exists to make reducing power and sugar skeletons. Red blood cells, with no mitochondria and no nucleus, rely on it every second to keep their haemoglobin and membranes safe from oxidative damage, and a single missing enzyme in it can turn a plate of fava beans into a medical emergency.",
+      "learningObjectives": [
+        "Distinguish the oxidative and non-oxidative phases of the pentose phosphate pathway and their products",
+        "Explain how the pathway is regulated by the NADPH/NADP+ ratio",
+        "Describe transketolase and transaldolase reactions and the carbon rearrangements they perform",
+        "Explain the roles of NADPH in biosynthesis, antioxidant defence and the respiratory burst",
+        "Relate glucose 6-phosphate dehydrogenase deficiency to haemolytic anaemia",
+        "Explain how the cell can vary the pathway's output to favour NADPH, ribose 5-phosphate or both"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Oxidative phase",
+          "definition": "Glucose 6-phosphate is oxidised by glucose 6-phosphate dehydrogenase and then by 6-phosphogluconate dehydrogenase, giving two NADPH and one CO2, and ribulose 5-phosphate, with an irreversible commitment."
+        },
+        {
+          "term": "Non-oxidative phase",
+          "definition": "A set of reversible carbon-shuffling reactions converts pentose phosphates to fructose 6-phosphate and glyceraldehyde 3-phosphate, linking the pathway to glycolysis."
+        },
+        {
+          "term": "Transketolase",
+          "definition": "A thiamine pyrophosphate-dependent enzyme transferring two-carbon units between sugar phosphates; its activity in blood cells is used as a functional test of thiamine status."
+        },
+        {
+          "term": "Transaldolase",
+          "definition": "Transfers a three-carbon unit between sugar phosphates and, with transketolase, lets the cell interconvert three-, four-, five-, six- and seven-carbon sugar phosphates."
+        },
+        {
+          "term": "G6PD regulation",
+          "definition": "Glucose 6-phosphate dehydrogenase is the control point and is strongly inhibited by NADPH, so the pathway runs faster when NADPH is being consumed."
+        },
+        {
+          "term": "NADPH functions",
+          "definition": "Provides electrons for fatty acid and steroid synthesis, regenerates reduced glutathione, supports nitric oxide synthesis and drives phagocyte NADPH oxidase."
+        },
+        {
+          "term": "Ribose 5-phosphate",
+          "definition": "The five-carbon sugar needed for nucleotide synthesis, which the cell can obtain from the oxidative phase or by reversing the non-oxidative phase from glycolytic intermediates."
+        },
+        {
+          "term": "Glutathione cycle",
+          "definition": "Glutathione reductase uses NADPH to reduce oxidised glutathione, which in turn detoxifies hydrogen peroxide through glutathione peroxidase."
+        },
+        {
+          "term": "G6PD deficiency",
+          "definition": "An X-linked disorder in which red cells cannot regenerate NADPH under oxidative stress, so certain drugs, infections or fava beans can trigger haemolysis; it also gives some protection against malaria."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells need two kinds of energy-linked currency: ATP for doing work and NADPH for building things and fighting rust-like oxidative damage. The pentose phosphate pathway is a side-route off glucose that produces NADPH (and ribose for DNA and RNA) rather than ATP. Red blood cells depend on it to keep their protective glutathione in working order.",
+        "intermediate": "The oxidative phase is irreversible and yields two NADPH per glucose 6-phosphate; the non-oxidative phase is reversible and adjusts the output to cellular needs. If the cell needs mostly NADPH (such as adipose tissue making fat), the non-oxidative phase recycles pentose phosphates back to glucose 6-phosphate, and repeated cycling can oxidise a whole glucose to CO2. If it needs mostly ribose (as in dividing cells), fructose 6-phosphate and glyceraldehyde 3-phosphate from glycolysis run through transketolase and transaldolase in reverse to produce ribose 5-phosphate without making NADPH. When both are needed, the oxidative phase supplies both. The pathway is most active in liver, adipose tissue, adrenal cortex, lactating mammary gland and red blood cells, and is relatively low in skeletal muscle.",
+        "advanced": "G6PD is controlled mainly by the NADPH/NADP+ ratio, with NADPH as a competitive inhibitor, and also responds transcriptionally to insulin and nutrient status. Over 400 G6PD variants have been described, with severity ranging from chronic haemolysis to mild episodic haemolysis; variants of reduced stability are particularly harmful in red cells that cannot synthesise new protein. Cancer cells often upregulate the oxidative pathway to support redox balance, linking NADPH supply to growth. Isotopic tracing, for example with glucose labelled at carbon 1 versus carbon 6, can distinguish pentose phosphate flux from glycolytic flux because the oxidative phase releases carbon 1 as CO2. Transketolase and transaldolase also link the pathway to the Calvin cycle in plants, showing how the same carbon-rearrangement logic is reused in a different metabolic context."
+      },
+      "commonMistakes": [
+        "Thinking the pathway is mainly for ATP production; its net purpose is NADPH and pentose supply",
+        "Mixing up NADH and NADPH roles; the pathway produces NADPH, which is used for biosynthesis and antioxidant defence",
+        "Believing the non-oxidative phase generates NADPH; it only rearranges carbons and is reversible",
+        "Ascribing haemolysis in G6PD deficiency to missing ATP; the cell fails because reduced glutathione cannot be regenerated"
+      ],
+      "videos": [
+        {
+          "youtubeId": "eXXpUxg9vn4",
+          "title": "Metabolism | Pentose Phosphate Pathway",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Draws both phases clearly with the carbon rearrangements and links them to physiological roles and G6PD deficiency."
+        },
+        {
+          "youtubeId": "bgu3_WJY62w",
+          "title": "Pentose Phosphate Pathway - Regulation, Purpose and Importance in Human Health",
+          "channel": "JJ Medicine",
+          "level": "beginner",
+          "whyWatch": "A shorter explanation of why the pathway exists, how it is controlled and what happens when it fails."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Pentose Phosphate Pathway, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Section explaining the pathway with its links to glycolysis and the Calvin cycle; useful for carbon-rearrangement diagrams."
+        },
+        {
+          "title": "Biochemistry libraries",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+          "free": true,
+          "level": "beginner",
+          "note": "Free community-written texts; search for the pentose phosphate pathway for alternate explanations if the first one does not click."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which is the primary regulated step of the pentose phosphate pathway?",
+          "options": [
+            "Transketolase",
+            "Glucose 6-phosphate dehydrogenase",
+            "Transaldolase",
+            "Ribose 5-phosphate isomerase"
+          ],
+          "answer": 1,
+          "explanation": "G6PD is inhibited by NADPH, so flux rises only when NADPH is consumed. The non-oxidative steps are reversible and follow the needs of the cell."
+        },
+        {
+          "question": "Why do G6PD-deficient red cells haemolyse under oxidative stress?",
+          "options": [
+            "They cannot make ATP by glycolysis",
+            "They cannot regenerate NADPH to keep glutathione reduced",
+            "They lack ribose for nucleotides",
+            "Their haemoglobin cannot bind oxygen"
+          ],
+          "answer": 1,
+          "explanation": "Red cells have no other major NADPH source, so without G6PD they cannot reduce oxidised glutathione and are unable to detoxify peroxides, leading to damaged proteins and membranes."
+        }
+      ]
+    },
+    {
+      "id": "pyruvate-oxidation-and-citric-acid-cycle",
+      "title": "Pyruvate oxidation and the citric acid cycle",
+      "hours": 5,
+      "hook": "At the end of glycolysis the carbon has barely been oxidised; most of the energy in glucose is still waiting in pyruvate. A giant multi-enzyme machine in the mitochondrial matrix now tears off one carbon, and the resulting acetyl group is fed into a metabolic wheel that spins out electrons.",
+      "learningObjectives": [
+        "Describe the reaction catalysed by the pyruvate dehydrogenase complex, including its five coenzymes",
+        "Explain how PDH is regulated by product inhibition and covalent modification",
+        "Write the eight reactions of the citric acid cycle and track the carbons from acetyl-CoA",
+        "Account for the NADH, FADH2, GTP/ATP and CO2 produced per turn",
+        "Explain regulation of the cycle at citrate synthase, isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase",
+        "Explain the amphibolic nature of the cycle and the role of anaplerotic reactions"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Pyruvate dehydrogenase complex",
+          "definition": "A mitochondrial multi-enzyme complex (E1, E2, E3) that converts pyruvate to acetyl-CoA, CO2 and NADH, using thiamine pyrophosphate, lipoamide, coenzyme A, FAD and NAD+."
+        },
+        {
+          "term": "PDH regulation",
+          "definition": "Acetyl-CoA and NADH inhibit the complex directly, and pyruvate dehydrogenase kinase phosphorylates and inactivates it, while a phosphatase reverses this; pyruvate, ADP and calcium favour activity."
+        },
+        {
+          "term": "Citrate synthase",
+          "definition": "Condenses acetyl-CoA with oxaloacetate to form citrate; the large negative delta G of thioester hydrolysis makes this step strongly forward-driven."
+        },
+        {
+          "term": "Isocitrate dehydrogenase",
+          "definition": "Oxidatively decarboxylates isocitrate to alpha-ketoglutarate, giving the first NADH and CO2; it is activated by ADP and inhibited by ATP and NADH."
+        },
+        {
+          "term": "Alpha-ketoglutarate dehydrogenase",
+          "definition": "A complex similar to PDH that gives succinyl-CoA, NADH and CO2; it is inhibited by its products succinyl-CoA and NADH and activated by calcium."
+        },
+        {
+          "term": "Succinate dehydrogenase",
+          "definition": "The only cycle enzyme embedded in the inner mitochondrial membrane; it is also Complex II of the respiratory chain and passes electrons from FADH2 to ubiquinone."
+        },
+        {
+          "term": "Yield per turn",
+          "definition": "Each acetyl-CoA oxidised gives 3 NADH, 1 FADH2, 1 GTP (or ATP) and 2 CO2; two turns are needed per glucose."
+        },
+        {
+          "term": "Amphibolic role",
+          "definition": "The cycle both breaks down (catabolic) and supplies precursors for biosynthesis (anabolic), such as citrate for fatty acids, alpha-ketoglutarate for glutamate, succinyl-CoA for haem and oxaloacetate for aspartate."
+        },
+        {
+          "term": "Anaplerotic reactions",
+          "definition": "Reactions that replenish intermediates drained for biosynthesis, most importantly pyruvate carboxylase making oxaloacetate from pyruvate."
+        },
+        {
+          "term": "Cofactor deficiencies and poisons",
+          "definition": "Thiamine deficiency impairs PDH and alpha-ketoglutarate dehydrogenase, and arsenite inhibits lipoamide-containing enzymes, causing lactate build-up."
+        }
+      ],
+      "deeper": {
+        "beginner": "Pyruvate enters the mitochondrion, loses one carbon as CO2, and the remaining two-carbon piece is attached to coenzyme A as acetyl-CoA. In the citric acid cycle this acetyl group is joined to a four-carbon molecule to make citrate (six carbons); the cycle then strips off two carbons as CO2 and uses the energy to make NADH, FADH2 and a little GTP. The cycle's main job is to load up carriers with electrons for the respiratory chain.",
+        "intermediate": "PDH is a model of substrate channelling: the lipoamide arm of E2 swings between active sites so intermediates never leave the complex. The cycle regenerates oxaloacetate with each turn, so catalytic amounts keep the wheel running; yet the two carbons lost as CO2 in one turn derive from oxaloacetate, not from the acetyl group just added. Control is coordinated by energy charge: ATP and NADH slow the dehydrogenases, while ADP and calcium (as in contracting muscle) speed them up. The cycle is amphibolic: intermediates leave for biosynthesis, so anaplerotic reactions, mainly pyruvate carboxylase (activated by acetyl-CoA), keep the pool topped up. Flux from fatty acids depends on this supply of oxaloacetate to dispose of acetyl-CoA.",
+        "advanced": "Pyruvate enters the mitochondrion through the mitochondrial pyruvate carrier, and cells can adjust PDH flux by PDK isoforms induced in fasting, diabetes and hypoxia (HIF-1), a mechanism that spares glucose-derived carbon. Isocitrate dehydrogenase mutations (IDH1/2) in glioma and leukaemia produce the oncometabolite 2-hydroxyglutarate, showing how cycle enzymes can be oncogenic. Succinate and fumarate accumulation due to SDH or fumarate hydratase defects stabilise HIF and alter epigenetic enzymes, linking the cycle to signalling. The cycle may be organised as a metabolon, with enzymes associated with the inner membrane, though the evidence in vivo is still debated. Krebs and Johnson's 1937 proposal that citrate is regenerated in a cycle remains an elegant example of reasoning from quantitative inhibitor and substrate experiments."
+      },
+      "commonMistakes": [
+        "Claiming that the two CO2 released in the first turn come from the acetyl group just added; they derive from oxaloacetate-derived carbons",
+        "Forgetting the PDH reaction in the energy count: it is irreversible and gives one NADH per pyruvate",
+        "Treating GTP and ATP yields as two different outputs; the same enzyme gives GTP or ATP depending on tissue, with equivalent value",
+        "Describing the cycle as a pure breakdown pathway and ignoring that its intermediates are used constantly for biosynthesis"
+      ],
+      "videos": [
+        {
+          "youtubeId": "EuvUOxHmX7I",
+          "title": "Pyruvate Dehydrogenase Complex  (2021) Drew Berry wehi.tv",
+          "channel": "WEHImovies",
+          "level": "intermediate",
+          "whyWatch": "A beautifully accurate molecular animation of a huge enzyme complex at work, so you can see substrate channelling instead of just reading about it."
+        },
+        {
+          "youtubeId": "juM2ROSLWfw",
+          "title": "Krebs / citric acid cycle | Cellular respiration | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A paced walk through the cycle and its products that makes a good first pass before the lecture."
+        },
+        {
+          "youtubeId": "JOncWQUpMzc",
+          "title": "Krebs Cycle | Made Easy!",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "Practical, clinical-flavoured explanation including how the cycle is regulated and where vitamins are needed."
+        },
+        {
+          "youtubeId": "rr7IRYLqleg",
+          "title": "Metabolism | The Krebs Cycle",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "A detailed lecture covering each enzyme, cofactors, regulation and the anaplerotic and cataplerotic reactions."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0014-5793(80)80564-3",
+          "title": "The role of citric acid in intermediate metabolism in animal tissues",
+          "authors": "Krebs HA, Johnson WA",
+          "year": 1980,
+          "journal": "FEBS Letters",
+          "level": "intermediate",
+          "whyItMatters": "This is the republication of the 1937 paper in which Krebs and Johnson proposed the cycle. Reading how they argued from experiments with minced pigeon muscle shows how a pathway is deduced rather than found ready-made.",
+          "readingQuestions": [
+            "What experimental observations made them think citrate was catalytic rather than consumed?",
+            "Which of their proposed steps would you now describe differently?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Citric Acid Cycle chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Full treatment of PDH and the cycle, including regulation and amphibolic roles; find the chapter in the contents."
+        },
+        {
+          "title": "Cellular Respiration (Biology 2e)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/7-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "An easier introduction with labelled diagrams, helpful before attempting to memorise structures."
+        },
+        {
+          "title": "Reactome pathway browser",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org",
+          "free": true,
+          "level": "advanced",
+          "note": "Look up the citric acid cycle to see the mitochondrial compartment, transporters and links to disease."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "How many NADH, FADH2 and GTP/ATP are made per turn of the citric acid cycle?",
+          "options": [
+            "2 NADH, 2 FADH2, 1 GTP",
+            "3 NADH, 1 FADH2, 1 GTP",
+            "4 NADH, 0 FADH2, 2 GTP",
+            "3 NADH, 2 FADH2, 2 GTP"
+          ],
+          "answer": 1,
+          "explanation": "The dehydrogenases for isocitrate, alpha-ketoglutarate and malate give three NADH, succinate dehydrogenase gives one FADH2 and succinyl-CoA synthetase gives one GTP or ATP."
+        },
+        {
+          "question": "Which of the following activates the pyruvate dehydrogenase complex?",
+          "options": [
+            "Acetyl-CoA",
+            "NADH",
+            "Pyruvate dehydrogenase kinase",
+            "Pyruvate"
+          ],
+          "answer": 3,
+          "explanation": "Pyruvate inhibits PDH kinase, keeping PDH dephosphorylated and active; acetyl-CoA and NADH inhibit the complex and the kinase inactivates it by phosphorylation."
+        },
+        {
+          "question": "Which enzyme of the cycle also functions as a respiratory chain complex?",
+          "options": [
+            "Citrate synthase",
+            "Fumarase",
+            "Succinate dehydrogenase",
+            "Malate dehydrogenase"
+          ],
+          "answer": 2,
+          "explanation": "Succinate dehydrogenase is embedded in the inner mitochondrial membrane and is Complex II, passing electrons from FADH2 to ubiquinone without pumping protons."
+        }
+      ]
+    },
+    {
+      "id": "oxidative-phosphorylation",
+      "title": "Electron transport and oxidative phosphorylation",
+      "hours": 5,
+      "hook": "Your mitochondria are making about your own body weight in ATP every day, using a tiny rotary motor driven by protons flowing down a gradient. Peter Mitchell proposed the idea in 1961 and was ridiculed by many leading biochemists for years, until the evidence became impossible to ignore and he won the Nobel Prize in 1978.",
+      "learningObjectives": [
+        "Describe the components of the respiratory chain, the direction of electron flow and the sites of proton pumping",
+        "Explain the chemiosmotic hypothesis and how a proton-motive force couples electron transport to ATP synthesis",
+        "Describe the structure and rotary binding-change mechanism of ATP synthase",
+        "Calculate the approximate ATP yield from NADH, FADH2 and glucose and explain the uncertainty in P/O ratios",
+        "Explain the effect of inhibitors and uncouplers and the physiological role of uncoupling proteins",
+        "Describe the glycerol 3-phosphate and malate-aspartate shuttles and the ATP/ADP translocase"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Respiratory chain complexes",
+          "definition": "Complex I (NADH to ubiquinone) and Complex II (succinate to ubiquinone) feed electrons to ubiquinone, Complex III passes them to cytochrome c, and Complex IV transfers them to oxygen to form water."
+        },
+        {
+          "term": "Proton pumping",
+          "definition": "Complexes I, III and IV use the energy of electron transfer to move protons from the matrix into the intermembrane space, whereas Complex II does not pump."
+        },
+        {
+          "term": "Mobile carriers",
+          "definition": "Ubiquinone (coenzyme Q) shuttles electrons within the membrane and cytochrome c shuttles them in the intermembrane space."
+        },
+        {
+          "term": "Proton-motive force",
+          "definition": "The sum of the chemical (pH) gradient and the electrical potential across the inner membrane, which stores the energy captured from electron transport."
+        },
+        {
+          "term": "Chemiosmotic coupling",
+          "definition": "Mitchell's proposal that electron transport and ATP synthesis are linked through a proton gradient across a closed membrane, not through a high-energy chemical intermediate."
+        },
+        {
+          "term": "ATP synthase (F1Fo)",
+          "definition": "Protons flowing through the Fo portion turn a rotor, and this rotation drives conformational changes in F1 that bind ADP and Pi, make ATP and release it."
+        },
+        {
+          "term": "Binding-change mechanism",
+          "definition": "Proposed by Paul Boyer: the three catalytic sites of F1 cycle through open, loose and tight conformations, and energy input is needed mainly to release tightly bound ATP."
+        },
+        {
+          "term": "Inhibitors and uncouplers",
+          "definition": "Rotenone blocks Complex I, antimycin A blocks Complex III, cyanide and carbon monoxide block Complex IV and oligomycin blocks ATP synthase; uncouplers such as 2,4-dinitrophenol dissipate the gradient so oxidation continues without ATP."
+        },
+        {
+          "term": "Shuttles and translocase",
+          "definition": "NADH from the cytosol cannot cross the inner membrane, so the malate-aspartate or glycerol 3-phosphate shuttle carries its reducing power in; the ADP/ATP translocase exchanges matrix ATP for cytosolic ADP."
+        },
+        {
+          "term": "P/O ratio and yield",
+          "definition": "Current estimates are about 2.5 ATP per NADH and 1.5 per FADH2, giving roughly 30 to 32 ATP per glucose; the exact number depends on shuttle used and proton leak."
+        }
+      ],
+      "animation": "chemiosmosis",
+      "deeper": {
+        "beginner": "Electrons from NADH and FADH2 are handed along a chain of protein complexes in the inner mitochondrial membrane, ending in oxygen, which becomes water. As electrons move, protons are pumped out of the matrix, building up like water behind a dam. ATP synthase is the turbine in the dam: protons flow back through it, spinning part of it and making ATP.",
+        "intermediate": "The chain is organised by redox potential, with electrons moving from NADH (about -320 mV) to oxygen (about +820 mV), and the energy released is large enough to pump protons at three sites. ATP synthase uses about three to four protons per ATP, including the proton used for phosphate and ADP/ATP exchange, so the yield per NADH is about 2.5 rather than a whole number. Respiratory control means that ATP synthesis is tightly coupled to the rate of oxygen consumption: when ADP is low the gradient builds up, slowing electron flow, and when ADP rises the gradient is used and respiration speeds up. Uncoupling proteins such as UCP1 in brown fat deliberately let protons leak to generate heat. Experiments in which artificial pH gradients drove ATP synthesis in vesicles were decisive in supporting Mitchell's hypothesis.",
+        "advanced": "Complexes are organised into supercomplexes (respirasomes) in cristae membranes, and cryo-EM structures of mammalian Complex I show a long proton-pumping membrane arm coupled to the redox arm by conformational changes, though the exact pumping mechanism is still under study. Complex III works through the Q cycle, which doubles proton translocation per pair of electrons, and Complex IV reduces oxygen to water through four sequential electron transfers without releasing reactive intermediates. The c-ring stoichiometry of ATP synthase (eight c-subunits in mammals) sets the ratio of protons per ATP and varies across species, which affects bioenergetic efficiency. Reactive oxygen species leak mainly at Complexes I and III, and electron leakage increases at high proton-motive force, linking bioenergetics to ageing and signalling. Walker's crystal structure of bovine F1 provided direct support for Boyer's binding-change mechanism, and reading the Walker and Boyer reviews together is a good way to see how structure and kinetics converged."
+      },
+      "commonMistakes": [
+        "Believing oxygen is needed for ATP synthase itself; it is the terminal electron acceptor, and without it the chain backs up and the gradient collapses",
+        "Saying that each NADH gives 3 ATP and each FADH2 gives 2 ATP as exact values; modern textbooks use 2.5 and 1.5 and note that they are estimates",
+        "Thinking uncouplers stop respiration; they stop ATP coupling, so oxygen consumption actually increases while ATP production falls",
+        "Describing the proton gradient as only chemical; the electrical potential contributes a large part of the proton-motive force"
+      ],
+      "videos": [
+        {
+          "youtubeId": "jU2lnPwTXP0",
+          "title": "PART I - Oxidative Phosphorylation, Electron Transport Chain",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "Hand-drawn walk through the complexes and proton flow that you can redraw while you study."
+        },
+        {
+          "youtubeId": "ClBDozXUIWc",
+          "title": "Electron Transport Chain | Made Easy",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "Clear explanation of each complex, inhibitors and clinical relevance."
+        },
+        {
+          "youtubeId": "kXpzp4RDGJI",
+          "title": "ATP synthase in action",
+          "channel": "Harvard Online",
+          "level": "intermediate",
+          "whyWatch": "Animation of the rotary motor of ATP synthase turning, so the binding-change mechanism becomes visual."
+        },
+        {
+          "youtubeId": "UyTto4Aegss",
+          "title": "Metabolism | Electron Transport Chain: DETAILED | Part 1",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "A detailed lecture with the Q cycle, redox potentials and shuttle systems."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/191144a0",
+          "title": "Coupling of Phosphorylation to Electron and Hydrogen Transfer by a Chemi-Osmotic type of Mechanism",
+          "authors": "Mitchell P",
+          "year": 1961,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The short paper that proposed the chemiosmotic mechanism and overturned the search for a high-energy chemical intermediate. It is a good example of a bold idea that was right.",
+          "readingQuestions": [
+            "What predictions did Mitchell make that could be tested experimentally?",
+            "Why did a closed membrane have to be central to the proposal?"
+          ]
+        },
+        {
+          "doi": "10.1042/bst20110773",
+          "title": "The ATP synthase: the understood, the uncertain and the unknown",
+          "authors": "Walker JE",
+          "year": 2013,
+          "journal": "Biochemical Society Transactions",
+          "level": "advanced",
+          "whyItMatters": "A review by a Nobel laureate who solved the F1 structure, summarising what is established and what remains open about the structure and mechanism of ATP synthase.",
+          "readingQuestions": [
+            "Which parts of the rotary mechanism are supported by structures and which are inferred?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Oxidative Phosphorylation chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes redox potentials, complex structures and ATP synthase; find the chapter in the contents."
+        },
+        {
+          "title": "ATP synthase molecule of the month",
+          "provider": "PDB-101",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org",
+          "free": true,
+          "level": "beginner",
+          "note": "PDB-101 has illustrated structure stories, including ATP synthase; search the site for ATP synthase to rotate the structures yourself."
+        },
+        {
+          "title": "MIT 5.07SC Biological Chemistry I",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "Lecture videos and problem sets on respiration and energy metabolism."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which complex of the respiratory chain does not pump protons?",
+          "options": [
+            "Complex I",
+            "Complex II",
+            "Complex III",
+            "Complex IV"
+          ],
+          "answer": 1,
+          "explanation": "Succinate dehydrogenase (Complex II) transfers electrons from succinate to ubiquinone with too small an energy drop to pump protons; this is why FADH2 yields less ATP than NADH."
+        },
+        {
+          "question": "What happens to oxygen consumption when an uncoupler such as 2,4-dinitrophenol is added to respiring mitochondria?",
+          "options": [
+            "It stops because ATP synthesis stops",
+            "It increases while ATP synthesis falls",
+            "It is unchanged and ATP synthesis rises",
+            "It falls because the complexes are inhibited"
+          ],
+          "answer": 1,
+          "explanation": "The uncoupler lets protons leak back across the membrane, so the gradient cannot build up and respiratory control is lost; electron flow and oxygen use speed up, but energy is released as heat rather than ATP."
+        },
+        {
+          "question": "Which inhibitor blocks ATP synthase directly?",
+          "options": [
+            "Rotenone",
+            "Antimycin A",
+            "Cyanide",
+            "Oligomycin"
+          ],
+          "answer": 3,
+          "explanation": "Oligomycin blocks the proton channel of the Fo portion of ATP synthase; rotenone, antimycin A and cyanide block Complexes I, III and IV respectively."
+        },
+        {
+          "question": "Why is the ATP yield per NADH given as about 2.5 rather than exactly 3?",
+          "options": [
+            "Because ATP synthase uses a non-integer number of protons and some protons are also used for transport and leak",
+            "Because NADH carries only half an electron pair",
+            "Because Complex I does not pump protons",
+            "Because ATP is produced only in the matrix by substrate-level reactions"
+          ],
+          "answer": 0,
+          "explanation": "Protons per ATP include those used by ATP synthase and by phosphate and nucleotide transport, and proton leak occurs, so there is no whole-number relationship between electrons and ATP."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "Lf4irlyN1eE",
+      "title": "Metabolism Overview",
+      "channel": "Dr Matt & Dr Mike",
+      "level": "beginner",
+      "whyWatch": "An overview of the main metabolic pathways and how they fit together, useful as a map before you dive into each pathway."
+    },
+    {
+      "youtubeId": "WO-YKeJF_zc",
+      "title": "Human Metabolism Map - Cellular Respiration (Glycolysis and The Krebs Cycle)",
+      "channel": "Armando Hasudungan",
+      "level": "beginner",
+      "whyWatch": "A single drawing that links glycolysis and the citric acid cycle, good for building your own summary chart."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A complete free online textbook; the metabolism chapters match this course closely."
+    },
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/7-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "Free, readable general biology text with chapters on energy, respiration and photosynthesis."
+    },
+    {
+      "title": "Biochemistry bookshelf",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "A collection of free biochemistry texts you can use for alternative explanations."
+    }
+  ]
+}

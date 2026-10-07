@@ -1,0 +1,1212 @@
+{
+  "code": "BC 4006",
+  "title": "Selected Topics in Biochemistry and Molecular Biology",
+  "level": 4,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "How cells regulate themselves, and the chemical tools that let us probe and control them.",
+  "overview": "Selected Topics is a course whose specific topics vary by year with the interests of the teaching staff, so this page picks five well-established areas rather than predicting one year's list: epigenetics and chromatin, RNA biology (including non-coding RNAs and RNA therapeutics), chemical biology and bioorthogonal chemistry, targeted protein degradation and the ubiquitin system, and biomolecular condensates. It is designed to complement BC 4005, which covers the technology-and-engineering half (cryo-EM, AI structure prediction, CRISPR, single-cell omics, synthetic biology). Here the emphasis is on layers of regulation and on chemical thinking, where small molecules and clever reactions are used to understand and re-wire biology.",
+  "whyItMatters": "Knowing the genome sequence tells you what a cell could do; the topics in this course explain what it actually does and how we intervene. Several of them already underpin approved medicines (RNA vaccines, siRNA and antisense drugs, epigenetic cancer drugs, covalent inhibitors, molecular-glue degraders), so a graduate who can reason across chromatin, RNA, protein degradation and chemistry is well prepared for modern drug discovery and basic research.",
+  "prerequisites": [
+    "MB 3022",
+    "MB 3024",
+    "BC 3025",
+    "BC 3027"
+  ],
+  "careerLinks": [
+    "Drug discovery and chemical biology (pharma, biotech, academic screening centres)",
+    "RNA therapeutics and vaccine development",
+    "Cancer biology and epigenomics research",
+    "Core facilities for genomics and chemoproteomics",
+    "Postgraduate research (MPhil/PhD) in molecular life sciences"
+  ],
+  "studyTips": [
+    "Make a two-column table for each topic: 'what it does in a cell' and 'what tool or drug exploits it'.",
+    "Practise drawing mechanisms: the miRNA pathway, a PROTAC ternary complex, a click reaction, a histone modification cycle.",
+    "For each paper, identify the control experiment that shows the claim is not an artefact; this is especially important for condensates and degraders.",
+    "Use the free databases (ENCODE, miRBase, ChEMBL, DisProt) to look up one real example per unit.",
+    "Topics change yearly, so use this page for background and prioritise your lecturers' assigned reading."
+  ],
+  "units": [
+    {
+      "id": "epigenetics-chromatin",
+      "title": "Epigenetics and chromatin: the layer above the sequence",
+      "hours": 6,
+      "hook": "Every cell in your body carries essentially the same DNA, yet a neuron and a liver cell behave in completely different ways and keep behaving that way for decades. The difference lies in how that DNA is packaged and marked, and those marks can be written, read, erased, and even targeted by drugs.",
+      "learningObjectives": [
+        "Describe nucleosome structure and how chromatin compaction influences gene expression",
+        "Classify histone modifications as marks of activation or repression with representative examples",
+        "Explain the roles of DNMTs and TET enzymes in DNA methylation and demethylation",
+        "Use the writer-reader-eraser framework to analyse a chromatin regulatory pathway",
+        "Match methods (ChIP-seq, bisulfite sequencing, ATAC-seq) to the question they answer",
+        "Explain how epigenetic drugs are used in cancer and the limits of epigenetic inheritance claims"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nucleosome",
+          "definition": "About 147 base pairs of DNA wrapped around a histone octamer (two each of H2A, H2B, H3 and H4), the basic repeating unit of chromatin."
+        },
+        {
+          "term": "Euchromatin and heterochromatin",
+          "definition": "Open, generally transcriptionally accessible chromatin versus condensed, generally silent chromatin."
+        },
+        {
+          "term": "Histone post-translational modifications",
+          "definition": "Chemical marks such as acetylation, methylation and phosphorylation on histone tails that influence chromatin structure and recruit proteins."
+        },
+        {
+          "term": "Writers, readers and erasers",
+          "definition": "Enzymes that add marks (for example acetyltransferases, methyltransferases), proteins with domains that recognise them (bromodomains, chromodomains) and enzymes that remove them (HDACs, demethylases)."
+        },
+        {
+          "term": "Representative marks",
+          "definition": "H3K4me3 at active promoters, H3K27ac at active enhancers, H3K36me3 across transcribed gene bodies, H3K27me3 for Polycomb repression and H3K9me3 for constitutive heterochromatin."
+        },
+        {
+          "term": "DNA methylation",
+          "definition": "Addition of a methyl group to cytosine at CpG dinucleotides by DNMT enzymes; methylation at promoters is usually associated with silencing."
+        },
+        {
+          "term": "TET enzymes",
+          "definition": "Dioxygenases that oxidise 5-methylcytosine to 5-hydroxymethylcytosine and further products, initiating demethylation."
+        },
+        {
+          "term": "Chromatin remodellers",
+          "definition": "ATP-dependent complexes (for example SWI/SNF) that slide, evict or restructure nucleosomes to change DNA accessibility."
+        },
+        {
+          "term": "Genomic imprinting and X inactivation",
+          "definition": "Examples of stable epigenetic silencing that is parent-of-origin specific (imprinting) or chromosome-wide in females (X inactivation)."
+        },
+        {
+          "term": "Epigenetic therapy",
+          "definition": "Drugs that alter chromatin or DNA methylation, such as DNMT inhibitors (azacitidine) and HDAC inhibitors, used in some haematological cancers."
+        }
+      ],
+      "deeper": {
+        "beginner": "DNA is wound around small protein spools called histones, a bit like thread on bobbins, and the tightness of winding affects whether a gene can be read. Chemical tags on histones and on DNA itself act like sticky notes and highlighters: some say 'read this', others say 'keep closed'. Because cells copy many of these tags when they divide, a liver cell stays a liver cell. The bobbin analogy has limits: the tags are constantly added and removed, so the system is dynamic rather than a fixed filing system.",
+        "intermediate": "Histone tails are modified by writers that use cofactors from metabolism (acetyl-CoA for acetylation, S-adenosylmethionine for methylation), linking cell state to chromatin. Acetylation neutralises lysine charge and recruits bromodomain proteins, generally promoting transcription. Methylation can activate or repress depending on residue and degree, for instance H3K4me3 at promoters versus H3K27me3 installed by PRC2 (EZH2). DNA methylation is maintained through replication by DNMT1 recognising hemimethylated DNA, whereas DNMT3A and DNMT3B set new patterns, and TET enzymes counter them. Methods give complementary views: ChIP-seq or CUT&Tag for histone marks and transcription factors, bisulfite sequencing for methylation, ATAC-seq for accessibility and Hi-C for 3D contacts. In cancer, mutations in chromatin regulators are common, and EZH2 inhibitors and DNMT inhibitors have reached clinical use.",
+        "advanced": "Many chromatin marks are correlated with transcription, and proving causation requires targeted perturbation, for example fusing dCas9 to writers or erasers (epigenome editing) and observing whether the mark is sufficient and how long it persists. Feedback and reader-writer coupling (such as PRC2 binding its own product H3K27me3) can propagate states through replication, whereas pioneer transcription factors, nucleosome turnover and enhancer-promoter looping set context. Chromatin organisation into topologically associating domains arises in part through cohesin-mediated loop extrusion constrained by CTCF, and disruption of boundaries can rewire enhancer-gene contacts. Claims of transgenerational epigenetic inheritance in mammals need careful evaluation, since most marks are erased and reset in the germline and many associations are confounded by environment, genetics or diet. Single-cell chromatin accessibility and methylation profiling are extending these questions to cell-to-cell heterogeneity."
+      },
+      "commonMistakes": [
+        "Saying 'histone acetylation always activates and methylation always represses'; the effect depends on the residue and methylation state.",
+        "Assuming all epigenetic marks are stable and heritable across generations; many are dynamic and are reset.",
+        "Treating correlation in a ChIP-seq track as proof that a mark causes expression.",
+        "Confusing 'epigenetic' with any non-genetic influence on phenotype."
+      ],
+      "videos": [
+        {
+          "youtubeId": "MD3Fc0XOjWk",
+          "title": "Epigenetics",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly introduction to chromatin marks and how environment can influence which genes are on."
+        },
+        {
+          "youtubeId": "OqRt723t33o",
+          "title": "DNA and chromatin regulation | Biomolecules | MCAT | Khan Academy",
+          "channel": "Khan Academy Medicine",
+          "level": "beginner",
+          "whyWatch": "A clear explanation of how histone modifications and chromatin state affect transcription."
+        },
+        {
+          "youtubeId": "4fw96UIohCc",
+          "title": "Nucleosome 3-D",
+          "channel": "National Human Genome Research Institute",
+          "level": "beginner",
+          "whyWatch": "A short 3D animation of DNA wrapped around the histone core, useful for visualising nucleosome structure."
+        },
+        {
+          "youtubeId": "PSLnivqiF8k",
+          "title": "C. David Allis (Rockefeller U.) 1: Epigenetics: Why Your DNA Isn't Enough",
+          "channel": "iBiology",
+          "level": "advanced",
+          "whyWatch": "A pioneer of the histone-code concept explains the logic of modification and recognition in his own words."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/38444",
+          "title": "Crystal structure of the nucleosome core particle at 2.8 A resolution",
+          "authors": "Luger K, Mader AW, Richmond RK, Sargent DF, Richmond TJ",
+          "year": 1997,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The structure that made the nucleosome concrete, showing where histone tails emerge and how DNA wraps; a good anchor for all later chromatin discussions."
+        },
+        {
+          "doi": "10.1126/science.1063127",
+          "title": "Translating the Histone Code",
+          "authors": "Jenuwein T, Allis CD",
+          "year": 2001,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The influential review that framed histone modifications as a language read by effector proteins; read it for the concept, then ask what the later literature changed."
+        },
+        {
+          "doi": "10.1016/j.cell.2007.02.005",
+          "title": "Chromatin Modifications and Their Function",
+          "authors": "Kouzarides T",
+          "year": 2007,
+          "journal": "Cell",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1016/j.cell.2007.02.005",
+          "whyItMatters": "A thorough tour of modifications, the enzymes that place them and what they do, ideal as a reference while you study the writer-reader-eraser framework."
+        },
+        {
+          "doi": "10.1038/nrg.2016.59",
+          "title": "The molecular hallmarks of epigenetic control",
+          "authors": "Allis CD, Jenuwein T",
+          "year": 2016,
+          "journal": "Nature Reviews Genetics",
+          "level": "advanced",
+          "whyItMatters": "A more recent review that sharpens what is and is not established about epigenetic mechanisms and heritability."
+        }
+      ],
+      "resources": [
+        {
+          "title": "ENCODE Project portal",
+          "provider": "ENCODE Consortium",
+          "type": "database",
+          "url": "https://www.encodeproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Real ChIP-seq, ATAC-seq and methylation datasets across cell types; try retrieving H3K27ac tracks for a gene you know."
+        },
+        {
+          "title": "UCSC Genome Browser",
+          "provider": "UC Santa Cruz",
+          "type": "tool",
+          "url": "https://genome.ucsc.edu/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Visualise histone mark and methylation tracks next to genes and CpG islands."
+        },
+        {
+          "title": "Epigenetics Learn.Genetics module",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/epigenetics/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive visuals and short explanations suitable for building an intuitive picture before the primary literature."
+        },
+        {
+          "title": "Molecular Biology of the Cell: Control of gene expression",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The chromatin and gene-regulation chapters provide a rigorous free textbook account."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which histone mark is most associated with Polycomb-mediated gene repression?",
+          "options": [
+            "H3K4me3",
+            "H3K27ac",
+            "H3K27me3",
+            "H3K36me3"
+          ],
+          "answer": 2,
+          "explanation": "PRC2 (with EZH2 as catalytic subunit) deposits H3K27me3, which is bound by PRC1 components and is associated with repressed developmental genes."
+        },
+        {
+          "question": "How is a DNA methylation pattern normally maintained across DNA replication?",
+          "options": [
+            "DNMT1 methylates the new strand opposite a methylated parental strand",
+            "TET enzymes copy methyl groups",
+            "RNA polymerase transfers the marks",
+            "Methylation is not maintained"
+          ],
+          "answer": 0,
+          "explanation": "DNMT1 recognises hemimethylated CpG sites after replication and methylates the daughter strand, preserving the pattern."
+        },
+        {
+          "question": "In the writer-reader-eraser framework, a bromodomain-containing protein is a:",
+          "options": [
+            "Writer of acetylation",
+            "Reader of acetylated lysine",
+            "Eraser of methylation",
+            "Remodeller that cuts DNA"
+          ],
+          "answer": 1,
+          "explanation": "Bromodomains recognise acetylated lysine residues; they are therefore readers that recruit machinery to acetylated chromatin."
+        },
+        {
+          "question": "Which technique would best reveal which genomic regions carry a specific histone mark?",
+          "options": [
+            "ChIP-seq or CUT&Tag with a mark-specific antibody",
+            "Western blot of total protein",
+            "Bisulfite sequencing",
+            "Sanger sequencing of one gene"
+          ],
+          "answer": 0,
+          "explanation": "Chromatin immunoprecipitation or CUT&Tag uses antibodies to localise the mark genome-wide; bisulfite sequencing reads DNA methylation, not histone marks."
+        }
+      ]
+    },
+    {
+      "id": "rna-biology",
+      "title": "RNA biology: regulators, editors and medicines",
+      "hours": 6,
+      "hook": "For a long time RNA was seen as a disposable messenger between DNA and protein. We now know that most of the genome is transcribed, that short RNAs can silence genes in all animals and plants, that one non-coding RNA can shut down an entire X chromosome, and that a modified RNA can train your immune system in months.",
+      "learningObjectives": [
+        "Explain the discovery and mechanism of RNA interference and microRNA-mediated regulation",
+        "Describe the biogenesis of miRNAs and the function of Argonaute and the RISC complex",
+        "Give examples of long non-coding RNA mechanisms such as Xist and discuss how functions are tested",
+        "Explain RNA modifications (m6A and pseudouridine) and their significance",
+        "Describe the design logic of mRNA vaccines and other RNA therapeutics",
+        "Evaluate evidence that a non-coding RNA has a biological function"
+      ],
+      "keyConcepts": [
+        {
+          "term": "RNA interference (RNAi)",
+          "definition": "Gene silencing triggered by double-stranded RNA, discovered in C. elegans, in which small RNAs guide protein complexes to complementary mRNAs."
+        },
+        {
+          "term": "siRNA versus miRNA",
+          "definition": "siRNAs derive from long double-stranded RNA and typically match their target perfectly, causing cleavage; miRNAs are encoded in the genome and usually pair imperfectly with 3' UTRs, repressing translation and promoting decay."
+        },
+        {
+          "term": "miRNA biogenesis",
+          "definition": "Primary transcripts are cut by Drosha (with DGCR8) in the nucleus, exported, cleaved by Dicer, and one strand is loaded into Argonaute to form the RISC."
+        },
+        {
+          "term": "Seed sequence",
+          "definition": "Nucleotides 2 to 8 of a miRNA, which provide most of the target-recognition specificity."
+        },
+        {
+          "term": "Long non-coding RNA (lncRNA)",
+          "definition": "Transcripts longer than about 200 nucleotides with little protein-coding capacity, some of which scaffold protein complexes or guide chromatin regulators."
+        },
+        {
+          "term": "Xist",
+          "definition": "An lncRNA that coats one X chromosome in female mammals and recruits silencing factors, initiating X inactivation."
+        },
+        {
+          "term": "piRNA",
+          "definition": "Small RNAs that associate with PIWI proteins and silence transposons, especially in the germline."
+        },
+        {
+          "term": "m6A modification",
+          "definition": "N6-methyladenosine, an abundant internal mRNA mark installed by methyltransferases, removed by demethylases and recognised by reader proteins to influence stability and translation."
+        },
+        {
+          "term": "Modified nucleosides in mRNA therapeutics",
+          "definition": "Replacing uridine with pseudouridine derivatives such as N1-methylpseudouridine reduces innate immune sensing and improves translation of synthetic mRNA."
+        },
+        {
+          "term": "Antisense oligonucleotides and siRNA drugs",
+          "definition": "Synthetic nucleic acids that modulate splicing or degrade mRNA; examples include nusinersen (splicing modulation) and patisiran (siRNA)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells use small pieces of RNA like search queries. A tiny RNA is loaded into a protein, and the pair patrols the cell until it finds an mRNA with a matching sequence, then reduces that message. This is how cells fine-tune thousands of genes. Some very long RNAs do different jobs, acting as scaffolds or guides that bring proteins to the right place. Scientists have borrowed these ideas to build medicines, such as RNA vaccines, in which the RNA itself is the instruction for the body to make a harmless piece of virus.",
+        "intermediate": "The RNAi pathway begins with long double-stranded RNA being cut by Dicer into 21 to 23 nucleotide duplexes. One strand (the guide) is loaded into Argonaute within the RISC and directs cleavage of perfectly complementary RNA. MicroRNAs, first found as the lin-4 gene in C. elegans, are processed from hairpins by Drosha/DGCR8, exported by exportin-5 and cut by Dicer. Because the seed region often needs only partial complementarity, one miRNA can regulate hundreds of targets, mostly by reducing translation and accelerating deadenylation and decay. lncRNAs act through diverse mechanisms: Xist coats the inactive X and recruits repressive complexes, while others bind proteins as scaffolds or act in cis at their own site of transcription. For therapeutics, synthetic mRNA includes a cap, untranslated regions, an open reading frame and a poly(A) tail, delivered in lipid nanoparticles; nucleoside modification lowers innate immune activation.",
+        "advanced": "Function claims for non-coding RNAs require evidence beyond expression: loss-of-function by genomic deletion or CRISPR interference, rescue experiments, distinction of RNA-mediated effects from DNA element or act-of-transcription effects, and evidence of molecular mechanism (for example RNA-protein interactions by CLIP or RNA pulldown). Target prediction for miRNAs relies on seed matching, site context and conservation, but experimental validation by reporter assays and AGO CLIP is necessary. m6A is dynamically regulated by METTL3/METTL14, FTO and ALKBH5, with YTH-domain readers shaping decay and translation; interpretation of m6A mapping data is complicated by antibody and method biases. For delivery, lipid nanoparticle composition, endosomal escape and tissue tropism are key; siRNAs for liver diseases use GalNAc conjugates to target hepatocytes. Innate sensors (TLR7/8, RIG-I, PKR) respond to unmodified or double-stranded RNA, which explains both the immunogenicity problem and the value of nucleoside modification and purification."
+      },
+      "commonMistakes": [
+        "Describing miRNAs as simply 'switching genes off'; they typically fine-tune expression and may regulate hundreds of targets modestly.",
+        "Using 'non-coding' to mean 'junk' or assuming every transcript detected by sequencing has a function.",
+        "Confusing siRNA and miRNA mechanisms; perfect complementarity usually leads to cleavage, partial pairing to repression.",
+        "Saying mRNA vaccines alter the genome; the mRNA is translated in the cytoplasm and degraded."
+      ],
+      "videos": [
+        {
+          "youtubeId": "cK-OGB1_ELE",
+          "title": "RNA interference (RNAi): by Nature Video",
+          "channel": "Nature Video",
+          "level": "beginner",
+          "whyWatch": "A well-produced animation of how double-stranded RNA is processed and silences a matching gene."
+        },
+        {
+          "youtubeId": "tzlGU5EI9rU",
+          "title": "RNAi: Slicing, dicing and serving your cells - Alex Dainis",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A short narrative of the RNAi discovery and its consequences for biology and medicine."
+        },
+        {
+          "youtubeId": "z0kfdZ8o_j4",
+          "title": "How mRNA Vaccines Actually Work | Inside the Vaccine",
+          "channel": "SciShow",
+          "level": "intermediate",
+          "whyWatch": "Explains the logic of mRNA vaccines, from the design of the message to the immune response."
+        },
+        {
+          "youtubeId": "uNCbXXXVOCA",
+          "title": "Howard Chang (Stanford, HHMI) 2: LncRNA Function at the RNA Level: Xist",
+          "channel": "iBiology",
+          "level": "advanced",
+          "whyWatch": "A researcher explains how experiments tease apart the RNA-level function of the lncRNA Xist."
+        },
+        {
+          "youtubeId": "wXsypkQTlt8",
+          "title": "The biochemistry behind the 2023 Nobel Prize in Medicine - Katalin Kariko and Drew Weissman",
+          "channel": "the bumbling biochemist",
+          "level": "advanced",
+          "whyWatch": "A biochemist's detailed look at nucleoside modification, innate immune sensing and mRNA translation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/35888",
+          "title": "Potent and specific genetic interference by double-stranded RNA in Caenorhabditis elegans",
+          "authors": "Fire A, Xu S, Montgomery MK, Kostas SA, Driver SE, Mello CC",
+          "year": 1998,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The paper that identified double-stranded RNA as the trigger of silencing and earned a Nobel Prize; notice how the control experiments rule out simple antisense effects.",
+          "readingQuestions": [
+            "Why was double-stranded RNA more potent than sense or antisense alone?",
+            "What evidence suggests that the effect is catalytic and spreads?"
+          ]
+        },
+        {
+          "doi": "10.1016/s0092-8674(04)00045-5",
+          "title": "MicroRNAs: Genomics, Biogenesis, Mechanism, and Function",
+          "authors": "Bartel DP",
+          "year": 2004,
+          "journal": "Cell",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1016/s0092-8674(04)00045-5",
+          "whyItMatters": "A classic review that organises the early miRNA literature: genes, processing, target recognition and biological roles."
+        },
+        {
+          "doi": "10.1146/annurev-biochem-051410-092902",
+          "title": "Genome Regulation by Long Noncoding RNAs",
+          "authors": "Rinn JL, Chang HY",
+          "year": 2012,
+          "journal": "Annual Review of Biochemistry",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3858397/",
+          "whyItMatters": "Surveys how lncRNAs guide, scaffold or decoy regulatory proteins, with a critical view on how to establish function."
+        },
+        {
+          "doi": "10.1016/j.immuni.2005.06.008",
+          "title": "Suppression of RNA Recognition by Toll-like Receptors: The Impact of Nucleoside Modification and the Evolutionary Origin of RNA",
+          "authors": "Kariko K, Buckstein M, Ni H, Weissman D",
+          "year": 2005,
+          "journal": "Immunity",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1016/j.immuni.2005.06.008",
+          "whyItMatters": "The discovery that nucleoside modifications reduce immune activation by RNA, a key step toward therapeutic mRNA and later vaccines."
+        },
+        {
+          "doi": "10.1016/j.cell.2017.05.045",
+          "title": "Dynamic RNA Modifications in Gene Expression Regulation",
+          "authors": "Roundtree IA, Evans ME, Pan T, He C",
+          "year": 2017,
+          "journal": "Cell",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1016/j.cell.2017.05.045",
+          "whyItMatters": "A good overview of m6A and other RNA modifications, the enzymes involved and their impact on RNA fate."
+        }
+      ],
+      "resources": [
+        {
+          "title": "ViennaRNA Web Services",
+          "provider": "University of Vienna",
+          "type": "tool",
+          "url": "http://rna.tbi.univie.ac.at/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Fold an RNA sequence online and see its predicted secondary structure, which helps you reason about hairpins such as pre-miRNAs."
+        },
+        {
+          "title": "Rfam: RNA families database",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://rfam.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "See alignments and secondary structures for RNA families such as riboswitches and snoRNAs."
+        },
+        {
+          "title": "RNAcentral",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://rnacentral.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A unified entry point for non-coding RNA sequences with cross-links to specialised databases."
+        },
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2023: press release",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2023/press-release/",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear lay explanation of nucleoside-modified mRNA and how it enabled vaccines."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which region of a microRNA mainly determines target recognition?",
+          "options": [
+            "The 5' cap",
+            "Nucleotides 2 to 8 (seed region)",
+            "The 3' end poly(A) tail",
+            "The loop of the precursor"
+          ],
+          "answer": 1,
+          "explanation": "The seed pairs with complementary sites, usually in 3' UTRs of mRNAs, providing most of the specificity of miRNA targeting."
+        },
+        {
+          "question": "What is the role of Dicer in the miRNA pathway?",
+          "options": [
+            "It exports pri-miRNA from the nucleus",
+            "It cleaves pre-miRNA hairpins into small duplexes in the cytoplasm",
+            "It adds m6A to mRNA",
+            "It cuts DNA at PAM sites"
+          ],
+          "answer": 1,
+          "explanation": "After Drosha processing and nuclear export, Dicer cuts the pre-miRNA hairpin to produce a short duplex, one strand of which is loaded into Argonaute."
+        },
+        {
+          "question": "Why do mRNA vaccines commonly use modified nucleosides such as N1-methylpseudouridine?",
+          "options": [
+            "To make the mRNA double stranded",
+            "To reduce innate immune recognition and improve translation",
+            "To integrate the mRNA into the genome",
+            "To increase RNA degradation"
+          ],
+          "answer": 1,
+          "explanation": "Modified nucleosides lower activation of innate RNA sensors and improve protein output from the synthetic mRNA."
+        },
+        {
+          "question": "Which observation best supports a function for an lncRNA at the RNA level, rather than as a DNA element?",
+          "options": [
+            "It is expressed in many tissues",
+            "Deleting the locus changes phenotype but expressing the transcript from another locus rescues it",
+            "It is GC rich",
+            "It is near a promoter"
+          ],
+          "answer": 1,
+          "explanation": "Trans rescue by expressing the RNA from another location suggests the transcript itself has activity; deletion alone cannot distinguish RNA from DNA-element effects."
+        }
+      ]
+    },
+    {
+      "id": "chemical-biology-bioorthogonal",
+      "title": "Chemical biology: bioorthogonal chemistry and chemical probes",
+      "hours": 6,
+      "hook": "Imagine performing a precise chemical reaction inside a living cell, in water, at body temperature, without disturbing the thousands of other molecules around. Chemists who set this as a challenge ended up tagging sugars on the surface of live cells, mapping the active enzymes in a tissue, and designing drugs that bind covalently to their targets.",
+      "learningObjectives": [
+        "Define bioorthogonality and list the criteria a reaction must meet",
+        "Compare Staudinger ligation, copper-catalysed and strain-promoted azide-alkyne cycloaddition, and tetrazine ligation",
+        "Describe metabolic labelling of glycans with azido sugars",
+        "Explain how activity-based protein profiling reports on enzyme function rather than abundance",
+        "Describe how chemical probes and covalent drugs are developed and what makes a good probe",
+        "Explain genetic code expansion for site-specific unnatural amino acids"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Bioorthogonal reaction",
+          "definition": "A chemical reaction that proceeds selectively between two introduced functional groups in living systems, without cross-reacting with native biomolecules or harming cells."
+        },
+        {
+          "term": "Azide and alkyne handles",
+          "definition": "Small, stable, nearly absent from biology, so they can be installed on biomolecules and later reacted with a probe."
+        },
+        {
+          "term": "CuAAC",
+          "definition": "Copper-catalysed azide-alkyne cycloaddition, the prototypical 'click' reaction; fast and efficient but copper is toxic to cells and requires ligands."
+        },
+        {
+          "term": "SPAAC",
+          "definition": "Strain-promoted azide-alkyne cycloaddition using a strained cyclooctyne, avoiding copper and enabling labelling in live cells."
+        },
+        {
+          "term": "Tetrazine ligation",
+          "definition": "An inverse-electron-demand Diels-Alder reaction between tetrazines and strained alkenes, among the fastest bioorthogonal reactions."
+        },
+        {
+          "term": "Metabolic labelling",
+          "definition": "Feeding cells an unnatural precursor, such as an azido sugar or amino acid analogue, that is incorporated into biomolecules and then detected via a bioorthogonal reaction."
+        },
+        {
+          "term": "Activity-based protein profiling (ABPP)",
+          "definition": "Using reactive probes that covalently label active-site residues of enzymes in a mechanism-dependent manner, thus reporting on functional state in complex proteomes."
+        },
+        {
+          "term": "Chemical probe",
+          "definition": "A well-characterised small molecule with high potency and selectivity for a target, used to test hypotheses about protein function; distinguished from a drug by evidence quality and purpose."
+        },
+        {
+          "term": "Covalent inhibitor",
+          "definition": "A drug that forms a bond with a nucleophilic residue (often cysteine) in its target, giving prolonged action; examples include inhibitors of KRAS G12C."
+        },
+        {
+          "term": "Genetic code expansion",
+          "definition": "Using an orthogonal tRNA and aminoacyl-tRNA synthetase pair to incorporate an unnatural amino acid at a stop codon, enabling site-specific chemistry on a protein."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells are full of reactive molecules, so most laboratory reactions would ruin them. Bioorthogonal chemistry uses pairs of chemical handles that ignore everything in the cell except each other. A scientist can feed cells a sugar carrying a tiny azide tag; the cell builds it into surface molecules without noticing, and later a fluorescent dye carrying the matching partner clicks onto it, making those molecules glow. The analogy of a lock and key has limits: bioorthogonal handles are not a protein-style 'lock', they are chemical groups that simply do not react with anything else under cellular conditions.",
+        "intermediate": "The Staudinger ligation (Bertozzi, 2000) was the first widely used bioorthogonal reaction in living cells, using an azide and a phosphine, but it is slow and the phosphines oxidise. The copper(I)-catalysed azide-alkyne cycloaddition (Sharpless and Meldal groups, 2002) is far faster but cytotoxic, so strain-promoted versions using cyclooctynes were developed for live-cell labelling. Tetrazine ligations are even faster and useful for imaging at low concentrations. Combined with metabolic labelling, these reactions allow visualisation of glycans, newly synthesised proteins, lipids and nucleic acids. ABPP uses probes such as fluorophosphonates, which covalently label active serine hydrolases, and quantitative mass spectrometry or gels to read activity changes between conditions; competitive ABPP, in which a test compound competes with the probe, identifies drug targets and off-targets across the proteome.",
+        "advanced": "Reaction choice is a trade-off between rate constant, size, stability and background reactivity: a bulky cyclooctyne labels fast but can alter the property of a small metabolite, and tetrazines may be reduced or hydrolysed in cells. Chemoproteomic profiling extends beyond classical enzyme classes using broadly reactive electrophilic fragments to map ligandable cysteines across the proteome, supplying starting points for covalent probes and drugs on previously 'undruggable' proteins. Good practice for probes includes demonstrated on-target potency, selectivity profiling, an inactive control compound, and orthogonal chemotypes, all of which are catalogued by community resources. Genetic code expansion requires an engineered synthetase that charges only the unnatural amino acid onto an orthogonal tRNA; efficiency competes with release factors at stop codons, and genome-wide recoding of codons is used to overcome this. Mass-spectrometry readouts and isotopic tags allow quantitative comparisons of labelling between states, and care is needed to separate true labelling from non-specific adsorption."
+      },
+      "commonMistakes": [
+        "Assuming click chemistry and bioorthogonal chemistry are the same thing; copper-catalysed click reactions are efficient but not always compatible with live cells.",
+        "Treating a chemical probe as proof of function without a control compound and orthogonal evidence.",
+        "Interpreting ABPP signal as protein abundance rather than activity or accessibility of the reactive residue.",
+        "Forgetting that unnatural metabolic precursors may themselves perturb cell physiology."
+      ],
+      "videos": [
+        {
+          "youtubeId": "_u7ToGXWINU",
+          "title": "What is Click Chemistry?",
+          "channel": "DW News",
+          "level": "beginner",
+          "whyWatch": "A short plain-language explanation of the idea behind click chemistry and why it earned a Nobel Prize."
+        },
+        {
+          "youtubeId": "vAft_SJvGGU",
+          "title": "What is \"Click\" Chemistry & Bioorthogonal Chemistry | Nobel Prize 2022",
+          "channel": "All 'Bout Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Walks through the key reactions and how they differ for use in living systems."
+        },
+        {
+          "youtubeId": "WyGoeQEHBEk",
+          "title": "Nobel Prize lecture: Carolyn Bertozzi, Nobel Prize in Chemistry 2022",
+          "channel": "Nobel Prize",
+          "level": "advanced",
+          "whyWatch": "The pioneer of bioorthogonal chemistry tells the story from cell-surface glycans to clinical applications."
+        },
+        {
+          "youtubeId": "SyoAglNyVrg",
+          "title": "Benjamin F. Cravatt - Activity-Based Proteomics - Protein and Ligand Discovery on a Global Scale",
+          "channel": "The Welch Foundation",
+          "level": "advanced",
+          "whyWatch": "The developer of ABPP explains how activity-based and chemoproteomic profiling identifies targets and ligands proteome-wide."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.287.5460.2007",
+          "title": "Cell Surface Engineering by a Modified Staudinger Reaction",
+          "authors": "Saxon E, Bertozzi CR",
+          "year": 2000,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The first demonstration of a selective chemical reaction on the surface of living cells, which launched the field of bioorthogonal chemistry."
+        },
+        {
+          "doi": "10.1002/1521-3773(20010601)40:11<2004::AID-ANIE2004>3.0.CO;2-5",
+          "title": "Click Chemistry: Diverse Chemical Function from a Few Good Reactions",
+          "authors": "Kolb HC, Finn MG, Sharpless KB",
+          "year": 2001,
+          "journal": "Angewandte Chemie International Edition",
+          "level": "intermediate",
+          "whyItMatters": "The manifesto that defined the criteria for 'click' reactions, useful for understanding why azide-alkyne cycloaddition became so popular."
+        },
+        {
+          "doi": "10.1038/nchembio0605-13",
+          "title": "Chemistry in living systems",
+          "authors": "Prescher JA, Bertozzi CR",
+          "year": 2005,
+          "journal": "Nature Chemical Biology",
+          "level": "intermediate",
+          "whyItMatters": "A readable early perspective on the opportunities and requirements of reactions in cells and organisms."
+        },
+        {
+          "doi": "10.1146/annurev.biochem.75.101304.124125",
+          "title": "Activity-Based Protein Profiling: From Enzyme Chemistry to Proteomic Chemistry",
+          "authors": "Cravatt BF, Wright AT, Kozarich JW",
+          "year": 2008,
+          "journal": "Annual Review of Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "The foundational review of ABPP principles, probe design and applications to enzyme discovery."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Chemistry 2022: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2022/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A short, illustrated introduction to click and bioorthogonal chemistry and why it matters."
+        },
+        {
+          "title": "Chemical Probes Portal",
+          "provider": "Chemical Probes Portal",
+          "type": "database",
+          "url": "https://www.chemicalprobes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Expert-reviewed ratings of chemical probes; shows what 'good probe' criteria look like in practice."
+        },
+        {
+          "title": "ChEMBL",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chembl/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search bioactivity data for compounds against targets, a good way to see potency and selectivity data for a real probe or drug."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up structures, properties and assay data for any small molecule mentioned in a paper."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why was strain-promoted azide-alkyne cycloaddition developed?",
+          "options": [
+            "To make the reaction slower",
+            "To avoid the cytotoxic copper catalyst for live-cell labelling",
+            "To react azides with amines",
+            "To detect DNA"
+          ],
+          "answer": 1,
+          "explanation": "Ring strain in cyclooctynes lowers the activation barrier so the cycloaddition proceeds without copper, which is harmful to cells."
+        },
+        {
+          "question": "What does a fluorophosphonate activity-based probe usually report on?",
+          "options": [
+            "Total protein abundance of every protein",
+            "Activity state of many serine hydrolases",
+            "RNA sequence",
+            "Membrane potential"
+          ],
+          "answer": 1,
+          "explanation": "Fluorophosphonates covalently modify the catalytic serine of active serine hydrolases, so labelling depends on enzyme activity and accessibility."
+        },
+        {
+          "question": "In metabolic labelling with an azido sugar, what is the second step?",
+          "options": [
+            "Add a probe bearing a complementary alkyne or phosphine to react with the azide",
+            "Heat the sample to 95 C",
+            "Add DNase",
+            "Add a second azido sugar"
+          ],
+          "answer": 0,
+          "explanation": "After the azido sugar is incorporated into glycoconjugates, a bioorthogonal partner carrying a dye or tag reacts selectively with the azide."
+        },
+        {
+          "question": "What problem does genetic code expansion address?",
+          "options": [
+            "Reducing the genome size",
+            "Incorporating an unnatural amino acid at a defined site in a protein",
+            "Increasing mRNA stability",
+            "Removing introns"
+          ],
+          "answer": 1,
+          "explanation": "An orthogonal tRNA/synthetase pair decodes a reassigned codon (often the amber stop codon) to insert an unnatural amino acid with a chemical handle."
+        }
+      ]
+    },
+    {
+      "id": "targeted-protein-degradation",
+      "title": "Targeted protein degradation: PROTACs and molecular glues",
+      "hours": 6,
+      "hook": "Most drugs work by blocking a protein, but many disease-driving proteins have no pocket to block. A newer idea is to stop trying to jam the machine and instead hand it to the cell's own garbage disposal. Degrader drugs act as matchmakers, bringing a harmful protein and a ubiquitin ligase together so the cell destroys the target itself.",
+      "learningObjectives": [
+        "Describe the ubiquitin-proteasome pathway including E1, E2, E3 enzymes and the proteasome",
+        "Explain the structure and mechanism of a PROTAC and the idea of event-driven pharmacology",
+        "Distinguish PROTACs from molecular glues, giving thalidomide-type drugs as an example",
+        "Explain the hook effect and the importance of ternary complex formation",
+        "Compare degradation with inhibition in terms of advantages and limitations",
+        "Design a basic experiment to show that a compound degrades its target through the proteasome"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Ubiquitin-proteasome system",
+          "definition": "Pathway in which proteins are tagged with chains of ubiquitin by E1, E2 and E3 enzymes and degraded by the 26S proteasome."
+        },
+        {
+          "term": "E3 ubiquitin ligase",
+          "definition": "The component that recognises specific substrates and brings them to an E2 for ubiquitin transfer; the human genome encodes hundreds of E3s, which is why they confer specificity."
+        },
+        {
+          "term": "K48-linked polyubiquitin",
+          "definition": "A chain linkage through lysine 48 of ubiquitin that is the classical signal for proteasomal degradation."
+        },
+        {
+          "term": "26S proteasome",
+          "definition": "A large protease complex composed of a 20S catalytic core and 19S regulatory particles that recognise, unfold and degrade ubiquitinated proteins."
+        },
+        {
+          "term": "PROTAC",
+          "definition": "A heterobifunctional molecule with a ligand for the target protein, a linker and a ligand for an E3 ligase (commonly cereblon or VHL), inducing target ubiquitination."
+        },
+        {
+          "term": "Ternary complex",
+          "definition": "The target-PROTAC-E3 complex; its stability and geometry, including cooperativity, strongly influence degradation efficiency."
+        },
+        {
+          "term": "Event-driven pharmacology",
+          "definition": "A compound can act catalytically, triggering degradation of many target molecules, unlike occupancy-driven inhibitors which must stay bound."
+        },
+        {
+          "term": "Molecular glue",
+          "definition": "A small molecule that stabilises a new interaction between an E3 and a protein, causing degradation; thalidomide analogues redirect cereblon to degrade proteins such as IKZF1 and IKZF3."
+        },
+        {
+          "term": "Hook effect",
+          "definition": "At high PROTAC concentration, binary complexes (PROTAC-target and PROTAC-E3) outnumber ternary complexes, reducing degradation."
+        },
+        {
+          "term": "Proteasome inhibitor control",
+          "definition": "Treatment with a proteasome inhibitor or E1 inhibitor that blocks degradation, a standard experiment to show mechanism."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells constantly recycle proteins by tagging unwanted ones with a small protein called ubiquitin and feeding them to a shredder called the proteasome. Degrader drugs hijack this system. One end of the drug grabs the harmful protein, the other end grabs a tagging enzyme, and once the two are brought close the harmful protein is tagged and shredded. The key difference from ordinary drugs is that the drug does not need to stay stuck; it can be reused. The matchmaker analogy breaks down because both ends must fit just right, and too much drug can stop the matchmaking.",
+        "intermediate": "The cascade begins with E1 activating ubiquitin in an ATP-dependent reaction, transfer to an E2, and E3-mediated attachment to a substrate lysine. Polyubiquitin chains linked through K48 target the substrate to the 26S proteasome. PROTACs bring a protein of interest and an E3 ligase into proximity; early peptide-based PROTACs showed the concept, and small-molecule versions recruiting cereblon or VHL improved cell permeability and drug-like properties. Molecular glues such as lenalidomide act by modifying the cereblon surface to recruit neosubstrates; this explained the activity of thalidomide-class drugs in myeloma and, in a different context, was linked to their teratogenicity. Compared with inhibitors, degraders can remove all functions of a protein including scaffolding roles, can work on proteins with no active site, and can act at low concentrations, but they are often large molecules with challenging pharmacokinetics.",
+        "advanced": "Optimising degraders involves ligand affinity, linker length and composition, exit vector, and the formation of cooperative ternary complexes with productive geometry for ubiquitin transfer; structure-based design and biophysical assays such as TR-FRET, SPR and cryo-EM are used. Degradation kinetics, depth and duration (Dmax and DC50) are quantified by proteomics and live-cell reporters, and global proteomics is essential for specificity because degraders can lead to unintended neosubstrate degradation. Resistance can arise from downregulation or mutation of the E3 ligase or associated machinery, motivating expansion beyond cereblon and VHL to other E3s. Alternative modalities include lysosome-targeting chimeras for extracellular and membrane proteins, autophagy-targeting approaches, and degron-tag systems for experimental control. Clinical development considers oral bioavailability of large molecules, the hook effect in dose selection and long-term safety, since the effects of removing a protein can differ from inhibition."
+      },
+      "commonMistakes": [
+        "Assuming a PROTAC works better at ever higher concentration; the hook effect reduces degradation at high doses.",
+        "Calling any bifunctional molecule a PROTAC without evidence of E3-dependent proteasomal degradation.",
+        "Equating loss of protein with degradation; transcriptional or translational effects must be ruled out.",
+        "Forgetting that thalidomide-class drugs are molecular glues that reprogram cereblon, not simple enzyme inhibitors."
+      ],
+      "videos": [
+        {
+          "youtubeId": "e29F7R3K_5A",
+          "title": "What is ubiquitin?",
+          "channel": "Phospho Biomedical Animation",
+          "level": "beginner",
+          "whyWatch": "A short animation introducing ubiquitin tagging and why it matters for protein fate."
+        },
+        {
+          "youtubeId": "TgOe7aPVpoM",
+          "title": "What is the proteasome?",
+          "channel": "Phospho Biomedical Animation",
+          "level": "beginner",
+          "whyWatch": "A quick visual of how the proteasome unfolds and degrades tagged proteins."
+        },
+        {
+          "youtubeId": "vwlwtY4kuUQ",
+          "title": "Ubiquitin-Proteasome System | Targeted Protein Degradation",
+          "channel": "Thermo Fisher Scientific",
+          "level": "intermediate",
+          "whyWatch": "An animated overview of how ubiquitin tagging leads to proteasomal degradation, the pathway that degrader drugs hijack."
+        },
+        {
+          "youtubeId": "O4M9skqfnn4",
+          "title": "PROTACs A Chemistry Journey of Protein Degraders",
+          "channel": "Labroots",
+          "level": "advanced",
+          "whyWatch": "A longer expert webinar on the chemistry and design issues of PROTAC development."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.141230798",
+          "title": "Protacs: Chimeric molecules that target proteins to the Skp1-Cullin-F box complex for ubiquitination and degradation",
+          "authors": "Sakamoto KM, Kim KB, Kumagai A, Mercurio F, Crews CM, Deshaies RJ",
+          "year": 2001,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC37474/",
+          "whyItMatters": "The original PROTAC concept paper, using a peptide to recruit an E3 complex to a target protein; useful for appreciating how far the technology has moved."
+        },
+        {
+          "doi": "10.1126/science.1177319",
+          "title": "Identification of a Primary Target of Thalidomide Teratogenicity",
+          "authors": "Ito T, Ando H, Suzuki T et al",
+          "year": 2010,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Identifies cereblon as the binding target of thalidomide, setting the stage for understanding how this class of drugs works."
+        },
+        {
+          "doi": "10.1126/science.1244851",
+          "title": "Lenalidomide Causes Selective Degradation of IKZF1 and IKZF3 in Multiple Myeloma Cells",
+          "authors": "Kronke J, Udeshi ND, Narla A et al",
+          "year": 2014,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4077049/",
+          "whyItMatters": "Shows that the drug acts as a molecular glue that redirects cereblon to degrade transcription factors, a mechanism reinterpreted decades after the drug's introduction."
+        },
+        {
+          "doi": "10.1126/science.aab1433",
+          "title": "Phthalimide conjugation as a strategy for in vivo target protein degradation",
+          "authors": "Winter GE, Buckley DL, Paulk J et al",
+          "year": 2015,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4937790/",
+          "whyItMatters": "Demonstrates small-molecule PROTACs based on thalidomide-type cereblon ligands that degrade a target in vivo."
+        },
+        {
+          "doi": "10.1038/s41573-021-00371-6",
+          "title": "PROTAC targeted protein degraders: the past is prologue",
+          "authors": "Bekes M, Langley DR, Crews CM",
+          "year": 2022,
+          "journal": "Nature Reviews Drug Discovery",
+          "level": "advanced",
+          "openAccessUrl": "https://doi.org/10.1038/s41573-021-00371-6",
+          "whyItMatters": "A recent review of the field's history, mechanism, clinical progress and open questions."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Chemistry 2004: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2004/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "Accessible account of the discovery of ubiquitin-mediated protein degradation."
+        },
+        {
+          "title": "Molecular Biology of the Cell: Control of protein degradation",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The textbook chapters on proteasomes and ubiquitin give the core biochemistry behind degraders."
+        },
+        {
+          "title": "ChEMBL",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chembl/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search ligand activity data for E3 ligands and target warheads that make up degraders."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for ternary-complex structures with cereblon or VHL to see how degraders bridge two proteins."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What best describes a PROTAC?",
+          "options": [
+            "A competitive inhibitor of an active site",
+            "A bifunctional molecule linking a target ligand to an E3 ligase ligand",
+            "A monoclonal antibody",
+            "An siRNA"
+          ],
+          "answer": 1,
+          "explanation": "PROTACs have two ligands joined by a linker; they induce proximity between the target and an E3 ligase, leading to ubiquitination and proteasomal degradation."
+        },
+        {
+          "question": "What explains the hook effect at high PROTAC concentrations?",
+          "options": [
+            "More ternary complexes form",
+            "Binary complexes with either the target or E3 dominate, reducing ternary complex formation",
+            "The proteasome becomes inactive",
+            "The target is overexpressed"
+          ],
+          "answer": 1,
+          "explanation": "At excess PROTAC, each PROTAC tends to bind a different partner, so productive ternary complexes decline."
+        },
+        {
+          "question": "Lenalidomide-induced degradation of IKZF1 and IKZF3 is an example of:",
+          "options": [
+            "A competitive enzyme inhibitor",
+            "A molecular glue modifying cereblon's substrate specificity",
+            "An RNA interference effect",
+            "Autophagy"
+          ],
+          "answer": 1,
+          "explanation": "Lenalidomide binds cereblon and creates a surface that recruits neosubstrates, leading to their ubiquitination and degradation."
+        },
+        {
+          "question": "Which control best shows that a compound reduces target levels through the proteasome?",
+          "options": [
+            "Pre-treating cells with a proteasome inhibitor and showing the loss is blocked",
+            "Measuring cell colour",
+            "Sequencing the target gene",
+            "Checking the pH of the medium"
+          ],
+          "answer": 0,
+          "explanation": "If degradation depends on the proteasome, blocking the proteasome should rescue the target protein; additional controls include E3 ligand competition."
+        }
+      ]
+    },
+    {
+      "id": "biomolecular-condensates",
+      "title": "Biomolecular condensates and phase separation",
+      "hours": 6,
+      "hook": "The nucleolus has been visible down a microscope for nearly two hundred years, and no one could say how it holds together without a membrane. Biologists now suspect that many such compartments form the way oil droplets form in vinaigrette: sticky, flexible proteins and RNAs condense out of the cell's watery interior into dynamic droplets that concentrate particular reactions.",
+      "learningObjectives": [
+        "Define biomolecular condensates and give examples such as nucleoli, stress granules and P granules",
+        "Explain how multivalency and intrinsically disordered regions drive liquid-liquid phase separation",
+        "Interpret a simple phase diagram and the concept of saturation concentration",
+        "Describe experimental criteria, including FRAP, fusion and optogenetic tools, and their limitations",
+        "Discuss links between condensate dysregulation and disease such as ALS",
+        "Critically assess claims that a structure is formed by phase separation"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Biomolecular condensate",
+          "definition": "A membraneless compartment that concentrates specific proteins and nucleic acids, formed by collective weak interactions; a general term that does not presume a mechanism."
+        },
+        {
+          "term": "Liquid-liquid phase separation (LLPS)",
+          "definition": "Spontaneous demixing of a homogeneous solution into a dense phase and a dilute phase once concentrations exceed a threshold."
+        },
+        {
+          "term": "Multivalency",
+          "definition": "Having multiple interaction sites on a molecule so that networks of weak contacts can form, a key driver of condensation."
+        },
+        {
+          "term": "Intrinsically disordered region (IDR)",
+          "definition": "A protein segment lacking a stable fold, often enriched in particular residues, that contributes flexible interaction surfaces."
+        },
+        {
+          "term": "Stickers and spacers",
+          "definition": "A conceptual model in which specific interaction motifs (stickers) are connected by flexible linkers (spacers) that tune material properties."
+        },
+        {
+          "term": "Saturation concentration",
+          "definition": "The concentration above which a component forms the dense phase under given conditions such as temperature and salt."
+        },
+        {
+          "term": "FRAP",
+          "definition": "Fluorescence recovery after photobleaching, used to measure how quickly molecules exchange within a droplet, indicating liquid-like or solid-like behaviour."
+        },
+        {
+          "term": "Condensate maturation or ageing",
+          "definition": "Gradual transition of liquid droplets to gel-like or solid states, associated with pathological aggregates in some neurodegenerative diseases."
+        },
+        {
+          "term": "Scaffold and client",
+          "definition": "Scaffolds are required components that drive condensate formation; clients partition into the condensate but do not drive it."
+        },
+        {
+          "term": "Functions of condensates",
+          "definition": "Concentrating reactants, sequestering molecules, buffering noise, organising signalling and transcription, and localising RNA processing."
+        }
+      ],
+      "deeper": {
+        "beginner": "Some parts of a cell have no wall, yet they stay together as droplets, like oil in water. Proteins and RNAs with many sticky spots gather together when their concentration is high enough, forming a droplet that keeps certain molecules close and excludes others. This can speed reactions or store molecules until needed. The oil-droplet analogy is useful for the physics, but real cell droplets are controlled by regulation, modifications and active processes, so they are not just passive blobs.",
+        "intermediate": "In vitro, purified proteins with multivalent interaction domains, such as SH3 domains and proline-rich motifs, form droplets above a threshold concentration; with IDR-containing proteins such as FUS or hnRNPA1, interactions among aromatic and charged residues drive condensation, often with RNA contributing. In cells, P granules in C. elegans embryos show liquid-like behaviour, dripping, fusing and rapidly exchanging components, and their asymmetric positioning arises from differences in local solubility. Cells regulate condensates by post-translational modifications (for example phosphorylation changes charge), by concentration and by temperature or pH. Many condensates involve RNA, such as stress granules and nucleoli, and RNA helicases can tune their dynamics. Disease-linked mutations in FUS and TDP-43 enhance their propensity to convert to solid-like states that may nucleate aggregates in ALS.",
+        "advanced": "Quantitative frameworks borrow from polymer physics: Flory-Huggins theory, stickers-and-spacers models and percolation coupled with phase separation explain how network connectivity and condensate material properties arise. A key caution is that many puncta in cells are not equilibrium liquid phases; criteria such as sphericity, fusion, concentration dependence and reversibility need to be supported by in vitro reconstitution and, ideally, by measurements at endogenous expression levels, because overexpression can drive artefactual droplets. Tools such as the optoDroplet system and Corelet allow controlled induction and mapping of phase diagrams in living cells, and chemicals such as 1,6-hexanediol are blunt tools with confounding effects on chromatin and kinases. Biochemical consequences include altered reaction rates through mass action and local microenvironment, and condensate interfaces may have special properties. The field also debates the extent to which transcriptional condensates are functionally required, so you should appreciate the evidence for and against specific proposals rather than treat phase separation as a universal explanation."
+      },
+      "commonMistakes": [
+        "Using 'phase separation' and 'condensate' as synonyms; condensate describes the structure, phase separation is one possible mechanism.",
+        "Assuming that any puncta in an overexpression experiment is a liquid condensate.",
+        "Relying on 1,6-hexanediol alone to prove a liquid-like nature.",
+        "Ignoring that regulation, RNA and post-translational modifications shape condensates in cells."
+      ],
+      "videos": [
+        {
+          "youtubeId": "gsERuIqHadU",
+          "title": "A quick intro to Biomolecular Condensates",
+          "channel": "MPIPKS",
+          "level": "beginner",
+          "whyWatch": "A very concise explanation of what condensates are and why physicists and biologists study them together."
+        },
+        {
+          "youtubeId": "6nBatZrc3aE",
+          "title": "Liquid-Liquid Phase Separation: Organizing the Cell Without Membranes",
+          "channel": "Scintropy",
+          "level": "beginner",
+          "whyWatch": "An accessible walk through the idea of membraneless organelles and examples in cells."
+        },
+        {
+          "youtubeId": "VzfOpqZS10I",
+          "title": "A quick intro to Phase Separation",
+          "channel": "MPIPKS",
+          "level": "intermediate",
+          "whyWatch": "A short physics-oriented explanation of demixing and why droplets form above a threshold."
+        },
+        {
+          "youtubeId": "AP47mIkd-h0",
+          "title": "Cliff Brangwynne (Princeton & HHMI) 1: Liquid Phase Separation in Living Cells",
+          "channel": "iBiology",
+          "level": "advanced",
+          "whyWatch": "A leading researcher explains key experiments showing liquid-like behaviour of cellular compartments."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1172046",
+          "title": "Germline P Granules Are Liquid Droplets That Localize by Controlled Dissolution/Condensation",
+          "authors": "Brangwynne CP, Eckmann CR, Courson DS et al",
+          "year": 2009,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The experiment that showed a cellular compartment behaving as a liquid, including fusion, dripping and rapid molecular exchange.",
+          "readingQuestions": [
+            "Which observations support a liquid rather than a solid-like structure?",
+            "How does the cell localise the granules?"
+          ]
+        },
+        {
+          "doi": "10.1038/nature10879",
+          "title": "Phase transitions in the assembly of multivalent signalling proteins",
+          "authors": "Li P, Banjade S, Cheng HC et al",
+          "year": 2012,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3343696/",
+          "whyItMatters": "A clear reconstitution showing how multivalent interactions between modular proteins can cause phase transitions, linking domain interactions to physical principles."
+        },
+        {
+          "doi": "10.1038/nrm.2017.7",
+          "title": "Biomolecular condensates: organizers of cellular biochemistry",
+          "authors": "Banani SF, Lee HO, Hyman AA, Rosen MK",
+          "year": 2017,
+          "journal": "Nature Reviews Molecular Cell Biology",
+          "level": "intermediate",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7434221/",
+          "whyItMatters": "A widely cited review that sets out the terminology, principles and functions of condensates; read it as a conceptual map of the field."
+        },
+        {
+          "doi": "10.1126/science.aaf4382",
+          "title": "Liquid phase condensation in cell physiology and disease",
+          "authors": "Shin Y, Brangwynne CP",
+          "year": 2017,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Reviews biophysical principles and connections to diseases such as neurodegeneration."
+        },
+        {
+          "doi": "10.1038/s41580-020-00326-6",
+          "title": "Biomolecular condensates at the nexus of cellular stress, protein aggregation disease and ageing",
+          "authors": "Alberti S, Hyman AA",
+          "year": 2021,
+          "journal": "Nature Reviews Molecular Cell Biology",
+          "level": "advanced",
+          "whyItMatters": "Connects condensate behaviour to stress responses and the processes of ageing and disease with a good discussion of open questions."
+        }
+      ],
+      "resources": [
+        {
+          "title": "DisProt: database of intrinsically disordered proteins",
+          "provider": "DisProt Consortium",
+          "type": "database",
+          "url": "https://disprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Experimentally supported disordered regions; check whether your protein of interest has an annotated IDR."
+        },
+        {
+          "title": "MobiDB",
+          "provider": "University of Padova",
+          "type": "database",
+          "url": "https://mobidb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse predicted and annotated disorder for proteins across proteomes."
+        },
+        {
+          "title": "CD-CODE: condensate database",
+          "provider": "CD-CODE Consortium",
+          "type": "database",
+          "url": "https://cd-code.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A crowdsourced catalogue of biomolecular condensates and their components."
+        },
+        {
+          "title": "Molecular Biology of the Cell: Cell compartments",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Background on organelles and the nucleolus before exploring membraneless compartments."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What property of a protein most promotes condensation?",
+          "options": [
+            "Having many weak interaction sites (multivalency)",
+            "Being extremely small",
+            "Having a single strong binding site",
+            "Being membrane bound"
+          ],
+          "answer": 0,
+          "explanation": "Multivalent weak interactions allow networks of contacts to form, so that above a threshold concentration, a dense phase separates."
+        },
+        {
+          "question": "FRAP of a droplet shows fast recovery of fluorescence after photobleaching. What does this suggest?",
+          "options": [
+            "Molecules exchange rapidly, consistent with a liquid-like state",
+            "The droplet is solid",
+            "The protein is degraded",
+            "The droplet is membrane bound"
+          ],
+          "answer": 0,
+          "explanation": "Rapid recovery indicates mobile molecules and exchange with the surroundings, typical of liquid-like condensates, although it does not prove LLPS alone."
+        },
+        {
+          "question": "Why might overexpressed fluorescent fusion proteins give misleading evidence for condensates?",
+          "options": [
+            "High concentrations can force droplets that do not form at endogenous levels",
+            "Fluorescent proteins are invisible",
+            "Overexpression decreases temperature",
+            "They always dissolve condensates"
+          ],
+          "answer": 0,
+          "explanation": "Condensation depends on concentration; artificially high expression may exceed the saturation concentration and create puncta that are not physiological."
+        },
+        {
+          "question": "Disease-associated mutations in FUS are thought to contribute to ALS by:",
+          "options": [
+            "Promoting transition of liquid droplets to solid-like aggregates",
+            "Destroying all RNA",
+            "Preventing translation completely",
+            "Increasing the number of mitochondria"
+          ],
+          "answer": 0,
+          "explanation": "Mutations can increase the tendency for liquid condensates to mature into gels or aggregates, which may be toxic and seed pathology."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "HnT1VWzdFWc",
+      "title": "2024 Nobel Prize lectures in chemistry | David Baker, Demis Hassabis and John Jumper",
+      "channel": "Nobel Prize",
+      "level": "advanced",
+      "whyWatch": "Optional enrichment: three laureates on protein design and prediction, which complements the chemical and molecular themes of this course."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Molecular Biology of the Cell (4th edition)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Freely available reference that supports chromatin, RNA, protein degradation and cell organisation topics."
+    },
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free biochemistry text with solid coverage of enzymes, chromatin and signalling."
+    }
+  ]
+}

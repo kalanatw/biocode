@@ -1,0 +1,1877 @@
+{
+  "code": "MB 4004",
+  "title": "Applications in Biotechnology",
+  "level": 4,
+  "semester": 2,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "From fermenters to vaccines to field crops: how biological knowledge becomes products, and what governs them.",
+  "overview": "This course follows the journey from a laboratory discovery to a product people can use. It starts with the core engineering of biotechnology (fermentation and downstream processing) and then walks through the major application sectors: industrial enzymes and biocatalysis, biopharmaceuticals, vaccines and gene therapy, agricultural biotechnology, environmental biotechnology, food biotechnology, and diagnostics and biosensors. It ends with the rules of the game: biosafety, ethics, intellectual property and regulation. It builds directly on MB 3025 (recombinant DNA technology) and draws on enzymology, microbiology and molecular biology.",
+  "whyItMatters": "Biotechnology is where molecular biology meets economics, engineering, regulation and ethics. Whether you end up in a research lab, a pharmaceutical plant, an agricultural agency or a policy office, you need to understand how a product is actually made at scale, how quality and safety are demonstrated, and how society decides what is acceptable.",
+  "prerequisites": [
+    "MB 3025",
+    "MB 3022",
+    "BC 3027",
+    "BC 3022"
+  ],
+  "careerLinks": [
+    "Pharmaceutical and biopharmaceutical manufacturing and quality control",
+    "Food, beverage and agro-industry (fermentation, quality assurance)",
+    "Agricultural research and plant tissue culture enterprises",
+    "Diagnostics, public health and regulatory laboratories",
+    "Biosafety, intellectual property and regulatory affairs"
+  ],
+  "studyTips": [
+    "For every product, trace the full chain: organism or cell, construct or process, scale-up, purification, quality control, regulation.",
+    "Draw a block diagram of each process (for example fed-batch fermentation then capture, polishing and formulation); examiners often ask for flow diagrams.",
+    "Keep a comparison table for each sector: what is gained, what the main risks are and who regulates it.",
+    "Use real case studies (insulin, Golden Rice, sitagliptin, mRNA vaccines) as anchors for the general principles.",
+    "Practise numerical questions on growth rate, yield and productivity, which are common in applied courses."
+  ],
+  "units": [
+    {
+      "id": "bioprocess-fermentation",
+      "title": "Bioprocess engineering and industrial fermentation",
+      "hours": 5,
+      "hook": "Making a gram of a protein in a flask is a molecular biology problem; making a tonne of it a month is an engineering problem. Between the two lies a world of mixing, oxygen transfer, sterility and economics, where a small change in feeding strategy can double the yield of a product.",
+      "learningObjectives": [
+        "Describe the main components and operation of a stirred-tank bioreactor",
+        "Compare batch, fed-batch and continuous (chemostat or perfusion) operation",
+        "Relate microbial growth phases and kinetics to process design",
+        "Distinguish primary and secondary metabolites with industrial examples",
+        "Explain why oxygen transfer, sterilisation and scale-up are key challenges",
+        "Outline the stages of downstream processing and why they dominate cost for many products"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Stirred-tank bioreactor",
+          "definition": "A vessel with agitation, aeration, temperature, pH and dissolved-oxygen control, designed for sterile cultivation of cells at scale."
+        },
+        {
+          "term": "Batch, fed-batch and continuous culture",
+          "definition": "Batch has no additions after inoculation; fed-batch adds nutrients over time to avoid inhibition or overflow metabolism; continuous adds medium and removes culture at the same rate."
+        },
+        {
+          "term": "Specific growth rate and Monod kinetics",
+          "definition": "The specific growth rate depends hyperbolically on limiting substrate concentration, with a maximum rate and a half-saturation constant."
+        },
+        {
+          "term": "Yield, titre and productivity",
+          "definition": "Yield is product per substrate consumed, titre is product concentration, productivity is product per unit volume per unit time; all three matter economically."
+        },
+        {
+          "term": "Primary and secondary metabolites",
+          "definition": "Primary metabolites (ethanol, amino acids, citric acid) are made during growth; secondary metabolites (penicillin) are made mainly in stationary phase."
+        },
+        {
+          "term": "Oxygen transfer (kLa)",
+          "definition": "The volumetric mass-transfer coefficient describing how quickly oxygen moves from gas to liquid, often limiting for dense aerobic cultures."
+        },
+        {
+          "term": "Sterilisation and aseptic operation",
+          "definition": "Using heat, filtration and sealed design to exclude contaminating organisms, crucial for pure cultures."
+        },
+        {
+          "term": "Scale-up",
+          "definition": "Moving from flask to production tank while maintaining performance; gradients in mixing, oxygen and pH often appear at large scale."
+        },
+        {
+          "term": "Upstream and downstream processing",
+          "definition": "Upstream includes media preparation, inoculum and fermentation; downstream includes cell separation, product capture, purification and formulation."
+        },
+        {
+          "term": "Good Manufacturing Practice (GMP)",
+          "definition": "Quality standards ensuring that products are consistently produced and controlled, essential for pharmaceuticals and food."
+        }
+      ],
+      "deeper": {
+        "beginner": "A fermenter is like a very controlled kitchen for microbes. You give them food, air, the right temperature and acidity, and they grow and make your product, whether that is an antibiotic, an enzyme or a protein drug. The challenge is to keep everything sterile and well mixed and then to separate the product from the soup of cells and medium. The kitchen analogy breaks down because at industrial scale you must also remove heat and supply enough oxygen, which becomes difficult in tanks the size of a room.",
+        "intermediate": "In batch culture a lag phase is followed by exponential growth, stationary phase and death. Many products are best produced with fed-batch operation: for example, in yeast or E. coli, limiting glucose supply avoids overflow metabolism to ethanol or acetate and permits high cell densities. Aeration and agitation supply oxygen, but shear and foaming must be controlled. Oxygen demand grows with biomass, so kLa and vessel design are crucial. Primary metabolites such as citric acid from Aspergillus niger or glutamate and lysine from Corynebacterium glutamicum are linked to growth, whereas penicillin from Penicillium is a secondary metabolite requiring tailored feeding. After fermentation, cells are separated by centrifugation or filtration, the product is captured and purified through steps such as chromatography, and finally formulated, with each step adding cost and potential loss.",
+        "advanced": "Process development uses mass balances, Monod and Luedeking-Piret type relations and metabolic flux considerations to optimise yield and rate. Scale-up criteria (constant power per volume, tip speed, kLa or mixing time) cannot all be held constant at once, so large tanks often exhibit zones of low oxygen or high substrate that elicit stress responses and reduce yield. Scale-down models are used to reproduce such gradients in small vessels. Strain stability, plasmid loss and phage contamination are recurring industrial risks. Process analytical technology (online sensors, soft sensors and model-based control) and quality-by-design frameworks govern regulated manufacturing, and economic analysis frequently shows that titre and downstream recovery determine whether a process is viable. Continuous bioprocessing and single-use equipment are changing the way biopharmaceuticals are manufactured."
+      },
+      "commonMistakes": [
+        "Assuming a process optimised in shake flasks will perform identically in a large tank.",
+        "Ignoring oxygen transfer limits when planning high-cell-density cultures.",
+        "Confusing yield (per substrate) with productivity (per time) or titre (per volume).",
+        "Overlooking downstream processing, which often dominates production cost."
+      ],
+      "videos": [
+        {
+          "youtubeId": "5eKdZ0dVCCo",
+          "title": "Bioprocessing Part 1: Fermentation",
+          "channel": "BioNetwork",
+          "level": "beginner",
+          "whyWatch": "A walk through a real bioprocessing workflow from fermentation set-up to monitoring, with practical detail."
+        },
+        {
+          "youtubeId": "mUDXupn2Dhk",
+          "title": "Types of Bioprocesses ( Batch , Fed Batch and Continuous processes)",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Clear comparison of the three operating modes and when each is used."
+        },
+        {
+          "youtubeId": "D5O-7f8nw1g",
+          "title": "Introduction to Industrial Microbiology | Fermentation, Bioreactors & Microbial Production",
+          "channel": "The Invisible World",
+          "level": "beginner",
+          "whyWatch": "Introduces the organisms and products of industrial microbiology and the role of bioreactors."
+        },
+        {
+          "youtubeId": "XdUVYP0kktE",
+          "title": "How a bioreactor works",
+          "channel": "ZephX",
+          "level": "beginner",
+          "whyWatch": "A brief visual of the main parts of a bioreactor and what each controls."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.3389/fmicb.2014.00172",
+          "title": "Recombinant protein expression in Escherichia coli: advances and challenges",
+          "authors": "Rosano GL, Ceccarelli EA",
+          "year": 2014,
+          "journal": "Frontiers in Microbiology",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.3389/fmicb.2014.00172",
+          "whyItMatters": "A practical review of why proteins fail to express well in E. coli and what strain, vector and culture strategies fix it; the bridge between cloning and fermentation."
+        }
+      ],
+      "resources": [
+        {
+          "title": "OpenStax Microbiology",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Free textbook with chapters on microbial growth, metabolism and industrial uses of microbes."
+        },
+        {
+          "title": "FAO biotechnology portal",
+          "provider": "Food and Agriculture Organization",
+          "type": "reference",
+          "url": "https://www.fao.org/biotechnology/en/",
+          "free": true,
+          "level": "beginner",
+          "note": "Overview of biotechnology applications in agriculture and food, including fermentation-based products."
+        },
+        {
+          "title": "PDB-101 Molecule of the Month",
+          "provider": "RCSB PDB",
+          "type": "reference",
+          "url": "https://pdb101.rcsb.org/motm/motm-about",
+          "free": true,
+          "level": "beginner",
+          "note": "Short illustrated stories of molecules (including industrial enzymes) that link structure to application."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why is fed-batch often preferred to batch for high-density E. coli cultures?",
+          "options": [
+            "It avoids inhibitory by-products by limiting substrate supply",
+            "It removes the need for oxygen",
+            "It prevents all contamination",
+            "It makes growth stop"
+          ],
+          "answer": 0,
+          "explanation": "Feeding a limiting substrate keeps the cells from overflow metabolism that generates acetate, allowing higher biomass and product concentrations."
+        },
+        {
+          "question": "Penicillin is best classified as:",
+          "options": [
+            "A primary metabolite produced during exponential growth",
+            "A secondary metabolite produced mainly in stationary phase",
+            "An enzyme",
+            "A vitamin"
+          ],
+          "answer": 1,
+          "explanation": "Antibiotics such as penicillin are secondary metabolites, typically produced after rapid growth ends and under specific nutrient conditions."
+        },
+        {
+          "question": "Which factor most commonly limits aerobic fermentations at high cell density?",
+          "options": [
+            "Light",
+            "Oxygen transfer rate",
+            "Gravity",
+            "Ambient humidity"
+          ],
+          "answer": 1,
+          "explanation": "Dense aerobic cultures consume oxygen faster than it can dissolve unless aeration, agitation and kLa are adequate."
+        },
+        {
+          "question": "Productivity in a bioprocess is defined as:",
+          "options": [
+            "Product formed per substrate consumed",
+            "Product concentration at the end",
+            "Product formed per unit volume per unit time",
+            "Biomass per litre"
+          ],
+          "answer": 2,
+          "explanation": "Productivity combines concentration and time, whereas yield refers to substrate efficiency and titre to final concentration."
+        }
+      ]
+    },
+    {
+      "id": "industrial-enzymes-biocatalysis",
+      "title": "Industrial enzymes and biocatalysis",
+      "hours": 5,
+      "hook": "Your laundry detergent, your bread, the sugar in some drinks and the manufacture of certain drugs all rely on enzymes working in a factory. Evolved for life in a cell, these catalysts can be nudged by protein engineering to work in hot, organic or non-natural conditions, and in one celebrated case a chemical route needing a high-pressure metal catalyst was replaced by an engineered enzyme.",
+      "learningObjectives": [
+        "List major classes of industrial enzymes and their applications",
+        "Explain advantages and limits of enzymes compared with chemical catalysts",
+        "Describe enzyme immobilisation methods and why they are used",
+        "Explain directed evolution and rational design as strategies to improve enzymes",
+        "Analyse the sitagliptin transaminase case as an example of industrial biocatalysis",
+        "Connect biocatalysis to green chemistry principles"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hydrolases in industry",
+          "definition": "Amylases, proteases, lipases, cellulases and pectinases are widely used in detergents, baking, starch processing, textiles and fruit juice."
+        },
+        {
+          "term": "Isomerase example",
+          "definition": "Glucose isomerase converts glucose to fructose, enabling production of high-fructose syrups."
+        },
+        {
+          "term": "Immobilisation",
+          "definition": "Attaching or entrapping enzymes on a support (adsorption, covalent binding, entrapment, cross-linking) so they can be reused and separated easily."
+        },
+        {
+          "term": "Enzyme specificity and enantioselectivity",
+          "definition": "Enzymes often distinguish between chiral forms of a substrate, which is valuable for making single-enantiomer drugs."
+        },
+        {
+          "term": "Directed evolution",
+          "definition": "Iterative cycles of random mutagenesis and screening or selection to improve a property such as stability, activity or selectivity."
+        },
+        {
+          "term": "Rational and semi-rational design",
+          "definition": "Using structure and mechanism to choose specific mutations, often combined with focused libraries."
+        },
+        {
+          "term": "Thermostability and solvent tolerance",
+          "definition": "Properties often engineered to allow enzymes to function at process temperatures or in organic co-solvents."
+        },
+        {
+          "term": "Kinetic parameters in selection",
+          "definition": "kcat, Km and kcat/Km guide enzyme choice, along with stability and inhibition by substrate or product."
+        },
+        {
+          "term": "Cofactor regeneration",
+          "definition": "Recycling expensive cofactors such as NADH or PLP using coupled enzymes so that a process is economically feasible."
+        },
+        {
+          "term": "Green chemistry metrics",
+          "definition": "Measures like the E factor (waste per product) used to compare biocatalytic and conventional routes."
+        }
+      ],
+      "deeper": {
+        "beginner": "Enzymes are nature's catalysts. Industry uses them because they work in water at mild temperatures and are very selective, so they make fewer unwanted by-products. A detergent enzyme digests protein stains; an enzyme in the baking industry softens dough. Sometimes natural enzymes do not work well enough, so scientists mutate them thousands of times and pick the best ones, copying evolution in fast-forward. Where the analogy breaks down: evolution in the lab selects for exactly what the scientists test for, so a poor test gives a poor enzyme.",
+        "intermediate": "Enzymes for industrial use are produced by fermentation of bacteria or fungi (for example Bacillus and Aspergillus) and formulated as liquids or granules. Selection depends not only on kcat and Km but on stability under process conditions, cost, and regulatory status. Immobilised enzymes, such as glucose isomerase in columns, can run for weeks. Directed evolution creates variants by error-prone PCR or DNA shuffling and screens them in microtitre plates or by selection; its success depends on having a robust assay that reflects the desired property. In the sitagliptin case, a transaminase active on a bulky ketone substrate was evolved through many rounds of mutation and screening to replace a rhodium-catalysed asymmetric hydrogenation, giving high enantioselectivity and avoiding a high-pressure heavy-metal step.",
+        "advanced": "Modern workflows combine structure-guided design, saturation mutagenesis at hot spots, ultra-high-throughput screening (for example droplet microfluidics) and machine-learning models that predict beneficial mutations from sequence-function data, reducing experimental load. Trade-offs between activity and stability, epistatic interactions between mutations and promiscuous side activities all shape evolutionary trajectories. Biocatalytic cascades combine several enzymes in one pot, and cofactor recycling, product inhibition and mass-transfer limits in immobilised systems become central engineering issues. Life-cycle assessment can show that enzymatic routes lower waste and energy but must be evaluated including enzyme production, downstream steps and solvent use. Regulatory and allergenicity considerations apply to enzymes in food and detergents, requiring careful handling and labelling."
+      },
+      "commonMistakes": [
+        "Assuming an enzyme with the highest kcat in the literature is the best industrial choice, ignoring stability and cost.",
+        "Equating directed evolution with random mutation only; the screening or selection step is what drives improvement.",
+        "Believing biocatalysis is always cheaper; enzyme production and cofactors can dominate cost.",
+        "Neglecting that immobilisation can alter kinetics because of diffusion limits."
+      ],
+      "videos": [
+        {
+          "youtubeId": "YWXuYPtO39A",
+          "title": "Frances Arnold: Catalyst",
+          "channel": "The Franklin Institute",
+          "level": "beginner",
+          "whyWatch": "A short portrait of how directed evolution works and why Frances Arnold's approach was transformative."
+        },
+        {
+          "youtubeId": "ZKfRWqGtBDY",
+          "title": "The 2018 Nobel Prize in Chemistry: Directed evolution & phage display - Speaking of Chemistry",
+          "channel": "Chemical & Engineering News",
+          "level": "beginner",
+          "whyWatch": "A concise explanation of the idea of directed evolution and what it enabled."
+        },
+        {
+          "youtubeId": "pHGZllLP3gU",
+          "title": "Detergent Enzymes Explained: Protease, Amylase, Lipase | Liquid & Granule Formulations",
+          "channel": "Catalex Bio",
+          "level": "intermediate",
+          "whyWatch": "A brief industry-oriented overview of which enzymes do which job in detergents."
+        },
+        {
+          "youtubeId": "6hOZ5e0g9Uo",
+          "title": "Frances H. Arnold: Nobel Lecture in Chemistry 2018",
+          "channel": "Nobel Prize",
+          "level": "advanced",
+          "whyWatch": "The laureate's own account of evolving enzymes to carry out new chemistry."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1188934",
+          "title": "Biocatalytic Asymmetric Synthesis of Chiral Amines from Ketones Applied to Sitagliptin Manufacture",
+          "authors": "Savile CK, Janey JM, Mundorff EC et al",
+          "year": 2010,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The landmark case of an engineered enzyme replacing a metal-catalysed step in a commercial drug synthesis; read the description of how the enzyme was evolved and what improved at each stage."
+        },
+        {
+          "doi": "10.1002/anie.201708408",
+          "title": "Directed Evolution: Bringing New Chemistry to Life",
+          "authors": "Arnold FH",
+          "year": 2017,
+          "journal": "Angewandte Chemie International Edition",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1002/anie.201708408",
+          "whyItMatters": "A Nobel-lecture style article describing the philosophy and examples of directed evolution in the laureate's own words."
+        },
+        {
+          "doi": "10.1021/acs.chemrev.7b00203",
+          "title": "Role of Biocatalysis in Sustainable Chemistry",
+          "authors": "Sheldon RA, Woodley JM",
+          "year": 2017,
+          "journal": "Chemical Reviews",
+          "level": "advanced",
+          "whyItMatters": "A comprehensive review that places biocatalysis in the context of green chemistry metrics and process development."
+        }
+      ],
+      "resources": [
+        {
+          "title": "BRENDA enzyme database",
+          "provider": "BRENDA / TU Braunschweig",
+          "type": "database",
+          "url": "https://www.brenda-enzymes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up kinetic parameters, substrates, inhibitors and organisms for any enzyme class before choosing a biocatalyst."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2018: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2018/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear lay explanation of directed evolution and phage display."
+        },
+        {
+          "title": "PDB-101 Molecule of the Month",
+          "provider": "RCSB PDB",
+          "type": "reference",
+          "url": "https://pdb101.rcsb.org/motm/motm-about",
+          "free": true,
+          "level": "beginner",
+          "note": "Browse enzyme structures used in industry and medicine with short explanatory stories."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which step drives improvement in a directed evolution experiment?",
+          "options": [
+            "Mutagenesis alone",
+            "Screening or selection for the desired property between rounds",
+            "Heating the enzyme",
+            "Dialysis of the product"
+          ],
+          "answer": 1,
+          "explanation": "Diversity is created by mutation, but only a good screen or selection identifies improved variants to carry into the next round."
+        },
+        {
+          "question": "Why are enzymes often immobilised in industrial processes?",
+          "options": [
+            "To make them more soluble",
+            "To allow reuse and simpler separation from the product",
+            "To change their sequence",
+            "To increase their kcat by definition"
+          ],
+          "answer": 1,
+          "explanation": "Immobilised enzymes can be retained and reused, reducing cost and simplifying downstream purification, though diffusion limitations may alter kinetics."
+        },
+        {
+          "question": "The sitagliptin process is notable because:",
+          "options": [
+            "It used a natural enzyme without modification",
+            "An engineered transaminase replaced a metal-catalysed hydrogenation step",
+            "It produced a vaccine",
+            "It relied on whole-plant cultures"
+          ],
+          "answer": 1,
+          "explanation": "Extensive protein engineering created a transaminase active on the bulky substrate with high enantioselectivity, replacing a rhodium-catalysed step."
+        },
+        {
+          "question": "Glucose isomerase is used industrially to:",
+          "options": [
+            "Convert starch to glucose",
+            "Convert glucose to fructose for sweeteners",
+            "Digest proteins in detergents",
+            "Break cellulose"
+          ],
+          "answer": 1,
+          "explanation": "Glucose isomerase interconverts glucose and fructose, enabling production of fructose-rich syrups from glucose."
+        }
+      ]
+    },
+    {
+      "id": "biopharmaceuticals",
+      "title": "Biopharmaceuticals: recombinant proteins and antibodies",
+      "hours": 6,
+      "hook": "Before the 1980s, insulin for diabetes came from animal pancreases. Then a gene was synthesised, put into bacteria and made human insulin in a fermenter, launching an industry that now includes antibodies, hormones, clotting factors and enzyme replacement therapies manufactured in living cells.",
+      "learningObjectives": [
+        "Trace the development of recombinant human insulin and the logic of host selection",
+        "Compare microbial, yeast, insect and mammalian expression systems for protein drugs",
+        "Explain hybridoma technology and how engineering led to chimeric, humanised and human antibodies",
+        "Describe a typical monoclonal antibody manufacturing process from cell line to purified product",
+        "Explain the role of glycosylation and other post-translational modifications in quality",
+        "Understand what a biosimilar is and why it is not simply a generic"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Recombinant insulin",
+          "definition": "Human insulin produced in E. coli or yeast; early bacterial production expressed the A and B chains separately, which were then joined chemically."
+        },
+        {
+          "term": "Expression host selection",
+          "definition": "E. coli is fast and cheap but lacks glycosylation; yeast offers eukaryotic secretion; mammalian cells such as CHO provide human-like post-translational modification."
+        },
+        {
+          "term": "Hybridoma",
+          "definition": "A fusion of an antibody-producing B cell with a myeloma cell, giving an immortal line that secretes a single (monoclonal) antibody."
+        },
+        {
+          "term": "Antibody engineering",
+          "definition": "Chimeric antibodies (mouse variable and human constant regions), humanised antibodies (mouse CDRs only) and fully human antibodies from phage display or transgenic mice reduce immunogenicity."
+        },
+        {
+          "term": "Naming of therapeutic antibodies",
+          "definition": "Stems such as -ximab (chimeric), -zumab (humanised) and -umab (human) indicate their origin."
+        },
+        {
+          "term": "CHO cell line development",
+          "definition": "Selection of high-producing, stable clones from transfected CHO cells, often using gene amplification or selection markers."
+        },
+        {
+          "term": "Protein A affinity capture",
+          "definition": "A chromatography step that binds the Fc region of antibodies, achieving high purity in one step."
+        },
+        {
+          "term": "Glycosylation",
+          "definition": "Attachment of sugars to proteins, affecting stability, half-life and effector function; must be monitored because patterns depend on the host and process."
+        },
+        {
+          "term": "Viral safety and inactivation",
+          "definition": "Steps such as low-pH hold and virus filtration to ensure product safety from mammalian-cell-derived material."
+        },
+        {
+          "term": "Biosimilar",
+          "definition": "A biological product highly similar to an approved reference product, requiring analytical, functional and clinical comparability rather than the simpler bioequivalence applied to small-molecule generics."
+        }
+      ],
+      "deeper": {
+        "beginner": "Some medicines are proteins, and the easiest way to make a protein is to persuade living cells to do it. Scientists put the human gene for insulin into bacteria or yeast so that they make human insulin in large tanks. For bigger, more complex proteins such as antibodies, mammalian cells are used because they add sugar chains and fold the protein properly. After the cells have done their work, the drug is carefully purified. A recipe analogy fits, but the product is defined by its process: a small change in cells or conditions can change the protein.",
+        "intermediate": "Insulin was among the first recombinant therapeutics; the 1979 work expressed synthetic genes for the A and B chains in E. coli, and the chains were later combined, with proinsulin-based routes developed afterwards. Monoclonal antibody discovery began with hybridoma technology in 1975, and early mouse antibodies caused immune responses in patients, motivating chimeric, humanised and fully human formats. Manufacturing typically uses CHO cells in fed-batch bioreactors reaching titres of several grams per litre, followed by harvest, protein A capture, low-pH virus inactivation, polishing chromatography, virus filtration and ultrafiltration/diafiltration to formulate the final product. Because the structure includes glycans and other modifications, analytical characterisation (mass spectrometry, chromatography, functional assays) is a regulatory requirement, and 'the process is the product'.",
+        "advanced": "Cell-line development uses stable integration, selection and clonal screening, with monitoring of clonal stability, product quality attributes and growth. Critical quality attributes such as charge variants, aggregation, glycan profile and fragment content are controlled through process parameters (temperature shifts, feed composition) within a quality-by-design design space. Aggregation and immunogenicity are central concerns, and subvisible particles are tracked. Continuous processing, perfusion upstream and multicolumn chromatography are being adopted, with single-use systems reducing cross-contamination risk. Regulatory comparability after process changes and demonstration of biosimilarity rely on a totality of evidence, and the economics of antibody manufacturing, together with expanded formats such as bispecifics and antibody-drug conjugates, drives innovation in expression and purification."
+      },
+      "commonMistakes": [
+        "Assuming any recombinant protein can be made in E. coli; many require eukaryotic folding or glycosylation.",
+        "Thinking biosimilars are identical copies, as with chemically synthesised generics.",
+        "Confusing chimeric and humanised antibodies; humanised retain only the complementarity-determining regions from the mouse.",
+        "Treating purification as a minor step; contaminants such as host-cell proteins, DNA and viruses must be controlled."
+      ],
+      "videos": [
+        {
+          "youtubeId": "DVy3Y-0F5bQ",
+          "title": "Diabetes and Insulin: A Triumph for Recombinant DNA Technology",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Explains how the insulin gene was put into bacteria and how recombinant insulin transformed treatment."
+        },
+        {
+          "youtubeId": "CNPwxbeP7B8",
+          "title": "Hybridoma Technology for the Production of Monoclonal Antibodies",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A clear animation of cell fusion and selection to create monoclonal antibody-producing hybridomas."
+        },
+        {
+          "youtubeId": "VKpthcW1llU",
+          "title": "Bioprocessing Part 2: Separation / Recovery",
+          "channel": "BioNetwork",
+          "level": "intermediate",
+          "whyWatch": "Shows the downstream steps used to recover and purify biologic products from a fermentation."
+        },
+        {
+          "youtubeId": "QrzTf2FmchI",
+          "title": "Downstream processing in the pharmaceutical industry (Part I): recovery and purification",
+          "channel": "Marloes Peeters",
+          "level": "advanced",
+          "whyWatch": "A lecture covering the logic of recovery and purification steps in pharmaceutical biotechnology."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.76.1.106",
+          "title": "Expression in Escherichia coli of chemically synthesized genes for human insulin",
+          "authors": "Goeddel DV, Kleid DG, Bolivar F et al",
+          "year": 1979,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC382885/",
+          "whyItMatters": "The paper behind the first recombinant human insulin; it shows how synthetic genes and a bacterial expression system were combined."
+        },
+        {
+          "doi": "10.1038/256495a0",
+          "title": "Continuous cultures of fused cells secreting antibody of predefined specificity",
+          "authors": "Kohler G, Milstein C",
+          "year": 1975,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "Describes hybridoma technology, the starting point of monoclonal antibodies as tools and drugs."
+        },
+        {
+          "doi": "10.1038/nbt.4305",
+          "title": "Biopharmaceutical benchmarks 2018",
+          "authors": "Walsh G",
+          "year": 2018,
+          "journal": "Nature Biotechnology",
+          "level": "intermediate",
+          "whyItMatters": "A data-rich overview of approved biopharmaceuticals, their types and production systems, helpful for seeing which host systems dominate."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biosimilar medicines overview",
+          "provider": "European Medicines Agency",
+          "type": "reference",
+          "url": "https://www.ema.europa.eu/en/human-regulatory-overview/biosimilar-medicines-overview",
+          "free": true,
+          "level": "intermediate",
+          "note": "Regulator's explanation of what biosimilars are and how they are evaluated."
+        },
+        {
+          "title": "Molecular Biology of the Cell: recombinant DNA and antibodies",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Background chapters on cloning, expression and antibody structure."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for therapeutic antibody or insulin structures to see the proteins discussed in this unit."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why are CHO cells commonly used for therapeutic antibodies?",
+          "options": [
+            "They are bacteria and grow fast",
+            "They perform human-compatible post-translational modification and secrete properly folded proteins",
+            "They cannot be contaminated",
+            "They do not need a medium"
+          ],
+          "answer": 1,
+          "explanation": "Mammalian CHO cells fold and glycosylate antibodies in a manner compatible with humans and can be grown in suspension to high density."
+        },
+        {
+          "question": "An antibody with the suffix -zumab is:",
+          "options": [
+            "Mouse",
+            "Chimeric",
+            "Humanised",
+            "Rat"
+          ],
+          "answer": 2,
+          "explanation": "The stem -zumab denotes humanised antibodies, in which only the complementarity-determining regions come from a non-human source."
+        },
+        {
+          "question": "Which chromatography step is typically used to capture antibodies from harvested culture fluid?",
+          "options": [
+            "Protein A affinity chromatography",
+            "Gel electrophoresis",
+            "Paper chromatography",
+            "Gas chromatography"
+          ],
+          "answer": 0,
+          "explanation": "Protein A binds the Fc region of IgG with high specificity, giving substantial purification in a single capture step."
+        },
+        {
+          "question": "Why is a biosimilar not simply a generic version of a biologic?",
+          "options": [
+            "Biologics are complex and manufacturing-dependent, so similarity must be demonstrated by extensive comparability studies",
+            "Biosimilars are chemically synthesised",
+            "Biosimilars contain no active ingredient",
+            "Regulators do not review them"
+          ],
+          "answer": 0,
+          "explanation": "Because large proteins vary with cell line and process, similarity is shown by analytical, functional and clinical comparisons, not simple chemical identity."
+        }
+      ]
+    },
+    {
+      "id": "vaccines-gene-therapy",
+      "title": "Vaccines, gene therapy and cell therapy",
+      "hours": 6,
+      "hook": "In a little over a year, a new vaccine platform moved from a viral sequence on a computer to injections in tens of millions of arms. The same toolbox of delivery vehicles, such as lipid nanoparticles and viral vectors, is now being used to treat inherited blindness and blood disorders, so that medicine is beginning to repair or instruct cells rather than just manage symptoms.",
+      "learningObjectives": [
+        "Compare vaccine platforms: live-attenuated, inactivated, subunit and conjugate, viral vector and mRNA",
+        "Explain how mRNA vaccines are designed and delivered and how they differ from viral vector vaccines",
+        "Describe adjuvants and the role of the adaptive immune response in vaccine design",
+        "Explain the principles of in vivo and ex vivo gene therapy and the properties of AAV and lentiviral vectors",
+        "Outline CAR-T cell therapy as an example of engineered cell therapy",
+        "Discuss challenges: immunogenicity, durability, cost, manufacturing and equitable access"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Live-attenuated and inactivated vaccines",
+          "definition": "Weakened or killed whole pathogens that elicit immunity; live ones often give robust responses but may not be suitable for the immunocompromised."
+        },
+        {
+          "term": "Subunit and conjugate vaccines",
+          "definition": "Purified antigens such as proteins or polysaccharides; in conjugates, polysaccharides are linked to a carrier protein to recruit T cell help."
+        },
+        {
+          "term": "Recombinant vaccine",
+          "definition": "An antigen produced in a host such as yeast, as in hepatitis B surface antigen vaccines, or assembled as virus-like particles as in HPV vaccines."
+        },
+        {
+          "term": "Viral vector vaccine",
+          "definition": "A harmless virus, such as a modified adenovirus, carrying a gene for the target antigen, which cells express after infection."
+        },
+        {
+          "term": "mRNA vaccine",
+          "definition": "A nucleoside-modified mRNA encoding an antigen, delivered in lipid nanoparticles, translated in host cells to elicit antibody and T cell responses."
+        },
+        {
+          "term": "Adjuvant",
+          "definition": "A component that enhances and shapes the immune response to an antigen, such as aluminium salts or newer immune-stimulating molecules."
+        },
+        {
+          "term": "AAV vector",
+          "definition": "Adeno-associated virus, a small non-integrating vector used for in vivo gene delivery to tissues such as the eye and liver, with limited cargo capacity."
+        },
+        {
+          "term": "Lentiviral vector",
+          "definition": "An integrating retroviral vector used often for ex vivo modification of cells such as haematopoietic stem cells and T cells."
+        },
+        {
+          "term": "CAR-T cells",
+          "definition": "Patient T cells engineered to express a chimeric antigen receptor that recognises a tumour antigen, expanded and re-infused."
+        },
+        {
+          "term": "Ex vivo versus in vivo therapy",
+          "definition": "Ex vivo modifies cells outside the body then returns them; in vivo delivers the therapeutic material directly into the patient."
+        }
+      ],
+      "deeper": {
+        "beginner": "A vaccine shows the immune system a harmless piece or picture of a germ so that it can respond quickly if the real germ arrives. Older vaccines use weakened or killed germs, or purified parts. Newer ones deliver instructions: an mRNA vaccine tells your cells to make a single harmless protein of the virus and the message then disappears. Gene therapy uses a similar delivery idea but aims to give cells a working copy of a gene. The instruction analogy has a limit: unlike a printed page, the message is quickly degraded and cells vary in how they respond.",
+        "intermediate": "mRNA vaccines include a cap, untranslated regions, an optimised open reading frame, a poly(A) tail and modified nucleosides, encapsulated in lipid nanoparticles that protect the RNA and promote uptake and endosomal escape. The Pfizer-BioNTech trial showed high efficacy against symptomatic COVID-19 in adults. Viral vector vaccines use adenoviruses to deliver DNA encoding the antigen; pre-existing immunity to the vector can reduce effect. Gene therapy with AAV, such as for RPE65-related retinal disease, delivers a functional gene to target cells where it persists as an episome in non-dividing tissue; AAV capacity is only about 4.7 kb. For blood diseases, ex vivo lentiviral or gene-editing approaches modify haematopoietic stem cells. CAR-T therapy requires leukapheresis, T cell activation and transduction, expansion, lymphodepletion and infusion, with risks including cytokine release syndrome.",
+        "advanced": "Vaccine design relies on antigen engineering (for example stabilised prefusion spike), choice of platform to balance humoral and cellular immunity, and adjuvants to influence Th1/Th2 bias and durability. mRNA platforms depend on lipid composition (ionisable lipids, PEG-lipids), RNA purity (removing double-stranded RNA contaminants) and cold-chain stability. Gene therapy faces limits of vector capacity, pre-existing neutralising antibodies, dose-dependent toxicity in high-dose systemic AAV treatment, and integration risks with integrating vectors. Manufacturing of viral vectors and autologous cell therapies is complex and costly, and regulatory frameworks treat them as advanced therapy medicinal products with long-term follow-up requirements. Access and affordability, particularly in lower and middle income countries, are central policy concerns, as is the difficulty of manufacturing and cold chain for some platforms."
+      },
+      "commonMistakes": [
+        "Saying mRNA vaccines change your DNA; mRNA is translated in the cytoplasm and degraded.",
+        "Assuming all vaccines use the whole pathogen.",
+        "Treating AAV vectors as integrating vectors; they mostly remain episomal.",
+        "Overlooking cost, logistics and equity when discussing advanced therapies."
+      ],
+      "animation": "immune-response",
+      "videos": [
+        {
+          "youtubeId": "34UWTlxK6Ks",
+          "title": "How Vaccines Work, Herd Immunity, Types of Vaccines, Animation",
+          "channel": "Alila Medical Media",
+          "level": "beginner",
+          "whyWatch": "A clear animated overview of vaccine types and herd immunity."
+        },
+        {
+          "youtubeId": "oMXGGmBfkf8",
+          "title": "RNA Vaccines (mRNA Vaccine) - Basis of Pfizer and Moderna COVID-19 vaccines, Animation",
+          "channel": "Alila Medical Media",
+          "level": "intermediate",
+          "whyWatch": "Step-by-step animation of how an mRNA vaccine leads to antigen production and immune memory."
+        },
+        {
+          "youtubeId": "Q6qk6Wh6cXU",
+          "title": "Viral Vectors Overview",
+          "channel": "ASGCT",
+          "level": "intermediate",
+          "whyWatch": "A professional society's overview of the viral vectors used in gene therapy and their properties."
+        },
+        {
+          "youtubeId": "p-nwUpPZF70",
+          "title": "Basics of AAV Gene Therapy",
+          "channel": "ASGCT",
+          "level": "advanced",
+          "whyWatch": "A more detailed lecture on AAV biology, vector design and clinical considerations."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1056/NEJMoa2034577",
+          "title": "Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine",
+          "authors": "Polack FP, Thomas SJ, Kitchin N et al",
+          "year": 2020,
+          "journal": "New England Journal of Medicine",
+          "level": "intermediate",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7745181/",
+          "whyItMatters": "A primary report of a pivotal vaccine trial, useful for learning how efficacy and safety are reported in a phase 3 study."
+        },
+        {
+          "doi": "10.1038/nrd.2017.243",
+          "title": "mRNA vaccines — a new era in vaccinology",
+          "authors": "Pardi N, Hogan MJ, Porter FW, Weissman D",
+          "year": 2018,
+          "journal": "Nature Reviews Drug Discovery",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1038/nrd.2017.243",
+          "whyItMatters": "Written before the pandemic, this review explains the design principles and promise of mRNA vaccines."
+        },
+        {
+          "doi": "10.1038/nature15818",
+          "title": "Gene therapy returns to centre stage",
+          "authors": "Naldini L",
+          "year": 2015,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A perspective on how vectors improved and why gene therapy re-emerged after early setbacks."
+        },
+        {
+          "doi": "10.1016/S0140-6736(17)31868-8",
+          "title": "Efficacy and safety of voretigene neparvovec (AAV2-hRPE65v2) in patients with RPE65-mediated inherited retinal dystrophy: a randomised, controlled, open-label, phase 3 trial",
+          "authors": "Russell S, Bennett J, Wellman JA et al",
+          "year": 2017,
+          "journal": "The Lancet",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5726391/",
+          "whyItMatters": "The phase 3 trial behind the first approved in vivo AAV gene therapy; illustrates endpoint design for a rare disease."
+        }
+      ],
+      "resources": [
+        {
+          "title": "AAV education resources",
+          "provider": "Addgene",
+          "type": "tutorial",
+          "url": "https://www.addgene.org/viral-vectors/aav/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Explains AAV biology, serotypes and vector production in practical terms."
+        },
+        {
+          "title": "Vaccines and immunization",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/health-topics/vaccines-and-immunization",
+          "free": true,
+          "level": "beginner",
+          "note": "Authoritative overview of vaccine use, safety and global immunisation policy."
+        },
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2023: press release",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2023/press-release/",
+          "free": true,
+          "level": "beginner",
+          "note": "Summarises the discoveries on nucleoside base modifications that enabled effective mRNA vaccines."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about mRNA vaccines is correct?",
+          "options": [
+            "They integrate into the host genome",
+            "They provide mRNA that is translated in the cytoplasm and then degraded",
+            "They contain live virus",
+            "They need no delivery vehicle"
+          ],
+          "answer": 1,
+          "explanation": "The mRNA is delivered in lipid nanoparticles, translated by ribosomes to make antigen, and degraded; it does not integrate."
+        },
+        {
+          "question": "Why are conjugate vaccines used for polysaccharide antigens?",
+          "options": [
+            "To recruit T cell help via a carrier protein",
+            "To make them live",
+            "To avoid adjuvants",
+            "To integrate DNA"
+          ],
+          "answer": 0,
+          "explanation": "Polysaccharides alone produce weak, T cell-independent responses. Linking them to a protein carrier recruits helper T cells and improves memory, especially in infants."
+        },
+        {
+          "question": "A key limitation of AAV vectors is:",
+          "options": [
+            "They cannot infect any tissue",
+            "Small cargo capacity of roughly 4.7 kb",
+            "They always integrate",
+            "They are enveloped viruses"
+          ],
+          "answer": 1,
+          "explanation": "AAV is a small virus with limited packaging capacity, restricting the size of genes that can be delivered."
+        },
+        {
+          "question": "CAR-T therapy is an example of:",
+          "options": [
+            "In vivo vaccination",
+            "Ex vivo engineering of a patient's T cells",
+            "Plant transformation",
+            "Fermentation"
+          ],
+          "answer": 1,
+          "explanation": "T cells are collected, engineered to express a chimeric antigen receptor, expanded in culture and returned to the patient."
+        }
+      ]
+    },
+    {
+      "id": "agricultural-biotechnology",
+      "title": "Agricultural biotechnology: tissue culture, transgenic and gene-edited crops",
+      "hours": 5,
+      "hook": "A banana plantation can be started from plantlets grown in a jar from a few cells of a clean parent plant, free of the diseases that normally travel in cuttings. The same toolbox of plant cell culture, Agrobacterium and now genome editing allows crops to resist insects, carry extra vitamins or tolerate herbicides, and each of these raises both agricultural promise and public debate.",
+      "learningObjectives": [
+        "Explain plant tissue culture principles and uses such as micropropagation and disease-free stock",
+        "Describe how Agrobacterium and particle bombardment deliver DNA to plants",
+        "Explain the mode of action of Bt toxins and herbicide tolerance traits",
+        "Describe the Golden Rice pathway engineering and its public-health goal",
+        "Compare transgenic and gene-edited crops in science and regulation",
+        "Evaluate environmental and socio-economic arguments for and against GM crops using evidence"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Totipotency",
+          "definition": "The ability of a plant cell to regenerate a whole plant under appropriate culture conditions."
+        },
+        {
+          "term": "Auxin and cytokinin balance",
+          "definition": "A higher cytokinin to auxin ratio tends to promote shoots, the reverse promotes roots, and intermediate levels promote callus; used to steer regeneration."
+        },
+        {
+          "term": "Micropropagation",
+          "definition": "Rapid clonal multiplication of plants from small explants in sterile culture, followed by hardening to soil."
+        },
+        {
+          "term": "Agrobacterium-mediated transformation",
+          "definition": "Use of the soil bacterium that transfers T-DNA into plant cells, with disarmed Ti plasmids carrying the gene of interest."
+        },
+        {
+          "term": "Particle bombardment",
+          "definition": "Shooting DNA-coated microparticles into plant tissue, useful for species less amenable to Agrobacterium."
+        },
+        {
+          "term": "Bt toxin",
+          "definition": "Crystal proteins from Bacillus thuringiensis that bind receptors in the gut of susceptible insects, causing pore formation and death; expressed in Bt crops."
+        },
+        {
+          "term": "Herbicide tolerance",
+          "definition": "Traits such as an altered EPSPS enzyme that allow crops to survive glyphosate application."
+        },
+        {
+          "term": "Golden Rice",
+          "definition": "Rice engineered to accumulate beta-carotene in the grain to help address vitamin A deficiency; the original design used genes from daffodil and a bacterium."
+        },
+        {
+          "term": "Marker-assisted selection",
+          "definition": "Using DNA markers linked to a trait to speed up conventional breeding without transferring genes between species."
+        },
+        {
+          "term": "Gene-edited crops",
+          "definition": "Crops modified with nucleases or base editors, sometimes without foreign DNA in the final plant, which several jurisdictions regulate differently from transgenic crops."
+        }
+      ],
+      "deeper": {
+        "beginner": "Plants have a remarkable ability: a few cells in a sterile jar with the right hormones can grow into a whole new plant. Biotechnologists use this to multiply healthy plants quickly and to regenerate plants after adding a new gene. A gene is often delivered by a soil bacterium that naturally moves DNA into plants, or fired in on tiny particles. Examples include crops that make an insect-specific protein or that contain extra vitamin precursors. The analogy of cutting and pasting a gene is helpful, but where and how the gene lands matters, so each new line is tested thoroughly.",
+        "intermediate": "In tissue culture, explants are surface sterilised and placed on a medium such as Murashige and Skoog with defined hormones; shoots are multiplied, rooted and acclimatised, giving uniform, pathogen-free planting material for crops such as banana and many ornamentals. For transformation, a disarmed Agrobacterium carries a T-DNA containing the gene and a selectable marker; transformed cells are selected on antibiotic or herbicide and regenerated. Bt crops express Cry proteins that are pore-forming toxins specific to certain insect orders and bind receptors absent in mammals, reducing insecticide use for targeted pests, though resistance management is needed. Golden Rice originally used a daffodil phytoene synthase and a bacterial desaturase to restore the carotenoid pathway in the endosperm, and a later version used a maize synthase to increase carotenoid levels. Large meta-analyses of GM crops generally report higher yields and reduced pesticide use on average, with variation across traits, regions and farmers.",
+        "advanced": "Event characterisation covers insertion number, flanking sequences, expression, and unintended effects, along with compositional analysis and allergenicity and toxicity assessment under the principle of substantial equivalence plus targeted tests. Environmental risk assessment examines gene flow, non-target organisms, resistance evolution and effects on agricultural practices. Gene editing creates changes from precise knockouts to base substitutions, and some regulatory systems exempt edited plants lacking foreign DNA while others regulate by process; detection and traceability thus become policy challenges. Socio-economic evaluations consider seed prices, intellectual property, market access and smallholder impacts, and show that outcomes depend on context. Developing disease-resistant and climate-resilient crops, including for orphan crops and staple foods in low-income regions, remains a major goal where public-sector research and regulatory capacity are decisive."
+      },
+      "commonMistakes": [
+        "Treating all GM crops as one thing; each trait, crop and context has different risks and benefits.",
+        "Saying Bt toxin is harmful to all animals; its specificity depends on gut receptors and conditions.",
+        "Claiming that gene-edited and transgenic crops are regulated identically everywhere; policies differ.",
+        "Assuming tissue culture always guarantees disease-free plants; clean stock and contamination control are needed."
+      ],
+      "videos": [
+        {
+          "youtubeId": "7TmcXYp8xu4",
+          "title": "Are GMOs Good or Bad? Genetic Engineering & Our Food",
+          "channel": "Kurzgesagt",
+          "level": "beginner",
+          "whyWatch": "A balanced animated overview of what GM crops are and the main arguments around them."
+        },
+        {
+          "youtubeId": "xw8hcX-bwL4",
+          "title": "Bt Crops | Biotechnology and its Applications | Biology | Khan Academy",
+          "channel": "Khan Academy India",
+          "level": "intermediate",
+          "whyWatch": "Explains how Bt toxin works and how Bt cotton was made."
+        },
+        {
+          "youtubeId": "L05d0_tkR_s",
+          "title": "The Road to Golden Rice",
+          "channel": "International Rice Research Institute",
+          "level": "intermediate",
+          "whyWatch": "A research institute's account of the development of Golden Rice and the nutritional rationale."
+        },
+        {
+          "youtubeId": "uSY6m1gqtYc",
+          "title": "Cloning Plants - Micropropagation (tissue culture) - GCSE Biology (9-1)",
+          "channel": "Mr Exham Biology",
+          "level": "beginner",
+          "whyWatch": "A clear short explanation of how plants are multiplied by tissue culture."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.287.5451.303",
+          "title": "Engineering the Provitamin A (beta-Carotene) Biosynthetic Pathway into (Carotenoid-Free) Rice Endosperm",
+          "authors": "Ye X, Al-Babili S, Kloti A et al",
+          "year": 2000,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The original Golden Rice paper, an excellent example of designing a multigene pathway and testing it in a crop.",
+          "readingQuestions": [
+            "Which enzymes needed to be added and why?",
+            "What limitations did the authors note?"
+          ]
+        },
+        {
+          "doi": "10.1371/journal.pone.0111629",
+          "title": "A Meta-Analysis of the Impacts of Genetically Modified Crops",
+          "authors": "Klumper W, Qaim M",
+          "year": 2014,
+          "journal": "PLoS ONE",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pone.0111629",
+          "whyItMatters": "A systematic synthesis of many field studies on agronomic and economic outcomes, helpful for evidence-based discussion of GM crops."
+        }
+      ],
+      "resources": [
+        {
+          "title": "ISAAA: International Service for the Acquisition of Agri-biotech Applications",
+          "provider": "ISAAA",
+          "type": "reference",
+          "url": "https://www.isaaa.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Pro-biotech organisation that publishes crop trait information and data; read critically alongside independent sources."
+        },
+        {
+          "title": "FAO biotechnology portal",
+          "provider": "Food and Agriculture Organization",
+          "type": "reference",
+          "url": "https://www.fao.org/biotechnology/en/",
+          "free": true,
+          "level": "beginner",
+          "note": "UN perspective on biotechnology for food and agriculture, including policy and capacity building."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2020: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "Context for CRISPR-Cas9, the tool now widely used for crop improvement."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A high cytokinin to auxin ratio in plant tissue culture generally promotes:",
+          "options": [
+            "Root formation",
+            "Shoot formation",
+            "Seed formation",
+            "Leaf senescence only"
+          ],
+          "answer": 1,
+          "explanation": "Relative hormone levels guide organogenesis: more cytokinin favours shoots, more auxin favours roots, intermediate levels promote callus."
+        },
+        {
+          "question": "How does Bt toxin kill susceptible insects?",
+          "options": [
+            "By inhibiting photosynthesis",
+            "By binding gut receptors and forming pores in midgut cells",
+            "By blocking DNA replication in leaves",
+            "By acidifying soil"
+          ],
+          "answer": 1,
+          "explanation": "Cry proteins are activated in the insect gut, bind specific receptors and form pores, causing cell lysis and death."
+        },
+        {
+          "question": "The primary aim of Golden Rice is to:",
+          "options": [
+            "Increase herbicide tolerance",
+            "Provide provitamin A in the grain to help reduce vitamin A deficiency",
+            "Make rice insect-proof",
+            "Delay ripening"
+          ],
+          "answer": 1,
+          "explanation": "Golden Rice accumulates beta-carotene in the endosperm, a provitamin A source for populations dependent on rice."
+        },
+        {
+          "question": "Which statement about regulation is most accurate?",
+          "options": [
+            "All countries regulate transgenic and gene-edited crops identically",
+            "Regulatory treatment of gene-edited crops without foreign DNA differs between jurisdictions",
+            "Regulators do not evaluate GM crops",
+            "GM crops are banned everywhere"
+          ],
+          "answer": 1,
+          "explanation": "Policy approaches vary: some regulate by product traits, others by process, and many treat certain edited crops differently from transgenic ones."
+        }
+      ]
+    },
+    {
+      "id": "environmental-biotechnology",
+      "title": "Environmental biotechnology: waste, pollution, energy and plastics",
+      "hours": 5,
+      "hook": "Every flush of a toilet in a city ends up feeding a microbial community engineered to clean the water, and the same logic of putting microbes to work can digest oil spills, turn farm waste into biogas and, very recently, break down plastic bottles with enzymes found in compost and in a Japanese recycling site.",
+      "learningObjectives": [
+        "Describe how biological wastewater treatment works, including activated sludge and nutrient removal",
+        "Explain anaerobic digestion stages and biogas production",
+        "Distinguish biostimulation, bioaugmentation and phytoremediation in bioremediation",
+        "Compare first- and second-generation biofuels and the lignocellulose challenge",
+        "Explain how PET-degrading enzymes were discovered and engineered",
+        "Evaluate the limits and risks of environmental release of engineered organisms"
+      ],
+      "keyConcepts": [
+        {
+          "term": "BOD and COD",
+          "definition": "Biochemical and chemical oxygen demand, measures of organic pollution in water."
+        },
+        {
+          "term": "Activated sludge",
+          "definition": "An aerobic process in which a dense microbial community oxidises organic matter in wastewater and flocculates for settling."
+        },
+        {
+          "term": "Nitrification and denitrification",
+          "definition": "Ammonia is oxidised to nitrate by aerobic bacteria, then nitrate is reduced to nitrogen gas by denitrifiers under low oxygen, removing nitrogen from water."
+        },
+        {
+          "term": "Anaerobic digestion",
+          "definition": "Sequential microbial hydrolysis, acidogenesis, acetogenesis and methanogenesis that convert organic waste into biogas (methane and carbon dioxide)."
+        },
+        {
+          "term": "Biostimulation",
+          "definition": "Adding nutrients or oxygen to encourage native degraders, as used after the Exxon Valdez oil spill."
+        },
+        {
+          "term": "Bioaugmentation",
+          "definition": "Adding specific microbes with desired degradation capacity to a contaminated site."
+        },
+        {
+          "term": "Phytoremediation",
+          "definition": "Using plants to take up, stabilise or degrade contaminants in soil or water."
+        },
+        {
+          "term": "Lignocellulosic ethanol",
+          "definition": "Ethanol from plant cell wall material, requiring pretreatment, cellulase enzymes and fermentation of mixed sugars."
+        },
+        {
+          "term": "PETase and MHETase",
+          "definition": "Enzymes from Ideonella sakaiensis that hydrolyse polyethylene terephthalate to mono(2-hydroxyethyl) terephthalate and then to terephthalic acid and ethylene glycol."
+        },
+        {
+          "term": "Environmental release risk assessment",
+          "definition": "Evaluation of persistence, gene transfer and ecological effects before releasing engineered organisms."
+        }
+      ],
+      "deeper": {
+        "beginner": "Microbes are natural recyclers. In a sewage plant, bacteria eat the dissolved pollutants, then clump together so they can be separated from clean water. In a sealed tank without air, other microbes turn manure or food waste into biogas, a fuel. Some bacteria can digest oil, and scientists have found enzymes that can break down certain plastics. The recycler analogy has limits: microbes work at their own pace and need the right conditions, so a plan that works in the lab can stall in a polluted field.",
+        "intermediate": "Conventional wastewater treatment begins with physical screening and settling, followed by secondary biological treatment in which heterotrophic bacteria oxidise organic carbon; nitrogen is removed by nitrification and denitrification, and phosphorus by enhanced biological uptake or chemical precipitation. Sludge can be digested anaerobically to produce biogas. Bioremediation of hydrocarbons relies on native degraders, and nutrient addition often yields more benefit than adding foreign strains, which may not survive. Biofuel production from sugarcane or starch uses yeast fermentation, whereas lignocellulosic ethanol requires costly pretreatment and enzymes to release fermentable sugars. In 2016, a bacterium able to grow on PET was reported to use two enzymes to degrade the polymer; later engineering of related hydrolases produced variants that depolymerise PET at high temperature in hours, supporting enzymatic recycling concepts.",
+        "advanced": "Performance of mixed microbial communities depends on ecology: floc formation, sludge age, competition between nitrifiers and heterotrophs, and anammox bacteria that anaerobically oxidise ammonium with nitrite. Metagenomics now reveals the identity and function of uncultured community members. In anaerobic digesters, syntrophy between acetogens and methanogens means that hydrogen partial pressure and volatile fatty acid accumulation must be controlled. For plastics, crystallinity limits enzyme action, so processes use amorphous PET at temperatures near the glass transition, and engineered enzymes combine thermostability with activity; economics also depend on pretreatment, collection and downstream monomer repolymerisation. For contaminated sites, monitored natural attenuation, stable isotope probing and lines of evidence of degradation are needed. Policy must consider circular-economy alternatives and weigh containment, regulatory approval and public acceptance for engineered strains."
+      },
+      "commonMistakes": [
+        "Assuming adding a degrader strain always speeds clean-up; native communities and nutrients are often decisive.",
+        "Confusing BOD with COD; BOD measures biodegradable oxygen demand.",
+        "Describing methane as the only product of anaerobic digestion; carbon dioxide and other compounds are also formed.",
+        "Overstating plastic-degrading enzymes as a complete solution; scale, pretreatment and economics matter."
+      ],
+      "videos": [
+        {
+          "youtubeId": "uAyVcR17COs",
+          "title": "What is Bioremediation?",
+          "channel": "Microbiology Society",
+          "level": "beginner",
+          "whyWatch": "A short society-produced explanation of how microbes are used to clean contaminated environments."
+        },
+        {
+          "youtubeId": "G7KS5POf1UM",
+          "title": "Bioremediation: How biology heals the earth naturally | Shaily Mahendra | TEDxManhattanBeach",
+          "channel": "TEDx Talks",
+          "level": "intermediate",
+          "whyWatch": "An environmental engineer explains real-world bioremediation challenges and successes."
+        },
+        {
+          "youtubeId": "Y-GqbPmSuj4",
+          "title": "PETase - Plastic Degrading Enzyme",
+          "channel": "University of Portsmouth",
+          "level": "intermediate",
+          "whyWatch": "A research group explains how PETase was studied and engineered for plastic breakdown."
+        },
+        {
+          "youtubeId": "JALTcEIZoZw",
+          "title": "How Ethanol is Produced",
+          "channel": "Renewable Fuels Association",
+          "level": "beginner",
+          "whyWatch": "An industry trade-group walk-through of fermentation-based ethanol production; read alongside independent sustainability analyses."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.aad6359",
+          "title": "A bacterium that degrades and assimilates poly(ethylene terephthalate)",
+          "authors": "Yoshida S, Hiraga K, Takehana T et al",
+          "year": 2016,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Reports the isolation of a bacterium that uses PET as a carbon source and the enzymes that degrade it, a starting point for plastic biodegradation research."
+        },
+        {
+          "doi": "10.1038/s41586-020-2149-4",
+          "title": "An engineered PET depolymerase to break down and recycle plastic bottles",
+          "authors": "Tournier V, Topham CM, Gilles A et al",
+          "year": 2020,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Shows how protein engineering and process design allow enzymes to depolymerise post-consumer PET and recycle the monomers."
+        }
+      ],
+      "resources": [
+        {
+          "title": "OpenStax Microbiology",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Includes material on microbial metabolism, biogeochemical cycles and applications in environmental microbiology."
+        },
+        {
+          "title": "FAO biotechnology portal",
+          "provider": "Food and Agriculture Organization",
+          "type": "reference",
+          "url": "https://www.fao.org/biotechnology/en/",
+          "free": true,
+          "level": "beginner",
+          "note": "Includes bioenergy and environmental applications, with policy perspectives."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for PETase and cutinase structures to see how enzyme active sites accommodate plastic substrates."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In wastewater treatment, denitrification:",
+          "options": [
+            "Converts ammonia to nitrate in oxygen-rich conditions",
+            "Reduces nitrate to nitrogen gas under low oxygen",
+            "Produces methane",
+            "Fixes nitrogen into proteins"
+          ],
+          "answer": 1,
+          "explanation": "Denitrifying bacteria use nitrate as a terminal electron acceptor when oxygen is scarce, releasing nitrogen gas and removing nitrogen from the water."
+        },
+        {
+          "question": "Which process adds nutrients to stimulate native oil-degrading microbes?",
+          "options": [
+            "Bioaugmentation",
+            "Biostimulation",
+            "Bioleaching",
+            "Phytoextraction"
+          ],
+          "answer": 1,
+          "explanation": "Biostimulation supplies limiting nutrients or oxygen to boost the activity of indigenous degraders."
+        },
+        {
+          "question": "What is the final main gas mixture produced by anaerobic digestion?",
+          "options": [
+            "Methane and carbon dioxide",
+            "Oxygen and hydrogen",
+            "Nitrogen and argon",
+            "Ammonia only"
+          ],
+          "answer": 0,
+          "explanation": "Methanogens generate methane, with carbon dioxide as the other major component, together called biogas."
+        },
+        {
+          "question": "Why is crystallinity a challenge for enzymatic PET recycling?",
+          "options": [
+            "Crystalline regions are less accessible to enzymes",
+            "Crystalline PET is liquid",
+            "It makes PET soluble in water",
+            "It prevents any pretreatment"
+          ],
+          "answer": 0,
+          "explanation": "Enzymes act more readily on amorphous regions; highly crystalline PET resists hydrolysis, so processes use amorphous material and elevated temperature."
+        }
+      ]
+    },
+    {
+      "id": "food-biotechnology",
+      "title": "Food biotechnology: fermentation, probiotics and alternative proteins",
+      "hours": 5,
+      "hook": "Humans have been using biotechnology for millennia without knowing it: the yoghurt, the leavened bread, the fermented beverage. Today the same principle extends to making dairy proteins without cows, protein-rich fungal biomass, and meat grown from animal cells, and old and new methods share the same questions of safety, flavour and cost.",
+      "learningObjectives": [
+        "Explain the microbiology of lactic acid fermentation in yoghurt and cheese",
+        "Describe the roles of yeast and moulds in bread, alcohol and koji-based foods",
+        "Define probiotics, prebiotics and fermented foods according to consensus statements",
+        "Describe precision fermentation, biomass fermentation and cultivated meat",
+        "Explain the role of food enzymes and safety frameworks such as HACCP",
+        "Critically assess health and sustainability claims of novel foods"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Lactic acid bacteria (LAB)",
+          "definition": "Bacteria such as Lactobacillus and Streptococcus thermophilus that ferment sugars to lactic acid, lowering pH and preserving food."
+        },
+        {
+          "term": "Yoghurt and cheese",
+          "definition": "Yoghurt arises from LAB acidifying milk to coagulate casein; cheese uses acid and/or rennet (chymosin) to curdle milk followed by ripening."
+        },
+        {
+          "term": "Yeast fermentation",
+          "definition": "Saccharomyces cerevisiae converts sugars to ethanol and carbon dioxide; the CO2 leavens bread and the ethanol is the basis of brewing and winemaking."
+        },
+        {
+          "term": "Koji and mould fermentation",
+          "definition": "Aspergillus oryzae produces amylases and proteases that break down starches and proteins in foods such as soy sauce and miso."
+        },
+        {
+          "term": "Probiotic definition",
+          "definition": "Live microorganisms that, when given in adequate amounts, confer a health benefit; benefits are strain-specific."
+        },
+        {
+          "term": "Fermented foods versus probiotics",
+          "definition": "Fermented foods are made through microbial growth, but not all contain live microbes with a demonstrated health benefit."
+        },
+        {
+          "term": "Precision fermentation",
+          "definition": "Using microbial hosts engineered to produce specific food ingredients such as milk proteins or enzymes, which are then purified."
+        },
+        {
+          "term": "Biomass fermentation",
+          "definition": "Growing microbial or fungal biomass (for example mycoprotein) as a protein-rich food."
+        },
+        {
+          "term": "Cultivated meat",
+          "definition": "Meat produced by growing animal cells in bioreactors on scaffolds, with challenges in growth medium cost, scale and texture."
+        },
+        {
+          "term": "HACCP",
+          "definition": "Hazard Analysis and Critical Control Points, a systematic approach to identifying and controlling food-safety hazards."
+        }
+      ],
+      "deeper": {
+        "beginner": "Many of our everyday foods are made by microbes. In yoghurt, friendly bacteria turn milk sugar into acid, which thickens the milk and keeps it safe. In bread, yeast produces gas that makes the dough rise. Newer food technologies use microbes in tanks to make specific ingredients, such as a milk protein, or grow animal cells to make meat. The cooking analogy helps, but food biotechnology must also show the product is safe and consistent, and that health claims are supported by evidence.",
+        "intermediate": "In yoghurt production, Streptococcus thermophilus and Lactobacillus delbrueckii subsp. bulgaricus co-ferment lactose to lactic acid, lowering pH to around 4.5 and causing casein to coagulate. In cheese, chymosin cleaves kappa-casein to induce curd formation; recombinant chymosin produced by fermentation has largely replaced calf rennet. Yeasts convert glucose to ethanol and CO2 via glycolysis and fermentation; koji moulds supply hydrolytic enzymes. Probiotics are defined by strain, dose and demonstrated benefit, and an international scientific association consensus statement distinguishes fermented foods from probiotics. Precision fermentation expresses a protein such as beta-lactoglobulin in a microbial host, followed by purification and formulation. Cultivated meat requires cell lines, growth medium with growth factors, scaffolds and bioreactors, and current limits include cost and scale.",
+        "advanced": "Starter culture selection considers acidification rate, texture, flavour compounds, phage resistance and safety, and genomic analyses allow tracking of strain performance. Fermented-food microbiomes vary with raw materials and environment, and spontaneous fermentations (such as many traditional foods) include ecological successions of LAB and yeasts. The evidence base for probiotics is heterogeneous: effects are strain- and condition-specific, trial quality varies, and generalised claims are unwarranted. Novel foods are assessed for allergenicity, toxicology, nutritional composition and manufacturing consistency, with regulatory pathways differing between jurisdictions. Techno-economic and life-cycle analyses show that alternative proteins' environmental claims depend on energy sources, feedstocks and scale; for cultivated meat, bioprocess challenges such as cell density, medium recycling and growth factor cost remain major hurdles. Food enzymes, flavour compounds and sweeteners produced by fermentation illustrate how industrial biotechnology reaches consumers without being obvious."
+      },
+      "commonMistakes": [
+        "Assuming any yoghurt or fermented food is a probiotic with a proven health effect.",
+        "Believing that precision-fermented products contain the microbes used to make them; the target protein is purified.",
+        "Treating alternative proteins as automatically more sustainable regardless of energy source and process.",
+        "Neglecting food safety frameworks when discussing new products."
+      ],
+      "videos": [
+        {
+          "youtubeId": "IsTVU_Zu9QE",
+          "title": "Bacteria in Yogurt Fermentation | Microbes in Human Welfare | Biology | Khan Academy",
+          "channel": "Khan Academy India",
+          "level": "beginner",
+          "whyWatch": "Explains how lactic acid bacteria turn milk into yoghurt and the biology behind it."
+        },
+        {
+          "youtubeId": "2711Y6-8IIg",
+          "title": "Types of Fermentation Explained | Lactic, Alcoholic, Acetic & More",
+          "channel": "Food Science Made Simple",
+          "level": "beginner",
+          "whyWatch": "A short comparison of fermentation types and the foods they produce."
+        },
+        {
+          "youtubeId": "kG4EO-P93Dk",
+          "title": "How is cultivated meat (a.k.a. cultured meat) made exactly?",
+          "channel": "Mosa Meat",
+          "level": "intermediate",
+          "whyWatch": "A company's description of the cultivation steps; use it to understand the process but weigh it against independent assessments."
+        },
+        {
+          "youtubeId": "pBmBhL5rrTo",
+          "title": "What is Precision Fermentation? Here's How a Biotech Company is Using It to Revolutionize Dairy",
+          "channel": "TurtleTree",
+          "level": "intermediate",
+          "whyWatch": "A company overview of how fermentation can produce specific dairy ingredients; a promotional source so check claims critically."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/s41575-020-00390-5",
+          "title": "The International Scientific Association for Probiotics and Prebiotics (ISAPP) consensus statement on fermented foods",
+          "authors": "Marco ML, Sanders ME, Ganzle M et al",
+          "year": 2021,
+          "journal": "Nature Reviews Gastroenterology & Hepatology",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1038/s41575-020-00390-5",
+          "whyItMatters": "Provides a consensus definition of fermented foods and clarifies how they differ from probiotics, essential for avoiding common misuse of the terms."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Guidelines for the Evaluation of Probiotics in Food",
+          "provider": "FAO/WHO",
+          "type": "reference",
+          "url": "https://www.fao.org/3/a0512e/a0512e.pdf",
+          "free": true,
+          "level": "intermediate",
+          "note": "The working-group guidelines that set out how probiotic claims should be evaluated."
+        },
+        {
+          "title": "OpenStax Microbiology",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Covers fermentation pathways and microbes in food."
+        },
+        {
+          "title": "FAO biotechnology portal",
+          "provider": "Food and Agriculture Organization",
+          "type": "reference",
+          "url": "https://www.fao.org/biotechnology/en/",
+          "free": true,
+          "level": "beginner",
+          "note": "UN overview of food-related biotechnology, including fermentation and policy."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What causes milk to coagulate during yoghurt making?",
+          "options": [
+            "Acid produced by lactic acid bacteria lowers pH and casein aggregates",
+            "Yeast produces carbon dioxide",
+            "Salt addition",
+            "Freezing"
+          ],
+          "answer": 0,
+          "explanation": "LAB ferment lactose to lactic acid, and the falling pH destabilises casein micelles, causing a gel to form."
+        },
+        {
+          "question": "Which description best fits precision fermentation?",
+          "options": [
+            "Growing whole animal cells on scaffolds",
+            "Using engineered microbes to produce a defined ingredient that is then purified",
+            "Spontaneous souring of food",
+            "Selective breeding of cattle"
+          ],
+          "answer": 1,
+          "explanation": "Precision fermentation uses microbial hosts expressing a gene for a specific protein or compound, which is recovered and purified."
+        },
+        {
+          "question": "According to consensus definitions, probiotics are:",
+          "options": [
+            "Any fermented food",
+            "Live microbes that confer a health benefit when administered in adequate amounts",
+            "Dead microbes only",
+            "Dietary fibres"
+          ],
+          "answer": 1,
+          "explanation": "The probiotic definition requires live microbes, adequate dose and a demonstrated benefit, which is strain-specific."
+        },
+        {
+          "question": "What does HACCP aim to do?",
+          "options": [
+            "Improve flavour",
+            "Identify and control food safety hazards at critical points in production",
+            "Create new strains",
+            "Package foods attractively"
+          ],
+          "answer": 1,
+          "explanation": "HACCP is a preventive system that identifies hazards and defines critical control points and monitoring to ensure food safety."
+        }
+      ]
+    },
+    {
+      "id": "diagnostics-biosensors",
+      "title": "Molecular diagnostics and biosensors",
+      "hours": 5,
+      "hook": "A person with diabetes pricks a finger and gets a number in seconds, thanks to an enzyme on a tiny electrode; a clinic detects a virus by copying a few of its RNA molecules into billions. Diagnostics turns biochemistry into decisions, and the same ideas, from enzymes to nucleic acid amplification to CRISPR, are being rebuilt into cheap tests for places without a laboratory.",
+      "learningObjectives": [
+        "Explain the principle of PCR-based and isothermal (LAMP) nucleic acid detection",
+        "Describe how CRISPR-based diagnostics (Cas12 and Cas13) use collateral cleavage for readout",
+        "Describe the components of a biosensor and the generations of enzymatic glucose sensors",
+        "Interpret sensitivity, specificity, limit of detection and predictive value",
+        "Compare laboratory-based and point-of-care testing and lateral flow formats",
+        "Explain why disease prevalence affects the meaning of a positive test"
+      ],
+      "keyConcepts": [
+        {
+          "term": "PCR and qPCR",
+          "definition": "Thermal cycling with a DNA polymerase amplifies a target; in qPCR a fluorescent signal allows real-time quantification; RT-PCR first converts RNA to DNA."
+        },
+        {
+          "term": "LAMP",
+          "definition": "Loop-mediated isothermal amplification using a strand-displacing polymerase and multiple primers at a constant temperature near 60 to 65 degrees C, suitable for simple devices."
+        },
+        {
+          "term": "CRISPR diagnostics",
+          "definition": "Platforms in which Cas12 or Cas13, once activated by target recognition, cut reporter molecules nonspecifically, giving a fluorescent or lateral-flow signal (examples: DETECTR and SHERLOCK)."
+        },
+        {
+          "term": "Lateral flow assay",
+          "definition": "A paper-strip test in which labelled antibodies or probes bind the analyte and produce a visible line; used in pregnancy and rapid antigen tests."
+        },
+        {
+          "term": "ELISA",
+          "definition": "Enzyme-linked immunosorbent assay detecting antigens or antibodies via enzyme-linked antibodies and a colour-forming substrate."
+        },
+        {
+          "term": "Biosensor",
+          "definition": "A device with a biological recognition element (enzyme, antibody, nucleic acid) coupled to a transducer that converts the interaction into a measurable signal."
+        },
+        {
+          "term": "Enzyme electrode",
+          "definition": "The principle of the glucose sensor: glucose oxidase converts glucose and the resulting electron transfer is measured as current, with mediators in later generations."
+        },
+        {
+          "term": "Sensitivity and specificity",
+          "definition": "Sensitivity is the probability of a positive test in people with the condition; specificity is the probability of a negative test in people without it."
+        },
+        {
+          "term": "Positive predictive value",
+          "definition": "The chance that a positive result is a true positive, which depends strongly on prevalence."
+        },
+        {
+          "term": "Limit of detection",
+          "definition": "The lowest concentration reliably distinguished from background."
+        }
+      ],
+      "deeper": {
+        "beginner": "A diagnostic test needs two things: something that recognises the target, and something that turns recognition into a signal you can see. For nucleic acid tests, the signal is created by copying the target many times so that a tiny amount becomes detectable. A glucose meter uses an enzyme that reacts with sugar in blood and produces a small electrical current. A positive result does not always mean disease: how likely it is to be right depends on how common the disease is in the people being tested, which is why the same test can behave differently in a hospital and a village.",
+        "intermediate": "PCR amplifies DNA through cycles of denaturation, annealing and extension; for RNA viruses, reverse transcription precedes amplification, and qPCR reports amplification in real time with fluorescent probes or dyes. LAMP uses 4 to 6 primers and a polymerase that displaces strands, producing large DNA products at constant temperature and enabling simple heat blocks and visual readouts, although primer design is more complex and false positives from carry-over are a risk. In CRISPR diagnostics, the target nucleic acid, often pre-amplified, activates Cas12 or Cas13, which then cleaves reporter molecules, giving a signal on a lateral flow strip. The first-generation glucose sensors measured oxygen consumption or hydrogen peroxide production by glucose oxidase; second-generation sensors use artificial mediators, and third-generation approaches aim for direct electron transfer. Evaluating a test requires comparison with a reference standard and calculation of sensitivity, specificity and predictive values.",
+        "advanced": "Analytical performance (limit of detection, interference, reproducibility) must be distinguished from clinical performance in the target population. Predictive values follow from Bayes' theorem: with a low prevalence, even a highly specific test yields many false positives, while a high prevalence gives better positive predictive value. Pre-analytical factors (sampling, transport, inhibitors) often dominate error. Isothermal amplification and CRISPR readouts raise issues of contamination control, multiplexing and quantification; point-of-care devices integrate sample preparation, amplification and detection in microfluidic formats. Continuous glucose monitoring uses subcutaneous enzyme electrodes with calibration and lag relative to blood glucose. Regulatory frameworks require analytical and clinical validation, quality systems and post-market surveillance, and accessible diagnostics for low-resource settings are guided by performance targets such as affordability and robustness without cold chain."
+      },
+      "commonMistakes": [
+        "Assuming a test with 99 percent specificity always has a high positive predictive value regardless of prevalence.",
+        "Confusing a positive PCR result (nucleic acid present) with proof of infectious virus.",
+        "Calling LAMP 'PCR' because both amplify DNA; LAMP is isothermal and uses different chemistry.",
+        "Overlooking sample collection and handling as major sources of error."
+      ],
+      "animation": "pcr-cycles",
+      "videos": [
+        {
+          "youtubeId": "UJE9SBMrh20",
+          "title": "Loop mediated isothermal amplification (LAMP protocol explained)",
+          "channel": "Henrik's Lab",
+          "level": "intermediate",
+          "whyWatch": "A concise animated explanation of how LAMP amplifies DNA at one temperature."
+        },
+        {
+          "youtubeId": "TkcCBRqtvDA",
+          "title": "Sherlock: Detecting disease with CRISPR",
+          "channel": "Broad Institute",
+          "level": "intermediate",
+          "whyWatch": "Explains how Cas13 collateral activity was turned into a diagnostic readout."
+        },
+        {
+          "youtubeId": "e7SfWhfKf9s",
+          "title": "CRISPR-Based Diagnostic Tools - A CRISPR Whiteboard Lesson",
+          "channel": "Innovative Genomics Institute",
+          "level": "intermediate",
+          "whyWatch": "A whiteboard-style explanation comparing Cas12- and Cas13-based tests."
+        },
+        {
+          "youtubeId": "chuvGswOLKs",
+          "title": "How Does a Glucose Meter Work?",
+          "channel": "History of Simple Things",
+          "level": "beginner",
+          "whyWatch": "Walks through the enzyme-electrode principle behind a familiar biosensor."
+        },
+        {
+          "youtubeId": "W95w3D2ZtUk",
+          "title": "What is a biosensor?",
+          "channel": "SensUs",
+          "level": "beginner",
+          "whyWatch": "A short introduction to the idea of a biosensor from a student competition on medical diagnostics."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/nar/28.12.e63",
+          "title": "Loop-mediated isothermal amplification of DNA",
+          "authors": "Notomi T, Okayama H, Masubuchi H et al",
+          "year": 2000,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1093/nar/28.12.e63",
+          "whyItMatters": "The original description of LAMP, a technique now widely used for field and point-of-care testing."
+        },
+        {
+          "doi": "10.1126/science.aam9321",
+          "title": "Nucleic acid detection with CRISPR-Cas13a/C2c2",
+          "authors": "Gootenberg JS, Abudayyeh OO, Lee JW et al",
+          "year": 2017,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Introduced SHERLOCK, showing that Cas13 collateral cleavage can be used for sensitive nucleic acid detection."
+        },
+        {
+          "doi": "10.1126/science.aar6245",
+          "title": "CRISPR-Cas12a target binding unleashes indiscriminate single-stranded DNase activity",
+          "authors": "Chen JS, Ma E, Harrington LB et al",
+          "year": 2018,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6628903/",
+          "whyItMatters": "Describes the discovery of Cas12a collateral activity and its use in DETECTR diagnostics."
+        },
+        {
+          "doi": "10.1021/cr068123a",
+          "title": "Electrochemical Glucose Biosensors",
+          "authors": "Wang J",
+          "year": 2008,
+          "journal": "Chemical Reviews",
+          "level": "advanced",
+          "whyItMatters": "A comprehensive review of how glucose sensors work, from first-generation oxygen-based designs to mediator and direct electron transfer concepts."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Laboratory biosafety manual, 4th edition",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240011311",
+          "free": true,
+          "level": "intermediate",
+          "note": "Risk-based guidance for handling clinical and microbial samples safely in diagnostic and research laboratories."
+        },
+        {
+          "title": "PCR and sequencing concepts: Molecular Biology of the Cell",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Background on nucleic acid amplification and detection methods in the methods chapter."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2020: popular information",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "Background on the CRISPR-Cas systems that underlie CRISPR diagnostics."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the key feature of LAMP?",
+          "options": [
+            "It needs a thermocycler for cycling temperatures",
+            "It amplifies DNA at a constant temperature using a strand-displacing polymerase",
+            "It only works with RNA",
+            "It uses antibodies"
+          ],
+          "answer": 1,
+          "explanation": "LAMP runs isothermally, typically at about 60 to 65 degrees C, with a strand-displacing polymerase and several primers."
+        },
+        {
+          "question": "In a CRISPR-Cas12 diagnostic, what produces the signal?",
+          "options": [
+            "Cas12 cutting the genome of the patient",
+            "Target-activated cleavage of reporter nucleic acids",
+            "Translation of the guide RNA",
+            "Cas12 binding to antibodies"
+          ],
+          "answer": 1,
+          "explanation": "After recognising the target, Cas12 becomes activated and cleaves nearby reporter molecules, releasing a fluorescent or visible signal."
+        },
+        {
+          "question": "A highly specific test is used in a population with very low disease prevalence. The positive predictive value is likely to be:",
+          "options": [
+            "Very high",
+            "Lower than expected because many positives will be false",
+            "Exactly 50 percent",
+            "Independent of prevalence"
+          ],
+          "answer": 1,
+          "explanation": "With low prevalence, even a small false-positive rate among the many healthy people generates many false positives relative to true cases."
+        },
+        {
+          "question": "The core of the glucose biosensor is:",
+          "options": [
+            "An antibody against insulin",
+            "An enzyme (glucose oxidase or dehydrogenase) coupled to an electrode",
+            "A DNA probe",
+            "A pH indicator dye"
+          ],
+          "answer": 1,
+          "explanation": "Glucose is oxidised by the enzyme and the resulting electron flow, directly or via a mediator, is measured as current proportional to glucose concentration."
+        }
+      ]
+    },
+    {
+      "id": "biosafety-ethics-ip-regulation",
+      "title": "Biosafety, ethics, intellectual property and regulation",
+      "hours": 3,
+      "hook": "In 1975, scientists gathered at Asilomar to ask whether their own new tools might be dangerous and decided to set rules before they learned the answer. Every biotechnology product still travels through the same questions: is it safe, who owns it, who benefits, and who decides?",
+      "learningObjectives": [
+        "Explain biosafety levels and the principle of risk assessment",
+        "Describe the origins and significance of the Asilomar conference",
+        "Summarise the Cartagena Protocol on Biosafety and the idea of advance informed agreement",
+        "Explain the basic criteria for patentability and what is excluded from patenting",
+        "Describe the stages of clinical development and regulatory approval for a biological product",
+        "Discuss ethical issues of genome editing, access and benefit-sharing"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Biosafety levels (BSL 1 to 4)",
+          "definition": "Graded containment levels, with practices and facilities matched to the risk of the agents handled."
+        },
+        {
+          "term": "Risk assessment",
+          "definition": "Evaluation of hazard, likelihood and consequence to decide on containment and mitigation, rather than applying rules mechanically."
+        },
+        {
+          "term": "Asilomar 1975",
+          "definition": "A meeting that led to guidelines and containment principles for recombinant DNA research, an early model of scientific self-governance."
+        },
+        {
+          "term": "Cartagena Protocol on Biosafety",
+          "definition": "An international agreement under the Convention on Biological Diversity regulating transboundary movement of living modified organisms, including advance informed agreement."
+        },
+        {
+          "term": "Nagoya Protocol",
+          "definition": "An agreement on access to genetic resources and fair and equitable sharing of benefits arising from their use."
+        },
+        {
+          "term": "Patentability criteria",
+          "definition": "Generally novelty, inventive step (non-obviousness) and industrial applicability; discoveries of natural products as such may not be patentable, but isolated or engineered forms can be, depending on law."
+        },
+        {
+          "term": "Patent, trade secret and plant breeders' rights",
+          "definition": "Different tools to protect inventions or varieties, with different scope, duration and disclosure requirements."
+        },
+        {
+          "term": "Clinical trial phases",
+          "definition": "Phase 1 tests safety and dosing, phase 2 explores efficacy and side effects, phase 3 confirms efficacy in larger groups, and phase 4 monitors after approval."
+        },
+        {
+          "term": "Heritable genome editing",
+          "definition": "Editing of germline or embryos so that changes are passed to descendants, widely regarded as ethically contentious and prohibited or restricted in many places."
+        },
+        {
+          "term": "Dual-use research",
+          "definition": "Research that can be used for beneficial purposes but also misused, requiring oversight and responsible conduct."
+        }
+      ],
+      "deeper": {
+        "beginner": "Biotechnology can help many people, but it can also create risks, so rules and ethics matter. Laboratories are graded by how dangerous the organisms are, and the more dangerous the organism, the stricter the safety practices. New products must pass safety and efficacy testing before they are approved. Inventions can be protected by patents so that inventors can recover costs, but this raises questions about access and fairness. The rulebook analogy fits, but the rules differ between countries and they change as the technology changes.",
+        "intermediate": "Biosafety is based on risk assessment of the organism, its handling, and the work environment, and defines containment levels and practices. The Asilomar meeting of 1975 recommended containment proportional to risk and the use of disabled hosts, and it shaped later guidelines. The Cartagena Protocol sets rules for the transboundary movement of living modified organisms, including notification, risk assessment and decision-making by importing countries. A patent grants exclusive rights for a limited time in exchange for disclosure; requirements include novelty, an inventive step and industrial applicability, and countries differ on what biological material is patentable. Drug and biologic development proceeds through preclinical studies and phased clinical trials under good clinical practice, followed by regulatory review and post-market monitoring. Ethical analysis draws on principles such as autonomy, beneficence, non-maleficence and justice.",
+        "advanced": "Regulatory approaches differ in whether they regulate by process (how a product was made) or by product (its characteristics). International agreements interact with national law, and capacity constraints in developing countries affect implementation. Intellectual property in biotechnology involves debates about gene patents, access to medicines and technology transfer, TRIPS obligations, and mechanisms such as compulsory licensing and patent pools. Governance of genome editing has produced international statements and recommendations that call for strong oversight of any clinical use in embryos, with calls for transparent and inclusive deliberation. Dual-use research of concern and the possibility of misuse of synthetic biology tools require biosecurity frameworks, screening of DNA synthesis orders and a culture of responsibility among scientists. Equity considerations include benefit sharing from genetic resources, affordability of biologics and biosimilars, and inclusion of low- and middle-income countries in clinical research and manufacturing."
+      },
+      "commonMistakes": [
+        "Believing that a higher biosafety level is always required; containment should match the assessed risk.",
+        "Assuming that natural genes can never be patented or always can; the law differs by jurisdiction and form.",
+        "Equating ethics with legality; some practices are legal but ethically contested.",
+        "Ignoring the Nagoya Protocol when collecting biological samples from other countries."
+      ],
+      "videos": [
+        {
+          "youtubeId": "g23oM-VqT_M",
+          "title": "Asilomar '75: The Beginning of the Future",
+          "channel": "NIH Office of Science Policy",
+          "level": "intermediate",
+          "whyWatch": "A documentary on the Asilomar meeting that established early norms for recombinant DNA research."
+        },
+        {
+          "youtubeId": "YAIX2_QXmwY",
+          "title": "The Story of Recombinant DNA with Janet Mertz & Nobel Laureate Paul Berg",
+          "channel": "iBiology",
+          "level": "intermediate",
+          "whyWatch": "Participants recount the discovery of recombinant DNA techniques and the safety debate that followed."
+        },
+        {
+          "youtubeId": "QKuu4x1huxA",
+          "title": "Introduction to the Cartagena Protocol on Biosafety",
+          "channel": "Convention on Biological Diversity",
+          "level": "beginner",
+          "whyWatch": "A brief official introduction to what the protocol covers and how it works."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.72.6.1981",
+          "title": "Summary statement of the Asilomar conference on recombinant DNA molecules",
+          "authors": "Berg P, Baltimore D, Brenner S, Roblin RO, Singer MF",
+          "year": 1975,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1073/pnas.72.6.1981",
+          "whyItMatters": "The statement that proposed containment principles for recombinant DNA work; it is a short primary source on how scientists approached self-regulation.",
+          "readingQuestions": [
+            "What principles for containment did the authors propose?",
+            "Which experiments did they recommend deferring?"
+          ]
+        },
+        {
+          "doi": "10.1038/d41586-019-00726-5",
+          "title": "Adopt a moratorium on heritable genome editing",
+          "authors": "Lander ES, Baylis F, Zhang F et al",
+          "year": 2019,
+          "journal": "Nature",
+          "level": "intermediate",
+          "openAccessUrl": "https://doi.org/10.1038/d41586-019-00726-5",
+          "whyItMatters": "A call by scientists and ethicists for a global pause on clinical germline editing, useful for seeing how governance proposals are argued."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biosafety and the Cartagena Protocol",
+          "provider": "Convention on Biological Diversity",
+          "type": "reference",
+          "url": "https://www.cbd.int/biosafety/",
+          "free": true,
+          "level": "beginner",
+          "note": "Official source for the protocol text, parties and guidance on risk assessment."
+        },
+        {
+          "title": "Access and benefit-sharing (Nagoya Protocol)",
+          "provider": "Convention on Biological Diversity",
+          "type": "reference",
+          "url": "https://www.cbd.int/abs/",
+          "free": true,
+          "level": "beginner",
+          "note": "Explains obligations when accessing genetic resources and sharing benefits."
+        },
+        {
+          "title": "Patents overview",
+          "provider": "World Intellectual Property Organization",
+          "type": "reference",
+          "url": "https://www.wipo.int/patents/en/",
+          "free": true,
+          "level": "beginner",
+          "note": "Introduces what patents are, how they are filed and international systems."
+        },
+        {
+          "title": "Laboratory biosafety manual, 4th edition",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240011311",
+          "free": true,
+          "level": "intermediate",
+          "note": "A risk-based approach to laboratory biosafety, useful for understanding containment practices."
+        },
+        {
+          "title": "Human genome editing: recommendations",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240030381",
+          "free": true,
+          "level": "intermediate",
+          "note": "International recommendations on governance of human genome editing."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the central idea of advance informed agreement in the Cartagena Protocol?",
+          "options": [
+            "Exporters must obtain consent of the importing country before first transboundary movement of certain living modified organisms",
+            "All GM products are banned",
+            "Patents are cancelled",
+            "Only laboratories may handle GMOs"
+          ],
+          "answer": 0,
+          "explanation": "Importing countries must receive notification and information and may decide whether to accept the first shipment of certain LMOs, based on risk assessment."
+        },
+        {
+          "question": "Which are the typical basic criteria for patentability?",
+          "options": [
+            "Novelty, inventive step, industrial applicability",
+            "Popularity, price, size",
+            "Age, origin, colour",
+            "Publication in a journal only"
+          ],
+          "answer": 0,
+          "explanation": "Patent systems generally require that an invention be new, non-obvious and capable of industrial application."
+        },
+        {
+          "question": "The principal purpose of phase 3 clinical trials is to:",
+          "options": [
+            "Test the first dose in humans",
+            "Confirm efficacy and monitor adverse effects in large patient groups",
+            "Develop the manufacturing process",
+            "Test the compound in animals"
+          ],
+          "answer": 1,
+          "explanation": "Phase 3 trials involve larger populations and compare the new treatment with standard care or placebo to confirm benefit and safety."
+        },
+        {
+          "question": "What is the best description of Asilomar 1975?",
+          "options": [
+            "A meeting that established principles of containment for recombinant DNA research",
+            "A conference that banned all genetic engineering",
+            "A court case on patents",
+            "A vaccine trial"
+          ],
+          "answer": 0,
+          "explanation": "Scientists proposed risk-proportionate containment and recommended temporarily deferring certain experiments, influencing later guidelines."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "naqbi_qVoVY",
+      "title": "The Birth of Biotech | Recombinant DNA, Genentech, and Insulin Analogs",
+      "channel": "Patrick Kelly",
+      "level": "intermediate",
+      "whyWatch": "A narrative history of how recombinant DNA turned into an industry, giving context for the whole course."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "OpenStax Microbiology",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/microbiology",
+      "free": true,
+      "level": "beginner",
+      "note": "Free, readable textbook covering microbial growth, metabolism, industrial uses and immunology."
+    },
+    {
+      "title": "Molecular Biology of the Cell (4th edition)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free reference for the molecular and cellular principles beneath most applications."
+    },
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free textbook covering enzymes, metabolism and protein engineering."
+    }
+  ]
+}

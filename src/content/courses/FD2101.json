@@ -1,0 +1,1405 @@
+{
+  "code": "FD 2101",
+  "title": "Introductory Biochemistry",
+  "level": 2,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "Meet the molecules of life, the rules they obey and the energy that keeps them running.",
+  "overview": "The content follows the standard introductory biochemistry sequence at BSc level, arranged to prepare you for Level 3 Metabolism, Chemistry of Biomolecules and Gene Expression. We begin with water and buffers, move through amino acids, protein structure and folding, then enzyme catalysis and kinetics. Carbohydrates, lipids, membranes and nucleic acids come next, followed by bioenergetics and glycolysis, and finally the citric acid cycle and oxidative phosphorylation. The aim is a sound conceptual map rather than exhaustive detail, with each unit signposting the Level 3 course where it is developed further.",
+  "whyItMatters": "Every later course in your degree, from Metabolism I to Recombinant DNA Technology, assumes you can read a structure, rate a buffer, interpret an enzyme curve and follow the flow of energy through a pathway. This module builds that shared vocabulary and the habit of asking why a molecule has the shape it has and how that shape does a job.",
+  "prerequisites": [
+    "FD 1102",
+    "FD 1104"
+  ],
+  "careerLinks": [
+    "Clinical biochemistry and diagnostic laboratories",
+    "Pharmaceutical and drug discovery research",
+    "Food science and nutrition",
+    "Biotechnology and enzyme industries",
+    "Medicine and allied health sciences (via graduate entry)"
+  ],
+  "studyTips": [
+    "Draw the structures. You will never remember the 20 amino acids by reading them; group them by side-chain chemistry and draw them from memory in a table once a week.",
+    "Whenever you meet a number (pKa, Km, delta G), say out loud what it tells you and in which direction a change would push the system.",
+    "Redraw each pathway from a blank page, writing the enzyme class and cofactor on every arrow, then compare with the textbook.",
+    "Use the free structure viewers (PDB-101, RCSB 3D view) to rotate a real protein for each unit; shapes stick in memory better than text.",
+    "Link each topic to a disease: sickle cell, lactose intolerance, diabetes, mitochondrial disorders. A story makes the molecule memorable."
+  ],
+  "units": [
+    {
+      "id": "water-ph-buffers",
+      "title": "Water, pH and buffers",
+      "hours": 5,
+      "hook": "Your blood stays within a fraction of a pH unit of 7.4 whether you are asleep, sprinting or fasting, and if it did not, your enzymes would stop working in minutes. The hero is the humble buffer, and the stage is water, the strangest and most important solvent in biology.",
+      "learningObjectives": [
+        "Explain how the structure of water produces its solvent, thermal and cohesive properties.",
+        "Calculate pH, pOH and the ionisation state of a weak acid using Ka, pKa and the Henderson-Hasselbalch equation.",
+        "Choose a suitable buffer for a given pH and explain how it resists change.",
+        "Describe how the bicarbonate system and proteins buffer blood and cells."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hydrogen-bond network",
+          "definition": "Each water molecule can donate two and accept two hydrogen bonds, creating a dynamic network that explains water's high boiling point, heat capacity and surface tension."
+        },
+        {
+          "term": "Amphipathic",
+          "definition": "Describes a molecule with a polar (water-loving) end and a nonpolar (water-avoiding) end, such as a fatty acid or detergent; it is the basis of micelles and membranes."
+        },
+        {
+          "term": "pH",
+          "definition": "The negative logarithm of hydrogen ion activity (concentration in dilute solutions); a one-unit change means a tenfold change in H+."
+        },
+        {
+          "term": "pKa",
+          "definition": "The pH at which an acid group is half protonated and half deprotonated; it measures acid strength independent of concentration."
+        },
+        {
+          "term": "Henderson-Hasselbalch equation",
+          "definition": "pH = pKa + log([A-]/[HA]); it links pH, the pKa and the ratio of conjugate base to acid."
+        },
+        {
+          "term": "Buffer",
+          "definition": "A mixture of a weak acid and its conjugate base that resists pH change; it is most effective within about one pH unit of the pKa."
+        },
+        {
+          "term": "Buffer capacity",
+          "definition": "The amount of strong acid or base a buffer can absorb before the pH shifts substantially; it rises with concentration of the buffer components."
+        }
+      ],
+      "deeper": {
+        "beginner": "Water molecules are bent and slightly charged at each end, so they cling to each other and to anything else with charged or polar groups. Salts and sugars dissolve because water surrounds them; oils do not because they cannot bond with water. pH tells you how acidic a solution is. A buffer is a pair of molecules (a weak acid and its partner) that soaks up extra acid or base like a sponge so the pH stays steady.",
+        "intermediate": "At pH equal to pKa the acid and base forms are equal, and at one unit away the ratio is 10 to 1, so a buffer works well roughly from pKa minus 1 to pKa plus 1. Phosphate (pKa2 about 7.2) is a good intracellular buffer; Tris (pKa about 8.1) and HEPES (about 7.5) are common in the laboratory. Blood is buffered mainly by bicarbonate, a system with an effective pKa of about 6.1 that is unusually powerful because CO2 can be exhaled and bicarbonate retained or excreted by the kidney. The side chain of histidine (pKa near 6) gives proteins such as haemoglobin significant buffering power.",
+        "advanced": "The hydrophobic effect arises because nonpolar solutes disrupt water's hydrogen-bond network and force water into more ordered arrangements near small solutes, with enthalpy playing a larger role for large surfaces; it is not a direct attraction between nonpolar groups. Ball's review emphasises that water is an active participant in protein folding, enzyme catalysis and molecular recognition rather than an inert solvent. Also note that Henderson-Hasselbalch uses concentrations as a good approximation only for dilute solutions; in concentrated buffers activity coefficients and ionic strength shift the apparent pKa, and the pKa of a group inside a protein can differ by several units from its value in free solution."
+      },
+      "commonMistakes": [
+        "Thinking a buffer holds the pH exactly constant; it only resists change within its useful range and capacity.",
+        "Using a buffer whose pKa is more than one unit from the target pH.",
+        "Assuming pH 7 is the cell's only relevant pH; lysosomes (about pH 4.5 to 5), the stomach and the mitochondrial matrix differ widely.",
+        "Forgetting that pH is logarithmic: pH 5 is ten times more acidic than pH 6, not 'a bit' more."
+      ],
+      "videos": [
+        {
+          "youtubeId": "6G1evL7ELwE",
+          "title": "Hydrogen bonding in water | Water, acids, and bases | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Shows how polarity and hydrogen bonding give water its biological properties."
+        },
+        {
+          "youtubeId": "gjKmQ501sAg",
+          "title": "Introduction to buffers | Water, acids, and bases | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A short, intuitive introduction to how buffers resist pH change."
+        },
+        {
+          "youtubeId": "7QgtdYiWH50",
+          "title": "Henderson-Hasselbalch equation | Acids and bases | AP Chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Teaches the equation you will use for every buffer calculation in the course."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/cr068037a",
+          "title": "Water as an Active Constituent in Cell Biology",
+          "authors": "Ball P",
+          "year": 2007,
+          "journal": "Chemical Reviews",
+          "level": "intermediate",
+          "whyItMatters": "A thoughtful review that challenges the idea of water as a passive background. Reading even the introduction and conclusions changes how you think about protein folding and molecular recognition.",
+          "readingQuestions": [
+            "Which roles of water in the cell does the author highlight beyond acting as a solvent?",
+            "Why is the structure of water near a protein surface different from bulk water?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "pH Scale",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/ph-scale",
+          "free": true,
+          "level": "beginner",
+          "note": "Test the pH of everyday liquids and see the ratio of H3O+ to OH- in each."
+        },
+        {
+          "title": "Acid-Base Solutions",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/acid-base-solutions",
+          "free": true,
+          "level": "beginner",
+          "note": "Compare strong and weak acids and see how little of a weak acid actually dissociates."
+        },
+        {
+          "title": "Biochemistry library",
+          "provider": "LibreTexts Biology",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open textbooks and notes, useful for extra worked buffer problems."
+        }
+      ],
+      "animation": "titration-curve",
+      "selfCheck": [
+        {
+          "question": "A buffer is made with acetic acid (pKa 4.76) and acetate at equal concentrations. What is its pH?",
+          "options": [
+            "2.38",
+            "4.76",
+            "7.00",
+            "9.52"
+          ],
+          "answer": 1,
+          "explanation": "When [A-] = [HA], the log term in Henderson-Hasselbalch is zero, so pH equals pKa, 4.76."
+        },
+        {
+          "question": "Which buffer would be best for an experiment at pH 7.2?",
+          "options": [
+            "Acetate (pKa 4.76)",
+            "Phosphate (pKa2 7.2)",
+            "Carbonate (pKa 10.3)",
+            "Citrate (pKa1 3.1)"
+          ],
+          "answer": 1,
+          "explanation": "A buffer works best within one unit of its pKa, and phosphate's second pKa is almost exactly 7.2."
+        },
+        {
+          "question": "If the pH of a solution falls from 7.4 to 6.4, the hydrogen ion concentration has:",
+          "options": [
+            "Doubled",
+            "Increased tenfold",
+            "Decreased tenfold",
+            "Increased by one unit"
+          ],
+          "answer": 1,
+          "explanation": "pH is a logarithmic scale, so a decrease of one unit corresponds to a tenfold increase in H+ concentration."
+        }
+      ]
+    },
+    {
+      "id": "amino-acids-peptides",
+      "title": "Amino acids and peptides",
+      "hours": 5,
+      "hook": "Twenty small molecules, joined in different orders, make everything from the keratin of your hair to the haemoglobin carrying oxygen in your blood. Their personalities, charged, greasy, bendy or sulfur-containing, decide what each protein can do.",
+      "learningObjectives": [
+        "Draw the general structure of an alpha-amino acid and its zwitterionic form at physiological pH.",
+        "Classify the 20 standard amino acids by side-chain properties.",
+        "Predict the net charge and isoelectric point of an amino acid or small peptide from pKa values.",
+        "Draw a peptide and name the N- and C-termini and the peptide bond."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Alpha-amino acid",
+          "definition": "A molecule with an amino group, a carboxyl group, a hydrogen and a variable side chain (R) all attached to the central alpha carbon."
+        },
+        {
+          "term": "Zwitterion",
+          "definition": "A molecule with both a positive and a negative charge but zero net charge, as amino acids are near neutral pH (NH3+ and COO-)."
+        },
+        {
+          "term": "Side-chain classes",
+          "definition": "Nonpolar aliphatic (Gly, Ala, Val, Leu, Ile, Pro, Met), aromatic (Phe, Tyr, Trp), polar uncharged (Ser, Thr, Cys, Asn, Gln), positively charged (Lys, Arg, His) and negatively charged (Asp, Glu)."
+        },
+        {
+          "term": "Isoelectric point (pI)",
+          "definition": "The pH at which a molecule has no net charge; for a simple amino acid it is the average of the two pKa values on either side of the neutral form."
+        },
+        {
+          "term": "Peptide bond",
+          "definition": "An amide bond between the carboxyl group of one amino acid and the amino group of the next, formed with loss of water."
+        },
+        {
+          "term": "Chirality of amino acids",
+          "definition": "All standard amino acids except glycine have a stereocentre at the alpha carbon, and those in proteins are the L-enantiomer."
+        },
+        {
+          "term": "Disulfide bond",
+          "definition": "A covalent S-S link formed by oxidation of two cysteine thiols, common in extracellular proteins."
+        }
+      ],
+      "deeper": {
+        "beginner": "Every amino acid has the same backbone: an amino group on one end, an acid group on the other, and a side chain that makes it different. At the pH of your cells the acid group has lost a proton and the amino group has gained one, so the molecule carries both charges. Joining amino acids end to end makes a chain called a peptide. Long chains are called polypeptides or proteins. The side chains stick out of the chain and decide how it folds.",
+        "intermediate": "Typical pKa values are about 2 for the alpha-carboxyl, about 9 to 10 for the alpha-amino group, and side-chain values such as 3.9 (Asp), 4.1 (Glu), about 6 (His), 8.3 (Cys), 10.1 (Tyr), 10.5 (Lys) and 12.5 (Arg). Histidine is the only side chain with a pKa near physiological pH, which explains its role in enzyme catalysis and proton buffering. For acidic amino acids the pI is the average of the two lowest pKa values; for basic ones, the average of the two highest. Proline is special because its side chain loops back to the nitrogen, restricting backbone conformations; glycine is special because it lacks a side chain and is therefore the most flexible and the only achiral standard amino acid.",
+        "advanced": "The peptide bond is nearly planar because of resonance, giving a rotational barrier that holds six atoms in a plane; only the phi and psi angles at each alpha carbon are free to vary, and steric constraints captured by the Ramachandran plot limit them to a small set of regions. Selenocysteine and pyrrolysine are incorporated through special recoding of stop codons and are sometimes called the 21st and 22nd amino acids, while many more residues, such as phosphoserine or hydroxyproline, arise from post-translational modification. Peptides can be sequenced by Edman degradation or, today, by tandem mass spectrometry."
+      },
+      "commonMistakes": [
+        "Drawing amino acids as uncharged at pH 7; the neutral form (NH2 and COOH together) is essentially absent in water.",
+        "Believing that histidine is always positively charged; at pH 7.4 it is mostly neutral.",
+        "Writing peptides starting at the C-terminus; by convention sequences are written N-terminus to C-terminus.",
+        "Confusing the pI with the pKa; the pI is where the net charge is zero, not a pKa value."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Pk4d9lY48GI",
+          "title": "Introduction to amino acids | Macromolecules | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A clear introduction to the structure of an amino acid and the role of the side chain."
+        },
+        {
+          "youtubeId": "BbZB-WBVFSk",
+          "title": "Amino acid structure | Chemical processes | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Covers the zwitterion, side-chain classes and charge states at different pH values."
+        },
+        {
+          "youtubeId": "pmQuNRHJMw4",
+          "title": "Peptide bonds: Formation and cleavage | Chemical processes | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Shows how amino acids link up and why peptide bonds are stable yet cleavable."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Amino acids and protein basics",
+          "provider": "PDB-101, RCSB Protein Data Bank",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Illustrated educational resources about proteins and amino acids from the Protein Data Bank."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Classic text, free online; see the section on proteins and amino acids."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up the sequence of a real protein to see all 20 amino acids in context."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "At pH 7.4 an amino acid such as alanine exists mainly as:",
+          "options": [
+            "Fully uncharged NH2-CH(CH3)-COOH",
+            "A zwitterion with NH3+ and COO-",
+            "A cation with NH3+ and COOH",
+            "An anion with NH2 and COO-"
+          ],
+          "answer": 1,
+          "explanation": "With pKa values near 2 and 9.7, the carboxyl group is deprotonated and the amino group is protonated at pH 7.4, giving a zwitterion."
+        },
+        {
+          "question": "Which amino acid has a side-chain pKa closest to physiological pH?",
+          "options": [
+            "Lysine",
+            "Aspartate",
+            "Histidine",
+            "Serine"
+          ],
+          "answer": 2,
+          "explanation": "The imidazole group of histidine has a pKa of about 6, so it can readily gain or lose a proton near neutral pH."
+        },
+        {
+          "question": "Which amino acid is achiral?",
+          "options": [
+            "Alanine",
+            "Glycine",
+            "Serine",
+            "Proline"
+          ],
+          "answer": 1,
+          "explanation": "Glycine has two hydrogens on the alpha carbon, so the alpha carbon is not a stereocentre."
+        }
+      ]
+    },
+    {
+      "id": "protein-structure-folding",
+      "title": "Protein structure and folding",
+      "hours": 6,
+      "hook": "In 1949 Linus Pauling called sickle cell anaemia a 'molecular disease', and later work found it came from one amino acid change in haemoglobin, a glutamate swapped for a valine. One residue out of 146 changes how the molecule packs, and a whole red blood cell deforms. Shape is everything, and this unit is about how sequence becomes shape.",
+      "learningObjectives": [
+        "Describe primary, secondary, tertiary and quaternary structure with examples.",
+        "Explain alpha helices and beta sheets in terms of backbone hydrogen bonding.",
+        "List the forces that stabilise a folded protein and rank their roles.",
+        "Summarise Anfinsen's experiment and what it implies about sequence and structure.",
+        "Explain chaperones, misfolding and why structure prediction matters."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Primary structure",
+          "definition": "The sequence of amino acids in a polypeptide, determined by the gene."
+        },
+        {
+          "term": "Alpha helix",
+          "definition": "A right-handed spiral stabilised by hydrogen bonds between the C=O of residue i and the N-H of residue i+4, with 3.6 residues per turn."
+        },
+        {
+          "term": "Beta sheet",
+          "definition": "Strands lying side by side, held together by hydrogen bonds between strands, either parallel or antiparallel."
+        },
+        {
+          "term": "Tertiary structure",
+          "definition": "The overall three-dimensional fold of one polypeptide, stabilised by hydrophobic packing, hydrogen bonds, ionic interactions and sometimes disulfide bonds."
+        },
+        {
+          "term": "Quaternary structure",
+          "definition": "The arrangement of multiple polypeptide subunits, as in haemoglobin, a tetramer of two alpha and two beta chains."
+        },
+        {
+          "term": "Domain",
+          "definition": "A compact, independently folding region of a protein, often with a specific function."
+        },
+        {
+          "term": "Chaperone",
+          "definition": "A protein that helps others fold correctly or prevents aggregation, without being part of the final structure."
+        },
+        {
+          "term": "Denaturation",
+          "definition": "Loss of native structure by heat, extreme pH, detergents or chaotropes, usually with loss of function."
+        }
+      ],
+      "deeper": {
+        "beginner": "A protein is first just a string of amino acids. The string folds into local patterns, such as spirals (helices) and pleated sheets, and then these pieces fold into a compact three-dimensional shape. Water-fearing side chains tuck into the middle and water-loving ones sit on the outside. If the shape is lost, the protein cannot do its job. Some proteins have several chains that come together.",
+        "intermediate": "The hydrophobic effect provides most of the driving force for folding, while hydrogen bonds, salt bridges and van der Waals contacts give specificity and the final fine-tuning; disulfide bridges stabilise secreted proteins. Anfinsen showed that ribonuclease A, after being denatured and reduced, spontaneously refolded and regained activity when the denaturant was removed, which led to the thermodynamic hypothesis that the native state is the minimum free energy state determined by the sequence. Levinthal's paradox points out that proteins cannot fold by random search, so folding pathways must be funnelled. In cells, chaperones such as Hsp70 and chaperonins assist folding of newly made proteins, and misfolded proteins are tagged for degradation by the ubiquitin-proteasome system.",
+        "advanced": "The helix and sheet were predicted by Pauling, Corey and Branson from the planarity of the peptide bond and hydrogen-bonding geometry before any protein structure was solved. Folding is better described as a funnel-shaped energy landscape than a single pathway, and some proteins are intrinsically disordered yet functional. Misfolding underlies diseases such as amyloidosis and prion disorders, where beta-rich aggregates are very stable. Deep-learning methods such as AlphaFold now predict structures of single chains with accuracy comparable to experiment for many proteins, but they do not directly explain folding pathways, dynamics, or the effect of every mutation."
+      },
+      "commonMistakes": [
+        "Thinking that all proteins fold alone and spontaneously; many need chaperones in the crowded cell.",
+        "Calling beta sheets 'weaker' than helices; stability depends on context, not on type of secondary structure.",
+        "Treating denaturation as the breaking of peptide bonds; it disrupts non-covalent folding, not the backbone.",
+        "Assuming that every disulfide bond forms in the cytosol; the reducing cytosol disfavours them, and they form mainly in oxidising compartments such as the ER or outside the cell."
+      ],
+      "videos": [
+        {
+          "youtubeId": "MODnIkQvyz0",
+          "title": "Overview of protein structure | Macromolecules | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Introduces all four levels of structure in about ten minutes."
+        },
+        {
+          "youtubeId": "hok2hyED9go",
+          "title": "Protein Structure and Folding",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly animated recap of structure and what happens when a protein unfolds."
+        },
+        {
+          "youtubeId": "P_fHJIYENdI",
+          "title": "AlphaFold - The Most Useful Thing AI Has Ever Done",
+          "channel": "Veritasium",
+          "level": "intermediate",
+          "whyWatch": "Tells the story of the protein-folding problem and how deep learning changed the field."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.37.4.205",
+          "title": "The structure of proteins: Two hydrogen-bonded helical configurations of the polypeptide chain",
+          "authors": "Pauling L, Corey RB, Branson HR",
+          "year": 1951,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Predicted the alpha helix and the gamma helix from first principles of chemical bonding before any protein structure was solved, a landmark of reasoning from chemistry to biology."
+        },
+        {
+          "doi": "10.1126/science.110.2865.543",
+          "title": "Sickle Cell Anemia, a Molecular Disease",
+          "authors": "Pauling L, Itano HA, Singer SJ, Wells IC",
+          "year": 1949,
+          "journal": "Science",
+          "level": "beginner",
+          "whyItMatters": "Showed by electrophoresis that sickle haemoglobin differs in charge from normal haemoglobin, the first demonstration that a disease can arise from an altered protein molecule."
+        },
+        {
+          "doi": "10.1126/science.181.4096.223",
+          "title": "Principles that Govern the Folding of Protein Chains",
+          "authors": "Anfinsen CB",
+          "year": 1973,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Anfinsen's Nobel lecture summarising experiments in which ribonuclease refolded on its own, establishing that the amino acid sequence contains the information needed to specify the three-dimensional structure.",
+          "readingQuestions": [
+            "What conditions were needed for ribonuclease to regain activity?",
+            "What is the thermodynamic hypothesis and what are its limits?"
+          ]
+        },
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A, et al.",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Describes the deep-learning system that predicts three-dimensional structures from sequence with near-experimental accuracy for many proteins, changing how biologists get structural hypotheses.",
+          "openAccessUrl": "https://www.nature.com/articles/s41586-021-03819-2"
+        }
+      ],
+      "resources": [
+        {
+          "title": "RCSB Protein Data Bank 3D view",
+          "provider": "RCSB PDB",
+          "type": "tool",
+          "url": "https://www.rcsb.org/3d-view",
+          "free": true,
+          "level": "beginner",
+          "note": "Rotate real protein structures in your browser and colour them by secondary structure."
+        },
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI and Google DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Predicted structures for millions of proteins; compare a prediction with an experimental structure."
+        },
+        {
+          "title": "Paper models and learning tools",
+          "provider": "PDB-101, RCSB PDB",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/learn/paper-models",
+          "free": true,
+          "level": "beginner",
+          "note": "Build physical models of proteins to feel how helices and sheets pack."
+        }
+      ],
+      "animation": "protein-folding",
+      "selfCheck": [
+        {
+          "question": "In an alpha helix the backbone N-H of residue i forms a hydrogen bond with the C=O of residue:",
+          "options": [
+            "i-1",
+            "i-4",
+            "i+2",
+            "i+10"
+          ],
+          "answer": 1,
+          "explanation": "Hydrogen bonds in an alpha helix link the C=O of residue i to the N-H of residue i+4, equivalently the N-H of residue i to the C=O of residue i-4."
+        },
+        {
+          "question": "What did Anfinsen's experiment on ribonuclease show?",
+          "options": [
+            "Chaperones are required for all folding",
+            "The amino acid sequence contains the information needed to fold into the native structure",
+            "Peptide bonds are broken by urea",
+            "Proteins fold randomly"
+          ],
+          "answer": 1,
+          "explanation": "After denaturation and reduction, ribonuclease refolded and regained activity once the denaturant was removed, so sequence alone specified its structure under those conditions."
+        },
+        {
+          "question": "The sickle cell mutation replaces glutamate with valine at position 6 of beta-globin. What kind of change is this?",
+          "options": [
+            "A charged residue replaced by a nonpolar residue on the surface",
+            "A hydrophobic residue replaced by a charged one",
+            "A deletion",
+            "A change in quaternary structure only"
+          ],
+          "answer": 0,
+          "explanation": "Glu is negatively charged while Val is hydrophobic. The new surface hydrophobic patch lets deoxy-haemoglobin molecules stick together and polymerise."
+        }
+      ]
+    },
+    {
+      "id": "enzymes-kinetics",
+      "title": "Enzymes: catalysis, kinetics and inhibition",
+      "hours": 6,
+      "hook": "Without an enzyme, a peptide bond in water would last for hundreds of years; with a protease, it is cut in a fraction of a second. Enzymes are the reason chemistry that would take geological time can finish inside a living cell between two heartbeats.",
+      "learningObjectives": [
+        "Explain how enzymes lower activation energy without changing equilibrium.",
+        "Describe lock-and-key, induced fit and transition-state stabilisation models.",
+        "Interpret a Michaelis-Menten plot and a Lineweaver-Burk plot to obtain Vmax and Km.",
+        "Distinguish competitive, uncompetitive and noncompetitive inhibition from kinetic data.",
+        "Describe general catalytic strategies and the roles of cofactors."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Activation energy",
+          "definition": "The energy barrier between substrate and product; enzymes lower it by stabilising the transition state."
+        },
+        {
+          "term": "Active site",
+          "definition": "The region of the enzyme where substrate binds and catalysis occurs, made of residues that may be far apart in the sequence but close in the folded protein."
+        },
+        {
+          "term": "Michaelis-Menten equation",
+          "definition": "v = Vmax[S]/(Km + [S]); it describes initial rate versus substrate concentration for simple enzymes."
+        },
+        {
+          "term": "Km",
+          "definition": "The substrate concentration at which the rate is half of Vmax; roughly a measure of affinity (lower Km often means tighter binding) under simple assumptions."
+        },
+        {
+          "term": "kcat and specificity constant",
+          "definition": "kcat = Vmax/[E]total, the number of substrate molecules converted per active site per second; kcat/Km measures catalytic efficiency."
+        },
+        {
+          "term": "Competitive inhibition",
+          "definition": "The inhibitor competes with substrate for the active site; apparent Km rises while Vmax is unchanged."
+        },
+        {
+          "term": "Noncompetitive inhibition",
+          "definition": "The inhibitor binds elsewhere and lowers the effective amount of active enzyme; Vmax falls while Km is unchanged (in the pure case)."
+        },
+        {
+          "term": "Cofactor and coenzyme",
+          "definition": "Non-protein helpers: metal ions (cofactors) or organic molecules such as NAD+ and coenzyme A (coenzymes), often derived from vitamins."
+        }
+      ],
+      "deeper": {
+        "beginner": "An enzyme is a protein that speeds up one reaction by holding the reacting molecules in just the right way. It does not change what the reaction gives, only how fast it gets there. If you give an enzyme more substrate, the rate goes up and then levels off because all the enzyme molecules are busy. The Km tells you roughly how much substrate you need to get halfway to that top speed.",
+        "intermediate": "Michaelis-Menten kinetics assume that E and S form an ES complex in rapid equilibrium or at steady state, and that the measured rate is the initial rate when product is negligible. In a double-reciprocal (Lineweaver-Burk) plot, 1/v against 1/[S] gives a straight line with intercept 1/Vmax and slope Km/Vmax. Competitive inhibitors change the slope but not the y-intercept; noncompetitive inhibitors change the y-intercept but not the x-intercept; uncompetitive inhibitors change both, giving parallel lines. Catalytic strategies include proximity and orientation effects, general acid-base catalysis, covalent catalysis (as with the Ser-His-Asp triad of chymotrypsin), metal-ion catalysis and, above all, preferential binding of the transition state, which Knowles argued is what makes enzymes 'not different, just better' than other catalysts.",
+        "advanced": "Fischer's lock-and-key analogy emphasised complementarity; Koshland's induced fit recognised that the enzyme changes shape upon binding, and modern views invoke conformational ensembles and dynamics. kcat/Km values approach the diffusion limit of about 10^8 to 10^9 per molar per second for 'perfect' enzymes such as triose phosphate isomerase, which means evolution has optimised them until the encounter rate is rate-limiting. Lineweaver-Burk plots are useful for diagnosis but statistically poor for parameter estimation, because they distort errors at low substrate concentration; non-linear regression on the original equation is preferred. Michaelis and Menten's 1913 paper also introduced the careful control of pH and mutarotation that made quantitative enzyme kinetics possible."
+      },
+      "commonMistakes": [
+        "Saying an enzyme 'makes a reaction happen'; it accelerates a thermodynamically favourable reaction but cannot make an unfavourable one go.",
+        "Reading Km as a pure affinity constant; it is equal to the dissociation constant only under specific assumptions.",
+        "Calling the Lineweaver-Burk plot the best way to fit data; use it for visual diagnosis only.",
+        "Confusing competitive inhibition (Km changes) with noncompetitive (Vmax changes)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "A90HKrgUOg0",
+          "title": "Enzymes | Energy and enzymes | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Introduces active sites, activation energy and why enzymes matter."
+        },
+        {
+          "youtubeId": "8lUB2sAQkzw",
+          "title": "Induced fit model of enzyme catalysis | Chemical Processes | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Compares lock-and-key with induced fit and shows what changes on binding."
+        },
+        {
+          "youtubeId": "4eLjRcHnMCk",
+          "title": "Biochemistry | Michaelis-Menten Equation | Ninja Nerd",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A long, unhurried derivation and interpretation of the equation and its plots."
+        },
+        {
+          "youtubeId": "O23i38B2EmA",
+          "title": "Competitive inhibition | Energy and enzymes | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Illustrates how an inhibitor competes with substrate for the active site."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.44.2.98",
+          "title": "Application of a Theory of Enzyme Specificity to Protein Synthesis",
+          "authors": "Koshland DE",
+          "year": 1958,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Koshland's induced-fit proposal, which argued that substrate binding reshapes the enzyme active site. It remains the most important refinement to Fischer's lock-and-key picture."
+        },
+        {
+          "doi": "10.1038/350121a0",
+          "title": "Enzyme catalysis: not different, just better",
+          "authors": "Knowles JR",
+          "year": 1991,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A short, lucid essay explaining that enzymes use the same chemistry as ordinary catalysts but make it fast and specific through binding energy. Good for connecting organic mechanisms to enzyme catalysis."
+        },
+        {
+          "doi": "10.1021/bi201284u",
+          "title": "The Original Michaelis Constant: Translation of the 1913 Michaelis-Menten Paper",
+          "authors": "Johnson KA, Goody RS",
+          "year": 2011,
+          "journal": "Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "An English translation with commentary on the original paper, revealing how the famous equation was derived and tested, and correcting several common textbook misconceptions."
+        },
+        {
+          "doi": "10.1021/ja01318a036",
+          "title": "The Determination of Enzyme Dissociation Constants",
+          "authors": "Lineweaver H, Burk D",
+          "year": 1934,
+          "journal": "Journal of the American Chemical Society",
+          "level": "advanced",
+          "whyItMatters": "The origin of the double-reciprocal plot used in every introductory enzymology course; reading it shows why linearisation was attractive in the age before computers."
+        }
+      ],
+      "resources": [
+        {
+          "title": "BRENDA enzyme database",
+          "provider": "BRENDA, TU Braunschweig",
+          "type": "database",
+          "url": "https://www.brenda-enzymes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up kinetic parameters, substrates and inhibitors for any enzyme."
+        },
+        {
+          "title": "Biochemistry library",
+          "provider": "LibreTexts Biology",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open-access chapters with worked examples of enzyme kinetics."
+        },
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "A mechanism-focused course that extends this unit towards how enzymes actually work."
+        }
+      ],
+      "animation": "michaelis-menten",
+      "selfCheck": [
+        {
+          "question": "A competitive inhibitor is added to an enzyme reaction. Compared with no inhibitor, what happens to the apparent Km and Vmax?",
+          "options": [
+            "Km increases, Vmax unchanged",
+            "Km unchanged, Vmax decreases",
+            "Both decrease",
+            "Both increase"
+          ],
+          "answer": 0,
+          "explanation": "Because high substrate concentrations can outcompete the inhibitor, Vmax is reached eventually, but more substrate is needed to reach half Vmax, so the apparent Km goes up."
+        },
+        {
+          "question": "What does an enzyme change about a reaction?",
+          "options": [
+            "The equilibrium constant",
+            "The free energy difference between substrate and product",
+            "The activation energy barrier",
+            "The direction of spontaneous reaction"
+          ],
+          "answer": 2,
+          "explanation": "Catalysts lower the activation energy barrier, increasing rate in both directions, but leave equilibrium and overall free energy change unchanged."
+        },
+        {
+          "question": "At [S] equal to Km, the rate of a Michaelis-Menten enzyme is:",
+          "options": [
+            "Vmax",
+            "Vmax/2",
+            "Vmax/10",
+            "2 x Vmax"
+          ],
+          "answer": 1,
+          "explanation": "Substituting [S] = Km into v = Vmax[S]/(Km + [S]) gives v = Vmax/2."
+        }
+      ]
+    },
+    {
+      "id": "carbohydrates-lipids-membranes",
+      "title": "Carbohydrates, lipids and biological membranes",
+      "hours": 6,
+      "hook": "A cell is a bag of chemistry only because a film two molecules thick keeps the inside in and the outside out. The same fats that you might want to avoid in your diet build that film, and the sugars that fuel your brain are also the code on the surface of every cell.",
+      "learningObjectives": [
+        "Draw the open-chain and ring forms of glucose and explain alpha and beta anomers.",
+        "Distinguish glycogen, starch and cellulose by glycosidic linkage and function.",
+        "Describe the structures of fatty acids, triacylglycerols, phospholipids and cholesterol.",
+        "Explain how the lipid bilayer forms and how the fluid mosaic model describes membranes.",
+        "Describe how temperature, cholesterol and unsaturation influence membrane fluidity."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Monosaccharide",
+          "definition": "A simple sugar, such as glucose, fructose or galactose; named by number of carbons and whether the carbonyl is an aldehyde (aldose) or ketone (ketose)."
+        },
+        {
+          "term": "Glycosidic bond",
+          "definition": "An acetal linkage between the anomeric carbon of a sugar and an oxygen of another molecule, formed with loss of water."
+        },
+        {
+          "term": "Polysaccharide",
+          "definition": "Starch and glycogen (alpha-1,4 chains with alpha-1,6 branches) store glucose; cellulose (beta-1,4) gives rigid structure because its chains lie straight and hydrogen-bond into fibres."
+        },
+        {
+          "term": "Fatty acid",
+          "definition": "A long hydrocarbon chain with a terminal carboxylic acid; saturated chains pack tightly, while cis double bonds put kinks in the chain."
+        },
+        {
+          "term": "Triacylglycerol",
+          "definition": "Glycerol esterified to three fatty acids; the main fuel store, with more energy per gram than carbohydrate because it is more reduced and stored without water."
+        },
+        {
+          "term": "Phospholipid",
+          "definition": "Glycerol or sphingosine backbone with two hydrophobic tails and a polar phosphate-containing head group, the basic building block of membranes."
+        },
+        {
+          "term": "Fluid mosaic model",
+          "definition": "Membranes are two-dimensional fluids in which lipids and proteins can diffuse laterally; proteins are embedded or attached, forming a dynamic mosaic."
+        },
+        {
+          "term": "Cholesterol",
+          "definition": "A rigid sterol that inserts between phospholipids, modulating fluidity: it reduces motion at high temperature and disrupts tight packing at low temperature."
+        }
+      ],
+      "deeper": {
+        "beginner": "Sugars are rings of carbon, hydrogen and oxygen. Many glucose molecules joined together make starch or glycogen for energy storage, or cellulose for the strong fibres of plants. Fats and oils are made from long chains of carbon and hydrogen attached to glycerol. A phospholipid has a water-loving head and two water-fearing tails; in water, these molecules arrange into a double layer with the heads facing out and tails hidden inside. That double layer is the basic membrane of every cell.",
+        "intermediate": "The cyclic hemiacetal form of glucose has an anomeric carbon at C1; in the alpha anomer the OH is axial (trans to the CH2OH group on the ring), and in the beta anomer it is equatorial. Starch contains amylose (unbranched alpha-1,4) and amylopectin (branched with alpha-1,6 at about every 24 to 30 residues); glycogen is more highly branched and so is mobilised faster at many ends. Membranes are asymmetric: different phospholipids are enriched in the inner and outer leaflets, and glycolipids and glycoproteins face outward. Membrane proteins are integral (crossing the bilayer, often as alpha helices of about 20 hydrophobic residues) or peripheral. Lactose, sucrose and maltose differ by their glycosidic linkages: lactose is galactose beta-1,4 glucose, sucrose is glucose alpha-1 to fructose beta-2, and maltose is glucose alpha-1,4 glucose.",
+        "advanced": "Singer and Nicolson's 1972 model explained how proteins and lipids could mix, but modern work shows that membranes are crowded and heterogeneous, with lipid-protein domains, cytoskeletal corrals and transient nanoscale assemblies that can influence signalling; the term 'lipid raft' remains debated. Membrane curvature, lipid composition and transport are linked, and lipid asymmetry is actively maintained by flippases, floppases and scramblases; exposure of phosphatidylserine on the outer leaflet is an 'eat me' signal for apoptotic cells. Cellulose's beta linkage requires cellulase enzymes that animals lack, so ruminant animals and termites depend on gut microbes for digestion."
+      },
+      "commonMistakes": [
+        "Drawing glucose only in the open-chain form; in solution more than 99 percent is cyclic.",
+        "Mixing up alpha and beta anomers, or alpha and beta glycosidic linkages; the same descriptors apply to the OH at C1.",
+        "Saying membranes are static; lipids diffuse laterally very quickly, although flipping between leaflets without enzymes is very slow.",
+        "Believing that unsaturated fats are always bad; cis-unsaturated lipids maintain membrane fluidity and are essential."
+      ],
+      "videos": [
+        {
+          "youtubeId": "JxK5rZxbyQY",
+          "title": "Biochemistry of Carbohydrates",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn walk through monosaccharides, ring forms and polysaccharides."
+        },
+        {
+          "youtubeId": "Ezp8F7XJHWE",
+          "title": "Lipid overview | Macromolecules | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Covers triglycerides, phospholipids and steroids with clear diagrams."
+        },
+        {
+          "youtubeId": "cP8iQu57dQo",
+          "title": "Fluid mosaic model of cell membranes | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Explains why membranes are described as a fluid mosaic and how cholesterol modulates them."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.175.4023.720",
+          "title": "The Fluid Mosaic Model of the Structure of Cell Membranes",
+          "authors": "Singer SJ, Nicolson GL",
+          "year": 1972,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The paper that gave us the dominant picture of membranes for fifty years. Read it to see how thermodynamic arguments about hydrophobic and hydrophilic regions led to a model, then compare with what has been learned since.",
+          "readingQuestions": [
+            "What thermodynamic argument do the authors use to explain why proteins insert in the bilayer?",
+            "Which aspects of their model have been revised by later work?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Membrane Channels",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/membrane-channels",
+          "free": true,
+          "level": "beginner",
+          "note": "Experiment with channels and concentration gradients across a membrane."
+        },
+        {
+          "title": "Biochemistry library",
+          "provider": "LibreTexts Biology",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on carbohydrates and lipids with structural diagrams."
+        },
+        {
+          "title": "Biology 2e (OpenStax)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "beginner",
+          "note": "A free general biology textbook with clear chapters on biological macromolecules and membranes."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which polysaccharide has beta-1,4 glycosidic linkages and cannot be digested by humans?",
+          "options": [
+            "Starch",
+            "Glycogen",
+            "Cellulose",
+            "Maltose"
+          ],
+          "answer": 2,
+          "explanation": "Cellulose consists of glucose joined by beta-1,4 linkages; human digestive enzymes cannot cleave them."
+        },
+        {
+          "question": "What effect does a cis double bond in a membrane fatty acid have?",
+          "options": [
+            "Increases packing density and melting point",
+            "Introduces a kink that increases membrane fluidity",
+            "Prevents the phospholipid from forming a bilayer",
+            "Makes the chain more hydrophilic"
+          ],
+          "answer": 1,
+          "explanation": "The bend produced by a cis double bond prevents tight packing of tails, lowering the melting point and increasing fluidity."
+        },
+        {
+          "question": "Why do phospholipids form bilayers spontaneously in water?",
+          "options": [
+            "Covalent bonds link the tails",
+            "Hydrophobic tails are shielded from water while polar heads interact with it",
+            "Phospholipids are positively charged",
+            "Enzymes assemble them"
+          ],
+          "answer": 1,
+          "explanation": "The amphipathic structure leads to a lowest free energy arrangement in which hydrophobic tails are buried and polar heads face water; no energy input or enzyme is needed."
+        }
+      ]
+    },
+    {
+      "id": "nucleic-acids",
+      "title": "Nucleotides and nucleic acids",
+      "hours": 5,
+      "hook": "In 1953 a short note of about a thousand words in Nature described the structure of DNA and ended with one of the most famous understatements in science: that the pairing they proposed immediately suggested a copying mechanism. Every cell division since has used that mechanism, and the chemistry behind it is simple enough to draw from memory.",
+      "learningObjectives": [
+        "Draw the structure of a nucleotide and identify its sugar, base and phosphate.",
+        "Explain how nucleotides join into a polynucleotide strand with 5' to 3' polarity.",
+        "Describe base pairing, antiparallel strands and the major and minor grooves of the double helix.",
+        "Compare DNA and RNA in structure, stability and role.",
+        "Explain how GC content and salt affect the melting temperature of DNA."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nucleotide",
+          "definition": "A nitrogenous base joined to a five-carbon sugar and one or more phosphate groups; a nucleoside lacks the phosphate."
+        },
+        {
+          "term": "Purines and pyrimidines",
+          "definition": "Adenine and guanine are purines (double ring); cytosine, thymine and uracil are pyrimidines (single ring)."
+        },
+        {
+          "term": "Phosphodiester bond",
+          "definition": "A link between the 3' hydroxyl of one nucleotide and the 5' phosphate of the next, forming the sugar-phosphate backbone."
+        },
+        {
+          "term": "Complementary base pairing",
+          "definition": "A pairs with T (two hydrogen bonds) or U in RNA, and G pairs with C (three hydrogen bonds), which allows each strand to specify the other."
+        },
+        {
+          "term": "Antiparallel",
+          "definition": "The two strands of a double helix run in opposite 5' to 3' directions."
+        },
+        {
+          "term": "Major and minor grooves",
+          "definition": "Spaces between the sugar-phosphate backbones where edges of the bases are exposed; proteins read DNA sequence mainly through the major groove."
+        },
+        {
+          "term": "Melting temperature (Tm)",
+          "definition": "The temperature at which half of a DNA duplex has separated; it rises with GC content and with ionic strength."
+        },
+        {
+          "term": "RNA",
+          "definition": "Usually single-stranded, contains ribose with a 2' OH and uracil instead of thymine; the 2' OH makes RNA more susceptible to hydrolysis."
+        }
+      ],
+      "deeper": {
+        "beginner": "DNA is a long chain made of four building blocks, A, T, G and C. Each block has a base, a sugar and a phosphate. The phosphate and sugar form a backbone and the bases stick out. Two chains pair up so that A always sits opposite T and G opposite C, and the pair twists into a double helix. RNA is similar but has a different sugar, uses U instead of T, and is usually single stranded.",
+        "intermediate": "In B-DNA, the most common form in cells, the helix is right-handed with a diameter of about 2 nm, a rise of 0.34 nm per base pair and about 10 to 10.5 base pairs per turn. Base stacking contributes as much to stability as base-pair hydrogen bonding, and the hydrophobic effect pushes the bases into the centre. Chargaff's rules (A = T and G = C in double-stranded DNA) reflect pairing. DNA is stable partly because of the missing 2' OH and because of the negatively charged backbone, which repels hydroxide; RNA is more reactive, which suits its transient roles. Many RNAs fold into complex three-dimensional shapes, including catalytic RNAs (ribozymes) and the ribosome's rRNA.",
+        "advanced": "Watson and Crick built their model using Rosalind Franklin's and Maurice Wilkins's X-ray diffraction data together with Chargaff's base ratios and the tautomeric forms of bases; their note stressed that specific pairing suggests a copying mechanism. Alternative forms exist: A-DNA is favoured in dehydrating conditions and in DNA-RNA hybrids, and left-handed Z-DNA appears in alternating purine-pyrimidine sequences under high salt or negative supercoiling. Spontaneous chemical damage, such as deamination of cytosine to uracil and loss of purines (depurination), occurs at measurable rates, which is why repair systems are essential."
+      },
+      "commonMistakes": [
+        "Writing sequences without noting the 5' and 3' ends; the two strands of a duplex are antiparallel.",
+        "Saying that A-T pairs are 'weaker' because they have fewer hydrogen bonds without remembering that stacking interactions matter as well.",
+        "Mixing up nucleoside and nucleotide, or purine and pyrimidine; remember that pyrimidines contain Y (cytosine, thymine, uracil).",
+        "Assuming RNA is always single-stranded; it often forms local double-stranded regions in hairpins."
+      ],
+      "videos": [
+        {
+          "youtubeId": "hI4v7v8AdfI",
+          "title": "Introduction to nucleic acids and nucleotides | High school biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Introduces nucleotides and the 5' to 3' directionality of nucleic acids."
+        },
+        {
+          "youtubeId": "6NhDY3IDp00",
+          "title": "Nucleic Acids: DNA and RNA",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Compares DNA and RNA structure and function in a short, clear recap."
+        },
+        {
+          "youtubeId": "NX0ZPtB_QFY",
+          "title": "Nucleic acid structure 1 | Chemical processes | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Goes into the chemistry of bases and the phosphodiester backbone."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/171737a0",
+          "title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+          "authors": "Watson JD, Crick FHC",
+          "year": 1953,
+          "journal": "Nature",
+          "level": "beginner",
+          "whyItMatters": "One page that reshaped biology. Read it as a model of concise scientific writing and notice which evidence they cite and which they leave to companion papers.",
+          "readingQuestions": [
+            "What chemical and physical evidence do the authors use to support their model?",
+            "Which sentence hints at how DNA could be copied?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "DNA from the Beginning",
+          "provider": "Cold Spring Harbor Laboratory",
+          "type": "interactive",
+          "url": "https://www.dnaftb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Short animated lessons on classic experiments in molecular biology and genetics."
+        },
+        {
+          "title": "Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive tours of DNA, RNA and the cell."
+        },
+        {
+          "title": "Molecule of the Month",
+          "provider": "PDB-101, RCSB PDB",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-about",
+          "free": true,
+          "level": "intermediate",
+          "note": "Short illustrated articles about biomolecule structures, including DNA and RNA machinery."
+        }
+      ],
+      "animation": "dna-helix",
+      "selfCheck": [
+        {
+          "question": "How many hydrogen bonds join a G-C base pair?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "answer": 2,
+          "explanation": "G-C pairs form three hydrogen bonds, while A-T pairs form two, which is one reason GC-rich DNA has a higher melting temperature."
+        },
+        {
+          "question": "Which feature chemically distinguishes RNA from DNA?",
+          "options": [
+            "RNA lacks phosphate groups",
+            "RNA has a 2' hydroxyl on the sugar and uracil rather than thymine",
+            "RNA is always double stranded",
+            "RNA has no bases"
+          ],
+          "answer": 1,
+          "explanation": "RNA contains ribose (with a 2' OH) and uracil, whereas DNA has deoxyribose and thymine."
+        },
+        {
+          "question": "The phosphodiester bond in a nucleic acid joins:",
+          "options": [
+            "The 5' phosphate of one nucleotide to the 3' OH of the next",
+            "Two bases together",
+            "A base to a sugar",
+            "The 2' and 5' carbons of the same sugar"
+          ],
+          "answer": 0,
+          "explanation": "The backbone links the 3' hydroxyl of one nucleotide to the 5' phosphate of the next, giving each strand a 5' to 3' direction."
+        }
+      ]
+    },
+    {
+      "id": "bioenergetics-atp-glycolysis",
+      "title": "Bioenergetics, ATP and glycolysis",
+      "hours": 6,
+      "hook": "Your body hydrolyses and remakes roughly its own weight in ATP every day, yet only tens of grams of ATP exist at any one moment. That frantic recycling is the currency exchange of life, and glycolysis, a ten-step pathway shared by almost every organism, is where it first pays out.",
+      "learningObjectives": [
+        "Use delta G, delta G0' and the reaction quotient to decide the direction of a reaction.",
+        "Explain how coupling to ATP hydrolysis drives otherwise unfavourable reactions.",
+        "Describe the overall logic of catabolism and anabolism and the role of NAD+/NADH.",
+        "Outline the investment and payoff phases of glycolysis and its net yield.",
+        "Identify the key regulated steps and explain how fermentation regenerates NAD+."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Gibbs free energy (delta G)",
+          "definition": "The energy available to do work; a reaction is spontaneous in the forward direction when delta G is negative."
+        },
+        {
+          "term": "Standard biochemical free energy (delta G0')",
+          "definition": "Free energy change under standard conditions at pH 7; the actual delta G depends on concentrations via delta G = delta G0' + RT ln Q."
+        },
+        {
+          "term": "Energy coupling",
+          "definition": "Linking an unfavourable reaction to a favourable one (often ATP hydrolysis) so that the sum has a negative delta G."
+        },
+        {
+          "term": "ATP",
+          "definition": "The cell's energy carrier; hydrolysis of its terminal phosphate releases about 30.5 kJ/mol under standard conditions and more in cells because ATP is kept far above equilibrium."
+        },
+        {
+          "term": "NAD+/NADH",
+          "definition": "A coenzyme pair that carries electrons (as hydride) from oxidation reactions to the respiratory chain or to biosynthesis."
+        },
+        {
+          "term": "Substrate-level phosphorylation",
+          "definition": "Direct transfer of a phosphate group from a high-energy substrate to ADP, as in glycolysis."
+        },
+        {
+          "term": "Phosphofructokinase-1 (PFK-1)",
+          "definition": "The main regulatory enzyme of glycolysis; inhibited by ATP and citrate, activated by AMP and fructose 2,6-bisphosphate."
+        },
+        {
+          "term": "Fermentation",
+          "definition": "Pathways such as pyruvate to lactate or ethanol that regenerate NAD+ so glycolysis can continue without oxygen."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells need energy to build things and move things, and they get it by breaking down food. The energy is passed around in a small molecule called ATP, like a rechargeable battery. Glycolysis breaks one glucose (six carbons) into two pyruvate (three carbons each). Along the way it spends two ATP and makes four, so the net gain is two, plus two NADH, which are carriers of high-energy electrons.",
+        "intermediate": "Free energy of a reaction under cell conditions depends on concentrations, so a reaction with a small positive delta G0' can still go forward when product is removed quickly. ATP hydrolysis is used by enzymes to drive reactions by transferring phosphate to a substrate (making it more reactive) rather than by 'releasing energy into space'. Glycolysis has an investment phase (hexokinase and phosphofructokinase use ATP, and aldolase splits fructose 1,6-bisphosphate into two triose phosphates) and a payoff phase (glyceraldehyde-3-phosphate dehydrogenase makes NADH; phosphoglycerate kinase and pyruvate kinase make ATP). The three steps with large negative delta G in cells (hexokinase, PFK-1 and pyruvate kinase) are the regulated ones, and they are bypassed in gluconeogenesis.",
+        "advanced": "Free energy of ATP hydrolysis in cells is typically cited as about -50 to -65 kJ/mol because the ATP/ADP ratio and phosphate levels are held far from equilibrium; Mg2+ binding to the polyphosphate also changes the value. 'High-energy bond' is a misleading phrase: the energy comes from the difference between reactants and products in solution. Glycolysis flux is controlled by many enzymes, not just one, as described by metabolic control analysis, and it integrates with insulin and glucagon signalling, hypoxia-inducible factor and the Warburg effect in cancer cells, where glycolysis is high even in oxygen."
+      },
+      "commonMistakes": [
+        "Using delta G0' to decide the direction of a reaction in the cell; actual delta G depends on concentrations.",
+        "Saying glycolysis produces four ATP net; the net yield is two ATP per glucose (four made, two spent).",
+        "Thinking that ATP hydrolysis alone 'releases energy' without a coupling mechanism; the energy must be transduced by an enzyme.",
+        "Forgetting that NAD+ must be regenerated; without it glycolysis stops."
+      ],
+      "videos": [
+        {
+          "youtubeId": "CHHu-iTwHjg",
+          "title": "Gibbs free energy and spontaneous reactions | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Builds intuition for delta G, enthalpy and entropy as applied to biochemistry."
+        },
+        {
+          "youtubeId": "PK6HmIe2EAg",
+          "title": "ATP: Adenosine triphosphate | Energy and enzymes | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Explains ATP's structure and how its hydrolysis powers other reactions."
+        },
+        {
+          "youtubeId": "FE2jfTXAJHg",
+          "title": "Overview of glycolysis | Cellular respiration | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A big-picture look at what goes in and what comes out of glycolysis."
+        },
+        {
+          "youtubeId": "ArmlWtDnuys",
+          "title": "Steps of glycolysis | Cellular respiration | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Goes through each of the ten steps and the enzymes involved."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "KEGG PATHWAY: glycolysis and metabolism maps",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Interactive pathway maps; explore glycolysis and see its links to other pathways."
+        },
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "Mechanistic view of metabolic reactions with video lectures."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search the free text for glycolysis and bioenergetics chapters."
+        }
+      ],
+      "animation": "glycolysis-flow",
+      "selfCheck": [
+        {
+          "question": "What is the net ATP yield of glycolysis per molecule of glucose (by substrate-level phosphorylation)?",
+          "options": [
+            "0",
+            "2",
+            "4",
+            "36"
+          ],
+          "answer": 1,
+          "explanation": "Two ATP are used in the investment phase and four are formed in the payoff phase, so the net is two ATP per glucose."
+        },
+        {
+          "question": "Why do cells need lactate fermentation in the absence of oxygen?",
+          "options": [
+            "To produce more ATP in the mitochondrion",
+            "To regenerate NAD+ so glycolysis can continue",
+            "To remove carbon dioxide",
+            "To make glucose"
+          ],
+          "answer": 1,
+          "explanation": "Reducing pyruvate to lactate oxidises NADH back to NAD+, which glycolysis requires at the glyceraldehyde-3-phosphate dehydrogenase step."
+        },
+        {
+          "question": "A reaction has delta G0' = +10 kJ/mol. Under what condition can it proceed forward in cells?",
+          "options": [
+            "Never",
+            "If its product is rapidly consumed so that the actual delta G is negative",
+            "Only with a catalyst",
+            "Only at high temperature"
+          ],
+          "answer": 1,
+          "explanation": "Actual delta G includes the RT ln Q term; keeping products low (or coupling to ATP hydrolysis) can make the actual delta G negative."
+        }
+      ]
+    },
+    {
+      "id": "citric-acid-cycle-oxidative-phosphorylation",
+      "title": "The citric acid cycle and oxidative phosphorylation",
+      "hours": 6,
+      "hook": "Inside every mitochondrion a tiny rotary motor spins at around a hundred times a second, driven by protons flowing down a gradient, and it makes most of your ATP. The idea that a proton gradient, not a chemical intermediate, links respiration to ATP synthesis was so strange that Peter Mitchell was ignored for years before he won the Nobel Prize.",
+      "learningObjectives": [
+        "Describe how pyruvate is converted into acetyl-CoA and enters the citric acid cycle.",
+        "State the inputs and outputs of one turn of the cycle and where reduced coenzymes are made.",
+        "Describe the electron transport chain complexes and how they create a proton gradient.",
+        "Explain chemiosmotic coupling and how ATP synthase works.",
+        "Estimate the ATP yield from glucose and discuss uncouplers and inhibitors."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Pyruvate dehydrogenase complex",
+          "definition": "A multi-enzyme complex that converts pyruvate to acetyl-CoA, releasing CO2 and producing NADH; it links glycolysis to the cycle."
+        },
+        {
+          "term": "Citric acid cycle",
+          "definition": "A cycle in which acetyl-CoA is joined to oxaloacetate to give citrate; each turn releases two CO2 and yields 3 NADH, 1 FADH2 and 1 GTP or ATP."
+        },
+        {
+          "term": "Electron transport chain",
+          "definition": "Protein complexes I to IV in the inner mitochondrial membrane that pass electrons from NADH and FADH2 to oxygen, pumping protons as they do."
+        },
+        {
+          "term": "Proton-motive force",
+          "definition": "The combined chemical (pH) and electrical gradient across the inner mitochondrial membrane that stores energy for ATP synthesis."
+        },
+        {
+          "term": "ATP synthase",
+          "definition": "A rotary enzyme (F0F1) in which proton flow through F0 turns a central stalk and drives ATP formation in F1."
+        },
+        {
+          "term": "Chemiosmotic hypothesis",
+          "definition": "Mitchell's proposal that electron transport pumps protons to build a gradient that is then used to make ATP."
+        },
+        {
+          "term": "Uncoupler",
+          "definition": "A molecule (such as 2,4-dinitrophenol or the protein UCP1) that dissipates the proton gradient so energy is released as heat rather than ATP."
+        },
+        {
+          "term": "P/O ratio",
+          "definition": "The number of ATP made per oxygen atom reduced; current estimates are about 2.5 for NADH and 1.5 for FADH2."
+        }
+      ],
+      "deeper": {
+        "beginner": "After glycolysis the carbon from sugar is turned into acetyl-CoA and burned in a cycle that releases CO2 and loads up electron carriers (NADH and FADH2). Those carriers drop their electrons into a chain of proteins in the inner mitochondrial membrane. As electrons move down the chain to oxygen, protons are pumped across the membrane. The protons then rush back through ATP synthase, which spins like a turbine and makes ATP.",
+        "intermediate": "One turn of the cycle starts with citrate synthase joining acetyl-CoA to oxaloacetate; subsequent steps release CO2 at isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase and produce succinate, fumarate, malate and finally oxaloacetate again. Complex I and II feed electrons to ubiquinone; complex III passes them via cytochrome c to complex IV, which reduces oxygen to water. Complexes I, III and IV pump protons; complex II does not. Roughly 10 protons are pumped per NADH and about 4 protons are needed per ATP (including transport), giving the P/O ratios above and about 30 to 32 ATP per glucose in current estimates, rather than the older figure of 36 to 38. Cyanide and carbon monoxide inhibit complex IV; rotenone inhibits complex I; oligomycin blocks ATP synthase.",
+        "advanced": "Mitchell's 1961 proposal predicted that an intact membrane and a gradient were essential, and experiments with artificial gradients (Jagendorf's acid-bath experiment in chloroplasts) and with reconstituted vesicles confirmed it. Structures of respiratory supercomplexes and the ATP synthase rotary mechanism (Boyer's binding-change model, Walker's structure) have since filled in the details. Control of oxidative phosphorylation by ADP availability (respiratory control) means that ATP use sets the pace of the whole process, and reactive oxygen species leak from complexes I and III, linking mitochondria to ageing, signalling and disease."
+      },
+      "commonMistakes": [
+        "Claiming that the citric acid cycle directly requires oxygen; it needs NAD+ and FAD, which are regenerated by the respiratory chain, so it stops without oxygen indirectly.",
+        "Saying that the ATP yield per glucose is 36 or 38 as a fixed figure; modern estimates are about 30 to 32.",
+        "Believing that electrons flowing through the chain make ATP directly; they build a proton gradient, and the gradient makes the ATP.",
+        "Forgetting that protons are pumped into the intermembrane space, not into the matrix."
+      ],
+      "videos": [
+        {
+          "youtubeId": "9zoS5WGsmpc",
+          "title": "Overview of cellular respiration | Cellular respiration | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Gives you the roadmap from glucose to ATP before you look at the detail."
+        },
+        {
+          "youtubeId": "juM2ROSLWfw",
+          "title": "Krebs / citric acid cycle | Cellular respiration | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Follows the carbons through each step of the cycle."
+        },
+        {
+          "youtubeId": "LQmTKxI4Wn4",
+          "title": "Electron transport chain | Harvard Online",
+          "channel": "Harvard Online",
+          "level": "intermediate",
+          "whyWatch": "Animated view of the complexes passing electrons and pumping protons."
+        },
+        {
+          "youtubeId": "kXpzp4RDGJI",
+          "title": "ATP synthase in action | Harvard Online",
+          "channel": "Harvard Online",
+          "level": "intermediate",
+          "whyWatch": "Shows the rotary mechanism that turns a proton gradient into ATP."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/191144a0",
+          "title": "Coupling of Phosphorylation to Electron and Hydrogen Transfer by a Chemi-Osmotic type of Mechanism",
+          "authors": "Mitchell P",
+          "year": 1961,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the chemiosmotic hypothesis, one of the boldest ideas in 20th-century biochemistry. It is an excellent example of a theory proposed on logical grounds that was later confirmed by experiment.",
+          "readingQuestions": [
+            "What alternative theory was current at the time, and what did it propose?",
+            "What predictions does Mitchell's hypothesis make about membranes?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "KEGG PATHWAY: citrate cycle and oxidative phosphorylation",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Interactive maps for the TCA cycle and respiratory chain."
+        },
+        {
+          "title": "Molecule of the Month",
+          "provider": "PDB-101, RCSB PDB",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-about",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for ATP synthase and cytochrome c oxidase for illustrated structural stories."
+        },
+        {
+          "title": "Fundamentals of Biology (7.01SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Video lectures and notes covering respiration and bioenergetics for first-year biology."
+        }
+      ],
+      "animation": "chemiosmosis",
+      "selfCheck": [
+        {
+          "question": "How many NADH are produced per turn of the citric acid cycle?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": 2,
+          "explanation": "Each turn yields 3 NADH (at isocitrate, alpha-ketoglutarate and malate dehydrogenases), 1 FADH2 and 1 GTP or ATP."
+        },
+        {
+          "question": "What directly drives ATP synthesis by ATP synthase?",
+          "options": [
+            "Electron flow through complex IV",
+            "Flow of protons down their gradient through F0",
+            "Hydrolysis of GTP",
+            "Direct transfer of phosphate from NADH"
+          ],
+          "answer": 1,
+          "explanation": "Protons flowing back into the matrix through F0 rotate the central stalk, which causes conformational changes in F1 that make ATP."
+        },
+        {
+          "question": "Which respiratory chain complex does NOT pump protons?",
+          "options": [
+            "Complex I",
+            "Complex II",
+            "Complex III",
+            "Complex IV"
+          ],
+          "answer": 1,
+          "explanation": "Complex II (succinate dehydrogenase) passes electrons from FADH2 to ubiquinone without pumping protons."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "OBloWTHFPZc",
+      "title": "Biochemical Reactions, Enzymes, and ATP | MIT 7.01SC Fundamentals of Biology",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A lecture that ties together enzymes, energy and ATP."
+    },
+    {
+      "youtubeId": "1eGsdK1fPLM",
+      "title": "Macromolecules: Lipids, Carbohydrates, Nucleic Acid, Excerpt 1 | MIT 7.01SC Fundamentals of Biology",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "An MIT lecture on the major classes of biological macromolecules."
+    },
+    {
+      "youtubeId": "H8WJ2KENlK0",
+      "title": "Biological Molecules - You Are What You Eat: Crash Course Biology #3",
+      "channel": "CrashCourse",
+      "level": "beginner",
+      "whyWatch": "A lively overview of carbohydrates, lipids, proteins and nucleic acids."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic biochemistry text, free to read online in the NCBI Bookshelf."
+    },
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A freely licensed general biology textbook, good as a gentler first pass."
+    },
+    {
+      "title": "Biochemistry library",
+      "provider": "LibreTexts Biology",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "Open textbooks and lecture notes for a range of biochemistry topics."
+    }
+  ]
+}

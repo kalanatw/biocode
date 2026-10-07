@@ -1,0 +1,1585 @@
+{
+  "code": "BC 4004",
+  "title": "Optional Topics",
+  "level": 4,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Eight frontier ideas in modern biochemistry, each built from first principles so you can read the headlines and the papers behind them.",
+  "overview": "BC 4004 is an optional-topics course, which means the specific topics change from year to year with staff expertise. This guide takes a deliberate approach: it covers eight well-established, widely taught topics that sit naturally at the end of a biochemistry and molecular biology degree: CRISPR genome editing, epigenetics, non-coding RNA and RNA interference, the molecular biochemistry of cancer, autophagy with mitochondria and ageing, mass-spectrometry proteomics, modern structural biology (cryo-EM and AlphaFold), and the biochemistry of neurotransmission and G-protein signalling. Each unit begins from material you met in Levels 2 and 3 and points to landmark papers and recent reviews.",
+  "whyItMatters": "The topics in this course are where the field is moving fastest: therapies that edit genes, drugs that silence RNAs, structures solved in weeks and proteins identified from a few cells. Being able to explain how they work, what they can and cannot do, and how to read the evidence is exactly what graduate programmes and biotechnology employers look for.",
+  "prerequisites": [
+    "BC 3022",
+    "BC 3025",
+    "MB 3022",
+    "MB 3025"
+  ],
+  "careerLinks": [
+    "Graduate research (MPhil or PhD) in molecular medicine, genomics or structural biology",
+    "Biotechnology and pharmaceutical R&D, including gene therapy and RNA therapeutics",
+    "Core-facility scientist in proteomics, genomics or electron microscopy",
+    "Scientific writing, regulation and science policy around emerging technologies",
+    "Teaching and academic careers in biochemistry and molecular biology"
+  ],
+  "studyTips": [
+    "For each topic, learn the story in three layers: the discovery (who found what, with which experiment), the mechanism (molecules and steps) and the application (what it is used for and where it fails).",
+    "Read at least one landmark paper per unit with a pencil: write the question, the key experiment and the control that made the conclusion convincing. The reading questions in each unit give you a start.",
+    "Redraw each mechanism on a blank page from memory (Cas9 cutting, miRNA silencing, autophagosome formation, vesicle fusion). If you cannot draw it, you do not yet know it.",
+    "Keep a running glossary of terms that recur across units, such as chromatin, ubiquitin, mTOR, GPCR and ion channel; these topics are more connected than they look."
+  ],
+  "units": [
+    {
+      "id": "crispr-genome-editing",
+      "title": "CRISPR-Cas Genome Editing",
+      "hours": 6,
+      "hook": "Bacteria have been fighting viruses for billions of years, and in their arsenal was a system that stores genetic mugshots of past invaders and cuts matching DNA on sight. When researchers realised the cutter could be pointed at any sequence with a short RNA, an obscure immune system became the most widely used tool in molecular biology.",
+      "learningObjectives": [
+        "Explain how CRISPR-Cas systems provide adaptive immunity in bacteria.",
+        "Describe how Cas9, a guide RNA and a PAM sequence combine to make a targeted double-strand break.",
+        "Compare repair by non-homologous end joining with homology-directed repair and what edits each produces.",
+        "Distinguish nuclease editing from base editing and prime editing.",
+        "Discuss off-target effects, delivery challenges and the ethical issues of clinical and germline editing."
+      ],
+      "keyConcepts": [
+        {
+          "term": "CRISPR array",
+          "definition": "A region of bacterial DNA with repeats separated by short spacers copied from past invaders; spacers are transcribed into crRNAs that guide Cas proteins."
+        },
+        {
+          "term": "Cas9 and guide RNA",
+          "definition": "Streptococcus pyogenes Cas9 is an RNA-guided nuclease. In the lab a single guide RNA (sgRNA) combines the crRNA and tracrRNA; about 20 nucleotides at its 5' end pair with the target DNA."
+        },
+        {
+          "term": "PAM",
+          "definition": "The protospacer adjacent motif (5'-NGG-3' for SpCas9) next to the target. Cas9 must recognise it before unwinding DNA, which is why only sites next to a PAM can be targeted."
+        },
+        {
+          "term": "Double-strand break repair",
+          "definition": "Non-homologous end joining is error-prone and often creates insertions or deletions that disrupt a gene; homology-directed repair copies from a supplied template to make precise changes but is less efficient, especially in non-dividing cells."
+        },
+        {
+          "term": "Base editor",
+          "definition": "A catalytically impaired Cas9 fused to a deaminase that converts one base to another (C to T, or A to G) at a target window without making a double-strand break."
+        },
+        {
+          "term": "Prime editor",
+          "definition": "A Cas9 nickase fused to a reverse transcriptase and programmed with a pegRNA that carries the desired edit, allowing small insertions, deletions and all base substitutions without double-strand breaks or donor DNA."
+        },
+        {
+          "term": "Off-target editing",
+          "definition": "Cutting at sites resembling the intended target; reduced by careful guide design, high-fidelity Cas9 variants and transient delivery as ribonucleoprotein."
+        },
+        {
+          "term": "Delivery",
+          "definition": "Getting editors into the right cells: viral vectors (such as AAV), lipid nanoparticles (mainly to liver), electroporation of cells outside the body, or ribonucleoprotein complexes."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cas9 is a pair of molecular scissors that is led to a particular DNA address by a short piece of guide RNA. It will only cut if the address matches and is followed by a short signal sequence called the PAM. Once the DNA is cut, the cell repairs it; either the repair is sloppy and the gene is knocked out, or the cell copies a supplied template and a precise change is written in. Newer editors change single letters without cutting both strands at all.",
+        "intermediate": "Cas9 has two nuclease domains (HNH cuts the strand complementary to the guide, RuvC the other) that create a blunt break about three base pairs upstream of the PAM. Experiments in 2012 showed that the system could be reduced to two RNAs and then to one chimeric guide, and in 2013 several groups showed that it works in human and mouse cells. Knockouts use NHEJ; knock-ins use HDR with a donor template, often used in dividing cells; base editors and prime editors avoid reliance on HDR and so can work in non-dividing cells with fewer unwanted indels. Beyond Cas9 are other effectors such as Cas12 (with different PAMs and staggered cuts) and Cas13 (which targets RNA), and catalytically dead Cas9 fused to activators or repressors (CRISPRa and CRISPRi) controls expression without changing sequence. Design guides with tools that score specificity and verify edits by sequencing.",
+        "advanced": "Specificity is determined by guide-target complementarity with a seed region near the PAM, and tolerance of mismatches differs by position; unbiased genome-wide methods such as GUIDE-seq and CIRCLE-seq detect off-target cutting, and structural insights guided the engineering of high-fidelity variants (eSpCas9, SpCas9-HF1). DNA double-strand breaks can cause large deletions, chromosomal rearrangements and p53 activation, which are particular concerns in therapy, and one motivation for base and prime editors. In 2023 the first CRISPR-based therapy for sickle cell disease and beta-thalassaemia, which edits the BCL11A enhancer in a patient's own blood stem cells to restore fetal haemoglobin, was approved in the UK and US, illustrating the ex vivo route; in vivo editing through lipid nanoparticles to the liver is advancing for diseases such as transthyretin amyloidosis. Editing the human germline is subject to strong ethical and legal constraints, and the 2018 claim of gene-edited babies was widely condemned by scientists, with calls for governance based on safety, necessity and societal consensus."
+      },
+      "commonMistakes": [
+        "Describing CRISPR as cutting 'any gene'; targets are limited by PAM availability and by how well the guide can discriminate.",
+        "Assuming every edit is precise; NHEJ outcomes are heterogeneous and must be genotyped.",
+        "Equating knockout (disrupting a gene) with correcting a mutation; the latter requires HDR, base editing or prime editing.",
+        "Treating CRISPR as a single technology rather than a family of effectors and strategies."
+      ],
+      "videos": [
+        {
+          "youtubeId": "IiPL5HgPehs",
+          "title": "CRISPR-Cas9 Genome Editing Technology",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "A clear tour of the bacterial immune system, the Cas9 mechanism and the way it was turned into a gene-editing tool."
+        },
+        {
+          "youtubeId": "iSEEw4Vs_B4",
+          "title": "What is the PAM? - A CRISPR Whiteboard Lesson",
+          "channel": "Innovative Genomics Institute - IGI",
+          "level": "intermediate",
+          "whyWatch": "A focused explanation of why the PAM matters for target choice, from a leading CRISPR research institute."
+        },
+        {
+          "youtubeId": "0W-_BmrdH-M",
+          "title": "How Base Editing Works | Boston Children's Hospital",
+          "channel": "Boston Children's Hospital",
+          "level": "intermediate",
+          "whyWatch": "A short animation of how a base editor changes one letter without cutting both DNA strands."
+        },
+        {
+          "youtubeId": "6tw_JVz_IEc",
+          "title": "How CRISPR lets you edit DNA - Andrea M. Henle",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A five-minute orientation to the system before you tackle the more detailed lectures."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1225829",
+          "title": "A Programmable Dual-RNA-Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+          "authors": "Jinek M, Chylinski K, Fonfara I, Hauer M, Doudna JA, Charpentier E",
+          "year": 2012,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6286148/",
+          "whyItMatters": "The Nobel-winning study showing that Cas9 can be programmed with RNA to cut chosen DNA targets in a test tube, the basis of all CRISPR genome editing.",
+          "readingQuestions": [
+            "Which experiments showed that both RNAs are required?",
+            "How did the authors show the roles of the two nuclease domains?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.1231143",
+          "title": "Multiplex Genome Engineering Using CRISPR/Cas Systems",
+          "authors": "Cong L, Ran FA, Cox D, Lin S, Barretto R, Habib N, Hsu PD, Wu X, Jiang W, Marraffini LA, Zhang F",
+          "year": 2013,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3795411/",
+          "whyItMatters": "Showed that CRISPR-Cas9 works in human and mouse cells and can edit several sites at once, launching its use in mammalian research."
+        },
+        {
+          "doi": "10.1038/nature17946",
+          "title": "Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage",
+          "authors": "Komor AC, Kim YB, Packer MS, Zuris JA, Liu DR",
+          "year": 2016,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4873371/",
+          "whyItMatters": "Introduced base editing, in which a deaminase fused to dead Cas9 converts C to T at a target without cutting both strands."
+        },
+        {
+          "doi": "10.1038/s41586-019-1711-4",
+          "title": "Search-and-replace genome editing without double-strand breaks or donor DNA",
+          "authors": "Anzalone AV, Randolph PB, Davis JR, Sousa AA, Koblan LW, Levy JM, Chen PJ, Wilson C, Newby GA, Raguram A, Liu DR",
+          "year": 2019,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6907074/",
+          "whyItMatters": "Described prime editing, which uses a pegRNA and reverse transcriptase to write small edits directly into DNA."
+        }
+      ],
+      "resources": [
+        {
+          "title": "CRISPR Guide",
+          "provider": "Addgene",
+          "type": "tutorial",
+          "url": "https://www.addgene.org/crispr/guide/",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable overview of CRISPR biology, history and practical use, with links to plasmids and protocols."
+        },
+        {
+          "title": "CRISPOR",
+          "provider": "CRISPOR (TEFOR)",
+          "type": "tool",
+          "url": "http://crispor.tefor.net/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Design guide RNAs and see predicted off-target sites, a practical way to learn about specificity."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2020: Popular information",
+          "provider": "Nobel Prize",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A short, accurate account of the discovery of the CRISPR-Cas9 genetic scissors."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the role of the PAM in SpCas9 targeting?",
+          "options": [
+            "It is the sequence within the guide RNA that pairs with the target",
+            "It is a short motif next to the target DNA that Cas9 must recognise before it unwinds and cuts",
+            "It is the repair template",
+            "It is the site where the deaminase binds"
+          ],
+          "answer": 1,
+          "explanation": "Cas9 first recognises the PAM (5'-NGG-3') on the target DNA; only then does it unwind the DNA and test pairing with the guide, so target sites must lie next to a PAM."
+        },
+        {
+          "question": "Which repair pathway after a Cas9 cut is most likely to generate small insertions or deletions that knock out a gene?",
+          "options": [
+            "Homology-directed repair",
+            "Non-homologous end joining",
+            "Mismatch repair",
+            "Nucleotide excision repair"
+          ],
+          "answer": 1,
+          "explanation": "NHEJ ligates broken ends directly and is error-prone, so small indels often result and can shift the reading frame."
+        },
+        {
+          "question": "A cytosine base editor differs from standard Cas9 nuclease editing in that it:",
+          "options": [
+            "Cuts both strands of DNA more efficiently",
+            "Chemically converts C to T at a target site without a double-strand break",
+            "Edits RNA only",
+            "Does not need a guide RNA"
+          ],
+          "answer": 1,
+          "explanation": "A cytosine base editor fuses a deaminase to a Cas9 variant that cannot make a double-strand break; it converts C to U (read as T) within a defined window using the guide for targeting."
+        }
+      ]
+    },
+    {
+      "id": "epigenetics-chromatin",
+      "title": "Epigenetics: Chromatin, DNA Methylation and Histone Marks",
+      "hours": 6,
+      "hook": "Every cell in your body carries the same genome, yet a neuron and a liver cell read it differently, and keep reading it that way for decades. Epigenetics is the chemistry of that memory: small chemical tags on DNA and on the proteins that package it.",
+      "learningObjectives": [
+        "Describe nucleosome structure and how chromatin compaction affects transcription.",
+        "Explain how DNA methylation is established, maintained and removed.",
+        "Interpret common histone modifications (acetylation, H3K4me3, H3K27me3, H3K9me3) and their enzymes.",
+        "Describe X-chromosome inactivation and genomic imprinting as examples of epigenetic regulation.",
+        "Explain the main methods used to map epigenetic marks and the logic of epigenetic drugs."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nucleosome",
+          "definition": "About 147 base pairs of DNA wrapped around an octamer of histones (two each of H2A, H2B, H3 and H4); the repeating unit of chromatin."
+        },
+        {
+          "term": "DNA methylation",
+          "definition": "Addition of a methyl group to cytosine (mostly at CpG sites) by DNA methyltransferases; DNMT1 copies the pattern during replication, DNMT3A and DNMT3B establish new patterns."
+        },
+        {
+          "term": "CpG island",
+          "definition": "A CpG-rich stretch at many promoters, usually unmethylated in active genes; promoter methylation is associated with stable silencing."
+        },
+        {
+          "term": "Histone acetylation",
+          "definition": "Addition of acetyl groups to lysines by HATs neutralises their positive charge and opens chromatin; HDACs remove them."
+        },
+        {
+          "term": "Histone methylation",
+          "definition": "Effect depends on site and degree: H3K4me3 marks active promoters, H3K27me3 (placed by PRC2) and H3K9me3 mark repressed chromatin."
+        },
+        {
+          "term": "Readers, writers, erasers",
+          "definition": "Writers add marks (methyltransferases, HATs), erasers remove them (demethylases, HDACs, TET enzymes), and readers (bromodomain, chromodomain proteins) recognise them and recruit effectors."
+        },
+        {
+          "term": "X-inactivation",
+          "definition": "In female mammals one X chromosome is silenced by coating with Xist RNA and recruitment of repressive chromatin, equalising X-gene dosage."
+        },
+        {
+          "term": "Imprinting",
+          "definition": "Parent-of-origin specific expression of a small set of genes, controlled by differential DNA methylation established in the germline."
+        }
+      ],
+      "deeper": {
+        "beginner": "DNA is wrapped around spools of histone proteins to fit inside the nucleus. Chemical tags on the DNA and the histones act like bookmarks and sticky notes that say 'read here' or 'leave closed'. Because these tags can be copied when cells divide, a liver cell stays a liver cell. They can also be changed by environment and diet, but not all such changes are inherited by the next generation, a point that is often exaggerated.",
+        "intermediate": "Methylation of CpG islands in promoters is generally repressive and recruits methyl-binding proteins that bring in HDACs, linking DNA methylation to histone deacetylation. 5-methylcytosine can be oxidised by TET enzymes to 5-hydroxymethylcytosine and further products, leading to demethylation. Histone marks are combinatorial, the so-called histone code, and are read by domains that recognise specific modified residues; for instance H3K4me3 recruits transcription machinery, while H3K27me3 recruits Polycomb repressive complex 1. Methods include bisulfite sequencing for methylation, chromatin immunoprecipitation sequencing (ChIP-seq) for histone marks and transcription factors, and ATAC-seq for open chromatin. In cancer, tumour suppressor promoters can be hypermethylated, and drugs such as azacitidine and decitabine (DNMT inhibitors) and vorinostat (an HDAC inhibitor) are used clinically.",
+        "advanced": "The nucleosome core structure revealed how histone tails project outwards, where modifications can influence both local charge and recognition by reader proteins. Chromatin states are maintained by feedback loops: PRC2 both writes and reads H3K27me3 through its EED subunit, enabling propagation after replication, whereas DNA methylation is copied by DNMT1 recognising hemimethylated DNA through UHRF1. Genome-wide, methylation patterns change predictably with age, enabling epigenetic clocks that predict chronological and biological age, though causal roles remain debated. Evidence for transgenerational epigenetic inheritance in mammals is limited because the germline undergoes extensive reprogramming (erasure of most methylation in primordial germ cells and the early embryo), with imprinted loci and some repeats as exceptions. Long-read and single-cell approaches now map methylation and chromatin accessibility in individual cells, and CRISPR-based epigenome editors (dCas9 fused to writers or erasers) test causality of specific marks."
+      },
+      "commonMistakes": [
+        "Describing epigenetic marks as permanent or necessarily inherited between generations; most are reversible and reset in the germline.",
+        "Assuming DNA methylation always silences; methylation in gene bodies is often found on active genes.",
+        "Treating histone acetylation and methylation as simple on/off switches rather than context-dependent marks.",
+        "Confusing epigenetics (heritable changes in gene expression without DNA sequence change) with any environmental effect on gene expression."
+      ],
+      "videos": [
+        {
+          "youtubeId": "MD3Fc0XOjWk",
+          "title": "Epigenetics",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A clear first introduction to what epigenetic marks are and how they influence gene expression."
+        },
+        {
+          "youtubeId": "JMT6oRYgkTk",
+          "title": "Epigenetics - An Introduction",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn explanation of DNA methylation and histone modifications that is easy to revise from."
+        },
+        {
+          "youtubeId": "qg2I68hXJXY",
+          "title": "Histone Modifications Explained | Acetylation, Methylation & Gene Regulation",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Animates how acetylation and methylation change chromatin state and recruit effector proteins."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/38444",
+          "title": "Crystal structure of the nucleosome core particle at 2.8 A resolution",
+          "authors": "Luger K, Mader AW, Richmond RK, Sargent DF, Richmond TJ",
+          "year": 1997,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The atomic structure of the nucleosome showing how DNA wraps histones and where the tails emerge, the foundation for understanding histone modification."
+        },
+        {
+          "doi": "10.1126/science.1063127",
+          "title": "Translating the Histone Code",
+          "authors": "Jenuwein T, Allis CD",
+          "year": 2001,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The review that proposed that combinations of histone modifications are read as a code, a framework still used to organise the field."
+        },
+        {
+          "doi": "10.1101/gad.947102",
+          "title": "DNA methylation patterns and epigenetic memory",
+          "authors": "Bird A",
+          "year": 2002,
+          "journal": "Genes & Development",
+          "level": "intermediate",
+          "whyItMatters": "A clear review of how methylation patterns are set, maintained and read, by one of the founders of the field."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Epigenetics: Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/epigenetics/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive modules and animations on epigenetic marks, imprinting and the effects of environment."
+        },
+        {
+          "title": "ENCODE: Encyclopedia of DNA Elements",
+          "provider": "ENCODE Project",
+          "type": "database",
+          "url": "https://www.encodeproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Public ChIP-seq, ATAC-seq and methylation datasets across cell types, for exploring real chromatin maps."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook with chapters on chromosomal DNA and chromatin structure and the control of gene expression."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which enzyme copies existing DNA methylation patterns onto the new strand after replication?",
+          "options": [
+            "DNMT3A",
+            "DNMT1",
+            "TET2",
+            "HDAC1"
+          ],
+          "answer": 1,
+          "explanation": "DNMT1 recognises hemimethylated CpG sites after replication and methylates the new strand; DNMT3A/B establish new methylation, and TET enzymes promote demethylation."
+        },
+        {
+          "question": "H3K27me3, deposited by PRC2, is generally associated with:",
+          "options": [
+            "Active promoters",
+            "Repressed chromatin",
+            "DNA replication origins",
+            "Transcription elongation"
+          ],
+          "answer": 1,
+          "explanation": "Trimethylation of histone H3 lysine 27 marks Polycomb-repressed regions, in contrast to H3K4me3 at active promoters."
+        },
+        {
+          "question": "Which technique would you use to map where a particular histone modification sits across the genome?",
+          "options": [
+            "Bisulfite sequencing",
+            "ChIP-seq",
+            "qPCR of cDNA",
+            "SDS-PAGE"
+          ],
+          "answer": 1,
+          "explanation": "ChIP-seq uses an antibody against the modification to pull down associated DNA, which is then sequenced and mapped to the genome."
+        }
+      ]
+    },
+    {
+      "id": "non-coding-rna-and-rnai",
+      "title": "Non-coding RNA and RNA Interference",
+      "hours": 5,
+      "hook": "For decades RNA was seen as the messenger between genes and proteins. Then a worm with a developmental timing mutation and a petunia that would not turn purple revealed that tiny RNAs control gene expression, and that cells have machinery for silencing genes that can be hijacked as a drug.",
+      "learningObjectives": [
+        "Classify major non-coding RNAs (miRNA, siRNA, piRNA, lncRNA) by size, biogenesis and function.",
+        "Describe miRNA biogenesis through Drosha, Dicer and the RISC complex.",
+        "Explain how miRNAs repress target mRNAs and how siRNAs direct cleavage.",
+        "Describe the experiments that revealed RNA interference and the lin-4 and let-7 miRNAs.",
+        "Discuss RNA interference as a research tool and as a therapeutic platform."
+      ],
+      "keyConcepts": [
+        {
+          "term": "microRNA (miRNA)",
+          "definition": "About 22-nucleotide RNAs derived from hairpin precursors that guide Argonaute proteins to partially complementary sites in target mRNAs, mostly in 3' untranslated regions."
+        },
+        {
+          "term": "Biogenesis",
+          "definition": "A primary miRNA transcript is cut by Drosha (with DGCR8) in the nucleus, exported, cut by Dicer to a short duplex, and one strand is loaded into the RNA-induced silencing complex (RISC)."
+        },
+        {
+          "term": "Seed sequence",
+          "definition": "Nucleotides 2 to 8 of the miRNA, which provide most of the targeting specificity, so one miRNA can regulate hundreds of mRNAs."
+        },
+        {
+          "term": "siRNA",
+          "definition": "Short double-stranded RNAs, exogenous or endogenous, that load into Argonaute-2 and direct cleavage of perfectly complementary mRNAs."
+        },
+        {
+          "term": "piRNA",
+          "definition": "Small RNAs of about 24 to 31 nucleotides that bind PIWI proteins, silencing transposons in the germline."
+        },
+        {
+          "term": "Long non-coding RNA (lncRNA)",
+          "definition": "RNAs longer than about 200 nucleotides with no protein product, acting as scaffolds, guides or decoys; Xist in X inactivation is a classic example."
+        },
+        {
+          "term": "RISC",
+          "definition": "The effector complex centred on an Argonaute protein bound to a small RNA, which locates and silences complementary targets."
+        },
+        {
+          "term": "RNAi therapeutics",
+          "definition": "Chemically modified siRNAs delivered in lipid nanoparticles or conjugated to GalNAc for liver uptake to silence disease genes."
+        }
+      ],
+      "deeper": {
+        "beginner": "Not all RNA codes for protein. Some RNAs are short and act as guides: they pair with matching mRNAs and tell the cell to block translation or to destroy the message. This is called RNA interference. Scientists use it to switch genes off in experiments, and some medicines now use it to quiet disease-causing genes.",
+        "intermediate": "In 1993 the Ambros and Ruvkun labs showed that the C. elegans gene lin-4 encodes small RNAs complementary to the 3' untranslated region of lin-14 and reduces its protein, the first miRNA. In 1998 Fire and Mello showed that double-stranded RNA injected into worms silences complementary genes far more potently than either strand alone, and they received the 2006 Nobel Prize. Drosha and Dicer are RNase III enzymes: Drosha trims the primary hairpin to a precursor of about 70 nucleotides, and Dicer cuts it to a duplex of about 22 base pairs. In animals, imperfect base pairing leads to translational repression and deadenylation followed by decay; perfect pairing with an siRNA leads to slicing by Argonaute-2. Practical use of RNAi includes siRNA knockdown in cultured cells; a clinical example is patisiran, an siRNA drug in lipid nanoparticles approved in 2018 for hereditary transthyretin amyloidosis.",
+        "advanced": "Target recognition by miRNAs is shaped by seed pairing, site context and accessibility, and the combined effect of many miRNAs forms regulatory networks with feedback loops; typical repression of any single target is modest (often less than two-fold), which fits a role in fine-tuning and robustness rather than switching. Argonaute structures show that the seed region is pre-organised for target binding, and the 3' end of the guide can release from the PAZ domain to allow pairing beyond the seed. Off-target silencing by seed matches is a source of artefacts in RNAi screens and drives the design of chemically modified siRNAs with reduced seed-mediated effects. lncRNAs are functionally diverse and often poorly conserved; claims for function need loss-of-function tests that distinguish the act of transcription from the RNA product. Alongside siRNAs, antisense oligonucleotides, which recruit RNase H, form a large class of RNA-targeting drugs, and CRISPR-Cas13 offers RNA targeting by a different route."
+      },
+      "commonMistakes": [
+        "Calling all non-coding RNA 'junk'; many are essential regulators and structural components (rRNA, tRNA, snRNA).",
+        "Assuming one miRNA regulates one gene; most miRNAs have many targets and most genes are targeted by many miRNAs.",
+        "Treating miRNA and siRNA as interchangeable; they differ in origin, degree of complementarity and mode of repression.",
+        "Reading a lack of phenotype in a knockdown as proof of no function, when incomplete silencing or redundancy may be responsible."
+      ],
+      "videos": [
+        {
+          "youtubeId": "cK-OGB1_ELE",
+          "title": "RNA interference (RNAi): by Nature Video",
+          "channel": "nature video",
+          "level": "beginner",
+          "whyWatch": "A polished animation of how double-stranded RNA is processed and used to silence a matching mRNA."
+        },
+        {
+          "youtubeId": "tzlGU5EI9rU",
+          "title": "RNAi: Slicing, dicing and serving your cells - Alex Dainis",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A short, engaging account of RNAi mechanism and its research and therapeutic uses."
+        },
+        {
+          "youtubeId": "7XHXF0x2uKA",
+          "title": "RNA interference (RNAi): microRNA (miRNA), siRNA, Argonaute (Ago) proteins, & a comparison to CRISPR",
+          "channel": "the bumbling biochemist",
+          "level": "advanced",
+          "whyWatch": "A detailed walk through biogenesis, Argonaute and the differences between miRNA and siRNA silencing."
+        },
+        {
+          "youtubeId": "hKU8JQOgYmU",
+          "title": "ncRNAs - all types of non-coding RNA (lncRNA, tRNA, rRNA, snRNA, snoRNA, siRNA, miRNA, piRNA)",
+          "channel": "Henrik's Lab",
+          "level": "intermediate",
+          "whyWatch": "A tidy classification of the many classes of non-coding RNA you need to distinguish."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/35888",
+          "title": "Potent and specific genetic interference by double-stranded RNA in Caenorhabditis elegans",
+          "authors": "Fire A, Xu S, Montgomery MK, Kostas SA, Driver SE, Mello CC",
+          "year": 1998,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The paper that discovered RNA interference, showing that double-stranded RNA is far more potent than single strands at silencing genes, a model of a clean experiment.",
+          "readingQuestions": [
+            "Which controls showed that sense and antisense alone were much less effective?",
+            "How did the authors demonstrate that the effect was specific?"
+          ]
+        },
+        {
+          "doi": "10.1016/0092-8674(93)90529-Y",
+          "title": "The C. elegans heterochronic gene lin-4 encodes small RNAs with antisense complementarity to lin-14",
+          "authors": "Lee RC, Feinbaum RL, Ambros V",
+          "year": 1993,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Reported the first microRNA, revealing that a gene could act through a small non-coding RNA that pairs with an mRNA."
+        },
+        {
+          "doi": "10.1016/S0092-8674(04)00045-5",
+          "title": "MicroRNAs: Genomics, Biogenesis, Mechanism, and Function",
+          "authors": "Bartel DP",
+          "year": 2004,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A classic review that organises miRNA biogenesis and function, still a good starting point for the topic."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2006: Popular information",
+          "provider": "Nobel Prize",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2006/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "An accessible account of the discovery of RNA interference by Fire and Mello."
+        },
+        {
+          "title": "RNAcentral",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://rnacentral.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A unified database of non-coding RNA sequences; search for a miRNA or lncRNA to see its annotations and sources."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free reference for RNA processing and the control of gene expression, including regulatory RNAs."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which enzyme processes the pre-miRNA hairpin in the cytoplasm into a roughly 22-bp duplex?",
+          "options": [
+            "Drosha",
+            "Dicer",
+            "Argonaute",
+            "RNase H"
+          ],
+          "answer": 1,
+          "explanation": "Dicer cleaves the pre-miRNA hairpin; Drosha acts earlier in the nucleus on the primary transcript, and Argonaute is the core of RISC."
+        },
+        {
+          "question": "An siRNA that is perfectly complementary to an mRNA typically causes:",
+          "options": [
+            "Translational repression without mRNA loss",
+            "Argonaute-2-mediated cleavage of the mRNA",
+            "DNA methylation of the gene",
+            "Reverse transcription"
+          ],
+          "answer": 1,
+          "explanation": "Perfect pairing positions the target in the catalytic site of Argonaute-2, which slices the mRNA between the bases paired to positions 10 and 11 of the guide."
+        },
+        {
+          "question": "Why can a single miRNA affect the expression of many genes?",
+          "options": [
+            "It is very long",
+            "Its seed region pairs with short sites that occur in many mRNAs",
+            "It is translated into a transcription factor",
+            "It permanently edits DNA"
+          ],
+          "answer": 1,
+          "explanation": "Seed matching of only 6 to 8 nucleotides is enough for targeting, and such sites are present in the 3' untranslated regions of hundreds of different mRNAs."
+        }
+      ]
+    },
+    {
+      "id": "cancer-molecular-biochemistry",
+      "title": "Molecular Biochemistry of Cancer",
+      "hours": 6,
+      "hook": "Cancer is not one disease but a repeated story: a cell escapes the rules that normally keep it in check, passes that freedom to its descendants and learns to feed itself, hide and spread. Each step in the story is a piece of biochemistry that can, in principle, be targeted.",
+      "learningObjectives": [
+        "Describe the hallmarks of cancer and the idea of multistep carcinogenesis.",
+        "Distinguish oncogenes from tumour suppressor genes, with examples of each and Knudson's two-hit hypothesis.",
+        "Explain the role of p53 and the DNA damage response, and how BRCA mutations lead to PARP inhibitor sensitivity.",
+        "Describe altered cancer metabolism, including the Warburg effect, and why it is thought to support proliferation.",
+        "Explain how knowledge of driver pathways has produced targeted therapies such as imatinib."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Oncogene",
+          "definition": "A gene whose gain-of-function mutation, amplification or translocation promotes proliferation or survival, such as RAS, MYC, HER2 and BCR-ABL. Normal counterparts are proto-oncogenes."
+        },
+        {
+          "term": "Tumour suppressor",
+          "definition": "A gene whose loss of function removes a brake on growth or a guardian of the genome, such as TP53, RB1 and BRCA1/2; classically both alleles must be inactivated (two-hit hypothesis)."
+        },
+        {
+          "term": "Driver and passenger mutations",
+          "definition": "Drivers confer a growth advantage and are selected; passengers are incidental. Typical tumours carry only a few driver mutations among many passengers."
+        },
+        {
+          "term": "p53",
+          "definition": "A transcription factor stabilised by DNA damage that triggers cell-cycle arrest, repair, senescence or apoptosis; TP53 is mutated in around half of human cancers."
+        },
+        {
+          "term": "Hallmarks of cancer",
+          "definition": "A framework of capabilities acquired by cancer cells: sustained proliferative signalling, evasion of growth suppressors, resistance to cell death, replicative immortality, angiogenesis and invasion and metastasis, plus altered metabolism and immune evasion."
+        },
+        {
+          "term": "Warburg effect",
+          "definition": "Many tumours take up glucose avidly and produce lactate even when oxygen is available (aerobic glycolysis), thought to support biosynthesis as well as ATP production."
+        },
+        {
+          "term": "Synthetic lethality",
+          "definition": "Loss of two genes together is lethal while loss of either alone is tolerated; BRCA-deficient tumours, which lack homologous recombination, are sensitive to PARP inhibitors."
+        },
+        {
+          "term": "Targeted therapy",
+          "definition": "Drugs aimed at a specific altered protein, for example imatinib against the BCR-ABL kinase in chronic myeloid leukaemia."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells divide when they receive growth signals and stop when they sense damage or crowding. Cancer arises when mutations push the growth accelerator (oncogenes) or disable the brakes and the safety checks (tumour suppressors). Several such changes accumulate over years. Tumour cells also change their metabolism, take up lots of glucose, recruit blood vessels and avoid the immune system. Risk factors such as tobacco, betel quid chewing (a major factor in oral cancer in Sri Lanka and South Asia) and certain infections damage DNA or promote cell division.",
+        "intermediate": "RAS is a small GTPase locked in its active GTP-bound state by common mutations, constitutively driving MAPK and PI3K signalling; the Philadelphia chromosome t(9;22) fuses BCR to ABL, creating a constitutively active tyrosine kinase inhibited by imatinib, an early triumph of rational therapy. p53 is kept low in normal cells by MDM2, an E3 ubiquitin ligase; DNA damage activates ATM and CHK2, which phosphorylate p53 and block MDM2, so p53 accumulates and activates targets such as p21 (cell-cycle arrest) and BAX and PUMA (apoptosis). Tumours often shift metabolism through PI3K-AKT-mTOR and MYC signalling, and take up glucose and glutamine to supply nucleotides, lipids and amino acids as well as energy. Whole-genome sequencing has defined the landscape: a typical solid tumour has dozens to thousands of mutations but only a handful of drivers, converging on a limited set of pathways.",
+        "advanced": "The two-hit hypothesis, proposed from retinoblastoma epidemiology, explains why inherited cancer syndromes (germline TP53, RB1, BRCA1/2 mutations) cause early, multiple tumours: one hit is inherited and the second is somatic. Clonal evolution and intratumoural heterogeneity make resistance to targeted drugs almost inevitable when therapy selects pre-existing resistant subclones or when new mutations arise, for example gatekeeper mutations in kinases, motivating combination and sequential therapy. The 2022 update of the hallmarks adds phenotypic plasticity, non-mutational epigenetic reprogramming, polymorphic microbiomes and senescent cells as emerging dimensions, emphasising that the tumour is an ecosystem including stromal and immune cells. Metabolic reprogramming is also context dependent, since tumours in vivo use diverse fuels, and the original idea that mitochondria are defective in cancer is not generally correct; rather, glycolytic flux is redirected to biosynthesis. Immune checkpoint inhibitors, which block PD-1/PD-L1 or CTLA-4 interactions that restrain T cells, represent a further class of therapy based on the hallmark of immune evasion."
+      },
+      "commonMistakes": [
+        "Describing cancer as caused by a single mutation; it is a multistep process involving several drivers and the microenvironment.",
+        "Confusing proto-oncogenes (normal genes) with oncogenes (their altered, overactive forms).",
+        "Assuming the Warburg effect means cancer cells have no functioning mitochondria.",
+        "Treating p53 as simply an 'anti-cancer gene' without noting its context-specific outcomes and the regulation by MDM2."
+      ],
+      "videos": [
+        {
+          "youtubeId": "lSyU9xMRZNU",
+          "title": "Hallmarks of Cancer | Pathophysiology",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A well-organised walk through each hallmark with the molecules that implement it."
+        },
+        {
+          "youtubeId": "1mo80kTZgW4",
+          "title": "Oncogenetics - Mechanism of Cancer (tumor suppressor genes and oncogenes)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn summary of oncogenes, tumour suppressors and the two-hit hypothesis that is easy to redraw for revision."
+        },
+        {
+          "youtubeId": "_Isvd01XvSs",
+          "title": "p53: Guardian of the Genome",
+          "channel": "nature video",
+          "level": "beginner",
+          "whyWatch": "A short animated account of how p53 responds to DNA damage and why its loss matters."
+        },
+        {
+          "youtubeId": "kYmLQP2M-qo",
+          "title": "Targeting cancer cell metabolism",
+          "channel": "nature video",
+          "level": "intermediate",
+          "whyWatch": "Summarises how tumours reprogramme metabolism and what that suggests for therapy."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2011.02.013",
+          "title": "Hallmarks of Cancer: The Next Generation",
+          "authors": "Hanahan D, Weinberg RA",
+          "year": 2011,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "The influential framework that organises the diversity of cancer biology into shared capabilities and enabling characteristics.",
+          "readingQuestions": [
+            "Which hallmarks does each of your known oncogenes or tumour suppressors support?",
+            "What is meant by an enabling characteristic?"
+          ]
+        },
+        {
+          "doi": "10.1158/2159-8290.CD-21-1059",
+          "title": "Hallmarks of Cancer: New Dimensions",
+          "authors": "Hanahan D",
+          "year": 2022,
+          "journal": "Cancer Discovery",
+          "level": "advanced",
+          "whyItMatters": "A recent update adding phenotypic plasticity, epigenetic reprogramming, microbiomes and senescent cells to the framework."
+        },
+        {
+          "doi": "10.1126/science.1235122",
+          "title": "Cancer Genome Landscapes",
+          "authors": "Vogelstein B, Papadopoulos N, Velculescu VE, Zhou S, Diaz LA, Kinzler KW",
+          "year": 2013,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Surveys the mutations found by large-scale sequencing and concludes that most tumours depend on a small number of driver mutations in a limited set of pathways."
+        },
+        {
+          "doi": "10.1126/science.1160809",
+          "title": "Understanding the Warburg Effect: The Metabolic Requirements of Cell Proliferation",
+          "authors": "Vander Heiden MG, Cantley LC, Thompson CB",
+          "year": 2009,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Proposes that aerobic glycolysis supports biosynthesis, reframing a century-old observation in terms of what proliferating cells need."
+        },
+        {
+          "doi": "10.1016/S0092-8674(00)81871-1",
+          "title": "p53, the Cellular Gatekeeper for Growth and Division",
+          "authors": "Levine AJ",
+          "year": 1997,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A classic review of how p53 senses damage and decides cell fate, with the logic of its regulation by MDM2."
+        }
+      ],
+      "resources": [
+        {
+          "title": "What Is Cancer?",
+          "provider": "National Cancer Institute",
+          "type": "reference",
+          "url": "https://www.cancer.gov/about-cancer/understanding/what-is-cancer",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear and accurate overview of how cancer develops, with links to genetics and risk factors."
+        },
+        {
+          "title": "cBioPortal for Cancer Genomics",
+          "provider": "cBioPortal",
+          "type": "tool",
+          "url": "https://www.cbioportal.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Explore real tumour mutation data, for example how often TP53 or KRAS are mutated in different cancers."
+        },
+        {
+          "title": "The Cancer Genome Atlas Program",
+          "provider": "National Cancer Institute",
+          "type": "database",
+          "url": "https://www.cancer.gov/ccg/research/genome-sequencing/tcga",
+          "free": true,
+          "level": "intermediate",
+          "note": "Background on the project that profiled thousands of tumours and underlies much of modern cancer genomics."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A mutation that locks RAS in its GTP-bound state is an example of:",
+          "options": [
+            "Loss of a tumour suppressor",
+            "Gain-of-function activation of an oncogene",
+            "A passenger mutation by definition",
+            "Epigenetic silencing"
+          ],
+          "answer": 1,
+          "explanation": "Oncogenic RAS mutations impair GTP hydrolysis, so the protein stays active and constitutively signals for growth, a typical gain-of-function oncogenic change."
+        },
+        {
+          "question": "What normally keeps p53 levels low in an unstressed cell?",
+          "options": [
+            "MDM2-mediated ubiquitination and degradation",
+            "Methylation of the TP53 gene",
+            "Binding to ribosomes",
+            "Secretion"
+          ],
+          "answer": 0,
+          "explanation": "MDM2 is an E3 ubiquitin ligase that targets p53 for proteasomal degradation. DNA damage signalling disrupts this, letting p53 accumulate."
+        },
+        {
+          "question": "BRCA1/2-deficient tumours are especially sensitive to PARP inhibitors because of:",
+          "options": [
+            "Increased glucose uptake",
+            "Synthetic lethality between defective homologous recombination and blocked base excision repair",
+            "Higher p53 activity",
+            "Reduced angiogenesis"
+          ],
+          "answer": 1,
+          "explanation": "Cells lacking BRCA function cannot repair double-strand breaks accurately; PARP inhibition causes more such breaks, and the combination is lethal to tumour cells but tolerated by normal cells with functional BRCA."
+        }
+      ]
+    },
+    {
+      "id": "autophagy-mitochondria-ageing",
+      "title": "Autophagy, Mitochondria and the Biochemistry of Ageing",
+      "hours": 5,
+      "hook": "Cells are constantly recycling themselves: wrapping worn-out organelles in membranes and delivering them to the lysosome for dismantling. A yeast geneticist's careful observations of this housekeeping, rewarded with a Nobel Prize, opened a path to understanding neurodegeneration, cancer and the biology of ageing.",
+      "learningObjectives": [
+        "Describe the steps of macroautophagy from initiation to lysosomal degradation, with key regulators.",
+        "Explain how mTORC1 and AMPK control autophagy in response to nutrients and energy.",
+        "Describe mitophagy and the PINK1-Parkin pathway.",
+        "Explain how mitochondria generate reactive oxygen species and why the simple free radical theory of ageing is incomplete.",
+        "List the hallmarks of ageing and evaluate the evidence for interventions such as caloric restriction and rapamycin."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Macroautophagy",
+          "definition": "Formation of a double-membrane autophagosome around cytoplasmic cargo, which fuses with a lysosome to form an autolysosome where contents are degraded and recycled."
+        },
+        {
+          "term": "ATG proteins",
+          "definition": "Core autophagy machinery first identified in yeast; the ULK1 complex initiates, and conjugation of LC3 (Atg8) to phosphatidylethanolamine marks the autophagosome membrane."
+        },
+        {
+          "term": "Selective autophagy",
+          "definition": "Receptors such as p62/SQSTM1 link ubiquitinated cargo to LC3, targeting aggregates, organelles or pathogens."
+        },
+        {
+          "term": "mTORC1 and AMPK",
+          "definition": "mTORC1 senses amino acids and growth signals and inhibits autophagy by phosphorylating ULK1; AMPK senses low energy, inhibits mTORC1 and activates ULK1."
+        },
+        {
+          "term": "Mitophagy",
+          "definition": "Selective removal of damaged mitochondria; PINK1 accumulates on depolarised mitochondria and recruits the ubiquitin ligase Parkin, which marks them for autophagy."
+        },
+        {
+          "term": "Reactive oxygen species (ROS)",
+          "definition": "Superoxide and related species formed mainly at complexes I and III of the respiratory chain; at low levels they signal, at high levels they damage lipids, proteins and DNA."
+        },
+        {
+          "term": "Hallmarks of ageing",
+          "definition": "A framework of cellular changes linked with ageing: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, deregulated nutrient sensing, mitochondrial dysfunction, cellular senescence, stem cell exhaustion and altered intercellular communication."
+        },
+        {
+          "term": "Cellular senescence",
+          "definition": "A stable arrest of cell division, with a secretory phenotype that can promote inflammation, triggered by telomere shortening, DNA damage or oncogene activation."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells recycle their own parts. When food is scarce or components are damaged, a membrane forms around the material, seals into a bubble, and delivers it to the lysosome, where enzymes break it down into raw materials for reuse. Healthy recycling keeps cells tidy, and problems with it are linked to diseases of ageing such as neurodegeneration. Mitochondria produce most of our ATP, but they also make reactive oxygen by-products and can themselves be recycled when they are damaged.",
+        "intermediate": "Ohsumi's screens in budding yeast identified mutants that fail to accumulate autophagic bodies when starved, revealing the ATG genes; most have mammalian homologues. Under nutrient-rich conditions mTORC1 phosphorylates and inhibits ULK1; with starvation or energy stress, AMPK activates ULK1 and inhibits mTORC1, and the phagophore elongates with the help of two ubiquitin-like conjugation systems that attach LC3 to the membrane. Lysosomal fusion completes the process, and p62 is itself degraded, so p62 accumulation is used as a readout of impaired flux. Mitochondrial dysfunction contributes to ageing through mtDNA mutations, reduced respiratory capacity and ROS, but ROS are also signals, and lifespan experiments with antioxidants have often failed to extend lifespan, which complicates Harman's 1956 free radical theory. Reduced insulin/IGF-1 signalling extends lifespan in worms, flies and mice, and caloric restriction and rapamycin (an mTORC1 inhibitor) extend lifespan in several model animals.",
+        "advanced": "Autophagic flux, rather than the number of autophagosomes, is the meaningful measure, and it requires comparing LC3-II levels with and without lysosomal inhibitors; claims based on static LC3 or p62 snapshots are therefore ambiguous. Autophagy is context dependent: in established tumours it can support survival under stress, whereas early in tumorigenesis it suppresses tumour initiation by limiting damage, so both activators and inhibitors are under investigation in cancer. The Hallmarks of Aging were extended in 2023 to include disabled macroautophagy, chronic inflammation and dysbiosis, recognising the central role of proteostasis and inflammatory circuits. Mouse lifespan extension by rapamycin is among the most robust pharmacological findings, but translation to humans is untested for ageing as an indication, and evidence for supplements marketed as NAD+ boosters or autophagy inducers in healthy people remains limited. Biomarkers of biological age, such as epigenetic clocks, are being used as surrogates in trials, with ongoing debate about their validity."
+      },
+      "commonMistakes": [
+        "Equating more autophagosomes with more autophagy; the pathway may be blocked at a late step, so flux must be measured.",
+        "Treating ROS as simply harmful; they also act as signalling molecules, and antioxidants do not reliably extend lifespan.",
+        "Assuming that fasting-mimicking supplements are proven to extend human lifespan; most evidence is from model organisms.",
+        "Confusing autophagy with apoptosis; they are distinct processes that cross-talk but have different outcomes."
+      ],
+      "videos": [
+        {
+          "youtubeId": "4wzO4T1fiP4",
+          "title": "Yoshinori Ohsumi, Nobel Prize in Physiology or Medicine 2016: Official interview",
+          "channel": "Nobel Prize",
+          "level": "beginner",
+          "whyWatch": "The discoverer describes how he came to study autophagy in yeast and why the question mattered."
+        },
+        {
+          "youtubeId": "8Uu9feq0fR0",
+          "title": "Nobel lecture: Yoshinori Ohsumi, Nobel Laureate in Physiology or Medicine 2016",
+          "channel": "Nobel Prize",
+          "level": "advanced",
+          "whyWatch": "The full Nobel lecture, which walks through the key yeast experiments and the discovery of the ATG genes."
+        },
+        {
+          "youtubeId": "paw2SUY22_s",
+          "title": "Mitochondria, Apoptosis, and Oxidative Stress",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Reviews how mitochondria generate ROS and how oxidative stress relates to cell death and damage."
+        },
+        {
+          "youtubeId": "B3--k8ORQVo",
+          "title": "The Hallmarks of Aging | LifeXtenShow",
+          "channel": "Lifespan Research Institute",
+          "level": "intermediate",
+          "whyWatch": "A structured overview of the proposed hallmarks of ageing, best used alongside the review papers because it comes from an ageing-research organisation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0014-5793(93)80398-E",
+          "title": "Isolation and characterization of autophagy-defective mutants of Saccharomyces cerevisiae",
+          "authors": "Tsukada M, Ohsumi Y",
+          "year": 1993,
+          "journal": "FEBS Letters",
+          "level": "advanced",
+          "whyItMatters": "The genetic screen that identified autophagy-defective yeast mutants, opening the molecular dissection of the pathway.",
+          "readingQuestions": [
+            "How did the authors score autophagy in yeast?",
+            "Why was starvation an important condition?"
+          ]
+        },
+        {
+          "doi": "10.1101/gad.1599207",
+          "title": "Autophagy: process and function",
+          "authors": "Mizushima N",
+          "year": 2007,
+          "journal": "Genes & Development",
+          "level": "intermediate",
+          "whyItMatters": "A clear review of the autophagic process and its physiological functions in starvation, quality control and development."
+        },
+        {
+          "doi": "10.1016/j.cell.2007.12.018",
+          "title": "Autophagy in the Pathogenesis of Disease",
+          "authors": "Levine B, Kroemer G",
+          "year": 2008,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "Surveys how autophagy defects contribute to cancer, neurodegeneration, infection and ageing."
+        },
+        {
+          "doi": "10.1016/j.cell.2013.05.039",
+          "title": "The Hallmarks of Aging",
+          "authors": "Lopez-Otin C, Blasco MA, Partridge L, Serrano M, Kroemer G",
+          "year": 2013,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "Proposed the framework of nine hallmarks that organises research on ageing mechanisms."
+        },
+        {
+          "doi": "10.1016/j.cell.2022.11.001",
+          "title": "Hallmarks of aging: An expanding universe",
+          "authors": "Lopez-Otin C, Blasco MA, Partridge L, Serrano M, Kroemer G",
+          "year": 2023,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "An update that adds hallmarks such as disabled autophagy, chronic inflammation and dysbiosis, reflecting a decade of new findings."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2016: Popular information",
+          "provider": "Nobel Prize",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2016/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "A concise explanation of autophagy and Ohsumi's contribution, suitable as a first read."
+        },
+        {
+          "title": "Human Ageing Genomic Resources",
+          "provider": "HAGR",
+          "type": "database",
+          "url": "https://genomics.senescence.info/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Databases of ageing-related genes, lifespan studies and species longevity, for exploring the genetics of ageing."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook with chapters on mitochondria, intracellular compartments and cell death relevant to this unit."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Under nutrient-rich conditions, active mTORC1 affects autophagy by:",
+          "options": [
+            "Phosphorylating and inhibiting ULK1",
+            "Activating Parkin",
+            "Degrading LC3",
+            "Promoting lysosome fusion"
+          ],
+          "answer": 0,
+          "explanation": "mTORC1 phosphorylates ULK1, suppressing autophagy initiation when nutrients and growth signals are abundant; starvation relieves this inhibition."
+        },
+        {
+          "question": "In the PINK1-Parkin pathway, PINK1 accumulates on mitochondria that have:",
+          "options": [
+            "High membrane potential",
+            "Lost membrane potential (depolarised)",
+            "Just divided",
+            "No DNA"
+          ],
+          "answer": 1,
+          "explanation": "In healthy mitochondria PINK1 is imported and degraded; with depolarisation it accumulates on the outer membrane, recruits Parkin and flags the organelle for mitophagy."
+        },
+        {
+          "question": "Why is p62 accumulation interpreted as impaired autophagic flux?",
+          "options": [
+            "p62 is a lysosomal enzyme",
+            "p62 is itself degraded by autophagy, so it builds up when degradation is blocked",
+            "p62 inhibits mTOR",
+            "p62 is only expressed in ageing cells"
+          ],
+          "answer": 1,
+          "explanation": "p62 is a cargo receptor that is consumed along with its cargo in the autolysosome, so a rise in p62 suggests that clearance is reduced."
+        }
+      ]
+    },
+    {
+      "id": "proteomics-mass-spectrometry",
+      "title": "Mass Spectrometry and Proteomics",
+      "hours": 6,
+      "hook": "Weighing a molecule used to mean a destructive, laborious experiment; now an instrument can weigh and sequence thousands of peptides from a smear of cells in an hour. Mass spectrometry turned proteins from objects you study one at a time into populations you can inventory.",
+      "learningObjectives": [
+        "Explain how ESI and MALDI ionise biomolecules and what a mass analyser measures.",
+        "Describe a bottom-up proteomics workflow from digestion to database search.",
+        "Interpret tandem mass spectra (b and y ions) and the concept of a false discovery rate.",
+        "Compare label-free, SILAC and isobaric-tag (TMT) quantification.",
+        "Describe how mass spectrometry identifies post-translational modifications and its use in the clinic."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Mass-to-charge ratio (m/z)",
+          "definition": "The quantity a mass spectrometer measures; a peptide carrying several charges appears at m/z equal to its mass divided by the charge, plus a small correction for the added protons."
+        },
+        {
+          "term": "Electrospray ionisation (ESI)",
+          "definition": "A soft ionisation method that sprays a liquid sample into charged droplets, producing multiply charged ions; easily coupled to liquid chromatography."
+        },
+        {
+          "term": "MALDI",
+          "definition": "Matrix-assisted laser desorption ionisation: a laser vaporises sample mixed with an absorbing matrix, generating mainly singly charged ions; often paired with time-of-flight (TOF) analysers."
+        },
+        {
+          "term": "Mass analysers",
+          "definition": "Devices that separate ions by m/z: time of flight, quadrupole, ion trap and Orbitrap, with differing resolution and speed."
+        },
+        {
+          "term": "Tandem MS (MS/MS)",
+          "definition": "A selected peptide ion is fragmented (for example by collision) and the fragment masses are measured; the ladder of b and y ions reads out the amino acid sequence."
+        },
+        {
+          "term": "Bottom-up proteomics",
+          "definition": "Proteins are digested with trypsin (cleaving after K and R), peptides are separated by liquid chromatography and analysed by MS/MS, then matched to protein sequence databases."
+        },
+        {
+          "term": "False discovery rate",
+          "definition": "The proportion of reported identifications expected to be wrong, estimated using a target-decoy database search and usually controlled at 1 percent."
+        },
+        {
+          "term": "Quantitative proteomics",
+          "definition": "Comparing protein abundance by label-free intensity, metabolic labelling (SILAC) or chemical isobaric tags (TMT, iTRAQ), or by data-independent acquisition."
+        }
+      ],
+      "deeper": {
+        "beginner": "A mass spectrometer first turns molecules into charged ions, then sorts them by how heavy they are for their charge, and records how many of each reach the detector. To identify proteins, scientists chop them into peptides with an enzyme, measure the peptides' masses and broken fragments, and match the pattern to a database of known proteins. This lets them list thousands of proteins in a sample and compare, for example, healthy and diseased tissue.",
+        "intermediate": "In a typical workflow, proteins are extracted, reduced and alkylated, digested with trypsin, desalted and separated by reversed-phase nano-liquid chromatography that feeds directly into an ESI source. The instrument alternates between a survey scan of intact peptides (MS1) and fragmentation scans (MS2) of the most intense ions. Software (Mascot, MaxQuant, and many others) compares observed spectra with theoretical ones from a sequence database, scoring matches; a decoy (reversed or shuffled) database estimates the false discovery rate. For quantification, SILAC encodes samples with heavy or light amino acids before mixing, TMT labels peptides after digestion with isobaric tags that give reporter ions in MS2, and label-free methods compare intensities across runs. Post-translational modifications such as phosphorylation add characteristic mass shifts (about 80 Da for phosphate) and are enriched before analysis. In clinical microbiology, MALDI-TOF fingerprinting of ribosomal proteins identifies bacteria within minutes.",
+        "advanced": "Trypsin digestion yields peptides of convenient length and charge but misses regions lacking K and R and creates peptides shared among protein isoforms (the protein inference problem), so identification is of peptides first and proteins by inference. Data-dependent acquisition samples the most abundant precursors, causing missing values across runs, whereas data-independent acquisition fragments all ions in defined windows and gives more complete quantification at the cost of complex spectral deconvolution. TMT quantification is affected by ratio compression due to co-isolated interfering ions, mitigated by synchronous precursor selection and by MS3 or high-resolution reporter scans. Top-down proteomics analyses intact proteins and proteoforms (combinations of modifications), providing information lost on digestion but with limits on protein size and sensitivity. Statistical design matters: biological replication, normalisation, handling of missing values and multiple-testing correction determine whether differential abundance claims are reliable, and raw data are deposited in repositories such as PRIDE to allow reanalysis."
+      },
+      "commonMistakes": [
+        "Assuming that a mass spectrometry list gives absolute protein amounts; most methods give relative abundance and are biased towards abundant proteins.",
+        "Reporting identifications without stating the false discovery rate or the database used.",
+        "Overlooking that digestion generates shared peptides, so some protein identifications are ambiguous.",
+        "Equating a high peptide score with correct site localisation of a modification; localisation needs its own confidence measure."
+      ],
+      "videos": [
+        {
+          "youtubeId": "wx4F6kGy1Fs",
+          "title": "MS-based proteomics: A short introduction to the core concepts of proteomics and mass spectrometry",
+          "channel": "Lars Juhl Jensen",
+          "level": "intermediate",
+          "whyWatch": "A researcher's tidy overview of the key concepts, from ionisation to database searching, in about ten minutes."
+        },
+        {
+          "youtubeId": "OyJYsRL2Hwc",
+          "title": "MALDI-TOF Mass Spectrometry Explained",
+          "channel": "Lucas Learns",
+          "level": "beginner",
+          "whyWatch": "A short, clear animation of how MALDI ionises samples and how time of flight reveals mass."
+        },
+        {
+          "youtubeId": "XPR0Tsn3i3I",
+          "title": "Tandem Mass Spectrometry (MS/MS) | Analytical Technique Animation for CSIR NET & Life Science Exams",
+          "channel": "Viologia Animations",
+          "level": "intermediate",
+          "whyWatch": "Animates precursor selection, fragmentation and detection so you can see how sequence information is generated."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature01511",
+          "title": "Mass spectrometry-based proteomics",
+          "authors": "Aebersold R, Mann M",
+          "year": 2003,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A foundational review of the principles and strategies of proteomics, still a good conceptual map of the field."
+        },
+        {
+          "doi": "10.1126/science.2675315",
+          "title": "Electrospray Ionization for Mass Spectrometry of Large Biomolecules",
+          "authors": "Fenn JB, Mann M, Meng CK, Wong SF, Whitehouse CM",
+          "year": 1989,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Demonstrated that electrospray can produce intact, multiply charged ions of large biomolecules, work recognised by the 2002 Nobel Prize in Chemistry."
+        },
+        {
+          "doi": "10.1021/ac00171a028",
+          "title": "Laser desorption ionization of proteins with molecular masses exceeding 10,000 daltons",
+          "authors": "Karas M, Hillenkamp F",
+          "year": 1988,
+          "journal": "Analytical Chemistry",
+          "level": "advanced",
+          "whyItMatters": "The paper introducing matrix-assisted laser desorption ionisation of proteins, the basis of MALDI-TOF."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PRIDE Archive",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/pride/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Public repository of proteomics datasets; browse real experiments to see how studies are reported."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "The reference protein sequence database used in searches, with annotations of modifications and function."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2002: Popular information",
+          "provider": "Nobel Prize",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2002/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "Describes how soft ionisation methods made mass spectrometry of proteins possible."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In bottom-up proteomics, trypsin is used because it:",
+          "options": [
+            "Cleaves after lysine and arginine, producing peptides of a convenient size and charge",
+            "Cleaves before every amino acid",
+            "Reduces disulfide bonds",
+            "Labels peptides with a heavy isotope"
+          ],
+          "answer": 0,
+          "explanation": "Trypsin cuts on the C-terminal side of lysine and arginine (except before proline), giving peptides of moderate length with a basic residue at the end, which ionise well in positive mode."
+        },
+        {
+          "question": "Which describes ESI compared with MALDI?",
+          "options": [
+            "ESI generates mostly singly charged ions from a solid matrix",
+            "ESI generates multiply charged ions from solution and is easily coupled to liquid chromatography",
+            "ESI requires a laser",
+            "ESI fragments all molecules completely"
+          ],
+          "answer": 1,
+          "explanation": "Electrospray produces multiply charged ions from a liquid, which suits online LC-MS; MALDI uses a laser and a matrix and gives mostly singly charged ions."
+        },
+        {
+          "question": "A target-decoy search reports an FDR of 1 percent. This means:",
+          "options": [
+            "Exactly 1 percent of spectra were unidentified",
+            "About 1 percent of the reported identifications are expected to be incorrect",
+            "The instrument has 1 percent mass error",
+            "1 percent of proteins are decoys"
+          ],
+          "answer": 1,
+          "explanation": "The decoy matches estimate how many false identifications pass the score threshold, so FDR is the expected fraction of reported hits that are wrong."
+        }
+      ]
+    },
+    {
+      "id": "structural-biology-cryo-em-alphafold",
+      "title": "Structural Biology: Crystallography, Cryo-EM and AlphaFold",
+      "hours": 6,
+      "hook": "For decades the shape of a protein was a hard-won prize, earned by growing crystals for months. Today a frozen drop of sample can be imaged to near-atomic detail, and a neural network can predict the fold from sequence alone. Knowing what each method sees, and what it misses, is now part of reading any biochemistry paper.",
+      "learningObjectives": [
+        "Describe the principles and limitations of X-ray crystallography, NMR and cryo-EM.",
+        "Explain the phase problem in crystallography and what resolution means.",
+        "Explain why the cryo-EM resolution revolution happened and what single-particle analysis does.",
+        "Explain how AlphaFold predicts structure and how to read its confidence scores.",
+        "Choose appropriate methods for different biological questions and judge structure quality."
+      ],
+      "keyConcepts": [
+        {
+          "term": "X-ray crystallography",
+          "definition": "A protein crystal diffracts X-rays to give a pattern from which an electron density map is calculated; yields atomic models but needs well-ordered crystals."
+        },
+        {
+          "term": "Phase problem",
+          "definition": "Detectors record the intensity but not the phase of diffracted waves; phases must be obtained by methods such as molecular replacement or heavy-atom derivatives."
+        },
+        {
+          "term": "NMR spectroscopy",
+          "definition": "Measures magnetic properties of nuclei in solution to derive distance restraints and dynamics; best for smaller proteins, and shows flexible regions."
+        },
+        {
+          "term": "Cryo-EM single-particle analysis",
+          "definition": "Thousands of images of frozen-hydrated molecules in random orientations are classified, aligned and averaged to reconstruct a three-dimensional map."
+        },
+        {
+          "term": "Resolution",
+          "definition": "How fine a detail a map can resolve; around 3 angstroms or better allows side chains to be built, whereas 4 to 5 angstroms mainly shows secondary structure."
+        },
+        {
+          "term": "Protein Data Bank",
+          "definition": "The public archive of experimentally determined structures, each with coordinates, method and validation reports."
+        },
+        {
+          "term": "AlphaFold",
+          "definition": "A deep-learning system that predicts three-dimensional structure from amino acid sequence using patterns from evolutionary data and known structures."
+        },
+        {
+          "term": "pLDDT",
+          "definition": "AlphaFold's per-residue confidence score (0 to 100); low values often indicate disorder or uncertain regions and should not be read as structure."
+        }
+      ],
+      "deeper": {
+        "beginner": "To understand how a protein works you need its shape. Crystallography fires X-rays at a crystal of the protein and works out the arrangement of atoms from the way the beams scatter. Cryo-EM freezes protein solutions so quickly that water forms a glassy layer, then photographs thousands of individual molecules and combines the pictures into a 3D model. AlphaFold predicts shapes by computer from the amino acid sequence, and researchers have used it to predict structures for millions of proteins.",
+        "intermediate": "Crystallography requires pure, homogeneous protein that can form an ordered lattice; electron density is interpreted by building a model that is refined against the data, with R-factors and validation metrics reporting quality. NMR gives solution structures and dynamics but is limited by size. Cryo-EM does not need crystals and handles large complexes and membrane proteins in near-native conditions. Its recent progress came from direct electron detectors, which record images with much higher sensitivity, improved image processing algorithms, and better microscopes and sample preparation; resolutions around 2 to 3 angstroms are now routine for well-behaved samples. AlphaFold2 used a network trained on structures and sequence alignments, and in the CASP14 assessment its accuracy for many single-domain proteins approached that of experiment; the AlphaFold Database provides predicted models for a vast number of proteins. Always check the predicted aligned error and pLDDT before interpreting a model.",
+        "advanced": "Cryo-EM reconstructions are assessed with the Fourier shell correlation, local resolution maps and model-to-map fit, and 3D classification can separate conformational states to describe functional cycles. Time-resolved crystallography, XFEL sources and cryo-electron tomography extend structural biology to dynamics and cellular context. AlphaFold predictions are static, typically not sensitive to point mutations that destabilise a protein, often omit ligands, cofactors and post-translational modifications, and depend on evolutionary information, so confident prediction does not guarantee a correct conformation in a given state; complex prediction (AlphaFold-Multimer) and later versions extend to assemblies and ligands but still require validation. Integrative approaches combine cryo-EM, crosslinking mass spectrometry, small-angle X-ray scattering and predictions to model large machines. Predicted and experimental structures are increasingly used together: predictions solve molecular replacement phasing problems and guide model building into cryo-EM maps."
+      },
+      "commonMistakes": [
+        "Treating a crystal structure as a complete picture of a flexible protein; crystal packing and missing disordered regions limit it.",
+        "Quoting a single resolution number without considering local resolution and map quality.",
+        "Reading AlphaFold's low-confidence (low pLDDT) regions as real structure rather than uncertainty or disorder.",
+        "Assuming that a predicted structure replaces experiment; ligands, modifications and conformational states may differ."
+      ],
+      "videos": [
+        {
+          "youtubeId": "6G550DfY75Q",
+          "title": "Cryo-EM Animation",
+          "channel": "MRC Laboratory of Molecular Biology",
+          "level": "beginner",
+          "whyWatch": "A very short animation from the lab that pioneered the field showing how frozen samples are imaged and reconstructed."
+        },
+        {
+          "youtubeId": "osC2osUu2To",
+          "title": "Using CryoEM to Determine 3-D Protein Structure",
+          "channel": "Phillip Compeau",
+          "level": "intermediate",
+          "whyWatch": "Explains the computational idea behind reconstructing a 3D structure from thousands of 2D images."
+        },
+        {
+          "youtubeId": "LioYrxinn28",
+          "title": "Protein structure by X-ray crystallography",
+          "channel": "EPFL School of Life Sciences",
+          "level": "intermediate",
+          "whyWatch": "Follows the steps from crystallisation to electron density and model for a protein structure."
+        },
+        {
+          "youtubeId": "P_fHJIYENdI",
+          "title": "AlphaFold - The Most Useful Thing AI Has Ever Done",
+          "channel": "Veritasium",
+          "level": "beginner",
+          "whyWatch": "A clear, engaging account of the protein folding problem and how AlphaFold changed structure prediction."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1251652",
+          "title": "The Resolution Revolution",
+          "authors": "Kuhlbrandt W",
+          "year": 2014,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A short perspective explaining how direct electron detectors and software made cryo-EM a high-resolution technique.",
+          "readingQuestions": [
+            "Which technical advances does the author credit for the change?",
+            "What biological problems became accessible as a result?"
+          ]
+        },
+        {
+          "doi": "10.1016/j.cell.2015.03.049",
+          "title": "Single-Particle Cryo-EM at Crystallographic Resolution",
+          "authors": "Cheng Y",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Reviews how single-particle cryo-EM reached near-atomic resolution and what limits it, written by a leading practitioner."
+        },
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A, Green T, Figurnov M, Ronneberger O, Tunyasuvunakool K, Bates R, Zidek A, Potapenko A, et al.",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8371605/",
+          "whyItMatters": "The AlphaFold2 paper, describing the network and showing accuracy comparable with experiment for many proteins in CASP14."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Methods for Determining Atomic Structures",
+          "provider": "PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/methods-for-determining-structure",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear introduction to X-ray, NMR and cryo-EM and how to interpret the experimental details of a PDB entry."
+        },
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI and Google DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up predicted structures with confidence plots, and practise judging their reliability."
+        },
+        {
+          "title": "AlphaFold online course",
+          "provider": "EMBL-EBI Training",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free structured course on how AlphaFold works and how to use and interpret the database."
+        },
+        {
+          "title": "The Nobel Prize in Chemistry 2017: Popular information",
+          "provider": "Nobel Prize",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2017/popular-information/",
+          "free": true,
+          "level": "beginner",
+          "note": "Explains the development of cryo-electron microscopy in plain language."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which problem arises because X-ray detectors record intensities but not the phases of diffracted waves?",
+          "options": [
+            "The resolution limit",
+            "The phase problem",
+            "Radiation damage",
+            "Crystal twinning"
+          ],
+          "answer": 1,
+          "explanation": "Without phases, the electron density cannot be computed directly; phases are obtained indirectly, for example by molecular replacement using a similar known structure."
+        },
+        {
+          "question": "A key advantage of cryo-EM compared with X-ray crystallography is that cryo-EM:",
+          "options": [
+            "Always gives better resolution",
+            "Does not require crystals and can handle large, flexible complexes",
+            "Is faster than any other method",
+            "Requires no purified sample"
+          ],
+          "answer": 1,
+          "explanation": "Cryo-EM images individual particles in vitreous ice, so crystallisation is unnecessary and large complexes and membrane proteins can be studied, although samples still need to be purified."
+        },
+        {
+          "question": "In an AlphaFold model, a region with pLDDT below 50 should be interpreted as:",
+          "options": [
+            "A confidently predicted helix",
+            "A region of low confidence that is often disordered, not reliable structure",
+            "A bound ligand",
+            "An error in the amino acid sequence"
+          ],
+          "answer": 1,
+          "explanation": "Low pLDDT indicates that the model is not confident, and such regions are frequently intrinsically disordered rather than folded."
+        }
+      ]
+    },
+    {
+      "id": "neurochemistry-synapse-gpcr",
+      "title": "Neurochemistry: The Synapse and G-Protein Signalling",
+      "hours": 5,
+      "hook": "Every thought and movement depends on molecules crossing a gap about 20 nanometres wide in a fraction of a millisecond. The same chemistry is attacked by snake venoms, pesticides and many medicines, which is why knowing the synapse explains both neurological disease and poisoning.",
+      "learningObjectives": [
+        "Explain how voltage-gated Na+ and K+ channels generate the action potential.",
+        "Describe calcium-triggered vesicle fusion and the SNARE proteins involved.",
+        "Describe the synthesis, release, receptors and termination of major neurotransmitters: acetylcholine, glutamate, GABA and the monoamines.",
+        "Explain GPCR signalling through G proteins, cAMP and IP3/DAG.",
+        "Link the molecular mechanisms to examples of drugs, toxins and neurological disease."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Action potential",
+          "definition": "A brief, all-or-none change in membrane potential: depolarisation by voltage-gated Na+ channels opens, followed by inactivation and repolarisation by K+ efflux."
+        },
+        {
+          "term": "Synaptic vesicle cycle",
+          "definition": "Ca2+ entry through presynaptic voltage-gated channels triggers fusion of neurotransmitter-filled vesicles with the membrane, followed by endocytosis and refilling."
+        },
+        {
+          "term": "SNARE complex",
+          "definition": "Syntaxin and SNAP-25 on the plasma membrane and synaptobrevin on the vesicle zipper together to drive fusion; synaptotagmin senses Ca2+. Botulinum and tetanus toxins cleave SNARE proteins."
+        },
+        {
+          "term": "Ionotropic vs metabotropic receptors",
+          "definition": "Ionotropic receptors are ligand-gated ion channels (nicotinic ACh, AMPA, NMDA, GABA-A) acting in milliseconds; metabotropic receptors are GPCRs acting through second messengers more slowly."
+        },
+        {
+          "term": "Acetylcholinesterase",
+          "definition": "Enzyme that hydrolyses acetylcholine in the synaptic cleft, ending the signal; inhibited by organophosphate pesticides and nerve agents."
+        },
+        {
+          "term": "Monoamine neurotransmitters",
+          "definition": "Dopamine and noradrenaline (from tyrosine) and serotonin (from tryptophan); signalling is ended mainly by reuptake transporters and degradation by MAO and COMT."
+        },
+        {
+          "term": "G protein-coupled receptor (GPCR)",
+          "definition": "A seven-transmembrane receptor that activates heterotrimeric G proteins: Gs raises cAMP, Gi lowers it and Gq activates phospholipase C to make IP3 and DAG."
+        },
+        {
+          "term": "Receptor desensitisation",
+          "definition": "GPCR kinases phosphorylate activated receptors, allowing arrestins to bind, which uncouples G proteins and promotes internalisation."
+        }
+      ],
+      "deeper": {
+        "beginner": "Nerve cells signal electrically along their length and chemically across synapses. An electrical pulse reaching the end of a neuron opens calcium channels, calcium triggers little packets (vesicles) of neurotransmitter to fuse and spill their contents into the gap, and the transmitter binds receptors on the next cell. The signal is stopped by enzymes that break the transmitter down or by transporters that pump it back. Many drugs and poisons work by interfering with one of these steps.",
+        "intermediate": "At the presynaptic terminal, an action potential opens voltage-gated Ca2+ channels; the local calcium rise is sensed by synaptotagmin, and SNARE proteins draw vesicle and plasma membranes together, assisted by Munc18 and Munc13. Botulinum toxin blocks acetylcholine release by cleaving SNAREs, which causes flaccid paralysis and is used therapeutically in tiny doses. Acetylcholine at the neuromuscular junction acts on nicotinic receptors, which krait venom components such as alpha-bungarotoxin block, whereas organophosphate pesticides, a major cause of poisoning in South Asia, inhibit acetylcholinesterase and cause cholinergic crisis. Glutamate is the main excitatory transmitter acting on AMPA and NMDA receptors (the latter requires both depolarisation to remove Mg2+ block and ligand binding, making it a coincidence detector in learning), and GABA is the main inhibitory transmitter, enhanced by benzodiazepines. GPCRs transduce signals: activated receptor acts as a guanine nucleotide exchange factor for Gα, which exchanges GDP for GTP and dissociates from Gβγ; Gαs stimulates adenylyl cyclase, producing cAMP that activates protein kinase A, whereas Gαq activates phospholipase C, generating IP3 (calcium release) and DAG (protein kinase C).",
+        "advanced": "The Hodgkin-Huxley model described membrane currents by voltage- and time-dependent conductances, and was later matched with structures of Na+ and K+ channels showing voltage sensor domains, the selectivity filter and inactivation gating. The release machinery shows tight spatial organisation, with calcium nanodomains near channels determining the speed and probability of release, and short-term plasticity arising from changes in vesicle pools and calcium dynamics. GPCR signalling is now understood as conformational selection with biased agonism, in which different ligands stabilise receptor states favouring G protein or arrestin pathways, which is the basis for attempts to design safer drugs; structures of receptors in complex with G proteins, solved by cryo-EM, show how the transducer is engaged. Pharmacology of the synapse includes SSRIs, which block the serotonin transporter, L-DOPA for Parkinson's disease to replenish dopamine, and monoamine oxidase inhibitors; many neuropsychiatric drugs have complex effects through receptor adaptation over weeks, and our understanding of how they work clinically is incomplete."
+      },
+      "commonMistakes": [
+        "Mixing up the electrical signal (action potential, travelling along the axon) and the chemical signal (neurotransmitter, crossing the synapse).",
+        "Assuming that a neurotransmitter is inherently excitatory or inhibitory; the effect depends on the receptor and ion permeability.",
+        "Thinking that acetylcholinesterase inhibition reduces cholinergic signalling; it prolongs it, which is why overdose causes overstimulation.",
+        "Treating GPCRs as ion channels; they act through G proteins and second messengers, not by forming a pore."
+      ],
+      "videos": [
+        {
+          "youtubeId": "fhiJo1QYGtA",
+          "title": "Synaptic Transmission | Neuron",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A short, clear account of the events from action potential arrival to receptor activation at a chemical synapse."
+        },
+        {
+          "youtubeId": "cZwb8zqAPXc",
+          "title": "Neuroscience basics: Synaptic transmission - Chemical synapse, Animation",
+          "channel": "Alila Medical Media",
+          "level": "beginner",
+          "whyWatch": "A clean animation showing vesicle fusion, receptor binding and neurotransmitter clearance."
+        },
+        {
+          "youtubeId": "qJXZD2gaLMU",
+          "title": "Neurotransmitters | Nervous System",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "Surveys the main neurotransmitters, their receptors and clinical relevance, tying chemistry to function."
+        },
+        {
+          "youtubeId": "XIdBJm8DaFo",
+          "title": "GPCR cAMP signaling || Second messenger cAMP || 4K Animation",
+          "channel": "Rethink Biology",
+          "level": "intermediate",
+          "whyWatch": "Animates the G protein cycle and cAMP production, the core of metabotropic signalling."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1113/jphysiol.1952.sp004764",
+          "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+          "authors": "Hodgkin AL, Huxley AF",
+          "year": 1952,
+          "journal": "The Journal of Physiology",
+          "level": "advanced",
+          "whyItMatters": "The Nobel-winning paper that quantitatively explained the action potential from ionic currents, a model for combining measurement with mathematics."
+        },
+        {
+          "doi": "10.1016/j.neuron.2013.10.022",
+          "title": "Neurotransmitter Release: The Last Millisecond in the Life of a Synaptic Vesicle",
+          "authors": "Sudhof TC",
+          "year": 2013,
+          "journal": "Neuron",
+          "level": "advanced",
+          "whyItMatters": "A review of the molecular machinery of vesicle fusion by a Nobel laureate in the field, covering SNAREs, synaptotagmin and their regulators."
+        },
+        {
+          "doi": "10.1038/nrm908",
+          "title": "Seven-transmembrane receptors",
+          "authors": "Pierce KL, Premont RT, Lefkowitz RJ",
+          "year": 2002,
+          "journal": "Nature Reviews Molecular Cell Biology",
+          "level": "intermediate",
+          "whyItMatters": "A clear overview of GPCR structure, G protein coupling and regulation by kinases and arrestins."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Neuroscience, 2nd edition (Purves et al.)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10799/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free neuroscience textbook with chapters on ion channels, synaptic transmission and neurotransmitters."
+        },
+        {
+          "title": "Neuroscience Online",
+          "provider": "University of Texas Medical School at Houston",
+          "type": "textbook",
+          "url": "https://nba.uth.tmc.edu/neuroscience/",
+          "free": true,
+          "level": "intermediate",
+          "note": "An open electronic neuroscience textbook that covers cellular and molecular neuroscience in clear sections."
+        },
+        {
+          "title": "Biochemistry, 5th edition (Berg, Tymoczko, Stryer)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on signal transduction, G proteins and second messengers."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Botulinum toxin causes paralysis by:",
+          "options": [
+            "Blocking acetylcholine receptors on muscle",
+            "Cleaving SNARE proteins so acetylcholine is not released",
+            "Inhibiting acetylcholinesterase",
+            "Opening potassium channels"
+          ],
+          "answer": 1,
+          "explanation": "The toxin is a protease that cleaves SNARE proteins in motor nerve terminals, preventing vesicle fusion and acetylcholine release."
+        },
+        {
+          "question": "An organophosphate pesticide poisoning causes excess cholinergic stimulation because it:",
+          "options": [
+            "Blocks nicotinic receptors",
+            "Inhibits acetylcholinesterase, so acetylcholine persists in the synaptic cleft",
+            "Stimulates acetylcholine synthesis directly",
+            "Blocks calcium channels"
+          ],
+          "answer": 1,
+          "explanation": "Organophosphates phosphorylate the active site serine of acetylcholinesterase, so acetylcholine is not degraded and continues to stimulate muscarinic and nicotinic receptors."
+        },
+        {
+          "question": "Activation of a Gs-coupled receptor leads to:",
+          "options": [
+            "Decreased cAMP",
+            "Activation of adenylyl cyclase and increased cAMP",
+            "Direct opening of Na+ channels",
+            "Production of IP3 and DAG"
+          ],
+          "answer": 1,
+          "explanation": "Gs stimulates adenylyl cyclase to produce cAMP, which activates protein kinase A; IP3 and DAG are produced by Gq signalling via phospholipase C."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "kVu37T6sB_E",
+      "title": "16. Recombinant DNA, Cloning, & Editing",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A full lecture that sets the groundwork for the genome editing unit and shows how this material is taught at a leading institution."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Molecular Biology of the Cell, 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free reference for chromatin, RNA processing, cell signalling, cancer and cell death, which underpin most of the topics."
+    },
+    {
+      "title": "Biochemistry, 5th edition (Berg, Tymoczko, Stryer)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free standard biochemistry text with chapters on signal transduction, protein structure and methods."
+    },
+    {
+      "title": "Neuroscience, 2nd edition (Purves et al.)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK10799/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free neuroscience text for the synapse and signalling unit."
+    }
+  ]
+}

@@ -1,0 +1,1477 @@
+{
+  "code": "FD 1101",
+  "title": "General & Physical Chemistry for Life Scientists",
+  "level": 1,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "The atoms, bonds, solutions and energy rules that every later biochemistry course quietly assumes.",
+  "overview": "The content follows the standard first-year general and physical chemistry sequence, with the examples chosen from biology. It runs from atomic structure and bonding, through water and intermolecular forces, to quantitative skills (moles, concentration, pH and buffers), and finishes with the physical-chemistry trio that Level 3 leans on constantly: thermodynamics, equilibrium and kinetics, plus the electrochemistry behind the electron transport chain and membrane potentials.",
+  "whyItMatters": "Metabolism I is thermodynamics and redox with enzymes attached; Chemistry of Biomolecules is bonding and intermolecular forces; every practical in Level 3 starts with making a buffer of the right pH and concentration. If these ideas are solid now, Level 3 becomes about biology rather than about re-learning chemistry under pressure.",
+  "prerequisites": [],
+  "careerLinks": [
+    "Clinical biochemistry (acid-base balance, blood gases, electrolytes)",
+    "Pharmaceutical and drug-formulation science (solubility, buffers, stability)",
+    "Food and beverage analysis and quality control",
+    "Environmental and water-quality chemistry",
+    "Research laboratories (reagent preparation, assay design)"
+  ],
+  "studyTips": [
+    "Do the arithmetic yourself: for moles, dilutions, pH and buffers, reading a worked example teaches far less than solving five fresh problems with units written at every step.",
+    "Keep a one-page 'equation sheet' where each equation also carries a sentence about what it means and when it does NOT apply; examiners reward the second part.",
+    "For every new concept ask 'what happens inside a cell or a test tube because of this?' (for example: hydrogen bonds, then protein folding; Gibbs energy, then ATP).",
+    "Use the PhET simulations to predict an outcome first, then run the simulation; being wrong before you look is where the learning happens."
+  ],
+  "units": [
+    {
+      "id": "atoms-electrons-periodic-trends",
+      "title": "Atoms, Electrons and the Periodic Table",
+      "hours": 5,
+      "hook": "Almost everything in your body is built from six elements and a handful of ions, and the reason it is those elements comes down to where their outermost electrons sit. Carbon's four valence electrons make it the great connector; sodium and potassium's single loosely held electron makes them perfect charge carriers across nerve membranes.",
+      "learningObjectives": [
+        "Describe an atom in terms of protons, neutrons and electrons, and distinguish atomic number, mass number and isotopes.",
+        "Write ground-state electron configurations for atoms and common biological ions up to calcium.",
+        "Explain how n, l and m describe shells, subshells and orbitals, and what the Pauli exclusion principle and Hund's rule add.",
+        "Predict trends in atomic radius, ionisation energy and electronegativity across a period and down a group.",
+        "Use periodic position to explain why C, H, N, O, P and S dominate biomolecules and why Na+, K+, Ca2+, Mg2+ and Cl- are the main biological ions."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Atomic number and isotopes",
+          "definition": "The atomic number is the count of protons and defines the element; isotopes of one element differ in neutron number, so they share chemistry but differ in mass (for example 12C, 13C and radioactive 14C)."
+        },
+        {
+          "term": "Orbital",
+          "definition": "A region of space where an electron of a given energy is most likely to be found, described by a wavefunction rather than a circular path; each orbital holds at most two electrons."
+        },
+        {
+          "term": "Quantum numbers",
+          "definition": "The set n (shell), l (subshell shape: s, p, d, f), m (orientation) and spin that together label an electron; no two electrons in an atom share all four."
+        },
+        {
+          "term": "Aufbau, Pauli and Hund",
+          "definition": "Electrons fill the lowest-energy orbitals first, at most two per orbital with opposite spins, and spread singly across orbitals of equal energy before pairing up."
+        },
+        {
+          "term": "Valence electrons",
+          "definition": "The outer-shell electrons that take part in bonding; their number is what makes carbon form four bonds, nitrogen three, oxygen two and hydrogen one."
+        },
+        {
+          "term": "Ionisation energy",
+          "definition": "The energy needed to remove the most loosely held electron from a gaseous atom; it rises across a period and falls down a group."
+        },
+        {
+          "term": "Electronegativity",
+          "definition": "A measure of how strongly an atom in a bond attracts the shared electrons (Pauling scale: H 2.20, C 2.55, N 3.04, O 3.44), which sets bond polarity."
+        },
+        {
+          "term": "Effective nuclear charge",
+          "definition": "The pull a valence electron actually feels after inner electrons partly screen the nucleus; it explains most periodic trends."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of an atom as a tiny dense nucleus (protons and neutrons) surrounded by electrons arranged in shells. The shells nearest the nucleus fill first. What matters for chemistry is the outermost shell: atoms 'want' to share, give or take electrons to reach a stable arrangement. That is why carbon makes four bonds and why sodium readily becomes Na+.",
+        "intermediate": "Electrons are described by orbitals, not orbits. The 1s orbital is a sphere, 2p orbitals are dumbbells pointing along x, y and z. Fill 1s, 2s, 2p, 3s, 3p, then 4s before 3d. Oxygen is 1s2 2s2 2p4: four p electrons means two unpaired, which is why oxygen forms two bonds. Across a period the nuclear charge rises while the electrons are added to the same shell, so atoms shrink and become harder to ionise; down a group extra shells make atoms larger and easier to ionise. Electronegativity follows the same pattern, so fluorine, oxygen and nitrogen are the most electronegative elements biology uses.",
+        "advanced": "The trends have well-known exceptions that are explained by sub-shell stability: ionisation energy dips from N to O because the fourth 2p electron must pair in an already-occupied orbital and feels extra repulsion. Transition metals (Fe, Zn, Cu, Mn) lose 4s electrons before 3d when ionising, which is why Fe2+ is [Ar]3d6 and why d-orbital splitting in a ligand field gives haem iron its spin-state and colour. The Bohr model fails for anything beyond hydrogen; the Schrodinger equation gives orbitals, and screening plus penetration (s electrons penetrate closer to the nucleus than p of the same shell) explain why 4s sits below 3d in neutral atoms."
+      },
+      "commonMistakes": [
+        "Picturing electrons as planets on circular orbits; use orbitals (probability clouds) instead, and treat the Bohr diagram as a bookkeeping tool only.",
+        "Mixing up mass number (protons + neutrons) with atomic number (protons only), or forgetting that ions change electron number but never proton number.",
+        "Writing the transition-metal ion configuration by removing 3d electrons first; the 4s electrons leave first.",
+        "Assuming a trend has no exceptions: the N-to-O ionisation energy dip and the Mg-to-Al dip are real and examinable."
+      ],
+      "videos": [
+        {
+          "youtubeId": "26PF9Ctch9Y",
+          "title": "Shells, subshells, and orbitals",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Builds the shell, subshell and orbital vocabulary you need before you can write any electron configuration."
+        },
+        {
+          "youtubeId": "hwqLCwgo6SU",
+          "title": "Electron configurations with the periodic table",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Shows how to read the periodic table as a map for filling orbitals, so configurations stop feeling like memorisation."
+        },
+        {
+          "youtubeId": "hePb00CqvP0",
+          "title": "The Periodic Table: Atomic Radius, Ionization Energy, and Electronegativity",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "A tight seven-minute explanation of why the three main periodic trends go the way they do."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "PhET: Build an Atom",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/build-an-atom",
+          "free": true,
+          "level": "beginner",
+          "note": "Add protons, neutrons and electrons and watch the element, charge and mass number update; good for locking in isotopes and ions."
+        },
+        {
+          "title": "Chemistry 2e - Electronic Structure and Periodic Properties of Elements",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Peer-reviewed free textbook; chapter 3 covers exactly this unit with worked examples."
+        },
+        {
+          "title": "PubChem Periodic Table",
+          "provider": "NCBI / National Library of Medicine",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive table with electronegativity, ionisation energy and configurations on one screen for checking your own answers."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the ground-state electron configuration of the magnesium ion Mg2+ (Z = 12)?",
+          "options": [
+            "1s2 2s2 2p6 3s2",
+            "1s2 2s2 2p6",
+            "1s2 2s2 2p6 3s2 3p2",
+            "1s2 2s2 2p4"
+          ],
+          "answer": 1,
+          "explanation": "Neutral Mg is 1s2 2s2 2p6 3s2. Forming Mg2+ removes the two 3s valence electrons, leaving the neon-like configuration 1s2 2s2 2p6."
+        },
+        {
+          "question": "Of C, N, O and P, which is the most electronegative, and so pulls shared electrons hardest in a bond?",
+          "options": [
+            "C",
+            "N",
+            "O",
+            "P"
+          ],
+          "answer": 2,
+          "explanation": "Electronegativity rises across a period and falls down a group. Oxygen (3.44 on the Pauling scale) is higher than N (3.04), C (2.55) and P (2.19), which is why O-H and C=O bonds are strongly polar."
+        },
+        {
+          "question": "Why is the first ionisation energy of oxygen slightly lower than that of nitrogen, even though oxygen is further right in the period?",
+          "options": [
+            "Oxygen has a larger atomic radius than nitrogen",
+            "Oxygen's fourth 2p electron must pair up in an orbital that already holds one electron, so repulsion makes it easier to remove",
+            "Oxygen has fewer protons than nitrogen",
+            "Oxygen's electrons fill the 3s orbital"
+          ],
+          "answer": 1,
+          "explanation": "N has three 2p electrons, one in each p orbital. O adds a fourth, forcing a pair in one orbital; the extra electron-electron repulsion lowers the energy needed to remove it."
+        }
+      ]
+    },
+    {
+      "id": "chemical-bonding-molecular-shape",
+      "title": "Chemical Bonding and Molecular Shape",
+      "hours": 5,
+      "hook": "A protein is a chain of atoms held together by bonds that are not quite single and not quite double, folded into a shape that is dictated by simple electron-pair repulsion. Learn to draw a Lewis structure and predict a shape, and you already hold most of the logic behind the peptide bond, the carboxylate group and the phosphate in ATP.",
+      "learningObjectives": [
+        "Distinguish ionic, polar covalent and non-polar covalent bonding using electronegativity difference.",
+        "Draw Lewis structures with correct formal charges, including simple resonance structures.",
+        "Predict molecular geometry with VSEPR for molecules such as CH4, NH3, H2O, CO2 and the phosphate ion.",
+        "Decide whether a molecule is polar from bond polarity and shape together.",
+        "Describe sigma and pi bonds and explain why the peptide bond is planar and rigid."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Covalent versus ionic bond",
+          "definition": "Covalent bonds share electron pairs between atoms; ionic bonds arise when electron transfer leaves oppositely charged ions held by electrostatic attraction. Real bonds sit on a continuum."
+        },
+        {
+          "term": "Polar covalent bond",
+          "definition": "A covalent bond with unequal sharing, giving a partial negative charge on the more electronegative atom and partial positive on the other (for example O-H)."
+        },
+        {
+          "term": "Lewis structure and formal charge",
+          "definition": "A bookkeeping diagram showing bonding and lone pairs; formal charge compares the electrons an atom 'owns' in the structure with its valence number, and the best structure keeps charges small and on suitable atoms."
+        },
+        {
+          "term": "Resonance",
+          "definition": "When one Lewis structure is not enough, the real molecule is a hybrid of several, with delocalised electrons and bond lengths in between; carboxylate, phosphate and the peptide bond are all examples."
+        },
+        {
+          "term": "VSEPR",
+          "definition": "Electron groups around a central atom (bonds and lone pairs) repel and arrange themselves as far apart as possible, giving linear, trigonal planar, tetrahedral and related geometries."
+        },
+        {
+          "term": "Dipole moment",
+          "definition": "A vector sum of bond polarities; a molecule is polar only if the individual bond dipoles do not cancel, so CO2 is non-polar but H2O is polar."
+        },
+        {
+          "term": "Sigma and pi bonds",
+          "definition": "A sigma bond is head-on overlap along the bond axis and allows rotation; a pi bond is side-on overlap above and below the axis and prevents rotation, so double bonds are rigid."
+        },
+        {
+          "term": "Hybridisation",
+          "definition": "A model in which s and p orbitals on one atom mix to give equivalent orbitals pointing in the observed directions: sp3 (tetrahedral, 109.5 degrees), sp2 (trigonal planar, 120 degrees), sp (linear, 180 degrees)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Atoms bond to reach a stable outer shell. If they share electrons evenly it is covalent; if one atom pulls the electrons much harder, the bond becomes polar or even ionic. Once you know how many bonds and lone pairs surround an atom, the shape follows: four pairs around carbon in methane make a tetrahedron, and two bonds plus two lone pairs on oxygen in water make a bent molecule. Bent water is polar, and that single fact explains an enormous amount of biology.",
+        "intermediate": "Draw the skeleton, count total valence electrons, give each atom an octet (hydrogen two), and compute formal charges. VSEPR counts electron groups: CH4 has four bonding groups (tetrahedral, 109.5 degrees); NH3 has three bonds and one lone pair (trigonal pyramidal, about 107 degrees); H2O has two bonds and two lone pairs (bent, about 104.5 degrees) because lone pairs repel more than bonding pairs. CO2 has two groups (linear), so its two C=O dipoles cancel. The peptide bond C-N has partial double-bond character through resonance between O=C-N and O(-)-C=N(+); that is why six atoms around it lie in one plane and the bond cannot freely rotate.",
+        "advanced": "Resonance is delocalisation lowering the energy of the real molecule below any single contributor; bond lengths (C-N in a peptide is about 1.33 angstrom, between a single C-N at about 1.47 and a double at about 1.27) are the experimental evidence. Hybridisation is an accounting model rather than a physical process; molecular orbital theory describes the same delocalisation more faithfully, with pi orbitals spread over O-C-N. Phosphorus can accommodate more than eight electrons in formal drawings (as in phosphate), but modern treatments favour highly polarised P-O bonds with charge-separated structures rather than d-orbital participation. Planarity of the amide group limits protein backbone freedom to the phi and psi angles, which is the basis of the Ramachandran plot you will meet in Level 3."
+      },
+      "commonMistakes": [
+        "Concluding a molecule is polar because it contains polar bonds; shape can cancel the dipoles (CO2, CCl4).",
+        "Forgetting lone pairs when applying VSEPR; ammonia and water are not planar or linear because of them.",
+        "Treating resonance structures as rapidly interconverting molecules; there is one molecule, a hybrid.",
+        "Calling every bond 'either ionic or covalent'; bond type is a spectrum set by electronegativity difference."
+      ],
+      "videos": [
+        {
+          "youtubeId": "QXT4OVM4vXI",
+          "title": "Atomic Hook-Ups - Types of Chemical Bonds: Crash Course Chemistry #22",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A lively tour of ionic, covalent and metallic bonding that frames the electronegativity spectrum."
+        },
+        {
+          "youtubeId": "v5OzQl860tA",
+          "title": "Molecular geometry (VSEPR theory)",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Walks step by step from electron groups to the final molecular shape."
+        },
+        {
+          "youtubeId": "NfXITji_xw4",
+          "title": "Molecular polarity",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Shows how to combine bond dipoles and geometry to decide whether a molecule is polar."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/ja01355a027",
+          "title": "The Nature of the Chemical Bond. Application of Results Obtained from the Quantum Mechanics and from a Theory of Paramagnetic Susceptibility to the Structure of Molecules",
+          "authors": "Pauling L",
+          "year": 1931,
+          "journal": "Journal of the American Chemical Society",
+          "level": "advanced",
+          "whyItMatters": "The paper that brought quantum mechanics into everyday chemistry, introducing hybridisation and the idea of resonance. It is dense, but skimming the introduction shows where the vocabulary of this unit comes from.",
+          "readingQuestions": [
+            "Which of Pauling's ideas in the introduction do you recognise from this unit?",
+            "Why did he need quantum mechanics rather than purely classical electrostatics?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Molecule Shapes",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/molecule-shapes",
+          "free": true,
+          "level": "beginner",
+          "note": "Add bonds and lone pairs and watch the geometry rearrange; ideal for building VSEPR intuition."
+        },
+        {
+          "title": "PhET: Molecule Polarity",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/molecule-polarity",
+          "free": true,
+          "level": "beginner",
+          "note": "Change electronegativity and see bond dipoles, partial charges and electrostatic potential update live."
+        },
+        {
+          "title": "Chemistry 2e - Chemical Bonding and Molecular Geometry",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters 4 and 5 give worked Lewis-structure, formal-charge and VSEPR examples with practice problems."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Carbon dioxide has two polar C=O bonds, yet the molecule has no net dipole moment. Why?",
+          "options": [
+            "The C=O bonds are actually non-polar",
+            "The molecule is linear, so the two bond dipoles are equal and opposite and cancel",
+            "CO2 is bent, which cancels the dipoles",
+            "Carbon and oxygen have the same electronegativity"
+          ],
+          "answer": 1,
+          "explanation": "Each C=O bond is polar, but VSEPR predicts a linear shape for two electron groups, so the dipoles point in opposite directions and sum to zero."
+        },
+        {
+          "question": "Which description matches water according to VSEPR?",
+          "options": [
+            "Linear, 180 degrees",
+            "Trigonal planar, 120 degrees",
+            "Bent, about 104.5 degrees, from four electron groups including two lone pairs",
+            "Tetrahedral, 109.5 degrees, with four bonds"
+          ],
+          "answer": 2,
+          "explanation": "Oxygen has four electron groups (two bonds, two lone pairs) arranged roughly tetrahedrally, but because lone pairs repel more strongly, the H-O-H angle closes to about 104.5 degrees and the molecule is bent."
+        },
+        {
+          "question": "Why is the peptide bond (C-N between two amino acids) planar and resistant to rotation?",
+          "options": [
+            "It is an ionic bond",
+            "Resonance gives the C-N bond partial double-bond character",
+            "Nitrogen has no lone pair",
+            "It is a hydrogen bond"
+          ],
+          "answer": 1,
+          "explanation": "The nitrogen lone pair is delocalised toward the carbonyl carbon, so the C-N bond behaves partly like a double bond and holds the six surrounding atoms in one plane."
+        }
+      ]
+    },
+    {
+      "id": "intermolecular-forces-water",
+      "title": "Intermolecular Forces and the Strange Behaviour of Water",
+      "hours": 5,
+      "hook": "Covalent bonds are strong; the forces between molecules are individually weak. Yet the double helix, the folded protein and the lipid bilayer are all held together by those weak forces added up by the thousand, in a solvent, water, whose odd properties make life possible.",
+      "learningObjectives": [
+        "Rank ion-dipole, hydrogen bonding, dipole-dipole and London dispersion forces by typical strength and say when each applies.",
+        "Explain water's high boiling point, specific heat, surface tension and solvent power in terms of hydrogen bonding.",
+        "Predict whether a substance dissolves in water using the 'like dissolves like' rule and ionic hydration.",
+        "Explain the hydrophobic effect as an entropy-driven phenomenon and link it to micelles, bilayers and protein folding.",
+        "Distinguish intramolecular bonds from intermolecular forces by comparing typical energies."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hydrogen bond",
+          "definition": "An attraction between a hydrogen atom covalently bound to N, O or F and a lone pair on another N, O or F; roughly 20 kJ/mol in water, about one twentieth of a covalent O-H bond (about 460 kJ/mol)."
+        },
+        {
+          "term": "London dispersion forces",
+          "definition": "Weak attractions from temporary, induced dipoles; present between all molecules and growing with size and surface area, they dominate between non-polar chains such as lipid tails."
+        },
+        {
+          "term": "Dipole-dipole and ion-dipole forces",
+          "definition": "Attractions between permanent dipoles, or between an ion and a polar molecule; ion-dipole interactions are why salts dissolve in water."
+        },
+        {
+          "term": "Hydration shell",
+          "definition": "A layer of water molecules oriented around an ion or polar solute, stabilising it in solution."
+        },
+        {
+          "term": "Specific heat and heat of vaporisation",
+          "definition": "Water absorbs a lot of heat per degree and per gram evaporated because hydrogen bonds must be broken, buffering cells and organisms against temperature swings."
+        },
+        {
+          "term": "Hydrophobic effect",
+          "definition": "Non-polar groups cluster in water mainly because this frees ordered water molecules and raises the entropy of the solvent, not because non-polar groups attract each other strongly."
+        },
+        {
+          "term": "Amphipathic molecule",
+          "definition": "A molecule with a polar (hydrophilic) head and non-polar (hydrophobic) tail, such as a phospholipid or soap, which self-assembles into micelles or bilayers."
+        },
+        {
+          "term": "Solubility rule: like dissolves like",
+          "definition": "Polar and ionic substances dissolve well in polar solvents; non-polar substances dissolve in non-polar solvents."
+        }
+      ],
+      "deeper": {
+        "beginner": "Molecules stick to each other through weak attractions. Water molecules are bent and polar, and each can form hydrogen bonds with about four neighbours, which gives water an unusually high boiling point for such a small molecule. Salts and sugars dissolve because water molecules can surround them and stabilise them. Oils do not, so in water they clump together, and this clumping is what lets cell membranes form.",
+        "intermediate": "Ordering by strength per interaction: ion-ion > ion-dipole > hydrogen bonding > dipole-dipole > dispersion. Individually weak, they are collectively decisive: a protein may have hundreds of hydrogen bonds and thousands of dispersion contacts. Water's liquid structure is a constantly flickering network; a non-polar solute disrupts it, forcing nearby water into a more ordered arrangement, which is entropically unfavourable. Clustering the non-polar groups minimises that disrupted surface, releasing water, which is why the hydrophobic effect drives bilayer formation, micelle assembly and the burial of non-polar residues in a protein core. Ice floats because its open hydrogen-bonded lattice is less dense than liquid water.",
+        "advanced": "At room temperature the hydrophobic effect is predominantly entropic for small solutes but becomes increasingly enthalpic for larger surfaces, and its magnitude depends on length scale (Chandler's analysis distinguishes small solutes, which water can wrap around, from large surfaces, which force water to dewet). Hydrogen bonds are partly electrostatic and partly charge-transfer or covalent in character, and they are directional, which is why base pairing and secondary structure are so specific. The Gibbs energy of transfer of a non-polar side chain from water to a non-polar solvent correlates with accessible surface area (on the order of tens of cal/mol per square angstrom), a relation widely used in protein-folding models. Water in the first hydration layer of a protein is not simply bulk water: it is dynamically perturbed and takes part in function."
+      },
+      "commonMistakes": [
+        "Saying hydrogen bonds are 'bonds' of comparable strength to covalent bonds; they are far weaker, and their power comes from number and cooperativity.",
+        "Explaining the hydrophobic effect as 'oil molecules attract each other'; the driving force is mainly the solvent's entropy.",
+        "Believing that boiling water breaks covalent O-H bonds; boiling breaks intermolecular hydrogen bonds.",
+        "Applying hydrogen bonding to any molecule containing hydrogen; the hydrogen must be bound to N, O or F."
+      ],
+      "videos": [
+        {
+          "youtubeId": "3jwAGWky98c",
+          "title": "Properties of Water",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A clear introduction to polarity, hydrogen bonding, cohesion and why ice floats."
+        },
+        {
+          "youtubeId": "08kGgrqaZXA",
+          "title": "Intermolecular Forces and Boiling Points",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Ranks the main intermolecular forces and links them directly to physical properties you can measure."
+        },
+        {
+          "youtubeId": "6G1evL7ELwE",
+          "title": "Hydrogen bonding in water",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Shows the geometry of hydrogen bonds between water molecules and what they do to bulk properties."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature04162",
+          "title": "Interfaces and the driving force of hydrophobic assembly",
+          "authors": "Chandler D",
+          "year": 2005,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "A readable review of why oil and water separate, showing that the physics changes with the size of the non-polar object. It gives a rigorous version of the hydrophobic effect that you will use again when studying protein folding and membranes."
+        },
+        {
+          "doi": "10.1021/cr068037a",
+          "title": "Water as an Active Constituent in Cell Biology",
+          "authors": "Ball P",
+          "year": 2008,
+          "journal": "Chemical Reviews",
+          "level": "intermediate",
+          "whyItMatters": "Argues that water is not just a passive solvent but takes part in folding, binding and signalling. A good way to see why a chemistry unit on water belongs in a biochemistry degree."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: States of Matter",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/states-of-matter",
+          "free": true,
+          "level": "beginner",
+          "note": "Watch how interaction strength changes melting and boiling behaviour for small molecules."
+        },
+        {
+          "title": "Water, Acids and Bases (Biology)",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/biology",
+          "free": true,
+          "level": "beginner",
+          "note": "Short videos and exercises on the life-science side of water; find the 'Water, acids, and bases' unit."
+        },
+        {
+          "title": "General Chemistry Bookshelf",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/General_Chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "A large open library with several full general chemistry texts; useful for extra explanations of intermolecular forces."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which intermolecular force is the main reason water has a much higher boiling point than hydrogen sulfide (H2S), even though H2S is heavier?",
+          "options": [
+            "London dispersion forces",
+            "Hydrogen bonding between water molecules",
+            "Ionic bonding",
+            "Covalent bonding between water molecules"
+          ],
+          "answer": 1,
+          "explanation": "Water forms extensive O-H...O hydrogen bonds; sulfur is much less electronegative and H2S does not hydrogen-bond appreciably, so far less energy is needed to separate H2S molecules."
+        },
+        {
+          "question": "Phospholipids assemble into bilayers in water. What is the main driving force?",
+          "options": [
+            "Strong covalent bonds between lipid tails",
+            "Hydrophobic tails clustering, which frees ordered water and raises the entropy of the solvent",
+            "Hydrogen bonds between lipid tails",
+            "Ionic attraction between lipid heads and tails"
+          ],
+          "answer": 1,
+          "explanation": "The non-polar tails disrupt water's hydrogen-bond network. Burying them in a bilayer interior reduces the disrupted water surface and increases solvent entropy; dispersion forces between tails help but are not the main driver."
+        },
+        {
+          "question": "Roughly how does the strength of a single hydrogen bond in water compare with a covalent O-H bond?",
+          "options": [
+            "About equal",
+            "Roughly one twentieth",
+            "About ten times stronger",
+            "Roughly one half"
+          ],
+          "answer": 1,
+          "explanation": "A hydrogen bond in water is on the order of 20 kJ/mol versus about 460 kJ/mol for the covalent O-H bond, which is why hydrogen bonds form and break easily at body temperature."
+        }
+      ]
+    },
+    {
+      "id": "moles-solutions-concentration",
+      "title": "Moles, Solutions and Concentration Calculations",
+      "hours": 5,
+      "hook": "Every wet-lab protocol you will ever follow begins with arithmetic: how many grams of Tris, how much stock to dilute, what the final millimolar concentration is. A student who is fluent here saves hours and avoids ruined experiments.",
+      "learningObjectives": [
+        "Convert between mass, moles and number of particles using molar mass and Avogadro's constant.",
+        "Calculate molarity, mass concentration, percentage and ppm, and convert between them.",
+        "Apply C1V1 = C2V2 to dilutions and plan serial dilutions.",
+        "Balance simple equations and use stoichiometry and limiting reagent reasoning.",
+        "Distinguish molarity from osmolarity and explain why saline is 0.9 % (w/v) NaCl."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Mole",
+          "definition": "The amount of substance containing 6.022 x 10^23 entities (Avogadro's constant); the link between a mass you can weigh and a number of molecules you care about."
+        },
+        {
+          "term": "Molar mass",
+          "definition": "Mass of one mole of a substance in g/mol, found by summing atomic masses; for macromolecules it is the same number as molecular weight in daltons."
+        },
+        {
+          "term": "Molarity",
+          "definition": "Moles of solute per litre of solution (mol/L, written M); the standard concentration unit for reagents and buffers."
+        },
+        {
+          "term": "Dilution equation",
+          "definition": "C1V1 = C2V2: the amount of solute is unchanged by adding solvent, so initial concentration times initial volume equals final concentration times final volume."
+        },
+        {
+          "term": "Serial dilution",
+          "definition": "Repeated dilution by the same factor (for example ten-fold steps) to cover several orders of magnitude, as in bacterial counts or standard curves."
+        },
+        {
+          "term": "Percent and ppm",
+          "definition": "w/v percent is grams per 100 mL; ppm is parts per million (for dilute aqueous solutions about mg/L); useful when no molar mass is available."
+        },
+        {
+          "term": "Limiting reagent",
+          "definition": "The reactant that runs out first and therefore caps how much product can form."
+        },
+        {
+          "term": "Osmolarity",
+          "definition": "Moles of dissolved particles per litre; one mole of NaCl gives close to two osmoles because it dissociates into two ions."
+        }
+      ],
+      "deeper": {
+        "beginner": "The mole is just a counting unit like a dozen, but for atoms and molecules: 6.022 x 10^23 of them. Molar mass lets you turn a mass on the balance into a number of moles. Molarity tells you how many moles are in each litre. To make 100 mL of 50 mM Tris (molar mass 121.14 g/mol) you need 0.05 mol/L x 0.1 L x 121.14 g/mol = about 0.61 g, dissolved and made up to 100 mL.",
+        "intermediate": "Work in a fixed routine: write the quantity wanted, convert all volumes to litres, solve for moles, then for mass. For dilutions use C1V1 = C2V2, for example 5 mL of 1 M stock diluted to 50 mL gives 0.1 M; a serial ten-fold dilution gives 10^-1, 10^-2, 10^-3 and so on, so after n steps the factor is 10^n. Physiological saline is 0.9 % w/v NaCl, that is 9 g/L; dividing by 58.44 g/mol gives about 154 mM, so about 308 mOsm/L, close to the osmolarity of blood plasma (about 290 mOsm/L). Stoichiometry works on mole ratios from a balanced equation, never on mass ratios directly.",
+        "advanced": "Molarity depends on temperature through the solution volume, while molality (mol per kg solvent) does not, which is why molality is used in colligative-property work. Real solutions deviate from ideality at high concentrations: activities replace concentrations, and in a cell the crowded cytosol (macromolecules occupying a substantial fraction of the volume) changes effective concentrations, rates and equilibria. Propagating uncertainty matters too: a pipetting error of 2 % in each of two dilution steps gives roughly 3 % in the final concentration. For macromolecules, molar mass in g/mol and relative molecular mass in daltons are numerically equal, so a 50 kDa protein at 1 mg/mL is 20 micromolar."
+      },
+      "commonMistakes": [
+        "Forgetting to convert mL to L (or mg to g) before using molarity, a 1000-fold error.",
+        "Using the volume of solvent added rather than the final volume of the solution when computing molarity.",
+        "Treating C1V1 = C2V2 as valid for chemical reactions; it holds only for dilution, where the amount of solute is conserved.",
+        "Using mass ratios instead of mole ratios in stoichiometry."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Z_TjGRPPR9Q",
+          "title": "An Actually Good Explanation of Moles",
+          "channel": "Steve Mould",
+          "level": "beginner",
+          "whyWatch": "Builds a physical feeling for what a mole is before you start calculating with it."
+        },
+        {
+          "youtubeId": "L-Uhyjt8t10",
+          "title": "Molarity",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A short, clean derivation of molarity with a worked example."
+        },
+        {
+          "youtubeId": "6hls5wncscU",
+          "title": "Dilutions",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Shows how to derive and use the dilution equation, the single most-used calculation at the bench."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/s0968-0004(01)01938-7",
+          "title": "Macromolecular crowding: obvious but underappreciated",
+          "authors": "Ellis RJ",
+          "year": 2001,
+          "journal": "Trends in Biochemical Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Explains why concentrations measured in dilute test-tube buffer can mislead about what happens in a crowded cell. It makes a nice counterweight to this unit: the calculations are essential, but the real cytosol is not an ideal dilute solution."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Molarity",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/molarity",
+          "free": true,
+          "level": "beginner",
+          "note": "Change moles of solute and solution volume and see concentration respond; good for building intuition before problem-solving."
+        },
+        {
+          "title": "PhET: Concentration",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/concentration",
+          "free": true,
+          "level": "beginner",
+          "note": "Add solute, add water and watch the colour and concentration meter change, linking dilution to what you see."
+        },
+        {
+          "title": "Chemistry 2e - Stoichiometry and Solutions",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters 6 and 7 contain graded practice problems on moles, molarity and dilution with answers."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "How many grams of NaCl (molar mass 58.44 g/mol) are needed to prepare 500 mL of a 0.20 M solution?",
+          "options": [
+            "5.84 g",
+            "11.69 g",
+            "29.2 g",
+            "58.44 g"
+          ],
+          "answer": 0,
+          "explanation": "Moles = 0.20 mol/L x 0.500 L = 0.10 mol; mass = 0.10 mol x 58.44 g/mol = 5.84 g."
+        },
+        {
+          "question": "You dilute 2.0 mL of a 5.0 M stock to a final volume of 100 mL. What is the final concentration?",
+          "options": [
+            "0.01 M",
+            "0.10 M",
+            "0.25 M",
+            "0.50 M"
+          ],
+          "answer": 1,
+          "explanation": "C2 = C1V1 / V2 = (5.0 M x 2.0 mL) / 100 mL = 0.10 M."
+        },
+        {
+          "question": "Physiological saline is 0.9 % (w/v) NaCl. Approximately what is its molar concentration of NaCl?",
+          "options": [
+            "15 mM",
+            "154 mM",
+            "900 mM",
+            "1.54 M"
+          ],
+          "answer": 1,
+          "explanation": "0.9 % w/v is 9 g per litre; 9 g / 58.44 g/mol is about 0.154 mol/L, that is 154 mM."
+        }
+      ]
+    },
+    {
+      "id": "acids-bases-ph-buffers",
+      "title": "Acids, Bases, pH and Buffers",
+      "hours": 6,
+      "hook": "Blood pH stays between about 7.35 and 7.45; step outside that for long and enzymes stop working and you are in an emergency room. The molecules that keep pH steady, buffers, are also what you will prepare in almost every Level 3 practical, and the equation behind them fits on one line.",
+      "learningObjectives": [
+        "Define acids and bases in the Bronsted-Lowry sense and identify conjugate pairs.",
+        "Calculate pH, pOH and concentrations of H+ and OH- for strong acids and bases and for weak acids using Ka.",
+        "Use the Henderson-Hasselbalch equation to calculate buffer pH and the acid/base ratio needed for a target pH.",
+        "Interpret a titration curve of a weak acid, including the buffer region, half-equivalence point and equivalence point.",
+        "Explain how bicarbonate, phosphate and amino acid side chains buffer biological systems."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Bronsted-Lowry acid and base",
+          "definition": "An acid donates a proton; a base accepts one. Removing a proton from an acid HA gives its conjugate base A-."
+        },
+        {
+          "term": "pH",
+          "definition": "pH = -log10[H+]; a logarithmic scale where each unit is a ten-fold change in hydrogen-ion concentration."
+        },
+        {
+          "term": "Kw and neutrality",
+          "definition": "In water [H+][OH-] = Kw = 1.0 x 10^-14 at 25 degrees C; pH 7.00 is neutral only at that temperature."
+        },
+        {
+          "term": "Ka and pKa",
+          "definition": "Ka measures how far a weak acid dissociates; pKa = -log10 Ka, and a lower pKa means a stronger acid."
+        },
+        {
+          "term": "Henderson-Hasselbalch equation",
+          "definition": "pH = pKa + log10([A-]/[HA]); it links pH to the ratio of conjugate base to acid in a buffer."
+        },
+        {
+          "term": "Buffer",
+          "definition": "A solution of a weak acid and its conjugate base that resists pH change on small additions of acid or base; most effective within about one pH unit of the pKa."
+        },
+        {
+          "term": "Buffer capacity",
+          "definition": "The amount of acid or base a buffer can absorb before pH changes sharply; it rises with total buffer concentration and is highest when pH equals pKa."
+        },
+        {
+          "term": "Polyprotic acid",
+          "definition": "An acid with several ionisable protons, each with its own pKa; phosphoric acid has pKa values of about 2.15, 7.20 and 12.35."
+        }
+      ],
+      "deeper": {
+        "beginner": "Acids give away H+ and bases take it. pH is a compact way to write how much H+ is in solution, and because it is a logarithm, a drop of one pH unit means ten times more H+. A buffer is a mixture of a weak acid and its conjugate base; when you add extra acid the base part absorbs it, and when you add extra base the acid part gives up H+ to neutralise it. That is why buffers hold pH steady.",
+        "intermediate": "For a weak acid HA, Ka = [H+][A-]/[HA]. Taking logs and rearranging gives the Henderson-Hasselbalch equation. When [A-] = [HA], pH = pKa. For acetic acid (pKa 4.76), a pH of 5.76 needs a base-to-acid ratio of 10 to 1. On a titration curve, the flat region is the buffer zone, the midpoint of that zone (half-equivalence) is where pH = pKa, and the steep rise marks the equivalence point. Choose a buffer whose pKa is within one unit of your target pH: phosphate (pKa2 7.2) for neutral pH, Tris (about 8.1 at 25 degrees C) for pH 7.5 to 9, acetate for pH about 4 to 5.5.",
+        "advanced": "The Henderson-Hasselbalch equation is an approximation: it assumes concentrations equal activities and that the acid and base amounts are not much changed by ionisation, which fails in very dilute solutions or near the extremes of a titration. Tris has a large temperature coefficient (pKa falls by roughly 0.03 per degree C), so a Tris buffer set to pH 7.5 at 25 degrees C will be noticeably more acidic at 37 degrees C. Blood combines the CO2/HCO3- system, which is an open buffer because CO2 is exhaled, with pKa about 6.1 as an effective apparent value, meaning bicarbonate buffers well at 7.4 only because respiration and the kidneys control the components. The ionisation of protein side chains (His about 6, Lys about 10.5) means a protein's charge, and so its solubility, binding and electrophoretic mobility, are all pH-dependent."
+      },
+      "commonMistakes": [
+        "Assuming pH 7 is always neutral; neutrality is [H+] = [OH-], which equals pH 7.00 only at 25 degrees C.",
+        "Using Henderson-Hasselbalch for a strong acid or a solution with no conjugate base.",
+        "Forgetting that a buffer works best within about one pH unit of its pKa, and picking a buffer far from the target pH.",
+        "Adding pKa and pH in the wrong direction: when pH is above pKa the base form dominates, and when below, the acid form."
+      ],
+      "animation": "titration-curve",
+      "videos": [
+        {
+          "youtubeId": "LS67vS10O5Y",
+          "title": "pH and pOH: Crash Course Chemistry #30",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A memorable walk through pH, pOH and Kw that sets up everything else in this unit."
+        },
+        {
+          "youtubeId": "7QgtdYiWH50",
+          "title": "Henderson-Hasselbalch equation",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Derives the equation and works a buffer problem so you see where the log term comes from."
+        },
+        {
+          "youtubeId": "sZW1qoQl3ng",
+          "title": "Weak acid-strong base titrations",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Explains the shape of the titration curve and why pH equals pKa at the half-equivalence point."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/ed078p1499",
+          "title": "The Henderson-Hasselbalch Equation: Its History and Limitations",
+          "authors": "Po HN, Senozan NM",
+          "year": 2001,
+          "journal": "Journal of Chemical Education",
+          "level": "intermediate",
+          "whyItMatters": "Traces how the equation arose and spells out when the approximation breaks down. Reading it will make you a more careful user of a formula that every bench scientist applies daily.",
+          "readingQuestions": [
+            "Under what conditions is the equation least accurate?",
+            "How did the original Henderson and Hasselbalch forms differ?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Acid-Base Solutions",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/acid-base-solutions",
+          "free": true,
+          "level": "beginner",
+          "note": "Compare strong and weak acids at the molecular level and see how concentration and Ka control pH."
+        },
+        {
+          "title": "PhET: pH Scale",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/ph-scale",
+          "free": true,
+          "level": "beginner",
+          "note": "Test everyday liquids and watch how H+ and OH- counts change as pH changes."
+        },
+        {
+          "title": "Acids and Bases",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/chemistry/acids-and-bases-topic",
+          "free": true,
+          "level": "intermediate",
+          "note": "Structured lessons with practice exercises on pH, buffers and titrations."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "You want an acetate buffer (pKa 4.76) at pH 5.76. What ratio [acetate] : [acetic acid] is needed?",
+          "options": [
+            "1 : 10",
+            "1 : 1",
+            "10 : 1",
+            "100 : 1"
+          ],
+          "answer": 2,
+          "explanation": "pH - pKa = 1.00 = log([A-]/[HA]), so [A-]/[HA] = 10."
+        },
+        {
+          "question": "On the titration curve of a weak acid with strong base, what is the pH at the half-equivalence point?",
+          "options": [
+            "7.00",
+            "Equal to the pKa of the acid",
+            "Equal to 14 minus the pKa",
+            "Cannot be determined"
+          ],
+          "answer": 1,
+          "explanation": "At half-equivalence half the acid has been converted to its conjugate base, so [A-] = [HA], the log term is zero and pH = pKa."
+        },
+        {
+          "question": "How does the hydrogen-ion concentration at pH 6 compare with that at pH 8?",
+          "options": [
+            "Twice as high",
+            "10 times higher",
+            "100 times higher",
+            "1000 times higher"
+          ],
+          "answer": 2,
+          "explanation": "pH is logarithmic; two pH units correspond to a 10^2 = 100-fold change in [H+], and lower pH means more H+."
+        }
+      ]
+    },
+    {
+      "id": "thermodynamics-gibbs-energy",
+      "title": "Chemical Thermodynamics and Gibbs Free Energy",
+      "hours": 6,
+      "hook": "Why does ATP hydrolysis release usable energy while a glucose molecule left on the bench does not burst into flame? Thermodynamics tells you which reactions can proceed and in which direction, and the single quantity that matters for a cell at constant temperature and pressure is the Gibbs free energy.",
+      "learningObjectives": [
+        "State the first and second laws and define system, surroundings, internal energy, enthalpy and entropy.",
+        "Use delta G = delta H - T delta S to predict spontaneity and the temperature dependence of that prediction.",
+        "Distinguish delta G from delta G degree prime (biochemical standard state) and relate delta G degree to the equilibrium constant.",
+        "Explain how an unfavourable reaction is driven by coupling to ATP hydrolysis.",
+        "Interpret the hydrophobic effect and protein folding in terms of enthalpy and entropy."
+      ],
+      "keyConcepts": [
+        {
+          "term": "First law",
+          "definition": "Energy is conserved: the change in a system's internal energy equals heat added plus work done on it."
+        },
+        {
+          "term": "Enthalpy (H)",
+          "definition": "Heat content at constant pressure; the heat exchanged in a reaction at constant pressure equals delta H (negative for exothermic reactions)."
+        },
+        {
+          "term": "Entropy (S)",
+          "definition": "A measure of how many microscopic arrangements (energy dispersal) are available to a system; the entropy of the universe increases in any spontaneous process."
+        },
+        {
+          "term": "Gibbs free energy",
+          "definition": "G = H - TS; at constant temperature and pressure a process is spontaneous if delta G is negative, at equilibrium if zero, and non-spontaneous if positive."
+        },
+        {
+          "term": "Standard states: delta G degree and delta G degree prime",
+          "definition": "delta G degree is for 1 M reactants and products; delta G degree prime (biochemical standard) is the same but at pH 7 with water and H+ fixed, so values for biological reactions are tabulated at pH 7."
+        },
+        {
+          "term": "Delta G and the equilibrium constant",
+          "definition": "delta G degree = -RT ln K; at 25 degrees C every ten-fold change in K corresponds to about 5.7 kJ/mol."
+        },
+        {
+          "term": "Reaction quotient and delta G",
+          "definition": "delta G = delta G degree + RT ln Q; the actual sign of delta G depends on current concentrations, not just on standard values."
+        },
+        {
+          "term": "Energy coupling",
+          "definition": "A thermodynamically unfavourable reaction can proceed if it shares an intermediate with a sufficiently favourable one such as ATP hydrolysis (delta G degree prime about -30.5 kJ/mol), so the overall delta G is negative."
+        }
+      ],
+      "deeper": {
+        "beginner": "Reactions tend to go in the direction that lowers free energy. Free energy balances two things: heat released (enthalpy) and the freedom of the particles to spread out (entropy). A negative delta G means the reaction can go on its own; a positive one means it needs help. Cells give that help by coupling an unfavourable reaction to ATP hydrolysis, which has a large negative delta G, so the pair together can proceed.",
+        "intermediate": "Combine the two laws as delta G = delta H - T delta S. If delta H is negative and delta S positive, the reaction is spontaneous at every temperature; if both have the same sign, temperature decides. Spontaneous says nothing about speed: glucose oxidation has a hugely negative delta G, but it only proceeds quickly when enzymes allow it. Standard delta G degree is a reference value; the real driving force is delta G = delta G degree + RT ln Q. A reaction with delta G degree prime = +10 kJ/mol can still run forward in a cell if products are removed fast enough so that Q is very small. ATP hydrolysis is about -30.5 kJ/mol under standard conditions but closer to -50 to -65 kJ/mol in a living cell because ATP is kept far above its equilibrium ratio with ADP and phosphate.",
+        "advanced": "Free energy is a state function, so delta G values for sequential reactions add; this is the formal basis of coupling and of calculating pathway energetics. For biochemical reactions the standard transformed Gibbs energy depends on pH, pMg and ionic strength (Alberty's formalism), which is why tools such as eQuilibrator report values at specified conditions rather than a single number. The hydrophobic effect shows how a negative delta G can arise from a positive delta S of the solvent even when the solute's own enthalpy change is unfavourable, and protein folding stability (typically only 20 to 60 kJ/mol net) is the small difference between large opposing enthalpy and entropy terms. Entropy is not merely 'disorder': it counts accessible microstates and is conceptually tied to energy dispersal and heat flow, which is why the second law concerns the system plus surroundings."
+      },
+      "commonMistakes": [
+        "Equating 'spontaneous' with 'fast'; delta G says nothing about rate.",
+        "Using delta G degree to decide direction in the cell; use delta G with real concentrations (the sign of delta G degree only tells you the direction at 1 M standard conditions).",
+        "Saying the 'high-energy' phosphate bond stores energy by itself; energy is released because the products are more stable and the overall delta G is favourable.",
+        "Thinking entropy always means mess; define it as dispersal of energy or number of accessible arrangements and count the surroundings too."
+      ],
+      "videos": [
+        {
+          "youtubeId": "SV7U4yAXL5I",
+          "title": "Enthalpy: Crash Course Chemistry #18",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A clear first look at heat, enthalpy and the sign conventions that trip up many students."
+        },
+        {
+          "youtubeId": "ZsY4WcQOrfk",
+          "title": "Entropy: Embrace the Chaos! Crash Course Chemistry #20",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Introduces entropy as counting arrangements and links it to the second law."
+        },
+        {
+          "youtubeId": "ViAmQivKif0",
+          "title": "Gibbs free energy and spontaneity",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Puts enthalpy, entropy and temperature together to decide when a reaction proceeds."
+        },
+        {
+          "youtubeId": "CHHu-iTwHjg",
+          "title": "Gibbs free energy and spontaneous reactions",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "The biology-flavoured version, connecting delta G to metabolism and ATP."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "eQuilibrator: The Biochemical Thermodynamics Calculator",
+          "provider": "Weizmann Institute of Science",
+          "type": "tool",
+          "url": "https://equilibrator.weizmann.ac.il/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up delta G degree prime and equilibrium constants for real biochemical reactions at chosen pH and ionic strength; a preview of Metabolism I."
+        },
+        {
+          "title": "5.60 Thermodynamics & Kinetics",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/",
+          "free": true,
+          "level": "advanced",
+          "note": "A rigorous course with lecture notes and problem sets if you want to go beyond the first-year treatment."
+        },
+        {
+          "title": "Chemistry 2e - Thermodynamics",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters 9 and 16 treat enthalpy, entropy and free energy with worked problems."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A reaction has delta H = +20 kJ/mol and delta S = +100 J/(mol K). At 298 K, what is its delta G and is it spontaneous?",
+          "options": [
+            "-9.8 kJ/mol, spontaneous",
+            "+9.8 kJ/mol, not spontaneous",
+            "+20 kJ/mol, not spontaneous",
+            "-20 kJ/mol, spontaneous"
+          ],
+          "answer": 0,
+          "explanation": "delta G = 20 kJ/mol - (298 K)(0.100 kJ/mol K) = 20 - 29.8 = -9.8 kJ/mol; the entropy term outweighs the unfavourable enthalpy at this temperature, so it is spontaneous."
+        },
+        {
+          "question": "A reaction has a very negative delta G but occurs only very slowly in the absence of a catalyst. What does this show?",
+          "options": [
+            "delta G is wrong",
+            "Spontaneity is a thermodynamic property and says nothing about reaction rate",
+            "The reaction is at equilibrium",
+            "Entropy is negative"
+          ],
+          "answer": 1,
+          "explanation": "Thermodynamics tells you whether a reaction can proceed; kinetics (activation energy) governs how fast. Glucose is stable in air for the same reason."
+        },
+        {
+          "question": "Approximately how does delta G degree change when the equilibrium constant K of a reaction increases ten-fold at 25 degrees C?",
+          "options": [
+            "It decreases by about 5.7 kJ/mol",
+            "It increases by about 5.7 kJ/mol",
+            "It decreases by about 57 kJ/mol",
+            "It does not change"
+          ],
+          "answer": 0,
+          "explanation": "delta G degree = -RT ln K; changing K by a factor of 10 changes delta G degree by -RT ln 10, about -5.7 kJ/mol at 298 K."
+        }
+      ]
+    },
+    {
+      "id": "chemical-equilibrium",
+      "title": "Chemical Equilibrium and Le Chatelier's Principle",
+      "hours": 5,
+      "hook": "Haemoglobin picks up oxygen in the lungs and lets it go in tissues, with the same protein in the same blood, because shifting conditions tilt an equilibrium one way or the other. Once you can reason about a system pushed away from equilibrium, you can reason about binding, transport and metabolism.",
+      "learningObjectives": [
+        "Describe equilibrium as a dynamic state with equal forward and reverse rates, not as equal concentrations.",
+        "Write equilibrium constant expressions (Kc) and calculate K or equilibrium concentrations from data.",
+        "Use the reaction quotient Q compared with K to predict the direction of net change.",
+        "Apply Le Chatelier's principle to changes in concentration, pressure and temperature, and know that catalysts do not shift equilibrium.",
+        "Connect binding equilibria to the dissociation constant Kd, and solubility to Ksp."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Dynamic equilibrium",
+          "definition": "The state in which forward and reverse reactions proceed at equal rates so that net concentrations stay constant."
+        },
+        {
+          "term": "Equilibrium constant K",
+          "definition": "The ratio of product to reactant concentrations (each raised to its stoichiometric power) at equilibrium; it is fixed at a given temperature."
+        },
+        {
+          "term": "Reaction quotient Q",
+          "definition": "The same expression evaluated at any moment; if Q < K the reaction proceeds forward, if Q > K in reverse, if Q = K it is at equilibrium."
+        },
+        {
+          "term": "Le Chatelier's principle",
+          "definition": "If a system at equilibrium is disturbed, it shifts in the direction that partly counteracts the disturbance."
+        },
+        {
+          "term": "van 't Hoff relation",
+          "definition": "K changes with temperature: it increases for an endothermic reaction and decreases for an exothermic one as temperature rises."
+        },
+        {
+          "term": "Dissociation constant Kd",
+          "definition": "For P + L <-> PL, Kd = [P][L]/[PL]; the ligand concentration at which half of the protein is bound, so smaller Kd means tighter binding."
+        },
+        {
+          "term": "Solubility product Ksp",
+          "definition": "The equilibrium constant for a sparingly soluble salt dissolving, for example calcium phosphate; it predicts when precipitation occurs."
+        },
+        {
+          "term": "Effect of a catalyst",
+          "definition": "A catalyst speeds both forward and reverse reactions equally, so equilibrium is reached sooner but K does not change."
+        }
+      ],
+      "deeper": {
+        "beginner": "In a closed container, a reversible reaction eventually looks like nothing is happening, but molecules are still converting both ways at the same speed. If you add more of a reactant, the system reacts to use some of it up; if you remove a product, the system makes more. This 'push back' behaviour is Le Chatelier's principle. It explains many everyday biological effects, such as why more CO2 in the blood makes haemoglobin release oxygen more readily.",
+        "intermediate": "For aA + bB <-> cC + dD, K = [C]^c[D]^d / ([A]^a[B]^b) at equilibrium. For A <-> B with K = 10 and starting from 0.11 mM A, equilibrium has [B] = 10 [A], giving 1.0 mM B and 0.10 mM A. Compare Q to K to decide the direction. Raising temperature favours the endothermic direction, adding inert gas at constant volume does nothing, and adding a catalyst changes nothing about the position. For binding, fraction bound = [L]/(Kd + [L]); with Kd = 1 micromolar, half of the protein is bound at 1 micromolar ligand, 90 percent at 9 micromolar. This is a preview of the Michaelis-Menten and ligand-binding curves you will see later.",
+        "advanced": "K is thermodynamic: delta G degree = -RT ln K, and the temperature dependence follows d(ln K)/dT = delta H degree / RT^2. In cells many reactions are held far from equilibrium by continuous supply and removal of substances, which is the steady state of an open system rather than equilibrium; the mass-action ratio Q compared with K tells you how far, and 'near-equilibrium' reactions in metabolism are those with Q close to K. Le Chatelier's principle is a qualitative consequence of the second law and can fail to give a simple prediction when several variables change at once, so a quantitative Q-versus-K calculation is the reliable method. Coupled equilibria, such as proton-linked oxygen binding in haemoglobin (the Bohr effect), arise because binding of one ligand changes the effective equilibrium constant for another."
+      },
+      "commonMistakes": [
+        "Assuming concentrations are equal at equilibrium; they are constant, and their ratio is set by K.",
+        "Believing that K changes when concentrations change; only temperature (and the reaction written) changes K.",
+        "Thinking a catalyst can improve the yield of an equilibrium reaction; it only reaches equilibrium faster.",
+        "Including pure solids or liquids (and the solvent water) in the K expression."
+      ],
+      "videos": [
+        {
+          "youtubeId": "g5wNg_dKsYY",
+          "title": "Equilibrium: Crash Course Chemistry #28",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Introduces dynamic equilibrium and the idea of K before any heavy mathematics."
+        },
+        {
+          "youtubeId": "B2pP02GEZL4",
+          "title": "Le Chatelier's principle",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A five-minute worked tour of how a system responds to a disturbance."
+        },
+        {
+          "youtubeId": "DP-vWN1yXrY",
+          "title": "Equilibrium Equations: Crash Course Chemistry #29",
+          "channel": "CrashCourse",
+          "level": "intermediate",
+          "whyWatch": "Shows how to write K expressions, use ICE tables and compare Q with K."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "PhET: Reversible Reactions",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/reversible-reactions",
+          "free": true,
+          "level": "beginner",
+          "note": "Watch forward and reverse reactions reach equilibrium and see how changing concentrations shifts the balance."
+        },
+        {
+          "title": "Chemistry 2e - Fundamental Equilibrium Concepts",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapter 13 covers K, Q, ICE tables and Le Chatelier with graded problems."
+        },
+        {
+          "title": "Equilibrium (General Chemistry)",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/General_Chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open textbook maps with alternative explanations and extra worked examples on equilibrium."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "For A <-> B with K = 10, a mixture has [A] = 0.50 mM and [B] = 1.0 mM. Which statement is correct?",
+          "options": [
+            "It is at equilibrium",
+            "Q = 2, which is less than K, so the net reaction proceeds forward (toward B)",
+            "Q = 2, which is greater than K, so the net reaction proceeds in reverse",
+            "No prediction is possible"
+          ],
+          "answer": 1,
+          "explanation": "Q = [B]/[A] = 1.0/0.50 = 2, which is below K = 10, so more B must form to reach equilibrium."
+        },
+        {
+          "question": "What is the effect of adding a catalyst to a reaction at equilibrium?",
+          "options": [
+            "It shifts equilibrium toward the products",
+            "It shifts equilibrium toward the reactants",
+            "It changes K",
+            "It speeds up approach to equilibrium without changing K"
+          ],
+          "answer": 3,
+          "explanation": "A catalyst lowers the activation energy for forward and reverse reactions equally, so it affects only the rate of reaching equilibrium."
+        },
+        {
+          "question": "A protein binds a ligand with Kd = 1 micromolar. What fraction of the protein is bound when the free ligand concentration is 1 micromolar?",
+          "options": [
+            "10 %",
+            "25 %",
+            "50 %",
+            "90 %"
+          ],
+          "answer": 2,
+          "explanation": "Fraction bound = [L]/(Kd + [L]) = 1/(1 + 1) = 0.5, because Kd is by definition the ligand concentration giving half-saturation."
+        }
+      ]
+    },
+    {
+      "id": "chemical-kinetics-catalysis",
+      "title": "Chemical Kinetics and Catalysis",
+      "hours": 5,
+      "hook": "Without enzymes, many of the reactions of life would take longer than the age of the universe; with them, they finish in milliseconds. Kinetics is the study of how fast reactions go and what controls that speed, and it is the gateway to enzymology.",
+      "learningObjectives": [
+        "Define reaction rate and rate constant, and determine rate laws and reaction order from initial-rate data.",
+        "Use integrated rate laws for zero- and first-order processes, including half-life for first-order reactions.",
+        "Explain collision theory, activation energy and the transition state, and use the Arrhenius equation qualitatively and quantitatively.",
+        "Explain how catalysts speed reactions and why they do not alter delta G or K.",
+        "Identify the rate-limiting step in a multi-step mechanism."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Reaction rate",
+          "definition": "The change in concentration of a reactant or product per unit time, for example -d[A]/dt."
+        },
+        {
+          "term": "Rate law and order",
+          "definition": "An experimentally determined equation, rate = k[A]^m[B]^n, where m and n are the orders and k is the rate constant."
+        },
+        {
+          "term": "First-order reaction",
+          "definition": "Rate proportional to one concentration; ln[A] = ln[A]0 - kt, and half-life t1/2 = ln 2 / k, independent of the starting concentration."
+        },
+        {
+          "term": "Activation energy (Ea)",
+          "definition": "The minimum energy barrier that reacting molecules must overcome to reach the transition state."
+        },
+        {
+          "term": "Arrhenius equation",
+          "definition": "k = A e^(-Ea/RT): the rate constant rises exponentially as temperature increases or activation energy falls."
+        },
+        {
+          "term": "Transition state",
+          "definition": "The highest-energy arrangement along the reaction path; it exists only fleetingly and is not an isolable intermediate."
+        },
+        {
+          "term": "Catalyst",
+          "definition": "A substance that provides a lower-energy path (lower Ea) and is regenerated; it speeds the approach to equilibrium without changing delta G or K."
+        },
+        {
+          "term": "Rate-determining step",
+          "definition": "The slowest step in a mechanism, which controls the overall rate under steady conditions."
+        }
+      ],
+      "deeper": {
+        "beginner": "For molecules to react they must collide with enough energy and in the right orientation. The minimum energy needed is the activation energy, like the hill you have to climb to get over a pass. Warmer solutions have more molecules with enough energy, so reactions go faster. A catalyst lowers the hill; it does not change where you start or end up, only how easily you get over. Enzymes are biological catalysts.",
+        "intermediate": "Rate laws come from experiments, not from the balanced equation. For a first-order process such as radioactive decay or many drug-clearance processes, ln[A] versus time is a straight line with slope -k, and t1/2 = 0.693/k. For zero-order, [A] falls linearly; for second-order, 1/[A] is linear in t. The Arrhenius equation in log form, ln k = ln A - Ea/RT, gives a straight line of ln k against 1/T with slope -Ea/R; a roughly two-fold rise in rate per 10 degree C is a rule of thumb, not a law, and it fails for enzymes beyond their temperature optimum, where denaturation intervenes. Enzymes can accelerate reactions by factors of 10^6 to 10^17 relative to the uncatalysed reaction.",
+        "advanced": "Transition-state theory gives k = (kB T/h) exp(-delta G double-dagger / RT), connecting kinetics to thermodynamics via the free energy of activation; enzymes work chiefly by binding the transition state more tightly than the substrate. The slowest step in a mechanism sets the rate only when the preceding steps are fast and reversible; with a steady-state intermediate the effective rate law becomes more complicated, which is exactly how the Michaelis-Menten equation is derived. Wolfenden's analyses of uncatalysed reaction half-lives in neutral water show that biologically essential reactions, such as the hydrolysis of peptide bonds or phosphate monoesters, would take years to millions of years without enzymes, which explains why catalysis was a prerequisite for chemistry at body temperature."
+      },
+      "commonMistakes": [
+        "Reading the order of a reaction directly from the coefficients of the balanced equation; orders are measured.",
+        "Believing a catalyst makes an unfavourable reaction favourable or changes the equilibrium position.",
+        "Confusing rate (concentration per time) with rate constant k, which has units that depend on the overall order.",
+        "Applying 'doubling per 10 degrees C' to everything, including enzyme-catalysed reactions beyond their optimum temperature."
+      ],
+      "videos": [
+        {
+          "youtubeId": "7qOFtL3VEBc",
+          "title": "Kinetics: Chemistry's Demolition Derby - Crash Course Chemistry #32",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Builds intuition for collisions, activation energy and why concentration and temperature change rates."
+        },
+        {
+          "youtubeId": "wYqQCojggyM",
+          "title": "Kinetics: Initial Rates and Integrated Rate Laws",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Shows how to extract reaction order from data and use integrated rate laws, with worked examples."
+        },
+        {
+          "youtubeId": "zjhepBLtqug",
+          "title": "The Arrhenius equation",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Explains each term of k = A exp(-Ea/RT) and how temperature controls k."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/ar000058i",
+          "title": "The Depth of Chemical Time and the Power of Enzymes as Catalysts",
+          "authors": "Wolfenden R, Snider MJ",
+          "year": 2001,
+          "journal": "Accounts of Chemical Research",
+          "level": "intermediate",
+          "whyItMatters": "Measures how slowly biologically important reactions proceed without enzymes, in some cases with half-lives of millions of years, and compares that with the enzyme-catalysed rates. It makes the abstract idea of activation energy concrete and motivates the whole of enzymology.",
+          "readingQuestions": [
+            "Which reaction had the longest uncatalysed half-life, and how does the enzyme rate compare?",
+            "Why is the 'rate enhancement' a better measure of enzyme power than the catalysed rate alone?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Reactions & Rates",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/reactions-and-rates",
+          "free": true,
+          "level": "beginner",
+          "note": "Vary temperature, concentration and activation energy and see collisions and rate change, which makes collision theory visible."
+        },
+        {
+          "title": "Chemistry 2e - Kinetics",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapter 12 covers rate laws, integrated laws, Arrhenius and mechanisms with graded problems."
+        },
+        {
+          "title": "5.111 Principles of Chemical Science",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-111-principles-of-chemical-science-fall-2008/",
+          "free": true,
+          "level": "advanced",
+          "note": "Full lecture videos and notes for a first-year chemistry course, including kinetics and the link to biochemistry."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A first-order reaction has a rate constant k = 0.0693 per minute. What is its half-life?",
+          "options": [
+            "0.0693 min",
+            "1.0 min",
+            "10 min",
+            "100 min"
+          ],
+          "answer": 2,
+          "explanation": "For first-order kinetics t1/2 = ln 2 / k = 0.693 / 0.0693 = 10 minutes, independent of the starting concentration."
+        },
+        {
+          "question": "How does a catalyst increase the rate of a reaction?",
+          "options": [
+            "It makes delta G more negative",
+            "It provides a path with a lower activation energy",
+            "It shifts the equilibrium toward products",
+            "It raises the temperature locally"
+          ],
+          "answer": 1,
+          "explanation": "Catalysts lower Ea; they do not change delta G or K, so they accelerate forward and reverse reactions equally."
+        },
+        {
+          "question": "A plot of ln k against 1/T for a reaction is a straight line. What does its slope equal?",
+          "options": [
+            "Ea / R",
+            "-Ea / R",
+            "-Ea",
+            "ln A"
+          ],
+          "answer": 1,
+          "explanation": "The log form of Arrhenius is ln k = ln A - (Ea/R)(1/T), so the slope is -Ea/R and the intercept is ln A."
+        }
+      ]
+    },
+    {
+      "id": "redox-electrochemistry",
+      "title": "Redox Reactions and Electrochemistry",
+      "hours": 5,
+      "hook": "Life is powered by moving electrons downhill: from NADH to oxygen in your mitochondria, from water to NADP+ in a chloroplast. The same equations that describe a battery also describe the voltage across a nerve membrane, so a little electrochemistry unlocks metabolism and neuroscience at once.",
+      "learningObjectives": [
+        "Assign oxidation numbers, identify oxidising and reducing agents and balance simple half-reactions.",
+        "Interpret standard reduction potentials and decide the direction of electron flow.",
+        "Relate cell potential to Gibbs energy with delta G = -nFE.",
+        "Use the Nernst equation for non-standard conditions and for equilibrium potentials across membranes.",
+        "Explain why NAD+/NADH and O2/H2O potentials make the electron transport chain exergonic."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Oxidation and reduction",
+          "definition": "Oxidation is loss of electrons (or increase in oxidation number); reduction is gain; the two always occur together in a redox reaction."
+        },
+        {
+          "term": "Oxidising and reducing agents",
+          "definition": "The oxidising agent accepts electrons and is itself reduced; the reducing agent donates electrons and is itself oxidised."
+        },
+        {
+          "term": "Standard reduction potential E degree",
+          "definition": "A measure of an electron acceptor's tendency to be reduced under standard conditions; the more positive, the stronger the oxidant. For biochemistry the E degree prime at pH 7 is used."
+        },
+        {
+          "term": "Galvanic cell",
+          "definition": "A device that uses a spontaneous redox reaction to generate current, with oxidation at the anode and reduction at the cathode."
+        },
+        {
+          "term": "Delta G and E",
+          "definition": "delta G = -nFE, where n is moles of electrons transferred and F = 96,485 C/mol; positive E means spontaneous."
+        },
+        {
+          "term": "Nernst equation",
+          "definition": "E = E degree - (RT/nF) ln Q; at 25 degrees C this is E = E degree - (0.0592/n) log10 Q."
+        },
+        {
+          "term": "Equilibrium potential of an ion",
+          "definition": "The membrane voltage at which the electrical and chemical driving forces on an ion cancel, given by the Nernst equation, E_ion = (RT/zF) ln([ion]out/[ion]in)."
+        },
+        {
+          "term": "Electron carriers",
+          "definition": "NAD+/NADH (E degree prime about -0.32 V) and FAD/FADH2 shuttle electrons in metabolism; O2/H2O (about +0.82 V) is the terminal acceptor in aerobic respiration."
+        }
+      ],
+      "deeper": {
+        "beginner": "Redox reactions are electron transfers. Whoever loses electrons is oxidised, whoever gains them is reduced. Some molecules are strong electron-grabbers (oxygen is one of the strongest in biology) and others, like NADH, hold electrons loosely and give them away. Cells let electrons fall from NADH to oxygen in small steps through a chain of carriers, and capture the energy released to make ATP.",
+        "intermediate": "Standard reduction potentials tell you the direction: electrons flow from the half-reaction with the lower E degree to the one with the higher. For NADH to O2, E degree prime is +0.82 V - (-0.32 V) = 1.14 V, and delta G degree prime = -nF delta E = -2 x 96.485 kJ/(V mol) x 1.14 V, about -220 kJ/mol, enough for several ATP. The Nernst equation corrects for concentrations. At body temperature (310 K) RT/F x ln 10 is about 61.5 mV, so for K+ with 5 mM outside and 140 mM inside, E_K = 61.5 mV x log10(5/140), about -89 mV, close to the resting potential of many cells, which are most permeable to K+.",
+        "advanced": "E and delta G are linked as extensive and intensive forms of the same quantity: delta G = -nFE, so E does not depend on how the half-reaction is balanced, whereas delta G does. Real membrane potentials involve multiple ions, described by the Goldman-Hodgkin-Katz voltage equation, which weights each ion's concentration ratio by its relative permeability; this reduces to the Nernst potential when one ion dominates. The proton-motive force combines a chemical term (delta pH) and an electrical term (membrane potential): delta p = delta psi - (2.303 RT/F) delta pH, the quantity ATP synthase uses. The apparent potentials of NAD+/NADH inside cells differ from standard values because the ratio of NAD+ to NADH is held high in the cytosol, which favours oxidation and makes NAD+-linked catabolism work."
+      },
+      "commonMistakes": [
+        "Mixing up which species is oxidised: the reducing agent is oxidised, the oxidising agent is reduced.",
+        "Using E degree rather than E when concentrations are far from 1 M, or forgetting to switch to E degree prime for biochemical standard conditions.",
+        "Multiplying E degree by the stoichiometric coefficient when balancing half-reactions; potentials are intensive, but n in delta G = -nFE must be counted.",
+        "Getting the Nernst sign wrong for anions; the valence z carries its sign."
+      ],
+      "videos": [
+        {
+          "youtubeId": "lQ6FBA1HM3s",
+          "title": "Redox Reactions: Crash Course Chemistry #10",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A clear introduction to oxidation numbers, oxidising and reducing agents."
+        },
+        {
+          "youtubeId": "IV4IUsholjg",
+          "title": "Electrochemistry: Crash Course Chemistry #36",
+          "channel": "CrashCourse",
+          "level": "intermediate",
+          "whyWatch": "Links cells, potentials and free energy so you see why voltage measures driving force."
+        },
+        {
+          "youtubeId": "PemB4mY4Jfk",
+          "title": "The Nernst equation",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Derives and applies the Nernst equation, the formula you will reuse for membrane potentials."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1113/jphysiol.1949.sp004310",
+          "title": "The effect of sodium ions on the electrical activity of the giant axon of the squid",
+          "authors": "Hodgkin AL, Katz B",
+          "year": 1949,
+          "journal": "The Journal of Physiology",
+          "level": "advanced",
+          "whyItMatters": "Showed by experiment that the nerve action potential depends on sodium concentration outside the cell, following Nernst-like behaviour. It is a classic example of electrochemical theory applied to living tissue."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Electrochemistry (Chemistry 2e)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/chemistry-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapter 17 covers galvanic cells, standard potentials, the Nernst equation and links to free energy."
+        },
+        {
+          "title": "PhET: Neuron",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/neuron",
+          "free": true,
+          "level": "intermediate",
+          "note": "Lets you see how ion concentration gradients and channels produce membrane potentials and action potentials, applying the Nernst equation to a real cell."
+        },
+        {
+          "title": "eQuilibrator: The Biochemical Thermodynamics Calculator",
+          "provider": "Weizmann Institute of Science",
+          "type": "tool",
+          "url": "https://equilibrator.weizmann.ac.il/",
+          "free": true,
+          "level": "advanced",
+          "note": "Also gives reduction potentials for biochemical half-reactions, so you can compute delta G for redox steps in metabolism."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In the reaction Zn + Cu2+ -> Zn2+ + Cu, which species is the oxidising agent?",
+          "options": [
+            "Zn",
+            "Cu2+",
+            "Zn2+",
+            "Cu"
+          ],
+          "answer": 1,
+          "explanation": "Cu2+ gains electrons (is reduced), so it is the oxidising agent; Zn loses electrons (is oxidised) and is the reducing agent."
+        },
+        {
+          "question": "Using delta G = -nFE, a reaction transferring 2 electrons with E = +1.14 V has a delta G of about:",
+          "options": [
+            "-110 kJ/mol",
+            "-220 kJ/mol",
+            "+220 kJ/mol",
+            "-2.28 kJ/mol"
+          ],
+          "answer": 1,
+          "explanation": "delta G = -2 x 96.485 kJ/(V mol) x 1.14 V = about -220 kJ/mol; this is the approximate free-energy drop for NADH to O2."
+        },
+        {
+          "question": "A cell has 5 mM K+ outside and 140 mM K+ inside at 37 degrees C. The Nernst potential for K+ is closest to:",
+          "options": [
+            "+89 mV",
+            "0 mV",
+            "-89 mV",
+            "-61 mV"
+          ],
+          "answer": 2,
+          "explanation": "E_K = 61.5 mV x log10([K]out/[K]in) = 61.5 x log10(5/140), about -89 mV; the inside is negative because K+ tends to leave."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "0RRVV4Diomg",
+      "title": "The Periodic Table: Crash Course Chemistry #4",
+      "channel": "CrashCourse",
+      "level": "beginner",
+      "whyWatch": "A fast, friendly overview of the periodic table and trends to start the course."
+    },
+    {
+      "youtubeId": "LWmVdG0uj2g",
+      "title": "8. The Periodic Table and Periodic Trends",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A full lecture on periodic trends if you want to see the same material taught at greater depth."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Chemistry 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/chemistry-2e",
+      "free": true,
+      "level": "intermediate",
+      "note": "A complete free general chemistry textbook that covers essentially every unit of this course with worked examples."
+    },
+    {
+      "title": "General Chemistry Bookshelf",
+      "provider": "LibreTexts Chemistry",
+      "type": "textbook",
+      "url": "https://chem.libretexts.org/Bookshelves/General_Chemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "A large collection of open texts and problem sets; handy for alternative explanations when one book does not click."
+    },
+    {
+      "title": "Chemistry (Khan Academy)",
+      "provider": "Khan Academy",
+      "type": "course",
+      "url": "https://www.khanacademy.org/science/chemistry",
+      "free": true,
+      "level": "beginner",
+      "note": "Short video lessons and practice exercises covering the full first-year sequence at your own pace."
+    }
+  ]
+}

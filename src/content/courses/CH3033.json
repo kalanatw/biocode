@@ -1,0 +1,1745 @@
+{
+  "code": "CH 3033",
+  "title": "Chemistry of Biomolecules",
+  "level": 3,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "The organic chemistry of life's molecules: how cells build natural products from a handful of building blocks, and what sugars can do chemically.",
+  "overview": "This is an organic-chemistry-flavoured course on biomolecules, in the style of a natural products course. CH 3033 is organised around the biosynthetic families of natural products, and the units follow this arc: primary versus secondary metabolism and the reaction types used to build molecules in cells; fatty acids and polyketides from the acetate pathway; aromatic amino acids and phenylpropanoids from the shikimate pathway; terpenoids and steroids from the mevalonate pathway; alkaloids from amino acids; mixed biogenesis (flavonoids, stilbenes, meroterpenoids); and finally carbohydrate chemistry, from Fischer and Haworth structures to the reactions of sugars and the nature of oligo- and polysaccharides. The emphasis throughout is on mechanism: how a few starter units and a handful of reaction types generate thousands of natural products.",
+  "whyItMatters": "A large share of medicines, flavours, dyes and agrochemicals come from natural products or are inspired by them, from aspirin and morphine to statins and artemisinin. Understanding how nature assembles these molecules lets you predict structures, read biosynthetic diagrams and appreciate how engineering of pathways in microbes is now producing drugs and materials.",
+  "prerequisites": [
+    "FD 1104",
+    "FD 2101"
+  ],
+  "careerLinks": [
+    "Natural products research, pharmacognosy and drug discovery",
+    "Pharmaceutical and herbal-medicine quality control",
+    "Food, flavour, fragrance and cosmetic industries",
+    "Metabolic engineering and synthetic biology",
+    "Postgraduate study in organic, medicinal or bio-organic chemistry"
+  ],
+  "studyTips": [
+    "Practise drawing mechanisms with curved arrows rather than memorising names; almost every biosynthetic step is a familiar reaction (Claisen, aldol, SN1 alkylation, Mannich) with an enzyme as the setting.",
+    "Learn to spot the building blocks inside a finished structure: look for repeating C2 acetate units, isoprene C5 units, C6C3 phenylpropanoid units and amino acid skeletons, then work out how they were joined.",
+    "Draw each pathway in the same order every time (starter unit, chain extension, cyclisation, tailoring), so that new compounds fit a familiar template.",
+    "For carbohydrates, build a small molecular model kit or use a drawing tool to convert between Fischer, Haworth and chair forms until it becomes automatic."
+  ],
+  "units": [
+    {
+      "id": "metabolism-and-biosynthetic-mechanisms",
+      "title": "Primary and secondary metabolism, and the reactions cells use to build molecules",
+      "hours": 5,
+      "hook": "A single poppy plant makes morphine, a fungus makes the cholesterol-lowering drug lovastatin, and a pine tree makes the scent of its resin, yet all of them are working from the same small kit of reactions. Before we explore the products, we need to learn the vocabulary of that kit: the carbon-carbon bond-forming steps and the cofactors that allow them to happen at body temperature in water.",
+      "learningObjectives": [
+        "Distinguish primary from secondary metabolism and give examples of each",
+        "Name the four main biosynthetic building-block families (acetate, shikimate, mevalonate/MEP, amino acid) and the classes of products they give",
+        "Draw the mechanisms of Claisen condensation, aldol reaction, Schiff base (imine) formation and the Mannich reaction in biological contexts",
+        "Explain alkylation by SAM and by prenyl diphosphates, and Wagner-Meerwein 1,2-shifts in carbocations",
+        "Describe transamination through the PLP Schiff base",
+        "Identify typical biological oxidations and reductions and the coenzymes involved"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Primary and secondary metabolites",
+          "definition": "Primary metabolites (sugars, amino acids, nucleotides, fatty acids) are common to all cells and essential for growth, whereas secondary metabolites are taxon-specific compounds, often made in small amounts, that mediate defence, signalling or other ecological functions."
+        },
+        {
+          "term": "Building-block families",
+          "definition": "Most secondary metabolites derive from acetyl-CoA (fatty acids, polyketides), shikimic acid (aromatic amino acids and phenylpropanoids), mevalonic acid or methylerythritol phosphate (terpenoids and steroids) and amino acids (alkaloids)."
+        },
+        {
+          "term": "Claisen condensation in biosynthesis",
+          "definition": "The carbon-carbon bond-forming step in fatty acid and polyketide chain extension, in which the enolate of a thioester (from malonyl-CoA, which loses CO2) attacks another thioester carbonyl."
+        },
+        {
+          "term": "Aldol reaction",
+          "definition": "An enol or enolate adds to a carbonyl group to give a beta-hydroxy carbonyl compound, used both in chain building and in cyclisation of polyketide chains to rings."
+        },
+        {
+          "term": "Schiff base (imine) and Mannich reaction",
+          "definition": "Amines condense with aldehydes or ketones to give imines or iminium ions, which are electrophiles for enol-type nucleophiles in the Mannich reaction, an important route to alkaloids."
+        },
+        {
+          "term": "Transamination and PLP",
+          "definition": "Pyridoxal phosphate forms a Schiff base with an amino acid and acts as an electron sink, enabling amine transfer, decarboxylation and other amino acid reactions."
+        },
+        {
+          "term": "Alkylation reactions",
+          "definition": "Nucleophiles attack electrophilic carbons of S-adenosylmethionine (methylation) or allylic diphosphates such as dimethylallyl diphosphate (prenylation), by SN2 or SN1-like mechanisms."
+        },
+        {
+          "term": "Wagner-Meerwein rearrangement",
+          "definition": "A 1,2-shift of hydride, alkyl or aryl group to an adjacent carbocation, yielding a more stable cation; it is central in terpene and steroid cyclisation cascades."
+        },
+        {
+          "term": "Biological oxidation and reduction",
+          "definition": "Hydroxylations by cytochrome P450 and other oxygenases, dehydrogenations with NAD(P)+ or FAD, and reductions with NADPH tailor the carbon skeletons into final natural products."
+        },
+        {
+          "term": "Coenzymes",
+          "definition": "Acetyl-CoA and malonyl-CoA supply carbon, SAM provides methyl groups, PLP handles amino acids, NAD(P)H handles hydride transfers and ATP activates substrates, so reading a pathway is largely a matter of recognising these cofactors."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of cells as chemists with a very small toolbox. They take simple building blocks (two-carbon acetate units, five-carbon isoprene units, amino acids) and join them using a few types of reaction. Primary metabolism makes the molecules every cell needs, and secondary metabolism uses the same raw materials to make special compounds like pigments, poisons and flavours.",
+        "intermediate": "The key to biosynthetic logic is that enzymes make otherwise difficult chemistry easy by activating the substrate: thioesters (CoA) make the alpha hydrogen acidic and the carbonyl a better electrophile, malonyl-CoA decarboxylation makes enolate formation easy, and phosphate or diphosphate groups turn alcohols into good leaving groups. Carbocation chemistry drives terpenoid and steroid formation, with 1,2-shifts leading to ring expansion, contraction and stabilised cations. Imines and iminium ions formed from amines are the electrophiles in Mannich-type steps that build alkaloid skeletons. Oxidative reactions, particularly phenolic oxidative coupling by P450 enzymes, link aromatic rings together to give complex structures such as those in morphine.",
+        "advanced": "Many biosynthetic reactions can be viewed as biological equivalents of textbook named reactions with enzymatic control of regio- and stereochemistry; for example, the Pictet-Spengler reaction of strictosidine synthase is a Mannich-type cyclisation of an iminium with an indole. Terpene synthases hold flexible carbocations in hydrophobic active sites that stabilise intermediates by cation-pi interactions without trapping them with a nucleophile, until a specific base or water finishes the cascade; this is why a single enzyme can give dozens of products from one substrate. Natural product pathways are typically encoded by clustered genes in microbes (biosynthetic gene clusters), which allows genome mining by tools such as antiSMASH to predict new compounds. Newman and Cragg's survey of drug approvals shows how large the contribution of natural products and their derivatives remains, motivating the study of these pathways."
+      },
+      "commonMistakes": [
+        "Thinking secondary metabolites are 'waste products' with no function; many provide defence, signalling or competitive advantage",
+        "Drawing the Claisen step with free acetate rather than through the enolate of a thioester, usually generated by decarboxylation of malonyl-CoA",
+        "Forgetting that carbocation rearrangements (hydride and methyl shifts) are driven by cation stability and are controlled inside the enzyme active site",
+        "Confusing the Mannich reaction with the aldol reaction; the electrophile is an iminium ion, not a carbonyl"
+      ],
+      "videos": [
+        {
+          "youtubeId": "CvDy5NQzmLA",
+          "title": "Primary and Secondary Metabolites | Biomolecules | Class 11 | Botany | Telangana | Khan Academy",
+          "channel": "Khan Academy India - English",
+          "level": "beginner",
+          "whyWatch": "A short introduction to the distinction between primary and secondary metabolites with familiar examples."
+        },
+        {
+          "youtubeId": "eCBW1wlHt2k",
+          "title": "The Aldol and Claisen Reactions: Crash Course Organic Chemistry #44",
+          "channel": "CrashCourse",
+          "level": "intermediate",
+          "whyWatch": "Clear mechanism-focused walk through the aldol and Claisen reactions that underlie chain building in biosynthesis."
+        },
+        {
+          "youtubeId": "ABNL-5ZS3fE",
+          "title": "Mannich Reaction",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "A quick, well-drawn mechanism of the Mannich reaction, which you will meet again in alkaloid biosynthesis."
+        },
+        {
+          "youtubeId": "2NEFyMZHgYk",
+          "title": "Imine Formation (Mechanism, Forward and Reverse Directions)",
+          "channel": "jOeCHEM",
+          "level": "intermediate",
+          "whyWatch": "Step-by-step arrows for Schiff base formation and hydrolysis, which is the basis of PLP chemistry."
+        },
+        {
+          "youtubeId": "61ZVXmh6ae0",
+          "title": "PLP (Pyridoxal Phosphate) Reactions",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture on how PLP acts as an electron sink in transamination and related amino acid reactions."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/acs.jnatprod.9b01285",
+          "title": "Natural Products as Sources of New Drugs over the Nearly Four Decades from 01/1981 to 09/2019",
+          "authors": "Newman DJ, Cragg GM",
+          "year": 2020,
+          "journal": "Journal of Natural Products",
+          "level": "intermediate",
+          "whyItMatters": "A periodic survey showing what proportion of approved drugs are natural products or derived from them, a good starting point for seeing why biosynthesis and structure matter for medicine."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Organic Chemistry bookshelf",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free organic chemistry texts with mechanism chapters on aldol, Claisen, Mannich and imine formation to revisit before lectures."
+        },
+        {
+          "title": "antiSMASH",
+          "provider": "antiSMASH team",
+          "type": "tool",
+          "url": "https://antismash.secondarymetabolites.org",
+          "free": true,
+          "level": "advanced",
+          "note": "A web tool that finds biosynthetic gene clusters in microbial genomes; try it on a sample genome to see PKS and terpene clusters."
+        },
+        {
+          "title": "MIBiG: Minimum Information about a Biosynthetic Gene cluster",
+          "provider": "secondarymetabolites.org",
+          "type": "database",
+          "url": "https://mibig.secondarymetabolites.org",
+          "free": true,
+          "level": "advanced",
+          "note": "A curated repository linking natural product structures to the genes that make them."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov",
+          "free": true,
+          "level": "beginner",
+          "note": "Search any natural product by name to see its structure, properties and links, useful for checking drawings."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement best describes the Claisen-type chain extension used in fatty acid and polyketide biosynthesis?",
+          "options": [
+            "A carboxylic acid is attacked by a Grignard reagent",
+            "The enolate generated from malonyl-thioester by decarboxylation attacks another thioester",
+            "An alkyl halide is attacked by acetate",
+            "Two aldehydes undergo a Cannizzaro reaction"
+          ],
+          "answer": 1,
+          "explanation": "Decarboxylation of malonyl-CoA (or the malonyl-ACP) provides a stabilised enolate that adds to the acyl thioester carbonyl, forming a beta-keto thioester in a decarboxylative Claisen condensation."
+        },
+        {
+          "question": "Which feature distinguishes the Mannich reaction from the aldol reaction?",
+          "options": [
+            "The electrophile is an iminium ion",
+            "It requires an acid chloride",
+            "It forms a double bond directly",
+            "It only occurs in plants"
+          ],
+          "answer": 0,
+          "explanation": "In the Mannich reaction an amine and aldehyde give an iminium ion, which is attacked by an enol or enolate to give a beta-amino carbonyl compound."
+        },
+        {
+          "question": "Which of these is a typical role of PLP in amino acid biosynthesis?",
+          "options": [
+            "Reducing double bonds using hydride",
+            "Acting as an electron sink after forming a Schiff base with the amino acid",
+            "Transferring methyl groups",
+            "Carrying CO2"
+          ],
+          "answer": 1,
+          "explanation": "PLP forms an aldimine with the amino group, and its conjugated pyridine ring stabilises the carbanion formed on loss of a proton or CO2 from the alpha carbon."
+        }
+      ]
+    },
+    {
+      "id": "fatty-acids-and-prostaglandins",
+      "title": "Fatty acids and prostaglandins from the acetate pathway",
+      "hours": 5,
+      "hook": "Aspirin works by blocking the first step of a pathway that begins with a fatty acid in the cell membrane and ends with molecules that cause fever, pain and inflammation. To understand that story you first need to see how a fatty acid is built from acetate, and then how one of them, arachidonic acid, is turned into a family of potent local hormones.",
+      "learningObjectives": [
+        "Describe how saturated fatty acids are assembled from acetyl-CoA and malonyl-CoA, showing the chemistry of each cycle",
+        "Explain how double bonds are introduced and why different organisms use different strategies",
+        "Draw the main products formed by chain elongation and desaturation, and name omega-3 and omega-6 families",
+        "Outline the conversion of arachidonic acid to prostaglandins and thromboxanes by cyclooxygenase",
+        "Explain the mode of action of aspirin and NSAIDs",
+        "Contrast prostaglandin and leukotriene pathways"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fatty acid chain assembly",
+          "definition": "An acetyl starter and repeated malonyl extenders are condensed, reduced, dehydrated and reduced again, adding two carbons per cycle to give even-numbered chains such as palmitic acid."
+        },
+        {
+          "term": "Acyl carrier protein (ACP)",
+          "definition": "Holds the growing chain as a thioester on a phosphopantetheine arm, delivering intermediates between catalytic domains."
+        },
+        {
+          "term": "Reductive steps",
+          "definition": "The beta-keto group is reduced by NADPH to an alcohol, dehydrated to a trans enoyl thioester, and reduced again to the saturated acyl chain."
+        },
+        {
+          "term": "Desaturation",
+          "definition": "In animals and fungi, an oxygen- and NADPH-dependent desaturase introduces a cis double bond (for example at carbon 9) into saturated chains, whereas many bacteria introduce double bonds during chain building."
+        },
+        {
+          "term": "Essential fatty acids",
+          "definition": "Animals lack desaturases acting beyond carbon 9 from the carboxyl end, so linoleic acid (omega-6) and alpha-linolenic acid (omega-3) must be obtained from plants."
+        },
+        {
+          "term": "Arachidonic acid",
+          "definition": "A 20-carbon polyunsaturated fatty acid (20:4, omega-6) released from membrane phospholipids by phospholipase A2 and the precursor of the eicosanoids."
+        },
+        {
+          "term": "Cyclooxygenase (COX)",
+          "definition": "Adds two molecules of oxygen to arachidonic acid by a radical mechanism, forming a cyclopentane ring and the endoperoxide PGG2, which is reduced to PGH2, the common precursor of prostaglandins and thromboxanes."
+        },
+        {
+          "term": "Prostaglandin synthases",
+          "definition": "Convert PGH2 into specific products such as PGE2, PGF2 alpha, prostacyclin (PGI2) and thromboxane A2, with different effects on inflammation, smooth muscle, platelets and blood vessels."
+        },
+        {
+          "term": "Aspirin and NSAIDs",
+          "definition": "Aspirin acetylates a serine in the COX active site and so irreversibly blocks the pathway, while other NSAIDs compete reversibly with arachidonic acid."
+        },
+        {
+          "term": "Lipoxygenase pathway",
+          "definition": "A parallel route in which 5-lipoxygenase converts arachidonic acid to leukotrienes, which are involved in asthma and allergic responses."
+        }
+      ],
+      "deeper": {
+        "beginner": "Fatty acids are long chains of carbon built two carbons at a time from acetate units. Each cycle adds a pair of carbons and uses a sequence of reactions that reduces a carbonyl group to a CH2. Some fatty acids, like arachidonic acid, are then converted into short-lived hormone-like molecules called prostaglandins that tell nearby cells to react to injury or infection.",
+        "intermediate": "In each chain-extension cycle, malonyl-ACP is decarboxylated as its carbanion attacks the acyl-ACP thioester, giving a beta-ketoacyl-ACP; successive reduction, dehydration and reduction yield a chain two carbons longer. Starting from acetate and malonate means that the chain always has an even number of carbons unless a propionyl starter is used. The conversion of arachidonic acid to PGH2 involves abstraction of a hydrogen atom from carbon 13, addition of oxygen, cyclisation to form a five-membered ring and a second oxygen addition, with subsequent peroxidase-catalysed reduction. Aspirin's acetylation of serine 530 in COX-1 blocks the substrate channel, which explains its irreversible, long-lasting antiplatelet effect, since platelets cannot synthesise new enzyme.",
+        "advanced": "The COX enzyme has two activities, cyclooxygenase and peroxidase, with a tyrosyl radical generated at the haem-containing peroxidase site that initiates hydrogen abstraction. COX-2 has a larger, more flexible side pocket that selective inhibitors exploit, but the cardiovascular side effects of coxibs were linked to an imbalance between thromboxane (from COX-1 in platelets) and prostacyclin (largely COX-2-dependent in endothelium). Eicosanoid signalling is local and short-lived because the products are rapidly metabolised, and acts through G protein-coupled receptors that differ in each tissue. Fatty acid synthase architecture differs between organisms: bacterial systems (type II) use discrete enzymes, while animal and fungal systems (type I) have large multifunctional proteins; the same assembly-line logic applies to polyketide synthases in the next unit. Omega-3 derived eicosanoids and specialised pro-resolving mediators from docosahexaenoic acid are increasingly studied for their anti-inflammatory roles."
+      },
+      "commonMistakes": [
+        "Saying that fatty acid synthesis simply reverses beta-oxidation; the reductant, carrier and compartment are different",
+        "Forgetting that decarboxylation of malonyl-CoA is the driving force for the condensation step",
+        "Thinking aspirin and other NSAIDs act in the same way; aspirin covalently modifies COX while most other NSAIDs are reversible competitive inhibitors",
+        "Assuming all prostaglandins have similar effects; PGE2, PGF2 alpha, PGI2 and thromboxane A2 have different and sometimes opposing actions"
+      ],
+      "videos": [
+        {
+          "youtubeId": "nBFSz63T1c0",
+          "title": "Metabolism | Fatty Acid Synthesis: Part 1",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Walks through acetyl-CoA carboxylase and the repeated cycle of fatty acid synthase with structures."
+        },
+        {
+          "youtubeId": "y4bl7098eXY",
+          "title": "13.05 Fatty Acid Biosynthesis: Introduction and Condensation",
+          "channel": "Michael Evans",
+          "level": "intermediate",
+          "whyWatch": "A mechanism-focused lecture that treats the condensation step as organic chemistry."
+        },
+        {
+          "youtubeId": "eG08eClNoXA",
+          "title": "PUFAs: Fatty Acid Elongation and Desaturation",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Explains how omega-3 and omega-6 families are extended and desaturated and why some are essential."
+        },
+        {
+          "youtubeId": "Wz8OwDVvyJ0",
+          "title": "Arachidonic Acid Pathway (Prostaglandins, Prostacyclins, Thromboxanes, & Leukotrienes)",
+          "channel": "Dirty Medicine",
+          "level": "intermediate",
+          "whyWatch": "A visual overview of COX and lipoxygenase branches with the drugs that act on them."
+        },
+        {
+          "youtubeId": "EBLbdAtpjn0",
+          "title": "Synthesis of eicosanoids (prostaglandins, thromboxane, leukotrienes)",
+          "channel": "Andrey K",
+          "level": "beginner",
+          "whyWatch": "A concise account of the steps from phospholipid to eicosanoid products."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.biochem.69.1.145",
+          "title": "Cyclooxygenases: Structural, Cellular, and Molecular Biology",
+          "authors": "Smith WL, DeWitt DL, Garavito RM",
+          "year": 2000,
+          "journal": "Annual Review of Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "A thorough review of how cyclooxygenase works, from the radical mechanism to the structure of the active site and where aspirin binds, which links chemistry to pharmacology.",
+          "readingQuestions": [
+            "Where in the active site does aspirin acetylate COX, and what does it do to the substrate channel?",
+            "How does the structure explain COX-2 selectivity?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "LIPID MAPS",
+          "provider": "LIPID MAPS Consortium",
+          "type": "database",
+          "url": "https://www.lipidmaps.org",
+          "free": true,
+          "level": "intermediate",
+          "note": "Classified structures and pathways for fatty acids and eicosanoids, with drawings you can compare with your lecture notes."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Lipid biosynthesis chapter has the fatty acid synthase cycle and a section on eicosanoids."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "How many carbon atoms does palmitic acid derive from acetyl-CoA starter and malonyl-CoA extenders?",
+          "options": [
+            "One acetyl and seven malonyl units",
+            "Eight acetyl units only",
+            "Two acetyl and six malonyl units",
+            "Sixteen acetyl units"
+          ],
+          "answer": 0,
+          "explanation": "One acetyl starter gives two carbons and seven malonyl extenders each add two carbons (after losing CO2), totalling sixteen carbons."
+        },
+        {
+          "question": "Aspirin inhibits prostaglandin synthesis because it:",
+          "options": [
+            "Binds competitively to the phospholipase A2 active site",
+            "Acetylates a serine residue of cyclooxygenase",
+            "Reduces arachidonic acid to a saturated fatty acid",
+            "Prevents transcription of the COX gene"
+          ],
+          "answer": 1,
+          "explanation": "Aspirin transfers an acetyl group to a serine in the COX channel, irreversibly blocking access of arachidonic acid to the active site."
+        },
+        {
+          "question": "Why are linoleic and alpha-linolenic acids essential in the human diet?",
+          "options": [
+            "Humans cannot make acetyl-CoA",
+            "Humans lack desaturases that insert double bonds beyond carbon 9",
+            "They are not synthesised by plants",
+            "They are only obtained from animals"
+          ],
+          "answer": 1,
+          "explanation": "Mammals lack the enzymes needed to introduce double bonds near the methyl end, so they depend on plants for these omega-6 and omega-3 fatty acids."
+        }
+      ]
+    },
+    {
+      "id": "polyketides",
+      "title": "Polyketides: aromatics, macrolides, polyethers and statins",
+      "hours": 5,
+      "hook": "The same enzymatic logic that builds a fatty acid can be switched, by leaving out some of the reduction steps, to build far more varied structures: the red pigment in a lichen, the antibiotic erythromycin and the cholesterol-lowering drug lovastatin. The polyketide pathway is one of the most productive natural product assembly lines on the planet.",
+      "learningObjectives": [
+        "Describe how a poly-beta-keto chain is built and how its folding and cyclisation (aldol versus Claisen) gives different aromatic rings",
+        "Explain how the anthraquinone and simple phenol skeletons arise from polyketide chains",
+        "Describe the role of alkylation, oxidative coupling and other tailoring reactions in polyketide diversity",
+        "Outline how macrolides and polyethers are made by modular type I polyketide synthases and give examples",
+        "Explain how an intramolecular Diels-Alder reaction forms the decalin of lovastatin and why statins matter",
+        "Distinguish type I, type II and type III polyketide synthases"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Poly-beta-keto chain",
+          "definition": "Repeated Claisen condensations without reduction give a chain with alternating carbonyl groups, which is highly reactive and cyclises to form aromatic rings."
+        },
+        {
+          "term": "Aldol-type cyclisation",
+          "definition": "An enolate carbon attacks a distant ketone, forming a ring and, after dehydration, aromatic compounds such as orsellinic acid."
+        },
+        {
+          "term": "Claisen-type cyclisation",
+          "definition": "An enolate attacks a thioester carbonyl and releases the enzyme or CoA, giving different substituted phenols such as phloroglucinol-type rings."
+        },
+        {
+          "term": "Anthraquinones",
+          "definition": "Longer polyketide chains (such as octaketides) fold and cyclise to tricyclic anthraquinones such as emodin, common in fungi, lichens and plants like Rheum and Cassia."
+        },
+        {
+          "term": "Tailoring reactions",
+          "definition": "After cyclisation, O- and C-methylation by SAM, prenylation, hydroxylation and oxidative phenol coupling create the final diversity of aromatic polyketides."
+        },
+        {
+          "term": "Type I PKS (modular)",
+          "definition": "Large multi-domain proteins organised in modules, each carrying out one chain extension and a set of optional reductive steps, as in the synthase for the erythromycin macrolactone."
+        },
+        {
+          "term": "Macrolides",
+          "definition": "Polyketide-derived large lactone rings, often decorated with deoxy sugars, with antibiotics such as erythromycin that bind the bacterial ribosome."
+        },
+        {
+          "term": "Polyether ionophores",
+          "definition": "Linear polyketides, such as monensin, that fold and cyclise by epoxide-opening cascades into rings of ethers capable of transporting cations across membranes."
+        },
+        {
+          "term": "Statins and Diels-Alder cyclisation",
+          "definition": "In the fungal biosynthesis of lovastatin an iterative polyketide synthase builds a polyene chain, which undergoes an intramolecular Diels-Alder reaction forming the decalin ring before further tailoring."
+        },
+        {
+          "term": "Type II and type III PKS",
+          "definition": "Type II synthases are complexes of separate proteins used for aromatic polyketides such as tetracyclines, whereas type III synthases are small homodimers that act without ACP, as in chalcone synthase."
+        }
+      ],
+      "deeper": {
+        "beginner": "Polyketides are made like fatty acids: a chain grows two carbons at a time. The difference is that the carbonyl groups along the chain are mostly left unreduced, which makes it chemically reactive and able to fold up into rings. Many antibiotics, pigments and drugs, including the first statins, are polyketides.",
+        "intermediate": "A polyketide chain with n carbonyl groups can cyclise in different ways depending on how the enzyme folds it, which determines which carbons are connected; for instance, aldol condensation gives orsellinic acid (via a tetraketide) while a Claisen cyclisation leads to phloroglucinol derivatives. In modular type I systems each module contains a ketosynthase, acyltransferase and ACP, and optional ketoreductase, dehydratase and enoyl reductase domains; the degree of reduction at each position and the choice of malonyl or methylmalonyl extender are encoded by the module composition, giving a predictable structure from the gene sequence. For erythromycin, six modules extend a propionyl starter with methylmalonyl-CoA units to give a 14-membered ring that is oxidised and glycosylated. Lovastatin's decalin ring forms from a triene through an intramolecular Diels-Alder reaction catalysed within the iterative synthase, followed by oxidative tailoring.",
+        "advanced": "Polyketide synthases are evolutionarily related to fatty acid synthases and represent a major strategy for generating chemical diversity by combinatorial use of domains, a logic reviewed by Staunton and Weissman and by Hertweck. Engineering modular PKS genes by swapping domains has produced novel macrolides, though productive hybrid assembly lines remain challenging because of protein-protein interactions and substrate specificity. Whether Diels-Alderases truly exist in nature was debated for decades; several biosynthetic enzymes, including the lovastatin synthase LovB, are now accepted as catalysing [4+2] cycloadditions, with the enzyme controlling the conformation of the triene. Iterative type I fungal PKS use programmed, domain-specific reductions that are not yet fully predictable from sequence. Statins were discovered by Akira Endo from fungal screening on the basis of HMG-CoA reductase inhibition, and his historical perspective shows how knowledge of cholesterol biosynthesis guided the search."
+      },
+      "commonMistakes": [
+        "Drawing a polyketide as a regular fatty acid; its keto groups remain unreduced and drive cyclisation",
+        "Assuming one polyketide chain can fold only one way; the enzyme determines the cyclisation mode and so the product",
+        "Confusing the number of carbon atoms in the chain with the number of acetate units: each unit adds two carbons, and the starter provides two more",
+        "Treating macrolides as proteins or sugars; the ring is a polyketide lactone, with sugars attached afterwards"
+      ],
+      "videos": [
+        {
+          "youtubeId": "Klw2POjgzVo",
+          "title": "15. PK and NRP Synthases 1",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full MIT lecture introducing polyketide synthase logic, with the mechanism of chain extension and the architecture of assembly lines."
+        },
+        {
+          "youtubeId": "NJuonb1g9i4",
+          "title": "Type I Polyketides",
+          "channel": "J. Christopher Anderson",
+          "level": "intermediate",
+          "whyWatch": "A short lecture explaining modular type I polyketide synthases and how module composition predicts structure."
+        },
+        {
+          "youtubeId": "74fDxW_M_Vc",
+          "title": "Biosynthesis of polyketide natural products",
+          "channel": "DTUdk",
+          "level": "advanced",
+          "whyWatch": "A lecture giving an overview of polyketide biosynthesis with many examples."
+        },
+        {
+          "youtubeId": "zzZ-f6uZ8IE",
+          "title": "Biosynthesis of Natural Products through Polyketide Pathway",
+          "channel": "Ghemistry Classroom",
+          "level": "beginner",
+          "whyWatch": "A beginner-level introduction to the acetate pathway and the aromatic products it gives."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1039/a909079g",
+          "title": "Polyketide biosynthesis: a millennium review",
+          "authors": "Staunton J, Weissman KJ",
+          "year": 2001,
+          "journal": "Natural Product Reports",
+          "level": "advanced",
+          "whyItMatters": "A classic review of the enzymology and logic of polyketide synthases by two leaders in the field, still a good reference for the mechanisms taught in this unit."
+        },
+        {
+          "doi": "10.1002/anie.200806121",
+          "title": "The Biosynthetic Logic of Polyketide Diversity",
+          "authors": "Hertweck C",
+          "year": 2009,
+          "journal": "Angewandte Chemie International Edition",
+          "level": "advanced",
+          "whyItMatters": "Explains how variations in starter units, extender units, reduction and cyclisation produce the immense range of polyketide structures, helping you read a structure and infer its assembly."
+        },
+        {
+          "doi": "10.2183/pjab.86.484",
+          "title": "A historical perspective on the discovery of statins",
+          "authors": "Endo A",
+          "year": 2010,
+          "journal": "Proceedings of the Japan Academy, Series B",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3108295/",
+          "whyItMatters": "The scientist who discovered the first statin tells the story of screening fungi for inhibitors of cholesterol synthesis, a vivid example of a polyketide natural product becoming a drug.",
+          "readingQuestions": [
+            "Why did Endo screen microbial extracts rather than synthetic compounds?",
+            "Which fungal metabolites became the first statins?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "MIT 5.08J Biological Chemistry II",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-08j-biological-chemistry-ii-spring-2016/",
+          "free": true,
+          "level": "advanced",
+          "note": "Lecture videos and notes on polyketide and nonribosomal peptide synthases for deeper study."
+        },
+        {
+          "title": "MIBiG",
+          "provider": "secondarymetabolites.org",
+          "type": "database",
+          "url": "https://mibig.secondarymetabolites.org",
+          "free": true,
+          "level": "advanced",
+          "note": "Look up the erythromycin or lovastatin gene clusters to see how modules map onto structures."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov",
+          "free": true,
+          "level": "beginner",
+          "note": "Draw and compare the structures of emodin, erythromycin, monensin and lovastatin."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In a modular type I PKS, what determines the oxidation state at each position of the final polyketide?",
+          "options": [
+            "The sequence of the final product's gene only",
+            "The set of reductive domains (KR, DH, ER) present in each module",
+            "The choice of solvent",
+            "The length of the ACP"
+          ],
+          "answer": 1,
+          "explanation": "Each module may contain ketoreductase, dehydratase and enoyl reductase domains, and which are present determines whether that position ends as ketone, alcohol, alkene or alkane."
+        },
+        {
+          "question": "Which reaction forms the decalin ring in lovastatin biosynthesis?",
+          "options": [
+            "Claisen condensation",
+            "Intramolecular Diels-Alder reaction",
+            "Wagner-Meerwein rearrangement",
+            "Mannich reaction"
+          ],
+          "answer": 1,
+          "explanation": "A polyene chain assembled by the iterative PKS cyclises in an intramolecular [4+2] cycloaddition, giving the bicyclic decalin core."
+        },
+        {
+          "question": "Orsellinic acid is formed from a tetraketide chain by:",
+          "options": [
+            "Aldol cyclisation followed by dehydration and enolisation to the aromatic ring",
+            "Diels-Alder reaction",
+            "Hydrolysis of an amide",
+            "Radical coupling of two phenols"
+          ],
+          "answer": 0,
+          "explanation": "Orsellinic acid arises when the enolate at C2 of a poly-beta-keto chain attacks the C7 ketone in an aldol reaction, followed by dehydration and aromatisation."
+        }
+      ]
+    },
+    {
+      "id": "shikimate-pathway-and-phenylpropanoids",
+      "title": "The shikimate pathway: aromatic amino acids, phenylpropanoids, lignans and coumarins",
+      "hours": 5,
+      "hook": "Humans cannot make benzene rings from scratch; we get them from plants and microbes. The shikimate pathway is the route by which those organisms build phenylalanine, tyrosine and tryptophan, and it is also the starting point for lignin, the second most abundant organic polymer on Earth, and the aromatic compounds that give spices and herbs their smell.",
+      "learningObjectives": [
+        "Outline the shikimate pathway from phosphoenolpyruvate and erythrose 4-phosphate to chorismate",
+        "Explain how chorismate gives phenylalanine, tyrosine, tryptophan and benzoic acid derivatives",
+        "Explain why the pathway is a target for herbicides such as glyphosate and why animals lack it",
+        "Describe the conversion of phenylalanine into cinnamic acid and the C6C3 phenylpropane units by PAL",
+        "Show how C6C3 units give lignans, lignin, coumarins and C6C1 benzoic acids",
+        "Draw the radical-coupling steps that join monolignols"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Shikimic acid pathway",
+          "definition": "A seven-step route from the condensation of phosphoenolpyruvate and erythrose 4-phosphate to shikimate and then chorismate, found in plants, fungi and bacteria but not in animals."
+        },
+        {
+          "term": "Chorismate",
+          "definition": "A branch-point intermediate that leads to prephenate (and so phenylalanine and tyrosine), anthranilate (and so tryptophan), and p-aminobenzoate and other aromatic metabolites."
+        },
+        {
+          "term": "Glyphosate",
+          "definition": "A herbicide that inhibits EPSP synthase, a shikimate pathway enzyme, starving plants of aromatic amino acids."
+        },
+        {
+          "term": "Phenylalanine ammonia-lyase (PAL)",
+          "definition": "Eliminates ammonia from phenylalanine to give cinnamic acid, the entry point into phenylpropanoid metabolism, and is among the most studied enzymes of plant secondary metabolism."
+        },
+        {
+          "term": "C6C3 phenylpropanoids",
+          "definition": "Hydroxylation and methylation of cinnamic acid give p-coumaric, caffeic, ferulic and sinapic acids, each with a benzene ring bearing a three-carbon side chain."
+        },
+        {
+          "term": "Monolignols and lignin",
+          "definition": "Reduction of the side chain gives coniferyl, sinapyl and p-coumaryl alcohols, which are oxidised to phenoxy radicals by peroxidases or laccases and couple randomly to form the lignin polymer."
+        },
+        {
+          "term": "Lignans",
+          "definition": "Dimers of two C6C3 units linked through their central side-chain carbons (beta-beta' linkage), including podophyllotoxin, the precursor of etoposide."
+        },
+        {
+          "term": "Coumarins",
+          "definition": "Ortho-hydroxylation of cinnamic acids, trans-to-cis isomerisation of the side chain and lactonisation yield coumarins such as umbelliferone, with extensions to furanocoumarins."
+        },
+        {
+          "term": "C6C1 benzoic acids",
+          "definition": "Chain-shortening of a C6C3 compound by loss of two carbons gives benzoic acid derivatives, including salicylic acid and vanillin precursors."
+        },
+        {
+          "term": "Ubiquinone, folate and vitamin K precursors",
+          "definition": "Chorismate also gives rise to other essential compounds such as p-aminobenzoate for folate in microbes, linking the pathway to antimicrobial drugs."
+        }
+      ],
+      "deeper": {
+        "beginner": "Plants and microbes build benzene rings using the shikimate pathway, which begins with two sugar-derived building blocks and ends in aromatic amino acids. Phenylalanine can then be turned into a family of compounds that all have a benzene ring with a short three-carbon tail. These are the starting points for plant structural polymers such as lignin, as well as for scents, pigments and defence compounds.",
+        "intermediate": "The first step, DAHP synthase, is an aldol-type condensation between PEP and erythrose 4-phosphate, and ring closure forms 3-dehydroquinate before dehydration and reduction give shikimate. After phosphorylation and addition of a second PEP unit (EPSP synthase), elimination gives chorismate. A Claisen rearrangement (chorismate mutase) converts chorismate to prephenate, which gives phenylalanine or tyrosine, while anthranilate synthase and later steps lead to tryptophan. PAL removes ammonia from phenylalanine to produce trans-cinnamic acid, and hydroxylation at the para position gives p-coumaric acid; additional hydroxylation and O-methylation (SAM) gives caffeic, ferulic and sinapic acids. Radical coupling of coniferyl alcohol forms the beta-O-4, beta-5 and beta-beta linkages of lignin, whereas in lignans two radicals couple in a controlled stereospecific manner assisted by dirigent proteins.",
+        "advanced": "Flux through the shikimate pathway is controlled mainly by feedback regulation of DAHP synthase isoenzymes by aromatic amino acids in microbes, and by transcriptional regulation in plants, where a large fraction of fixed carbon, up to a third in some species, may pass through phenylpropanoid metabolism, as described by Vogt. The Herrmann and Weaver review explains how the pathway is organised in plastids in plants. Some grasses also use tyrosine ammonia-lyase, giving a shortcut to p-coumaric acid. Lignin composition (G, S and H units) influences biomass digestibility and is a target in biofuel research. The regulation of the phenylpropanoid pathway involves transcription factors such as MYB proteins, and also metabolic channelling by membrane-associated enzyme complexes on the endoplasmic reticulum, so the pathway is less like a freely diffusing sequence than the textbook scheme suggests."
+      },
+      "commonMistakes": [
+        "Believing animals make aromatic amino acids; phenylalanine and tryptophan are essential, and tyrosine is made from phenylalanine, because the shikimate pathway is absent",
+        "Confusing the shikimate pathway with the mevalonate pathway because both end in 'ic acid' intermediates; they give completely different product families",
+        "Writing PAL as a hydroxylase; it removes ammonia to give a C=C double bond",
+        "Thinking lignin has a defined repeating structure like cellulose; it is a heterogeneous polymer formed by radical coupling"
+      ],
+      "videos": [
+        {
+          "youtubeId": "FlBrJW-qbXA",
+          "title": "Introduction to the Shikimate Pathway",
+          "channel": "Michael Evans",
+          "level": "intermediate",
+          "whyWatch": "A lecture that follows the structures and mechanisms from the two starting sugars to chorismate."
+        },
+        {
+          "youtubeId": "BcSwDN0zcMI",
+          "title": "Chorismate, Phenylalanine, Tyrosine Biosynthesis",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "A tight explanation of how chorismate branches to phenylalanine and tyrosine."
+        },
+        {
+          "youtubeId": "iLdcyBeSris",
+          "title": "Wood chemistry (8) Lignin",
+          "channel": "Aalto University - Wood Science",
+          "level": "intermediate",
+          "whyWatch": "A lecture on the structure and radical coupling of lignin, showing why it is such a complex polymer."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.arplant.50.1.473",
+          "title": "The Shikimate Pathway",
+          "authors": "Herrmann KM, Weaver LM",
+          "year": 1999,
+          "journal": "Annual Review of Plant Physiology and Plant Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "A comprehensive review of the enzymes, genes and regulation of the shikimate pathway, with detailed discussion of its role in plants and as a herbicide target."
+        },
+        {
+          "doi": "10.1093/mp/ssp106",
+          "title": "Phenylpropanoid Biosynthesis",
+          "authors": "Vogt T",
+          "year": 2010,
+          "journal": "Molecular Plant",
+          "level": "intermediate",
+          "whyItMatters": "A readable overview of how a single amino acid is converted into thousands of phenolic compounds, with all the main branches (lignin, flavonoids, coumarins) in one place."
+        }
+      ],
+      "resources": [
+        {
+          "title": "KEGG pathway map: Biosynthesis of secondary metabolites",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg-bin/show_pathway?map01110",
+          "free": true,
+          "level": "intermediate",
+          "note": "An interactive map showing how shikimate, acetate and mevalonate routes branch into secondary metabolism."
+        },
+        {
+          "title": "Organic Chemistry bookshelf",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Review phenol and radical coupling chemistry to understand lignin formation."
+        },
+        {
+          "title": "ChEBI",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chebi/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up shikimic acid, chorismic acid and cinnamic acid structures and synonyms to confirm your drawings."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which compound is the branch-point intermediate of the shikimate pathway?",
+          "options": [
+            "Shikimate 3-phosphate",
+            "Chorismate",
+            "Cinnamic acid",
+            "Prephenate only"
+          ],
+          "answer": 1,
+          "explanation": "Chorismate is the last common intermediate, giving prephenate (Phe, Tyr), anthranilate (Trp) and other aromatic products."
+        },
+        {
+          "question": "What does phenylalanine ammonia-lyase produce?",
+          "options": [
+            "Tyrosine",
+            "trans-Cinnamic acid",
+            "Benzoic acid",
+            "Shikimic acid"
+          ],
+          "answer": 1,
+          "explanation": "PAL eliminates NH3 from phenylalanine to give the alpha,beta-unsaturated trans-cinnamic acid, the entry point to phenylpropanoids."
+        },
+        {
+          "question": "How are the monolignols joined to form lignin?",
+          "options": [
+            "By peptide bond formation",
+            "By radical coupling after one-electron oxidation by peroxidase or laccase",
+            "By Claisen condensation",
+            "By glycosidic bonding"
+          ],
+          "answer": 1,
+          "explanation": "One-electron oxidation of the phenol gives resonance-stabilised radicals that couple at several positions to form beta-O-4, beta-5 and other linkages."
+        }
+      ]
+    },
+    {
+      "id": "terpenoids",
+      "title": "Terpenoids from the mevalonate and MEP pathways",
+      "hours": 5,
+      "hook": "The smell of crushed lemongrass, the orange of a carrot, the antimalarial power of artemisinin and the cancer drug taxol all come down to one humble five-carbon unit joined and folded in an astonishing number of ways. Terpenoids are the largest family of natural products, with tens of thousands of known members.",
+      "learningObjectives": [
+        "Describe the isoprene rule and classify terpenoids by the number of isoprene units",
+        "Outline the mevalonate pathway from acetyl-CoA to isopentenyl diphosphate (IPP) and the MEP pathway from pyruvate and glyceraldehyde 3-phosphate",
+        "Explain the isomerisation of IPP to DMAPP and the head-to-tail chain elongation to GPP, FPP and GGPP",
+        "Draw the carbocation mechanism that converts geranyl diphosphate to a monoterpene such as limonene",
+        "Give examples of monoterpenes, sesquiterpenoids, diterpenoids and sesterterpenoids and their uses",
+        "Explain how carotenoids arise by tail-to-tail coupling of GGPP and are converted to vitamin A"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Isoprene rule",
+          "definition": "Terpenoids are formally built from five-carbon isoprene units joined mostly head to tail, so their skeleton can be dissected into C5 units even though isoprene itself is not the precursor."
+        },
+        {
+          "term": "Mevalonate pathway",
+          "definition": "Three acetyl-CoA form HMG-CoA, which is reduced to mevalonic acid, then phosphorylated and decarboxylated to IPP; it operates in the cytosol of plants and in animals and fungi."
+        },
+        {
+          "term": "MEP (DXP) pathway",
+          "definition": "Pyruvate and glyceraldehyde 3-phosphate form 1-deoxy-D-xylulose 5-phosphate and then methylerythritol phosphate, leading to IPP and DMAPP; it operates in bacteria and plant plastids but not in animals."
+        },
+        {
+          "term": "IPP and DMAPP",
+          "definition": "Isopentenyl diphosphate and its isomer dimethylallyl diphosphate are the activated C5 building blocks, DMAPP being the electrophilic starter that is attacked by IPP."
+        },
+        {
+          "term": "Prenyl diphosphates",
+          "definition": "Successive additions of IPP to DMAPP give geranyl diphosphate (C10), farnesyl diphosphate (C15) and geranylgeranyl diphosphate (C20), the substrates of terpene synthases."
+        },
+        {
+          "term": "Terpene classes",
+          "definition": "Hemiterpenes (C5), monoterpenes (C10), sesquiterpenes (C15), diterpenes (C20), sesterterpenes (C25), triterpenes (C30), and tetraterpenes (C40, the carotenoids)."
+        },
+        {
+          "term": "Terpene synthases",
+          "definition": "Enzymes that ionise the allylic diphosphate to a carbocation, which then cyclises, undergoes hydride or alkyl shifts, and is finally quenched by loss of a proton or capture of water."
+        },
+        {
+          "term": "Triterpenoids and carotenoids",
+          "definition": "Two farnesyl diphosphate units join tail to tail to give squalene (the precursor of sterols and triterpenes), while two geranylgeranyl diphosphate units give phytoene, the precursor of carotenoids."
+        },
+        {
+          "term": "Carotenoids and vitamin A",
+          "definition": "Highly conjugated tetraterpenes responsible for yellow, orange and red pigmentation; oxidative cleavage of beta-carotene gives retinal and then retinol (vitamin A)."
+        },
+        {
+          "term": "Pharmacological examples",
+          "definition": "Artemisinin (sesquiterpene lactone with an endoperoxide bridge) is antimalarial, and paclitaxel (a diterpenoid) stabilises microtubules and is used in cancer chemotherapy."
+        }
+      ],
+      "deeper": {
+        "beginner": "Terpenoids are built like Lego from five-carbon units that cells make from acetate (mevalonate pathway) or from pyruvate and a sugar phosphate (MEP pathway). The units are linked into chains of different lengths, which are then folded into rings by enzymes. This gives molecules as different as menthol, camphor, carotene and the anticancer drug taxol.",
+        "intermediate": "DMAPP ionises to an allylic carbocation that is attacked by the double bond of IPP, creating a new carbon-carbon bond and a tertiary cation that loses a proton to regenerate a double bond; repetition gives geranyl, farnesyl and geranylgeranyl diphosphates. Monoterpene synthases ionise geranyl diphosphate, often isomerise it to linalyl diphosphate to allow rotation, and cyclise it to the terpinyl cation, which can be quenched in different ways to give limonene, pinene, camphor and other products. Sesquiterpene and diterpene synthases operate by similar principles with more complex cascades. The pathways are compartmentalised: in plants the mevalonate route in the cytosol provides sesquiterpenes and triterpenes, while the MEP route in plastids provides monoterpenes, diterpenes and carotenoids, though cross-talk occurs.",
+        "advanced": "Class I terpene synthases use a trinuclear magnesium cluster to bind and ionise the diphosphate, whereas class II enzymes initiate cyclisation by protonating a double bond or epoxide, as in squalene-hopene and oxidosqualene cyclases. The active site is a template that holds the substrate in a particular conformation and shields reactive cations, as reviewed by Christianson. The discovery of the MEP pathway in the 1990s, which overturned the idea that mevalonate was the universal source of isoprenoids, is described by Rohmer, and its absence from animals makes it a target for antimalarials and antibiotics. Metabolic engineering of yeast for artemisinic acid production, and of other microbes for terpenoid biosynthesis, shows how understanding the pathway enables industrial production. Interconversion of terpene carbocations involves Wagner-Meerwein shifts, and quantum chemical calculations are used to predict which cascades are feasible."
+      },
+      "commonMistakes": [
+        "Thinking isoprene (2-methylbuta-1,3-diene) is the biological building block; the real precursors are IPP and DMAPP",
+        "Assuming only one terpene biosynthetic route exists; the mevalonate and MEP pathways operate in different organisms and compartments",
+        "Forgetting that squalene and phytoene are formed by tail-to-tail coupling, in contrast to the head-to-tail chain extension of other terpenes",
+        "Counting carbons incorrectly: a sesquiterpene has fifteen carbons (three isoprene units), not six or twelve"
+      ],
+      "videos": [
+        {
+          "youtubeId": "az9B_TzSnlE",
+          "title": "From terpenes to steroids part 1: Terpenes",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "A short introduction to isoprene units, terpene classes and how they are joined."
+        },
+        {
+          "youtubeId": "owgS3ibWsFk",
+          "title": "Terpene Biosynthesis",
+          "channel": "Joseph Lauher",
+          "level": "intermediate",
+          "whyWatch": "A lecture drawing the mechanisms by which IPP and DMAPP are coupled and cyclised."
+        },
+        {
+          "youtubeId": "gYKG_f9h5To",
+          "title": "Terpenes: definition, functions and biosynthesis",
+          "channel": "Joao's Lab",
+          "level": "beginner",
+          "whyWatch": "A short overview of terpene diversity and the two biosynthetic pathways."
+        },
+        {
+          "youtubeId": "oe9UDvT1Wws",
+          "title": "Mevalonate pathway for Terpene Biosynthesis",
+          "channel": "Enock's Tutorials",
+          "level": "intermediate",
+          "whyWatch": "Follows the mevalonate pathway step by step with structures."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1039/a709175c",
+          "title": "The discovery of a mevalonate-independent pathway for isoprenoid biosynthesis in bacteria, algae and higher plants",
+          "authors": "Rohmer M",
+          "year": 1999,
+          "journal": "Natural Product Reports",
+          "level": "advanced",
+          "whyItMatters": "Written by the discoverer of the MEP pathway, it tells how isotope labelling experiments revealed a second route to IPP and DMAPP, changing textbook biochemistry."
+        },
+        {
+          "doi": "10.1021/acs.chemrev.7b00287",
+          "title": "Structural and Chemical Biology of Terpenoid Cyclases",
+          "authors": "Christianson DW",
+          "year": 2017,
+          "journal": "Chemical Reviews",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5599884/",
+          "whyItMatters": "Shows how the shape of an enzyme active site steers a reactive carbocation along one path among many, which is the core mechanistic idea behind terpenoid diversity.",
+          "readingQuestions": [
+            "How do class I and class II terpene cyclases initiate catalysis differently?",
+            "What role does the active-site contour play in product selectivity?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "LOTUS natural products database",
+          "provider": "LOTUS Initiative",
+          "type": "database",
+          "url": "https://lotus.naturalproducts.net",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search by species or structure to see which terpenoids occur in a plant, for example local medicinal plants."
+        },
+        {
+          "title": "KEGG pathway map: Terpenoid backbone biosynthesis",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Start from the pathway list and open terpenoid backbone biosynthesis to see both MVA and MEP routes."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up limonene, artemisinin, taxol and beta-carotene to practise spotting isoprene units."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "How many carbon atoms does a sesquiterpene contain?",
+          "options": [
+            "10",
+            "15",
+            "20",
+            "30"
+          ],
+          "answer": 1,
+          "explanation": "A sesquiterpene is built from three isoprene units, giving fifteen carbons and arising from farnesyl diphosphate."
+        },
+        {
+          "question": "Which pathway provides the IPP used for plant monoterpenes and carotenoids in plastids?",
+          "options": [
+            "The mevalonate pathway only",
+            "The MEP (DXP) pathway",
+            "The shikimate pathway",
+            "Beta-oxidation"
+          ],
+          "answer": 1,
+          "explanation": "Plastids use the MEP pathway starting from pyruvate and glyceraldehyde 3-phosphate; the cytosol uses the mevalonate pathway."
+        },
+        {
+          "question": "Squalene is formed by:",
+          "options": [
+            "Head-to-tail coupling of five farnesyl diphosphates",
+            "Tail-to-tail coupling of two farnesyl diphosphates",
+            "Cyclisation of geranyl diphosphate",
+            "Oxidation of cholesterol"
+          ],
+          "answer": 1,
+          "explanation": "Two C15 farnesyl diphosphate units are joined tail to tail (1'-1) by squalene synthase using NADPH to give the C30 hydrocarbon squalene."
+        }
+      ]
+    },
+    {
+      "id": "steroids",
+      "title": "Steroids: biosynthesis, structure and function",
+      "hours": 5,
+      "hook": "Cholesterol has an unfair public reputation: every cell membrane in your body depends on it, and the hormones that control stress, salt balance, puberty and pregnancy are all made from it. A steroid is a rigid, four-ring scaffold, and small changes in the groups hung on it turn a membrane component into a sex hormone or a vitamin.",
+      "learningObjectives": [
+        "Draw the steroid skeleton, number the carbons and label rings A to D",
+        "Explain the biosynthesis of squalene oxide and its cyclisation to lanosterol or cycloartenol, including the Wagner-Meerwein shifts",
+        "Describe the conformation of trans-fused steroid rings and the axial/equatorial orientation of substituents",
+        "Classify the major steroid types (sterols, bile acids, corticosteroids, sex hormones, cardiac glycosides, secosteroids) and give their functions",
+        "Describe how lanosterol is converted to cholesterol and cholesterol to steroid hormones",
+        "Outline key reactions used in partial synthesis, such as the Marker degradation of diosgenin"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Steroid skeleton",
+          "definition": "A cyclopentanoperhydrophenanthrene nucleus of three six-membered rings (A, B, C) and one five-membered ring (D), usually with methyl groups at C-10 and C-13 and a side chain at C-17."
+        },
+        {
+          "term": "Conformation and stereochemistry",
+          "definition": "In 5-alpha steroids all ring fusions are trans, giving a flat, rigid structure with chair rings; substituents are alpha (below) or beta (above) the plane and axial or equatorial, such as the equatorial 3-beta hydroxyl of cholesterol."
+        },
+        {
+          "term": "Squalene epoxidase",
+          "definition": "Oxidises squalene to 2,3-oxidosqualene using oxygen and NADPH, the first oxidative step and a regulated reaction in sterol biosynthesis."
+        },
+        {
+          "term": "Oxidosqualene cyclisation",
+          "definition": "Protonation of the epoxide starts a cascade in which the chain folds into a chair-boat-chair-boat conformation, forms four rings and gives a protosteryl cation, which then undergoes 1,2-hydride and methyl shifts (Wagner-Meerwein) to give lanosterol in animals and fungi or cycloartenol in plants."
+        },
+        {
+          "term": "Lanosterol to cholesterol",
+          "definition": "Multiple steps remove three methyl groups, move a double bond and reduce the side-chain double bond to yield cholesterol, with ergosterol in fungi and phytosterols in plants as variants."
+        },
+        {
+          "term": "Steroid hormones",
+          "definition": "Cholesterol side-chain cleavage gives pregnenolone, the precursor of progestogens, corticosteroids, androgens and, through aromatisation of ring A, oestrogens."
+        },
+        {
+          "term": "Bile acids",
+          "definition": "Hydroxylated, side-chain shortened steroid acids conjugated with glycine or taurine, acting as detergents for fat digestion."
+        },
+        {
+          "term": "Cardiac glycosides",
+          "definition": "Steroids with an unsaturated lactone at C-17 and attached sugars, such as digoxin, that inhibit the Na+/K+-ATPase and are used in heart failure."
+        },
+        {
+          "term": "Vitamin D (secosteroid)",
+          "definition": "Formed when UV light breaks the B ring of 7-dehydrocholesterol in skin, followed by thermal isomerisation and hydroxylation in liver and kidney."
+        },
+        {
+          "term": "Partial synthesis",
+          "definition": "Industrial production of hormones begins with plant sapogenins such as diosgenin, which is degraded (Marker degradation) to a pregnane that can be converted into progesterone and other steroids."
+        }
+      ],
+      "deeper": {
+        "beginner": "Steroids all share the same four-ring core, and are made in cells from a long chain-like hydrocarbon called squalene that folds and snaps closed into rings in a single enzyme-catalysed cascade. Cholesterol is the starting point for hormones such as oestrogen, testosterone and cortisol. Small changes in the groups on the rings change what the molecule does.",
+        "intermediate": "Squalene is epoxidised and then folded in the active site of oxidosqualene cyclase so that the ring-forming cascade occurs with defined stereochemistry, creating six stereocentres in one step. The subsequent rearrangements move hydride and methyl groups along the chain until a proton is lost to give lanosterol, and the enzyme-catalysed removal of the methyl groups gives cholesterol. Because the rings are trans-fused in the 5-alpha series, the molecule is flat with the angular methyl groups axial, and the equatorial 3-beta alcohol is easily esterified. Steroid hormone synthesis uses P450 hydroxylases and dehydrogenases in specific tissues (adrenal cortex, gonads) to tailor cholesterol: cleaving the side chain to give pregnenolone, then hydroxylations give cortisol and aldosterone, while 17,20-lyase action gives androgens, and aromatase converts androgens to oestrogens.",
+        "advanced": "Abe, Rohmer and Prestwich's review describes the evidence for the protosteryl cation and the series of 1,2-shifts in oxidosqualene cyclisation, and shows how mutations in the cyclase can redirect cyclisation to alternative triterpenes. Plants make cycloartenol rather than lanosterol because their cyclase stops after a different proton loss, which forms a cyclopropane ring that is later opened. In the pharmaceutical industry, early steroid hormone supply depended on Marker's degradation of diosgenin from Dioscorea tubers to 16-dehydropregnenolone acetate, which transformed steroid availability and cost; later microbial 11-hydroxylation of progesterone made cortisone accessible. Selective modification of steroid scaffolds by microbial transformations remains a green alternative to chemical synthesis. Nuclear receptors, the targets of steroid hormones, convert a lipophilic signal into transcriptional responses, linking steroid chemistry to gene regulation."
+      },
+      "commonMistakes": [
+        "Drawing a steroid as a flat set of hexagons without noting the alpha/beta stereochemistry at ring junctions and substituents",
+        "Mixing up lanosterol (animals and fungi) with cycloartenol (plants and algae) as the first cyclised product",
+        "Assuming all steroid hormones come directly from acetate; they come from cholesterol, which comes from acetate through the mevalonate pathway",
+        "Forgetting that angular methyl groups at C-18 and C-19 are conserved in many but not all steroids, and that oestrogens lose C-19 and have an aromatic A ring"
+      ],
+      "videos": [
+        {
+          "youtubeId": "x9wyOYnot7E",
+          "title": "From terpenes to steroids part 2: Squalene, cholesterol, and steroids | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "A concise explanation of how squalene folds into the steroid skeleton and what the common steroid types are."
+        },
+        {
+          "youtubeId": "3z4XNWCnY-I",
+          "title": "Lipids Part 2: Steroids",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Introduces the steroid core, cholesterol and hormones in a few minutes."
+        },
+        {
+          "youtubeId": "TJf62Omf7Cw",
+          "title": "Steroidogenesis | The Biosynthesis of Steroids from Cholesterol",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Follows pregnenolone through the adrenal and gonadal pathways to cortisol, aldosterone, androgens and oestrogens."
+        },
+        {
+          "youtubeId": "ziG0Jp9QaBo",
+          "title": "19. Cholesterol Biosynthesis 1",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture that covers the mechanism of cholesterol biosynthesis and the chemistry of squalene cyclisation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/cr00022a009",
+          "title": "Enzymatic cyclization of squalene and oxidosqualene to sterols and triterpenes",
+          "authors": "Abe I, Rohmer M, Prestwich GD",
+          "year": 1993,
+          "journal": "Chemical Reviews",
+          "level": "advanced",
+          "whyItMatters": "A classic review that explains the mechanism of oxidosqualene cyclisation, including the conformations, cations and rearrangements that give sterols rather than other triterpenes."
+        },
+        {
+          "doi": "10.1016/j.cell.2015.01.036",
+          "title": "A Century of Cholesterol and Coronaries: From Plaques to Genes to Statins",
+          "authors": "Goldstein JL, Brown MS",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4525717/",
+          "whyItMatters": "Provides the medical and biochemical history of cholesterol, putting the chemistry of steroid biosynthesis in the context of human disease and drug discovery."
+        }
+      ],
+      "resources": [
+        {
+          "title": "LIPID MAPS Structure Database",
+          "provider": "LIPID MAPS Consortium",
+          "type": "database",
+          "url": "https://www.lipidmaps.org",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse sterol lipids, including bile acids and steroid hormones, with structures and nomenclature."
+        },
+        {
+          "title": "PDB-101",
+          "provider": "RCSB PDB",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org",
+          "free": true,
+          "level": "beginner",
+          "note": "Search for cholesterol-related or steroid receptor structure stories to see steroid binding in 3D."
+        },
+        {
+          "title": "ChEBI",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chebi/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up steroids by name to see standard numbering, stereodescriptors and classification."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the first cyclised product of oxidosqualene in animals and fungi?",
+          "options": [
+            "Cycloartenol",
+            "Lanosterol",
+            "Cholesterol",
+            "Squalene"
+          ],
+          "answer": 1,
+          "explanation": "Animals and fungi cyclise 2,3-oxidosqualene to lanosterol, whereas plants and algae make cycloartenol; cholesterol is made from lanosterol by later steps."
+        },
+        {
+          "question": "What is the steroid hormone precursor formed by cholesterol side-chain cleavage?",
+          "options": [
+            "Testosterone",
+            "Pregnenolone",
+            "Cortisol",
+            "Oestradiol"
+          ],
+          "answer": 1,
+          "explanation": "The P450scc enzyme cleaves the C-20,22 bond of cholesterol, giving pregnenolone, from which all other steroid hormones are made."
+        },
+        {
+          "question": "Which feature of ring fusion in 5-alpha steroids gives them a flat, rigid structure?",
+          "options": [
+            "All rings are cis-fused",
+            "All ring fusions are trans",
+            "Ring D is aromatic",
+            "There are no angular methyl groups"
+          ],
+          "answer": 1,
+          "explanation": "Trans-fused rings lock each ring in a chair form, and the alternating arrangement produces a flat and rigid molecule."
+        }
+      ]
+    },
+    {
+      "id": "alkaloids",
+      "title": "Alkaloids: nitrogen-containing natural products from amino acids",
+      "hours": 5,
+      "hook": "Caffeine in your morning tea, nicotine in tobacco, quinine against malaria, morphine against pain and strychnine as a poison: alkaloids are plants' chemical arsenal, and they act on our nervous systems with remarkable potency. Their biosynthesis shows how amino acids can be turned into complex ring systems by a few elegant reactions.",
+      "learningObjectives": [
+        "Define alkaloids and classify them by their amino acid precursors",
+        "Explain the biosynthesis of ornithine-derived alkaloids such as tropane alkaloids and nicotine's pyrrolidine ring",
+        "Describe how lysine, nicotinic acid, tyrosine, tryptophan, anthranilic acid and histidine give distinct alkaloid classes",
+        "Draw the key Mannich-type and Pictet-Spengler reactions that build alkaloid ring systems",
+        "Describe the steps from tyrosine to (S)-reticuline and the morphine pathway, including phenolic oxidative coupling",
+        "Give examples of important reactions of alkaloids such as acid-base behaviour and quaternisation"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Alkaloids",
+          "definition": "Basic nitrogen-containing natural products, mostly from plants and often with pronounced physiological activity, derived largely from amino acids."
+        },
+        {
+          "term": "Ornithine-derived alkaloids",
+          "definition": "Decarboxylation of ornithine to putrescine, methylation and oxidation to the N-methylpyrrolinium cation allow Mannich-type reactions to form tropane alkaloids such as hyoscyamine and cocaine and the pyrrolidine ring of nicotine."
+        },
+        {
+          "term": "Lysine-derived alkaloids",
+          "definition": "Decarboxylation of lysine gives cadaverine and the piperidine ring, giving alkaloids such as pelletierine and the quinolizidine alkaloids, and anabasine in combination with nicotinic acid."
+        },
+        {
+          "term": "Nicotinic acid-derived alkaloids",
+          "definition": "The pyridine ring of nicotine comes from nicotinic acid (niacin) derivatives, combined with the pyrrolidine ring from ornithine."
+        },
+        {
+          "term": "Tyrosine-derived alkaloids",
+          "definition": "Two tyrosine-derived units (dopamine and 4-hydroxyphenylacetaldehyde) condense in a Pictet-Spengler reaction to give norcoclaurine, leading to (S)-reticuline, the precursor of morphine, codeine and many isoquinoline alkaloids."
+        },
+        {
+          "term": "Phenolic oxidative coupling",
+          "definition": "Radical coupling of a phenol, catalysed by cytochrome P450 enzymes, forms new carbon-carbon or carbon-oxygen bonds, as in the salutaridine step in morphine biosynthesis."
+        },
+        {
+          "term": "Tryptophan-derived alkaloids",
+          "definition": "Decarboxylation gives tryptamine, which combines with the monoterpene secologanin in a Pictet-Spengler reaction to give strictosidine, the precursor of monoterpene indole alkaloids such as vinblastine, strychnine and quinine."
+        },
+        {
+          "term": "Anthranilic acid and histidine derived alkaloids",
+          "definition": "Anthranilic acid, an intermediate of the tryptophan pathway, gives quinazoline, quinoline and acridone alkaloids, while histidine gives imidazole alkaloids such as pilocarpine."
+        },
+        {
+          "term": "Purine alkaloids",
+          "definition": "Caffeine, theobromine and theophylline are methylated xanthines derived from purine nucleotide metabolism rather than from an amino acid skeleton."
+        },
+        {
+          "term": "Chemical properties and reactions",
+          "definition": "Alkaloids are bases that form water-soluble salts with acids, can be precipitated by reagents such as Dragendorff's, and undergo reactions such as N-methylation to quaternary ammonium salts, N-oxidation and Hofmann elimination."
+        }
+      ],
+      "deeper": {
+        "beginner": "Alkaloids are plant chemicals that contain nitrogen and are usually bitter and strongly active in animals. Most are made from amino acids: the amino acid loses its carboxyl group, is joined to another building block, and the resulting pieces are stitched into rings. Morphine, for instance, begins as two molecules of tyrosine, a common amino acid.",
+        "intermediate": "Three reaction types do most of the work. Decarboxylation by PLP-dependent enzymes converts amino acids into amines such as putrescine, cadaverine, dopamine and tryptamine. Oxidation of an amine to an aldehyde or imine produces iminium ions, which undergo Mannich-type cyclisation with enol-type nucleophiles (as in the tropane ring formation) or Pictet-Spengler cyclisation with electron-rich aromatic rings (as in norcoclaurine and strictosidine). Finally, tailoring by SAM-dependent O- and N-methylation, hydroxylation and phenolic oxidative coupling generates the final skeleton. In morphine biosynthesis, (S)-reticuline is converted to (R)-reticuline, coupled to salutaridine, and then through thebaine and codeine to morphine, with the opium poppy as the natural producer.",
+        "advanced": "Strictosidine synthase is a rare example of a natural Pictet-Spengler enzyme, and its product is the entry to over 2,000 monoterpene indole alkaloids, a diversification described by O'Connor and Maresh, with rearrangements and cyclisations of strictosidine aglycone giving the different skeleton types. Galanie and colleagues reconstituted the complete route from sugar to opioids in engineered yeast, transferring around twenty plant, rat, bacterial and yeast enzymes, demonstrating that biosynthetic pathways can be assembled in microbial hosts, though titres were too low for commercial production at first. Alkaloid biosynthetic enzymes are often localised in specific cell types or even different cells, with intercellular transport of intermediates in plants such as Catharanthus roseus. The ecological roles of alkaloids, defence against herbivores, and their frequent mimicry of neurotransmitters explain their pharmacology: morphine mimics endorphins at opioid receptors, nicotine mimics acetylcholine at nicotinic receptors."
+      },
+      "commonMistakes": [
+        "Assuming all nitrogenous natural products are alkaloids; peptides, nucleotides and amino acids themselves are excluded by convention",
+        "Saying all alkaloids derive from amino acids; caffeine, for instance, derives from purine metabolism, and some alkaloids derive from terpenoid or polyketide precursors",
+        "Mixing up the Mannich and Pictet-Spengler reactions: both use iminium ions, but in Pictet-Spengler the nucleophile is an aromatic ring",
+        "Forgetting that decarboxylation of the amino acid is usually the first committed step, giving the amine used in later ring formation"
+      ],
+      "videos": [
+        {
+          "youtubeId": "TNObznuEb38",
+          "title": "Chemistry and biology of plant alkaloid biosynthesis - Sarah O'Connor",
+          "channel": "New Phytologist Foundation",
+          "level": "advanced",
+          "whyWatch": "A research lecture by a leading figure in alkaloid biosynthesis, showing how pathways are discovered and engineered."
+        },
+        {
+          "youtubeId": "xnM2hTXd1vE",
+          "title": "The Isolation of Natural Products: Morphine and Other Alkaloids",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Shows how alkaloids are extracted using their acid-base behaviour, linking chemistry to practice."
+        },
+        {
+          "youtubeId": "ku_iHqqNBXc",
+          "title": "Alkaloids and their Biosynthesis",
+          "channel": "Advanced Botany",
+          "level": "intermediate",
+          "whyWatch": "A summary of the main alkaloid classes and the precursors from which each is made."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1039/b512615k",
+          "title": "Chemistry and biology of monoterpene indole alkaloid biosynthesis",
+          "authors": "O'Connor SE, Maresh JJ",
+          "year": 2006,
+          "journal": "Natural Product Reports",
+          "level": "advanced",
+          "whyItMatters": "Explains the central role of strictosidine and how a single branch point generates thousands of structures, giving a deep example of biosynthetic diversification."
+        },
+        {
+          "doi": "10.1126/science.aac9373",
+          "title": "Complete biosynthesis of opioids in yeast",
+          "authors": "Galanie S, Thodey K, Trenchard IJ, Filsinger Interrante M, Smolke CD",
+          "year": 2015,
+          "journal": "Science",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4924617/",
+          "whyItMatters": "Demonstrates that a long and complex plant alkaloid pathway can be rebuilt in yeast, linking the biosynthesis you study to modern synthetic biology and raising policy questions.",
+          "readingQuestions": [
+            "Which steps of the pathway required enzymes from non-plant sources?",
+            "Why were titres still low, and what would be needed to improve them?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "LOTUS natural products database",
+          "provider": "LOTUS Initiative",
+          "type": "database",
+          "url": "https://lotus.naturalproducts.net",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for alkaloids by plant species or structure to see which compounds occur in which plants."
+        },
+        {
+          "title": "COCONUT natural products database",
+          "provider": "Friedrich Schiller University Jena",
+          "type": "database",
+          "url": "https://coconut.naturalproducts.net",
+          "free": true,
+          "level": "intermediate",
+          "note": "An open collection of natural product structures; use it to explore alkaloid skeletons and substructure search."
+        },
+        {
+          "title": "KEGG pathway: Isoquinoline alkaloid biosynthesis",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open the secondary-metabolism section to see the enzyme map from tyrosine to morphine."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which compound is the biosynthetic precursor of morphine, codeine and most benzylisoquinoline alkaloids?",
+          "options": [
+            "(S)-Reticuline",
+            "Strictosidine",
+            "Tropinone",
+            "Xanthosine"
+          ],
+          "answer": 0,
+          "explanation": "(S)-Reticuline, formed from two tyrosine-derived units through norcoclaurine, is the branch-point intermediate for morphinan, protoberberine and other isoquinoline alkaloids."
+        },
+        {
+          "question": "Strictosidine is formed from tryptamine and which other compound?",
+          "options": [
+            "Secologanin",
+            "Dopamine",
+            "Putrescine",
+            "Anthranilic acid"
+          ],
+          "answer": 0,
+          "explanation": "Strictosidine synthase catalyses a Pictet-Spengler reaction between tryptamine and the monoterpene secologanin."
+        },
+        {
+          "question": "The pyrrolidine ring of nicotine is derived from:",
+          "options": [
+            "Lysine",
+            "Ornithine",
+            "Tryptophan",
+            "Histidine"
+          ],
+          "answer": 1,
+          "explanation": "Ornithine is decarboxylated to putrescine, which is converted via the N-methylpyrrolinium cation into the pyrrolidine ring, while nicotinic acid provides the pyridine ring."
+        }
+      ]
+    },
+    {
+      "id": "mixed-biogenesis-flavonoids-stilbenes-meroterpenoids",
+      "title": "Mixed biogenesis: flavonoids, stilbenes and meroterpenoids",
+      "hours": 5,
+      "hook": "The red of a hibiscus, the blue of a butterfly pea flower, and the resveratrol in red wine are all made by combining two of the pathways you have already learned. Flavonoids and their relatives are natural product chemistry at its most modular: a shikimate-derived unit and a polyketide chain are merged by a single small enzyme, and the family tree branches from there.",
+      "learningObjectives": [
+        "Explain how 4-coumaroyl-CoA and three malonyl-CoA units combine to give chalcone, and which rings come from which pathway",
+        "Draw the conversion of chalcone to flavanones, flavones, flavonols, isoflavones and anthocyanidins and name the enzyme types involved",
+        "Explain how stilbene synthase differs from chalcone synthase and how resveratrol is formed",
+        "Define meroterpenoids and explain how terpenoid and non-terpenoid parts are joined by prenylation",
+        "Give examples of important meroterpenoids such as cannabinoids, tocopherols and ubiquinone",
+        "Describe the biological roles of flavonoids, including pigmentation, UV protection, signalling and antioxidant claims"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Mixed biogenesis",
+          "definition": "Natural products assembled from building blocks from more than one primary pathway, for example acetate plus shikimate, or terpenoid plus polyketide."
+        },
+        {
+          "term": "Flavonoid skeleton",
+          "definition": "A C6-C3-C6 structure in which ring A comes from three acetate (malonate) units via the polyketide pathway, and ring B and the three-carbon bridge come from the phenylpropanoid starter."
+        },
+        {
+          "term": "Chalcone synthase",
+          "definition": "A type III polyketide synthase that extends 4-coumaroyl-CoA with three malonyl-CoA units and cyclises the resulting tetraketide by Claisen reaction to a chalcone."
+        },
+        {
+          "term": "Chalcone isomerase",
+          "definition": "Catalyses the stereospecific ring closure of chalcone to a flavanone (naringenin), the central intermediate of flavonoid biosynthesis."
+        },
+        {
+          "term": "Flavonoid diversification",
+          "definition": "Naringenin is converted by hydroxylases, reductases and desaturases to flavones, flavonols, flavan-3-ols and anthocyanidins, and by aryl migration to isoflavones."
+        },
+        {
+          "term": "Anthocyanins",
+          "definition": "Glycosylated anthocyanidins that give red, purple and blue colours depending on pH, substituents and metal complexation."
+        },
+        {
+          "term": "Stilbene synthase",
+          "definition": "A chalcone synthase-like enzyme that uses the same substrates but folds the chain differently, with an aldol-type cyclisation and loss of CO2, giving stilbenes such as resveratrol (C6-C2-C6)."
+        },
+        {
+          "term": "Isoflavones",
+          "definition": "Flavonoids in which ring B has migrated from C-2 to C-3, which resemble oestrogens in shape and are abundant in legumes such as soya."
+        },
+        {
+          "term": "Meroterpenoids",
+          "definition": "Hybrid natural products in which a terpenoid unit, introduced by a prenyltransferase, is attached to a non-terpenoid core of polyketide, shikimate or other origin."
+        },
+        {
+          "term": "Examples of meroterpenoids",
+          "definition": "Tetrahydrocannabinol (olivetolic acid plus geranyl diphosphate), tocopherols (homogentisate plus phytyl chain), ubiquinone, vitamin K and prenylated flavonoids."
+        }
+      ],
+      "deeper": {
+        "beginner": "Some natural products are built by combining parts from different pathways, as if two construction kits were mixed. Flavonoids, which colour many flowers and fruits, are made from a unit of the phenylpropanoid kit and three units of the acetate kit. Meroterpenoids attach a terpene part to some other core.",
+        "intermediate": "Chalcone synthase starts with 4-coumaroyl-CoA, adds three malonyl units by decarboxylative Claisen condensations to give a tetraketide, then cyclises through a Claisen reaction to form ring A, which is why ring A has the 5,7-dihydroxy pattern characteristic of acetate-derived rings. Chalcone isomerase closes the heterocyclic C ring by a conjugate (Michael) addition of the phenol to the enone, giving naringenin. From there, flavone synthase introduces a C2-C3 double bond, flavanone 3-hydroxylase adds a 3-hydroxyl to give dihydroflavonols that go to flavonols or, through reduction and oxidation, to anthocyanidins. Isoflavone synthase uses a P450-catalysed 1,2-aryl shift. Stilbene synthase, working on the same tetraketide, folds the chain so that the terminal carboxyl is lost as CO2 on cyclisation, giving resveratrol.",
+        "advanced": "The flavonoid pathway is a favourite model for genetic and biochemical research, as summarised by Winkel-Shirley, because mutations affecting flower colour provide visible phenotypes, and enzymes assemble on the endoplasmic reticulum in a metabolon that channels intermediates. Type III polyketide synthases are an example of how a single protein fold, with small changes in the active-site cavity, gives chalcone, stilbene, pyrone and acridone products. Prenylation of flavonoids and other phenolics greatly enhances their membrane affinity and often their bioactivity, and microbial prenyltransferases are used for chemoenzymatic synthesis. Health claims about dietary flavonoids and resveratrol should be considered with caution: these compounds are extensively metabolised and have low bioavailability, and much of the antioxidant evidence comes from in vitro systems rather than from clinical trials. Meroterpenoid cannabinoid biosynthesis in Cannabis involves an aromatic prenyltransferase and cyclase, and biotechnological production in yeast illustrates the modularity of the pathway."
+      },
+      "commonMistakes": [
+        "Assuming both aromatic rings of a flavonoid come from the same pathway; ring A is polyketide-derived and ring B is shikimate-derived",
+        "Thinking stilbenes and chalcones are made by different enzyme families; stilbene synthase and chalcone synthase are closely related",
+        "Treating 'flavonoid' as a single compound class rather than a family including flavones, flavonols, flavanones, isoflavones and anthocyanidins",
+        "Using in vitro antioxidant capacity as proof of health benefit in humans"
+      ],
+      "videos": [
+        {
+          "youtubeId": "Zv9VaG0m9aY",
+          "title": "Biogenesis | Biosynthesis of Stilbene, Flavonoid and Isoflavonoid",
+          "channel": "Dr Sharad Pasale",
+          "level": "intermediate",
+          "whyWatch": "A lecture that draws the chalcone synthase reaction and the divergence to stilbenes, flavonoids and isoflavonoids."
+        },
+        {
+          "youtubeId": "TuRZUUDT740",
+          "title": "Biochemical Pathway of Flavonoids Biosynthesis",
+          "channel": "BP International",
+          "level": "beginner",
+          "whyWatch": "A short summary of the flavonoid pathway from phenylalanine to major subclasses."
+        },
+        {
+          "youtubeId": "3VxeqgXa02c",
+          "title": "Plant Pigments",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Shows the colour roles of anthocyanins and carotenoids in leaves and flowers."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1104/pp.126.2.485",
+          "title": "Flavonoid Biosynthesis. A Colorful Model for Genetics, Biochemistry, Cell Biology, and Biotechnology",
+          "authors": "Winkel-Shirley B",
+          "year": 2001,
+          "journal": "Plant Physiology",
+          "level": "intermediate",
+          "whyItMatters": "A classic review of the enzymes, regulation and subcellular organisation of the pathway, showing how a colourful phenotype became a model system for plant metabolism."
+        },
+        {
+          "doi": "10.1093/mp/ssp106",
+          "title": "Phenylpropanoid Biosynthesis",
+          "authors": "Vogt T",
+          "year": 2010,
+          "journal": "Molecular Plant",
+          "level": "intermediate",
+          "whyItMatters": "A concise map of the phenylpropanoid network that feeds flavonoids and stilbenes, which helps you place chalcone synthase within the whole system."
+        }
+      ],
+      "resources": [
+        {
+          "title": "LOTUS natural products database",
+          "provider": "LOTUS Initiative",
+          "type": "database",
+          "url": "https://lotus.naturalproducts.net",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for flavonoids by plant species to see which ones occur in tea, soya or local medicinal plants."
+        },
+        {
+          "title": "KEGG pathway map: Flavonoid biosynthesis",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "From the pathway list open the flavonoid biosynthesis map to see all the enzymes and branches."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov",
+          "free": true,
+          "level": "beginner",
+          "note": "Compare naringenin, quercetin, genistein and resveratrol structures and spot where ring B migrates or the C-ring changes."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which ring of a flavonoid is derived from malonyl-CoA units?",
+          "options": [
+            "Ring A",
+            "Ring B",
+            "The three-carbon bridge",
+            "All rings"
+          ],
+          "answer": 0,
+          "explanation": "Ring A arises by cyclisation of the acetate-derived tetraketide chain; ring B and the C3 bridge come from 4-coumaroyl-CoA from the shikimate-phenylpropanoid route."
+        },
+        {
+          "question": "What is the main difference between stilbene synthase and chalcone synthase products?",
+          "options": [
+            "Stilbenes retain the terminal carboxyl, chalcones lose it",
+            "Stilbene synthesis involves decarboxylation during aldol-type cyclisation, giving a C6-C2-C6 skeleton",
+            "Stilbenes are made from acetate only",
+            "They use different starter units entirely"
+          ],
+          "answer": 1,
+          "explanation": "Both enzymes extend 4-coumaroyl-CoA with three malonyl units, but stilbene synthase folds the chain for aldol cyclisation with loss of CO2, giving resveratrol."
+        },
+        {
+          "question": "A meroterpenoid is best described as:",
+          "options": [
+            "A terpenoid with only five carbons",
+            "A compound partly derived from terpenoid precursors and partly from other pathways",
+            "A polymer of isoprene",
+            "A terpene found only in fungi"
+          ],
+          "answer": 1,
+          "explanation": "Meroterpenoids combine a terpenoid fragment with a non-terpenoid part (for example polyketide or aromatic), usually through a prenylation reaction."
+        }
+      ]
+    },
+    {
+      "id": "carbohydrate-chemistry",
+      "title": "Carbohydrates: monosaccharide structure, reactions and polysaccharides",
+      "hours": 5,
+      "hook": "Glucose looks simple on a food label, but its chemistry hides one of the most elegant puzzles in organic chemistry: a molecule with sixteen possible stereoisomers that spontaneously flips between a straight chain and two ring forms in water. Emil Fischer solved the stereochemistry of the sugars in the 1890s using little more than glassware, phenylhydrazine and logic.",
+      "learningObjectives": [
+        "Classify monosaccharides as aldoses and ketoses and by carbon number, and assign D or L configuration",
+        "Draw and interconvert Fischer, Haworth and chair representations of glucose, mannose, galactose and fructose",
+        "Explain anomers, epimers and mutarotation and the formation of pyranose and furanose rings",
+        "Write the reactions of the anomeric carbon (glycoside formation, oxidation, reduction, osazone formation, chain extension and degradation)",
+        "Describe reactions of the hydroxyl groups (esterification, etherification, acetal protection, periodate oxidation) and the structure and importance of amino sugars",
+        "Explain reducing and non-reducing sugars and describe the glycosidic linkages of common di-, tri- and polysaccharides"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Aldoses and ketoses; D and L",
+          "definition": "Monosaccharides are polyhydroxy aldehydes or ketones; the D or L label refers to the configuration of the highest-numbered stereocentre relative to D-glyceraldehyde, and most natural sugars are D."
+        },
+        {
+          "term": "Epimers and anomers",
+          "definition": "Epimers differ at one stereocentre only, such as glucose and galactose at C-4, whereas anomers are cyclic forms differing at the new stereocentre created at the anomeric carbon (alpha and beta)."
+        },
+        {
+          "term": "Fischer and Haworth representations",
+          "definition": "The Fischer projection shows the open chain with vertical backbone, while the Haworth formula shows the ring in perspective, in which groups on the right of the Fischer projection point down; the chair conformation shows the real shape."
+        },
+        {
+          "term": "Pyranose and furanose rings",
+          "definition": "Intramolecular hemiacetal formation gives six-membered (pyranose) or five-membered (furanose) rings; glucose is mainly pyranose in solution and fructose forms both pyranose and furanose, with the furanose in sucrose."
+        },
+        {
+          "term": "Mutarotation",
+          "definition": "Interconversion of alpha and beta anomers in solution through the open-chain aldehyde, giving an equilibrium mixture (about one third alpha and two thirds beta for glucose) and a change in optical rotation over time."
+        },
+        {
+          "term": "Glycosides",
+          "definition": "Acetals formed when the anomeric hydroxyl is replaced by an OR group under acid catalysis, which are stable to base and do not mutarotate."
+        },
+        {
+          "term": "Oxidation and reduction",
+          "definition": "Mild oxidation (Tollens, Benedict, Fehling, bromine water) converts aldoses to aldonic acids, nitric acid gives aldaric acids, and sodium borohydride reduces sugars to alditols such as sorbitol."
+        },
+        {
+          "term": "Osazone formation and chain modification",
+          "definition": "Phenylhydrazine converts C-1 and C-2 into a bis-phenylhydrazone, so epimers at C-2 and the related ketose give the same osazone; the Kiliani-Fischer synthesis lengthens, and the Ruff or Wohl degradation shortens, the chain by one carbon."
+        },
+        {
+          "term": "Hydroxyl group reactions",
+          "definition": "Hydroxyl groups can be acetylated or methylated, and cis-diols can be protected as isopropylidene or benzylidene acetals; periodate cleaves vicinal diols, and methylation analysis is used to determine linkage positions."
+        },
+        {
+          "term": "Amino sugars",
+          "definition": "Sugars in which a hydroxyl group is replaced by an amine, such as glucosamine, galactosamine, N-acetylmuramic acid and sialic acid, are components of chitin, bacterial cell walls and glycoproteins."
+        },
+        {
+          "term": "Reducing and non-reducing sugars; oligo- and polysaccharides",
+          "definition": "A sugar is reducing if it has a free anomeric carbon that can open to an aldehyde (maltose, lactose), but sucrose, in which both anomeric carbons are involved in the glycosidic bond, is non-reducing; polysaccharides such as starch (amylose, amylopectin), glycogen, cellulose and chitin differ in linkage and branching."
+        }
+      ],
+      "deeper": {
+        "beginner": "Sugars are built from carbon, hydrogen and oxygen, and have many hydroxyl groups, which makes them soluble and easy to link into chains. In water, glucose is mostly in a six-membered ring form but constantly flips through a short-lived open-chain form with an aldehyde. Joining sugars together gives double sugars like sucrose and giant polymers like starch, glycogen and cellulose.",
+        "intermediate": "Fischer's work, using the relationships between sugars (such as the formation of the same osazone from glucose, mannose and fructose), allowed him to deduce the configuration of glucose. A Haworth ring forms when the C-5 hydroxyl of an aldohexose attacks the aldehyde, giving a hemiacetal; the new stereocentre at C-1 is the anomeric carbon, and in the alpha anomer of a D-sugar the anomeric hydroxyl is trans to the CH2OH group. In the chair form of beta-D-glucopyranose all substituents are equatorial, explaining its relative stability and why it is the most abundant sugar. Glycoside formation is an acetal-forming reaction with an alcohol under acid, and the glycosidic bond is stable to base but hydrolysed by acid; the type of glycosidic linkage determines properties: starch (alpha-1,4, helical) is digestible, cellulose (beta-1,4, extended, hydrogen-bonded) forms fibres. Sucrose is non-reducing because the glucose C-1 and fructose C-2 are both tied up in the bond.",
+        "advanced": "Anomeric effects favour axial orientation of electronegative substituents at the anomeric carbon, which affects equilibrium ratios and the stereochemistry of glycosylation; the Koenigs-Knorr reaction and its modern descendants exploit neighbouring group participation by a C-2 ester to give 1,2-trans glycosides. Selective protection and deprotection strategies, including regioselective acylation and use of temporary and permanent protecting groups, underlie oligosaccharide synthesis. Methylation analysis (permethylation, hydrolysis, reduction and acetylation followed by GC-MS) is a classical method for determining linkages in polysaccharides. Beyond energy storage and structural roles, glycans in glycoproteins and glycolipids mediate recognition, as outlined in the Varki review, and their structural complexity far exceeds that of nucleic acids or proteins for a given size because of branching and anomeric variety. Amino sugars such as N-acetylmuramic acid form the peptidoglycan backbone targeted by penicillin-class antibiotics, and chitin from fungi and arthropods is a widespread N-acetylglucosamine polymer."
+      },
+      "commonMistakes": [
+        "Describing alpha and beta anomers as enantiomers; they are diastereomers (anomers) and interconvert by mutarotation",
+        "Assigning D or L based on the direction of optical rotation; D and L refer to configuration at the reference stereocentre and not the sign of rotation",
+        "Believing sucrose is a reducing sugar because it contains glucose and fructose; both anomeric carbons are used in the glycosidic bond",
+        "Drawing Haworth formulas with groups on the wrong faces; remember that substituents on the right in the Fischer projection point down in the Haworth ring for D-sugars"
+      ],
+      "videos": [
+        {
+          "youtubeId": "wFYsufJ9XMM",
+          "title": "Carbohydrates Part 1: Simple Sugars and Fischer Projections",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Starts from the basics of aldoses, ketoses and the Fischer projection, giving a quick base for later topics."
+        },
+        {
+          "youtubeId": "4ztQjBGbecw",
+          "title": "Carbohydrates - Cyclic structures and anomers | Chemical processes | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Explains hemiacetal ring formation, alpha and beta anomers and mutarotation."
+        },
+        {
+          "youtubeId": "7FR2_VjwKYk",
+          "title": "Carbohydrates - Haworth & Fischer Projections With Chair Conformations",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "intermediate",
+          "whyWatch": "Works examples of converting between Fischer, Haworth and chair forms, the skill you need for exams."
+        },
+        {
+          "youtubeId": "eMD-gGsuGRc",
+          "title": "Disaccharides - Sucrose, Maltose, Lactose - Carbohydrates",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "beginner",
+          "whyWatch": "Shows the glycosidic linkages in the common disaccharides and which are reducing."
+        },
+        {
+          "youtubeId": "FILqt0nSiRo",
+          "title": "Carbohydrates Part 2: Polysaccharides",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A summary of starch, glycogen and cellulose and how linkage determines their properties."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/glycob/cww086",
+          "title": "Biological roles of glycans",
+          "authors": "Varki A",
+          "year": 2017,
+          "journal": "Glycobiology",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5884436/",
+          "whyItMatters": "A survey of what sugars do in living systems beyond energy storage, from structural support to recognition and signalling, which shows why carbohydrate chemistry matters to biology.",
+          "readingQuestions": [
+            "Which roles of glycans depend directly on their stereochemistry and linkage type?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Essentials of Glycobiology, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/n/glyco4/",
+          "free": true,
+          "level": "advanced",
+          "note": "A free, authoritative text on carbohydrate structure, nomenclature and biology; read the early chapters on monosaccharide structure and glycan classes."
+        },
+        {
+          "title": "Organic Chemistry bookshelf (carbohydrates chapters)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on monosaccharide structure and reactions, with worked mechanisms of glycoside formation and mutarotation."
+        },
+        {
+          "title": "MIT 5.07SC Biological Chemistry I",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "Lecture materials that include carbohydrates and their roles as part of a biological chemistry course."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up sugars by name to see their 2D and 3D structures, useful when learning Haworth and chair conversions."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the relationship between D-glucose and D-galactose?",
+          "options": [
+            "Enantiomers",
+            "C-4 epimers",
+            "Anomers",
+            "Structural isomers with different functional groups"
+          ],
+          "answer": 1,
+          "explanation": "D-Glucose and D-galactose differ only in the configuration at C-4, so they are epimers; anomers differ only at the anomeric carbon."
+        },
+        {
+          "question": "Why is sucrose a non-reducing sugar?",
+          "options": [
+            "It contains no aldehyde or ketone in the structure",
+            "Both anomeric carbons are tied up in the glycosidic bond",
+            "It is a polysaccharide",
+            "It has a beta-1,4 linkage"
+          ],
+          "answer": 1,
+          "explanation": "In sucrose the glycosidic bond links C-1 of glucose to C-2 of fructose, so neither ring can open to give a free aldehyde or ketone."
+        },
+        {
+          "question": "Mutarotation of glucose in water involves:",
+          "options": [
+            "Racemisation at C-5",
+            "Ring opening to the aldehyde and re-closure to either anomer",
+            "Oxidation to gluconic acid",
+            "Epimerisation at C-2"
+          ],
+          "answer": 1,
+          "explanation": "The hemiacetal ring opens reversibly to the free aldehyde, which recloses to alpha or beta anomer until equilibrium is reached; the configuration at other carbons does not change."
+        },
+        {
+          "question": "Which structural feature explains why cellulose forms strong fibres, whereas amylose does not?",
+          "options": [
+            "Cellulose has beta-1,4 linkages giving extended chains with extensive hydrogen bonding",
+            "Cellulose is branched",
+            "Cellulose contains alpha-1,6 branch points",
+            "Cellulose contains amino sugars"
+          ],
+          "answer": 0,
+          "explanation": "The beta-1,4 linkage allows each glucose to be rotated 180 degrees relative to the next, giving straight chains that pack together by hydrogen bonds, while the alpha-1,4 linkage of amylose causes a helical shape."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "s-SoJpQB4mA",
+      "title": "Natural Products and the Future of Drug Discovery",
+      "channel": "Oxford Chemistry",
+      "level": "intermediate",
+      "whyWatch": "A talk about why natural products remain central to drug discovery, which gives the whole course context."
+    },
+    {
+      "youtubeId": "PoFDK7Kwx1o",
+      "title": "1. Introduction to Biological Chemistry II",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "The opening lecture of MIT's Biological Chemistry II, the course whose later lectures on polyketide synthases and cholesterol biosynthesis are linked from this course, so it shows how the topic is framed at research level."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Medicinal Natural Products: A Biosynthetic Approach (Dewick), 3rd edition",
+      "provider": "Wiley",
+      "type": "textbook",
+      "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470742761",
+      "free": false,
+      "level": "intermediate",
+      "note": "The standard text for this kind of course and the reading recommended in the published course outline; use your library copy."
+    },
+    {
+      "title": "Essentials of Glycobiology, 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/n/glyco4/",
+      "free": true,
+      "level": "advanced",
+      "note": "A free online text on carbohydrate structure and function that complements the carbohydrate unit."
+    },
+    {
+      "title": "Organic Chemistry bookshelf",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free organic chemistry texts to revise reaction mechanisms used in every unit."
+    },
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free reference for lipid, terpenoid and sterol biosynthesis and for carbohydrate structure."
+    }
+  ]
+}

@@ -1,0 +1,1573 @@
+{
+  "code": "MB 3022",
+  "title": "Gene Expression and Regulation",
+  "level": 3,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Every cell in your body carries the same genome, yet a neuron is not a liver cell. This course is about the dials that make the difference.",
+  "overview": "This course follows information from DNA to protein and asks, at every step, who decides how much. We start with the logic of regulation in bacteria (RNA polymerase, sigma factors, operons, attenuation and the lambda switch), then move to the far richer machinery of eukaryotes: RNA polymerase II, enhancers and transcription factors, chromatin and epigenetic marks, RNA processing and splicing, microRNAs and RNA decay, translational control and regulated protein degradation. The final unit connects the machinery to hormones, development and disease. The units follow the standard content of a BSc Honours gene-expression course.",
+  "whyItMatters": "Almost every question in modern biology and medicine, from how a stem cell becomes a neuron to why a tumour grows, is at heart a question about which genes are on, how strongly and for how long. Drugs, diagnostics, RNA vaccines and gene therapies are all built on this knowledge.",
+  "prerequisites": [
+    "FD 2101",
+    "FD 2102"
+  ],
+  "careerLinks": [
+    "Molecular biology and genomics research",
+    "Biopharmaceutical and RNA therapeutics development",
+    "Cancer biology and diagnostics",
+    "Plant and microbial biotechnology",
+    "Bioinformatics and functional genomics"
+  ],
+  "studyTips": [
+    "Draw each regulatory system as a wiring diagram (input, sensor, switch, output) before memorising names; most exam questions are really 'what happens if this wire is cut'.",
+    "For every factor you meet, ask three things: what does it bind, what does it recruit, and what does that change (transcription, splicing, stability, translation)?",
+    "Learn the classic experiments as logic puzzles: mutant phenotype in, inference about mechanism out. The lac operon mutants are the best practice you will ever get.",
+    "Keep a one-page comparison table of bacteria versus eukaryotes for each stage (promoter, polymerase, processing, coupling of transcription and translation)."
+  ],
+  "units": [
+    {
+      "id": "levels-of-control",
+      "title": "From gene to function: the levels of control",
+      "hours": 4,
+      "hook": "Your liver cell and your neuron share one genome, one set of instructions, and yet they could hardly look or behave more differently. The secret is not which genes you own but which ones you read, and every step between DNA and a working protein is a place where the reading can be turned up, down or off.",
+      "learningObjectives": [
+        "Describe the flow of genetic information and name the checkpoints at which expression can be regulated",
+        "Distinguish constitutive (housekeeping) from regulated genes and give an example of each",
+        "Explain why transcription initiation is the most common point of control",
+        "Compare the organisation of gene expression in bacteria and eukaryotes",
+        "Describe the main experimental readouts of expression (RNA-seq, qPCR, reporter assays, western blots)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Central dogma",
+          "definition": "The principle that sequence information flows from DNA to RNA to protein; later additions such as reverse transcription do not overturn it, they add routes."
+        },
+        {
+          "term": "Housekeeping gene",
+          "definition": "A gene needed in essentially all cells (for example those for ribosomal proteins or glycolytic enzymes) that is expressed at a fairly steady level."
+        },
+        {
+          "term": "Regulated gene",
+          "definition": "A gene whose product level changes with cell type, developmental stage or environmental signal."
+        },
+        {
+          "term": "Cis-regulatory element",
+          "definition": "A DNA sequence on the same molecule as the gene it controls (promoter, operator, enhancer) where regulatory proteins bind."
+        },
+        {
+          "term": "Trans-acting factor",
+          "definition": "A diffusible molecule, usually a protein or RNA, encoded elsewhere that acts on cis elements; mutations in the two classes behave differently in genetic tests."
+        },
+        {
+          "term": "Transcription-translation coupling",
+          "definition": "In bacteria ribosomes start translating an mRNA while it is still being made; in eukaryotes the nuclear envelope separates the two processes and adds processing and export steps."
+        },
+        {
+          "term": "Steady-state level",
+          "definition": "The amount of an mRNA or protein is the balance between its synthesis rate and its degradation rate, so changing either one changes the level."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of the genome as a huge cookbook that every cell owns a copy of. A cell never cooks every recipe at once; it picks the ones it needs, in the amount it needs. Gene regulation is the system of bookmarks, sticky notes and kitchen timers that decides which recipes get cooked. Control is possible at many stages: whether a gene is copied into RNA, how that RNA is trimmed and edited, how long it survives, how often it is read by ribosomes and how long the finished protein lasts. The analogy breaks down because a cookbook is passive, whereas the 'sticky notes' here are themselves made from genes and so regulate each other.",
+        "intermediate": "Because transcription is the first and most economical step, many genes are controlled mainly there: making an RNA that is then thrown away costs less if it is never made. Even so, mRNA level alone does not predict protein level well, since translation rate and protein half-life differ greatly between genes. Bacteria rely on short-lived mRNAs and compact operons for fast responses, whereas eukaryotes add chromatin, enhancers, splicing and nuclear export, giving more layers and more combinatorial possibilities. Experimentally, expression is measured at the RNA level by qPCR and RNA-seq, at the transcription level by reporter genes such as luciferase or GFP fused to a promoter, and at the protein level by western blots or mass spectrometry.",
+        "advanced": "Expression is a kinetic system. If mRNA is made at rate k_s and degraded with first-order constant k_d, the steady-state level is k_s/k_d and the time to reach a new steady state after a change depends on k_d alone, which is why fast-responding genes (immediate early genes, stress genes) typically have unstable mRNAs. Transcription in single cells occurs in stochastic bursts, so a population mean hides cell-to-cell noise that regulatory circuits can either suppress (negative autoregulation) or exploit (bistable switches). Genome-wide studies show that mRNA abundance explains only part of the variance in protein abundance, implicating translational efficiency and protein turnover as independent controls; any claim about regulation therefore needs measurements at the level you are claiming."
+      },
+      "commonMistakes": [
+        "Assuming that a higher mRNA level always means more protein; translation and degradation can decouple them.",
+        "Treating regulation as only 'on/off'; most genes are tuned over a continuous range.",
+        "Confusing cis and trans: a mutation in a promoter is cis to its own gene only, whereas a mutation in a repressor protein affects every copy of its targets."
+      ],
+      "animation": "central-dogma",
+      "videos": [
+        {
+          "youtubeId": "gG7uCskUOrA",
+          "title": "From DNA to protein - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A short animation of transcription and translation that fixes the vocabulary you need before looking at regulation."
+        },
+        {
+          "youtubeId": "ebIpkw3XapE",
+          "title": "Gene Expression and Regulation",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly overview of why cells turn genes on and off and where in the pathway this can happen."
+        },
+        {
+          "youtubeId": "AJsEF1aViDU",
+          "title": "Introduction to gene regulation - Robert Tjian (Berkeley/HHMI)",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A working researcher gives the big-picture logic of gene regulation in under three minutes."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2013.02.014",
+          "title": "Transcriptional Regulation and Its Misregulation in Disease",
+          "authors": "Lee TI, Young RA",
+          "year": 2013,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A compact review that ties together promoters, enhancers, chromatin and disease; a good map of the whole course in one article.",
+          "readingQuestions": [
+            "Which classes of regulatory proteins does the review identify, and how is each one misregulated in disease?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Gene regulation (Khan Academy)",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/biology/gene-regulation",
+          "free": true,
+          "level": "beginner",
+          "note": "Short, structured lessons on bacterial and eukaryotic regulation that make a good first pass before lectures."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition (NCBI Bookshelf)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The full text of a classic cell biology textbook, free to search; use it for the 'Control of Gene Expression' chapter."
+        },
+        {
+          "title": "yourgenome: DNA, genes and chromosomes",
+          "provider": "Wellcome Genome Campus",
+          "type": "tutorial",
+          "url": "https://www.yourgenome.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Clear explainers and animations on genes, genomes and gene expression for a quick refresher."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A bacterial gene is transcribed at twice the normal rate but its protein level rises only slightly. Which explanation is most plausible?",
+          "options": [
+            "The protein is rapidly degraded or poorly translated",
+            "The gene has a new promoter",
+            "DNA polymerase is inhibited",
+            "The genetic code has changed"
+          ],
+          "answer": 0,
+          "explanation": "Protein level depends on translation efficiency and protein half-life as well as on transcript level, so a faster transcription rate need not raise the protein proportionally."
+        },
+        {
+          "question": "A mutation in a promoter that stops transcription of one allele but not the other allele in the same cell is acting:",
+          "options": [
+            "In cis",
+            "In trans",
+            "As a dominant negative",
+            "As a nonsense mutation"
+          ],
+          "answer": 0,
+          "explanation": "A cis-acting element only affects the DNA molecule it sits on; a defect in a diffusible factor would affect both alleles."
+        },
+        {
+          "question": "At steady state, the mRNA level of a gene is set by:",
+          "options": [
+            "Synthesis rate divided by degradation rate constant",
+            "Only the strength of the promoter",
+            "Only the ribosome density",
+            "The length of the poly(A) tail alone"
+          ],
+          "answer": 0,
+          "explanation": "Steady-state level equals the production rate divided by the first-order decay constant, so both transcription and mRNA stability contribute."
+        }
+      ]
+    },
+    {
+      "id": "bacterial-transcription",
+      "title": "Bacterial transcription: RNA polymerase, sigma factors and termination",
+      "hours": 5,
+      "hook": "A single bacterial RNA polymerase must find the right few hundred base pairs among millions, start at exactly the correct nucleotide, and stop where it should. It does this with a little help from a replaceable subunit, the sigma factor, which works like a changeable key that decides which doors the enzyme can open.",
+      "learningObjectives": [
+        "Describe the subunit composition of bacterial RNA polymerase core and holoenzyme",
+        "Explain how sigma factor recognises the -10 and -35 promoter elements",
+        "Outline initiation, open complex formation, abortive initiation, promoter escape and elongation",
+        "Compare intrinsic (hairpin) and Rho-dependent termination",
+        "Explain how alternative sigma factors reprogram transcription during stress"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Core enzyme",
+          "definition": "RNA polymerase with subunits alpha (two copies), beta, beta-prime and omega; it can synthesise RNA but cannot recognise promoters accurately."
+        },
+        {
+          "term": "Holoenzyme",
+          "definition": "Core enzyme plus a sigma factor; the sigma subunit confers promoter specificity."
+        },
+        {
+          "term": "Promoter (-10 and -35 elements)",
+          "definition": "Sequences upstream of the start site; in E. coli the consensus hexamers are about TTGACA at -35 and TATAAT at -10, and spacing and closeness to consensus set promoter strength."
+        },
+        {
+          "term": "Open complex",
+          "definition": "The state in which about a turn of DNA around the start site has been melted so the template strand can enter the active site."
+        },
+        {
+          "term": "Abortive initiation",
+          "definition": "Repeated synthesis and release of short RNAs of a few nucleotides before the polymerase escapes the promoter."
+        },
+        {
+          "term": "Intrinsic terminator",
+          "definition": "A GC-rich hairpin followed by a run of uridines in the RNA; the hairpin and weak rU-dA pairing destabilise the elongation complex."
+        },
+        {
+          "term": "Rho factor",
+          "definition": "A hexameric RNA helicase/translocase that binds C-rich rut sites on nascent RNA and chases the polymerase to dislodge it."
+        },
+        {
+          "term": "Alternative sigma factor",
+          "definition": "A sigma subunit that directs core enzyme to a different promoter class, for example sigma-32 for heat shock genes and sigma-S for stationary phase."
+        }
+      ],
+      "deeper": {
+        "beginner": "RNA polymerase is the machine that copies a gene into RNA. On its own it slides along DNA without knowing where genes start. Binding of a sigma factor turns it into a promoter-seeking version: sigma recognises two short landmarks upstream of a gene, the polymerase unwinds a small bubble of DNA and begins to build RNA. Once it has made a short stretch, sigma usually lets go and the enzyme moves on. At the end of a gene, either the RNA folds into a hairpin that shakes the polymerase off or a protein called Rho catches up and pulls it off. The 'changeable key' picture is useful but imperfect, since sigma is not only a key; it also helps open the DNA.",
+        "intermediate": "Promoter recognition proceeds from a closed complex (DNA still double-stranded) through isomerisation to an open complex; the rate-limiting steps differ between promoters and are what regulators exploit. During initial transcription the polymerase stays anchored at the promoter and scrunches DNA, which builds up the energy needed to break contacts and escape; failures give abortive products. Sigma-70 family members share conserved regions that contact the -10 and -35 elements, and the extended -10 and UP elements (bound by the alpha C-terminal domains) tune strength. Sigma-54 is exceptional: its holoenzyme forms a stable closed complex and needs an ATP-driven activator bound at an enhancer-like site. In termination, intrinsic terminators need no protein, whereas Rho depends on a C-rich, unstructured rut site and on a stretch of untranslated RNA, which is why in bacteria it often acts when translation has stopped early.",
+        "advanced": "Single-molecule and cryo-EM work show that open-complex formation involves large conformational changes, including closing of the polymerase clamp around the downstream DNA, and that pausing during elongation (for example at consensus pause sites, with hairpin-stabilised or backtracked states) is an important regulatory node: backtracked complexes are rescued by GreA/GreB cleaving the RNA 3' end. Pausing is also coupled to translation, since a trailing ribosome can push the polymerase forward, and NusA, NusG and Rho together coordinate speed and termination. Antitermination proteins such as phage lambda N and Q modify the elongation complex so that it reads through terminators, showing that termination, like initiation, is a regulated step. Be careful with numbers: elongation rates depend on temperature and sequence, and are typically quoted as tens of nucleotides per second in E. coli."
+      },
+      "commonMistakes": [
+        "Saying that sigma factor stays bound throughout transcription; it is usually released during or soon after promoter escape, although its release is not absolute.",
+        "Mixing up the positions: -35 is further upstream than -10, and both are upstream of the +1 start.",
+        "Describing Rho-dependent and intrinsic termination as requiring the same signals; only the latter needs the hairpin and U-run."
+      ],
+      "videos": [
+        {
+          "youtubeId": "JebsvaBCpQo",
+          "title": "Prokaryotic Transcription INITIATION - How do sigma factor & RNA polymerase initiate transcription?",
+          "channel": "theCrux",
+          "level": "intermediate",
+          "whyWatch": "Walks through how sigma finds the promoter, opens the DNA and releases, with stepwise diagrams."
+        },
+        {
+          "youtubeId": "yiii0Pef_6k",
+          "title": "Prokaryotic Transcription TERMINATION - Rho-dependent and Rho-independent termination",
+          "channel": "theCrux",
+          "level": "intermediate",
+          "whyWatch": "Compares the two termination routes side by side, including the hairpin and the Rho helicase."
+        },
+        {
+          "youtubeId": "nJK-l7ByQAs",
+          "title": "Transcription in prokaryotes",
+          "channel": "Quick Biochemistry Basics",
+          "level": "beginner",
+          "whyWatch": "A brisk summary of the whole bacterial transcription cycle, good for revision."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/s0092-8674(00)81515-9",
+          "title": "Crystal Structure of Thermus aquaticus Core RNA Polymerase at 3.3 Å Resolution",
+          "authors": "Zhang G, Campbell EA, Minakhin L, Richter C, Severinov K, Darst SA",
+          "year": 1999,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "The first high-resolution view of a bacterial RNA polymerase, showing the crab-claw shape and the channel that holds DNA; every later mechanistic model builds on it.",
+          "readingQuestions": [
+            "Which features of the structure suggest where DNA, RNA and nucleotides enter and leave the enzyme?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Molecular Cell Biology (Lodish et al.), 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free full text; the chapters on transcription initiation and its control give a standard treatment of bacterial promoters and sigma factors."
+        },
+        {
+          "title": "PDB-101: Molecule of the Month - RNA Polymerase",
+          "provider": "RCSB PDB-101",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/motm/40",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable illustrated story of the polymerase structure with links to interactive 3D views."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which subunit of bacterial RNA polymerase confers promoter specificity?",
+          "options": [
+            "Sigma",
+            "Alpha",
+            "Omega",
+            "Beta-prime"
+          ],
+          "answer": 0,
+          "explanation": "Core enzyme is catalytically active but non-specific; sigma binds the -10 and -35 elements and positions the holoenzyme at the promoter."
+        },
+        {
+          "question": "An intrinsic bacterial terminator typically consists of:",
+          "options": [
+            "A GC-rich RNA hairpin followed by a run of U residues",
+            "A C-rich rut site only",
+            "A TATA box followed by a poly(A) signal",
+            "An AU-rich element in the 3' UTR"
+          ],
+          "answer": 0,
+          "explanation": "The hairpin disrupts the elongation complex while the weak rU-dA base pairs of the following U run let the transcript dissociate."
+        },
+        {
+          "question": "Why do heat shock genes remain transcribed when bacteria are heated?",
+          "options": [
+            "Sigma-32 directs polymerase to their promoters",
+            "Rho factor is activated",
+            "The -10 box is deleted",
+            "Ribosomes bind the DNA directly"
+          ],
+          "answer": 0,
+          "explanation": "Heat raises the level and activity of the alternative sigma-32, which recognises heat shock promoters that sigma-70 does not."
+        }
+      ]
+    },
+    {
+      "id": "operons-and-circuits",
+      "title": "Operons and bacterial regulatory circuits",
+      "hours": 6,
+      "hook": "In 1961 two French scientists worked out how a bacterium decides to digest milk sugar, using nothing more than clever mutants and logic, and in doing so described the first gene regulatory circuit. The lac operon is still the best way to learn how to think about genes as switches.",
+      "learningObjectives": [
+        "Explain the structure and negative and positive control of the lac operon",
+        "Predict the phenotype of lacI, lacO, lacZ and CAP mutants and merodiploids",
+        "Explain catabolite repression and diauxic growth",
+        "Describe how the trp operon uses a repressor and attenuation together",
+        "Describe the lambda lysis-lysogeny decision as a genetic switch",
+        "Name regulatory mechanisms that act at the RNA level in bacteria, such as riboswitches"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Operon",
+          "definition": "A cluster of genes transcribed together from one promoter as a polycistronic mRNA and controlled as a unit."
+        },
+        {
+          "term": "Repressor and operator",
+          "definition": "A repressor protein binds an operator DNA sequence and blocks transcription; in lac the repressor is LacI and the main operator overlaps the promoter."
+        },
+        {
+          "term": "Inducer",
+          "definition": "A small molecule that inactivates a repressor; allolactose is the natural lac inducer and IPTG is a non-metabolisable laboratory mimic."
+        },
+        {
+          "term": "Catabolite activator protein (CAP)",
+          "definition": "A cAMP-binding activator that helps polymerase at the lac promoter, so that full expression needs both lactose present and glucose low."
+        },
+        {
+          "term": "Constitutive mutant",
+          "definition": "A mutant that expresses the operon regardless of inducer, for example lacI loss-of-function or lacOc operator mutations."
+        },
+        {
+          "term": "Corepressor",
+          "definition": "A small molecule that activates a repressor; in the trp operon tryptophan binds TrpR and strengthens its operator binding."
+        },
+        {
+          "term": "Attenuation",
+          "definition": "Regulation by premature termination in a leader region, governed by whether a ribosome translating a short leader peptide stalls at tryptophan codons."
+        },
+        {
+          "term": "Lambda genetic switch",
+          "definition": "A bistable circuit in which CI repressor maintains lysogeny and Cro promotes the lytic cycle, with each one repressing the other."
+        },
+        {
+          "term": "Riboswitch",
+          "definition": "A structured segment of mRNA that binds a metabolite directly and changes fold to switch transcription or translation."
+        }
+      ],
+      "deeper": {
+        "beginner": "Bacteria group genes that serve one purpose into a single unit called an operon, so they can all be switched on together. In the lac operon, the genes for digesting lactose are normally blocked by a repressor protein sitting on the DNA. When lactose (strictly, a derivative called allolactose) is around, it grabs the repressor and pulls it off, and the genes are read. But the cell also checks for glucose, a better food, and if glucose is present it keeps the operon quiet anyway. So the cell only makes lactose-digesting enzymes when lactose is there and glucose is not. The 'light switch' picture works for the repressor, but the CAP part is more like a dimmer that makes the lights brighter.",
+        "intermediate": "Classic genetics decoded the circuit. lacI- mutants are constitutive and recessive in a merodiploid because the wild-type repressor from the other copy acts in trans; lacOc mutants are constitutive but cis-dominant because they only affect the operator on their own DNA molecule; lacIs (super-repressor) mutants cannot bind inducer and are dominant because they bind operators on both copies. Positive control adds a second layer: when glucose is low, cAMP rises, binds CAP and the CAP-cAMP complex recruits polymerase, which is why a lacI- strain still shows only low expression in glucose. In the trp operon, repression alone gives about a 70-fold range, and attenuation adds further tuning because the leader region can fold into an antiterminator (2-3) or a terminator (3-4) hairpin depending on where the ribosome is stalled. The lambda switch shows cooperative binding of CI dimers to adjacent operators and a decision triggered by DNA damage via RecA-stimulated CI cleavage.",
+        "advanced": "The lac circuit also illustrates positive feedback: lactose uptake via the LacY permease is itself induced, which produces all-or-none induction in individual cells at intermediate IPTG concentrations (bistability), as shown in single-cell studies. Quantitative models treat repressor binding as a thermodynamic problem in which DNA looping between O1 and the auxiliary operators O2 or O3 strengthens repression, a fact that explains the multiple operators found in the native system. Attenuation depends on tight coupling of transcription and translation, which only exists in bacteria, so it has no eukaryotic equivalent although functionally similar logic appears in riboswitches that bind ligands cotranscriptionally and set a kinetic competition between folding and polymerase elongation. For lambda, the stability of lysogeny (flipping spontaneously only about once in many generations) arises from cooperativity and autoregulation of CI at PRM, and it shows how a genetic circuit stores a heritable cellular state without any change in DNA sequence."
+      },
+      "commonMistakes": [
+        "Saying that lactose binds the repressor; the actual inducer is allolactose, made from lactose by beta-galactosidase (IPTG is a laboratory gratuitous inducer).",
+        "Forgetting that glucose repression acts through low cAMP and CAP, not through the repressor.",
+        "Predicting lacOc as recessive; it is constitutive only for genes on the same DNA molecule (cis-dominant).",
+        "Applying attenuation to eukaryotes; it needs transcription and translation to be physically coupled."
+      ],
+      "animation": "lac-operon",
+      "videos": [
+        {
+          "youtubeId": "LuOaEe89_HE",
+          "title": "Lac operon",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A clear step-by-step explanation of repressor, inducer and the operon structure."
+        },
+        {
+          "youtubeId": "2TL8rY9Rc_A",
+          "title": "Lac operon | MIT 7.01SC Fundamentals of Biology",
+          "channel": "MIT OpenCourseWare",
+          "level": "intermediate",
+          "whyWatch": "A lecturer's treatment that includes the positive control by CAP."
+        },
+        {
+          "youtubeId": "D91Ygxo3KFI",
+          "title": "Attenuation in trp Operon Animation",
+          "channel": "Rethink Biology",
+          "level": "intermediate",
+          "whyWatch": "An animation of the leader peptide and the alternative hairpins in the trp operon."
+        },
+        {
+          "youtubeId": "qyzlGVPAUj8",
+          "title": "Lambda Phage part 2: Lytic vs. Lysogenic decision",
+          "channel": "Dr. Ajna Rivera",
+          "level": "intermediate",
+          "whyWatch": "Shows how CI and Cro compete and how the lysis-lysogeny decision is made."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/s0022-2836(61)80072-7",
+          "title": "Genetic regulatory mechanisms in the synthesis of proteins",
+          "authors": "Jacob F, Monod J",
+          "year": 1961,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "The paper that proposed operons, repressors and messenger RNA in one argument; reading the original reasoning shows how much can be deduced from mutants alone.",
+          "readingQuestions": [
+            "Which mutant types led the authors to conclude that the operator acts only in cis?",
+            "What predictions did they make about a short-lived messenger?"
+          ]
+        },
+        {
+          "doi": "10.1038/289751a0",
+          "title": "Attenuation in the control of expression of bacterial operons",
+          "authors": "Yanofsky C",
+          "year": 1981,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Describes how a ribosome translating a short leader peptide can decide whether transcription continues, a mechanism with no eukaryotic parallel that is still a model for coupling translation to transcription."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Operons and gene regulation in bacteria (Khan Academy)",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/biology/gene-regulation/gene-regulation-in-bacteria/a/the-lac-operon",
+          "free": true,
+          "level": "beginner",
+          "note": "A written walk-through of the lac operon with diagrams for each state, ideal for building your own truth table of mutants."
+        },
+        {
+          "title": "MIT OpenCourseWare 7.01SC Fundamentals of Biology",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Full lecture videos, notes and problem sets with worked answers on gene regulation."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A lacI- strain is grown with no lactose. What do you expect?",
+          "options": [
+            "lac genes are expressed constitutively",
+            "lac genes are never expressed",
+            "Only beta-galactosidase is expressed",
+            "CAP is inactive so nothing happens"
+          ],
+          "answer": 0,
+          "explanation": "Without functional repressor the operator is never blocked, so the operon is transcribed regardless of inducer (subject to modulation by CAP-cAMP)."
+        },
+        {
+          "question": "A partial diploid carries lacOc lacZ+ on one DNA molecule and lacO+ lacZ- on the other, with no inducer. Which statement is correct?",
+          "options": [
+            "Functional beta-galactosidase is made",
+            "No beta-galactosidase is made",
+            "The lacOc effect is trans-dominant",
+            "Both copies of lacZ are transcribed"
+          ],
+          "answer": 0,
+          "explanation": "lacOc is cis-dominant: it allows constitutive transcription of the lacZ+ gene on the same molecule, so active enzyme is produced even without inducer."
+        },
+        {
+          "question": "In the trp operon, attenuation allows transcription to continue when:",
+          "options": [
+            "Tryptophan is scarce so the ribosome stalls at the leader Trp codons",
+            "Tryptophan is abundant",
+            "Rho factor binds the leader",
+            "TrpR is activated by tryptophan"
+          ],
+          "answer": 0,
+          "explanation": "A stalled ribosome lets the 2-3 antiterminator hairpin form instead of the 3-4 terminator, so polymerase reads through into the structural genes."
+        },
+        {
+          "question": "Which condition gives maximal lac operon expression?",
+          "options": [
+            "Lactose present and glucose absent",
+            "Lactose absent and glucose present",
+            "Both lactose and glucose present",
+            "Neither lactose nor glucose present"
+          ],
+          "answer": 0,
+          "explanation": "The repressor is inactivated by allolactose and, with glucose low, cAMP-CAP activates the promoter."
+        }
+      ]
+    },
+    {
+      "id": "eukaryotic-transcription",
+      "title": "Eukaryotic transcription: RNA polymerase II, promoters and enhancers",
+      "hours": 6,
+      "hook": "A human gene may be controlled from a switch sitting tens of thousands of base pairs away, with the DNA looping so the two touch. Eukaryotic cells replace the simple on/off logic of bacteria with committees of proteins that vote on every gene.",
+      "learningObjectives": [
+        "Distinguish the roles of RNA polymerases I, II and III",
+        "Describe the core promoter elements and the order of assembly of the pre-initiation complex",
+        "Explain the role of the CTD of RNA polymerase II and its phosphorylation cycle",
+        "Describe the structure of common DNA-binding domains and activation domains",
+        "Explain how enhancers, Mediator and co-activators communicate with promoters",
+        "Explain combinatorial control and give an experimental method to study it"
+      ],
+      "keyConcepts": [
+        {
+          "term": "RNA polymerases I, II and III",
+          "definition": "Three nuclear polymerases: Pol I makes most rRNA, Pol II makes mRNA and many non-coding RNAs, Pol III makes tRNAs, 5S rRNA and other small RNAs."
+        },
+        {
+          "term": "Core promoter",
+          "definition": "The minimal DNA region (about -40 to +40) where the pre-initiation complex assembles; it may contain a TATA box, initiator (Inr) and downstream elements, although many promoters lack a TATA box."
+        },
+        {
+          "term": "General transcription factors",
+          "definition": "TFIID (with TBP), TFIIA, TFIIB, TFIIF, TFIIE and TFIIH, which together with Pol II form the pre-initiation complex at all Pol II promoters."
+        },
+        {
+          "term": "CTD of Pol II",
+          "definition": "The C-terminal repeat domain of the largest subunit, with heptad repeats that are phosphorylated in a pattern that recruits different processing factors through the transcription cycle."
+        },
+        {
+          "term": "Enhancer",
+          "definition": "A regulatory DNA element that can act at a distance and in either orientation, binding multiple transcription factors and increasing transcription of target genes."
+        },
+        {
+          "term": "Mediator",
+          "definition": "A large multi-subunit coactivator complex that bridges gene-specific transcription factors and Pol II."
+        },
+        {
+          "term": "DNA-binding domain",
+          "definition": "The part of a transcription factor that reads DNA sequence, for example zinc finger, helix-turn-helix, homeodomain, bZIP or bHLH."
+        },
+        {
+          "term": "Activation domain",
+          "definition": "A separable region that recruits coactivators or chromatin-modifying enzymes rather than binding DNA."
+        },
+        {
+          "term": "Combinatorial control",
+          "definition": "The principle that gene expression patterns come from the particular set of transcription factors bound, so a few factors can specify many patterns."
+        }
+      ],
+      "deeper": {
+        "beginner": "In eukaryotes the machinery that copies a gene into mRNA is built on the spot at each gene, rather than being pre-assembled. A set of helper proteins called general transcription factors finds the start of the gene and settles the polymerase on it. On top of this basic machinery sit regulatory proteins that bind specific DNA sequences, sometimes far away, called enhancers. These proteins act like voters: some encourage the polymerase to start, others discourage it, and the gene's activity reflects the combined decision. Think of the enhancer as a remote control. The analogy breaks because the 'remote' physically touches the gene by looping the DNA.",
+        "intermediate": "Assembly of the pre-initiation complex typically starts when TFIID, via TBP, recognises the promoter, followed by TFIIA and TFIIB, then Pol II with TFIIF, and finally TFIIE and TFIIH. TFIIH uses its helicase activity to open the promoter and its kinase activity (CDK7) to phosphorylate serine 5 of the CTD, which is associated with promoter-proximal pausing and capping; later, P-TEFb (CDK9) phosphorylates serine 2 to release pausing and support elongation and processing. Specific transcription factors rarely contact Pol II directly; they recruit coactivators such as histone acetyltransferases (p300/CBP), chromatin remodellers and Mediator. Enhancers work because DNA can loop, a process supported by cohesin and CTCF within topologically associating domains, and one enhancer can regulate more than one gene.",
+        "advanced": "Mapping of regulatory regions with ChIP-seq and ATAC-seq has shown that most human enhancers are cell-type specific, are marked by H3K4me1 and H3K27ac, and often produce short unstable enhancer RNAs. A model of transcription in condensate-like clusters of Mediator and factors with intrinsically disordered activation domains has been proposed, though the physical details are debated. The relationship between pausing and activation matters: in metazoans a large fraction of genes show Pol II paused 30-60 bp downstream of the start site, and release rather than recruitment is then the rate-limiting step. Experiments that test regulatory function (reporter assays, CRISPR interference or deletion of an enhancer, MPRAs) are needed because binding or histone marks alone do not prove that an element regulates a gene."
+      },
+      "commonMistakes": [
+        "Believing all Pol II promoters have a TATA box; in mammals only a minority do.",
+        "Treating an enhancer as always adjacent to the gene it regulates; many act over large distances and skip the nearest gene.",
+        "Confusing DNA-binding domains with activation domains; they are separable and can be swapped between proteins in domain-swap experiments.",
+        "Saying Pol II needs all general factors to remain bound throughout elongation; several are released after initiation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "CxxQ5i97YB0",
+          "title": "Transcription Initiation in Eukaryotes",
+          "channel": "Hussain Biology",
+          "level": "beginner",
+          "whyWatch": "A concise animation of the general transcription factors assembling on a promoter."
+        },
+        {
+          "youtubeId": "9ZRqc5dT6aY",
+          "title": "Enhancers | Transcriptional regulation by Enhancers | Enhancer promoter loop",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Shows how an enhancer loops to contact the promoter and recruit co-activators."
+        },
+        {
+          "youtubeId": "apP5SWitnyw",
+          "title": "8. Transcription",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture on how transcription is carried out and regulated, for deeper study after the animations."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nrg3207",
+          "title": "Transcription factors: from enhancer binding to developmental control",
+          "authors": "Spitz F, Furlong EEM",
+          "year": 2012,
+          "journal": "Nature Reviews Genetics",
+          "level": "advanced",
+          "whyItMatters": "Explains how transcription factors read enhancers to produce precise expression patterns in development, linking binding, cooperativity and regulatory logic."
+        },
+        {
+          "doi": "10.1016/j.cell.2013.02.014",
+          "title": "Transcriptional Regulation and Its Misregulation in Disease",
+          "authors": "Lee TI, Young RA",
+          "year": 2013,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "Provides the standard picture of enhancers, Mediator and cohesin working together, and what goes wrong in cancer and developmental disorders."
+        }
+      ],
+      "resources": [
+        {
+          "title": "JASPAR transcription factor binding profiles",
+          "provider": "JASPAR",
+          "type": "database",
+          "url": "https://jaspar.elixir.no/",
+          "free": true,
+          "level": "intermediate",
+          "note": "An open database of binding motifs; use it to scan a promoter sequence for likely transcription factor sites."
+        },
+        {
+          "title": "ENCODE Project",
+          "provider": "ENCODE Consortium",
+          "type": "database",
+          "url": "https://www.encodeproject.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Browse real ChIP-seq, ATAC-seq and RNA-seq data to see where factors bind and enhancers lie in human cell types."
+        },
+        {
+          "title": "UCSC Genome Browser",
+          "provider": "UCSC",
+          "type": "tool",
+          "url": "https://genome.ucsc.edu/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Visualise promoters, enhancers and histone marks on any human gene to connect textbook diagrams to real data."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which complex recognises the TATA box and nucleates assembly of the Pol II pre-initiation complex?",
+          "options": [
+            "TFIID (containing TBP)",
+            "TFIIH",
+            "Mediator",
+            "Sigma factor"
+          ],
+          "answer": 0,
+          "explanation": "TBP, a subunit of TFIID, binds the TATA box and bends the DNA, creating a platform for the other general factors."
+        },
+        {
+          "question": "Which property distinguishes an enhancer from a promoter?",
+          "options": [
+            "It can act at a distance and in either orientation",
+            "It always contains a TATA box",
+            "It is transcribed by Pol III",
+            "It must lie immediately upstream of the start site"
+          ],
+          "answer": 0,
+          "explanation": "Enhancers are position- and orientation-independent elements that act through DNA looping and recruitment of coactivators."
+        },
+        {
+          "question": "Phosphorylation of serine 2 of the Pol II CTD by P-TEFb is mainly associated with:",
+          "options": [
+            "Release from pausing and productive elongation",
+            "Initial promoter binding",
+            "Termination of bacterial transcription",
+            "Nucleosome assembly"
+          ],
+          "answer": 0,
+          "explanation": "Ser2 phosphorylation is a mark of elongating polymerase and helps recruit factors for elongation and RNA processing."
+        }
+      ]
+    },
+    {
+      "id": "chromatin-and-epigenetics",
+      "title": "Chromatin and epigenetic regulation",
+      "hours": 6,
+      "hook": "If you stretched the DNA from a single human cell into a line it would be about two metres long, yet it fits inside a nucleus a few micrometres wide. Packaging is not just storage: how the DNA is wrapped decides which genes can be read at all.",
+      "learningObjectives": [
+        "Describe the nucleosome and the hierarchy of chromatin compaction",
+        "Explain how histone modifications are written, read and erased",
+        "Contrast euchromatin and heterochromatin and their typical histone marks",
+        "Describe the main families of ATP-dependent chromatin remodellers",
+        "Explain DNA methylation, genomic imprinting and X-chromosome inactivation",
+        "Describe methods used to map chromatin state (ChIP-seq, ATAC-seq, bisulfite sequencing)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nucleosome",
+          "definition": "About 147 base pairs of DNA wrapped roughly 1.7 turns around an octamer of two each of histones H2A, H2B, H3 and H4."
+        },
+        {
+          "term": "Histone modification",
+          "definition": "A covalent mark on histone tails (acetylation, methylation, phosphorylation, ubiquitination) that alters chromatin or creates binding sites for reader proteins."
+        },
+        {
+          "term": "Writer, reader, eraser",
+          "definition": "Enzymes that add marks (for example HATs and methyltransferases), proteins that recognise them (bromodomains, chromodomains) and enzymes that remove them (HDACs, demethylases)."
+        },
+        {
+          "term": "Heterochromatin",
+          "definition": "Compact, transcriptionally repressed chromatin typically marked by H3K9 methylation and bound by HP1; euchromatin is more open and gene-rich."
+        },
+        {
+          "term": "Chromatin remodeller",
+          "definition": "An ATP-driven complex (SWI/SNF, ISWI, CHD, INO80 families) that slides, evicts or exchanges nucleosomes."
+        },
+        {
+          "term": "DNA methylation",
+          "definition": "Addition of a methyl group to cytosine, mostly at CpG dinucleotides in vertebrates, by DNMTs; promoter methylation is generally associated with silencing."
+        },
+        {
+          "term": "Genomic imprinting",
+          "definition": "Parent-of-origin-specific expression of a subset of genes, maintained by differential DNA methylation."
+        },
+        {
+          "term": "X-chromosome inactivation",
+          "definition": "Silencing of one X chromosome in female mammalian cells, initiated by the long non-coding RNA Xist coating the chromosome."
+        },
+        {
+          "term": "Epigenetic inheritance (in cells)",
+          "definition": "Transmission of gene expression states through cell division without change in DNA sequence, for example by maintenance DNA methylation."
+        }
+      ],
+      "deeper": {
+        "beginner": "DNA is wound around small protein spools called histones, and the whole bundle is called chromatin. Where the DNA is tightly wound the genes are hard to reach and stay silent; where it is loose, the transcription machinery can get in. Cells place chemical tags on the histones and on the DNA itself to mark which regions should be open or closed. Because some of these tags are copied when a cell divides, a liver cell's daughter cells remain liver cells. The 'spool' picture is a good start, but the spools are not static: they are constantly slid and rearranged by molecular machines.",
+        "intermediate": "Different marks have characteristic meanings: H3K4me3 at active promoters, H3K27ac at active enhancers and promoters, H3K36me3 along transcribed gene bodies, H3K9me3 in constitutive heterochromatin and H3K27me3 (placed by PRC2 through EZH2) at Polycomb-repressed developmental genes. Acetylation neutralises lysine charge and recruits bromodomain proteins, so HATs generally promote and HDACs generally oppose transcription. Remodellers use ATP to reposition nucleosomes, exposing or hiding binding sites. DNMT3A and DNMT3B establish methylation patterns de novo, while DNMT1 copies them onto the new strand after replication because it prefers hemimethylated CpGs; TET enzymes oxidise 5-methylcytosine as a step in demethylation. At imprinted loci and on the inactive X, these systems combine into stable silencing.",
+        "advanced": "The 'histone code' idea (combinations of marks read by dedicated modules) is a useful framework, but evidence that single marks are always causal is mixed; many marks follow rather than lead transcription, and bivalent domains (H3K4me3 with H3K27me3) in embryonic stem cells illustrate poised states that can resolve either way. Inheritance of histone marks through DNA replication is less well established than for DNA methylation: parental histones are partitioned to the daughter strands, and read-write feedback loops (for example PRC2 binding its own H3K27me3 product) can restore marks. Methods matter for interpretation: ChIP-seq depends on antibody specificity and gives population averages, ATAC-seq reports accessibility not function, and bisulfite sequencing cannot distinguish 5mC from 5hmC without additional chemistry. Be cautious when sources claim transgenerational epigenetic inheritance in mammals; evidence is limited and context-specific."
+      },
+      "commonMistakes": [
+        "Equating all histone methylation with repression; H3K4me3 and H3K36me3 are marks of active transcription.",
+        "Describing epigenetic marks as permanent; they are dynamic and reversible and can be altered by development, environment and drugs.",
+        "Saying that DNA methylation changes the DNA sequence; it adds a chemical group to the base but leaves the sequence intact (though methylated cytosine is a mutation hotspot).",
+        "Assuming chromatin accessibility alone shows a gene is active."
+      ],
+      "videos": [
+        {
+          "youtubeId": "MD3Fc0XOjWk",
+          "title": "Epigenetics",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A short, clear introduction to what epigenetic marks are and how they affect gene activity."
+        },
+        {
+          "youtubeId": "F1km-tep08E",
+          "title": "Chromatin Remodeling & Nucleosome Remodelers | Epigenetics Made Simple | SWI/SNF, ISWI, CHD & INO80",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Compares the four remodeller families and how each moves nucleosomes."
+        },
+        {
+          "youtubeId": "KBi7oaH8-10",
+          "title": "DNA Methylation Animation | CpG Islands, DNMTs, TET & Epigenetic Memory",
+          "channel": "Rethink Biology",
+          "level": "intermediate",
+          "whyWatch": "Visualises how DNMTs and TET enzymes set, maintain and erase methylation."
+        },
+        {
+          "youtubeId": "Y9vXhmI5FXM",
+          "title": "X Inactivation",
+          "channel": "Bozeman Science",
+          "level": "beginner",
+          "whyWatch": "A clear explanation of X inactivation and why female mammals are mosaics."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/38444",
+          "title": "Crystal structure of the nucleosome core particle at 2.8 Å resolution",
+          "authors": "Luger K, Mäder AW, Richmond RK, Sargent DF, Richmond TJ",
+          "year": 1997,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The atomic picture of DNA wrapped around the histone octamer, showing where histone tails emerge and why modifications there can alter chromatin."
+        },
+        {
+          "doi": "10.1126/science.1063127",
+          "title": "Translating the Histone Code",
+          "authors": "Jenuwein T, Allis CD",
+          "year": 2001,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A seminal perspective proposing that combinations of histone modifications are read as instructions; it shaped the field's vocabulary of writers, readers and erasers."
+        },
+        {
+          "doi": "10.1038/nrg.2016.59",
+          "title": "The molecular hallmarks of epigenetic control",
+          "authors": "Allis CD, Jenuwein T",
+          "year": 2016,
+          "journal": "Nature Reviews Genetics",
+          "level": "intermediate",
+          "whyItMatters": "A clear review of what counts as epigenetic, the roles of histone and DNA modifications, and open questions about inheritance."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PDB-101: Molecule of the Month - Nucleosome",
+          "provider": "RCSB PDB-101",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/motm/7",
+          "free": true,
+          "level": "beginner",
+          "note": "An illustrated account of nucleosome structure with 3D viewers to explore how DNA sits on the histones."
+        },
+        {
+          "title": "Learn.Genetics: Epigenetics",
+          "provider": "University of Utah",
+          "type": "tutorial",
+          "url": "https://learn.genetics.utah.edu/content/epigenetics/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive modules on marks, inheritance and environment with clear animations."
+        },
+        {
+          "title": "Roadmap Epigenomics via the ENCODE portal",
+          "provider": "ENCODE Consortium",
+          "type": "database",
+          "url": "https://www.encodeproject.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Download or browse ChIP-seq tracks for histone marks across many tissues to practise reading chromatin states."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which histone mark is typically found at active enhancers?",
+          "options": [
+            "H3K27ac",
+            "H3K9me3",
+            "H3K27me3",
+            "H2A phosphorylation only"
+          ],
+          "answer": 0,
+          "explanation": "H3K27 acetylation (with H3K4me1) marks active enhancers; H3K9me3 and H3K27me3 are repressive marks."
+        },
+        {
+          "question": "Why can DNA methylation patterns persist through cell division?",
+          "options": [
+            "DNMT1 copies methylation onto the new strand at hemimethylated CpGs",
+            "Methylated DNA cannot be replicated",
+            "Histones are never removed during replication",
+            "Methyl groups are encoded in the genetic code"
+          ],
+          "answer": 0,
+          "explanation": "After replication each daughter duplex is hemimethylated and DNMT1 preferentially methylates the new strand, restoring the pattern."
+        },
+        {
+          "question": "Xist RNA is best described as:",
+          "options": [
+            "A long non-coding RNA that coats and silences one X chromosome",
+            "A histone methyltransferase",
+            "A microRNA that targets the X-linked mRNAs",
+            "A DNA methyltransferase"
+          ],
+          "answer": 0,
+          "explanation": "Xist is a long non-coding RNA expressed from the future inactive X which recruits silencing factors to the chromosome."
+        }
+      ]
+    },
+    {
+      "id": "rna-processing",
+      "title": "RNA processing: capping, splicing and polyadenylation",
+      "hours": 5,
+      "hook": "The first RNA copy of a human gene is mostly editorial rubbish: long stretches of introns are cut out and the remaining exons are stitched together, often in more than one way. A single gene can therefore make several different proteins, depending on which pieces the editors keep.",
+      "learningObjectives": [
+        "Describe 5' capping and 3' cleavage and polyadenylation and their functions",
+        "Outline the chemistry and spliceosome assembly steps of pre-mRNA splicing",
+        "Identify the consensus splice-site signals and the branch point",
+        "Explain how alternative splicing is regulated and how it expands the proteome",
+        "Explain RNA editing and give examples of splicing-related disease",
+        "Explain why processing is coupled to transcription by the Pol II CTD"
+      ],
+      "keyConcepts": [
+        {
+          "term": "5' cap",
+          "definition": "A 7-methylguanosine linked to the first nucleotide by a 5'-5' triphosphate bridge; it protects the mRNA and helps in export and translation initiation."
+        },
+        {
+          "term": "Polyadenylation",
+          "definition": "Endonucleolytic cleavage downstream of an AAUAAA signal followed by addition of about 200 adenosines by poly(A) polymerase, with factors CPSF and CstF."
+        },
+        {
+          "term": "Intron and exon",
+          "definition": "Introns are removed from the primary transcript and exons are joined to make the mature mRNA."
+        },
+        {
+          "term": "Splice signals",
+          "definition": "Introns begin with GU at the 5' splice site and end with AG at the 3' splice site, with an internal branch point adenosine and a polypyrimidine tract."
+        },
+        {
+          "term": "Spliceosome",
+          "definition": "A large complex of five snRNPs (U1, U2, U4, U5, U6) and many proteins that catalyses two transesterification reactions to remove an intron as a lariat."
+        },
+        {
+          "term": "Alternative splicing",
+          "definition": "Use of different combinations of exons from one gene, for example exon skipping, alternative 5' or 3' sites or intron retention."
+        },
+        {
+          "term": "SR proteins and hnRNPs",
+          "definition": "Families of RNA-binding proteins that bind exonic or intronic enhancers and silencers to promote or inhibit use of a splice site."
+        },
+        {
+          "term": "RNA editing",
+          "definition": "Post-transcriptional change of the RNA sequence, such as A-to-I deamination by ADAR enzymes or C-to-U in apoB mRNA by APOBEC1."
+        },
+        {
+          "term": "Ribozyme",
+          "definition": "An RNA with catalytic activity; group I and II self-splicing introns showed that RNA can catalyse reactions."
+        }
+      ],
+      "deeper": {
+        "beginner": "Newly made RNA in a human cell has to be edited before it can be used. A protective cap is added to the front end and a long tail of A letters to the back end. The big job is splicing: the gene is broken into pieces called exons separated by non-coding stretches called introns, and the introns have to be cut out precisely so the exons join without a single letter out of place. Choosing which exons to join is also a form of regulation, allowing one gene to produce several different protein versions. Imagine editing a film: the same raw footage can be cut into different versions. The analogy fails in that the cuts are made by the same cell machinery during transcription, not afterwards.",
+        "intermediate": "The cap is added to the nascent transcript soon after initiation, and the CTD phosphorylation pattern recruits capping enzymes, then splicing factors and, near the end, cleavage and polyadenylation factors. Splicing proceeds through two transesterification reactions: the 2'-OH of the branch adenosine attacks the 5' splice site to release the exon and form a lariat, then the free 5' exon attacks the 3' splice site, joining the exons and releasing the lariat intron. U1 snRNA base-pairs with the 5' splice site, U2 binds the branch point, and the U4/U6.U5 tri-snRNP completes the assembly; extensive RNA-RNA rearrangements place U2 and U6 snRNAs in the catalytic core, which is thought to be ribozyme-like. Alternative splicing allows isoforms with different domains, localisation or stability, and it is controlled by SR proteins and hnRNPs together with the strength of splice sites; most human multi-exon genes undergo alternative splicing. Defective splicing underlies diseases such as spinal muscular atrophy (SMN2 exon 7 skipping) and some forms of beta-thalassaemia.",
+        "advanced": "Exon definition, in which splicing machinery assembles across exons rather than introns, explains how short exons are recognised within very long human introns, and it makes splice-site choice sensitive to the local RNA structure and to transcription elongation rate (kinetic coupling). Many alternative events are tissue-specific and regulated by factors such as neuronal PTBP and NOVA proteins, so isoform switches contribute to differentiation. Nonsense-mediated decay couples alternative splicing to expression level when a spliced isoform introduces a premature stop codon, which means that 'unproductive splicing' is itself a regulatory mechanism. Therapeutically, antisense oligonucleotides that block splicing silencers (nusinersen for SMA) show that splice choice can be modified pharmacologically. When interpreting RNA-seq, note that detecting a splice variant does not show it is translated or functional."
+      },
+      "commonMistakes": [
+        "Saying that introns are removed from DNA; the gene still contains introns, and they are removed from the RNA.",
+        "Forgetting that the lariat has a 2'-5' linkage at the branch point.",
+        "Assuming that all exons are always included; alternative splicing means inclusion varies between tissues or conditions.",
+        "Treating poly(A) tail addition as templated by DNA; the A residues are added by polymerase without a template."
+      ],
+      "videos": [
+        {
+          "youtubeId": "u1N4e1ifsAs",
+          "title": "Post Transcriptional Modifications || mRNA processing || 5' Capping || Poly A Tail || Splicing",
+          "channel": "Rethink Biology",
+          "level": "beginner",
+          "whyWatch": "Puts capping, splicing and polyadenylation into a single sequence animation."
+        },
+        {
+          "youtubeId": "aVgwr0QpYNE",
+          "title": "RNA Splicing",
+          "channel": "DNA Learning Center",
+          "level": "beginner",
+          "whyWatch": "A short animation that shows exons joining and introns being excised."
+        },
+        {
+          "youtubeId": "PyLd_eRBbTc",
+          "title": "mRNA Splicing - mRNA post-transcriptional processing/modifications - What is alternative splicing?",
+          "channel": "theCrux",
+          "level": "intermediate",
+          "whyWatch": "Explains the spliceosome steps and how exon choice generates isoforms."
+        },
+        {
+          "youtubeId": "Chv8dlBVXpw",
+          "title": "9. Chromatin Remodeling and Splicing",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture that links chromatin and splicing, useful for connecting this unit with the previous one."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nature08909",
+          "title": "Expansion of the eukaryotic proteome by alternative splicing",
+          "authors": "Nilsen TW, Graveley BR",
+          "year": 2010,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A clear review of how alternative splicing is regulated and how it adds proteome diversity, with examples of tissue-specific isoforms and disease."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Molecular Cell Biology (Lodish), RNA processing chapter",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook text with detailed figures of spliceosome assembly and the splicing mechanism."
+        },
+        {
+          "title": "Learn.Genetics: Transcribe and Translate a Gene",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/basics/transcribe/",
+          "free": true,
+          "level": "beginner",
+          "note": "A hands-on interactive for making mRNA and reading it, useful before studying processing steps."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In splicing, which nucleotide forms the lariat branch by attacking the 5' splice site?",
+          "options": [
+            "An adenosine in the branch point sequence",
+            "The guanosine of the AG at the 3' splice site",
+            "The 5' cap",
+            "A uridine in the polypyrimidine tract"
+          ],
+          "answer": 0,
+          "explanation": "The 2'-OH of the branch-point adenosine attacks the 5' splice site phosphate, creating the lariat intermediate."
+        },
+        {
+          "question": "Which signal directs 3' cleavage and polyadenylation in most mammalian mRNAs?",
+          "options": [
+            "AAUAAA upstream of the cleavage site",
+            "GU at the intron start",
+            "A Shine-Dalgarno sequence",
+            "The TATA box"
+          ],
+          "answer": 0,
+          "explanation": "The AAUAAA hexamer is recognised by CPSF, which with CstF positions cleavage about 10-30 nucleotides downstream before poly(A) polymerase adds the tail."
+        },
+        {
+          "question": "Alternative splicing allows a single gene to:",
+          "options": [
+            "Encode several protein isoforms",
+            "Change its DNA sequence",
+            "Avoid transcription",
+            "Produce an mRNA without a cap"
+          ],
+          "answer": 0,
+          "explanation": "Different exon combinations give mRNAs encoding distinct isoforms without altering the underlying DNA."
+        }
+      ]
+    },
+    {
+      "id": "post-transcriptional-control",
+      "title": "Post-transcriptional control: mRNA decay, microRNAs and non-coding RNAs",
+      "hours": 6,
+      "hook": "In 1998 a pair of scientists injected double-stranded RNA into worms and found that it silenced a matching gene far more strongly than anyone expected. That accident revealed an entire layer of regulation in which small RNAs police the messages of the cell.",
+      "learningObjectives": [
+        "Describe the main pathways of mRNA decay and their regulation",
+        "Explain the roles of AU-rich elements and RNA-binding proteins in controlling mRNA stability",
+        "Outline microRNA biogenesis and how miRNAs repress target mRNAs",
+        "Distinguish miRNA, siRNA and piRNA pathways and RNAi as a research and therapeutic tool",
+        "Describe the types and functions of long non-coding RNAs",
+        "Explain nonsense-mediated decay as RNA surveillance"
+      ],
+      "keyConcepts": [
+        {
+          "term": "mRNA half-life",
+          "definition": "The time for half of a given mRNA population to be degraded; it varies from minutes to many hours between genes."
+        },
+        {
+          "term": "Deadenylation-dependent decay",
+          "definition": "The major route: poly(A) tail shortening (CCR4-NOT, PAN2-PAN3), then decapping by DCP2 and 5'-3' degradation by XRN1, or 3'-5' decay by the exosome."
+        },
+        {
+          "term": "AU-rich element (ARE)",
+          "definition": "An AUUUA-containing sequence in the 3' UTR that binds proteins (such as tristetraprolin) and promotes rapid decay of many cytokine and growth factor mRNAs."
+        },
+        {
+          "term": "MicroRNA (miRNA)",
+          "definition": "A roughly 22-nucleotide RNA derived from a hairpin precursor that guides an Argonaute-containing RISC to partially complementary sites in mRNAs, mainly in the 3' UTR."
+        },
+        {
+          "term": "Seed sequence",
+          "definition": "Nucleotides 2-8 of the miRNA, which provide most of the target specificity in animals."
+        },
+        {
+          "term": "siRNA and RNAi",
+          "definition": "Small interfering RNAs derived from long double-stranded RNA; with perfect complementarity they direct Argonaute-mediated cleavage of the target."
+        },
+        {
+          "term": "Long non-coding RNA (lncRNA)",
+          "definition": "Transcripts longer than about 200 nucleotides with little or no protein-coding capacity; some scaffold chromatin complexes (Xist), others act in the cytoplasm."
+        },
+        {
+          "term": "Nonsense-mediated decay (NMD)",
+          "definition": "A surveillance pathway that degrades mRNAs with premature termination codons, as well as some normal mRNAs."
+        }
+      ],
+      "deeper": {
+        "beginner": "An mRNA is a temporary message, and how long it survives is a key way to control how much protein is made. Some messages are destroyed within minutes, which lets the cell respond quickly, and others last for hours. Tiny RNAs called microRNAs play a part: each one acts like a search term that finds messages with a matching sequence and recruits proteins that block translation or cause the message to be degraded. Scientists have also learned to harness this system, called RNA interference, to silence chosen genes. The 'search term' idea fits well, but a single microRNA can match hundreds of messages, so its effects are broad but usually mild.",
+        "intermediate": "In animals, miRNA genes are transcribed by Pol II into primary transcripts that are cleaved by Drosha with DGCR8 to make hairpin pre-miRNAs; Exportin-5 carries them to the cytoplasm, where Dicer cuts them to duplexes. One strand is loaded into Argonaute to form the RISC. Animal miRNAs pair imperfectly through the seed region, and their main effect on targets is to recruit the CCR4-NOT deadenylase complex and decapping machinery, with translational repression contributing; plant miRNAs and siRNAs usually pair almost completely and direct cleavage. ARE-binding proteins, other RNA-binding proteins and m6A methylation all tune stability, while NMD removes aberrant transcripts and also adjusts the level of some normal ones. lncRNAs act in many ways, including scaffolds (Xist, HOTAIR), decoys that sponge miRNAs or proteins, and guides; claims of function need experimental support, as many lncRNAs are low abundance and may be transcriptional by-products.",
+        "advanced": "Quantitatively, each miRNA typically represses individual targets by less than two-fold, so biological effects arise from sets of targets and from tuning noise, and this fits the observation that many miRNA knockouts show subtle phenotypes. Target prediction by seed matching generates many false positives, and experimental support (CLIP-based mapping, reporter assays with seed mutations) is required. Dicer, Drosha and Argonaute dysfunction in cancers and the use of siRNA drugs (the first approved was patisiran in 2018) show translational importance; delivery and off-target effects remain challenges. The idea that RNAi arose as defence against viruses and transposons, with piRNAs guarding the germline genome, helps connect small RNA pathways to genome integrity. When reading lncRNA papers, ask whether the function was demonstrated by loss-of-function at the DNA level (deletion or CRISPRi) and not only by RNA knockdown, since some effects come from the act of transcription rather than the RNA product."
+      },
+      "commonMistakes": [
+        "Assuming that miRNAs always degrade their targets by cleavage; in animals the dominant effect is deadenylation-linked decay plus translational repression.",
+        "Using the terms siRNA and miRNA interchangeably; they differ in origin, precursor structure and usual degree of target complementarity.",
+        "Calling any non-coding transcript functional; function has to be demonstrated.",
+        "Forgetting that NMD acts on mRNAs that have been translated at least once (the pioneer round)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "cK-OGB1_ELE",
+          "title": "RNA interference (RNAi): by Nature Video",
+          "channel": "nature video",
+          "level": "beginner",
+          "whyWatch": "A clear animation of how double-stranded RNA is chopped and used to silence a gene."
+        },
+        {
+          "youtubeId": "hY3TYEo24PY",
+          "title": "micro RNA | What is microRNA (miRNA)? | How miRNAs work? | How miRNAs are detected experimentally?",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Covers biogenesis, mechanism and detection of miRNAs in one sequence."
+        },
+        {
+          "youtubeId": "7GhfS7VMSd0",
+          "title": "Discover lncRNA: Understanding the Long Noncoding Transcriptome",
+          "channel": "Bio-Rad Laboratories",
+          "level": "intermediate",
+          "whyWatch": "An accessible overview of the classes and roles of long non-coding RNAs."
+        },
+        {
+          "youtubeId": "Z6_ny9DE9Yw",
+          "title": "Nonsense-Mediated Decay (NMD), NonStop Decay, & No Go Decay (mRNA surveillance pathways)",
+          "channel": "the bumbling biochemist",
+          "level": "advanced",
+          "whyWatch": "A detailed walk-through of the main mRNA surveillance pathways."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/35888",
+          "title": "Potent and specific genetic interference by double-stranded RNA in Caenorhabditis elegans",
+          "authors": "Fire A, Xu S, Montgomery MK, Kostas SA, Driver SE, Mello CC",
+          "year": 1998,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The discovery of RNA interference, which won the Nobel Prize in 2006 and gave biologists a way to switch off almost any gene.",
+          "readingQuestions": [
+            "Why was double-stranded RNA much more effective than sense or antisense RNA alone?"
+          ]
+        },
+        {
+          "doi": "10.1016/0092-8674(93)90529-y",
+          "title": "The C. elegans heterochronic gene lin-4 encodes small RNAs with antisense complementarity to lin-14",
+          "authors": "Lee RC, Feinbaum RL, Ambros V",
+          "year": 1993,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Reported the first microRNA, a tiny RNA that represses a protein-coding gene; its significance was only appreciated years later when the same mechanism was found throughout animals."
+        },
+        {
+          "doi": "10.1016/s0092-8674(04)00045-5",
+          "title": "MicroRNAs: Genomics, Biogenesis, Mechanism, and Function",
+          "authors": "Bartel DP",
+          "year": 2004,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A highly cited review that set out miRNA biogenesis and targeting rules, useful as a reference for the textbook description."
+        }
+      ],
+      "resources": [
+        {
+          "title": "miRDB: microRNA target prediction database",
+          "provider": "Washington State University",
+          "type": "database",
+          "url": "https://mirdb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search a miRNA or a gene to see predicted targets and seed matches in 3' UTRs; a good way to practise the seed-pairing rules from this unit, remembering predictions need experimental validation."
+        },
+        {
+          "title": "RNAcentral",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://rnacentral.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A single entry point for non-coding RNA sequences including lncRNAs, with links to annotation and structure."
+        },
+        {
+          "title": "The Nobel Prize in Physiology or Medicine 2006 (RNA interference)",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/medicine/2006/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable account of the discovery and its significance, with the popular science background for the Fire and Mello paper."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which part of a microRNA mostly determines target specificity in animals?",
+          "options": [
+            "The seed region (nucleotides 2-8)",
+            "The 3' end only",
+            "The loop of the precursor",
+            "The poly(A) tail"
+          ],
+          "answer": 0,
+          "explanation": "Pairing of the seed region to the 3' UTR of the mRNA provides most of the specificity; additional pairing can enhance it."
+        },
+        {
+          "question": "Which enzyme cuts pre-miRNA in the cytoplasm to produce the miRNA duplex?",
+          "options": [
+            "Dicer",
+            "Drosha",
+            "Exportin-5",
+            "DCP2"
+          ],
+          "answer": 0,
+          "explanation": "Drosha acts in the nucleus on pri-miRNA; after export, Dicer trims the pre-miRNA hairpin to the mature duplex."
+        },
+        {
+          "question": "Nonsense-mediated decay primarily targets mRNAs that:",
+          "options": [
+            "Contain a premature termination codon",
+            "Lack a poly(A) tail",
+            "Are unspliced",
+            "Are very short"
+          ],
+          "answer": 0,
+          "explanation": "NMD recognises transcripts in which a stop codon lies far upstream of the final exon junction or has a long 3' UTR, and degrades them."
+        }
+      ]
+    },
+    {
+      "id": "translation-and-proteostasis",
+      "title": "Translational control and regulated protein degradation",
+      "hours": 5,
+      "hook": "When a cell is starved, infected or overloaded with unfolded protein, it cannot wait for new transcription; it slams the brake on protein synthesis within minutes with a single phosphate group. Then, when a protein is no longer needed, it is tagged with a small molecular label and fed into a shredder.",
+      "learningObjectives": [
+        "Describe the steps of eukaryotic translation initiation and the factors involved",
+        "Explain global translational control by eIF2 phosphorylation and by 4E-BPs",
+        "Explain selective translational control through uORFs, IRESs and RNA-binding proteins",
+        "Contrast bacterial and eukaryotic initiation signals",
+        "Describe the ubiquitin-proteasome pathway and the principle of regulated degradation",
+        "Give examples of proteins whose activity is controlled by degradation"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Cap-dependent initiation",
+          "definition": "Eukaryotic initiation in which eIF4E binds the 5' cap, eIF4G bridges to the 43S complex, and the small subunit scans to the first suitable AUG."
+        },
+        {
+          "term": "eIF2 ternary complex",
+          "definition": "eIF2 bound to GTP and initiator Met-tRNA; it delivers the initiator tRNA to the 40S subunit and is recycled by the GEF eIF2B."
+        },
+        {
+          "term": "Integrated stress response",
+          "definition": "Phosphorylation of eIF2 alpha on serine 51 by PERK, GCN2, PKR or HRI, which reduces ternary complex and so lowers global translation while favouring ATF4 translation."
+        },
+        {
+          "term": "4E-BP",
+          "definition": "A binding protein that sequesters eIF4E when hypophosphorylated; mTORC1 phosphorylates 4E-BPs to release eIF4E."
+        },
+        {
+          "term": "uORF",
+          "definition": "A short open reading frame in the 5' leader that can reduce translation of the main ORF, or under stress allow its increase, as for ATF4 and yeast GCN4."
+        },
+        {
+          "term": "IRES",
+          "definition": "An RNA structure that recruits ribosomes without a cap, used by some viruses and some cellular mRNAs."
+        },
+        {
+          "term": "Shine-Dalgarno sequence",
+          "definition": "A purine-rich sequence upstream of the start codon in bacterial mRNA that pairs with 16S rRNA to position the ribosome."
+        },
+        {
+          "term": "Ubiquitin-proteasome system",
+          "definition": "Targeted degradation in which E1, E2 and E3 enzymes attach polyubiquitin chains (typically linked through lysine 48) to substrates that are then degraded by the 26S proteasome."
+        },
+        {
+          "term": "Degron",
+          "definition": "A sequence or modification in a protein that makes it a substrate for a ubiquitin ligase; an example is the N-degron pathway."
+        }
+      ],
+      "deeper": {
+        "beginner": "Making protein is expensive, so the cell regulates it carefully. Most eukaryotic messages begin translation when a protein group grabs the cap at the front of the message and pulls in a ribosome, which then scans along until it finds a start signal. Cells can slow down the whole process by adding a phosphate group to one initiation factor when they are stressed, and can speed it up when nutrients are plentiful. At the other end of a protein's life, a small protein called ubiquitin is attached as a 'send to shredder' tag, and a barrel-shaped machine called the proteasome digests tagged proteins. The shredder picture is good, but the tags are specific: a tiny set of selected proteins is tagged at any one time.",
+        "intermediate": "Initiation involves eIF1, eIF1A, eIF3, eIF5 and the ternary complex in a 43S complex that is loaded onto the mRNA by eIF4F (eIF4E, eIF4G, eIF4A); poly(A)-binding protein joins the two ends of the mRNA, helping reinitiation. Scanning continues to an AUG in a good Kozak context, and eIF5B joins the 60S subunit. eIF2 alpha phosphorylation turns eIF2 into a competitive inhibitor of eIF2B, so it takes only a small amount of phosphorylated eIF2 to reduce the active ternary complex; yet some mRNAs, like ATF4, are translated better because of the uORF arrangement. Under growth signalling, mTORC1 phosphorylates 4E-BPs and increases cap-dependent translation, especially of mRNAs with 5' terminal oligopyrimidine tracts. The ubiquitin cascade uses a single E1, tens of E2s and hundreds of E3s that give substrate specificity; degradation of cyclins and the inhibitor IkB shows how regulated destruction makes irreversible switches.",
+        "advanced": "Translational control by eIF2 alpha phosphorylation creates a gene-specific response through leaky scanning and reinitiation: low ternary complex levels allow ribosomes to bypass an inhibitory uORF and reach the ATF4 coding sequence. Ribosome profiling has revealed widespread uORF translation and shown that translation efficiency varies across the transcriptome and differs from mRNA abundance. In bacteria, initiation depends mainly on the Shine-Dalgarno interaction and local mRNA structure, and translational coupling in polycistronic mRNAs and riboswitches provide extra control. For protein degradation, polyubiquitin chain topology encodes different fates (K48 for proteasomal degradation, K63 for signalling), and small molecules called PROTACs exploit E3 ligases to target proteins for degradation, an example of drug design from basic regulation. Interpret half-life data with care: cycloheximide chase assays inhibit translation globally and can alter cell physiology."
+      },
+      "commonMistakes": [
+        "Describing eIF2 alpha phosphorylation as increasing translation; it lowers global translation but increases ATF4.",
+        "Mixing up bacterial and eukaryotic initiation: bacteria use Shine-Dalgarno and formyl-methionine, eukaryotes use the cap and scanning with unmodified methionine.",
+        "Saying that any ubiquitin tag leads to proteasomal degradation; only specific chain types do.",
+        "Assuming that mRNA with an IRES is always translated more; efficiency is context-dependent."
+      ],
+      "videos": [
+        {
+          "youtubeId": "o-Waqn1wc14",
+          "title": "Eukaryotic Translation INITIATION - 80S ribosome assembly steps | Initiation factors in mRNA loading",
+          "channel": "theCrux",
+          "level": "intermediate",
+          "whyWatch": "Shows the order in which initiation factors and subunits assemble at the cap and start codon."
+        },
+        {
+          "youtubeId": "ZDPFCHlcNvI",
+          "title": "The ubiquitin-proteasome mediated protein degradation pathway | Ubiquitin ligase | Proteasome",
+          "channel": "Animated biology With arpan",
+          "level": "intermediate",
+          "whyWatch": "Illustrates E1, E2 and E3 enzymes and the delivery of tagged proteins to the proteasome."
+        },
+        {
+          "youtubeId": "WNZf4ip_R9s",
+          "title": "Differences in translation between prokaryotes and eukaryotes",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "A succinct comparison of initiation and coupling in the two domains."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.15252/embr.201642195",
+          "title": "The integrated stress response",
+          "authors": "Pakos-Zebrucka K, Koryga I, Mnich K, Ljujic M, Samali A, Gorman AM",
+          "year": 2016,
+          "journal": "EMBO Reports",
+          "level": "intermediate",
+          "whyItMatters": "A readable review of the four eIF2 alpha kinases and their downstream effects, which is the standard example of regulated translation under stress."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Nobel Prize in Chemistry 2004 (ubiquitin-mediated protein degradation)",
+          "provider": "NobelPrize.org",
+          "type": "reference",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2004/summary/",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear popular account of how ubiquitin tagging and the proteasome were discovered."
+        },
+        {
+          "title": "PDB-101: Molecule of the Month - Proteasome",
+          "provider": "RCSB PDB-101",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/motm/166",
+          "free": true,
+          "level": "beginner",
+          "note": "An illustrated introduction to the 26S proteasome with 3D structures."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Phosphorylation of eIF2 alpha on serine 51 results in:",
+          "options": [
+            "Reduced global translation initiation with preferential translation of ATF4",
+            "Increased global translation",
+            "Release of eIF4E from 4E-BP",
+            "Stabilisation of all mRNAs"
+          ],
+          "answer": 0,
+          "explanation": "Phosphorylated eIF2 inhibits its recycling factor eIF2B, lowering ternary complex and global initiation, while uORF-containing mRNAs like ATF4 are translated more."
+        },
+        {
+          "question": "mTORC1 activity promotes cap-dependent translation mainly by:",
+          "options": [
+            "Phosphorylating 4E-BPs so eIF4E is released",
+            "Methylating the 5' cap",
+            "Cleaving the poly(A) tail",
+            "Degrading eIF4G"
+          ],
+          "answer": 0,
+          "explanation": "Hyperphosphorylated 4E-BPs can no longer bind eIF4E, which can then assemble into eIF4F."
+        },
+        {
+          "question": "A protein with a K48-linked polyubiquitin chain is most likely to be:",
+          "options": [
+            "Degraded by the 26S proteasome",
+            "Exported from the nucleus",
+            "Methylated",
+            "Spliced"
+          ],
+          "answer": 0,
+          "explanation": "K48-linked chains of at least four ubiquitins are the canonical signal for proteasomal degradation."
+        }
+      ]
+    },
+    {
+      "id": "signals-development-disease",
+      "title": "From signal to gene: hormones, development and disease",
+      "hours": 6,
+      "hook": "A steroid hormone slips through the cell membrane, finds its receptor and, within minutes, rewrites which genes are on. The same principle, scaled up across a growing embryo, draws the body plan, and when it fails it can create a tumour.",
+      "learningObjectives": [
+        "Describe how nuclear receptors act as ligand-regulated transcription factors",
+        "Explain how signalling pathways converge on transcription factors (CREB, NF-kB, STATs, SMADs)",
+        "Explain how morphogen gradients and combinatorial enhancers pattern the Drosophila embryo",
+        "Describe the role of Hox genes in body plan",
+        "Give examples of gene regulation defects in cancer and how regulation is targeted therapeutically"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nuclear receptor",
+          "definition": "A ligand-activated transcription factor with a zinc-finger DNA-binding domain and a ligand-binding domain; examples include glucocorticoid, oestrogen, thyroid hormone and retinoic acid receptors."
+        },
+        {
+          "term": "Hormone response element",
+          "definition": "A short DNA sequence recognised by a nuclear receptor, often as a palindromic or direct repeat half-site pair."
+        },
+        {
+          "term": "Corepressor-coactivator switch",
+          "definition": "Unliganded receptors such as thyroid hormone receptor can bind corepressors with HDAC activity; ligand binding changes receptor conformation so coactivators with HAT activity replace them."
+        },
+        {
+          "term": "Signal-regulated transcription factor",
+          "definition": "A factor whose activity is controlled by phosphorylation, proteolysis or nuclear translocation in response to a signal, such as CREB, NF-kB, STAT and SMAD."
+        },
+        {
+          "term": "Morphogen gradient",
+          "definition": "A concentration gradient of a signalling or regulatory molecule (for example Bicoid in Drosophila) that gives different gene responses at different positions."
+        },
+        {
+          "term": "Hox genes",
+          "definition": "A family of homeodomain transcription factors arranged in clusters whose order on the chromosome mirrors their expression along the head-to-tail axis (colinearity)."
+        },
+        {
+          "term": "Oncogenic transcription factor",
+          "definition": "A transcription factor that drives cancer when overexpressed, mutated or fused, for example MYC amplification or PML-RARA in acute promyelocytic leukaemia."
+        },
+        {
+          "term": "Epigenetic drug",
+          "definition": "A drug targeting chromatin regulators, such as HDAC inhibitors or DNA methyltransferase inhibitors used in some haematological cancers."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells constantly receive messages from their surroundings, and many of these messages end by switching particular genes on or off. Some hormones like cortisol are fat-soluble and pass directly into the cell, where they bind a receptor that acts as a transcription factor. Others bind receptors at the cell surface and set off a relay that finally activates a transcription factor in the nucleus. In an embryo, gradients of such regulators tell cells where they are along the body, so that the head, thorax and abdomen develop in the right places. The idea that the cell simply 'receives instructions' is incomplete: cells also interpret the same signal differently depending on which factors they already carry.",
+        "intermediate": "Steroid receptors such as the glucocorticoid receptor are held in the cytoplasm by heat shock proteins; hormone binding releases them, they dimerise, enter the nucleus and bind response elements, where they recruit coactivators and chromatin remodellers. Thyroid hormone and retinoid receptors are generally already on DNA (as heterodimers with RXR) and repress transcription until ligand arrives. Other pathways converge on factors by different mechanisms: PKA phosphorylates CREB, which recruits CBP; inflammatory signals trigger degradation of IkB so that NF-kB enters the nucleus; cytokine receptors activate JAK kinases that phosphorylate STATs; TGF-beta receptors phosphorylate SMADs. In Drosophila, maternal Bicoid forms an anterior-to-posterior gradient and activates gap genes at different thresholds; gap proteins and pair-rule enhancers (as in the even-skipped stripe 2 enhancer) integrate positive and negative inputs to make sharp stripes. Hox genes then specify segment identity, and mutations can transform one body part into another.",
+        "advanced": "Enhancers are modular, so a single gene can be controlled by multiple enhancers each driving a part of its pattern, and this modularity is thought to be central to the evolution of morphology because it allows changes in one tissue without affecting others. Transcription factor concentration thresholds, cooperativity and repression by short-range repressors such as Kruppel and Giant convert smooth gradients into discrete domains. In disease, non-coding variation in enhancers is a major component of GWAS signals, and tumours often show 'enhancer hijacking' by chromosomal rearrangements or super-enhancers driving oncogenes like MYC. Therapeutically, all-trans retinoic acid and arsenic trioxide target PML-RARA in APL and are among the most successful examples of treating a transcription factor defect, while BET bromodomain inhibitors and HDAC inhibitors target the chromatin reading and writing machinery; resistance and toxicity illustrate that regulators with broad roles are difficult targets."
+      },
+      "commonMistakes": [
+        "Assuming all nuclear receptors start in the cytoplasm; thyroid and retinoid receptors are typically nuclear and DNA-bound without ligand.",
+        "Treating signalling pathways as linear lines; extensive crosstalk and feedback shape the final output.",
+        "Calling Hox genes 'master switches' of organs; they specify positional identity and act with other factors.",
+        "Concluding from correlation that an enhancer variant causes disease without testing the regulatory effect."
+      ],
+      "videos": [
+        {
+          "youtubeId": "T0-fRSvNWjE",
+          "title": "Nuclear Receptors & Signaling Pathway",
+          "channel": "Nonstop Neuron",
+          "level": "intermediate",
+          "whyWatch": "Explains how lipophilic hormones bind nuclear receptors and regulate transcription."
+        },
+        {
+          "youtubeId": "W-CT5GEPRRc",
+          "title": "Regulation of gene expression - Eric Wieschaus (Princeton/HHMI)",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A Nobel laureate's short take on how gene regulation patterns the fly embryo."
+        },
+        {
+          "youtubeId": "1Ecm8UgiXBU",
+          "title": "Gene Regulation: Hox Genes | A-level Biology | OCR, AQA, Edexcel",
+          "channel": "Launchpad Learning",
+          "level": "beginner",
+          "whyWatch": "A clear, concise explanation of Hox and homeobox genes and how they control the body plan."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0092-8674(95)90199-x",
+          "title": "The nuclear receptor superfamily: The second decade",
+          "authors": "Mangelsdorf DJ, Thummel C, Beato M, Herrlich P, Schütz G, Umesono K, Blumberg B, Kastner P, Mark M, Chambon P, Evans RM",
+          "year": 1995,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A foundational overview of the nuclear receptor family, its domains and how ligands switch receptor activity."
+        },
+        {
+          "doi": "10.1038/276565a0",
+          "title": "A gene complex controlling segmentation in Drosophila",
+          "authors": "Lewis EB",
+          "year": 1978,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Edward Lewis's classic study of the bithorax complex, which revealed that genes arranged along a chromosome control segments along the body, and led to the discovery of Hox genes."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Interactive Fly",
+          "provider": "Society for Developmental Biology",
+          "type": "database",
+          "url": "https://www.sdbonline.org/sites/fly/aimain/1aahome.htm",
+          "free": true,
+          "level": "advanced",
+          "note": "A comprehensive resource on Drosophila genes, including gap, pair-rule and Hox genes and their regulation."
+        },
+        {
+          "title": "Reactome pathway knowledgebase",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Peer-reviewed pathway maps that show how signals connect to transcription factors, useful for tracing a pathway end to end."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about thyroid hormone receptor is correct?",
+          "options": [
+            "It can bind DNA without ligand and recruit corepressors",
+            "It is held in the cytoplasm by HSP90 until ligand binds",
+            "It is a cell surface receptor",
+            "It only acts as a repressor"
+          ],
+          "answer": 0,
+          "explanation": "Thyroid hormone receptor, with RXR, is bound to its response elements and recruits corepressor complexes until ligand binding switches it to coactivator recruitment."
+        },
+        {
+          "question": "In Drosophila, the Bicoid protein acts as:",
+          "options": [
+            "A morphogen gradient activating anterior gap genes",
+            "A histone methyltransferase",
+            "A microRNA",
+            "An RNA polymerase subunit"
+          ],
+          "answer": 0,
+          "explanation": "Bicoid is a maternal transcription factor distributed in an anterior-high gradient that activates target genes at concentration thresholds."
+        },
+        {
+          "question": "PML-RARA in acute promyelocytic leukaemia is an example of:",
+          "options": [
+            "An oncogenic fusion transcription factor",
+            "A mutated RNA polymerase",
+            "A histone chaperone",
+            "A viral enhancer"
+          ],
+          "answer": 0,
+          "explanation": "The fusion protein represses retinoic acid target genes and blocks differentiation; pharmacological doses of retinoic acid relieve this block."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "apP5SWitnyw",
+      "title": "8. Transcription",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A full lecture covering the transcription machinery and its regulation, suitable as a deep-dive companion to units 2 to 4."
+    },
+    {
+      "youtubeId": "Chv8dlBVXpw",
+      "title": "9. Chromatin Remodeling and Splicing",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A single lecture linking chromatin structure and RNA processing, useful for revision across units 5 and 6."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Molecular Cell Biology (Lodish et al.), 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21475/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free full text of a standard molecular cell biology textbook; use the gene control and RNA processing chapters."
+    },
+    {
+      "title": "Molecular Biology of the Cell, 4th edition (Alberts et al.)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free full text of a classic text with a thorough chapter on control of gene expression."
+    },
+    {
+      "title": "Biology 2e - Gene Expression",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/16-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "An open textbook chapter covering regulation of gene expression at each level, pitched for first exposure."
+    }
+  ]
+}

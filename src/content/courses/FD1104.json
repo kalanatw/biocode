@@ -1,0 +1,1313 @@
+{
+  "code": "FD 1104",
+  "title": "Organic Chemistry Foundations",
+  "level": 1,
+  "semester": 2,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "Learn the handful of electron-moving moves that explain every bond your cells make and break.",
+  "overview": "The content follows the standard first-course organic chemistry sequence, selected and ordered for a student heading towards Level 3 Biochemistry and Molecular Biology. We start with bonding, shape and functional groups, then intermolecular forces, stereochemistry, acid-base logic and curved-arrow mechanisms. The second half covers substitution and elimination, alkenes and aromatics, alcohols, amines and carbonyls, and finally carboxylic acid derivatives, which is where peptide bonds, esters and phosphate linkages come from. Each unit points back to a biological example so that the chemistry never feels abstract. Spectroscopy and detailed synthesis planning are deliberately left for a later analytical module.",
+  "whyItMatters": "Metabolism, enzyme mechanisms, protein chemistry and nucleic acid chemistry are all organic reactions happening in water at 37 degrees Celsius. If you can recognise a nucleophile, an electrophile and a leaving group, you can read an enzyme mechanism in BC 3022 or CH 3033 and predict what comes next instead of memorising it.",
+  "prerequisites": [
+    "FD 1101"
+  ],
+  "careerLinks": [
+    "Medicinal chemistry and drug discovery",
+    "Pharmaceutical and food quality control laboratories",
+    "Chemical biology and proteomics research",
+    "Biotechnology process development",
+    "Science teaching and tertiary education"
+  ],
+  "studyTips": [
+    "Do not memorise reactions as isolated facts. For every reaction ask three questions: who is the nucleophile, who is the electrophile, and what leaves?",
+    "Draw every mechanism by hand with curved arrows; reading a mechanism is not the same as being able to produce it.",
+    "Build a small molecular model kit habit (or use a free viewer like MolView) whenever stereochemistry or conformations confuse you.",
+    "Keep a one-page pKa cheat sheet (carboxylic acid, phenol, thiol, ammonium, alcohol, water) and use it in every unit; it is the most reusable table in the course.",
+    "After each unit find one biomolecule that contains the functional group you just studied and draw its reaction."
+  ],
+  "units": [
+    {
+      "id": "bonding-shape-functional-groups",
+      "title": "Bonding, molecular shape and functional groups",
+      "hours": 5,
+      "hook": "In 1828 Friedrich Wohler heated an inorganic salt and got urea, a compound until then associated only with living bodies. The old wall between 'living chemistry' and 'lab chemistry' began to crumble, and today we know that carbon bonding is the common language of both. Learning to read that language starts with how carbon bonds and what the groups attached to it do.",
+      "learningObjectives": [
+        "Predict the hybridisation and geometry of a carbon, nitrogen or oxygen atom from its bonding pattern.",
+        "Draw and interpret bond-line (skeletal) structures, including implied carbons and hydrogens.",
+        "Identify the main functional groups (alcohol, ether, amine, thiol, aldehyde, ketone, carboxylic acid, ester, amide, phosphate) in a biomolecule.",
+        "Distinguish sigma and pi bonds and explain why pi bonds are the reactive part of a double bond."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hybridisation",
+          "definition": "A model in which atomic orbitals mix to give equivalent orbitals pointing in the right directions: sp3 gives roughly tetrahedral 109.5 degree angles, sp2 gives trigonal planar 120 degrees, sp gives linear 180 degrees."
+        },
+        {
+          "term": "Sigma bond",
+          "definition": "A bond formed by head-on overlap of orbitals along the line between two nuclei; every single bond is a sigma bond and rotation around it is generally possible."
+        },
+        {
+          "term": "Pi bond",
+          "definition": "A bond formed by sideways overlap of p orbitals above and below the bond axis; it is weaker and more exposed than a sigma bond and prevents rotation, which is why double bonds are both rigid and reactive."
+        },
+        {
+          "term": "Functional group",
+          "definition": "A specific arrangement of atoms (such as -OH or -COOH) that gives a molecule its characteristic reactions, largely independent of the rest of the carbon skeleton."
+        },
+        {
+          "term": "Bond-line structure",
+          "definition": "A drawing convention where each vertex or line end is a carbon, hydrogens on carbon are not drawn, and only heteroatoms and their attached hydrogens are written explicitly."
+        },
+        {
+          "term": "Formal charge",
+          "definition": "The charge an atom would have if bonding electrons were shared equally; it is a bookkeeping tool that helps you spot which atom is electron-rich or electron-poor in a structure."
+        },
+        {
+          "term": "Polar covalent bond",
+          "definition": "A bond in which electrons are shared unequally because the two atoms differ in electronegativity, creating partial positive and negative ends (for example C=O or O-H)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Carbon forms four bonds. When all four are single bonds the groups spread out like the corners of a tetrahedron; when carbon has a double bond, the three attached groups lie flat in a plane. Chemists draw molecules as zig-zag lines where every corner is a carbon with enough hydrogens to make four bonds. Learn to spot the 'handles' on a molecule: -OH (alcohol), -NH2 (amine), C=O (carbonyl), -COOH (carboxylic acid), -SH (thiol). Almost everything a cell does to a molecule happens at one of these handles.",
+        "intermediate": "Hybridisation links geometry, bond length and acidity: moving from sp3 to sp2 to sp raises the s-character, so the bond to hydrogen gets shorter, stronger and its carbon becomes more electron-withdrawing (terminal alkyne C-H is far more acidic than alkane C-H). A double bond is one sigma plus one pi bond. The pi electrons sit further from the nuclei and are therefore the first to be attacked by electrophiles. Functional groups can be classified by oxidation level of carbon: alkane, alcohol, carbonyl (aldehyde or ketone), carboxylic acid, carbon dioxide. This oxidation ladder is the logic behind much of metabolism, where dehydrogenases move substrates up or down it.",
+        "advanced": "Hybridisation is a convenient description rather than a physical process; molecular orbital theory gives a more faithful picture, and photoelectron spectra of methane show two different orbital energies rather than four identical sp3 ones. Nevertheless, valence bond hybrid pictures predict geometry and reactivity well enough for nearly all introductory biochemistry. Amide nitrogen is best treated as sp2 despite having three sigma bonds and a lone pair, because the lone pair is delocalised into the carbonyl; recognising such cases is exactly the skill you will need for peptide bonds, nucleobases and the guanidinium group of arginine."
+      },
+      "commonMistakes": [
+        "Counting hydrogens wrongly in bond-line drawings: every carbon must end up with four bonds, so hydrogens are implied, not missing.",
+        "Believing hybridisation of an atom depends only on the number of bonds; lone pairs and delocalisation also matter (amide N is planar).",
+        "Treating 'organic' as meaning 'from living things'. Organic chemistry is simply the chemistry of carbon compounds, wherever they come from."
+      ],
+      "videos": [
+        {
+          "youtubeId": "u1eGSL6J6Fo",
+          "title": "sp3 hybridized orbitals and sigma bonds | Structure and bonding | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Walks through how methane's four equivalent bonds arise from mixing s and p orbitals, the foundation for every shape you will draw later."
+        },
+        {
+          "youtubeId": "8AwKNC1texM",
+          "title": "Bond-line structures | Structure and bonding | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "beginner",
+          "whyWatch": "Teaches the shorthand used in every biochemistry textbook, so ATP and glucose drawings stop looking like spaghetti."
+        },
+        {
+          "youtubeId": "esJ5MbAHswc",
+          "title": "Identifying functional groups | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "beginner",
+          "whyWatch": "Practises spotting functional groups in realistic molecules, the skill used in the self-check below."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1002/andp.18280880206",
+          "title": "Ueber künstliche Bildung des Harnstoffs",
+          "authors": "Wöhler F",
+          "year": 1828,
+          "journal": "Annalen der Physik und Chemie",
+          "level": "beginner",
+          "whyItMatters": "The short report of urea made from ammonium cyanate, often told as the end of vitalism. Historians note the story is tidier than reality, but it is still a good reminder that biological molecules obey ordinary chemical rules.",
+          "readingQuestions": [
+            "What did Wohler observe that surprised him about the product?",
+            "Why is the 'end of vitalism' story considered an oversimplification by historians?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Organic Chemistry (OpenStax)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/organic-chemistry",
+          "free": true,
+          "level": "beginner",
+          "note": "A free, peer-reviewed textbook; use its chapters on structure and bonding as your reference text for the whole course."
+        },
+        {
+          "title": "MolView",
+          "provider": "MolView",
+          "type": "tool",
+          "url": "https://molview.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Draw a molecule and instantly see it in 3D; ideal for checking hybridisation and geometry."
+        },
+        {
+          "title": "Molecule Shapes",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/molecule-shapes",
+          "free": true,
+          "level": "beginner",
+          "note": "Add bonding and lone pairs to a central atom and watch the geometry rearrange."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the hybridisation and approximate bond angle of the carbon in the carbonyl group (C=O) of acetone?",
+          "options": [
+            "sp3, 109.5 degrees",
+            "sp2, 120 degrees",
+            "sp, 180 degrees",
+            "sp3d, 90 degrees"
+          ],
+          "answer": 1,
+          "explanation": "The carbonyl carbon has three sigma bonds and one pi bond, so it is sp2 and trigonal planar with bond angles close to 120 degrees."
+        },
+        {
+          "question": "In a bond-line drawing, a vertex with no label and two lines meeting at it represents what?",
+          "options": [
+            "An oxygen atom with two lone pairs",
+            "A carbon atom with enough implied hydrogens to total four bonds",
+            "A hydrogen atom",
+            "A double bond"
+          ],
+          "answer": 1,
+          "explanation": "Unlabelled vertices and line ends are carbons; hydrogens attached to carbon are implied so that each carbon has four bonds."
+        },
+        {
+          "question": "Which functional group is present in both a protein backbone and the side chain of asparagine?",
+          "options": [
+            "Ester",
+            "Thiol",
+            "Amide",
+            "Ether"
+          ],
+          "answer": 2,
+          "explanation": "The peptide bond is an amide (C(=O)-N), and the side chain of asparagine ends in a primary amide."
+        }
+      ]
+    },
+    {
+      "id": "alkanes-intermolecular-forces-conformations",
+      "title": "Alkanes, intermolecular forces and conformations",
+      "hours": 5,
+      "hook": "A gecko walks up glass using nothing but the faintest attractions between molecules, and the same weak forces decide whether a drug dissolves in blood or in fat. Hydrocarbon chains look boring until you realise that their shape and their surroundings control how proteins fold and membranes assemble.",
+      "learningObjectives": [
+        "Rank compounds by boiling point and solubility using London dispersion, dipole-dipole and hydrogen-bonding arguments.",
+        "Draw and compare staggered and eclipsed conformations using Newman projections.",
+        "Describe the chair conformation of cyclohexane and distinguish axial from equatorial positions.",
+        "Explain the hydrophobic effect in terms of water, not just 'oil dislikes water'."
+      ],
+      "keyConcepts": [
+        {
+          "term": "London dispersion force",
+          "definition": "A weak attraction between temporary, induced dipoles; it grows with molecular surface area and is the only intermolecular force between hydrocarbons."
+        },
+        {
+          "term": "Hydrogen bond",
+          "definition": "An attraction between a hydrogen covalently bonded to N or O (donor) and a lone pair on another N or O (acceptor); typically 10 to 30 kJ/mol in water-like surroundings, far weaker than a covalent bond but decisive in aggregate."
+        },
+        {
+          "term": "Conformation",
+          "definition": "A different arrangement of the same molecule produced only by rotation about single bonds; conformations interconvert rapidly at room temperature."
+        },
+        {
+          "term": "Torsional strain",
+          "definition": "Extra energy when bonds on adjacent atoms are eclipsed rather than staggered."
+        },
+        {
+          "term": "Steric strain",
+          "definition": "Extra energy when bulky groups are forced close together, as in gauche butane or 1,3-diaxial interactions."
+        },
+        {
+          "term": "Axial and equatorial",
+          "definition": "The two positions on a cyclohexane chair: axial bonds point straight up or down, equatorial bonds point outward; bulky substituents prefer equatorial."
+        },
+        {
+          "term": "Hydrophobic effect",
+          "definition": "The tendency of nonpolar groups to cluster in water, driven mainly by the gain in entropy of water molecules that are released from ordered cages around the nonpolar surface."
+        }
+      ],
+      "deeper": {
+        "beginner": "Molecules stick to each other with forces that are much weaker than bonds. Hydrocarbons stick only by fleeting 'London' attractions, so long straight chains boil at higher temperatures than short or branched ones. Molecules with O-H or N-H groups can form hydrogen bonds, so alcohols boil much higher than alkanes of similar size. 'Like dissolves like': polar molecules dissolve in water, nonpolar ones dissolve in fats. Single bonds can rotate, so a chain constantly wriggles between shapes called conformations.",
+        "intermediate": "For butane looking down the C2-C3 bond, the anti staggered conformation is lowest in energy, gauche staggered is a few kJ/mol higher because two methyls are close, and eclipsed forms are highest (about 12 kJ/mol barrier even in ethane). Cyclohexane avoids angle and torsional strain by adopting a chair; ring flipping swaps axial and equatorial positions. A substituent such as a methyl group prefers equatorial to avoid 1,3-diaxial interactions. These preferences matter later for sugar rings: in beta-D-glucose all large substituents can sit equatorial, which is part of why glucose is so stable and so abundant.",
+        "advanced": "The hydrophobic effect is not a force between nonpolar groups but a consequence of water's hydrogen-bond network. At room temperature, small nonpolar solutes cost entropy because adjacent waters are restricted, whereas large surfaces cost enthalpy because waters lose hydrogen bonds at the interface; Chandler's work shows that this length-scale dependence is important for protein folding and assembly. Dispersion forces are individually small but additive, which is why shape complementarity in enzyme active sites can bind ligands tightly without any hydrogen bond at all."
+      },
+      "commonMistakes": [
+        "Thinking a hydrogen bond is a bond in the covalent sense; it is an intermolecular (or intramolecular) electrostatic interaction.",
+        "Saying that nonpolar molecules 'repel' water; water simply prefers to interact with itself, which pushes nonpolar groups together.",
+        "Confusing conformations with isomers: conformations interconvert by rotation without breaking bonds; isomers do not."
+      ],
+      "videos": [
+        {
+          "youtubeId": "pILGRZ0nT4o",
+          "title": "Boiling points of organic compounds | Structure and bonding | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "beginner",
+          "whyWatch": "Connects hydrogen bonding, dipoles and molecular size to boiling point using alcohols, ethers and alkanes as worked examples."
+        },
+        {
+          "youtubeId": "IkmM4CPnqF0",
+          "title": "Newman projections | Alkanes, cycloalkanes, and functional groups | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Shows step by step how to look down a bond and draw staggered and eclipsed conformations."
+        },
+        {
+          "youtubeId": "p9NzhA3E-70",
+          "title": "Conformations of cyclohexane | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Introduces chair and boat forms, which you need before looking at pyranose sugar rings."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/s0169-409x(96)00423-1",
+          "title": "Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings",
+          "authors": "Lipinski CA, Lombardo F, Dominy BW, Feeney PJ",
+          "year": 1997,
+          "journal": "Advanced Drug Delivery Reviews",
+          "level": "intermediate",
+          "whyItMatters": "Introduced the famous 'rule of five', which links molecular weight, hydrogen-bond donors and acceptors and lipophilicity to whether an orally given drug is likely to cross membranes. It is a clean example of weak intermolecular forces deciding real-world outcomes.",
+          "readingQuestions": [
+            "Which molecular properties does the rule of five use, and why would each affect absorption?",
+            "Why are many natural products and antibiotics exceptions to the rule?"
+          ]
+        },
+        {
+          "doi": "10.1038/nature04162",
+          "title": "Interfaces and the driving force of hydrophobic assembly",
+          "authors": "Chandler D",
+          "year": 2005,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "A readable theory-based review explaining why small and large nonpolar solutes behave differently in water, which clarifies the physical origin of the hydrophobic effect that drives protein folding and membrane formation."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Molecule Polarity",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/molecule-polarity",
+          "free": true,
+          "level": "beginner",
+          "note": "Change electronegativity and watch the dipole and electrostatic potential respond."
+        },
+        {
+          "title": "Chemguide: organic properties",
+          "provider": "Jim Clark, Chemguide",
+          "type": "reference",
+          "url": "https://www.chemguide.co.uk/organicprops/",
+          "free": true,
+          "level": "beginner",
+          "note": "Clear, concise notes on physical properties such as boiling point and solubility."
+        },
+        {
+          "title": "Organic Chemistry (Morsch et al.)",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free open textbook with chapters on alkanes, cycloalkanes and conformational analysis plus worked problems."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which compound should have the highest boiling point: pentane, 1-butanol (similar size), or diethyl ether?",
+          "options": [
+            "Pentane",
+            "Diethyl ether",
+            "1-Butanol",
+            "They are all about equal"
+          ],
+          "answer": 2,
+          "explanation": "1-Butanol has an O-H group that forms hydrogen bonds between molecules, which pentane and diethyl ether cannot do, so it boils at the highest temperature."
+        },
+        {
+          "question": "In butane, viewed along the C2-C3 bond, which conformation is lowest in energy?",
+          "options": [
+            "Fully eclipsed",
+            "Gauche staggered",
+            "Anti staggered",
+            "Partially eclipsed"
+          ],
+          "answer": 2,
+          "explanation": "In the anti conformation the two methyl groups are 180 degrees apart, avoiding both torsional and steric strain."
+        },
+        {
+          "question": "The hydrophobic effect is best described as:",
+          "options": [
+            "A direct repulsion between oil and water molecules",
+            "A covalent bond between nonpolar groups",
+            "A tendency for nonpolar groups to cluster because water prefers its own hydrogen-bond network",
+            "A force that only occurs in proteins"
+          ],
+          "answer": 2,
+          "explanation": "Water molecules lose freedom or hydrogen bonds around nonpolar surfaces, so clustering the nonpolar parts reduces the overall cost to the water."
+        }
+      ]
+    },
+    {
+      "id": "stereochemistry",
+      "title": "Stereochemistry: chirality and the shape of life",
+      "hours": 6,
+      "hook": "Your left hand and right hand are mirror images that cannot be superimposed, and so are many of the molecules in your body. Enzymes, built from chiral L-amino acids, treat the two hands of a molecule as different substances, which is why almost all the amino acids in proteins are 'left-handed' and almost all the sugars in metabolism are 'right-handed'.",
+      "learningObjectives": [
+        "Identify stereocentres and decide whether a molecule is chiral.",
+        "Assign R or S configuration using Cahn-Ingold-Prelog priority rules.",
+        "Distinguish enantiomers, diastereomers and meso compounds and state how they differ in properties.",
+        "Relate D/L notation of sugars and amino acids to R/S and to Fischer projections.",
+        "Explain why a chiral enzyme can discriminate between enantiomers of a substrate or drug."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Chirality centre (stereocentre)",
+          "definition": "Usually a carbon bonded to four different groups; swapping any two groups gives a different stereoisomer."
+        },
+        {
+          "term": "Enantiomers",
+          "definition": "Non-superimposable mirror-image stereoisomers; they have identical physical properties except for the direction they rotate plane-polarised light and how they interact with other chiral things."
+        },
+        {
+          "term": "Diastereomers",
+          "definition": "Stereoisomers that are not mirror images, such as D-glucose and D-galactose; they differ in melting point, solubility and reactivity."
+        },
+        {
+          "term": "Meso compound",
+          "definition": "A molecule with stereocentres that is nevertheless achiral because of an internal mirror plane (for example meso-tartaric acid)."
+        },
+        {
+          "term": "R/S configuration",
+          "definition": "A descriptor from ranking the four groups on a stereocentre by atomic number outward from the centre, then looking from the side opposite the lowest priority group: clockwise is R, anticlockwise is S."
+        },
+        {
+          "term": "Racemic mixture",
+          "definition": "A 1:1 mixture of two enantiomers; it shows no net optical rotation."
+        },
+        {
+          "term": "D and L",
+          "definition": "A historical labelling based on glyceraldehyde: in a Fischer projection, the configuration of the stereocentre farthest from the carbonyl (sugars) or the alpha carbon (amino acids) is compared with D- or L-glyceraldehyde."
+        }
+      ],
+      "deeper": {
+        "beginner": "A carbon with four different groups can be arranged in two ways that are mirror images, just like hands. Chemists call those two forms enantiomers. They behave the same in most tests, but they smell different, taste different and act differently in the body because receptors and enzymes are themselves chiral. Nearly every amino acid found in proteins is the L form and nearly every sugar used in metabolism is the D form.",
+        "intermediate": "A molecule with n stereocentres can have up to 2^n stereoisomers; meso forms reduce that number. To assign R/S, rank substituents by atomic number at the first point of difference (move outward along the chains if tied), orient the lowest priority group away from you and trace 1 to 2 to 3. Do not confuse R/S (a rule applied to the structure) with D/L (a relationship to glyceraldehyde) or with (+)/(-) (a measured optical rotation); they are three independent labels. Most L-amino acids are S, but L-cysteine is R because sulfur outranks the carboxyl carbon in priority. Enzymes recognise a substrate through at least three points of contact, which is enough to tell an enantiomer from its mirror image.",
+        "advanced": "Thalidomide illustrates the complexity: the two enantiomers interconvert rapidly under physiological conditions, so giving a single enantiomer would not have avoided harm, contrary to a popular retelling. Pro-chirality also matters in biochemistry: an enzyme can distinguish two identical-looking CH2 hydrogens of citrate or ethanol because it holds the molecule in a chiral environment, and Emil Fischer's lock-and-key proposal arose from observing that enzymes distinguish stereoisomers of sugars. Chiral pool synthesis, asymmetric catalysis and enzymatic resolution are the tools by which industry makes single-enantiomer drugs."
+      },
+      "commonMistakes": [
+        "Assuming R always means D or (+). The three notations are independent.",
+        "Forgetting that swapping two groups on a stereocentre inverts the configuration; swapping twice returns the original.",
+        "Calling any molecule with a stereocentre chiral; meso compounds contain stereocentres but are achiral.",
+        "Repeating the claim that one thalidomide enantiomer is safe; the enantiomers racemise in the body."
+      ],
+      "videos": [
+        {
+          "youtubeId": "tk-SNvCPLCE",
+          "title": "Introduction to chirality | Stereochemistry | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A gentle first look at handedness and what makes a molecule chiral."
+        },
+        {
+          "youtubeId": "DfO27juYly8",
+          "title": "Cahn-Ingold-Prelog system for naming enantiomers | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Demonstrates the priority rules and clockwise/anticlockwise test step by step."
+        },
+        {
+          "youtubeId": "mrTHfBCduRA",
+          "title": "Thalidomide: The Chemistry Mistake That Killed Thousands of Babies",
+          "channel": "SciShow",
+          "level": "beginner",
+          "whyWatch": "A short story of why chirality matters for drugs; pair it with the review paper below to see how the popular version was simplified."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1002/cber.18940270364",
+          "title": "Einfluss der Configuration auf die Wirkung der Enzyme",
+          "authors": "Fischer E",
+          "year": 1894,
+          "journal": "Berichte der deutschen chemischen Gesellschaft",
+          "level": "advanced",
+          "whyItMatters": "The origin of the lock-and-key picture of enzyme action. Fischer observed that enzymes acted on some sugar stereoisomers but not others and concluded that enzyme and substrate must fit each other like lock and key. It is written in German, so read a summary first and then skim the experiments."
+        },
+        {
+          "doi": "10.1002/bdrc.21096",
+          "title": "Thalidomide-induced teratogenesis: History and mechanisms",
+          "authors": "Vargesson N",
+          "year": 2015,
+          "journal": "Birth Defects Research Part C: Embryo Today: Reviews",
+          "level": "intermediate",
+          "whyItMatters": "An accessible review of what is known about how thalidomide damaged developing limbs, including the role of its stereochemistry and what was and was not understood at the time.",
+          "readingQuestions": [
+            "What does the review say about the biological activities of the two enantiomers?",
+            "Why was the drug given as a racemic mixture in the first place?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Stereochemistry chapters",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapter with worked examples of R/S assignment and Fischer projections."
+        },
+        {
+          "title": "MolView",
+          "provider": "MolView",
+          "type": "tool",
+          "url": "https://molview.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Rotate a 3D model of a stereoisomer until you can match it with a flat drawing."
+        },
+        {
+          "title": "Organic Chemistry I (5.12)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2003/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Full lecture notes and problem sets for a rigorous first-semester organic course."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which of the following is a necessary condition for a carbon to be a stereocentre?",
+          "options": [
+            "It is bonded to a hydrogen",
+            "It is bonded to four different groups",
+            "It is part of a ring",
+            "It carries a positive charge"
+          ],
+          "answer": 1,
+          "explanation": "A tetrahedral carbon with four different substituents can be arranged in two non-superimposable mirror-image ways."
+        },
+        {
+          "question": "Two stereoisomers with several stereocentres are not mirror images of each other. They are called:",
+          "options": [
+            "Enantiomers",
+            "Diastereomers",
+            "Conformers",
+            "Tautomers"
+          ],
+          "answer": 1,
+          "explanation": "Stereoisomers that are not mirror images are diastereomers, for example D-glucose and D-mannose, and they have different physical properties."
+        },
+        {
+          "question": "Why can an enzyme usually act on one enantiomer of a substrate but not the other?",
+          "options": [
+            "Enantiomers have different molecular masses",
+            "The enzyme active site is chiral, so the two enantiomers fit it differently",
+            "Enantiomers have different functional groups",
+            "Enzymes are only active in racemic solutions"
+          ],
+          "answer": 1,
+          "explanation": "Enzymes are built from L-amino acids and therefore form a chiral binding site; mirror-image substrates cannot make the same set of contacts."
+        }
+      ]
+    },
+    {
+      "id": "acids-bases-electron-pushing",
+      "title": "Acids, bases, resonance and electron-pushing",
+      "hours": 6,
+      "hook": "Almost every reaction in a cell is a proton moving or a pair of electrons moving, and the curved arrow is the universal symbol for that move. Once you can draw the arrows for a simple acid-base reaction, the mechanisms of enzymes stop looking like magic and start looking like short, logical stories.",
+      "learningObjectives": [
+        "Use pKa values to predict the direction and extent of an acid-base reaction.",
+        "Explain acid strength using resonance, electronegativity, atom size and hybridisation.",
+        "Draw valid resonance structures and decide which contributes most to the hybrid.",
+        "Identify nucleophiles, electrophiles and leaving groups and draw curved arrows for a simple mechanism."
+      ],
+      "keyConcepts": [
+        {
+          "term": "pKa",
+          "definition": "The negative logarithm of the acid dissociation constant; a lower pKa means a stronger acid, and an acid is half-dissociated when the pH equals its pKa."
+        },
+        {
+          "term": "Conjugate base stability",
+          "definition": "The more stable (more delocalised, more electronegative atom, larger atom) the conjugate base, the stronger the acid."
+        },
+        {
+          "term": "Resonance",
+          "definition": "Describing one real structure with several valid Lewis structures that differ only in the positions of electrons; the real molecule is a hybrid more stable than any one contributor."
+        },
+        {
+          "term": "Nucleophile",
+          "definition": "An electron-rich species that donates a pair of electrons to form a new bond (for example hydroxide, an amine, a thiolate)."
+        },
+        {
+          "term": "Electrophile",
+          "definition": "An electron-poor species that accepts a pair of electrons (for example a carbonyl carbon or a carbocation)."
+        },
+        {
+          "term": "Leaving group",
+          "definition": "The fragment that departs with the bonding electrons; good leaving groups are weak bases, such as halides, water or phosphate."
+        },
+        {
+          "term": "Curved arrow",
+          "definition": "A tool in mechanism drawings: the tail starts at the source of the electron pair (a lone pair or bond) and the head points to where the pair ends up."
+        }
+      ],
+      "deeper": {
+        "beginner": "An acid gives away a proton and a base takes it. We measure how strong an acid is with pKa: lower number, stronger acid. Carboxylic acids (pKa around 4 to 5) are much stronger than alcohols (pKa around 16) because the negative charge left behind after losing H+ is spread over two oxygens. Mechanisms use curved arrows to show electrons flowing from a rich spot (nucleophile) to a poor spot (electrophile).",
+        "intermediate": "Four rules explain most acid strengths: (1) the atom bearing the negative charge, where electronegativity increases across a period and size matters down a group so thiols are more acidic than alcohols; (2) resonance, as in carboxylates; (3) hybridisation of the carbon; (4) inductive effects of nearby electron-withdrawing groups. For acid-base equilibria, the position lies on the side of the weaker acid. In biochemistry the same logic applies to amino acid side chains: histidine imidazole has a pKa near 6 and can be both a proton donor and acceptor at physiological pH, which is why it appears so often in active sites. A curved arrow always starts at an electron pair, never at a nucleus.",
+        "advanced": "Resonance forms must keep the same atom positions and total electrons; contributors with full octets, minimal charge separation and negative charge on electronegative atoms dominate. The amide group is a key example: nitrogen donates its lone pair into the carbonyl, which shortens the C-N bond, makes the group planar and makes N a very poor base (conjugate acid pKa near zero or below). Under physiological conditions, 'strong' acids and bases barely exist, so enzymes use general acid-base catalysis with residues like His, Glu and Lys whose pKa values are tuned by their microenvironment to be near the working pH."
+      },
+      "commonMistakes": [
+        "Drawing a curved arrow that starts from an atom rather than from a lone pair or bond.",
+        "Confusing resonance with equilibrium: resonance contributors do not interconvert, they are different descriptions of one structure.",
+        "Predicting acid strength by looking only at the acidic atom and ignoring the stability of the conjugate base.",
+        "Using a double-headed arrow for electron movement; a double-headed arrow between structures means resonance, not reaction."
+      ],
+      "videos": [
+        {
+          "youtubeId": "diCb6JkLlQE",
+          "title": "Acid-base definitions | Resonance and acid-base chemistry | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "beginner",
+          "whyWatch": "Clarifies Bronsted-Lowry and Lewis definitions so the mechanisms that follow make sense."
+        },
+        {
+          "youtubeId": "OhAAi3DZ984",
+          "title": "Using a pKa table | Resonance and acid-base chemistry | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Shows how to use a pKa table to predict which direction an acid-base reaction goes."
+        },
+        {
+          "youtubeId": "7BgiKyvviyU",
+          "title": "Resonance structure | Resonance and acid-base chemistry | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Shows how to draw resonance structures and how delocalisation of charge links to acid strength."
+        },
+        {
+          "youtubeId": "Z4F88tTx9-8",
+          "title": "Identifying nucleophilic and electrophilic centers",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "beginner",
+          "whyWatch": "Practises the first step in any mechanism: spotting where the electrons are coming from and going to."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "pKa Data compilation (Evans, Ripin, Reich)",
+          "provider": "Hans Reich, University of Wisconsin",
+          "type": "reference",
+          "url": "https://organicchemistrydata.org/hansreich/resources/pka/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A trusted table of pKa values for acids and bases; useful for checking predictions."
+        },
+        {
+          "title": "Master Organic Chemistry",
+          "provider": "James Ashenhurst",
+          "type": "tutorial",
+          "url": "https://www.masterorganicchemistry.com/",
+          "free": true,
+          "level": "beginner",
+          "note": "Plain-language tutorials on acid-base logic, resonance and curved arrows, with plenty of examples."
+        },
+        {
+          "title": "Acid-Base Solutions",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/acid-base-solutions",
+          "free": true,
+          "level": "beginner",
+          "note": "Compare strong and weak acids at the molecular level."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Acetic acid (pKa about 4.8) reacts with ethoxide (conjugate base of ethanol, pKa about 16). Which statement is correct?",
+          "options": [
+            "The equilibrium favours the starting materials",
+            "The equilibrium favours acetate and ethanol",
+            "No reaction occurs",
+            "Both sides are equally favoured"
+          ],
+          "answer": 1,
+          "explanation": "Equilibrium favours the weaker acid and weaker base. Acetic acid is the much stronger acid, so protons move to ethoxide, producing acetate and ethanol."
+        },
+        {
+          "question": "Why is a carboxylic acid more acidic than an alcohol?",
+          "options": [
+            "The O-H bond is shorter",
+            "The carboxylate conjugate base is stabilised by resonance over two oxygens",
+            "Carboxylic acids contain more hydrogen atoms",
+            "Alcohols cannot lose a proton"
+          ],
+          "answer": 1,
+          "explanation": "The negative charge in carboxylate is shared between two oxygen atoms, stabilising the base and so strengthening the acid."
+        },
+        {
+          "question": "In a curved-arrow mechanism, where does the arrow tail start?",
+          "options": [
+            "On the nucleus of an atom",
+            "On a lone pair or a bond (the source of the electron pair)",
+            "On the positive charge",
+            "On the leaving group's nucleus"
+          ],
+          "answer": 1,
+          "explanation": "Curved arrows track electron pairs, so they begin at a lone pair or a bond and end where the pair forms a new bond or becomes a lone pair."
+        }
+      ]
+    },
+    {
+      "id": "substitution-elimination",
+      "title": "Substitution and elimination reactions",
+      "hours": 6,
+      "hook": "Your cells copy methyl groups onto DNA and onto proteins using one carefully tuned reaction: an SN2 attack on a sulfur-bound methyl group of S-adenosylmethionine. Understanding why that reaction goes with a backside attack, and what makes a good leaving group, is the key to understanding both lab chemistry and epigenetic regulation.",
+      "learningObjectives": [
+        "Describe the mechanisms of SN2, SN1, E2 and E1 and draw their curved-arrow steps.",
+        "Predict which pathway dominates from substrate, nucleophile or base, leaving group and solvent.",
+        "Explain inversion of configuration in SN2 and racemisation in SN1.",
+        "Recognise SN2-type and elimination reactions in biochemistry (methyl transfer, dehydration)."
+      ],
+      "keyConcepts": [
+        {
+          "term": "SN2",
+          "definition": "A one-step substitution where the nucleophile attacks the carbon from the side opposite the leaving group; the rate depends on both substrate and nucleophile and the configuration is inverted."
+        },
+        {
+          "term": "SN1",
+          "definition": "A two-step substitution that first forms a carbocation by loss of the leaving group, which is then captured by a nucleophile; the rate depends only on the substrate."
+        },
+        {
+          "term": "E2",
+          "definition": "A one-step elimination in which a base removes a proton while the leaving group departs, ideally from an anti-periplanar arrangement, forming a double bond."
+        },
+        {
+          "term": "E1",
+          "definition": "A two-step elimination via a carbocation, followed by loss of a proton; it competes with SN1."
+        },
+        {
+          "term": "Carbocation stability",
+          "definition": "Tertiary > secondary > primary because alkyl groups donate electron density and by hyperconjugation; stability controls how easily SN1/E1 occur."
+        },
+        {
+          "term": "Good leaving group",
+          "definition": "A group that is stable once it leaves, usually a weak base: iodide, bromide, tosylate, water (after protonation), phosphate or pyrophosphate in biology."
+        },
+        {
+          "term": "Polar protic vs polar aprotic solvent",
+          "definition": "Protic solvents (water, alcohols) stabilise ions and favour SN1; aprotic solvents (DMSO, acetone) leave nucleophiles unsolvated and favour SN2."
+        }
+      ],
+      "deeper": {
+        "beginner": "In a substitution one group replaces another on a carbon. In SN2 the new group comes in as the old one leaves, like someone taking your seat as you stand up. In SN1 the old group leaves first, leaving a short-lived positive carbon, and then the new group arrives. Elimination is the competing outcome: instead of a new group arriving, a hydrogen is lost and a double bond forms.",
+        "intermediate": "Primary and methyl substrates favour SN2 (little steric hindrance) and tertiary substrates favour SN1/E1 or E2 (they cannot be attacked from behind and form stable carbocations). A strong, small nucleophile promotes SN2; a strong, bulky base promotes E2. Heat favours elimination over substitution because elimination produces more molecules and so more entropy. The SN2 rate law is second order: rate = k[substrate][nucleophile]; SN1 is first order. In biochemistry the leaving group is rarely the halide you meet in a textbook: ATP phosphate groups, SAM sulfonium and activated alcohols play that role, and enzyme active sites accelerate the reaction by positioning the nucleophile and leaving group.",
+        "advanced": "Real reactions sit on a continuum between SN1 and SN2 with ion pairs and loose transition states. Methyltransferases using SAM catalyse close to ideal SN2 transfers: kinetic isotope effect studies indicate a compact transition state in which the methyl group sits between the nucleophile and sulfur, and enzyme-substrate proximity contributes much of the rate gain. Stereospecific E2 elimination in substituted cyclohexanes requires an axial leaving group and an axial anti hydrogen, tying conformational analysis from earlier units directly to reactivity."
+      },
+      "commonMistakes": [
+        "Predicting SN2 at a tertiary carbon; backside attack is blocked by bulky substituents.",
+        "Saying SN1 always gives a perfect racemic mixture; ion pairing often leaves a slight excess of inversion.",
+        "Ignoring the solvent: the same reagents can follow different pathways in different solvents.",
+        "Treating hydroxide as a leaving group; it is a poor one unless protonated (to water) or converted to a better group."
+      ],
+      "videos": [
+        {
+          "youtubeId": "iiGYwCGNrl8",
+          "title": "Sn2 reactions | Substitution and elimination reactions | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Illustrates backside attack, inversion and the effect of substrate shape."
+        },
+        {
+          "youtubeId": "eB5NVPzBCzM",
+          "title": "Sn1 reactions introduction | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Shows the two-step carbocation pathway and why it gives racemisation."
+        },
+        {
+          "youtubeId": "cyZUgH4yoCo",
+          "title": "Sn1 vs Sn2: Summary | Substitution and elimination reactions | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Compares the two mechanisms side by side so you can choose between them."
+        },
+        {
+          "youtubeId": "ZOUS0Q_B4fQ",
+          "title": "E1 and E2 Reactions: Crash Course Organic Chemistry #22",
+          "channel": "CrashCourse",
+          "level": "intermediate",
+          "whyWatch": "A narrated overview of elimination and how it competes with substitution."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Reaction guide: substitution and elimination",
+          "provider": "Master Organic Chemistry",
+          "type": "tutorial",
+          "url": "https://www.masterorganicchemistry.com/reaction-guide/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A reaction-by-reaction guide with mechanisms; use it to compare conditions for SN1, SN2, E1 and E2."
+        },
+        {
+          "title": "Organic Chemistry (OpenStax)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/organic-chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Reference chapters on alkyl halides, substitution and elimination, with end-of-chapter problems."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which substrate reacts fastest by SN2 with a good nucleophile?",
+          "options": [
+            "tert-Butyl bromide",
+            "Isopropyl bromide",
+            "Ethyl bromide",
+            "Bromobenzene"
+          ],
+          "answer": 2,
+          "explanation": "SN2 needs a sterically accessible carbon; primary alkyl halides such as ethyl bromide react fastest, while tertiary halides do not react by SN2."
+        },
+        {
+          "question": "What is the stereochemical outcome at a stereocentre during SN2?",
+          "options": [
+            "Retention of configuration",
+            "Inversion of configuration",
+            "Complete racemisation",
+            "Loss of the stereocentre"
+          ],
+          "answer": 1,
+          "explanation": "The nucleophile attacks from the side opposite the leaving group, flipping the arrangement of the other three groups like an umbrella in the wind."
+        },
+        {
+          "question": "Which change would favour SN1 over SN2 for a secondary alkyl bromide?",
+          "options": [
+            "A strong nucleophile in a polar aprotic solvent",
+            "A weak nucleophile in a polar protic solvent",
+            "A high concentration of nucleophile",
+            "A bulky base at high temperature"
+          ],
+          "answer": 1,
+          "explanation": "A weakly nucleophilic, ion-stabilising polar protic solvent such as water or ethanol favours ionisation to a carbocation (SN1)."
+        }
+      ]
+    },
+    {
+      "id": "alkenes-aromatics",
+      "title": "Alkenes, aromatic rings and conjugation",
+      "hours": 5,
+      "hook": "Why can a fat be solid in a butter dish and liquid in an olive oil bottle, and why are the bases of DNA flat? Both questions come down to carbon-carbon double bonds: one kind kinks fatty-acid chains, the other builds the flat aromatic rings that stack inside the double helix.",
+      "learningObjectives": [
+        "Describe the geometry and reactivity of alkenes, including cis/trans (E/Z) isomerism.",
+        "Predict the product of simple electrophilic additions using Markovnikov's rule and carbocation stability.",
+        "Apply Huckel's rule to decide whether a ring is aromatic.",
+        "Link cis double bonds to membrane fluidity and aromatic rings to nucleobases and aromatic amino acids."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Alkene",
+          "definition": "A hydrocarbon with a carbon-carbon double bond; the planar sp2 carbons make cis and trans isomers possible."
+        },
+        {
+          "term": "Electrophilic addition",
+          "definition": "A reaction in which an electrophile (such as H+) is attacked by the pi bond to give a carbocation, which then captures a nucleophile."
+        },
+        {
+          "term": "Markovnikov's rule",
+          "definition": "In addition of HX to an unsymmetrical alkene, H adds to the carbon with more hydrogens so the positive charge develops on the more substituted carbon."
+        },
+        {
+          "term": "Conjugation",
+          "definition": "Overlapping p orbitals across alternating single and double bonds, which delocalises electrons, stabilises the system and shifts light absorption towards longer wavelengths."
+        },
+        {
+          "term": "Aromaticity",
+          "definition": "Extra stability of a planar, cyclic, fully conjugated ring with 4n+2 pi electrons (Huckel's rule), as in benzene with 6."
+        },
+        {
+          "term": "Heteroaromatic ring",
+          "definition": "An aromatic ring containing N, O or S, such as the purines, pyrimidines, imidazole and indole of biochemistry."
+        },
+        {
+          "term": "Electrophilic aromatic substitution",
+          "definition": "Aromatic rings typically keep their aromaticity by replacing H with an electrophile rather than adding to the ring."
+        }
+      ],
+      "deeper": {
+        "beginner": "A double bond is a flat, rigid link, so groups can sit on the same side (cis) or opposite sides (trans). Natural unsaturated fats usually have cis double bonds, which put a bend in the chain so molecules pack loosely and stay liquid. Alkenes react easily because the pi electrons are exposed; acids and halogens can add across the bond. Benzene and its relatives are special: their electrons are spread around the ring and this makes them unusually stable and unreactive in addition reactions.",
+        "intermediate": "Electrophilic addition of HBr proceeds by protonation of the alkene to give the more stable (more substituted) carbocation, then bromide attack. Carbocation rearrangements by hydride or methyl shifts can occur. Aromatic rings follow Huckel's rule: cyclobutadiene (4 pi electrons) is anti-aromatic and unstable, benzene (6) is aromatic, pyrrole is aromatic because the nitrogen lone pair completes the sextet, and the purine and pyrimidine bases are aromatic heterocycles. Aromatic delocalisation also explains why the lone pair on pyrrole-type nitrogen is not basic, while the pyridine-type nitrogen lone pair in the plane of the ring is.",
+        "advanced": "The resonance energy of benzene (roughly 150 kJ/mol) is measured by comparing hydrogenation heats with those predicted for a hypothetical cyclohexatriene. Planar aromatic bases stack with 0.34 nm spacing in B-DNA, and this pi-stacking, together with the hydrophobic effect, contributes at least as much to helix stability as hydrogen bonding between base pairs. Extended conjugation in carotenoids, retinal and the heme ring is the reason these molecules absorb visible light; conformational twisting around a conjugated bond (cis-trans isomerisation of retinal) is the primary event in vision."
+      },
+      "commonMistakes": [
+        "Believing benzene has alternating double and single bonds of different lengths; all six C-C bonds are equal.",
+        "Applying Markovnikov's rule to the wrong carbon: the hydrogen goes to the carbon that already has more hydrogens.",
+        "Assuming every ring with double bonds is aromatic; it must be planar, cyclic, fully conjugated and have 4n+2 pi electrons.",
+        "Thinking that hydrogenation of a cis double bond in food simply 'saturates' it with no other effect; partial hydrogenation also produces trans isomers."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Z_GWBW_GVGA",
+          "title": "Introduction to reaction mechanisms | Alkenes and Alkynes | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Introduces the idea of electrophilic addition using an alkene and HBr as the model."
+        },
+        {
+          "youtubeId": "X-VCk3WrGlM",
+          "title": "Markovnikov's rule and carbocations | Alkenes and Alkynes | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Explains why one regioisomer wins, using carbocation stability."
+        },
+        {
+          "youtubeId": "RaBI3lAACKg",
+          "title": "Aromatic Compounds and Huckel's Rule",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Shows how to count pi electrons and decide whether a ring is aromatic."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Organic Chemistry (Morsch et al.): alkenes and aromatic compounds",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free reference chapters with mechanisms and practice problems."
+        },
+        {
+          "title": "Chemguide",
+          "provider": "Jim Clark, Chemguide",
+          "type": "reference",
+          "url": "https://www.chemguide.co.uk/",
+          "free": true,
+          "level": "beginner",
+          "note": "Short, clear explanations of alkene reactions and benzene structure if you want a gentler second explanation."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "HBr adds to propene (CH3CH=CH2). Following Markovnikov's rule, the major product is:",
+          "options": [
+            "1-bromopropane",
+            "2-bromopropane",
+            "1,2-dibromopropane",
+            "Propane"
+          ],
+          "answer": 1,
+          "explanation": "The proton adds to the terminal CH2, forming the more stable secondary carbocation at C2, which then captures bromide to give 2-bromopropane."
+        },
+        {
+          "question": "Which of these is aromatic according to Huckel's rule?",
+          "options": [
+            "Cyclobutadiene",
+            "Cyclooctatetraene (planar assumed)",
+            "Benzene",
+            "Cyclohexene"
+          ],
+          "answer": 2,
+          "explanation": "Benzene is planar, cyclic and conjugated with six pi electrons, which satisfies 4n+2 with n = 1."
+        },
+        {
+          "question": "How does a cis double bond in a fatty acid affect membrane properties?",
+          "options": [
+            "It makes packing tighter and the membrane more rigid",
+            "It introduces a kink that disrupts packing and increases fluidity",
+            "It makes the fatty acid water soluble",
+            "It has no effect"
+          ],
+          "answer": 1,
+          "explanation": "The kink produced by a cis double bond prevents close packing of lipid tails, lowering melting point and keeping the membrane more fluid."
+        }
+      ]
+    },
+    {
+      "id": "alcohols-amines-carbonyls",
+      "title": "Alcohols, amines and the chemistry of the carbonyl group",
+      "hours": 6,
+      "hook": "Glucose closes into a ring by itself, rhodopsin traps a vitamin A derivative on a lysine, and aldolase cleaves a sugar phosphate in the middle of glycolysis. These three very different events are all the same trick: a nucleophile attacking a carbonyl carbon.",
+      "learningObjectives": [
+        "Describe how alcohols, thiols and amines behave as nucleophiles and how their basicity differs.",
+        "Write the mechanism for nucleophilic addition to an aldehyde or ketone and predict the products with alcohols, amines and hydride.",
+        "Explain hemiacetal and acetal formation and relate it to cyclic sugar structures and glycosidic bonds.",
+        "Describe the aldol reaction and its reverse and recognise them in glycolysis.",
+        "Relate alcohol oxidation to the NAD+/NADH redox couple."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Carbonyl group",
+          "definition": "A C=O unit in which the carbon is electrophilic (partial positive) and the oxygen is nucleophilic or basic; it is the most important reactive centre in biochemistry."
+        },
+        {
+          "term": "Nucleophilic addition",
+          "definition": "The nucleophile attacks the carbonyl carbon, the pi bond moves to oxygen, and a tetrahedral intermediate forms."
+        },
+        {
+          "term": "Hemiacetal / acetal",
+          "definition": "An alcohol adds to an aldehyde or ketone to give a hemiacetal; a second alcohol under acid conditions replaces the OH to give an acetal. In carbohydrates, the ring forms are intramolecular hemiacetals and glycosidic bonds are acetals."
+        },
+        {
+          "term": "Imine (Schiff base)",
+          "definition": "The product of an amine adding to a carbonyl and losing water; in enzymes, imines to lysine side chains are central intermediates (for example with pyridoxal phosphate)."
+        },
+        {
+          "term": "Aldol reaction",
+          "definition": "An enol or enolate of one carbonyl attacks the carbonyl of another, forming a new carbon-carbon bond and a beta-hydroxy carbonyl compound."
+        },
+        {
+          "term": "Oxidation of alcohols",
+          "definition": "Primary alcohols oxidise to aldehydes and then carboxylic acids, secondary alcohols to ketones; tertiary alcohols do not oxidise without breaking C-C bonds."
+        },
+        {
+          "term": "Thiol",
+          "definition": "The sulfur analogue of an alcohol (R-SH); more acidic and a better nucleophile than the alcohol, and oxidises to disulfides, as in cysteine bridges."
+        }
+      ],
+      "deeper": {
+        "beginner": "The carbon of a C=O is a little bit positive, so anything with a lone pair of electrons is attracted to it. When an alcohol group in the same molecule attacks, a ring forms; this is how the straight-chain form of glucose becomes the ring form that exists almost entirely in water. Amines can attack as well, and then lose water to make an imine. Aldehydes and ketones are made by oxidising alcohols, in cells with the help of NAD+.",
+        "intermediate": "Addition to the carbonyl is reversible for most nucleophiles; the equilibrium depends on sterics and electronics, so aldehydes are more reactive than ketones. Under acid catalysis, a hemiacetal is protonated, loses water to give an oxonium ion, and is trapped by a second alcohol to give an acetal; the reverse is hydrolysis. The alpha carbon of a carbonyl is acidic (pKa around 17 to 20 for ketones, lower for 1,3-dicarbonyls) because the enolate is resonance stabilised, which is the basis of the aldol and Claisen reactions. In glycolysis, aldolase catalyses the reverse of an aldol reaction, splitting fructose 1,6-bisphosphate into DHAP and glyceraldehyde 3-phosphate, with a Schiff base to an active-site lysine in class I enzymes. Dehydrogenases transfer a hydride from the carbon bearing the OH to NAD+.",
+        "advanced": "The anomeric effect stabilises axial electronegative substituents on the anomeric carbon of pyranoses and partly explains the alpha/beta ratio at equilibrium for glucose (about 36 to 64 percent). Imine formation is fastest near pH 4 to 5, where there is enough acid to catalyse dehydration but not so much that the amine is fully protonated; this rate profile is why many bioconjugation methods use aniline catalysis near neutral pH. Sletten and Bertozzi's review shows how selective reactions of carbonyl-type functionality can be used in living cells without disrupting biology."
+      },
+      "commonMistakes": [
+        "Drawing glucose as only a straight chain; in water more than 99 percent is the cyclic hemiacetal.",
+        "Mixing up hemiacetal (one OR and one OH on the carbon) and acetal (two OR groups).",
+        "Forgetting that tertiary alcohols cannot be oxidised to carbonyls without breaking C-C bonds.",
+        "Using the same pH for every imine-forming reaction; rates peak at mildly acidic pH."
+      ],
+      "videos": [
+        {
+          "youtubeId": "j-rBgs_p-bg",
+          "title": "Oxidation of alcohols I: Mechanism and oxidation states | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Explains oxidation states of carbon and how an alcohol becomes a carbonyl, the logic behind NAD+-dependent dehydrogenases."
+        },
+        {
+          "youtubeId": "-fBPX-4kFlw",
+          "title": "An Overview of Aldehydes and Ketones: Crash Course Organic Chemistry #27",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A friendly overview of why the carbonyl carbon is electrophilic and what it can do."
+        },
+        {
+          "youtubeId": "FGq9-R6Yw18",
+          "title": "Formation of hemiacetals and hemiketals | Aldehydes and ketones | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Shows the mechanism that makes sugars cyclise."
+        },
+        {
+          "youtubeId": "sjMsyk-rP8I",
+          "title": "Aldol condensation | Alpha Carbon Chemistry | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "advanced",
+          "whyWatch": "Demonstrates the carbon-carbon bond-forming step that aldolase reverses in glycolysis."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1002/anie.200900942",
+          "title": "Bioorthogonal Chemistry: Fishing for Selectivity in a Sea of Functionality",
+          "authors": "Sletten EM, Bertozzi CR",
+          "year": 2009,
+          "journal": "Angewandte Chemie International Edition",
+          "level": "advanced",
+          "whyItMatters": "Explains how chemists design reactions of carbonyl-type and other unusual functional groups that proceed in living systems without cross-reacting with biology, a good bridge between organic mechanisms and chemical biology.",
+          "readingQuestions": [
+            "Why are ketone-aminooxy (oxime) reactions considered bioorthogonal, and what limits their speed in living systems?",
+            "What properties must a bioorthogonal functional group have?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Organic Chemistry (Morsch et al.): aldehydes and ketones",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters with mechanisms, practice problems and biological examples."
+        },
+        {
+          "title": "Reaction guide",
+          "provider": "Master Organic Chemistry",
+          "type": "tutorial",
+          "url": "https://www.masterorganicchemistry.com/reaction-guide/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Index of carbonyl reactions with simplified mechanisms to compare patterns."
+        },
+        {
+          "title": "Organic Chemistry I (5.12)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2003/",
+          "free": true,
+          "level": "advanced",
+          "note": "Rigorous lecture notes and problem sets for deeper practice."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "When an aldehyde reacts with one molecule of an alcohol under mild acid conditions, the product is a:",
+          "options": [
+            "Acetal",
+            "Hemiacetal",
+            "Ester",
+            "Imine"
+          ],
+          "answer": 1,
+          "explanation": "One alcohol adding to a carbonyl gives a hemiacetal; a second alcohol replacing the OH gives an acetal."
+        },
+        {
+          "question": "Which reaction type does aldolase reverse in glycolysis when it cleaves fructose 1,6-bisphosphate?",
+          "options": [
+            "Claisen condensation",
+            "Aldol addition",
+            "Fischer esterification",
+            "SN2 substitution"
+          ],
+          "answer": 1,
+          "explanation": "Aldolase catalyses a retro-aldol cleavage, splitting the six-carbon sugar into DHAP and glyceraldehyde 3-phosphate."
+        },
+        {
+          "question": "Which of the following cannot be oxidised to a carbonyl compound with a simple oxidant?",
+          "options": [
+            "Ethanol",
+            "2-Propanol",
+            "2-Methyl-2-propanol",
+            "1-Butanol"
+          ],
+          "answer": 2,
+          "explanation": "2-Methyl-2-propanol is a tertiary alcohol with no hydrogen on the carbinol carbon, so it cannot form a C=O without breaking carbon-carbon bonds."
+        }
+      ]
+    },
+    {
+      "id": "carboxylic-acid-derivatives-biological-linkages",
+      "title": "Carboxylic acid derivatives and the linkages of life",
+      "hours": 6,
+      "hook": "A protein's backbone could fall apart in water, yet a peptide bond survives for hundreds of years if nothing catalyses its breakage. DNA's backbone survives even longer. That stability, together with the fact that cells can still make and break these bonds on demand, comes from the reactivity pattern you will learn here: nucleophilic acyl substitution.",
+      "learningObjectives": [
+        "Draw the two-step addition-elimination mechanism for nucleophilic acyl substitution.",
+        "Rank carboxylic acid derivatives by reactivity and explain the order using resonance and leaving-group ability.",
+        "Describe how esters, amides, thioesters and phosphoanhydrides appear in biomolecules.",
+        "Explain why peptide bonds are planar and kinetically stable, and why ATP hydrolysis releases energy.",
+        "Outline how a chemist, or a ribosome, makes an amide bond from an activated acid."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Acyl group",
+          "definition": "The R-C(=O)- unit; carboxylic acids, esters, amides, thioesters and anhydrides are different ways of attaching it to a leaving group."
+        },
+        {
+          "term": "Nucleophilic acyl substitution",
+          "definition": "A nucleophile adds to the carbonyl to give a tetrahedral intermediate, which then expels a leaving group and reforms C=O; the net result is replacement of one group for another."
+        },
+        {
+          "term": "Relative reactivity",
+          "definition": "Roughly: acyl chloride > anhydride > thioester > ester ≈ carboxylic acid > amide, determined by how well the leaving group departs and how much the substituent donates electrons into the carbonyl."
+        },
+        {
+          "term": "Amide resonance",
+          "definition": "Delocalisation of the nitrogen lone pair into the carbonyl, making the C-N bond partly double, the group planar and the amide poorly electrophilic."
+        },
+        {
+          "term": "Thioester",
+          "definition": "R-C(=O)-SR'; acetyl-CoA is the classic example. It is more reactive than an oxygen ester, making it a good acyl-transfer agent."
+        },
+        {
+          "term": "Phosphoanhydride bond",
+          "definition": "The P-O-P linkage between phosphate groups in ATP; hydrolysis is strongly favourable (about -30 kJ/mol under standard biochemical conditions, more in the cell) because of charge repulsion, solvation and resonance stabilisation of the products."
+        },
+        {
+          "term": "Phosphodiester",
+          "definition": "A phosphate linking two alcohols, the unit of the backbone of DNA and RNA; it keeps a negative charge, which resists attack by hydroxide and helps retain DNA in the cell."
+        }
+      ],
+      "deeper": {
+        "beginner": "Acid derivatives are like different 'packaged' forms of an acyl group. An acid chloride is highly reactive, an amide is very stable. Cells attach acyl groups to a good leaving group (like the sulfur of coenzyme A or the phosphate of ATP) so that they can be transferred easily onto another molecule. A peptide bond is an amide between the carboxyl of one amino acid and the amine of the next, giving the protein its backbone.",
+        "intermediate": "The mechanism has two steps: addition to give a tetrahedral intermediate, then collapse with loss of the best leaving group. You can only convert a more reactive derivative into a less reactive one in a single step (an acyl chloride to an ester, but not an ester to an acyl chloride), unless the product is activated by another process. Fischer esterification is reversible and acid-catalysed. Peptide bond formation is thermodynamically uphill in water, so the ribosome uses aminoacyl-tRNA, an activated ester, to drive the reaction. ATP hydrolysis is favourable because the products (ADP and inorganic phosphate) are better solvated and more resonance-stabilised than ATP, and because of electrostatic repulsion among the phosphates.",
+        "advanced": "Amide resonance gives about 75 to 80 kJ/mol rotational barrier about the C-N bond, so peptide bonds are overwhelmingly trans and planar except for the cis prolyl peptide bond, which is significant in protein folding. Wolfenden's work on uncatalysed hydrolysis rates shows half-lives of hundreds of years for peptide bonds and many millions of years for phosphodiester bonds in DNA at neutral pH, so enzymes such as proteases and nucleases achieve enormous rate accelerations. Westheimer explained that phosphate esters make ideal biological linkages because the ionised phosphodiester is stable towards hydrolysis, ions stay inside membranes, and ATP can still be activated by enzymes."
+      },
+      "commonMistakes": [
+        "Assuming amide hydrolysis in water is thermodynamically uphill; it is favourable but very slow without catalysis.",
+        "Writing the mechanism as a single-step SN2 at the carbonyl carbon; it proceeds via a tetrahedral intermediate.",
+        "Saying ATP contains 'high-energy bonds' in the sense that breaking a bond releases energy; the free energy change comes from the whole reaction, including solvation and charge effects of the products.",
+        "Ranking thioesters below oxygen esters; poorer orbital overlap makes thioesters more reactive."
+      ],
+      "videos": [
+        {
+          "youtubeId": "3QWJrPq_HB0",
+          "title": "Nucleophilic acyl substitution | Carboxylic acids and derivatives | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Presents the addition-elimination mechanism in a clear step-by-step manner."
+        },
+        {
+          "youtubeId": "MWii7tL0T84",
+          "title": "Reactivity of carboxylic acid derivatives | Organic chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "intermediate",
+          "whyWatch": "Explains the reactivity ladder using resonance and leaving-group arguments."
+        },
+        {
+          "youtubeId": "nv2kfBFkv4s",
+          "title": "Peptide bond formation | Macromolecules | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Applies the chemistry to how amino acids join into proteins."
+        },
+        {
+          "youtubeId": "AcNDiCzz3do",
+          "title": "ATP hydrolysis: Transfer of a phosphate group | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Shows ATP hydrolysis as nucleophilic attack at phosphorus, linking this unit to bioenergetics."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.2434996",
+          "title": "Why Nature Chose Phosphates",
+          "authors": "Westheimer FH",
+          "year": 1987,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A classic essay on why phosphate esters, and not other leaving groups or linkages, are used for nucleic acids, ATP and metabolic intermediates. It is short and beautifully written, and it shows how organic chemical reasoning explains a biological design choice.",
+          "readingQuestions": [
+            "Why does a diester bond of DNA resist hydrolysis better than a monoester?",
+            "What does the essay say about trapping molecules inside cells?"
+          ]
+        },
+        {
+          "doi": "10.1021/ja00897a025",
+          "title": "Solid Phase Peptide Synthesis. I. The Synthesis of a Tetrapeptide",
+          "authors": "Merrifield RB",
+          "year": 1963,
+          "journal": "Journal of the American Chemical Society",
+          "level": "advanced",
+          "whyItMatters": "The paper that introduced building a peptide on an insoluble resin, a direct application of acyl substitution with protecting groups. It earned Merrifield the 1984 Nobel Prize in Chemistry and made synthetic peptides routine."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Organic Chemistry (OpenStax): carboxylic acid derivatives",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/organic-chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Reference chapters on acyl substitution with practice problems."
+        },
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "A preview of where these organic mechanisms reappear as enzyme reactions."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free online biochemistry text; see the chapters on bioenergetics and protein structure for the biological follow-up to this unit."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which carboxylic acid derivative is the least reactive towards nucleophilic acyl substitution?",
+          "options": [
+            "Acyl chloride",
+            "Anhydride",
+            "Ester",
+            "Amide"
+          ],
+          "answer": 3,
+          "explanation": "Amides are stabilised by strong resonance donation from nitrogen and have a very poor leaving group, making them the least reactive of the common derivatives."
+        },
+        {
+          "question": "Why is the peptide bond planar?",
+          "options": [
+            "Because of hydrogen bonding with water",
+            "Because of resonance delocalisation of the nitrogen lone pair into the carbonyl",
+            "Because carbon is sp3 hybridised",
+            "Because of steric repulsion between side chains"
+          ],
+          "answer": 1,
+          "explanation": "The C-N bond has partial double bond character through resonance, which prevents free rotation and keeps the six atoms around the bond in a plane."
+        },
+        {
+          "question": "What is the first intermediate formed when a nucleophile adds to an ester carbonyl?",
+          "options": [
+            "A carbocation",
+            "A tetrahedral intermediate with a negative charge on oxygen",
+            "A radical",
+            "An acylium ion"
+          ],
+          "answer": 1,
+          "explanation": "The pi bond of the C=O breaks and its electrons move onto oxygen, giving a tetrahedral alkoxide intermediate before the leaving group is expelled."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "PmvLB5dIEp8",
+      "title": "What Is Organic Chemistry?: Crash Course Organic Chemistry #1",
+      "channel": "CrashCourse",
+      "level": "beginner",
+      "whyWatch": "A cheerful ten-minute orientation to what organic chemistry covers and why it matters."
+    },
+    {
+      "youtubeId": "3Pp1AY_lmR4",
+      "title": "Biological Polymers: Crash Course Organic Chemistry #49",
+      "channel": "CrashCourse",
+      "level": "intermediate",
+      "whyWatch": "Shows how the reactions in this course assemble proteins, nucleic acids and polysaccharides."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Organic Chemistry",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/organic-chemistry",
+      "free": true,
+      "level": "beginner",
+      "note": "Free, peer-reviewed full textbook that can serve as the main text."
+    },
+    {
+      "title": "Organic Chemistry (Morsch et al.)",
+      "provider": "LibreTexts Chemistry",
+      "type": "textbook",
+      "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_(Morsch_et_al.)",
+      "free": true,
+      "level": "intermediate",
+      "note": "Open textbook with extensive worked problems and biological applications."
+    },
+    {
+      "title": "Organic Chemistry I (5.12)",
+      "provider": "MIT OpenCourseWare",
+      "type": "course",
+      "url": "https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2003/",
+      "free": true,
+      "level": "advanced",
+      "note": "lecture notes and problem sets."
+    }
+  ]
+}

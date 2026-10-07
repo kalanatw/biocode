@@ -1,0 +1,1662 @@
+{
+  "code": "BC 3053",
+  "title": "Introduction to Bioinformatics",
+  "level": 3,
+  "semester": 1,
+  "credits": 2,
+  "hours": "15L 30P",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Learn to ask questions of the world's biological data, and to get answers you can trust.",
+  "overview": "This course teaches you to find, compare and interpret biological sequences and structures using the public databases and tools that working biochemists use every day: NCBI (GenBank, RefSeq, Gene, BLAST), UniProt, the PDB, InterPro, Ensembl and AlphaFold DB, plus a first taste of scripting with Biopython. Fifteen lecture hours supply the logic (what an alignment score means, why an E-value is not a probability of being right, how a tree is built); thirty practical hours put the tools in your hands, unit by unit. The units follow the standard content of a Level 3 introductory bioinformatics course (databases, pairwise alignment, BLAST, multiple alignment and phylogenetics, protein sequence and structure analysis, genome and high-throughput data, scripting).",
+  "whyItMatters": "Almost every modern biochemistry paper begins or ends in a database: a gene identified by BLAST, a protein domain read from InterPro, a structure downloaded from the PDB, an expression table from an RNA-seq run. Whether you go into research, diagnostics, biotechnology or medicine, you will be asked to judge computational evidence, and a student who can do that stands out immediately.",
+  "prerequisites": [
+    "FD 2102"
+  ],
+  "careerLinks": [
+    "Research scientist or research assistant in molecular biology, genomics or protein science",
+    "Bioinformatics analyst in a diagnostic, pharmaceutical or agricultural biotech company",
+    "Clinical genomics and variant-interpretation laboratories",
+    "Postgraduate study in computational biology, systems biology or structural biology",
+    "Scientific data curation at databases and biobanks"
+  ],
+  "studyTips": [
+    "Do every practical with a question you actually care about (your favourite enzyme, a gene from your project proposal) instead of only the sample sequences. You remember what you are curious about.",
+    "Keep a lab-book of every search: database, query, date, filters and the accession numbers you used. Databases change, and reproducibility starts on day one.",
+    "After every tool run, write one sentence beginning 'This result means...' and one beginning 'This result does NOT mean...'. Most bioinformatics errors are over-interpretation.",
+    "When a score or p-value appears, find out how it is calculated before trusting it. Ten minutes with the algorithm saves hours of confusion later.",
+    "Type your code; do not paste it. Scripting is a motor skill, and the errors you make while typing are the learning."
+  ],
+  "units": [
+    {
+      "id": "databases-ncbi-uniprot",
+      "title": "Biological Databases: NCBI, GenBank, RefSeq and UniProt",
+      "hours": 5,
+      "hook": "Somewhere on a server, there is a record for the hemoglobin gene in every organism whose DNA anyone has bothered to sequence. Before you can compare, align or predict anything, you have to learn the address system: accession numbers, record types and who is allowed to edit what.",
+      "learningObjectives": [
+        "Explain the difference between a primary (archival) database such as GenBank and a curated one such as RefSeq or UniProtKB/Swiss-Prot",
+        "Read an accession number and say what kind of record it points to (genomic, mRNA, protein)",
+        "Use Entrez queries with field tags and filters to find a specific gene record, and move between Gene, Nucleotide and Protein records",
+        "Retrieve a protein from UniProt and read its function, domain, variant and cross-reference sections",
+        "Download sequences in FASTA and GenBank flat-file formats and identify each part of the file",
+        "Record your search strategy so someone else can repeat it"
+      ],
+      "keyConcepts": [
+        {
+          "term": "INSDC",
+          "definition": "The International Nucleotide Sequence Database Collaboration: GenBank (NCBI), the ENA (EMBL-EBI) and DDBJ (Japan) exchange data daily, so a nucleotide sequence submitted to one appears in all three."
+        },
+        {
+          "term": "Accession number",
+          "definition": "A stable identifier for a database record (for example NM_000518.5). The part after the dot is the version, which increments when the underlying sequence changes, so always cite the full accession.version."
+        },
+        {
+          "term": "GenBank vs RefSeq",
+          "definition": "GenBank is an archive of submitted sequences, redundant and not edited by NCBI. RefSeq is a curated, non-redundant reference set derived from it; prefixes such as NM_ (mRNA), NP_ (protein) and NC_ (chromosome) mark curated records, while XM_/XP_ mark computational predictions."
+        },
+        {
+          "term": "Entrez",
+          "definition": "NCBI's integrated search system across dozens of databases (Gene, Nucleotide, Protein, PubMed, Taxonomy and others) with links between related records, plus field tags such as [Organism] and [Gene Name] to narrow a query."
+        },
+        {
+          "term": "Swiss-Prot and TrEMBL",
+          "definition": "The two sections of UniProtKB. Swiss-Prot entries are reviewed by curators who read the literature and annotate function; TrEMBL entries are automatically annotated and unreviewed, so they are far more numerous and less reliable."
+        },
+        {
+          "term": "FASTA format",
+          "definition": "The minimal sequence file format: one header line beginning with > (identifier and description) followed by lines of sequence. Simple, universal, and the input most tools expect."
+        },
+        {
+          "term": "GenBank flat file",
+          "definition": "A feature-rich record with LOCUS, DEFINITION, ACCESSION, SOURCE, FEATURES (CDS, exons, gene) and ORIGIN (the sequence). Read the FEATURES table to see where the coding sequence starts and stops."
+        },
+        {
+          "term": "Annotation",
+          "definition": "Information layered on a bare sequence: gene boundaries, function, domains, variants. It is a hypothesis with evidence codes, not a fact written in stone."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of biological databases as a library with different shelves. GenBank is the unfiltered intake desk: anyone can submit a sequence and it stays there. RefSeq is the reference shelf, where librarians pick one best, cleaned-up record per gene. UniProt is the equivalent library for proteins. Each item has a barcode (accession number) that never changes meaning. Where the analogy breaks: unlike a library, databases are continually updated, so the version number after the dot matters, and the same gene may have many records from different studies that disagree slightly.",
+        "intermediate": "Hands-on (practical): (1) In NCBI Gene, search 'HBB[Gene Name] AND Homo sapiens[Organism]'. Note the Gene ID, then follow links to the RefSeq mRNA (NM_) and protein (NP_) records. (2) Download the mRNA as FASTA and as GenBank. In the GenBank file locate the CDS feature and check that its coordinates match the protein length times three plus the stop codon. (3) Search the same protein in UniProtKB; compare reviewed (Swiss-Prot) and unreviewed hits for human hemoglobin beta and note how annotation differs. (4) Use the Taxonomy browser to list the lineage of the source organism. Deliverable: a one-page table of identifiers (Gene ID, NM_, NP_, UniProt accession, PDB IDs) that all refer to the same biological object.",
+        "advanced": "Identifier mapping is a real problem: one gene maps to many transcripts, one transcript to one or more protein isoforms, and UniProt, Ensembl and RefSeq do not always agree on which isoform is canonical. Learn the MANE Select project (a matched Ensembl/RefSeq transcript per human protein-coding gene) and UniProt's canonical isoform concept. Explore evidence codes (ECO) behind annotations, and the difference between experimental, curator-inferred and automatic assertions. Consider database biases: sequence databases over-represent model organisms and medically important species, and legacy annotation errors propagate through homology transfer, so a wrong function label can be copied many times. Programmatic access (NCBI E-utilities, the UniProt REST API) lets you do this at scale; you will see it again in the Biopython unit."
+      },
+      "commonMistakes": [
+        "Citing an accession without its version, or using a GenBank record when a RefSeq reference was needed (or vice versa).",
+        "Treating TrEMBL (unreviewed) annotation as equal in quality to Swiss-Prot (reviewed).",
+        "Assuming one gene name equals one record: gene symbols are ambiguous between species and sometimes change.",
+        "Downloading sequences with no record of the query, date or database release, making the analysis impossible to reproduce."
+      ],
+      "videos": [
+        {
+          "youtubeId": "QLcmEqBayr0",
+          "title": "How to Use the NCBI's Bioinformatics Tools and Databases",
+          "channel": "Science Buddies",
+          "level": "beginner",
+          "whyWatch": "A calm screen-capture walkthrough of searching NCBI databases, which is the first practical you will do."
+        },
+        {
+          "youtubeId": "QIZ8QH6JcC8",
+          "title": "NCBI Minute: A Beginner's Guide to Genes and Sequences at NCBI",
+          "channel": "National Library of Medicine",
+          "level": "intermediate",
+          "whyWatch": "Produced by NCBI staff, this shows how Gene, Nucleotide, RefSeq and Protein records link together and how to read them."
+        },
+        {
+          "youtubeId": "GusiW6YUpr0",
+          "title": "UniProt Tutorial Series: Searching for a protein",
+          "channel": "The Jackson Laboratory",
+          "level": "beginner",
+          "whyWatch": "Short guided search in UniProt that shows you how to filter by organism and reviewed status."
+        },
+        {
+          "youtubeId": "_VJVs2dcGPY",
+          "title": "A guide to UniProt for students and biological scientists",
+          "channel": "EMBL's European Bioinformatics Institute EMBL-EBI",
+          "level": "intermediate",
+          "whyWatch": "An EMBL-EBI trainer walks through a UniProtKB entry section by section, including variants, cross-references and the evidence behind annotation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/nar/gkab1112",
+          "title": "Database resources of the national center for biotechnology information",
+          "authors": "Sayers EW, Bolton EE, Brister JR et al",
+          "year": 2022,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "An annual snapshot of what NCBI offers, written by the people who run it. Skim it to see how many databases exist beyond the two or three you use, and how they are connected."
+        },
+        {
+          "doi": "10.1093/nar/gkae1010",
+          "title": "UniProt: the Universal Protein Knowledgebase in 2025",
+          "authors": "The UniProt Consortium",
+          "year": 2025,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Explains how UniProtKB is built, how curation and automatic annotation are balanced, and what has changed recently in the interface and data. Useful for understanding what a reviewed entry really means."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI home (Entrez gateway)",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/",
+          "free": true,
+          "level": "beginner",
+          "note": "The starting point for Gene, Nucleotide, Protein, PubMed and Taxonomy searches used throughout the practicals."
+        },
+        {
+          "title": "NCBI Gene",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/gene/",
+          "free": true,
+          "level": "beginner",
+          "note": "One page per gene summarising function, genomic context, transcripts and links; the best hub for moving between identifiers."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "The reference protein knowledgebase; use it for function, domains, variants and cross-links to structures."
+        },
+        {
+          "title": "UniProt Quick Tour",
+          "provider": "EMBL-EBI Training",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/uniprot-quick-tour/",
+          "free": true,
+          "level": "beginner",
+          "note": "A short self-paced tour of searching and reading UniProt entries, ideal as pre-reading for the practical."
+        },
+        {
+          "title": "The NCBI Handbook",
+          "provider": "NCBI / NLM",
+          "type": "reference",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK143764/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Describes how each NCBI service works, including the logic of GenBank, RefSeq and Entrez; consult when a record type confuses you."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "An accession begins with NP_. What does that tell you?",
+          "options": [
+            "It is a curated RefSeq protein record",
+            "It is an unreviewed TrEMBL entry",
+            "It is a PDB structure",
+            "It is a computationally predicted transcript"
+          ],
+          "answer": 0,
+          "explanation": "NP_ marks a curated RefSeq protein. Predicted RefSeq proteins use XP_, TrEMBL entries have UniProt-style accessions, and PDB IDs are four characters."
+        },
+        {
+          "question": "Why should you record the version of an accession (the .5 in NM_000518.5)?",
+          "options": [
+            "It tells you the number of exons",
+            "It identifies a specific state of the sequence, which can change over time",
+            "It indicates the species",
+            "It is only decorative"
+          ],
+          "answer": 1,
+          "explanation": "The version number increments when the underlying sequence changes, so citing it makes your analysis repeatable."
+        },
+        {
+          "question": "Which statement about UniProtKB/Swiss-Prot versus TrEMBL is correct?",
+          "options": [
+            "TrEMBL entries are manually curated and Swiss-Prot entries are automatic",
+            "Both are fully manually curated",
+            "Swiss-Prot entries are manually reviewed; TrEMBL entries are automatically annotated and unreviewed",
+            "They contain proteins from different kingdoms only"
+          ],
+          "answer": 2,
+          "explanation": "Swiss-Prot is the reviewed section with curator-read evidence; TrEMBL is the larger, automatically annotated section."
+        }
+      ]
+    },
+    {
+      "id": "sequence-alignment-theory",
+      "title": "Pairwise Sequence Alignment: Scores, Matrices and Dynamic Programming",
+      "hours": 5,
+      "hook": "Two proteins can look nothing alike letter for letter and still share the same ancestor. To spot that, you need a way to line them up, penalise the gaps, and reward the changes evolution tolerates. That is all an alignment algorithm is: a careful accountant of similarity.",
+      "learningObjectives": [
+        "Distinguish homology (shared ancestry, yes or no) from identity and similarity (measured percentages)",
+        "Build and read a dot plot to spot repeats, insertions and inversions",
+        "Fill in a small Needleman-Wunsch matrix by hand and trace back an optimal global alignment",
+        "Explain how Smith-Waterman differs (local alignment, scores floored at zero) and when to prefer it",
+        "Explain why protein alignments use substitution matrices such as BLOSUM62, and what affine gap penalties are",
+        "Run global and local pairwise alignments with EMBOSS Needle and Water and interpret the output"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Homology",
+          "definition": "Descent from a common ancestor. Sequences are homologous or they are not; 'percent homology' is a misnomer. Homology is inferred from statistically significant similarity."
+        },
+        {
+          "term": "Percent identity",
+          "definition": "The fraction of aligned positions with exactly the same residue. It depends on alignment length and method, so always quote it together with the aligned region."
+        },
+        {
+          "term": "Substitution matrix",
+          "definition": "A table of scores for replacing one amino acid with another. Scores reflect how often the substitution is observed in related proteins compared with chance."
+        },
+        {
+          "term": "PAM and BLOSUM",
+          "definition": "Two families of matrices. PAM (Dayhoff) extrapolates from closely related proteins; BLOSUM is derived directly from conserved blocks clustered at a given identity, so BLOSUM62 is built from blocks with at most 62% identity."
+        },
+        {
+          "term": "Gap penalty",
+          "definition": "A cost for introducing a gap. Affine penalties charge a larger cost to open a gap and a smaller cost per extra position, because one insertion event often adds several residues."
+        },
+        {
+          "term": "Global alignment (Needleman-Wunsch)",
+          "definition": "Aligns two sequences end to end using dynamic programming; best for sequences of similar length that are expected to be related along their whole length."
+        },
+        {
+          "term": "Local alignment (Smith-Waterman)",
+          "definition": "Finds the best-scoring matching region, allowing the rest to be ignored. Scores never fall below zero in the matrix; the trace-back starts at the highest cell."
+        },
+        {
+          "term": "Dynamic programming",
+          "definition": "Solving a large problem by solving and storing sub-problems. Each matrix cell takes the best of three moves (diagonal match/mismatch, or a gap in either sequence), so the optimal alignment is found without trying every possibility."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine laying two strings of beads side by side and sliding them to make as many colours line up as possible, allowed to insert blank spaces. Each choice earns or loses points: a match scores up, a mismatch scores down, a gap costs. The algorithm simply finds the arrangement with the most points. Where the analogy breaks: real substitution scores are not just match or mismatch; swapping leucine for isoleucine costs very little because they are chemically alike, while swapping leucine for aspartate costs a lot.",
+        "intermediate": "Hands-on (practical): (1) Using a simple scoring scheme (match +1, mismatch -1, gap -2), fill a Needleman-Wunsch matrix on paper for two short sequences of about eight residues and write the optimal alignment; check your result in EMBOSS Needle. (2) Repeat with Smith-Waterman and compare the local result from EMBOSS Water. (3) Align human and chicken hemoglobin alpha from UniProt with BLOSUM62 default parameters, then change the matrix to BLOSUM45 and BLOSUM80 and note how identity and score change. (4) Make a dot plot of a sequence against itself (for example a repeat-containing protein) and mark the repeats. Deliverable: a short paragraph comparing global and local results and saying which you would use to compare a single-domain enzyme with a multi-domain protein, and why.",
+        "advanced": "Needleman-Wunsch and Smith-Waterman run in time proportional to the product of the sequence lengths m and n; this is exact but too slow for database searches, which is why BLAST uses heuristics (next unit). Affine gaps are handled with three matrices (Gotoh). Scores in bits make matrices comparable: a BLOSUM entry is a scaled log-odds ratio of the observed substitution frequency to the frequency expected from background composition. Statistical significance of local alignment scores follows an extreme value distribution (Karlin-Altschul); this is what lets BLAST convert a raw score to an E-value. Variations worth knowing: semi-global alignment for primer or read mapping, profile and HMM alignments for remote homologs, and the fact that a high-scoring alignment is not guaranteed to be the biologically correct one when sequences are low complexity or highly diverged."
+      },
+      "commonMistakes": [
+        "Saying '40% homologous'. Homology is a yes or no inference; 40% is identity or similarity.",
+        "Comparing percent identity values from alignments of very different length or from different algorithms as though they were equivalent.",
+        "Using a global alignment for sequences where only one domain is shared, which forces nonsense alignment of the unrelated parts.",
+        "Using a nucleotide alignment on a coding sequence when the amino acid sequence would reveal much more distant relationships."
+      ],
+      "animation": "sequence-alignment",
+      "videos": [
+        {
+          "youtubeId": "S07kIY2ihq8",
+          "title": "2.2 Alignment dot plots",
+          "channel": "Barry Grant",
+          "level": "beginner",
+          "whyWatch": "An instructor explains how a dot plot reveals similarity, repeats and indels before any scoring is introduced."
+        },
+        {
+          "youtubeId": "ipp-pNRIp4g",
+          "title": "Global Sequence Alignment & Needleman-Wunsch | Algorithm and Example",
+          "channel": "Bioinformatica",
+          "level": "intermediate",
+          "whyWatch": "A worked example of filling the matrix and tracing back, which you can pause and replicate on paper."
+        },
+        {
+          "youtubeId": "lu9ScxSejSE",
+          "title": "Local Sequence Alignment & Smith-Waterman | Algorithm and Example",
+          "channel": "Bioinformatica",
+          "level": "intermediate",
+          "whyWatch": "Shows exactly what changes from Needleman-Wunsch: the zero floor and the start of the trace-back."
+        },
+        {
+          "youtubeId": "eZsGfmZ3gzU",
+          "title": "PAM and BLOSUM substitution matrices - Concepts",
+          "channel": "Farhan Haq",
+          "level": "intermediate",
+          "whyWatch": "Explains where substitution matrices come from, and why you choose one matrix over another for closely or distantly related sequences."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0022-2836(70)90057-4",
+          "title": "A general method applicable to the search for similarities in the amino acid sequence of two proteins",
+          "authors": "Needleman SB, Wunsch CD",
+          "year": 1970,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "The original dynamic-programming approach to aligning two protein sequences end to end. Read the first pages to see the idea in its first form; the notation looks different from your slides but the logic is identical."
+        },
+        {
+          "doi": "10.1016/0022-2836(81)90087-5",
+          "title": "Identification of common molecular subsequences",
+          "authors": "Smith TF, Waterman MS",
+          "year": 1981,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "Two pages that changed bioinformatics: the local alignment algorithm. Understanding it makes the logic of BLAST's extension step obvious."
+        },
+        {
+          "doi": "10.1073/pnas.89.22.10915",
+          "title": "Amino acid substitution matrices from protein blocks",
+          "authors": "Henikoff S, Henikoff JG",
+          "year": 1992,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Introduced the BLOSUM matrices that are still the default in BLAST. It explains why they were built from conserved blocks and what the number in BLOSUM62 means."
+        }
+      ],
+      "resources": [
+        {
+          "title": "EMBOSS Needle (global alignment)",
+          "provider": "EMBL-EBI",
+          "type": "tool",
+          "url": "https://www.ebi.ac.uk/jdispatcher/psa/emboss_needle",
+          "free": true,
+          "level": "beginner",
+          "note": "Web implementation of Needleman-Wunsch with adjustable matrix and gap penalties; use to check your hand-filled matrices."
+        },
+        {
+          "title": "EMBOSS Water (local alignment)",
+          "provider": "EMBL-EBI",
+          "type": "tool",
+          "url": "https://www.ebi.ac.uk/jdispatcher/psa/emboss_water",
+          "free": true,
+          "level": "beginner",
+          "note": "Web implementation of Smith-Waterman; compare its output with Needle on the same pair to see local versus global behaviour."
+        },
+        {
+          "title": "Rosalind: Bioinformatics Stronghold",
+          "provider": "Rosalind",
+          "type": "interactive",
+          "url": "https://rosalind.info/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Graded programming problems that build the algorithms from scratch, including global and local alignment; excellent once you start Biopython or Python."
+        },
+        {
+          "title": "Bioinformatics Algorithms (Compeau and Pevzner)",
+          "provider": "Bioinformatics Algorithms",
+          "type": "textbook",
+          "url": "https://www.bioinformaticsalgorithms.org/",
+          "free": false,
+          "level": "advanced",
+          "note": "A textbook and course that derive alignment and related algorithms from biological questions; the printed book is paid but the site gives access to materials and the associated online course."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Two proteins share 35% identity over a 300-residue alignment, and the match is statistically significant. Which statement is best?",
+          "options": [
+            "They are 35% homologous",
+            "They are likely homologous, sharing 35% identity over the aligned region",
+            "They cannot be related because identity is below 50%",
+            "They are analogous, not homologous"
+          ],
+          "answer": 1,
+          "explanation": "Homology is inferred from significant similarity and is a yes-or-no state; 35% is the measured identity."
+        },
+        {
+          "question": "What is the key difference between Smith-Waterman and Needleman-Wunsch?",
+          "options": [
+            "Smith-Waterman only aligns DNA",
+            "Smith-Waterman cannot use gap penalties",
+            "Smith-Waterman gives local alignments, with negative scores reset to zero and trace-back from the highest cell",
+            "Smith-Waterman gives a global alignment that is faster"
+          ],
+          "answer": 2,
+          "explanation": "Local alignment allows the alignment to start and end anywhere, which is achieved by flooring scores at zero."
+        },
+        {
+          "question": "Why do BLOSUM matrices give a small penalty (or even a positive score) for replacing isoleucine with valine?",
+          "options": [
+            "Both are charged residues",
+            "These substitutions are observed frequently in related proteins because the residues are chemically similar",
+            "They have the same codon",
+            "They always occur in alpha helices"
+          ],
+          "answer": 1,
+          "explanation": "Scores are log-odds of observed substitution frequency against chance; conservative substitutions between similar residues occur often and score better."
+        }
+      ]
+    },
+    {
+      "id": "blast-searching",
+      "title": "BLAST: Searching Databases for Homologs",
+      "hours": 6,
+      "hook": "You have just sequenced something from a soil bacterium and you have no idea what it is. In under a minute BLAST can compare it with hundreds of millions of sequences and hand back a ranked list of relatives. The real skill is knowing which of those hits to believe.",
+      "learningObjectives": [
+        "Choose the right BLAST program (blastn, megablast, blastp, blastx, tblastn, tblastx) for a given question",
+        "Set sensible database, organism, algorithm and threshold parameters and explain what they change",
+        "Explain what a bit score and an E-value mean, and why neither is the probability that the match is real",
+        "Read the BLAST results page: graphic summary, descriptions table, alignments, taxonomy and distance tree",
+        "Judge whether a hit supports a claim of homology, function or species identity",
+        "Document a BLAST search so it can be repeated"
+      ],
+      "keyConcepts": [
+        {
+          "term": "BLAST heuristic",
+          "definition": "BLAST finds short high-scoring 'words' shared between the query and database sequences, then extends them into local alignments. It trades a little sensitivity for a huge speed gain over full dynamic programming."
+        },
+        {
+          "term": "Raw score and bit score",
+          "definition": "The raw score is the sum of substitution and gap scores for the alignment. The bit score rescales it using the matrix statistics so scores from different searches are comparable."
+        },
+        {
+          "term": "E-value",
+          "definition": "The number of alignments with a score at least this good that you would expect by chance in a database of this size. A smaller E-value is stronger evidence; it grows with database size."
+        },
+        {
+          "term": "Query coverage",
+          "definition": "The fraction of your query that is part of the alignment. A high identity over a tiny fragment is far less informative than moderate identity over the whole sequence."
+        },
+        {
+          "term": "BLAST program choice",
+          "definition": "blastn compares nucleotide to nucleotide; blastp, protein to protein; blastx translates your nucleotide query in six frames against a protein database; tblastn compares a protein against translated nucleotides; megablast is optimised for highly similar nucleotide sequences."
+        },
+        {
+          "term": "Low complexity filter",
+          "definition": "Masks regions of repetitive or biased composition that can produce misleading high-scoring matches."
+        },
+        {
+          "term": "Reference database choice",
+          "definition": "Searching nr, RefSeq or Swiss-Prot gives different answers; curated, smaller databases give cleaner annotation, while larger ones find more distant hits."
+        },
+        {
+          "term": "PSI-BLAST",
+          "definition": "An iterated protein search that builds a position-specific scoring matrix from the first round's hits, enabling detection of more distant relatives than ordinary BLASTP."
+        }
+      ],
+      "deeper": {
+        "beginner": "BLAST is like searching a huge text archive for a quotation: you give it your fragment and it tells you where similar passages occur, ranked by how surprising the match is. A tiny E-value says that matches this good rarely occur by chance. Where the analogy breaks: in text, you either find the quote or you do not; in biology, similarity decays gradually with evolutionary distance, so you always have to decide how much resemblance is enough to claim relationship.",
+        "intermediate": "Hands-on (practical): (1) Take a provided unknown nucleotide sequence of a few hundred bases. Run megablast, then blastn (more dissimilar sequences), and compare. Note top hits, E-values, coverage and identity, and use the taxonomy report to decide the likely organism. (2) Translate the same sequence with the NCBI ORFfinder or Expasy Translate, run blastp on the longest protein, and compare with blastx on the raw nucleotide. (3) Run BLASTP of human hemoglobin beta against Swiss-Prot restricted to vertebrates and again against nr with no restriction; compare hit lists. (4) Experiment: shuffle the protein sequence and rerun BLAST to see what a 'chance' result looks like. Deliverable: a short report that states the question, parameters, top three hits with E-value and coverage, and an interpretation that distinguishes 'similar' from 'same function'.",
+        "advanced": "The Karlin-Altschul statistics give E = K m n e^(-lambda S) for a raw score S, where m and n are the effective lengths of the query and database; lambda and K depend on the scoring system. Converting to bit scores S' = (lambda S - ln K) / ln 2 gives E = m n 2^(-S'), so a bit score is independent of the scoring system. Edge effects and composition-based statistics adjust scores for biased amino acid composition. Know the limits: BLAST cannot detect very remote homologs that profile or HMM methods can (PSI-BLAST, HMMER, HHblits), top hits may be mislabelled annotations from the database, and the best hit is not necessarily the closest relative or the true ortholog. For species identification you should look at the full distribution of hits and their phylogenetic placement, not only the top line."
+      },
+      "commonMistakes": [
+        "Reading the E-value as the probability that the hit is wrong, or ignoring that it depends on database size.",
+        "Trusting the top hit's name as the function of your protein without checking coverage and annotation quality.",
+        "Using blastn for diverged coding sequences, where a protein-level search (blastx or blastp) is far more sensitive.",
+        "Leaving every parameter at default without understanding them, or restricting the organism too early and missing a closer relative."
+      ],
+      "videos": [
+        {
+          "youtubeId": "WRKQGwh_Mw0",
+          "title": "How to Use BLAST for Finding and Aligning DNA or Protein Sequences",
+          "channel": "Science Buddies",
+          "level": "beginner",
+          "whyWatch": "A clean demonstration of running a first BLAST search and reading the output."
+        },
+        {
+          "youtubeId": "ZN3RrXAe0uM",
+          "title": "BLAST Results: Expect Values, Part 1",
+          "channel": "National Library of Medicine",
+          "level": "intermediate",
+          "whyWatch": "Short official explanation of the Expect value, the number most students misread."
+        },
+        {
+          "youtubeId": "dzRq-5BrGD4",
+          "title": "BLAST Results: Expect Values, Part 2",
+          "channel": "National Library of Medicine",
+          "level": "intermediate",
+          "whyWatch": "Follows Part 1 with examples of how thresholds and database size change the E-value you see."
+        },
+        {
+          "youtubeId": "2FW1dk5YQ3I",
+          "title": "NCBI Minute: Using BLAST Well",
+          "channel": "National Library of Medicine",
+          "level": "advanced",
+          "whyWatch": "An NCBI staff session on choosing programs and parameters properly and interpreting results critically, worth watching after your first search."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/S0022-2836(05)80360-2",
+          "title": "Basic local alignment search tool",
+          "authors": "Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ",
+          "year": 1990,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "The original BLAST paper. Short and readable, it explains the word-seeding idea and the statistics that give meaning to a score."
+        },
+        {
+          "doi": "10.1093/nar/25.17.3389",
+          "title": "Gapped BLAST and PSI-BLAST: a new generation of protein database search programs",
+          "authors": "Altschul SF, Madden TL, Schaffer AA et al",
+          "year": 1997,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Introduced gapped alignments and the iterative PSI-BLAST search that underpins modern protein homology detection."
+        },
+        {
+          "doi": "10.1002/0471250953.bi0301s42",
+          "title": "An Introduction to Sequence Similarity (Homology) Searching",
+          "authors": "Pearson WR",
+          "year": 2013,
+          "journal": "Current Protocols in Bioinformatics",
+          "level": "intermediate",
+          "whyItMatters": "A practical, expert guide to when similarity implies homology and why protein-level searches outperform DNA-level ones for distant relatives. Read the key points before interpreting any result."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI BLAST (web)",
+          "provider": "NCBI / NLM",
+          "type": "tool",
+          "url": "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+          "free": true,
+          "level": "beginner",
+          "note": "The tool for this unit's practicals; start with the program selection page."
+        },
+        {
+          "title": "BLAST Help documentation",
+          "provider": "NCBI / NLM",
+          "type": "reference",
+          "url": "https://blast.ncbi.nlm.nih.gov/doc/blast-help/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Definitions of every parameter and output field, including the scoring statistics, from the people who maintain BLAST."
+        },
+        {
+          "title": "BLAST Help (Bookshelf manual)",
+          "provider": "NCBI / NLM",
+          "type": "reference",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK1762/",
+          "free": true,
+          "level": "advanced",
+          "note": "Detailed manual including command-line BLAST+, relevant if you later search local databases or automate searches."
+        },
+        {
+          "title": "SmartBLAST",
+          "provider": "NCBI / NLM",
+          "type": "tool",
+          "url": "https://blast.ncbi.nlm.nih.gov/smartblast/",
+          "free": true,
+          "level": "beginner",
+          "note": "A fast way to identify what a protein probably is by comparing against a curated set; handy as a cross-check on a regular BLASTP result."
+        },
+        {
+          "title": "NCBI Conserved Domain Database",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/cdd/",
+          "free": true,
+          "level": "intermediate",
+          "note": "BLAST results link to conserved domains here; useful to see which part of your query actually matches."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "You have a protein sequence and want to search a nucleotide database that includes unannotated genomes. Which BLAST program is appropriate?",
+          "options": [
+            "blastp",
+            "megablast",
+            "tblastn",
+            "blastx"
+          ],
+          "answer": 2,
+          "explanation": "tblastn compares a protein query to a nucleotide database translated in all six frames, so it finds coding regions that have no protein annotation."
+        },
+        {
+          "question": "A hit has an E-value of 3e-30 but covers only 8% of your query. What is the best conclusion?",
+          "options": [
+            "The full-length protein is almost certainly the same as the hit",
+            "A short region (such as a conserved domain) is significantly similar; whole-protein function cannot be inferred",
+            "The hit is a false positive",
+            "The E-value is wrong"
+          ],
+          "answer": 1,
+          "explanation": "Significance applies to the aligned region. A small matched region likely reflects a shared domain, not shared whole-protein function."
+        },
+        {
+          "question": "What happens to the E-value of the same alignment if the database size doubles?",
+          "options": [
+            "It halves",
+            "It doubles",
+            "It does not change",
+            "It becomes zero"
+          ],
+          "answer": 1,
+          "explanation": "The E-value is the expected number of chance hits at least this good; a database twice as large offers twice as many opportunities for a chance match."
+        }
+      ]
+    },
+    {
+      "id": "msa-phylogenetics",
+      "title": "Multiple Sequence Alignment and Phylogenetic Trees",
+      "hours": 6,
+      "hook": "Line up the same protein from twenty species and the columns tell a story: positions that never change are the ones evolution refuses to let you break. From those same columns you can then draw a tree of life for a single gene.",
+      "learningObjectives": [
+        "Explain why multiple alignments are more informative than pairwise ones and how progressive alignment works at a conceptual level",
+        "Align a set of homologous proteins with Clustal Omega or MAFFT and inspect the result in Jalview or a similar viewer",
+        "Identify conserved, semi-conserved and variable positions and relate them to likely function",
+        "Describe the main tree-building approaches: distance (neighbour-joining, UPGMA), maximum parsimony, maximum likelihood and Bayesian",
+        "Read a tree: root, node, clade, branch length, and the meaning of bootstrap values",
+        "Build and annotate a simple neighbour-joining tree and state its limitations"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Multiple sequence alignment (MSA)",
+          "definition": "An alignment of three or more homologous sequences in which each column is hypothesised to descend from one ancestral position."
+        },
+        {
+          "term": "Progressive alignment",
+          "definition": "Heuristic method: compute a guide tree from pairwise distances, then align the most similar sequences first and add the rest in order of relatedness."
+        },
+        {
+          "term": "Conservation",
+          "definition": "A column with the same residue across species is likely under constraint, often because it is catalytic, structural or binding. Conserved glycines and cysteines are common candidates."
+        },
+        {
+          "term": "Homologs, orthologs, paralogs",
+          "definition": "Orthologs diverged by speciation; paralogs diverged by gene duplication. Orthologs often keep the same function, paralogs often diverge."
+        },
+        {
+          "term": "Phylogenetic tree",
+          "definition": "A hypothesis of evolutionary relationships among sequences or taxa. Tips are the sampled sequences, nodes are inferred ancestors, branch lengths often represent expected substitutions per site."
+        },
+        {
+          "term": "Neighbour-joining",
+          "definition": "A fast distance-based clustering method that builds an unrooted tree by repeatedly joining the pair of nodes that minimises total tree length; popular for first-pass trees."
+        },
+        {
+          "term": "Maximum likelihood",
+          "definition": "Chooses the tree and parameters that make the observed alignment most probable under an explicit substitution model; usually more accurate but slower than distance methods."
+        },
+        {
+          "term": "Bootstrap support",
+          "definition": "A resampling of alignment columns used to measure how consistently a branch is recovered. Higher values indicate more stable grouping, not proof that it is correct."
+        },
+        {
+          "term": "Outgroup",
+          "definition": "A sequence known to branch outside the group of interest, used to root the tree and give direction to the history."
+        }
+      ],
+      "deeper": {
+        "beginner": "A multiple alignment is like lining up many translations of the same sentence: words that stay the same across all versions are probably essential to the meaning, and parts that vary freely are probably flexible. A tree built from them is a family tree for the gene, not for the species. Where the analogy breaks: unlike translations, sequences evolve by copying with errors over millions of years, genes get duplicated and lost, and the tree of one gene can differ from the species tree.",
+        "intermediate": "Hands-on (practical): (1) Retrieve hemoglobin beta (or another small protein family) from at least eight species from UniProt, including one distant outgroup such as a myoglobin or a plant leghemoglobin. (2) Align with Clustal Omega; open the result in Jalview, colour by conservation, and identify the invariant residues (for example the proximal histidine in globins). (3) Build a neighbour-joining tree from the alignment in Clustal Omega, MEGA or another tool; display it in iTOL and root with the outgroup. (4) Compare with the species relationships you know from taxonomy; list any surprises and propose explanations (long-branch attraction, paralogs, misaligned regions). Deliverable: an annotated alignment image plus a tree with a paragraph interpreting one clade and one conserved column.",
+        "advanced": "Alignment errors propagate into trees, so evaluate alignments critically and trim poorly aligned regions (for example with trimAl) only with justification. Choose a substitution model by comparing fit statistics (AIC, BIC) as implemented in ModelFinder or ProtTest, and use maximum likelihood with ultrafast bootstrap (IQ-TREE) or Bayesian inference (MrBayes) for publication-quality trees; understand that neighbour-joining and parsimony make different assumptions. Rooting by outgroup, midpoint or molecular clock changes the story. Gene trees need reconciliation with species trees when duplications, losses or horizontal transfer have occurred. For a protein family, a tree without domain architecture can mislead because domain gain and loss break the assumption of full-length homology."
+      },
+      "commonMistakes": [
+        "Aligning sequences that are not homologous (or only share one domain) and then interpreting the tree as evolutionary history.",
+        "Treating a bootstrap value of 100 as proof that the relationship is true; it measures support within the dataset and model, not truth.",
+        "Reading tip order on the page as relatedness: branches can be rotated at nodes without changing the tree.",
+        "Rooting trees arbitrarily or omitting an outgroup and then interpreting direction of evolution."
+      ],
+      "videos": [
+        {
+          "youtubeId": "u3UiuG2fqhc",
+          "title": "Multiple Sequence Alignment and phylogenetic tree using Clustal Omega (Tutorial)",
+          "channel": "Farhan Haq",
+          "level": "beginner",
+          "whyWatch": "A step-by-step run of the exact workflow in this unit's practical: input sequences, alignment and tree."
+        },
+        {
+          "youtubeId": "6_XMKmFQ_w8",
+          "title": "Understanding and building phylogenetic trees",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Clear conceptual explanation of nodes, branches and how to build and read a tree before you meet the algorithms."
+        },
+        {
+          "youtubeId": "cIQobFHFwcM",
+          "title": "Intro to Cladograms and Phylogenetic Trees",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Friendly practice with reading trees and avoiding the usual misreadings."
+        },
+        {
+          "youtubeId": "7tn90VWGmV4",
+          "title": "The Neighbour Joining algorithm for phylogenetic tree estimation",
+          "channel": "Biotech and Bioinformatics with Prof Greg",
+          "level": "intermediate",
+          "whyWatch": "Walks through the neighbour-joining steps on a distance matrix so the Clustal Omega tree is no longer a black box."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/msb.2011.75",
+          "title": "Fast, scalable generation of high-quality protein multiple sequence alignments using Clustal Omega",
+          "authors": "Sievers F, Wilm A, Dineen D et al",
+          "year": 2011,
+          "journal": "Molecular Systems Biology",
+          "level": "intermediate",
+          "whyItMatters": "Describes the aligner you will use in the practical and shows how a progressive method was scaled to thousands of sequences.",
+          "openAccessUrl": "https://doi.org/10.1038/msb.2011.75"
+        },
+        {
+          "doi": "10.1093/oxfordjournals.molbev.a040454",
+          "title": "The neighbor-joining method: a new method for reconstructing phylogenetic trees",
+          "authors": "Saitou N, Nei M",
+          "year": 1987,
+          "journal": "Molecular Biology and Evolution",
+          "level": "advanced",
+          "whyItMatters": "The original neighbour-joining paper. Even if you skim the maths, the opening sections explain why a fast, distance-based method became the default first tree."
+        },
+        {
+          "doi": "10.1093/molbev/msy096",
+          "title": "MEGA X: Molecular Evolutionary Genetics Analysis across Computing Platforms",
+          "authors": "Kumar S, Stecher G, Li M, Knyaz C, Tamura K",
+          "year": 2018,
+          "journal": "Molecular Biology and Evolution",
+          "level": "intermediate",
+          "whyItMatters": "Describes a free desktop package widely used for alignments and trees in Sri Lankan and international labs; useful reading before you use it in a project.",
+          "openAccessUrl": "https://doi.org/10.1093/molbev/msy096"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Clustal Omega (web)",
+          "provider": "EMBL-EBI",
+          "type": "tool",
+          "url": "https://www.ebi.ac.uk/jdispatcher/msa/clustalo",
+          "free": true,
+          "level": "beginner",
+          "note": "Web aligner used in the practical, with simple tree output."
+        },
+        {
+          "title": "MAFFT online server",
+          "provider": "Kyoto University",
+          "type": "tool",
+          "url": "https://mafft.cbrc.jp/alignment/server/",
+          "free": true,
+          "level": "intermediate",
+          "note": "An alternative aligner often more accurate on difficult families; useful for comparing two methods on the same data."
+        },
+        {
+          "title": "Jalview",
+          "provider": "University of Dundee",
+          "type": "tool",
+          "url": "https://www.jalview.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free alignment viewer and editor for colouring by conservation and exporting figures."
+        },
+        {
+          "title": "MEGA software",
+          "provider": "MEGA Software",
+          "type": "tool",
+          "url": "https://www.megasoftware.net/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free desktop package for alignment, model selection and trees including neighbour-joining and maximum likelihood."
+        },
+        {
+          "title": "iTOL: Interactive Tree Of Life",
+          "provider": "EMBL",
+          "type": "tool",
+          "url": "https://itol.embl.de/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Upload a Newick tree and annotate, root and colour it for a clean figure."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which relationship describes genes that diverged because of a duplication event within a genome?",
+          "options": [
+            "Orthologs",
+            "Paralogs",
+            "Analogs",
+            "Xenologs only"
+          ],
+          "answer": 1,
+          "explanation": "Paralogs arise by duplication, orthologs by speciation. Mixing them in a tree can give a gene tree that does not match the species tree."
+        },
+        {
+          "question": "What does a bootstrap value of 95 on a branch tell you?",
+          "options": [
+            "There is a 95% probability the grouping is true",
+            "95% of resampled alignments recovered that grouping, so it is stable within the data and model",
+            "The branch is 95% longer than others",
+            "The sequences are 95% identical"
+          ],
+          "answer": 1,
+          "explanation": "Bootstrap measures repeatability under resampling of the alignment, not the probability that the relationship is correct."
+        },
+        {
+          "question": "You see a column that is a glycine in all twenty aligned species. What is the most reasonable first hypothesis?",
+          "options": [
+            "The position is probably unimportant",
+            "The alignment is wrong",
+            "The residue is probably under strong functional or structural constraint",
+            "The residue was introduced by sequencing error"
+          ],
+          "answer": 2,
+          "explanation": "Strict conservation across divergent homologs suggests purifying selection; check the structure or literature to test the hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "protein-sequence-structure",
+      "title": "Protein Sequence, Domains and Structure: InterPro, PDB and AlphaFold",
+      "hours": 6,
+      "hook": "A protein sequence is a string of letters; a structure is the thing that actually does the work. In the last few years, structures went from rare, hard-won treasures to something you can download for almost any protein in seconds, and you have to learn how much to trust them.",
+      "learningObjectives": [
+        "Annotate a protein with InterPro and Pfam to identify domains, families and sites",
+        "Calculate basic properties (length, molecular weight, theoretical pI, extinction coefficient) with ExPASy ProtParam",
+        "Search the PDB, interpret entry metadata (method, resolution, ligands) and view a structure in Mol*",
+        "Explain what AlphaFold predicts, how to read pLDDT and PAE, and where predictions should not be trusted",
+        "Link sequence conservation, domains and structure to propose functional regions",
+        "Distinguish experimental from predicted models when reporting results"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Domain",
+          "definition": "A compact, often independently folding region of a protein that frequently carries a specific function; many proteins are built from several domains."
+        },
+        {
+          "term": "InterPro",
+          "definition": "A resource that integrates signatures from member databases (Pfam, PROSITE, SMART, CDD, PANTHER and others) to classify proteins into families and detect domains and sites."
+        },
+        {
+          "term": "Profile HMM",
+          "definition": "A probabilistic model of a protein family built from a multiple alignment; far more sensitive than a single-sequence search for detecting distant members."
+        },
+        {
+          "term": "PDB entry",
+          "definition": "A deposited experimental structure with a four-character ID, determined by X-ray crystallography, NMR spectroscopy or cryo-electron microscopy; metadata includes resolution, ligands and the chains present."
+        },
+        {
+          "term": "Resolution",
+          "definition": "For crystallography and cryo-EM, a measure of detail in angstroms; smaller numbers show finer detail, but resolution alone does not guarantee that every region is well defined."
+        },
+        {
+          "term": "AlphaFold model",
+          "definition": "A neural-network prediction of 3D structure from sequence and evolutionary information; an extremely useful hypothesis that reports its own confidence per residue."
+        },
+        {
+          "term": "pLDDT",
+          "definition": "Predicted local distance difference test, a per-residue confidence score from 0 to 100: above 90 very high, 70 to 90 confident, 50 to 70 low, below 50 very low (often disordered regions)."
+        },
+        {
+          "term": "PAE",
+          "definition": "Predicted aligned error, a matrix showing expected position error between pairs of residues; it tells you whether the relative placement of domains is reliable."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of a domain as a Lego module, the same shape appearing in many different models. InterPro is like a catalogue that recognises modules in any protein you give it. The PDB holds photographs of real proteins taken with special microscopes or X-rays, while AlphaFold models are very good drawings predicted by a computer, with a colour code showing where the artist was confident. Where the analogy breaks: proteins move, and a single static model, experimental or predicted, is just one snapshot.",
+        "intermediate": "Hands-on (practical): (1) Take a human enzyme you have met in another module and look it up in UniProt. On its InterPro page list the domains, family and active-site signatures and draw the domain architecture. (2) Use ExPASy ProtParam to compute molecular weight, theoretical pI and extinction coefficient; relate these to a purification plan (which buffer pH, which wavelength). (3) Search the RCSB PDB for structures of the same protein; compare an apo and a ligand-bound entry, note resolution and method, and load one in Mol*. (4) Open the AlphaFold DB model for the same protein, colour by pLDDT, inspect the PAE plot, and superimpose it on the experimental structure if available. Deliverable: one figure and one paragraph explaining where the prediction and experiment agree, where they do not, and why.",
+        "advanced": "AlphaFold2 uses multiple sequence alignments and templates processed by an attention-based architecture ('Evoformer') to predict coordinates; AlphaFold 3 extends this to complexes with nucleic acids, ligands and ions. Predictions are monomeric in the database, so they omit ligands, cofactors, post-translational modifications and often the correct conformational state. Low pLDDT regions frequently correspond to intrinsic disorder rather than failure. Model confidence does not report the effect of point mutations, so using AlphaFold models for variant effect inference requires dedicated methods. For experimental structures consider validation reports (clashscore, Ramachandran outliers, map-model fit), and understand that a 2.0 angstrom crystal structure and a 3.5 angstrom cryo-EM map have very different reliability for side chains. Be ready to explain why PDB structures are biased toward proteins that crystallise or behave well in solution."
+      },
+      "commonMistakes": [
+        "Treating an AlphaFold model as an experimental structure, or reporting it without stating the confidence of the region discussed.",
+        "Interpreting low-confidence (low pLDDT) loops as real flexible loops rather than unreliable or disordered regions.",
+        "Choosing a PDB entry on resolution alone and ignoring ligands, mutations and missing regions in the chain you need.",
+        "Assuming a predicted domain from a database signature proves the protein has that function, without checking key catalytic residues."
+      ],
+      "videos": [
+        {
+          "youtubeId": "EdgmALgbJpM",
+          "title": "Exploring PDB Structures in 3D with MolStar (Mol*): Introductory Guide",
+          "channel": "RCSBProteinDataBank",
+          "level": "beginner",
+          "whyWatch": "The RCSB's own guide to the viewer you will use to rotate, colour and measure structures."
+        },
+        {
+          "youtubeId": "P_fHJIYENdI",
+          "title": "AlphaFold - The Most Useful Thing AI Has Ever Done",
+          "channel": "Veritasium",
+          "level": "beginner",
+          "whyWatch": "A story-driven account of the protein-folding problem, CASP and why AlphaFold mattered."
+        },
+        {
+          "youtubeId": "5k8Lm9w9mpY",
+          "title": "Accessing and interpreting predicted protein structures from AlphaFold database",
+          "channel": "EMBL's European Bioinformatics Institute EMBL-EBI",
+          "level": "intermediate",
+          "whyWatch": "Trainers from the AlphaFold DB team show how to read pLDDT and PAE and how to avoid over-interpretation."
+        },
+        {
+          "youtubeId": "xeBN8HPlkpE",
+          "title": "Finding Pfam's protein families data in the InterPro website",
+          "channel": "EMBL's European Bioinformatics Institute EMBL-EBI",
+          "level": "intermediate",
+          "whyWatch": "Shows how to find and read family and domain annotation in InterPro, which now hosts Pfam."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/nar/28.1.235",
+          "title": "The Protein Data Bank",
+          "authors": "Berman HM, Westbrook J, Feng Z et al",
+          "year": 2000,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "A foundational description of the archive that now underlies structural biology and the training data for AlphaFold; useful to understand what a PDB entry represents and how data are validated."
+        },
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A et al",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The paper that turned structure prediction from a research problem into a routine tool. Even if the methods are dense, the first figures and the discussion of confidence are accessible and essential.",
+          "openAccessUrl": "https://doi.org/10.1038/s41586-021-03819-2"
+        },
+        {
+          "doi": "10.1093/nar/gkad1011",
+          "title": "AlphaFold Protein Structure Database in 2024: providing structure coverage for over 214 million protein sequences",
+          "authors": "Varadi M, Bertoni D, Magana P et al",
+          "year": 2024,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Explains how the database is organised, what the confidence metrics mean and how to use the models responsibly; a practical read before you rely on a predicted structure."
+        },
+        {
+          "doi": "10.1093/nar/gkac993",
+          "title": "InterPro in 2022",
+          "authors": "Paysan-Lafosse T, Blum M, Chuguransky S et al",
+          "year": 2023,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Shows how InterPro combines several signature databases to classify proteins, and what each part of an InterPro entry page means."
+        }
+      ],
+      "resources": [
+        {
+          "title": "InterPro",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/interpro/",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste a sequence or accession to get a domain and family annotation; the main tool for this unit's first practical task."
+        },
+        {
+          "title": "InterPro Quick Tour",
+          "provider": "EMBL-EBI Training",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/interpro-quick-tour/",
+          "free": true,
+          "level": "beginner",
+          "note": "A short guided tour of the InterPro website, ideal before the practical."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Search experimental structures and load them in the built-in Mol* viewer."
+        },
+        {
+          "title": "PDB-101",
+          "provider": "RCSB PDB",
+          "type": "reference",
+          "url": "https://pdb101.rcsb.org/learn",
+          "free": true,
+          "level": "beginner",
+          "note": "Beginner-friendly explanations, including the Molecule of the Month series and guides to reading structures."
+        },
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI / DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up predicted structures by UniProt accession and inspect the confidence plots."
+        },
+        {
+          "title": "ExPASy ProtParam",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "tool",
+          "url": "https://web.expasy.org/protparam/",
+          "free": true,
+          "level": "beginner",
+          "note": "Computes molecular weight, pI, extinction coefficient and amino acid composition from a sequence, handy for planning purification and spectrophotometry."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In an AlphaFold model, a loop region has pLDDT around 35. How should you treat it?",
+          "options": [
+            "As a very reliable loop conformation",
+            "As low confidence, possibly disordered; do not interpret its exact shape",
+            "As proof the protein is membrane-bound",
+            "As an experimental measurement"
+          ],
+          "answer": 1,
+          "explanation": "Residues with pLDDT below 50 have very low confidence, often reflecting intrinsic disorder. Their predicted shape should not be over-interpreted."
+        },
+        {
+          "question": "What does the PAE plot most directly tell you?",
+          "options": [
+            "The resolution of the crystal",
+            "How confident the model is in the relative position of pairs of residues or domains",
+            "The pI of the protein",
+            "The number of homologs found"
+          ],
+          "answer": 1,
+          "explanation": "PAE reports the expected positional error between residue pairs, which helps judge whether two domains are placed reliably relative to each other."
+        },
+        {
+          "question": "Which of the following best describes the PDB?",
+          "options": [
+            "A database of predicted structures only",
+            "An archive of experimentally determined 3D structures of biological macromolecules",
+            "A protein sequence database",
+            "A database of metabolic pathways"
+          ],
+          "answer": 1,
+          "explanation": "The PDB archives experimentally determined structures (X-ray, NMR, cryo-EM); predicted models live in resources such as the AlphaFold DB."
+        }
+      ]
+    },
+    {
+      "id": "genes-genomes-ngs",
+      "title": "Genes, Genomes and High-Throughput Data: ORFs, Genome Browsers and RNA-seq",
+      "hours": 5,
+      "hook": "A genome is three billion letters with no punctuation. Genome browsers add the punctuation: genes, exons, variants, and the evidence for each. And the machines that read DNA and RNA now produce data faster than any person could look at it, which is why you must learn what a read, a file and a count really are.",
+      "learningObjectives": [
+        "Find open reading frames in a DNA sequence using six-frame translation and explain what makes an ORF a plausible gene",
+        "Navigate a genome browser (Ensembl and UCSC) to locate a gene, its transcripts, exon structure, conservation and known variants",
+        "Describe how Sanger and Illumina sequencing differ in principle, and what long-read sequencing adds",
+        "Recognise the formats FASTA, FASTQ, SAM/BAM, VCF and GFF/GTF and what each contains",
+        "Interpret a Phred quality score",
+        "Outline the steps of an RNA-seq analysis from reads to differentially expressed genes"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Open reading frame (ORF)",
+          "definition": "A stretch of codons from a start codon to an in-frame stop codon. A DNA sequence has six reading frames (three on each strand); long ORFs are more likely to be real coding sequences."
+        },
+        {
+          "term": "Gene annotation",
+          "definition": "Gene models (exons, introns, UTRs, CDS) assigned to a genome by combining computational prediction with evidence such as RNA-seq and protein homology."
+        },
+        {
+          "term": "Reference genome and assembly version",
+          "definition": "A representative genome sequence (for example human GRCh38). Coordinates are meaningless without stating the assembly, since positions shift between versions."
+        },
+        {
+          "term": "Sequencing by synthesis (Illumina)",
+          "definition": "Short reads (typically 50 to 300 bases) produced in massive parallel by detecting fluorescently labelled nucleotides incorporated one at a time; high accuracy, high throughput."
+        },
+        {
+          "term": "Long-read sequencing",
+          "definition": "Technologies (PacBio, Oxford Nanopore) that read single molecules thousands to millions of bases long, helping to resolve repeats and structural variants, with different error profiles."
+        },
+        {
+          "term": "FASTQ and Phred score",
+          "definition": "FASTQ stores each read with a quality string. A Phred score Q equals minus 10 times log10 of the error probability, so Q20 is a 1 in 100 error and Q30 a 1 in 1000 error."
+        },
+        {
+          "term": "Read mapping",
+          "definition": "Aligning reads to a reference genome (output as SAM/BAM) to find where they came from, a prerequisite for variant calling and counting expression."
+        },
+        {
+          "term": "RNA-seq",
+          "definition": "Sequencing of cDNA derived from RNA to estimate which genes are expressed and how much. Counts per gene are compared between conditions using statistical models that account for library size and biological variability."
+        }
+      ],
+      "deeper": {
+        "beginner": "A genome browser is Google Maps for DNA: zoom out and you see chromosomes and genes; zoom in and you see exons, individual bases and variants. Sequencing machines are like shredders in reverse: they read millions of tiny fragments and software must work out where each belongs. Where the analogy breaks: unlike a map, the genome has no single ground truth for every region; repeats and variation mean some regions can be mapped only with confidence scores.",
+        "intermediate": "Hands-on (practical): (1) Paste a provided unknown DNA sequence into NCBI ORFfinder, record the longest ORF, and compare your answer with a manual six-frame translation of the first 100 bases. (2) In Ensembl, open the human TP53 gene (or a gene from your own interest): record the canonical transcript, number of exons, protein length and one disease-associated variant; in UCSC Genome Browser view the same gene and turn on a conservation track. (3) Open a small provided FASTQ file, decode the Phred characters for the first read and compute the expected number of errors. (4) For a provided table of RNA-seq counts, calculate library-size-normalised values (counts per million) for a gene in control and treated samples, and describe what additional statistics you would need before claiming differential expression. Deliverable: a short report with screenshots and a paragraph on how reliable each result is.",
+        "advanced": "Gene prediction ab initio relies on statistical models (hidden Markov models, deep learning) of coding signals, while evidence-based pipelines integrate RNA-seq and protein alignments; alternative splicing and overlapping genes mean one locus can give many products. Variant calling pipelines (alignment, duplicate marking, base-quality recalibration, genotype calling) produce VCF files whose annotation (for example with VEP or ANNOVAR) predicts functional impact. RNA-seq differential expression uses negative binomial models (DESeq2, edgeR) because count data are overdispersed; normalisation by simple TPM or FPKM is not sufficient for between-sample comparison of statistical significance, and multiple testing correction (Benjamini-Hochberg) is essential. Single-cell sequencing adds sparsity and batch effects. Reproducibility requires containers or workflow managers (Galaxy, Nextflow, Snakemake) and a record of software versions."
+      },
+      "commonMistakes": [
+        "Using coordinates from one genome assembly with annotation or tools built on another.",
+        "Believing the longest ORF is always the gene, without checking strand, start codon context, or homology.",
+        "Treating reads as error-free; ignoring quality scores, adapters and contamination before analysis.",
+        "Comparing RNA-seq expression between samples without proper normalisation, replicates, or multiple-testing correction."
+      ],
+      "videos": [
+        {
+          "youtubeId": "9hoQ2ei9vCo",
+          "title": "Lecture 11, concept 08: From DNA to proteins - open reading frames",
+          "channel": "Erik Lindahl",
+          "level": "beginner",
+          "whyWatch": "A short lecture clip on reading frames and ORFs that makes six-frame translation click."
+        },
+        {
+          "youtubeId": "42qZyXSH0Cc",
+          "title": "Introduction to genome browsers using Ensembl",
+          "channel": "Ensembl Training",
+          "level": "beginner",
+          "whyWatch": "Official tour of Ensembl's gene, transcript and variant views, matching the practical you will do."
+        },
+        {
+          "youtubeId": "mI0Fo9kaWqo",
+          "title": "Next Generation Sequencing 1: Overview - Eric Chow (UCSF)",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A scientist explains how modern sequencers work and what you can do with the data."
+        },
+        {
+          "youtubeId": "tlf6wYJrwKY",
+          "title": "StatQuest: A gentle introduction to RNA-seq",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Explains the logic of an RNA-seq experiment and its statistical pitfalls in clear steps."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.74.12.5463",
+          "title": "DNA sequencing with chain-terminating inhibitors",
+          "authors": "Sanger F, Nicklen S, Coulson AR",
+          "year": 1977,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The method that gave us the first genomes and remains the gold standard for confirming a single sequence. Understanding it clarifies how newer methods differ."
+        },
+        {
+          "doi": "10.1038/nrg2484",
+          "title": "RNA-Seq: a revolutionary tool for transcriptomics",
+          "authors": "Wang Z, Gerstein M, Snyder M",
+          "year": 2009,
+          "journal": "Nature Reviews Genetics",
+          "level": "intermediate",
+          "whyItMatters": "A clear review of what RNA-seq measures and how it improved on microarrays; read it for the concepts rather than the specific tools, which have moved on."
+        },
+        {
+          "doi": "10.1093/nar/gkab1049",
+          "title": "Ensembl 2022",
+          "authors": "Cunningham F, Allen JE, Allen J et al",
+          "year": 2022,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Describes the genome browser and data resources you will use, including how gene annotation is produced and what new species and tools were added."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI ORFfinder",
+          "provider": "NCBI / NLM",
+          "type": "tool",
+          "url": "https://www.ncbi.nlm.nih.gov/orffinder/",
+          "free": true,
+          "level": "beginner",
+          "note": "Finds ORFs in all six frames; use alongside manual translation to build intuition."
+        },
+        {
+          "title": "Ensembl genome browser",
+          "provider": "EMBL-EBI / Wellcome Sanger",
+          "type": "database",
+          "url": "https://www.ensembl.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Gene pages, transcripts, variants and comparative genomics for hundreds of species."
+        },
+        {
+          "title": "Ensembl tutorials",
+          "provider": "EMBL-EBI",
+          "type": "tutorial",
+          "url": "https://www.ensembl.org/info/website/tutorials/index.html",
+          "free": true,
+          "level": "beginner",
+          "note": "Official step-by-step guides to the browser and its tools."
+        },
+        {
+          "title": "UCSC Genome Browser training",
+          "provider": "UC Santa Cruz",
+          "type": "tutorial",
+          "url": "https://genome.ucsc.edu/training/",
+          "free": true,
+          "level": "beginner",
+          "note": "Guides and videos for the other major genome browser, with excellent track-based views."
+        },
+        {
+          "title": "Galaxy Training Network",
+          "provider": "Galaxy Project",
+          "type": "course",
+          "url": "https://training.galaxyproject.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free hands-on tutorials running in a web browser, including RNA-seq and variant calling, with no command line required."
+        },
+        {
+          "title": "NCBI Sequence Read Archive (SRA)",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/sra",
+          "free": true,
+          "level": "intermediate",
+          "note": "Where raw sequencing reads from published studies live; search here to find the data behind a paper."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "How many reading frames must you consider when searching a double-stranded DNA sequence for protein-coding ORFs?",
+          "options": [
+            "Three",
+            "Four",
+            "Six",
+            "Twelve"
+          ],
+          "answer": 2,
+          "explanation": "There are three frames on each strand, so six in total, and genes can lie on either strand."
+        },
+        {
+          "question": "A base has Phred quality 30. What is the probability that the base call is wrong?",
+          "options": [
+            "1 in 30",
+            "1 in 100",
+            "1 in 1000",
+            "1 in 10"
+          ],
+          "answer": 2,
+          "explanation": "Q = -10 log10(P), so Q30 corresponds to P = 0.001, one in a thousand."
+        },
+        {
+          "question": "Why is it essential to state the genome assembly version (for example GRCh38) with a coordinate?",
+          "options": [
+            "Different assemblies can place the same locus at different positions",
+            "Assemblies use different chemical bases",
+            "Coordinates are the same across assemblies",
+            "Only mitochondrial DNA changes between assemblies"
+          ],
+          "answer": 0,
+          "explanation": "Assemblies are revised; positions move when gaps are filled or errors fixed, so coordinates only have meaning with their assembly."
+        }
+      ]
+    },
+    {
+      "id": "biopython-scripting",
+      "title": "Scripting with Python and Biopython",
+      "hours": 8,
+      "hook": "Clicking through a web tool once is a result. Doing it for two hundred sequences, in the same way every time, is science. A few lines of Python do exactly that, and Biopython has already written the tedious parts for you.",
+      "learningObjectives": [
+        "Set up a working environment (Google Colab or a local Jupyter notebook) and install Biopython",
+        "Create and manipulate Seq objects: complement, reverse complement, transcribe, translate, GC content",
+        "Read, filter and write FASTA and GenBank files with Bio.SeqIO",
+        "Fetch records from NCBI with Bio.Entrez, respecting rate limits and identifying yourself with an email address",
+        "Run or parse a BLAST search programmatically and extract the top hits into a table",
+        "Perform pairwise alignment (Bio.Align) and read a multiple alignment (Bio.AlignIO), and inspect a PDB structure with Bio.PDB",
+        "Write readable, commented, re-runnable analysis notebooks"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Seq and SeqRecord",
+          "definition": "Seq holds a biological sequence with sequence-aware methods; SeqRecord wraps a Seq with an ID, description and annotations, mirroring a FASTA or GenBank record."
+        },
+        {
+          "term": "Bio.SeqIO",
+          "definition": "A uniform interface for reading and writing many sequence formats. SeqIO.parse iterates over records one at a time, so large files do not need to fit in memory."
+        },
+        {
+          "term": "Bio.Entrez",
+          "definition": "A wrapper for NCBI's E-utilities (esearch, efetch, esummary, elink). You must set Entrez.email, and NCBI limits request rates (three per second without an API key, ten with one)."
+        },
+        {
+          "term": "Bio.Align",
+          "definition": "Contains the PairwiseAligner for global or local alignments with custom scores, plus tools to read and write alignment file formats; the same ideas as Needleman-Wunsch and Smith-Waterman, now scriptable."
+        },
+        {
+          "term": "Bio.Phylo and Bio.PDB",
+          "definition": "Modules for reading, drawing and manipulating phylogenetic trees (Newick, NEXUS) and for parsing 3D structure files so you can measure distances, list residues and extract chains."
+        },
+        {
+          "term": "Loops, functions and dictionaries",
+          "definition": "The basic Python tools that turn a one-off command into a pipeline: loop over accessions, wrap a repeated task in a function, and store results by key."
+        },
+        {
+          "term": "Reproducibility",
+          "definition": "Using notebooks or scripts, recording library versions, setting random seeds and keeping raw data unchanged so another person can regenerate every figure."
+        },
+        {
+          "term": "Version differences",
+          "definition": "Biopython changes over time (for example, the BLAST parsing modules and the GC content function). Always check the documentation for the version you installed."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of Biopython as a well-stocked toolbox for sequences. Python is the workbench: you tell it step by step what to do, in the same way you might write a recipe. 'For each accession in this list, fetch the record, count the bases, print the result.' Where the analogy breaks: a computer does exactly what you write, not what you meant, so small typos or an unexpected file format produce errors and you must learn to read the error message, which is the single most useful skill in coding.",
+        "intermediate": "Hands-on (practical, split over several sessions): (1) In Google Colab, run pip install biopython and confirm the version. Create a DNA Seq object, compute reverse complement, transcribe and translate it, and compare with your manual translation from the genome unit. (2) Parse a multi-record FASTA file with SeqIO, print each ID and length, filter records longer than a threshold, and write them to a new file. Compute GC fraction for each (for example with Bio.SeqUtils.gc_fraction). (3) Use Entrez to search nucleotide for HBB mRNA records for several species (esearch), fetch the FASTA (efetch) and save to a file; set Entrez.email. (4) Use NCBIWWW.qblast to BLAST one sequence (or read a saved XML result), and extract into a table the top five hit titles, E-values and percent identity. (5) Use PairwiseAligner to align two sequences with BLOSUM62 and compare the score to EMBOSS. (6) Fetch a PDB file and use Bio.PDB to print the number of chains and residues and the distance between two residues. Deliverable: a documented notebook where every cell runs from top to bottom.",
+        "advanced": "Move beyond single examples: write functions with docstrings, handle exceptions (network failures, missing records), cache results to avoid repeating queries, and respect usage policies (NCBI asks that large jobs run off-peak and with an API key). Consider the UniProt REST API (via requests) for programmatic retrieval of annotations and compare with Entrez as an access route. Run BLAST+ locally against a small custom database to avoid web limits. Combine tools in a pipeline: retrieve homologs, align with MAFFT or Clustal Omega via command line, build a tree with IQ-TREE, parse and plot with Bio.Phylo or ete3. Use pandas for tables and matplotlib for figures. Adopt version control (Git) and a project structure that separates raw data, code and results, following reproducibility principles."
+      },
+      "commonMistakes": [
+        "Forgetting to set Entrez.email or sending thousands of rapid-fire requests, which can get your IP blocked by NCBI.",
+        "Copying code from the web without checking the Biopython version; deprecated functions silently change behaviour or fail.",
+        "Reading a whole large FASTA into memory with list(SeqIO.parse(...)) when iterating would do.",
+        "Editing raw data files by hand, so the analysis cannot be reproduced."
+      ],
+      "videos": [
+        {
+          "youtubeId": "kqtD5dpn9C8",
+          "title": "Python for Beginners - Learn Coding with Python in 1 Hour",
+          "channel": "Programming with Mosh",
+          "level": "beginner",
+          "whyWatch": "A concise first look at variables, loops, functions and lists, enough to start the Biopython sessions."
+        },
+        {
+          "youtubeId": "5pf0_bpNbkw",
+          "title": "Jupyter Notebook Complete Beginner Guide - From Jupyter to Jupyterlab, Google Colab and Kaggle!",
+          "channel": "Rob Mulla",
+          "level": "beginner",
+          "whyWatch": "Shows how to run and structure notebooks, including the Colab environment you can use without installing anything."
+        },
+        {
+          "youtubeId": "p-mveiY5pr4",
+          "title": "How Read or Parse Fasta file in Biopython SeqIO.",
+          "channel": "BioInnoTech",
+          "level": "beginner",
+          "whyWatch": "A direct demonstration of parsing FASTA with SeqIO, the core pattern for most sequence tasks."
+        },
+        {
+          "youtubeId": "tl4xqdfIBh0",
+          "title": "Bioinformatics Accessing NCBI databases and tools with Biopython [Entrez]",
+          "channel": "Lana Dominkovic",
+          "level": "intermediate",
+          "whyWatch": "Walks through searching and fetching NCBI records from Python using Entrez."
+        },
+        {
+          "youtubeId": "BipqHNoB2fE",
+          "title": "Bioinformatics Running BLAST queries and performing sequence alignment with Biopython",
+          "channel": "Lana Dominkovic",
+          "level": "intermediate",
+          "whyWatch": "Shows how to submit a BLAST search from a script and handle its output."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/bioinformatics/btp163",
+          "title": "Biopython: freely available Python tools for computational molecular biology and bioinformatics",
+          "authors": "Cock PJA, Antao T, Chang JT et al",
+          "year": 2009,
+          "journal": "Bioinformatics",
+          "level": "intermediate",
+          "whyItMatters": "The standard citation for Biopython. It describes the design and main modules, which clarifies why the library is organised the way it is.",
+          "openAccessUrl": "https://doi.org/10.1093/bioinformatics/btp163"
+        },
+        {
+          "doi": "10.1371/journal.pcbi.1000589",
+          "title": "A Quick Guide for Developing Effective Bioinformatics Programming Skills",
+          "authors": "Dudley JT, Butte AJ",
+          "year": 2009,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "Practical advice for biologists learning to code: which languages to pick, how to practise and how to avoid common traps.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1000589"
+        },
+        {
+          "doi": "10.1371/journal.pcbi.1003285",
+          "title": "Ten Simple Rules for Reproducible Computational Research",
+          "authors": "Sandve GK, Nekrutenko A, Taylor J, Hovig E",
+          "year": 2013,
+          "journal": "PLoS Computational Biology",
+          "level": "beginner",
+          "whyItMatters": "A short, useful checklist (track provenance, version control, avoid manual steps, record versions) that you can apply to every notebook you write.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pcbi.1003285"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biopython Tutorial and Cookbook",
+          "provider": "Biopython project",
+          "type": "tutorial",
+          "url": "https://biopython.org/docs/latest/Tutorial/index.html",
+          "free": true,
+          "level": "beginner",
+          "note": "The official guide with worked examples for Seq, SeqIO, Entrez, BLAST, alignments and PDB; keep it open during every practical."
+        },
+        {
+          "title": "Biopython documentation index",
+          "provider": "Biopython project",
+          "type": "reference",
+          "url": "https://biopython.org/wiki/Documentation",
+          "free": true,
+          "level": "intermediate",
+          "note": "Links to API documentation, the cookbook and other tutorials."
+        },
+        {
+          "title": "Plotting and Programming in Python (Software Carpentry)",
+          "provider": "Software Carpentry",
+          "type": "course",
+          "url": "https://swcarpentry.github.io/python-novice-inflammation/",
+          "free": true,
+          "level": "beginner",
+          "note": "A gentle free introduction to Python for researchers, using real data and notebooks."
+        },
+        {
+          "title": "Python tutorial",
+          "provider": "Python Software Foundation",
+          "type": "tutorial",
+          "url": "https://docs.python.org/3/tutorial/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The official language tutorial, handy when you meet a feature (list comprehension, exception handling) in Biopython examples."
+        },
+        {
+          "title": "Google Colab",
+          "provider": "Google",
+          "type": "tool",
+          "url": "https://colab.research.google.com/",
+          "free": true,
+          "level": "beginner",
+          "note": "A free browser-based notebook environment, so you can run Biopython without installing anything; needs a Google account and internet."
+        },
+        {
+          "title": "Rosalind",
+          "provider": "Rosalind",
+          "type": "interactive",
+          "url": "https://rosalind.info/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Graded programming puzzles in bioinformatics, a natural next step once the basic scripts run."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why must you set Entrez.email when using Biopython's Entrez module?",
+          "options": [
+            "To receive your results by email",
+            "So NCBI can contact you if your script causes problems; it is part of their usage policy",
+            "To authenticate to a paid service",
+            "It is optional and has no purpose"
+          ],
+          "answer": 1,
+          "explanation": "NCBI requires users of E-utilities to identify themselves so they can contact you about misuse; scripts without a valid email can be blocked."
+        },
+        {
+          "question": "What does SeqIO.parse(file, 'fasta') return?",
+          "options": [
+            "A single string",
+            "An iterator that yields one SeqRecord per sequence in the file",
+            "A BLAST report",
+            "A pandas table"
+          ],
+          "answer": 1,
+          "explanation": "It yields SeqRecord objects one by one, which is memory-efficient for large files."
+        },
+        {
+          "question": "You copy a Biopython snippet from a tutorial written years ago and it throws an error about a missing function. What should you do first?",
+          "options": [
+            "Assume the error is random and rerun",
+            "Check the installed Biopython version against the current documentation, because functions are renamed or deprecated",
+            "Delete the file",
+            "Switch to another programming language"
+          ],
+          "answer": 1,
+          "explanation": "Library APIs change; consult the documentation for your installed version to find the replacement."
+        }
+      ]
+    },
+    {
+      "id": "integrated-mini-project",
+      "title": "Integrated Mini-Project: From Unknown Sequence to Biological Story",
+      "hours": 4,
+      "hook": "You are handed one anonymous sequence and a deadline. By the end of the session you should be able to say what it is, where it comes from, what it probably does, who its relatives are, and how sure you are of each claim. This is the whole course in one afternoon.",
+      "learningObjectives": [
+        "Plan a bioinformatics workflow from a biological question to a written conclusion",
+        "Combine database searches, BLAST, alignment, domain analysis and structure inspection into a coherent argument",
+        "Distinguish evidence that supports a claim from evidence that is merely consistent with it",
+        "Report methods, versions, parameters and limitations so another student can repeat the work",
+        "Present results as a short report or poster with properly formatted figures and citations"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Workflow",
+          "definition": "An ordered, documented set of steps from input to conclusion. Planning it before you run tools prevents aimless clicking."
+        },
+        {
+          "term": "Evidence tiers",
+          "definition": "Rank evidence from strongest to weakest: experimental data for this protein, curated annotation, homology to an experimentally characterised protein, automatic annotation, and prediction only."
+        },
+        {
+          "term": "Orthogonal confirmation",
+          "definition": "Support a conclusion with an independent method. For example, a BLAST hit suggests a function, a conserved catalytic residue in the alignment strengthens it, and a known-fold domain in InterPro corroborates it."
+        },
+        {
+          "term": "Limitations statement",
+          "definition": "An honest note on what could be wrong: database bias, low coverage, absent experimental validation, version of tools."
+        },
+        {
+          "term": "Citation of resources",
+          "definition": "Databases and tools should be cited with name, version or release date, and access date, using the papers that the resource requests."
+        },
+        {
+          "term": "Negative result",
+          "definition": "A search that yields no significant homolog is informative: it can signal a novel protein, a poor query, or an error in the sequence. Report it."
+        }
+      ],
+      "deeper": {
+        "beginner": "Treat it like detective work. The sequence is the unknown suspect; BLAST finds relatives, UniProt tells you about the relatives' habits, and a structure shows what they look like. A good detective writes down what is known, what is guessed and what would test the guess. Where the analogy breaks: nobody confesses; the best you can do is rank explanations by how well the evidence supports them.",
+        "intermediate": "Hands-on (practical): You will be assigned an unknown protein or nucleotide sequence, or may choose a protein from your own interest with supervisor approval. Required elements: (1) Identify: BLAST against two databases and compare. (2) Classify: InterPro domains and family. (3) Compare: pick 6 to 10 homologs including at least one experimentally characterised, align, mark conserved residues and make a simple tree. (4) Structure: find or predict a structure, map conserved residues onto it, and comment on confidence. (5) Context: find the gene in Ensembl or NCBI Gene, noting genomic location and any known disease variants. (6) Report: 2 to 3 pages with figures and a methods table. Deliverable also includes the script or lab-book with all accession numbers.",
+        "advanced": "Extend the project with at least one quantitative comparison: for instance, calculate pairwise identity matrices for your homologs and examine how they relate to tree distances; map conservation scores (for example with Jalview or ConSurf) onto a structure and test whether conserved residues cluster near the ligand or interface; predict disorder or signal peptides and discuss how that changes annotation. Consider using a profile or HMM search (HMMER) to look for more distant relatives than BLAST finds. Discuss alternative explanations for each inference (convergent evolution, annotation transfer errors, paralogs) and identify what wet-lab experiment would best test your central hypothesis."
+      },
+      "commonMistakes": [
+        "Stopping at the top BLAST hit and naming the function without checking coverage, annotation quality or conserved catalytic residues.",
+        "Mixing identifiers from different database releases without recording versions.",
+        "Presenting a figure without stating what the colours, scores or axes mean.",
+        "Writing a conclusion that is stronger than the evidence: use hedged language such as 'suggests' or 'is consistent with' where appropriate."
+      ],
+      "videos": [
+        {
+          "youtubeId": "XCiclw0UFdY",
+          "title": "The NCBI Minute: SmartBLAST Introduction",
+          "channel": "National Library of Medicine",
+          "level": "beginner",
+          "whyWatch": "A quick way to get a first guess of what an unknown protein is, which you then check with deeper analysis."
+        },
+        {
+          "youtubeId": "mvjHYMgJDTQ",
+          "title": "Webinar: A Practical Guide to NCBI BLAST on the Web",
+          "channel": "National Library of Medicine",
+          "level": "intermediate",
+          "whyWatch": "An in-depth session by NCBI staff on running and interpreting BLAST in realistic scenarios, directly useful for your project."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/nar/gkac240",
+          "title": "Search and sequence analysis tools services from EMBL-EBI in 2022",
+          "authors": "Madeira F, Pearce M, Tivey ARN et al",
+          "year": 2022,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Documents the web and programmatic tools (BLAST, Clustal Omega, HMMER and others) you will combine in a project, and how to cite and use them properly."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI Gene",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/gene/",
+          "free": true,
+          "level": "beginner",
+          "note": "Use as the hub for linking your sequence to a gene, its location, disease associations and literature."
+        },
+        {
+          "title": "Human Protein Atlas",
+          "provider": "SciLifeLab / KTH",
+          "type": "database",
+          "url": "https://www.proteinatlas.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Tissue and cell expression and localisation for human proteins; a good source of context if your protein is human."
+        },
+        {
+          "title": "EMBL-EBI online training",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse free courses and webinars on every resource used in this project."
+        },
+        {
+          "title": "yourgenome",
+          "provider": "Wellcome Sanger Institute",
+          "type": "reference",
+          "url": "https://www.yourgenome.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Accessible explainers on genomics concepts, useful for background when writing the context section."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Your BLAST search of an unknown protein gives no significant hits. Which interpretation is MOST appropriate to report?",
+          "options": [
+            "The sequence must be an artefact and can be ignored",
+            "No significant similarity was detected; this may reflect a novel or highly diverged protein or an incorrect query, and other methods (profile or HMM searches, structure) could be tried",
+            "The protein has no function",
+            "The database is broken"
+          ],
+          "answer": 1,
+          "explanation": "A negative BLAST result limits what you can infer by simple homology; report it honestly and consider more sensitive methods and checks of the query."
+        },
+        {
+          "question": "Which of the following gives the STRONGEST evidence for the function of your protein?",
+          "options": [
+            "A hit with 40% identity to a protein of unknown function",
+            "Homology to an experimentally characterised enzyme with conserved catalytic residues in the alignment",
+            "An automatic annotation transferred from a distant organism",
+            "The name of the top BLAST hit"
+          ],
+          "answer": 1,
+          "explanation": "Evidence from experimentally characterised relatives, supported by conservation of key residues, is stronger than annotation transferred without evidence."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "zvyv_snBih8",
+      "title": "Introduction to Bioinformatics",
+      "channel": "Vidya-mitra",
+      "level": "beginner",
+      "whyWatch": "A full-length lecture introducing biological databases, sequences and tools, a good orientation before the first lecture."
+    },
+    {
+      "youtubeId": "3XFpxQF0J74",
+      "title": "Intro to Bioinformatics 1: Course Overview",
+      "channel": "Mike Saint-Antoine",
+      "level": "beginner",
+      "whyWatch": "A friendly overview of what bioinformatics covers and how the topics in a typical course fit together."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "The NCBI Handbook",
+      "provider": "NCBI / NLM",
+      "type": "reference",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK143764/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free, authoritative description of NCBI's databases and tools including BLAST and Entrez."
+    },
+    {
+      "title": "Biopython Tutorial and Cookbook",
+      "provider": "Biopython project",
+      "type": "textbook",
+      "url": "https://biopython.org/docs/latest/Tutorial/index.html",
+      "free": true,
+      "level": "beginner",
+      "note": "Free online manual with worked examples for every module used in the practicals."
+    },
+    {
+      "title": "Bioinformatics Algorithms: An Active Learning Approach",
+      "provider": "Bioinformatics Algorithms",
+      "type": "textbook",
+      "url": "https://www.bioinformaticsalgorithms.org/",
+      "free": false,
+      "level": "advanced",
+      "note": "A textbook (and associated online course) that derives core algorithms from biological problems; the book is paid, so check your library."
+    },
+    {
+      "title": "EMBL-EBI online training",
+      "provider": "EMBL-EBI",
+      "type": "course",
+      "url": "https://www.ebi.ac.uk/training/online/",
+      "free": true,
+      "level": "beginner",
+      "note": "Free online courses and webinars for almost every database and tool in this module."
+    }
+  ]
+}

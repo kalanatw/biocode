@@ -1,0 +1,1612 @@
+{
+  "code": "FD 1102",
+  "title": "Cell Biology and the Chemistry of Life",
+  "level": 1,
+  "semester": 1,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "A guided tour of the cell and the four families of molecules that build it.",
+  "overview": "The content follows the standard first-year cell biology sequence, anchored in chemistry. It begins with the scale and architecture of cells, then introduces carbohydrates, lipids, proteins and nucleic acids as molecules with structure and function, and moves on to membranes, the endomembrane system and cytoskeleton, mitochondria and chloroplasts, cell signalling, and finally the cell cycle, division and death. Each unit is written to prepare the reader for Level 3 courses in metabolism, gene expression, biomolecule chemistry and recombinant DNA technology.",
+  "whyItMatters": "Everything in Level 3 happens somewhere inside a cell, in a compartment, on a membrane or on a molecule. If you can picture where the ribosome, the mitochondrion and the receptor are and what they are made of, enzyme kinetics, metabolic pathways, transcription and cloning stop being abstract diagrams and become events in a place you know.",
+  "prerequisites": [],
+  "careerLinks": [
+    "Biomedical and clinical laboratory science",
+    "Biotechnology and cell-culture industries",
+    "Pharmaceutical research and drug discovery",
+    "Cancer biology and molecular diagnostics",
+    "Teaching and science communication"
+  ],
+  "studyTips": [
+    "Draw a cell from memory every week and add one more detail each time (organelle, membrane protein, pathway); the act of drawing exposes what you do not yet know.",
+    "For every molecule family, learn the monomer, the bond that joins monomers, and one example of structure determining function; that three-part template transfers to nearly every exam question.",
+    "Think in scales: before you answer a question, say whether it concerns nanometres (molecules), micrometres (organelles and cells) or millimetres (tissues).",
+    "Use the animation and structure tools (Inner Life of the Cell, PDB-101, AlphaFold) to look at the same objects from several angles; seeing a real structure makes textbook cartoons meaningful."
+  ],
+  "units": [
+    {
+      "id": "cells-prokaryote-eukaryote-scale",
+      "title": "What Is a Cell? Types, Scale and Architecture",
+      "hours": 5,
+      "hook": "A single bacterium is about the width of a mitochondrion; a human cell is large enough to hold thousands of bacteria; a protein is a thousand times smaller than the cell around it. Getting a feeling for these scales is the first step to understanding why cells are built the way they are.",
+      "learningObjectives": [
+        "State the main points of cell theory and the evidence behind it.",
+        "Compare prokaryotic and eukaryotic cells, and place Bacteria, Archaea and Eukarya in the three-domain scheme.",
+        "Order common biological objects by size, from atoms to organisms, with typical dimensions.",
+        "Explain why cell size is limited using the surface-area-to-volume ratio.",
+        "Describe what light, fluorescence and electron microscopy can and cannot resolve."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Cell theory",
+          "definition": "All living organisms consist of one or more cells, the cell is the basic unit of structure and function, and all cells arise from pre-existing cells."
+        },
+        {
+          "term": "Prokaryote",
+          "definition": "A cell with no membrane-bound nucleus; DNA lies in a nucleoid region, ribosomes are 70S, and cells are typically 1 to 5 micrometres across (Bacteria and Archaea)."
+        },
+        {
+          "term": "Eukaryote",
+          "definition": "A cell with a membrane-bound nucleus and internal organelles, 80S ribosomes in the cytosol, and typical diameters of 10 to 100 micrometres."
+        },
+        {
+          "term": "Three domains",
+          "definition": "Bacteria, Archaea and Eukarya, a classification based on ribosomal RNA comparisons by Woese and colleagues; Archaea are prokaryotes that are, molecularly, closer to eukaryotes in several respects."
+        },
+        {
+          "term": "Organelle",
+          "definition": "A specialised, often membrane-bounded compartment inside a eukaryotic cell, such as the nucleus, mitochondrion or Golgi apparatus."
+        },
+        {
+          "term": "Surface-area-to-volume ratio",
+          "definition": "For a sphere of radius r the ratio is 3/r, so as a cell grows its surface (which supplies materials) falls behind its volume (which consumes them), limiting size."
+        },
+        {
+          "term": "Resolution",
+          "definition": "The smallest distance at which two points can be told apart; a light microscope is limited to about 200 nm, while electron microscopes resolve well below 1 nm."
+        },
+        {
+          "term": "Cytosol and cytoplasm",
+          "definition": "The cytosol is the fluid part of the cell's interior; the cytoplasm is the cytosol plus the organelles, excluding the nucleus."
+        }
+      ],
+      "animation": "cell-scale-zoom",
+      "deeper": {
+        "beginner": "Cells are the smallest units that count as alive. All of them have a membrane around them, DNA as genetic material, and ribosomes to make proteins. Bacteria are the simplest cells and have no nucleus; animal and plant cells are larger and are divided into compartments called organelles, each with its own job. To get a feel for scale: an atom is about 0.1 nm, a protein 5 nm, a virus 100 nm, a bacterium 1 micrometre, a human cell 10 to 20 micrometres.",
+        "intermediate": "The reason cells are small is geometric: nutrients enter through the surface, but the metabolic demand grows with volume. For r = 1 micrometre, surface area to volume is 3 per micrometre; for r = 10 micrometres it is 0.3 per micrometre, ten times worse. Eukaryotes solve this by adding internal membranes and compartments, which also separate chemical environments (for example the acidic lysosome from the neutral cytosol). The three-domain tree emerged from small-subunit rRNA sequences; Archaea resemble bacteria in cell organisation but resemble eukaryotes in their transcription and replication machinery. Imaging has trade-offs: light microscopy can watch living cells but is limited to 200 nm; fluorescence adds molecular specificity; electron microscopy resolves membranes and ribosomes but needs fixed, non-living samples.",
+        "advanced": "The prokaryote versus eukaryote dichotomy is increasingly seen as a simplification: some bacteria have internal membrane systems and protein-bounded compartments, and eukaryotes arose from a symbiotic merger in which an archaeal host acquired a bacterial endosymbiont (which became the mitochondrion). Quantities per cell are surprisingly well constrained: a typical mammalian cell volume of about 2000 cubic micrometres holds on the order of 10^9 to 10^10 proteins by modern estimates, and such numbers are checked against concentration, density and mass constraints (as the BioNumbers resource encourages). Super-resolution microscopy (STORM, PALM, STED) overcomes the diffraction limit by controlling when molecules fluoresce, achieving resolutions of tens of nanometres in living specimens."
+      },
+      "commonMistakes": [
+        "Saying prokaryotes 'have no organelles at all'; they lack membrane-bound organelles, but have ribosomes, a nucleoid and in some cases protein-bound compartments.",
+        "Treating the cell wall and the cell membrane as the same thing; plants, fungi and bacteria have walls outside the membrane, while animal cells have no wall.",
+        "Confusing magnification with resolution; magnifying further does not reveal more detail if the optics cannot resolve it.",
+        "Assuming bigger cells are always better; the surface-area-to-volume limit is real."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Pxujitlv8wc",
+          "title": "Prokaryotic vs. Eukaryotic Cells (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A five-minute, well-illustrated comparison of the two cell types and their key structures."
+        },
+        {
+          "youtubeId": "jsDxw63QqK0",
+          "title": "A Tour of the Cell: Crash Course Biology #23",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Walks through each organelle and its job, giving a mental map for the rest of the course."
+        },
+        {
+          "youtubeId": "wJyUtbn0O5Y",
+          "title": "The Inner Life of the Cell Animation",
+          "channel": "XVIVO Scientific Animation",
+          "level": "beginner",
+          "whyWatch": "A cinematic animation of molecular machines at work inside a cell; watch it for a sense of scale and activity."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.87.12.4576",
+          "title": "Towards a natural system of organisms: proposal for the domains Archaea, Bacteria, and Eucarya",
+          "authors": "Woese CR, Kandler O, Wheelis ML",
+          "year": 1990,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The paper that formally proposed the three domains of life on the basis of rRNA sequences. It is a good example of molecular data reshaping a classification that had been based on appearance.",
+          "readingQuestions": [
+            "What features of rRNA make it a good molecular chronometer?",
+            "Why did the authors argue the old prokaryote and eukaryote split was inadequate?"
+          ]
+        },
+        {
+          "doi": "10.1002/bies.201300066",
+          "title": "What is the total number of protein molecules per cell volume? A call to rethink some published values",
+          "authors": "Milo R",
+          "year": 2013,
+          "journal": "BioEssays",
+          "level": "advanced",
+          "whyItMatters": "A short, careful look at how many protein molecules a cell can contain, showing how simple quantitative reasoning can catch questionable numbers. Good training in thinking about cells in numbers."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Cell Size and Scale",
+          "provider": "Learn.Genetics, University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/content/cells/scale/",
+          "free": true,
+          "level": "beginner",
+          "note": "Slide a zoom bar from a coffee bean to an atom and see where cells, organelles and molecules sit relative to each other."
+        },
+        {
+          "title": "BioNumbers: Database of Key Numbers in Molecular and Cell Biology",
+          "provider": "Harvard Medical School",
+          "type": "database",
+          "url": "https://bionumbers.hms.harvard.edu/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up sizes, concentrations, rates and copy numbers with literature citations; useful for sanity-checking calculations."
+        },
+        {
+          "title": "Molecular Expressions Cell Biology: Structure of Cells and Viruses",
+          "provider": "Florida State University",
+          "type": "reference",
+          "url": "https://micro.magnet.fsu.edu/cells/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Interactive tutorials and micrographs of animal, plant and bacterial cells and viruses."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which feature is found in all prokaryotic and eukaryotic cells?",
+          "options": [
+            "A membrane-bound nucleus",
+            "Mitochondria",
+            "Ribosomes",
+            "A cell wall"
+          ],
+          "answer": 2,
+          "explanation": "All cells make proteins on ribosomes. A nucleus and mitochondria are eukaryotic features, and animal cells lack a cell wall."
+        },
+        {
+          "question": "A spherical cell grows from radius 1 micrometre to radius 10 micrometres. Its surface-area-to-volume ratio changes by what factor?",
+          "options": [
+            "It becomes 10 times larger",
+            "It becomes 10 times smaller",
+            "It stays the same",
+            "It becomes 100 times smaller"
+          ],
+          "answer": 1,
+          "explanation": "Surface area to volume equals 3/r for a sphere, so a ten-fold increase in radius reduces the ratio ten-fold, from 3 to 0.3 per micrometre."
+        },
+        {
+          "question": "Roughly which of these objects is smallest?",
+          "options": [
+            "A bacterium",
+            "A mitochondrion",
+            "A ribosome",
+            "A human red blood cell"
+          ],
+          "answer": 2,
+          "explanation": "A ribosome is about 20 to 25 nm across, a mitochondrion is on the order of 1 micrometre long, a bacterium 1 to 5 micrometres, and a red blood cell about 7 to 8 micrometres."
+        }
+      ]
+    },
+    {
+      "id": "carbohydrates-and-lipids",
+      "title": "Carbohydrates and Lipids: Fuel, Structure and Membranes",
+      "hours": 5,
+      "hook": "A cotton shirt and a potato are both polymers of glucose, yet one resists digestion while the other is food. The difference lies in a single orientation of one bond, a fact that shows how much biology is hidden in chemical detail.",
+      "learningObjectives": [
+        "Classify carbohydrates as monosaccharides, disaccharides and polysaccharides, and draw the open-chain and ring forms of glucose.",
+        "Distinguish alpha from beta glycosidic linkages and relate them to starch, glycogen and cellulose.",
+        "Describe the structure of fatty acids, triglycerides, phospholipids and sterols.",
+        "Explain how saturation and chain length affect lipid behaviour and membrane fluidity.",
+        "Explain why fats store more energy per gram than carbohydrates."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Monosaccharide",
+          "definition": "A simple sugar with formula (CH2O)n, such as glucose, fructose and ribose; classified as aldose or ketose and by carbon number."
+        },
+        {
+          "term": "Glycosidic bond",
+          "definition": "The covalent bond joining two sugars through an oxygen atom, formed by condensation (loss of water); the alpha or beta orientation at carbon 1 matters."
+        },
+        {
+          "term": "Starch, glycogen and cellulose",
+          "definition": "Glucose polymers: starch (plant storage, alpha-1,4 with alpha-1,6 branches), glycogen (animal storage, more highly branched) and cellulose (structural, beta-1,4, linear chains)."
+        },
+        {
+          "term": "Fatty acid",
+          "definition": "A long hydrocarbon chain ending in a carboxylic acid; saturated chains have no C=C bonds, unsaturated chains have one or more, usually cis, which introduce kinks."
+        },
+        {
+          "term": "Triglyceride",
+          "definition": "Glycerol joined to three fatty acids by ester bonds; the main energy-storage lipid."
+        },
+        {
+          "term": "Phospholipid",
+          "definition": "A glycerol (or sphingosine) backbone carrying two fatty-acid tails and a phosphate-containing polar head; amphipathic, so it forms bilayers."
+        },
+        {
+          "term": "Sterol",
+          "definition": "A lipid with a four-ring skeleton; cholesterol is the main animal sterol, inserted into membranes where it modulates fluidity and is the precursor of steroid hormones."
+        },
+        {
+          "term": "Condensation and hydrolysis",
+          "definition": "Polymers are built by removing water between monomers and broken down by adding water; the same logic applies to all four macromolecule families."
+        }
+      ],
+      "deeper": {
+        "beginner": "Carbohydrates are sugars and chains of sugars. Glucose is the cell's main fuel, and cells store it as glycogen (animals) or starch (plants). Cellulose, built from the same glucose, is the tough material of plant cell walls. Lipids are oily or fatty molecules that do not mix with water: fats store energy, phospholipids build membranes, and cholesterol helps adjust membrane stiffness.",
+        "intermediate": "Glucose (C6H12O6) mostly exists as a six-membered ring in water, in which carbon 1 can point down (alpha) or up (beta). Linking glucose units alpha-1,4 gives helical, digestible starch and glycogen, while beta-1,4 produces straight chains that pack side by side with hydrogen bonds into cellulose fibres, which human enzymes cannot cleave. Fats deliver about 37 kJ/g (9 kcal/g) compared with about 17 kJ/g (4 kcal/g) for carbohydrates, because their carbon is more reduced and they are stored without water. Cis double bonds put a kink in a fatty acid, preventing tight packing; this lowers the melting point and increases membrane fluidity. Cholesterol stiffens membranes at high temperature and prevents tight packing at low temperature.",
+        "advanced": "Carbohydrates carry information as well as energy: glycans on proteins and lipids (glycoproteins, glycolipids) form the cell's 'sugar code', as in ABO blood groups, whose antigens differ by terminal sugars, and in lectin-mediated recognition and immune signalling. Lipid chemistry is much more diverse than the introductory classes suggest; classification systems such as LIPID MAPS list eight categories (fatty acyls, glycerolipids, glycerophospholipids, sphingolipids, sterol lipids, prenol lipids, saccharolipids, polyketides). Lipids also act as signals: eicosanoids and phosphoinositides regulate inflammation and signalling. Because membrane lipid composition is tuned to temperature and function (homeoviscous adaptation), organisms alter fatty-acid saturation when the environment changes."
+      },
+      "commonMistakes": [
+        "Believing that starch and cellulose differ in their monomers; both are glucose polymers, differing in linkage geometry.",
+        "Describing unsaturated fatty acids as having no double bonds; saturated chains lack C=C, unsaturated ones have them.",
+        "Thinking cholesterol is only harmful; it is an essential membrane component and the precursor of steroid hormones and bile acids.",
+        "Drawing glucose as a flat hexagon; the ring is puckered and the alpha/beta distinction is about the orientation of the hydroxyl on carbon 1."
+      ],
+      "videos": [
+        {
+          "youtubeId": "1Dx7LDwINLU",
+          "title": "Biomolecules (Updated 2023)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A tidy overview of all four macromolecule families with monomers and examples."
+        },
+        {
+          "youtubeId": "JxK5rZxbyQY",
+          "title": "Biochemistry of Carbohydrates",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Hand-drawn walk-through of monosaccharides, ring forms, glycosidic bonds and polysaccharides."
+        },
+        {
+          "youtubeId": "Ezp8F7XJHWE",
+          "title": "Lipid overview",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Surveys fats, phospholipids and steroids and links structure to function."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1194/jlr.r800095-jlr200",
+          "title": "Update of the LIPID MAPS comprehensive classification system for lipids",
+          "authors": "Fahy E, Subramaniam S, Murphy RC, et al.",
+          "year": 2009,
+          "journal": "Journal of Lipid Research",
+          "level": "advanced",
+          "whyItMatters": "Shows how biochemists organise the huge variety of lipids into eight categories. A useful reference for seeing how much more there is to lipids than fats and cholesterol."
+        }
+      ],
+      "resources": [
+        {
+          "title": "LIPID MAPS",
+          "provider": "LIPID MAPS Consortium",
+          "type": "database",
+          "url": "https://www.lipidmaps.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Searchable database of lipid structures, classification and tools; look up cholesterol, a phosphatidylcholine and a fatty acid to compare."
+        },
+        {
+          "title": "Biology 2e - The Building Blocks of Life",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "beginner",
+          "note": "Chapter 3 on biological macromolecules covers carbohydrates and lipids with good diagrams."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI / National Library of Medicine",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search glucose, sucrose, cholesterol or palmitic acid for interactive 3D structures and properties."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the key structural difference between starch and cellulose?",
+          "options": [
+            "Starch is made from fructose; cellulose from glucose",
+            "Starch has alpha-1,4 glucose linkages; cellulose has beta-1,4 linkages",
+            "Cellulose is branched; starch is linear",
+            "Cellulose contains nitrogen"
+          ],
+          "answer": 1,
+          "explanation": "Both are glucose polymers, but the alpha-1,4 linkage makes starch helical and digestible by amylase, whereas beta-1,4 links make straight chains that humans cannot hydrolyse."
+        },
+        {
+          "question": "Why do cis double bonds in fatty acids increase membrane fluidity?",
+          "options": [
+            "They add hydrogen bonds between chains",
+            "They introduce kinks that prevent tight packing of acyl chains",
+            "They make the chains shorter",
+            "They make the head groups more charged"
+          ],
+          "answer": 1,
+          "explanation": "A cis double bond bends the hydrocarbon chain, so neighbouring lipids cannot pack as closely, which lowers the melting point and keeps the bilayer fluid."
+        },
+        {
+          "question": "What type of bond joins a fatty acid to glycerol in a triglyceride?",
+          "options": [
+            "Glycosidic bond",
+            "Peptide bond",
+            "Ester bond",
+            "Phosphodiester bond"
+          ],
+          "answer": 2,
+          "explanation": "The carboxyl group of each fatty acid forms an ester linkage with a hydroxyl group of glycerol, releasing water in a condensation reaction."
+        }
+      ]
+    },
+    {
+      "id": "proteins-structure-function",
+      "title": "Proteins: Amino Acids, Structure and Folding",
+      "hours": 6,
+      "hook": "A protein is made as a floppy chain, yet within seconds it folds into a precise shape that determines everything it does. In 1973 Christian Anfinsen showed that the instructions for that shape are written in the amino acid sequence itself, and in 2020 to 2021 computers finally learned to read them.",
+      "learningObjectives": [
+        "Draw the general structure of an amino acid and classify the 20 standard side chains by chemistry.",
+        "Describe the peptide bond and the direction (N to C) of a polypeptide.",
+        "Explain primary, secondary, tertiary and quaternary structure and the interactions that stabilise each.",
+        "Explain Anfinsen's experiment, the role of chaperones, and the consequences of misfolding.",
+        "Describe how denaturation and mutation alter protein function."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Amino acid",
+          "definition": "A central carbon bearing an amino group, a carboxyl group, a hydrogen and a variable side chain (R); at pH 7 the amino acid exists as a zwitterion."
+        },
+        {
+          "term": "Side-chain classes",
+          "definition": "Non-polar (for example Leu, Val, Phe), polar uncharged (Ser, Thr, Asn, Gln, Cys, Tyr), acidic (Asp, Glu) and basic (Lys, Arg, His); the side chain decides where a residue sits in the folded protein."
+        },
+        {
+          "term": "Peptide bond",
+          "definition": "The amide bond between the carboxyl carbon of one residue and the amino nitrogen of the next, formed by condensation; planar with partial double-bond character."
+        },
+        {
+          "term": "Secondary structure",
+          "definition": "Local regular folding stabilised by backbone hydrogen bonds: the alpha helix (3.6 residues per turn) and beta sheet (strands side by side)."
+        },
+        {
+          "term": "Tertiary structure",
+          "definition": "The overall three-dimensional fold of one polypeptide, stabilised by a hydrophobic core, hydrogen bonds, ionic interactions and, in secreted proteins, disulfide bonds."
+        },
+        {
+          "term": "Quaternary structure",
+          "definition": "The arrangement of multiple polypeptide subunits into one complex, as in haemoglobin (four subunits)."
+        },
+        {
+          "term": "Chaperone",
+          "definition": "A protein that helps others fold correctly by shielding hydrophobic regions and preventing aggregation, without becoming part of the final structure."
+        },
+        {
+          "term": "Denaturation",
+          "definition": "Loss of native three-dimensional structure by heat, extreme pH or chemicals, usually with loss of function, without breaking peptide bonds."
+        }
+      ],
+      "animation": "protein-folding",
+      "deeper": {
+        "beginner": "Proteins are chains of amino acids. There are 20 kinds, and each has a different side chain: some love water, some avoid it, some are charged. The order of amino acids in the chain determines how it folds into a specific 3D shape, and that shape determines its job, such as an enzyme, a structural fibre or a receptor. Heat or acid can unfold a protein, which is why cooking an egg changes it permanently.",
+        "intermediate": "The chain has a backbone (N-C-alpha-C repeated) and side chains that point out. Hydrogen bonds between backbone C=O and N-H groups produce alpha helices (i to i+4 bonding) and beta sheets (parallel or antiparallel strands). Tertiary structure is dominated by the hydrophobic effect: non-polar side chains bury themselves in the core while polar and charged ones face water. Cysteines in the oxidising environment outside cells can form disulfide bonds. Anfinsen unfolded ribonuclease A with urea and a reducing agent, then removed them and saw activity return, showing that the sequence alone specifies the native fold under the right conditions. In cells chaperones such as Hsp70 and GroEL help avoid aggregation, and misfolding underlies diseases such as Alzheimer's (amyloid) and prion disorders.",
+        "advanced": "The Levinthal paradox points out that a chain cannot find its native state by sampling every conformation; folding proceeds down a funnel-shaped energy landscape with partially structured intermediates. The Ramachandran plot shows that steric hindrance restricts the backbone phi and psi angles to a few allowed regions, consistent with the observed secondary structures. Folding stability is marginal, typically 20 to 60 kJ/mol net, the small difference of large opposing enthalpy and entropy terms, so single mutations can destabilise a protein. Structure prediction advanced dramatically with AlphaFold 2, which predicts structures of single chains with accuracy comparable to experiment in many cases, but predicts a static structure and does not by itself describe dynamics, folding pathways or the effect of mutations on stability."
+      },
+      "commonMistakes": [
+        "Saying a denatured protein has broken peptide bonds; denaturation disrupts non-covalent interactions and folded structure, not the backbone.",
+        "Thinking disulfide bonds are the main force holding proteins together; the hydrophobic core and hydrogen bonds contribute far more, and many cytosolic proteins have no disulfides.",
+        "Mixing up levels: the alpha helix is secondary structure, not tertiary, even though it is 3D.",
+        "Assuming one sequence gives one rigid shape; many proteins have flexible or disordered regions that matter for function."
+      ],
+      "videos": [
+        {
+          "youtubeId": "hok2hyED9go",
+          "title": "Protein Structure and Folding",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A clear, friendly walk through the four levels of structure and what denaturation does."
+        },
+        {
+          "youtubeId": "MODnIkQvyz0",
+          "title": "Overview of protein structure",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Connects amino acid sequence to higher-order structure with clear diagrams."
+        },
+        {
+          "youtubeId": "O5gN-IK6uKs",
+          "title": "Four levels of protein structure",
+          "channel": "khanacademymedicine",
+          "level": "intermediate",
+          "whyWatch": "Spells out the interactions responsible for each level in a way aimed at exam use."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.181.4096.223",
+          "title": "Principles that Govern the Folding of Protein Chains",
+          "authors": "Anfinsen CB",
+          "year": 1973,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Anfinsen's Nobel lecture explains how experiments with ribonuclease showed that a protein's amino acid sequence determines its three-dimensional structure. It is the founding idea behind both protein-folding research and structure prediction.",
+          "readingQuestions": [
+            "What did the unfolding-and-refolding experiment show?",
+            "What does 'thermodynamic hypothesis' mean here?"
+          ]
+        },
+        {
+          "doi": "10.1073/pnas.37.4.205",
+          "title": "The structure of proteins: Two hydrogen-bonded helical configurations of the polypeptide chain",
+          "authors": "Pauling L, Corey RB, Branson HR",
+          "year": 1951,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "advanced",
+          "whyItMatters": "Predicted the alpha helix and beta sheet from the geometry of the planar peptide bond before any protein structure had been solved. A beautiful example of chemical reasoning predicting biology."
+        },
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A, et al.",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "openAccessUrl": "https://www.nature.com/articles/s41586-021-03819-2",
+          "whyItMatters": "Describes the deep-learning system that predicts three-dimensional protein structure from sequence with near-experimental accuracy in many cases. It shows, 50 years later, that Anfinsen's idea can be turned into a practical tool."
+        }
+      ],
+      "resources": [
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI and Google DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up any protein by name or UniProt ID and inspect the predicted structure and confidence colouring."
+        },
+        {
+          "title": "PDB-101: Molecule of the Month and Learning Resources",
+          "provider": "RCSB Protein Data Bank",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Accessible, illustrated guides to protein structure, with stories about individual molecules and structural features."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The central protein-sequence database; practise reading a protein record with its sequence, domains and function."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A tripeptide contains how many peptide bonds?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": 1,
+          "explanation": "A chain of n amino acid residues has n - 1 peptide bonds, so a tripeptide has two."
+        },
+        {
+          "question": "What did Anfinsen's ribonuclease experiment show?",
+          "options": [
+            "Proteins fold only with the help of chaperones",
+            "The amino acid sequence contains the information needed to specify the native fold",
+            "Disulfide bonds are never needed",
+            "DNA directly folds proteins"
+          ],
+          "answer": 1,
+          "explanation": "After denaturing and then removing the denaturant under gentle conditions, ribonuclease spontaneously refolded and regained activity, indicating that the sequence specifies the native structure."
+        },
+        {
+          "question": "In a folded water-soluble protein, where are non-polar side chains such as leucine most likely to be found?",
+          "options": [
+            "On the surface, facing water",
+            "Buried in the hydrophobic core",
+            "Only in alpha helices",
+            "Only at the N-terminus"
+          ],
+          "answer": 1,
+          "explanation": "The hydrophobic effect drives non-polar side chains into the interior, away from water, while polar and charged side chains tend to face the solvent."
+        }
+      ]
+    },
+    {
+      "id": "nucleic-acids-central-dogma",
+      "title": "Nucleic Acids and the Central Dogma",
+      "hours": 6,
+      "hook": "Two strands, four letters, one rule of pairing: this simple scheme stores instructions for every protein you will ever make. When Watson and Crick showed how the structure of DNA suggested its own copying mechanism, they ended their paper with a famously understated sentence about it.",
+      "learningObjectives": [
+        "Describe the structure of a nucleotide, and distinguish DNA from RNA and purines from pyrimidines.",
+        "Explain 5' to 3' directionality, antiparallel strands and base pairing in the double helix.",
+        "Outline semi-conservative DNA replication and the roles of the three main RNA types.",
+        "Summarise the central dogma: transcription and translation, and the genetic code.",
+        "Give the scale of genomes and genes in bacteria and humans."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nucleotide",
+          "definition": "A nitrogenous base, a five-carbon sugar and one or more phosphate groups; nucleotides are the monomers of nucleic acids and also act as energy carriers (ATP) and cofactors."
+        },
+        {
+          "term": "Purines and pyrimidines",
+          "definition": "Purines (A, G) have two fused rings; pyrimidines (C, T, U) have one ring."
+        },
+        {
+          "term": "Phosphodiester backbone",
+          "definition": "Sugars linked through phosphate groups between the 3' carbon of one nucleotide and the 5' carbon of the next, giving strands a direction (5' to 3')."
+        },
+        {
+          "term": "Complementary base pairing",
+          "definition": "A pairs with T (two hydrogen bonds) and G pairs with C (three hydrogen bonds) in DNA; in RNA, A pairs with U."
+        },
+        {
+          "term": "Double helix",
+          "definition": "Two antiparallel strands twisted around a common axis, with bases stacked inside, about 10 to 10.5 base pairs per turn in the B form, and major and minor grooves on the outside."
+        },
+        {
+          "term": "Semi-conservative replication",
+          "definition": "Each new DNA molecule contains one old and one newly synthesised strand, shown by the Meselson and Stahl experiment."
+        },
+        {
+          "term": "Central dogma",
+          "definition": "Information flows from DNA to RNA (transcription) to protein (translation); Crick's formulation says information cannot flow from protein back to nucleic acid, not that RNA to DNA is impossible."
+        },
+        {
+          "term": "Genetic code",
+          "definition": "Triplets of RNA bases (codons) specify amino acids: 64 codons, of which 61 code for amino acids and 3 are stop signals; AUG is the start codon, and the code is redundant but not ambiguous."
+        }
+      ],
+      "animation": "central-dogma",
+      "deeper": {
+        "beginner": "DNA is a long molecule made from four building blocks (A, T, G, C). It forms a double helix in which A always pairs with T and G with C, which is why one strand can serve as the template for making the other. To make a protein, a cell copies a gene into messenger RNA (transcription), and the ribosome then reads the RNA three letters at a time to link amino acids in the right order (translation). That flow, DNA to RNA to protein, is the central dogma.",
+        "intermediate": "RNA differs from DNA by having ribose (with a 2' hydroxyl), uracil instead of thymine, and usually being single-stranded; the 2' OH makes RNA more reactive and less stable, which suits a transient messenger. Strands are antiparallel: 5'-ATGC-3' pairs with 5'-GCAT-3'. Transcription is catalysed by RNA polymerase; in eukaryotes the primary transcript is processed (5' cap, splicing, poly-A tail). Translation uses mRNA, tRNAs (each carrying an amino acid and an anticodon) and rRNA in the ribosome, which is itself a ribozyme that forms the peptide bond. A human haploid genome has about 3.1 billion base pairs and about 20,000 protein-coding genes; the E. coli genome is about 4.6 million base pairs and about 4,300 genes.",
+        "advanced": "Base stacking and hydrophobic effects contribute more to helix stability than hydrogen bonds alone, which is why the GC content alters the melting temperature but is not the whole story. DNA in cells is mostly B-form but can adopt A, Z and non-canonical forms such as G-quadruplexes, which have regulatory roles. The central dogma has recognised exceptions in the flow of information between nucleic acids: reverse transcription (retroviruses, telomerase, retrotransposons) and RNA replication in RNA viruses, but no case has been found of information passing from protein to protein or to nucleic acid, apart from the special case of prions where the information is conformational. Non-coding RNAs (microRNAs, lncRNAs) regulate genes, so the picture of RNA only as an intermediate is outdated."
+      },
+      "commonMistakes": [
+        "Writing U in DNA or T in RNA; remember T is DNA's, U is RNA's.",
+        "Reading a complementary strand in the same direction as the template; antiparallel strands mean you must reverse the sequence.",
+        "Saying the central dogma forbids RNA to DNA flow; it forbids flow from protein to nucleic acid.",
+        "Confusing codon (on mRNA) with anticodon (on tRNA), and gene (DNA) with the protein."
+      ],
+      "videos": [
+        {
+          "youtubeId": "JQByjprj_mA",
+          "title": "DNA vs RNA (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Compares the two molecules side by side, covering sugar, bases, strands and roles."
+        },
+        {
+          "youtubeId": "8kK2zwjRV0M",
+          "title": "DNA Structure and Replication: Crash Course Biology #10",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A brisk walkthrough of the double helix and replication fork."
+        },
+        {
+          "youtubeId": "gG7uCskUOrA",
+          "title": "From DNA to protein - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A short 3D animation of transcription and translation that shows the central dogma in action."
+        },
+        {
+          "youtubeId": "oefAI2x2CQM",
+          "title": "Protein Synthesis: Transcription and Translation (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "intermediate",
+          "whyWatch": "Follows the codon-to-amino-acid steps with clear worked examples."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/171737a0",
+          "title": "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid",
+          "authors": "Watson JD, Crick FHC",
+          "year": 1953,
+          "journal": "Nature",
+          "level": "beginner",
+          "whyItMatters": "The one-page paper that proposed the double helix and noted that the base pairing suggests a copying mechanism. At about a page it is short enough to read in one sitting and see how a model is argued from data.",
+          "readingQuestions": [
+            "Which experimental evidence did the authors rely on?",
+            "Which sentence hints at the copying mechanism?"
+          ]
+        },
+        {
+          "doi": "10.1038/227561a0",
+          "title": "Central Dogma of Molecular Biology",
+          "authors": "Crick F",
+          "year": 1970,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "Crick restates the dogma and clarifies a common misunderstanding: it concerns the impossibility of information flowing back from protein, not a ban on reverse transcription. Reading it prevents a very common exam error."
+        },
+        {
+          "doi": "10.1073/pnas.44.7.671",
+          "title": "The replication of DNA in Escherichia coli",
+          "authors": "Meselson M, Stahl FW",
+          "year": 1958,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "Used heavy nitrogen and density gradients to prove that DNA replication is semi-conservative. It is often called the most beautiful experiment in biology because the logic is so clean."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Gene Expression Basics",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/gene-expression-basics",
+          "free": true,
+          "level": "beginner",
+          "note": "Control transcription factors, RNA polymerase and ribosomes to see how a gene becomes a protein."
+        },
+        {
+          "title": "PDB-101: DNA and RNA Structure Guides",
+          "provider": "RCSB Protein Data Bank",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Illustrated explanations and 3D models of DNA, RNA and the ribosome."
+        },
+        {
+          "title": "Biology 2e - Genetics and Molecular Biology",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters 14 and 15 cover DNA structure, replication, transcription and translation in more depth."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the complementary DNA strand of 5'-ATGC-3', written 5' to 3'?",
+          "options": [
+            "5'-TACG-3'",
+            "5'-GCAT-3'",
+            "5'-CGTA-3'",
+            "5'-UACG-3'"
+          ],
+          "answer": 1,
+          "explanation": "The complement of 5'-ATGC-3' is 3'-TACG-5'; written in the conventional 5' to 3' direction this becomes 5'-GCAT-3'."
+        },
+        {
+          "question": "Which statement about the central dogma is correct?",
+          "options": [
+            "Information cannot flow from RNA to DNA",
+            "Information cannot flow from protein back to nucleic acid",
+            "DNA is translated directly into protein",
+            "All RNA codes for proteins"
+          ],
+          "answer": 1,
+          "explanation": "Crick's formulation rules out transfer of sequence information from protein to nucleic acid. Reverse transcription (RNA to DNA) occurs in retroviruses, so statement A is wrong."
+        },
+        {
+          "question": "How many of the 64 codons specify amino acids?",
+          "options": [
+            "20",
+            "61",
+            "64",
+            "3"
+          ],
+          "answer": 1,
+          "explanation": "Sixty-one codons specify the 20 amino acids (the code is redundant); three codons (UAA, UAG, UGA) are stop signals."
+        }
+      ]
+    },
+    {
+      "id": "membranes-and-transport",
+      "title": "Membranes and Transport",
+      "hours": 5,
+      "hook": "A cell is a chemical reaction kept alive by a barrier only two molecules thick. What passes through that barrier, and what is pumped across it against the odds, determines whether a cell lives, signals or dies.",
+      "learningObjectives": [
+        "Describe the fluid mosaic model and the roles of lipids, cholesterol, proteins and carbohydrates in membranes.",
+        "Distinguish simple diffusion, facilitated diffusion, active transport and bulk transport.",
+        "Explain osmosis and predict cell behaviour in hypotonic, isotonic and hypertonic solutions.",
+        "Describe the sodium-potassium pump and secondary active transport, and their role in establishing gradients.",
+        "Explain why membranes are selectively permeable using polarity and size."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fluid mosaic model",
+          "definition": "The membrane is a fluid phospholipid bilayer in which proteins float and move laterally, with different proteins and lipids on the two faces."
+        },
+        {
+          "term": "Integral and peripheral proteins",
+          "definition": "Integral proteins span or are embedded in the bilayer (often by alpha helices of hydrophobic residues); peripheral proteins attach to the surface."
+        },
+        {
+          "term": "Simple diffusion",
+          "definition": "Net movement of small, uncharged or non-polar molecules (O2, CO2, steroid hormones) down their concentration gradient directly through the lipid bilayer."
+        },
+        {
+          "term": "Facilitated diffusion",
+          "definition": "Passive movement of polar or charged molecules down their gradient through channel or carrier proteins (for example GLUT glucose transporters, aquaporins); no ATP is used."
+        },
+        {
+          "term": "Primary active transport",
+          "definition": "Pumping substances against their gradient using ATP directly; the Na+/K+-ATPase exports 3 Na+ and imports 2 K+ per ATP hydrolysed."
+        },
+        {
+          "term": "Secondary active transport",
+          "definition": "Using the stored energy of an ion gradient (usually Na+ or H+) to move another solute against its gradient, by symport or antiport."
+        },
+        {
+          "term": "Osmosis and tonicity",
+          "definition": "Osmosis is the net movement of water across a semipermeable membrane toward the region of higher solute concentration; tonicity describes how an external solution affects cell volume."
+        },
+        {
+          "term": "Membrane potential",
+          "definition": "The electrical voltage across the membrane produced by unequal ion distribution, typically about -70 mV (inside negative) in resting neurons."
+        }
+      ],
+      "deeper": {
+        "beginner": "The membrane is a double layer of phospholipids with proteins inserted in it. Small non-polar molecules slip through; ions and sugars cannot, so they need channels or carriers. Moving things down their gradient costs no energy, but moving them up needs pumps that use ATP. Water moves across membranes by osmosis toward the saltier side, so red blood cells swell in pure water and shrink in strong salt.",
+        "intermediate": "Permeability depends on size, charge and polarity: O2, CO2 and ethanol cross easily; glucose, amino acids, Na+ and K+ essentially need proteins. Facilitated diffusion is saturable and specific (carriers) or gated (ion channels). The Na+/K+-ATPase maintains a high intracellular K+ and low Na+; the stored Na+ gradient drives secondary active transport, for example SGLT1 co-transports Na+ and glucose into intestinal cells. A cell in a hypotonic medium gains water and may swell and lyse (animal cells), while plant cells become turgid against the cell wall; in a hypertonic solution cells lose water and shrink (crenation, plasmolysis). Cholesterol keeps the membrane from being too fluid or too stiff, and lipid rafts are proposed to be small, dynamic, ordered domains enriched in cholesterol and sphingolipids.",
+        "advanced": "The Na+/K+-ATPase goes through the Post-Albers cycle with phosphorylated E1P and E2P intermediates, alternately exposing binding sites to the cytosol and to the outside; a large share of resting ATP use in neurons goes into maintaining these gradients. The electrochemical gradient of an ion combines concentration and voltage terms, delta mu = RT ln(c2/c1) + zF delta psi, which is why Na+ enters even when concentration alone would be balanced. Transporter kinetics follow Michaelis-Menten behaviour, while ion channels show rapid gating with single-channel conductances of picosiemens. Lipid rafts remain debated: they are best viewed as transient nanoscale assemblies rather than stable islands, and membrane protein function can also depend on specific lipid binding and bilayer thickness."
+      },
+      "commonMistakes": [
+        "Believing facilitated diffusion requires ATP; it is passive and follows the gradient.",
+        "Saying osmosis is movement of solute; it is movement of water.",
+        "Treating the membrane as static; proteins and lipids move laterally in the plane.",
+        "Forgetting that the Na+/K+ pump is electrogenic: 3 Na+ out and only 2 K+ in per cycle, contributing directly to the membrane potential."
+      ],
+      "videos": [
+        {
+          "youtubeId": "qBCVVszQQNs",
+          "title": "Inside the Cell Membrane",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Explains membrane composition and the fluid mosaic model with clear visuals."
+        },
+        {
+          "youtubeId": "Ptmlvtei8hw",
+          "title": "Cell Transport",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Covers passive, active and bulk transport in one tidy video."
+        },
+        {
+          "youtubeId": "vh166DKxYiM",
+          "title": "Sodium potassium pump",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Steps through the pump cycle and explains why it matters for gradients."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.175.4023.720",
+          "title": "The Fluid Mosaic Model of the Structure of Cell Membranes",
+          "authors": "Singer SJ, Nicolson GL",
+          "year": 1972,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The paper that proposed the fluid mosaic model, which remains the foundation of how we draw membranes. Reading it shows how thermodynamic arguments about lipids and proteins shaped the model.",
+          "readingQuestions": [
+            "Which earlier model did they replace and why?",
+            "What is the thermodynamic argument for protein placement?"
+          ]
+        },
+        {
+          "doi": "10.1016/0006-3002(57)90343-8",
+          "title": "The influence of some cations on an adenosine triphosphatase from peripheral nerves",
+          "authors": "Skou JC",
+          "year": 1957,
+          "journal": "Biochimica et Biophysica Acta",
+          "level": "advanced",
+          "whyItMatters": "Skou's discovery of the enzyme that became known as the sodium-potassium pump, for which he later shared a Nobel Prize. A classic of finding a membrane protein by studying its activity."
+        },
+        {
+          "doi": "10.1038/42408",
+          "title": "Functional rafts in cell membranes",
+          "authors": "Simons K, Ikonen E",
+          "year": 1997,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Proposed that cholesterol- and sphingolipid-rich microdomains organise signalling and trafficking. It is the origin of the 'lipid raft' idea, which is still debated and illustrates how scientific models evolve."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Membrane Channels",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/membrane-channels",
+          "free": true,
+          "level": "beginner",
+          "note": "Open and close channels, add ions and see diffusion and the effect of the sodium-potassium pump on gradients."
+        },
+        {
+          "title": "PhET: Diffusion",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/diffusion",
+          "free": true,
+          "level": "beginner",
+          "note": "Watch particles spread from high to low concentration and experiment with temperature and mass."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "advanced",
+          "note": "Searchable free copy of the classic textbook; search 'membrane transport' for chapter 11 and consult it for deeper detail."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Per ATP hydrolysed, the Na+/K+-ATPase moves:",
+          "options": [
+            "2 Na+ out and 3 K+ in",
+            "3 Na+ out and 2 K+ in",
+            "3 Na+ in and 2 K+ out",
+            "1 Na+ out and 1 K+ in"
+          ],
+          "answer": 1,
+          "explanation": "It exports three sodium ions and imports two potassium ions each cycle, which maintains the gradients and makes a small direct contribution to the membrane potential."
+        },
+        {
+          "question": "A red blood cell placed in pure water will most likely:",
+          "options": [
+            "Shrink",
+            "Stay the same",
+            "Swell and possibly burst",
+            "Pump out water with ATP"
+          ],
+          "answer": 2,
+          "explanation": "Pure water is hypotonic to the cell interior, so water moves in by osmosis; animal cells lack a rigid wall and can lyse."
+        },
+        {
+          "question": "Which molecule crosses a lipid bilayer by simple diffusion most easily?",
+          "options": [
+            "Glucose",
+            "Na+",
+            "O2",
+            "A protein"
+          ],
+          "answer": 2,
+          "explanation": "Small, uncharged, non-polar molecules such as O2 dissolve in the hydrophobic interior of the bilayer; glucose and ions need transport proteins."
+        }
+      ]
+    },
+    {
+      "id": "endomembrane-trafficking-cytoskeleton",
+      "title": "The Endomembrane System, Protein Trafficking and the Cytoskeleton",
+      "hours": 5,
+      "hook": "A pancreatic cell can produce a hormone, wrap it in a membrane bubble, tag it with a postal code and deliver it to the cell surface on cue. This internal logistics network, with its tracks and motors, shows the cell as an organised factory rather than a bag of enzymes.",
+      "learningObjectives": [
+        "Describe the structure and function of the nucleus, rough and smooth ER, Golgi apparatus, lysosomes and peroxisomes.",
+        "Trace a secreted protein from ribosome to plasma membrane, naming the signal sequence and vesicle steps.",
+        "Explain how lysosomes degrade material and why their pH matters.",
+        "Compare actin filaments, intermediate filaments and microtubules in structure and function.",
+        "Describe how motor proteins (kinesin, dynein, myosin) move cargo along cytoskeletal tracks."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nuclear envelope and pores",
+          "definition": "A double membrane enclosing the nucleus and punctuated by nuclear pore complexes that regulate traffic of RNAs and proteins."
+        },
+        {
+          "term": "Rough and smooth ER",
+          "definition": "Rough ER has ribosomes and makes secreted and membrane proteins; smooth ER makes lipids, detoxifies compounds and stores calcium."
+        },
+        {
+          "term": "Signal peptide and SRP",
+          "definition": "A short amino-terminal sequence recognised by the signal recognition particle that directs ribosomes making secretory proteins to the ER, where the chain is threaded into the lumen as it is made."
+        },
+        {
+          "term": "Golgi apparatus",
+          "definition": "A stack of flattened cisternae that modifies (for example glycosylates), sorts and packages proteins and lipids arriving from the ER (cis face) for delivery (trans face)."
+        },
+        {
+          "term": "Vesicle trafficking",
+          "definition": "Coated vesicles (COPII, COPI, clathrin) bud from one compartment and fuse with another, carrying cargo between organelles and to the plasma membrane."
+        },
+        {
+          "term": "Lysosome",
+          "definition": "An acidic organelle (pH about 4.5 to 5) containing hydrolytic enzymes that break down macromolecules, worn-out organelles and engulfed material."
+        },
+        {
+          "term": "Cytoskeleton",
+          "definition": "Network of actin filaments (about 7 nm), intermediate filaments (about 10 nm) and microtubules (about 25 nm) giving shape, strength, intracellular transport and movement."
+        },
+        {
+          "term": "Motor proteins",
+          "definition": "ATP-driven proteins that walk along filaments: kinesin toward the plus end of microtubules, dynein toward the minus end, and myosin along actin."
+        }
+      ],
+      "deeper": {
+        "beginner": "Inside a eukaryotic cell, membrane-wrapped compartments work as a production line. Proteins made on the rough ER are folded, sent in small bubbles (vesicles) to the Golgi, finished and labelled, then shipped to their destination, such as the cell surface or a lysosome. Meanwhile the cytoskeleton, a network of protein fibres, gives the cell its shape and acts as a railway for motor proteins that carry cargo.",
+        "intermediate": "A protein with a signal peptide is recognised by SRP as it emerges from a free ribosome, which then docks on the ER membrane and translocates the chain into the lumen, where it folds and is often glycosylated. COPII vesicles carry cargo from ER to Golgi; COPI retrieves escaped ER proteins. The Golgi sorts cargo to lysosomes (via mannose-6-phosphate tags), to secretory vesicles, or to the plasma membrane. Lysosomal enzymes work optimally at acid pH, which protects the cell if one leaks into the neutral cytosol. Microtubules (alpha/beta tubulin dimers) radiate from a centrosome with minus ends anchored; kinesins carry vesicles toward the periphery, dynein carries them inward. Actin supports the cell cortex and movement, and intermediate filaments (keratins, lamins) give mechanical strength.",
+        "advanced": "The signal hypothesis emerged from cell-free experiments showing that ER membranes and a signal sequence were enough to translocate a nascent chain. Sorting depends on nested coding: signal peptides, retention signals such as KDEL for ER-resident proteins, and mannose-6-phosphate for lysosomal enzymes; defects cause diseases such as I-cell disease. Microtubules show dynamic instability, alternating growth and shrinkage powered by GTP hydrolysis on beta-tubulin, which is exploited by anticancer drugs such as taxanes and vinca alkaloids. Autophagy, which delivers cytoplasmic material to lysosomes, links trafficking to quality control and metabolism, and endosomal sorting regulates how long receptors signal at the surface."
+      },
+      "commonMistakes": [
+        "Saying the Golgi makes proteins; proteins are made on ribosomes and modified and sorted in the Golgi.",
+        "Mixing up kinesin and dynein directions; kinesin generally runs to the plus end (outward), dynein to the minus end (toward the centre).",
+        "Thinking lysosomes work at neutral pH; their enzymes are acid hydrolases.",
+        "Treating the cytoskeleton as static scaffolding; it is continually assembled and disassembled."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Fcxc8Gv7NiU",
+          "title": "The Endomembrane System",
+          "channel": "RicochetScience",
+          "level": "beginner",
+          "whyWatch": "A short, focused overview of how ER, Golgi, vesicles and lysosomes cooperate."
+        },
+        {
+          "youtubeId": "X1n2ggpzBbc",
+          "title": "Endoplasmic Reticulum Structure & Function",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A detailed lecture on rough and smooth ER, signal peptides and protein processing."
+        },
+        {
+          "youtubeId": "Msn9eOa2i8I",
+          "title": "Cytoskeleton Structure & Function",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Covers actin, intermediate filaments, microtubules and motor proteins in one long lecture."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1083/jcb.67.3.835",
+          "title": "Transfer of proteins across membranes. I. Presence of proteolytically processed and unprocessed nascent immunoglobulin light chains on membrane-bound ribosomes of murine myeloma",
+          "authors": "Blobel G, Dobberstein B",
+          "year": 1975,
+          "journal": "The Journal of Cell Biology",
+          "level": "advanced",
+          "whyItMatters": "Provided key evidence for the signal hypothesis, showing that secretory proteins carry a short extra sequence that guides them into the ER and is then removed. This work earned Blobel the 1999 Nobel Prize in Physiology or Medicine."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Cell: A Molecular Approach, 2nd edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free searchable text; look up 'protein sorting', 'Golgi' and 'cytoskeleton' for clear, concise explanations."
+        },
+        {
+          "title": "Structure of a Cell (Khan Academy Biology)",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/biology/structure-of-a-cell",
+          "free": true,
+          "level": "beginner",
+          "note": "Short lessons and exercises on organelles, the endomembrane system and the cytoskeleton, good for checking your understanding."
+        },
+        {
+          "title": "Molecular Expressions Cell Biology",
+          "provider": "Florida State University",
+          "type": "reference",
+          "url": "https://micro.magnet.fsu.edu/cells/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive tutorials on the nucleus, ER, Golgi, lysosomes and cytoskeleton with micrographs."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A secreted protein is synthesised on a free ribosome in the cytosol. What directs the ribosome to the ER membrane?",
+          "options": [
+            "A mannose-6-phosphate tag",
+            "An N-terminal signal peptide recognised by SRP",
+            "A KDEL sequence",
+            "The nuclear localisation signal"
+          ],
+          "answer": 1,
+          "explanation": "The N-terminal signal peptide is recognised by the signal recognition particle, which delivers the ribosome-nascent chain complex to the ER translocon."
+        },
+        {
+          "question": "Which motor protein typically carries vesicles along microtubules toward the cell periphery (the plus end)?",
+          "options": [
+            "Dynein",
+            "Kinesin",
+            "Myosin",
+            "Tubulin"
+          ],
+          "answer": 1,
+          "explanation": "Most kinesins move toward the plus end of microtubules, while dynein moves toward the minus end; myosin moves on actin."
+        },
+        {
+          "question": "Why is it safe for a cell that a lysosomal enzyme may occasionally leak into the cytosol?",
+          "options": [
+            "Lysosomal enzymes are not proteins",
+            "The cytosol's near-neutral pH makes the acid hydrolases largely inactive",
+            "The enzymes are destroyed in the Golgi",
+            "Lysosomes cannot leak"
+          ],
+          "answer": 1,
+          "explanation": "Acid hydrolases are optimised for pH around 5 inside lysosomes; at the cytosol's pH of about 7.2 their activity is greatly reduced, which limits damage."
+        }
+      ]
+    },
+    {
+      "id": "mitochondria-chloroplasts-energy",
+      "title": "Mitochondria, Chloroplasts and Cellular Energy",
+      "hours": 5,
+      "hook": "Mitochondria carry their own DNA, divide like bacteria, and still cannot live without the cell that hosts them. They are the remnants of an ancient partnership, and the way they and chloroplasts turn electron flow into ATP is a story told in a single phrase: proton gradient.",
+      "learningObjectives": [
+        "Describe the structure of mitochondria and chloroplasts and link structure to function.",
+        "Summarise the evidence for the endosymbiotic origin of these organelles.",
+        "Outline the stages of aerobic respiration and where each occurs.",
+        "Explain chemiosmosis: electron transport builds a proton gradient that drives ATP synthase.",
+        "Give the overall inputs and outputs of the light reactions and the Calvin cycle."
+      ],
+      "keyConcepts": [
+        {
+          "term": "ATP",
+          "definition": "Adenosine triphosphate, the cell's energy currency: its hydrolysis to ADP and phosphate is coupled to unfavourable processes; it is continuously regenerated rather than stored."
+        },
+        {
+          "term": "Mitochondrion",
+          "definition": "A double-membrane organelle with a folded inner membrane (cristae) enclosing the matrix; site of the citric acid cycle and oxidative phosphorylation."
+        },
+        {
+          "term": "Chloroplast",
+          "definition": "A double-membrane plastid containing stacks of thylakoid membranes (grana) in a fluid stroma; site of photosynthesis in plants and algae."
+        },
+        {
+          "term": "Endosymbiotic theory",
+          "definition": "Mitochondria and chloroplasts descend from free-living bacteria engulfed by ancestral host cells, supported by their circular DNA, 70S ribosomes, double membranes and binary-fission-like division."
+        },
+        {
+          "term": "Electron transport chain",
+          "definition": "A series of membrane-bound complexes that pass electrons from NADH and FADH2 to oxygen while pumping protons across the inner mitochondrial membrane."
+        },
+        {
+          "term": "Chemiosmosis and ATP synthase",
+          "definition": "The proton-motive force across the membrane drives protons back through ATP synthase, whose rotor turns to make ATP from ADP and phosphate."
+        },
+        {
+          "term": "Light reactions and Calvin cycle",
+          "definition": "In chloroplasts, light energy drives electron flow in the thylakoid membrane to make ATP and NADPH; the Calvin cycle in the stroma uses them to fix CO2 into sugars."
+        },
+        {
+          "term": "Substrate-level versus oxidative phosphorylation",
+          "definition": "Substrate-level phosphorylation transfers phosphate directly from a substrate to ADP; oxidative phosphorylation uses the proton gradient produced by electron transport."
+        }
+      ],
+      "animation": "chemiosmosis",
+      "deeper": {
+        "beginner": "Cells need a steady supply of ATP. Mitochondria are the main ATP factories in animal and plant cells: they take fuel molecules derived from food and, using oxygen, release energy to make most of the cell's ATP. Chloroplasts in plants capture light energy to make sugars. Both organelles have two membranes and their own small DNA, which hints that they began as free-living bacteria.",
+        "intermediate": "Glucose is broken down in glycolysis (cytosol) to pyruvate, which is converted to acetyl-CoA and oxidised in the citric acid cycle (mitochondrial matrix), yielding NADH and FADH2. Electrons from these carriers travel through complexes I to IV in the inner membrane to O2, forming water, while protons are pumped into the intermembrane space. The resulting gradient drives ATP synthase; a full oxidation of glucose yields roughly 30 to 32 ATP in current estimates (older textbooks say 36 to 38). In chloroplasts the same logic applies: light excites chlorophyll, electrons move through the thylakoid transport chain, protons accumulate inside the thylakoid lumen and ATP synthase makes ATP; the ATP and NADPH then power CO2 fixation by Rubisco in the Calvin cycle.",
+        "advanced": "Mitchell's chemiosmotic hypothesis (1961) was initially controversial because it proposed that a proton gradient, not a high-energy chemical intermediate, couples electron transport to ATP synthesis; it was later confirmed and earned the 1978 Nobel Prize in Chemistry. The proton-motive force has both an electrical (about 150 to 180 mV, inside negative) and a pH component. ATP synthase is a rotary motor: F0 rotation driven by protons turns the gamma subunit within F1, whose three catalytic sites cycle through binding, ATP formation and release; roughly 3 to 4 protons are needed per ATP including transport of phosphate. Mitochondria retain a small genome (human mtDNA is 16.6 kb, encoding 13 proteins, 22 tRNAs and 2 rRNAs), inherited maternally, and most mitochondrial proteins are encoded in the nucleus, imported after synthesis. Uncoupling proteins can dissipate the gradient as heat, as in brown fat."
+      },
+      "commonMistakes": [
+        "Saying plants have chloroplasts instead of mitochondria; they have both, and respire as well as photosynthesise.",
+        "Using respiration as a synonym for breathing; cellular respiration is the biochemical oxidation of fuel.",
+        "Thinking ATP is stored in large amounts; it is turned over rapidly (a person recycles roughly their own body weight in ATP per day).",
+        "Believing the electron transport chain itself makes ATP; it builds the proton gradient, and ATP synthase makes ATP."
+      ],
+      "videos": [
+        {
+          "youtubeId": "FGnS-Xk0ZqU",
+          "title": "Endosymbiotic Theory",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A concise explanation of the evidence that mitochondria and chloroplasts descend from bacteria."
+        },
+        {
+          "youtubeId": "HeO3yagexTw",
+          "title": "Cellular Respiration: Do Cells Breathe?: Crash Course Biology #27",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Gives the big picture of glycolysis, the Krebs cycle and the electron transport chain."
+        },
+        {
+          "youtubeId": "iTyo4l1Eq6E",
+          "title": "Mitochondria: Structure and function",
+          "channel": "Joao's Lab",
+          "level": "intermediate",
+          "whyWatch": "Covers the structure of the organelle and how its compartments serve ATP production."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/191144a0",
+          "title": "Coupling of Phosphorylation to Electron and Hydrogen Transfer by a Chemi-Osmotic type of Mechanism",
+          "authors": "Mitchell P",
+          "year": 1961,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Mitchell's proposal that proton gradients couple electron transport to ATP synthesis, one of the most important ideas in bioenergetics. It shows how a bold hypothesis can overturn a field."
+        },
+        {
+          "doi": "10.1016/0022-5193(67)90079-3",
+          "title": "On the origin of mitosing cells",
+          "authors": "Sagan L",
+          "year": 1967,
+          "journal": "Journal of Theoretical Biology",
+          "level": "intermediate",
+          "whyItMatters": "The paper that laid out the modern endosymbiotic theory for the origin of mitochondria and chloroplasts. Initially rejected by many journals, it is now textbook science."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biology 2e - Cellular Respiration and Photosynthesis",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters 7 and 8 cover cellular respiration and photosynthesis with diagrams that match this unit."
+        },
+        {
+          "title": "PDB-101: ATP Synthase",
+          "provider": "RCSB Protein Data Bank",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search this site for ATP synthase to see the structure and rotary mechanism explained with 3D models."
+        },
+        {
+          "title": "7.016 Introductory Biology",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+          "free": true,
+          "level": "advanced",
+          "note": "Full lectures and notes on metabolism and cell biology from a leading course."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which observation supports the endosymbiotic origin of mitochondria?",
+          "options": [
+            "They have a single membrane",
+            "They contain circular DNA and 70S ribosomes",
+            "They lack proteins",
+            "They are found only in plant cells"
+          ],
+          "answer": 1,
+          "explanation": "Mitochondria have circular DNA, bacterial-type 70S ribosomes and a double membrane, features shared with bacteria and consistent with a bacterial ancestor."
+        },
+        {
+          "question": "In chemiosmosis, what directly drives ATP synthase?",
+          "options": [
+            "The flow of electrons through complex IV",
+            "The flow of protons down their electrochemical gradient through the enzyme",
+            "Direct hydrolysis of NADH",
+            "Light"
+          ],
+          "answer": 1,
+          "explanation": "Protons pumped by the electron transport chain flow back through ATP synthase, and that flow turns the rotor that drives ATP formation."
+        },
+        {
+          "question": "Where does the citric acid cycle occur in a eukaryotic cell?",
+          "options": [
+            "Cytosol",
+            "Mitochondrial matrix",
+            "Outer mitochondrial membrane",
+            "Nucleus"
+          ],
+          "answer": 1,
+          "explanation": "The enzymes of the citric acid cycle are in the mitochondrial matrix, whereas glycolysis occurs in the cytosol and the electron transport chain in the inner membrane."
+        }
+      ]
+    },
+    {
+      "id": "cell-signalling",
+      "title": "Cell Signalling and Communication",
+      "hours": 5,
+      "hook": "Adrenaline reaches a liver cell at nanomolar concentrations and, within seconds, the cell releases glucose into the blood, an effect millions of times larger than the signal that triggered it. How a tiny signal at the surface becomes a big response inside is the essence of cell signalling.",
+      "learningObjectives": [
+        "Describe the three stages of signalling: reception, transduction and response.",
+        "Compare endocrine, paracrine, autocrine and juxtacrine signalling.",
+        "Identify the main receptor classes and give examples (GPCRs, receptor tyrosine kinases, ion channels, nuclear receptors).",
+        "Explain the roles of second messengers (cAMP, Ca2+, IP3, DAG) and of kinase cascades in amplification.",
+        "Explain how signals are terminated and why that matters."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Ligand and receptor",
+          "definition": "A ligand is the signalling molecule; the receptor is the protein that binds it specifically, and binding changes the receptor's conformation or activity."
+        },
+        {
+          "term": "Signal transduction",
+          "definition": "The chain of molecular events that converts receptor binding into a cellular response."
+        },
+        {
+          "term": "G protein-coupled receptor (GPCR)",
+          "definition": "A seven-transmembrane receptor that activates a heterotrimeric G protein, which then regulates enzymes such as adenylyl cyclase or phospholipase C."
+        },
+        {
+          "term": "Receptor tyrosine kinase",
+          "definition": "A receptor that dimerises on ligand binding and phosphorylates itself on tyrosines, creating docking sites for signalling proteins (for example the insulin and EGF receptors)."
+        },
+        {
+          "term": "Second messenger",
+          "definition": "A small intracellular molecule or ion produced or released after receptor activation, such as cAMP, Ca2+, IP3 and DAG, that spreads and amplifies the signal."
+        },
+        {
+          "term": "Kinase cascade",
+          "definition": "A sequence in which each activated kinase phosphorylates the next, so a single receptor event is amplified many thousand-fold."
+        },
+        {
+          "term": "Intracellular (nuclear) receptor",
+          "definition": "Receptors for lipid-soluble ligands, such as steroid hormones, that act directly on gene transcription after the hormone crosses the membrane."
+        },
+        {
+          "term": "Signal termination",
+          "definition": "Switching signals off by degrading ligands, GTP hydrolysis by G proteins, phosphodiesterases breaking down cAMP, and phosphatases removing phosphate."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells talk to each other with chemical messages. A message molecule binds a specific receptor, usually on the surface; the receptor then sets off a chain of events inside the cell that changes what the cell does. Each step can amplify the signal. Some messages, such as steroid hormones, are fat-soluble and slip through the membrane to bind receptors inside.",
+        "intermediate": "In the adrenaline pathway, adrenaline binds a beta-adrenergic receptor (a GPCR); the receptor activates Gs, which exchanges GDP for GTP and stimulates adenylyl cyclase to make cAMP; cAMP activates protein kinase A, which sets off a cascade that activates glycogen phosphorylase and inhibits glycogen synthesis, releasing glucose. Termination comes from GTP hydrolysis by the G protein, cAMP breakdown by phosphodiesterase, and phosphatases. Receptor tyrosine kinases trigger the Ras and MAP kinase cascade and PI3K pathways controlling growth and survival. Calcium is a second messenger released from the ER through IP3-gated channels; it binds proteins such as calmodulin.",
+        "advanced": "Signalling networks show features such as ultrasensitivity (switch-like responses from multisite phosphorylation), feedback loops that generate oscillations or bistability, and crosstalk between pathways. Specificity is achieved by scaffold proteins and spatial compartmentalisation (for example A-kinase anchoring proteins organising PKA). Receptor desensitisation by GPCR kinases and arrestins both stops signalling and initiates alternative signalling. Many drugs target these systems: a large fraction of drugs act on GPCRs, and kinase inhibitors such as imatinib exploit dependencies on constitutively active kinases in cancers. Mutations in signalling proteins (such as Ras, mutated in a large share of human tumours) lock pathways on, linking this unit to the cell-cycle unit that follows."
+      },
+      "commonMistakes": [
+        "Saying the signalling molecule enters the cell and carries the message; for surface receptors the ligand stays outside and the receptor passes on the information.",
+        "Confusing the first messenger (the extracellular ligand) with the second messenger (an intracellular molecule such as cAMP).",
+        "Forgetting that signals must be switched off; failure to terminate (for example cholera toxin keeping Gs active) causes disease.",
+        "Treating phosphorylation as always activating; it can activate or inhibit depending on the protein."
+      ],
+      "videos": [
+        {
+          "youtubeId": "-dbRterutHY",
+          "title": "Intro to Cell Signaling",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Introduces ligands, receptors and the three stages of signalling in a friendly way."
+        },
+        {
+          "youtubeId": "p15KSbNxb28",
+          "title": "Why Do Cells Need to Communicate?: Crash Course Biology #25",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Frames signalling as cellular communication with examples from the body."
+        },
+        {
+          "youtubeId": "FQFBygnIONU",
+          "title": "Overview of cell signaling",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Covers the types of signalling and receptors with a systematic structure."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2010.06.011",
+          "title": "Cell Signaling by Receptor Tyrosine Kinases",
+          "authors": "Lemmon MA, Schlessinger J",
+          "year": 2010,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "A thorough review of how receptor tyrosine kinases are activated and how they link to downstream pathways. It is a good example of the structure-to-function approach in signalling."
+        },
+        {
+          "doi": "10.1038/312315a0",
+          "title": "Inositol trisphosphate, a novel second messenger in cellular signal transduction",
+          "authors": "Berridge MJ, Irvine RF",
+          "year": 1984,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Describes the discovery that IP3 releases calcium from internal stores, establishing a major second messenger system. Shows how a small molecule can bridge the plasma membrane and the ER."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Cell Signaling (Biology 2e, chapter 9)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Clear explanations of signalling types, receptors, and pathways, with diagrams you can compare with lecture slides."
+        },
+        {
+          "title": "Molecular Biology of the Cell, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "advanced",
+          "note": "Searchable free text; look up 'cell signaling' for chapter 15 in-depth coverage."
+        },
+        {
+          "title": "iBiology",
+          "provider": "iBiology",
+          "type": "course",
+          "url": "https://www.ibiology.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Free talks from leading scientists, including cell signalling pioneers, to hear how the field's discoveries were made."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In the adrenaline pathway in liver cells, cAMP is best described as:",
+          "options": [
+            "The first messenger",
+            "A second messenger",
+            "The receptor",
+            "A transcription factor"
+          ],
+          "answer": 1,
+          "explanation": "Adrenaline is the first messenger; cAMP is produced inside the cell by adenylyl cyclase and relays and amplifies the signal."
+        },
+        {
+          "question": "Which type of ligand most likely binds an intracellular receptor?",
+          "options": [
+            "A large charged peptide hormone",
+            "A steroid hormone",
+            "Insulin",
+            "A neurotransmitter such as acetylcholine acting on a channel"
+          ],
+          "answer": 1,
+          "explanation": "Lipid-soluble steroid hormones cross the plasma membrane and bind cytosolic or nuclear receptors, while peptide hormones cannot cross and bind surface receptors."
+        },
+        {
+          "question": "What is the main benefit of a kinase cascade?",
+          "options": [
+            "It reduces the response",
+            "It amplifies the signal because each enzyme activates many substrates",
+            "It removes the need for receptors",
+            "It makes the signal slower"
+          ],
+          "answer": 1,
+          "explanation": "Each activated kinase can phosphorylate many copies of the next kinase, so a few receptor events produce a large cellular response."
+        }
+      ]
+    },
+    {
+      "id": "cell-cycle-division-death",
+      "title": "The Cell Cycle, Division and Cell Death",
+      "hours": 5,
+      "hook": "You began as a single cell and now contain tens of trillions, and nearly every one was produced by the same tightly regulated loop of growth and division. When the brakes on that loop fail, the result is cancer, and when the cell chooses to self-destruct, the result is sculpted tissue: the webbing between fingers vanished this way.",
+      "learningObjectives": [
+        "Describe the phases of the cell cycle (G1, S, G2, M) and the stages of mitosis.",
+        "Explain the role of cyclins, CDKs and checkpoints in cell-cycle control.",
+        "Compare mitosis and meiosis and explain how meiosis generates genetic diversity.",
+        "Describe apoptosis, how it differs from necrosis, and its role in development.",
+        "Explain in outline how loss of cell-cycle control contributes to cancer."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Cell cycle phases",
+          "definition": "Interphase (G1 growth, S DNA synthesis, G2 preparation) followed by M phase (mitosis and cytokinesis); non-dividing cells may exit to G0."
+        },
+        {
+          "term": "Mitosis",
+          "definition": "Nuclear division producing two genetically identical nuclei: prophase, prometaphase, metaphase, anaphase and telophase, usually followed by cytokinesis."
+        },
+        {
+          "term": "Chromosome and chromatid",
+          "definition": "After S phase each chromosome consists of two identical sister chromatids joined at the centromere; they separate at anaphase and become independent chromosomes."
+        },
+        {
+          "term": "Cyclin and CDK",
+          "definition": "Cyclin-dependent kinases are active only when bound to a cyclin whose levels rise and fall through the cycle, driving transitions between phases."
+        },
+        {
+          "term": "Checkpoints",
+          "definition": "Control points (G1/S, G2/M and the spindle assembly checkpoint) that halt the cycle if DNA is damaged or chromosomes are incorrectly attached."
+        },
+        {
+          "term": "Meiosis",
+          "definition": "Two successive divisions after one round of DNA replication, producing four haploid cells; crossing over and independent assortment create genetic variation."
+        },
+        {
+          "term": "Apoptosis",
+          "definition": "Regulated cell death executed by caspase enzymes, producing orderly cell shrinkage and packaging that does not trigger inflammation, unlike necrosis."
+        },
+        {
+          "term": "Tumour suppressors and oncogenes",
+          "definition": "Tumour suppressors (such as p53 and Rb) restrain cycle progression and promote repair or death; oncogenes (such as mutant Ras) drive growth, and cancer usually requires several such changes."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells divide in a repeating cycle: grow, copy their DNA, check everything, then split into two identical daughter cells. During mitosis the copied chromosomes line up and are pulled apart so each new cell gets a full set. Special divisions called meiosis make sperm and egg cells with half the usual chromosome number. Cells also have a built-in self-destruct programme, apoptosis, used to remove damaged or unneeded cells.",
+        "intermediate": "A human cell has 46 chromosomes; after S phase there are 46 chromosomes each made of two sister chromatids. In anaphase the chromatids separate, so each daughter gets 46. Cyclin-CDK complexes drive phase transitions: cyclin D-CDK4/6 and cyclin E-CDK2 push cells through G1/S by phosphorylating Rb, and cyclin B-CDK1 triggers mitosis. p53 detects DNA damage, stops the cycle (via p21) and can trigger apoptosis. In meiosis, homologous chromosomes pair and swap segments in prophase I (crossing over), separate in meiosis I, and sister chromatids separate in meiosis II, giving four genetically distinct haploid cells. Apoptosis involves initiator and executioner caspases activated through the intrinsic (mitochondrial, cytochrome c) or extrinsic (death receptor) pathway.",
+        "advanced": "Hartwell's checkpoint work in yeast and Nurse's discovery of CDK as a universal M-phase control, both recognised by the 2001 Nobel Prize, established the idea of the cell cycle as a series of regulated dependencies rather than a clock. The spindle assembly checkpoint blocks anaphase until all kinetochores are attached to microtubules, preventing aneuploidy. Cancer arises from accumulated mutations and epigenetic changes: Hanahan and Weinberg's hallmarks include sustained proliferative signalling, evasion of growth suppressors, resisting cell death, enabling replicative immortality, inducing angiogenesis and activating invasion, with later additions of metabolic reprogramming and immune evasion. Therapeutic strategies exploit these dependencies: CDK4/6 inhibitors in breast cancer, microtubule poisons that trigger the spindle checkpoint, and drugs that restore apoptosis such as BCL-2 inhibitors."
+      },
+      "commonMistakes": [
+        "Confusing chromosome number with chromatid number after S phase; DNA content doubles but chromosome number stays 46 until anaphase.",
+        "Mixing up mitosis and meiosis outcomes: mitosis gives two diploid identical cells, meiosis gives four haploid different cells.",
+        "Calling apoptosis 'cell damage'; it is an active, controlled programme, whereas necrosis is accidental and messy.",
+        "Saying cancer is caused by a single mutation; it typically requires an accumulation of changes in several genes."
+      ],
+      "videos": [
+        {
+          "youtubeId": "QVCjdNxJreE",
+          "title": "The Cell Cycle (and cancer) [Updated]",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Explains the phases, checkpoints and how cancer relates to cycle control."
+        },
+        {
+          "youtubeId": "ShEzlXZPpPM",
+          "title": "Mitosis (UPDATED 2026)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Steps through each stage of mitosis with clear animations."
+        },
+        {
+          "youtubeId": "I-sucvMV0Ng",
+          "title": "Meiosis (UPDATED 2026)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Shows how meiosis halves chromosome number and shuffles genes via crossing over."
+        },
+        {
+          "youtubeId": "gNFDONSjB7Q",
+          "title": "Apoptosis",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Covers the apoptotic pathways, caspases and how apoptosis differs from necrosis."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.2683079",
+          "title": "Checkpoints: Controls That Ensure the Order of Cell Cycle Events",
+          "authors": "Hartwell LH, Weinert TA",
+          "year": 1989,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Introduced the concept of checkpoints, showing that later cell-cycle events depend on completion of earlier ones. The idea underlies modern understanding of both normal division and cancer."
+        },
+        {
+          "doi": "10.1038/bjc.1972.33",
+          "title": "Apoptosis: A Basic Biological Phenomenon with Wideranging Implications in Tissue Kinetics",
+          "authors": "Kerr JFR, Wyllie AH, Currie AR",
+          "year": 1972,
+          "journal": "British Journal of Cancer",
+          "level": "intermediate",
+          "whyItMatters": "The paper that named apoptosis and described how it differs from necrosis under the microscope. It opened a field that now underlies development, immunity and cancer therapy."
+        },
+        {
+          "doi": "10.1016/j.cell.2011.02.013",
+          "title": "Hallmarks of Cancer: The Next Generation",
+          "authors": "Hanahan D, Weinberg RA",
+          "year": 2011,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Organises the diverse biology of cancer into a small set of acquired capabilities, a framework that reappears throughout cancer biology. A good map of how cell-cycle, death and signalling pathways go wrong."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biology 2e - Cell Reproduction",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapter 10 covers the cell cycle, regulation, mitosis and cancer; chapter 11 covers meiosis."
+        },
+        {
+          "title": "MIT 7.01SC Fundamentals of Biology",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/",
+          "free": true,
+          "level": "advanced",
+          "note": "Full lecture videos and notes including cell division, cancer and signalling."
+        },
+        {
+          "title": "Khan Academy: AP/College Biology",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/ap-biology",
+          "free": true,
+          "level": "beginner",
+          "note": "Includes cell cycle, mitosis, meiosis and regulation lessons with practice exercises."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A human cell in G2 contains how many chromosomes and how many chromatids?",
+          "options": [
+            "46 chromosomes, 46 chromatids",
+            "46 chromosomes, 92 chromatids",
+            "92 chromosomes, 92 chromatids",
+            "23 chromosomes, 46 chromatids"
+          ],
+          "answer": 1,
+          "explanation": "After S phase each of the 46 chromosomes is composed of two sister chromatids, so there are 92 chromatids but still 46 chromosomes until anaphase."
+        },
+        {
+          "question": "Which process in meiosis contributes to genetic diversity by exchanging segments between homologous chromosomes?",
+          "options": [
+            "Cytokinesis",
+            "Crossing over in prophase I",
+            "DNA replication",
+            "Anaphase II"
+          ],
+          "answer": 1,
+          "explanation": "Crossing over in prophase I swaps segments between homologous chromosomes, producing new allele combinations; independent assortment adds further variety."
+        },
+        {
+          "question": "What distinguishes apoptosis from necrosis?",
+          "options": [
+            "Apoptosis is a regulated, caspase-dependent programme that avoids inflammation",
+            "Apoptosis always causes inflammation",
+            "Necrosis requires caspases",
+            "They are the same process"
+          ],
+          "answer": 0,
+          "explanation": "Apoptosis is an ordered process in which cells shrink and are packaged for removal without leaking contents; necrosis results from injury, with swelling, rupture and inflammation."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "wJyUtbn0O5Y",
+      "title": "The Inner Life of the Cell Animation",
+      "channel": "XVIVO Scientific Animation",
+      "level": "beginner",
+      "whyWatch": "A cinematic tour of molecular machines inside a cell; watch it at the start and again at the end of the course."
+    },
+    {
+      "youtubeId": "8IlzKri08kk",
+      "title": "Introduction to Cells: The Grand Cell Tour",
+      "channel": "Amoeba Sisters",
+      "level": "beginner",
+      "whyWatch": "A friendly overview of organelles that serves as a map for the whole course."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A complete, free first-year biology textbook with strong coverage of cells, biomolecules, metabolism and genetics."
+    },
+    {
+      "title": "Molecular Biology of the Cell, 4th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "advanced",
+      "note": "The classic cell biology text, free on Bookshelf by search; use it for depth beyond first year."
+    },
+    {
+      "title": "The Cell: A Molecular Approach, 2nd edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A concise, readable cell biology text that connects well with molecular biology courses."
+    }
+  ]
+}

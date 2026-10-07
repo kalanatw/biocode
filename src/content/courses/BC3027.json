@@ -1,0 +1,1414 @@
+{
+  "code": "BC 3027",
+  "title": "Enzymology",
+  "level": 3,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "How a few thousand protein catalysts make the chemistry of life fast, specific and controllable.",
+  "overview": "This course starts with what enzymes are and how they are classified, then asks how they achieve their astonishing rate enhancements, using transition-state theory and detailed mechanisms such as chymotrypsin and lysozyme. It builds the quantitative core of enzymology (Michaelis-Menten steady-state kinetics, kcat/Km, inhibition), explains how enzymes are regulated (allostery, feedback, covalent modification, zymogens), covers multi-substrate mechanisms and practical issues such as assays and purification, and ends with clinical, industrial and engineering applications. The units follow the standard content of a BSc Honours enzymology course.",
+  "whyItMatters": "Almost every metabolic reaction, drug target and diagnostic blood test depends on an enzyme. Learning to measure and reason about enzyme activity gives you tools for understanding disease, designing drugs and building biocatalysts.",
+  "prerequisites": [
+    "FD 2101",
+    "FD 1101"
+  ],
+  "careerLinks": [
+    "Drug discovery and pharmacology",
+    "Clinical biochemistry and diagnostics",
+    "Industrial biotechnology and food technology",
+    "Protein engineering and synthetic biology",
+    "Quality control in pharmaceutical and food industries"
+  ],
+  "studyTips": [
+    "Do the kinetics by hand: derive Michaelis-Menten once from the steady-state assumption, then practise reading Vmax and Km from a plot, a table and a Lineweaver-Burk line.",
+    "Make a one-page table of inhibitor types with columns for binding site, effect on Vmax, effect on Km and double-reciprocal signature; redraw it from memory.",
+    "For each mechanism you study (chymotrypsin, lysozyme), draw arrows for electron movement at every step and name which catalytic strategy is used.",
+    "Use BRENDA and the PDB to look at real Km, kcat and structures for an enzyme in your lecture notes; real numbers make the equations meaningful."
+  ],
+  "units": [
+    {
+      "id": "enzymes-as-catalysts",
+      "title": "Enzymes as biological catalysts: classes, cofactors and the active site",
+      "hours": 4,
+      "hook": "Left to itself in water, the bond that links the letters of a protein would take hundreds of years to break; in your gut, an enzyme does it in a fraction of a second. Enzymes are why chemistry that would be hopelessly slow at body temperature happens on the timescale of life.",
+      "learningObjectives": [
+        "Define an enzyme and distinguish it from an inorganic catalyst, naming its key properties (rate enhancement, specificity, regulation)",
+        "Classify enzymes into the six IUBMB classes and interpret an EC number",
+        "Distinguish cofactors, coenzymes and prosthetic groups and link common coenzymes to vitamins",
+        "Describe the active site, the lock-and-key and induced-fit models of substrate recognition",
+        "Explain how an enzyme changes the rate but not the equilibrium of a reaction",
+        "Define enzyme activity units (U, katal) and specific activity",
+        "Explain that some catalysts are RNA (ribozymes)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Enzyme",
+          "definition": "A biological catalyst, usually a protein, that speeds a specific reaction by providing a lower-energy path without being consumed."
+        },
+        {
+          "term": "Active site",
+          "definition": "The region of the enzyme, a cleft or pocket made by residues often distant in sequence, where substrate binds and chemistry occurs."
+        },
+        {
+          "term": "Substrate specificity",
+          "definition": "The ability to select particular substrates from the many molecules present, which arises from the shape and chemistry of the binding pocket."
+        },
+        {
+          "term": "Induced fit",
+          "definition": "Koshland's proposal that substrate binding changes the shape of the enzyme to bring catalytic groups into the right position; replaces the rigid lock-and-key picture."
+        },
+        {
+          "term": "EC number",
+          "definition": "The four-part code (for example EC 3.4.21.1 for chymotrypsin) from the Enzyme Commission: class, subclass, sub-subclass and serial number."
+        },
+        {
+          "term": "Six enzyme classes",
+          "definition": "Oxidoreductases, transferases, hydrolases, lyases, isomerases and ligases, grouped by the type of reaction catalysed."
+        },
+        {
+          "term": "Cofactor",
+          "definition": "A non-protein helper required for activity; either metal ions or organic coenzymes."
+        },
+        {
+          "term": "Coenzyme",
+          "definition": "An organic cofactor such as NAD+, FAD, coenzyme A or pyridoxal phosphate, often derived from a vitamin, that carries chemical groups or electrons between enzymes."
+        },
+        {
+          "term": "Holoenzyme and apoenzyme",
+          "definition": "The complete active enzyme with its cofactor (holo) and the protein part alone (apo), which is inactive."
+        },
+        {
+          "term": "Enzyme unit (U) and katal",
+          "definition": "1 U is the amount of enzyme that converts 1 micromole of substrate per minute under defined conditions; 1 katal is 1 mole per second (1 U is about 16.7 nanokatal)."
+        },
+        {
+          "term": "Ribozyme",
+          "definition": "An RNA molecule with catalytic activity, such as self-splicing introns and the ribosomal peptidyl transferase centre."
+        }
+      ],
+      "deeper": {
+        "beginner": "An enzyme is a molecular matchmaker with a very particular pocket. It doesn't change what the reaction can achieve, only how quickly it gets there. The pocket grips the substrate and holds it in just the right orientation, rather like a catcher's mitt that closes around the ball. The lock-and-key picture suggests that the enzyme is stiff; in reality, the enzyme moves, and the closing of the pocket is part of how catalysis works. That is the induced-fit idea, although the key point remains the match between enzyme and substrate.",
+        "intermediate": "Enzymes typically accelerate reactions by factors of 10^6 to over 10^17 and work under mild conditions of temperature and pH. They are highly specific: many distinguish between enantiomers and recognise the exact position of a functional group. The EC number tells you what the enzyme does: for example EC 1.1.1.1 is alcohol dehydrogenase (an oxidoreductase), EC 2.7.1.1 is hexokinase (a transferase). Many enzymes require a cofactor: metal ions such as Zn2+ or Mg2+, or coenzymes such as NAD+ (from niacin), FAD (riboflavin), and coenzyme A (pantothenate). Activity is measured as the amount of substrate converted or product formed per unit time, and specific activity (units per mg of protein) tells you how pure an enzyme preparation is.",
+        "advanced": "A catalyst lowers the free energy of activation but does not change the overall free-energy change or the equilibrium constant; microscopic reversibility means that the same lowering applies to the forward and reverse reactions, so the enzyme-catalysed reverse reaction must pass through the same transition state. Catalytic efficiency comes from multiple factors working together: binding energy used to stabilise the transition state (the Circe effect, see the next unit), precise positioning, acid-base and covalent chemistry, and preorganised electrostatics. Induced fit and conformational selection are two descriptions of how binding couples with protein dynamics, and experiments (NMR relaxation, single-molecule studies) show that enzymes sample catalytically relevant conformations even without substrate. Some enzymes are promiscuous, catalysing weak side reactions that provide starting points for evolution of new activities. Ribozymes demonstrate that catalysis does not require a protein and are central to the RNA-world hypothesis; the ribosome itself is a ribozyme."
+      },
+      "commonMistakes": [
+        "Believing that enzymes make a thermodynamically unfavourable reaction go; they accelerate approach to equilibrium only.",
+        "Saying that an enzyme is used up in the reaction; it is regenerated at the end of each cycle.",
+        "Treating all enzymes as proteins; ribozymes are catalytic RNAs.",
+        "Mixing up coenzyme and cofactor: all coenzymes are cofactors, but not all cofactors are coenzymes (metal ions are not)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "qgVFkRn8f10",
+          "title": "Enzymes (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A lively introduction to what enzymes are and how the active site works."
+        },
+        {
+          "youtubeId": "YIGT1qkfGdY",
+          "title": "Enzymes Nomenclature and Classifications - Names and Types - Biochemistry",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Walks through the six classes and how enzymes are named."
+        },
+        {
+          "youtubeId": "OJhdag89Pq4",
+          "title": "Co-factors, co-enzymes, and vitamins | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Explains the difference between cofactors and coenzymes and the link with vitamins."
+        },
+        {
+          "youtubeId": "tPCOEUo6J8s",
+          "title": "Enzymes' Effect on Activation Energy and Free Energy",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Makes clear what an enzyme changes (the barrier) and what it does not (overall delta G)."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.44.2.98",
+          "title": "Application of a Theory of Enzyme Specificity to Protein Synthesis",
+          "authors": "Koshland DE",
+          "year": 1958,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "advanced",
+          "whyItMatters": "The paper that proposed induced fit, the idea that the enzyme adapts its shape to the substrate. It also illustrates the basic way in which enzymologists reason from specificity data to a model of the active site."
+        },
+        {
+          "doi": "10.1016/0092-8674(82)90414-7",
+          "title": "Self-splicing RNA: Autoexcision and autocyclization of the ribosomal RNA intervening sequence of Tetrahymena",
+          "authors": "Kruger K, Grabowski PJ, Zaug AJ, Sands J, Gottschling DE, Cech TR",
+          "year": 1982,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "The discovery that an RNA molecule can catalyse a chemical reaction without any protein, overturning the idea that all enzymes are proteins. It opened the field of ribozymes and shaped ideas about the origin of life.",
+          "readingQuestions": [
+            "What controls were needed to show the RNA itself, and not a contaminating protein, did the splicing?",
+            "What cofactors did the reaction need?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "ExPASy ENZYME nomenclature database",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "database",
+          "url": "https://enzyme.expasy.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up any EC number to see the reaction, cofactors and linked sequences."
+        },
+        {
+          "title": "BRENDA enzyme database",
+          "provider": "BRENDA (Technische Universitat Braunschweig)",
+          "type": "database",
+          "url": "https://www.brenda-enzymes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A comprehensive collection of enzyme functional data such as Km, kcat, inhibitors and pH optima."
+        },
+        {
+          "title": "Energy and enzymes",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/biology/energy-and-enzymes",
+          "free": true,
+          "level": "beginner",
+          "note": "Short videos and quizzes covering enzymes, activation energy and regulation."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What does an enzyme change about a reaction?",
+          "options": [
+            "The overall free-energy change",
+            "The activation energy barrier, and so the rate",
+            "The direction of the reaction",
+            "The equilibrium constant"
+          ],
+          "answer": 1,
+          "explanation": "Enzymes lower the activation free energy. The overall delta G and the equilibrium constant depend only on reactants and products, so they remain unchanged."
+        },
+        {
+          "question": "EC 3.4.21.1 refers to chymotrypsin. To which class does it belong?",
+          "options": [
+            "Hydrolase",
+            "Ligase",
+            "Oxidoreductase",
+            "Transferase"
+          ],
+          "answer": 0,
+          "explanation": "The first number is the class: 3 means hydrolases, enzymes that cleave bonds using water; 3.4 are peptidases."
+        },
+        {
+          "question": "An enzyme preparation has 1200 U of activity in 3 mg of protein. What is the specific activity?",
+          "options": [
+            "400 U/mg",
+            "4 U/mg",
+            "3 600 U/mg",
+            "0.0025 U/mg"
+          ],
+          "answer": 0,
+          "explanation": "Specific activity is units of activity per mg of protein: 1200 U / 3 mg = 400 U/mg."
+        },
+        {
+          "question": "Which statement best describes induced fit?",
+          "options": [
+            "The enzyme is rigid and matches the substrate like a key in a lock",
+            "Substrate binding changes the enzyme's conformation to bring catalytic groups into position",
+            "The substrate changes shape but the enzyme does not",
+            "The enzyme is covalently modified by the substrate"
+          ],
+          "answer": 1,
+          "explanation": "In the induced-fit model the active site is reshaped by substrate binding, optimising the alignment of catalytic groups."
+        }
+      ]
+    },
+    {
+      "id": "catalytic-mechanisms",
+      "title": "How enzymes catalyse: transition-state stabilisation and chemical strategies",
+      "hours": 5,
+      "hook": "Chymotrypsin cuts proteins using the same few ingredients that a student could assemble on a bench: a serine, a histidine and an aspartate. The difference is that the enzyme holds them exactly where they need to be, and that makes all the difference.",
+      "learningObjectives": [
+        "Explain catalysis in terms of transition-state stabilisation and binding energy (the Circe effect)",
+        "Describe the main catalytic strategies: proximity and orientation, general acid-base, covalent, metal-ion and electrostatic catalysis",
+        "Trace the mechanism of chymotrypsin, including the catalytic triad, acyl-enzyme intermediate and oxyanion hole",
+        "Explain the mechanism of lysozyme and why it is a classic textbook enzyme",
+        "Use transition-state analogues to explain how potent inhibitors can be designed",
+        "Interpret the idea that enzymes are complementary to the transition state rather than to the substrate"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Transition-state theory of catalysis",
+          "definition": "Enzymes speed reactions by binding the transition state more tightly than the substrate, which lowers the activation free energy."
+        },
+        {
+          "term": "Circe effect (Jencks)",
+          "definition": "Intrinsic binding energy of the enzyme-substrate interaction is spent to destabilise the ground state or to stabilise the transition state, rather than just to hold the substrate."
+        },
+        {
+          "term": "Proximity and orientation",
+          "definition": "Bringing reactive groups together in the correct geometry reduces the entropic cost of the reaction."
+        },
+        {
+          "term": "General acid-base catalysis",
+          "definition": "Transfer of protons to or from groups on the enzyme (often His, Asp, Glu, Lys) that stabilises charged intermediates."
+        },
+        {
+          "term": "Covalent catalysis",
+          "definition": "Formation of a transient covalent bond between enzyme and substrate (an acyl-enzyme, for example) that opens a lower-barrier route."
+        },
+        {
+          "term": "Metal-ion catalysis",
+          "definition": "Metal ions orient substrates, stabilise negative charge or activate water, as in carbonic anhydrase and carboxypeptidase."
+        },
+        {
+          "term": "Catalytic triad",
+          "definition": "The Ser-His-Asp arrangement in serine proteases in which Asp positions His, which in turn activates Ser as a nucleophile."
+        },
+        {
+          "term": "Oxyanion hole",
+          "definition": "A pocket of backbone N-H groups that stabilises the negative charge of the tetrahedral intermediate in serine proteases."
+        },
+        {
+          "term": "Transition-state analogue",
+          "definition": "A stable molecule resembling the transition state, which binds the enzyme extremely tightly and is a template for drug design."
+        },
+        {
+          "term": "Preorganised active site",
+          "definition": "The idea that the enzyme's fixed polar groups are already positioned to stabilise charge in the transition state, reducing the reorganisation cost."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine trying to snap a stiff twig. If a pair of hands holds it just so and bends it at the right spot, it snaps easily; held loosely, it never breaks. An enzyme's job is to bend the substrate toward the shape of the transition state. The pocket fits that strained shape best, so binding energy pays for the bending. Some enzymes also use small chemical helpers: groups that pass a proton, or hold an extra negative charge steady. The twig analogy fails because an enzyme does not simply apply a force; it provides a chemically different environment for the reaction.",
+        "intermediate": "Chymotrypsin cleaves peptide bonds after large hydrophobic residues (Phe, Tyr, Trp). In its active site Ser195 is the nucleophile, His57 acts as a general base, and Asp102 orients His57. The serine attacks the carbonyl carbon, forming a tetrahedral intermediate whose oxyanion is stabilised by the oxyanion hole. The peptide bond breaks, the first product leaves and an acyl-enzyme remains; water then attacks, forming a second tetrahedral intermediate that collapses to release the second product and regenerate the enzyme. Lysozyme cleaves the beta-1,4 linkage between N-acetylmuramic acid and N-acetylglucosamine in bacterial cell walls using Glu35 as a general acid and Asp52 to stabilise a carbocation-like intermediate. These examples show how the same strategies combine in real enzymes.",
+        "advanced": "Pauling suggested that enzymes are complementary to the transition state, and Wolfenden quantified this by showing that transition-state analogues can bind millions of times more tightly than the substrate. The Circe effect of Jencks explains that binding energy is partly used to overcome entropy loss and to strain the substrate. Modern work has emphasised electrostatic preorganisation as a main contributor to catalysis, with the enzyme's polar groups already oriented to stabilise developing charge, as shown by computational studies of Warshel. Evidence for the catalytic triad includes mutagenesis: changing Ser195 reduces activity by many orders of magnitude, and the mechanism was probed by pre-steady-state burst kinetics with chromogenic substrates (the burst of p-nitrophenol release indicates fast acylation and slow deacylation). The structure of lysozyme by Phillips and colleagues in 1965 was one of the first of any enzyme, but later work revised the mechanism towards a covalent intermediate in some related glycosidases. The extreme rate enhancement of orotidine decarboxylase, around 10^17, shows how large the effect can be."
+      },
+      "commonMistakes": [
+        "Describing the transition state as an intermediate; it is a fleeting maximum, not a species that can be isolated.",
+        "Assuming that enzymes bind the substrate more tightly than the transition state; if they did, they would stabilise the ground state and slow the reaction.",
+        "Writing the catalytic triad mechanism with the aspartate directly attacking the substrate; the serine is the nucleophile.",
+        "Treating acid-base catalysis as proton transfer in free solution; the enzyme controls where and when the proton moves."
+      ],
+      "videos": [
+        {
+          "youtubeId": "0vvUIIulzMk",
+          "title": "Mechanisms of Enzyme Catalysis",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Surveys the main catalytic strategies with examples."
+        },
+        {
+          "youtubeId": "NEQ9WS8w-2I",
+          "title": "Enzymes Stabilize Transition State",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Shows how stabilising the transition state, not the substrate, lowers the barrier."
+        },
+        {
+          "youtubeId": "OY1WsqlcUdo",
+          "title": "Mechanism of Chymotrypsin and Catalytic Triad",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Follows the chymotrypsin mechanism step by step."
+        },
+        {
+          "youtubeId": "AzQe_MOKcWM",
+          "title": "Lysozyme Mechanism",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "A clear walk through the lysozyme reaction and its key residues."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1002/9780470122884.ch4",
+          "title": "Binding Energy, Specificity, and Enzymic Catalysis: The Circe Effect",
+          "authors": "Jencks WP",
+          "year": 1975,
+          "journal": "Advances in Enzymology and Related Areas of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "A classic chapter that explains how binding energy is spent to speed up reactions and why high specificity and efficient catalysis go together. It is demanding but shapes how we think about enzyme design."
+        },
+        {
+          "doi": "10.1038/206757a0",
+          "title": "Structure of Hen Egg-White Lysozyme: A Three-dimensional Fourier Synthesis at 2 Angstrom Resolution",
+          "authors": "Blake CCF, Koenig DF, Mair GA, North ACT, Phillips DC, Sarma VR",
+          "year": 1965,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "One of the first crystal structures of an enzyme, and the first to reveal an active-site cleft that could be linked to mechanism. It is a landmark in structural enzymology."
+        },
+        {
+          "doi": "10.1126/science.7809611",
+          "title": "A Proficient Enzyme",
+          "authors": "Radzicka A, Wolfenden R",
+          "year": 1995,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Compares the very slow uncatalysed rates of several reactions with enzyme-catalysed rates, giving a sense of the enormous rate enhancements enzymes achieve. It frames why transition-state stabilisation matters."
+        }
+      ],
+      "resources": [
+        {
+          "title": "M-CSA: Mechanism and Catalytic Site Atlas",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/thornton-srv/m-csa/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse curated step-by-step mechanisms and catalytic residues for hundreds of enzymes, including chymotrypsin and lysozyme."
+        },
+        {
+          "title": "Proteopedia",
+          "provider": "Proteopedia",
+          "type": "interactive",
+          "url": "https://proteopedia.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search chymotrypsin or lysozyme to rotate the active site and see the catalytic residues in 3D."
+        },
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "intermediate",
+          "note": "lectures on enzyme catalysis and mechanisms, with notes and problems."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In chymotrypsin, which residue is the nucleophile that attacks the substrate's carbonyl carbon?",
+          "options": [
+            "His57",
+            "Asp102",
+            "Ser195",
+            "Glu35"
+          ],
+          "answer": 2,
+          "explanation": "Ser195 is activated by His57 (with Asp102 orienting His) and attacks the peptide carbonyl, forming a covalent acyl-enzyme intermediate."
+        },
+        {
+          "question": "Why are transition-state analogues potent enzyme inhibitors?",
+          "options": [
+            "They denature the enzyme",
+            "They increase the substrate concentration",
+            "They bind covalently to the enzyme",
+            "They mimic the structure the enzyme binds most tightly"
+          ],
+          "answer": 3,
+          "explanation": "Because the active site is complementary to the transition state, a stable molecule resembling it binds far more tightly than the substrate does."
+        },
+        {
+          "question": "What is the function of the oxyanion hole in serine proteases?",
+          "options": [
+            "Cleaves disulphide bonds",
+            "Binds the metal ion",
+            "Stabilises the negatively charged oxygen of the tetrahedral intermediate",
+            "Activates the water molecule"
+          ],
+          "answer": 2,
+          "explanation": "Backbone N-H groups in the oxyanion hole donate hydrogen bonds to the developing negative charge on the carbonyl oxygen, lowering the energy of the transition state."
+        },
+        {
+          "question": "If an enzyme bound its substrate much more tightly than the transition state, what would be the likely consequence?",
+          "options": [
+            "Faster catalysis",
+            "Slower catalysis, because the ground state is over-stabilised",
+            "No effect",
+            "The reaction would shift its equilibrium"
+          ],
+          "answer": 1,
+          "explanation": "Over-stabilising the enzyme-substrate complex deepens the energy well and increases the barrier to the transition state, so the reaction slows."
+        }
+      ]
+    },
+    {
+      "id": "steady-state-kinetics",
+      "title": "Michaelis-Menten kinetics and catalytic efficiency",
+      "hours": 5,
+      "hook": "In 1913 Leonor Michaelis and Maud Menten measured how fast the enzyme invertase splits sucrose, and found that the rate did not climb forever as sugar was added: it levelled off. That plateau, and the simple equation that describes it, is still the first thing every enzymologist measures.",
+      "learningObjectives": [
+        "Derive the Michaelis-Menten equation under the steady-state (Briggs-Haldane) assumption",
+        "Define Vmax, Km, kcat and kcat/Km and state their units and meaning",
+        "Interpret a saturation curve and a double-reciprocal (Lineweaver-Burk) plot, including intercepts",
+        "Explain the limitations of linearised plots and why non-linear regression is preferred",
+        "Calculate initial rates and parameters from experimental data",
+        "Explain what kcat/Km means and the diffusion limit for enzyme catalysis"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Initial velocity (v0)",
+          "definition": "The rate measured at the start of the reaction, before substrate depletion and product inhibition, typically while less than 10% of substrate is consumed."
+        },
+        {
+          "term": "Michaelis-Menten equation",
+          "definition": "v = Vmax[S]/(Km + [S]); describes how rate depends on substrate concentration for a single-substrate enzyme."
+        },
+        {
+          "term": "Steady-state assumption",
+          "definition": "The concentration of the enzyme-substrate complex stays roughly constant over the measurement, so its rate of formation equals its rate of breakdown."
+        },
+        {
+          "term": "Vmax",
+          "definition": "The maximum rate at saturating substrate; equals kcat x [E]total."
+        },
+        {
+          "term": "Km (Michaelis constant)",
+          "definition": "The substrate concentration at which v = Vmax/2; in the simplest scheme Km = (k-1 + k2)/k1, and it equals Kd only when k2 is much smaller than k-1."
+        },
+        {
+          "term": "kcat (turnover number)",
+          "definition": "The number of substrate molecules converted to product per enzyme active site per second at saturation, in s^-1."
+        },
+        {
+          "term": "kcat/Km (specificity constant)",
+          "definition": "The apparent second-order rate constant for the reaction at low substrate; it measures catalytic efficiency and allows comparison of alternative substrates; its upper limit is about 10^8 to 10^9 M^-1 s^-1 set by diffusion."
+        },
+        {
+          "term": "Lineweaver-Burk plot",
+          "definition": "A double-reciprocal plot of 1/v against 1/[S]: slope Km/Vmax, y-intercept 1/Vmax, x-intercept -1/Km."
+        },
+        {
+          "term": "Eadie-Hofstee and Hanes-Woolf plots",
+          "definition": "Alternative linearisations of the Michaelis-Menten equation that distort the errors less severely than the double-reciprocal plot."
+        },
+        {
+          "term": "Catalytic perfection",
+          "definition": "Enzymes such as triose phosphate isomerase and carbonic anhydrase whose kcat/Km approaches the diffusion limit."
+        }
+      ],
+      "deeper": {
+        "beginner": "Picture a single cashier (the enzyme) with a queue of customers (substrate). When there are few customers the cashier is idle most of the time, and the throughput rises with the queue length. When the queue is long, the cashier is working non-stop and adding more customers does not speed things up. Vmax is the cashier's top speed, and Km tells you how long the queue must be before the cashier is half busy. The analogy fails in that real enzymes bind substrate in a reversible, probabilistic way, not a first-come order.",
+        "intermediate": "At low substrate the rate is proportional to [S] (first order); at high substrate it approaches Vmax (zero order). At [S] = Km the rate is Vmax/2, and at [S] = 9 Km it is 90% of Vmax. Km is a rough guide to how well an enzyme matches the typical substrate concentration in the cell, but not a simple affinity measure. kcat is obtained from Vmax divided by the total enzyme concentration, giving a rate per active site, and kcat/Km is used to compare substrates and enzymes. Lineweaver-Burk plots turn the hyperbola into a line, which is handy for looking at inhibition, but they weight the data badly at low substrate, so fit with non-linear regression whenever possible.",
+        "advanced": "Under the Briggs-Haldane steady-state treatment of E + S <-> ES -> E + P, setting d[ES]/dt = 0 gives Km = (k-1 + k2)/k1; the earlier Michaelis-Menten rapid-equilibrium treatment assumes k2 << k-1, so that Km approximates Kd. The upper limit of kcat/Km is set by diffusive encounter at roughly 10^8 to 10^9 M^-1 s^-1; enzymes near this limit are described as catalytically perfect. Real enzymes often deviate: substrate inhibition, cooperativity and product inhibition all change the shape of the curve. The linearised plots amplify errors in low-rate data, which is why the Lineweaver-Burk plot, introduced in 1934, is now mainly used for visualisation; parameters should come from non-linear least squares with proper weighting. Transient kinetics (stopped-flow, quench-flow) reveal individual steps, such as the burst phase of chymotrypsin, which steady-state methods cannot resolve. The translation by Johnson and Goody of the original 1913 paper is revealing about what the authors actually proposed."
+      },
+      "commonMistakes": [
+        "Treating Km as a pure measure of affinity; it depends on rate constants, and equals Kd only in special cases.",
+        "Using data from late in the reaction; initial velocity must be measured before substrate is depleted or product accumulates.",
+        "Confusing Vmax and kcat; Vmax depends on the amount of enzyme in the assay.",
+        "Fitting the Lineweaver-Burk line by eye or by least squares without weighting; points at low [S] dominate the line.",
+        "Forgetting to use consistent units; Km is in concentration units and kcat in s^-1."
+      ],
+      "animation": "michaelis-menten",
+      "videos": [
+        {
+          "youtubeId": "4eLjRcHnMCk",
+          "title": "Biochemistry | Michaelis-Menten Equation",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A detailed lecture on the derivation and meaning of the Michaelis-Menten equation."
+        },
+        {
+          "youtubeId": "kmyR1cYxRL4",
+          "title": "Enzyme Kinetics with Michaelis-Menten Curve | V, [s], Vmax, and Km Relationships",
+          "channel": "PremedHQ Science Academy",
+          "level": "beginner",
+          "whyWatch": "A gentle introduction to the saturation curve and what Vmax and Km tell you."
+        },
+        {
+          "youtubeId": "EUunw7voY-o",
+          "title": "Catalytic Efficiency of Enzymes (kcat/Km)",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains turnover number, specificity constant and the diffusion limit."
+        },
+        {
+          "youtubeId": "FXWZr3mscUo",
+          "title": "Enzyme Kinetics",
+          "channel": "MIT OpenCourseWare",
+          "level": "intermediate",
+          "whyWatch": "A compact lecture covering the derivation and use of the Michaelis-Menten equation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/bi201284u",
+          "title": "The Original Michaelis Constant: Translation of the 1913 Michaelis-Menten Paper",
+          "authors": "Johnson KA, Goody RS",
+          "year": 2011,
+          "journal": "Biochemistry",
+          "level": "intermediate",
+          "whyItMatters": "An English translation of the 1913 paper with commentary. It shows what Michaelis and Menten actually did, how careful their experiments were (including control of pH), and how the modern equation grew from it.",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3381512/",
+          "readingQuestions": [
+            "Why did the authors control pH and mutarotation of sugar?",
+            "How do the original assumptions differ from the Briggs-Haldane treatment?"
+          ]
+        },
+        {
+          "doi": "10.1021/ja01318a036",
+          "title": "The Determination of Enzyme Dissociation Constants",
+          "authors": "Lineweaver H, Burk D",
+          "year": 1934,
+          "journal": "Journal of the American Chemical Society",
+          "level": "intermediate",
+          "whyItMatters": "The paper that popularised the double-reciprocal plot. It is a good illustration of how a simple graphical idea can dominate a field for decades, and worth reading alongside modern criticism of linearisation."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Reactions and Rates simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/reactions-and-rates",
+          "free": true,
+          "level": "beginner",
+          "note": "Builds intuition about collisions, barriers and rate before applying them to enzymes."
+        },
+        {
+          "title": "BRENDA enzyme database",
+          "provider": "BRENDA (Technische Universitat Braunschweig)",
+          "type": "database",
+          "url": "https://www.brenda-enzymes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Look up Km and kcat values for real enzymes to see how widely they range."
+        },
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Lectures and problem sets on enzyme kinetics with worked examples."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "An enzyme has Km = 2 mM. At [S] = 18 mM, what fraction of Vmax is reached?",
+          "options": [
+            "50%",
+            "75%",
+            "90%",
+            "99%"
+          ],
+          "answer": 2,
+          "explanation": "v/Vmax = [S]/(Km + [S]) = 18/(2 + 18) = 0.90, so 90% of Vmax."
+        },
+        {
+          "question": "In a Lineweaver-Burk plot, the x-intercept equals",
+          "options": [
+            "1/Vmax",
+            "-1/Km",
+            "Km/Vmax",
+            "Vmax"
+          ],
+          "answer": 1,
+          "explanation": "From 1/v = (Km/Vmax)(1/[S]) + 1/Vmax, setting 1/v = 0 gives 1/[S] = -1/Km; the y-intercept is 1/Vmax."
+        },
+        {
+          "question": "An assay containing 0.01 umol of active sites gives Vmax = 120 umol/min. What is kcat?",
+          "options": [
+            "12 s^-1",
+            "200 s^-1",
+            "1 200 s^-1",
+            "12 000 s^-1"
+          ],
+          "answer": 1,
+          "explanation": "kcat = Vmax/[E]total = 120/0.01 = 12 000 min^-1 = 200 s^-1."
+        },
+        {
+          "question": "What does a kcat/Km near 10^8 to 10^9 M^-1 s^-1 indicate?",
+          "options": [
+            "The enzyme is inactive",
+            "Catalysis is limited essentially by how fast enzyme and substrate meet by diffusion",
+            "The enzyme is inhibited",
+            "The reaction is at equilibrium"
+          ],
+          "answer": 1,
+          "explanation": "That is the diffusion limit; enzymes such as triose phosphate isomerase convert almost every encounter into product."
+        }
+      ]
+    },
+    {
+      "id": "enzyme-inhibition",
+      "title": "Enzyme inhibition: kinetics, mechanisms and drugs",
+      "hours": 4,
+      "hook": "Many medicines work by jamming a single enzyme: statins slow cholesterol synthesis, aspirin blocks prostaglandin production, and antibiotics such as penicillin stop bacteria building their cell walls. The kinetics of inhibition tells you how a drug jams the enzyme and how to improve it.",
+      "learningObjectives": [
+        "Distinguish reversible from irreversible inhibition and give examples of each",
+        "Predict the effects of competitive, uncompetitive, non-competitive and mixed inhibitors on Km, Vmax and a Lineweaver-Burk plot",
+        "Calculate apparent Km and Vmax in the presence of an inhibitor given Ki and [I]",
+        "Define IC50 and relate it to Ki (Cheng-Prusoff relationship for competitive inhibitors)",
+        "Describe mechanism-based (suicide) inhibitors and transition-state analogues",
+        "Explain how inhibition kinetics is used to determine mechanism and for drug design"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Competitive inhibitor",
+          "definition": "Binds the free enzyme at the active site and competes with substrate; Vmax is unchanged and apparent Km increases by a factor (1 + [I]/Ki)."
+        },
+        {
+          "term": "Uncompetitive inhibitor",
+          "definition": "Binds only the enzyme-substrate complex; both Vmax and apparent Km decrease by the same factor, giving parallel lines on a double-reciprocal plot."
+        },
+        {
+          "term": "Non-competitive (pure) inhibitor",
+          "definition": "Binds free enzyme and ES with equal affinity at a separate site; Vmax falls and Km is unchanged."
+        },
+        {
+          "term": "Mixed inhibitor",
+          "definition": "Binds free enzyme and ES with unequal affinity; Vmax falls and Km may rise or fall."
+        },
+        {
+          "term": "Ki (inhibition constant)",
+          "definition": "The dissociation constant of the enzyme-inhibitor complex; a smaller Ki means a more potent inhibitor."
+        },
+        {
+          "term": "IC50",
+          "definition": "The inhibitor concentration that reduces activity by 50% under particular assay conditions; depends on [S] for competitive inhibitors."
+        },
+        {
+          "term": "Irreversible inhibitor",
+          "definition": "Forms a covalent or very tightly bound complex so that activity cannot be recovered by dilution; examples include aspirin acetylating cyclooxygenase."
+        },
+        {
+          "term": "Mechanism-based (suicide) inhibitor",
+          "definition": "A substrate analogue that the enzyme begins to process and which is converted into a reactive species that inactivates it."
+        },
+        {
+          "term": "Transition-state analogue",
+          "definition": "A stable molecule resembling the transition state that binds extremely tightly and acts as a potent reversible inhibitor."
+        },
+        {
+          "term": "Product inhibition",
+          "definition": "Inhibition by the product of the reaction itself, often a regulatory device and an important consideration in assay design."
+        }
+      ],
+      "deeper": {
+        "beginner": "A competitive inhibitor is like someone sitting in the seat you want: you can still get it if there are enough empty seats, but you need more room to find one. That means a higher substrate concentration can overcome it. A non-competitive inhibitor is like jamming the door hinge so the carriage cannot move however many passengers there are: the top speed falls and no amount of substrate fixes it. The seat analogy breaks down because real binding is reversible and dynamic: the 'seat' is taken and released many times a second.",
+        "intermediate": "Each type has a signature on the Lineweaver-Burk plot: competitive inhibition gives lines meeting at the same y-axis intercept (same Vmax) with steeper slope; non-competitive gives lines meeting on the x-axis (same Km); uncompetitive gives parallel lines. With a competitive inhibitor at [I] = 3 Ki, apparent Km is increased fourfold, since 1 + 3 = 4. Statins are competitive inhibitors of HMG-CoA reductase, methotrexate a competitive inhibitor of dihydrofolate reductase, and aspirin irreversibly acetylates a serine in cyclooxygenase. Suicide inhibitors are especially specific because the target enzyme itself converts them into the lethal species.",
+        "advanced": "For a general mixed inhibitor, v = Vmax[S]/(Km(1 + [I]/Ki) + [S](1 + [I]/Ki')), where Ki and Ki' refer to binding to free enzyme and to ES, respectively. Competitive inhibition corresponds to Ki' infinite, uncompetitive to Ki infinite, and pure non-competitive to Ki = Ki'. Replots of slopes and intercepts against [I] give Ki and Ki'. The Cheng-Prusoff relation for a competitive inhibitor gives Ki = IC50/(1 + [S]/Km), which is why IC50 values obtained at different substrate concentrations cannot be compared directly. Tight-binding inhibitors, whose Ki is comparable to the enzyme concentration, deplete free inhibitor and require Morrison analysis. Slow-binding inhibition arises when the establishment of equilibrium is slow, often reflecting a conformational change after initial binding, and is a hallmark of many clinically successful drugs. The ratio kcat/Km for inactivation is the right measure of efficiency for irreversible inhibitors."
+      },
+      "commonMistakes": [
+        "Assuming that a competitive inhibitor must resemble the substrate; it only needs to bind to the same site or prevent substrate binding.",
+        "Confusing non-competitive and uncompetitive; in uncompetitive inhibition the inhibitor binds only ES and both Vmax and Km fall.",
+        "Comparing IC50 values from different assays as if they were Ki values.",
+        "Forgetting that irreversible inhibitors are time-dependent; their effect increases with pre-incubation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "JIr2WqYfmEY",
+          "title": "Competitive vs. Noncompetitive vs. Mixed vs. Uncompetitive Inhibitors - Enzyme Kinetics Comparison",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "A side-by-side comparison of the inhibitor types and their kinetic effects."
+        },
+        {
+          "youtubeId": "0ZiCqwtFMTs",
+          "title": "Competitive, Uncompetitive and Noncompetitive Inhibition",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Works through the Lineweaver-Burk signatures and the reasoning behind them."
+        },
+        {
+          "youtubeId": "y43pIHUtjeM",
+          "title": "Biochemistry | Michaelis-Menten & Lineweaver-Burk Plot",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Reviews the double-reciprocal plot before you interpret inhibition data."
+        },
+        {
+          "youtubeId": "K1uq9AXwo5Q",
+          "title": "Group Specific, Affinity Labels and Suicide Inhibitors",
+          "channel": "Andrey K",
+          "level": "advanced",
+          "whyWatch": "Explains irreversible and mechanism-based inactivation and how these tools are used."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "PDB-101: Molecule of the Month",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-by-title",
+          "free": true,
+          "level": "beginner",
+          "note": "Illustrated stories of drug targets such as HIV protease and their inhibitors, with structures you can view."
+        },
+        {
+          "title": "BRENDA enzyme database",
+          "provider": "BRENDA (Technische Universitat Braunschweig)",
+          "type": "database",
+          "url": "https://www.brenda-enzymes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search an enzyme to see reported inhibitors with Ki values and the type of inhibition."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Download enzyme structures with bound inhibitors to see how they sit in the active site."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A competitive inhibitor with Ki = 1 uM is present at 3 uM. By what factor is the apparent Km increased?",
+          "options": [
+            "1",
+            "3",
+            "4",
+            "9"
+          ],
+          "answer": 2,
+          "explanation": "Apparent Km = Km(1 + [I]/Ki) = Km(1 + 3) = 4 Km, while Vmax is unchanged."
+        },
+        {
+          "question": "A double-reciprocal plot shows a set of parallel lines at different inhibitor concentrations. What type of inhibition is this?",
+          "options": [
+            "Uncompetitive",
+            "Irreversible",
+            "Competitive",
+            "Pure non-competitive"
+          ],
+          "answer": 0,
+          "explanation": "Uncompetitive inhibition lowers Vmax and Km by the same factor, so slopes (Km/Vmax) are unchanged and the lines are parallel."
+        },
+        {
+          "question": "Which inhibitor type can be overcome by adding more substrate?",
+          "options": [
+            "Suicide",
+            "Competitive",
+            "Pure non-competitive",
+            "Uncompetitive"
+          ],
+          "answer": 1,
+          "explanation": "Competitive inhibitors compete with substrate for the same form of enzyme, so high [S] outcompetes them and Vmax is still reached."
+        },
+        {
+          "question": "What distinguishes a mechanism-based (suicide) inhibitor?",
+          "options": [
+            "It binds at an allosteric site",
+            "The target enzyme converts it into a reactive species that inactivates the enzyme",
+            "It is always competitive",
+            "It is removed by dialysis"
+          ],
+          "answer": 1,
+          "explanation": "These inhibitors are processed by the enzyme's own catalytic machinery into a reactive intermediate that forms a covalent bond, which gives high specificity."
+        }
+      ]
+    },
+    {
+      "id": "regulation-allostery",
+      "title": "Regulation of enzyme activity: allostery, feedback and covalent control",
+      "hours": 5,
+      "hook": "A cell cannot afford to make more of a product than it needs. The solution, found in bacteria and in us, is an elegant bit of molecular economy: the end product of a pathway slips back and switches off the first enzyme.",
+      "learningObjectives": [
+        "Explain allosteric regulation and distinguish K-type from V-type effects",
+        "Interpret sigmoidal velocity curves and K0.5 for allosteric enzymes and compare them with Michaelis-Menten behaviour",
+        "Describe the allosteric regulation of aspartate transcarbamoylase (ATCase) and the principle of feedback inhibition",
+        "Describe regulation by reversible covalent modification (phosphorylation) and by proteolytic activation (zymogens)",
+        "Explain the roles of isozymes, compartmentation and enzyme concentration in regulating flux",
+        "Apply these ideas to a metabolic example such as phosphofructokinase-1 or glycogen phosphorylase"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Allosteric enzyme",
+          "definition": "An enzyme whose activity is modulated by effectors binding at sites distinct from the active site, usually in multi-subunit proteins."
+        },
+        {
+          "term": "Allosteric activator and inhibitor",
+          "definition": "Effectors that shift the equilibrium towards the active (R) or inactive (T) state, respectively."
+        },
+        {
+          "term": "K0.5",
+          "definition": "The substrate concentration giving half-maximal velocity for a sigmoidal enzyme; used in place of Km."
+        },
+        {
+          "term": "Feedback inhibition",
+          "definition": "Inhibition of an early (usually the first committed) step in a pathway by its end product, matching output to demand."
+        },
+        {
+          "term": "Homotropic and heterotropic effectors",
+          "definition": "Homotropic effects are those of the substrate itself on cooperativity; heterotropic effects are those of other molecules."
+        },
+        {
+          "term": "ATCase",
+          "definition": "Aspartate transcarbamoylase, a model allosteric enzyme with 6 catalytic and 6 regulatory subunits, activated by ATP and inhibited by CTP."
+        },
+        {
+          "term": "Covalent modification",
+          "definition": "Reversible chemical change such as phosphorylation by kinases and removal by phosphatases that turns enzyme activity up or down."
+        },
+        {
+          "term": "Zymogen (proenzyme)",
+          "definition": "An inactive precursor activated by irreversible proteolytic cleavage, as with trypsinogen and the blood-clotting cascade."
+        },
+        {
+          "term": "Isozymes",
+          "definition": "Different enzymes that catalyse the same reaction but differ in kinetic and regulatory properties, such as lactate dehydrogenase isoforms."
+        },
+        {
+          "term": "Flux control",
+          "definition": "The extent to which a particular enzyme influences the rate of a whole pathway; control is usually shared among several steps."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of a factory production line with a sensor at the end. When the warehouse is full of product, a signal goes back to the start of the line and slows the first machine. The cell does exactly this with feedback inhibition. Other enzymes are switched with a tag that can be attached and removed, like a light switch (phosphorylation), or arrive in a safe, wrapped state and are unwrapped only when needed (zymogens). The factory analogy breaks down because enzymes regulate each other in webs, not single lines, so adjusting one control point changes the others.",
+        "intermediate": "Allosteric enzymes often show sigmoidal curves of v against [S], rather than hyperbolas, because binding of substrate to one subunit raises the affinity of others. Effectors move the curve: an activator shifts it left (lower K0.5) and an inhibitor right. In ATCase, the end product CTP of the pyrimidine pathway inhibits the enzyme and ATP, the purine signal, activates it, balancing the supply of both kinds of nucleotide. Phosphorylation, such as that of glycogen phosphorylase by phosphorylase kinase, attaches a negatively charged group that causes a conformational change; the phosphatase reverses it. Zymogen activation (trypsinogen to trypsin by enteropeptidase) protects the pancreas from self-digestion and is irreversible.",
+        "advanced": "ATCase is described by the MWC concerted model: the catalytic trimers move between a compact T state and an expanded R state, and the regulatory dimers bind CTP and ATP at sites that stabilise T and R, respectively. The K-type effectors change K0.5 while V-type effectors change Vmax. Phosphofructokinase-1 is a classical regulatory enzyme in glycolysis, inhibited by ATP and citrate and activated by AMP and fructose-2,6-bisphosphate, linking the pathway flux to the energy state of the cell. Covalent modification allows regulatory cascades and amplification, since one kinase can modify many substrates, and integrates signals from hormones. Metabolic control analysis shows that control is distributed, with flux control coefficients that sum to one, so identifying a single 'rate-limiting step' is usually an oversimplification. The 1962 paper by Gerhart and Pardee gave the first strong evidence that ATCase is regulated by feedback inhibition from CTP, and the idea of allostery as a second secret of life was developed in this period."
+      },
+      "commonMistakes": [
+        "Calling the allosteric site 'the inhibitor site'; allosteric effectors may activate or inhibit.",
+        "Using Km for a sigmoidal enzyme; the Michaelis-Menten equation does not apply and K0.5 is used instead.",
+        "Thinking the 'rate-limiting step' is a single enzyme; control is distributed and context dependent.",
+        "Confusing zymogen activation, which is irreversible, with phosphorylation, which is reversible."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Z2ZN_9nFl1E",
+          "title": "ATCase Allosteric Regulation",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "A walk through how CTP and ATP control ATCase and why the curve is sigmoidal."
+        },
+        {
+          "youtubeId": "u7M0u_ALhbc",
+          "title": "Enzyme Regulation",
+          "channel": "PremedHQ Science Academy",
+          "level": "beginner",
+          "whyWatch": "An overview of the main ways cells regulate enzyme activity."
+        },
+        {
+          "youtubeId": "yqwnRekNLg4",
+          "title": "Covalent modifications to enzymes | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Shows how phosphorylation and other covalent changes switch enzymes on and off."
+        },
+        {
+          "youtubeId": "tb5-LzP9AOk",
+          "title": "Zymogen Activation | What Is A Zymogen | Proteolytic Activation | Peptide Cleavage | Proenzymes",
+          "channel": "BMH learning",
+          "level": "intermediate",
+          "whyWatch": "Explains why enzymes are stored as zymogens and how they are activated."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/s0021-9258(18)60389-8",
+          "title": "The Enzymology of Control by Feedback Inhibition",
+          "authors": "Gerhart JC, Pardee AB",
+          "year": 1962,
+          "journal": "Journal of Biological Chemistry",
+          "level": "advanced",
+          "whyItMatters": "The classic study showing that CTP inhibits aspartate transcarbamoylase through a site distinct from the active site, and that this inhibition is sensitive to treatments that leave catalysis intact. It is the experimental foundation for the concept of allostery.",
+          "readingQuestions": [
+            "What evidence suggested that the inhibitor binds somewhere other than the active site?",
+            "How does feedback inhibition benefit the cell?"
+          ]
+        },
+        {
+          "doi": "10.1016/S0022-2836(65)80285-6",
+          "title": "On the nature of allosteric transitions: A plausible model",
+          "authors": "Monod J, Wyman J, Changeux JP",
+          "year": 1965,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "The concerted model of allostery, which gives a quantitative explanation for sigmoidal kinetics and how effectors shift the equilibrium between states. It is a foundation of regulation theory for enzymes."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PDB-101: Molecule of the Month",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-by-title",
+          "free": true,
+          "level": "beginner",
+          "note": "Includes illustrated stories of allosteric enzymes and structures showing their different states."
+        },
+        {
+          "title": "Proteopedia",
+          "provider": "Proteopedia",
+          "type": "interactive",
+          "url": "https://proteopedia.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Explore the T and R states of ATCase and other allosteric proteins in 3D."
+        },
+        {
+          "title": "Energy and enzymes",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/biology/energy-and-enzymes",
+          "free": true,
+          "level": "beginner",
+          "note": "Background lessons on enzyme regulation and feedback inhibition."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the effect of an allosteric activator on a sigmoidal (K-type) enzyme?",
+          "options": [
+            "It raises K0.5",
+            "It lowers K0.5, shifting the curve to the left",
+            "It destroys cooperativity permanently",
+            "It changes the equilibrium constant of the reaction"
+          ],
+          "answer": 1,
+          "explanation": "Activators stabilise the high-affinity R state, so less substrate is needed for half-maximal velocity."
+        },
+        {
+          "question": "In ATCase, which molecule is the feedback inhibitor?",
+          "options": [
+            "CTP",
+            "Aspartate",
+            "ATP",
+            "Carbamoyl phosphate"
+          ],
+          "answer": 0,
+          "explanation": "CTP, the end product of pyrimidine biosynthesis, binds the regulatory subunits and stabilises the T state, whereas ATP activates."
+        },
+        {
+          "question": "What distinguishes zymogen activation from phosphorylation?",
+          "options": [
+            "They are the same process",
+            "Zymogen activation is irreversible proteolytic cleavage; phosphorylation is reversible",
+            "Phosphorylation is irreversible",
+            "Zymogen activation involves ATP"
+          ],
+          "answer": 1,
+          "explanation": "Cleaving a peptide bond to remove an inhibitory segment cannot be undone, whereas phosphatases can remove phosphate groups."
+        },
+        {
+          "question": "Why is it misleading to speak of a single 'rate-limiting enzyme' in a pathway?",
+          "options": [
+            "Enzymes do not limit rate",
+            "Control is usually distributed over several steps and depends on conditions",
+            "All enzymes are equally limiting",
+            "Rates are determined only by substrates"
+          ],
+          "answer": 1,
+          "explanation": "Metabolic control analysis shows flux control is shared across enzymes, with coefficients that vary with conditions."
+        }
+      ]
+    },
+    {
+      "id": "practical-enzymology",
+      "title": "Multi-substrate reactions, environment and the enzymologist's toolkit",
+      "hours": 4,
+      "hook": "Most real enzymes juggle two or more substrates, and most real experiments are decided before the first measurement: in the assay design, the buffer, the temperature and the purity of the sample. Good enzymology is as much about careful method as about equations.",
+      "learningObjectives": [
+        "Distinguish sequential (ordered and random) from ping-pong mechanisms and recognise their signature on double-reciprocal plots",
+        "Explain the effects of pH and temperature on enzyme activity and the origin of the pH-rate profile",
+        "Design a continuous or coupled spectrophotometric assay and keep measurements in the initial-rate regime",
+        "Calculate specific activity, fold purification and yield from a purification table",
+        "Outline a purification strategy using precipitation, ion-exchange, size-exclusion and affinity chromatography",
+        "Identify typical pitfalls in enzyme assays (non-linear progress curves, enzyme instability, interfering substances)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Sequential mechanism",
+          "definition": "All substrates bind before any product is released; may be ordered (fixed binding order) or random."
+        },
+        {
+          "term": "Ping-pong (double-displacement) mechanism",
+          "definition": "The first substrate binds, a product is released leaving the enzyme in a modified form, then the second substrate binds; gives parallel lines in double-reciprocal plots."
+        },
+        {
+          "term": "pH optimum",
+          "definition": "The pH of maximum activity, reflecting the ionisation states of catalytic residues and stability; many enzymes show a bell-shaped profile, but optima vary greatly (pepsin around 2, trypsin around 8)."
+        },
+        {
+          "term": "Temperature effects",
+          "definition": "Rates rise with temperature as described by Arrhenius until the enzyme begins to denature, giving an apparent temperature optimum."
+        },
+        {
+          "term": "Continuous assay",
+          "definition": "An assay monitoring product formation or substrate loss in real time, such as the increase in absorbance at 340 nm as NADH is formed (epsilon = 6 220 M^-1 cm^-1)."
+        },
+        {
+          "term": "Coupled assay",
+          "definition": "An assay in which a product of the reaction of interest is used by a second enzyme to generate an easily measured signal, such as NADH consumption."
+        },
+        {
+          "term": "Specific activity",
+          "definition": "Units of enzyme activity per mg of protein; rises as purification progresses."
+        },
+        {
+          "term": "Fold purification and yield",
+          "definition": "Fold purification = specific activity after a step divided by that before; yield = total activity after divided by before, as a percentage."
+        },
+        {
+          "term": "Affinity chromatography",
+          "definition": "Purification based on specific binding to an immobilised ligand, such as a His-tagged protein on a nickel column."
+        },
+        {
+          "term": "Progress curve",
+          "definition": "A plot of product versus time; its initial slope gives v0 and curvature signals substrate depletion, product inhibition or enzyme instability."
+        }
+      ],
+      "deeper": {
+        "beginner": "Two-substrate enzymes can behave like a shuttle: in a ping-pong mechanism the enzyme takes a group from the first substrate, leaves it changed, then hands it to the second, like a courier who picks up a parcel and drops it at a different address. In a sequential mechanism both substrates stand in the pocket together. In the lab you have to be a careful accountant: the enzyme has to be kept stable, the reaction measured while the rate is still steady, and the pH and temperature controlled. The courier analogy is only about the order of events; the chemistry behind the group transfer is the real content.",
+        "intermediate": "In two-substrate kinetics, you vary one substrate at several fixed concentrations of the other. Intersecting lines in double-reciprocal plots indicate a sequential mechanism, and parallel lines indicate a ping-pong mechanism; aminotransferases are classical ping-pong enzymes. The pH-rate profile typically reflects ionisation of key groups, for example a bell shape for an enzyme needing one group protonated and another deprotonated. Temperature raises the rate by roughly two-fold per 10 degrees C until denaturation sets in. An assay should measure initial velocity, with less than about 10% of the substrate consumed, and should be proportional to the amount of enzyme. In purification, you track total activity, total protein and specific activity at each step, aiming for high fold purification and acceptable yield.",
+        "advanced": "Cleland notation and the King-Altman method provide systematic derivations of rate equations for multi-substrate mechanisms. Product-inhibition patterns and dead-end inhibitors help distinguish ordered from random sequential mechanisms, and isotope-exchange experiments can reveal ping-pong behaviour, because exchange takes place without the second substrate. pH-rate profiles are analysed for kcat and kcat/Km separately: the pKa values from kcat/Km profiles refer to the free enzyme and substrate, while those from kcat refer to the enzyme-substrate complex. Apparent temperature optima depend on assay duration, because thermal inactivation is time-dependent; thermodynamic analysis uses Eyring and heat-capacity concepts. Assay design requires a check of linearity versus enzyme concentration and time, avoiding inner-filter effects in fluorescent assays, and using coupling enzymes in excess so that the coupling reaction is not rate-limiting. Purification sequences usually begin with high-capacity, low-resolution steps (precipitation, ion exchange) and finish with high-resolution steps (affinity, size-exclusion), with recombinant tags often shortening the path."
+      },
+      "commonMistakes": [
+        "Measuring a single time point late in the reaction and treating it as the initial rate.",
+        "Interpreting a bell-shaped pH profile as a pure property of the catalytic chemistry, ignoring enzyme stability at extreme pH.",
+        "Forgetting a blank without enzyme or substrate, which hides non-enzymatic background reactions.",
+        "Calculating fold purification with total protein instead of specific activity."
+      ],
+      "videos": [
+        {
+          "youtubeId": "pWURzs8GiB4",
+          "title": "Sequential and Ping Pong Reactions",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains the two families of multi-substrate mechanisms and how to tell them apart."
+        },
+        {
+          "youtubeId": "egiBP_fPnBA",
+          "title": "Spectrophotometric Enzyme Assays",
+          "channel": "Robyn Goacher",
+          "level": "intermediate",
+          "whyWatch": "A tutorial on designing and running a spectrophotometric assay."
+        },
+        {
+          "youtubeId": "RDdSRvVRHF8",
+          "title": "Enzyme Activity & the effect of Temperature, pH, and Salinity | Biochemistry",
+          "channel": "Medicosis Perfectionalis",
+          "level": "beginner",
+          "whyWatch": "Describes how the environment influences enzyme activity and why curves have optima."
+        },
+        {
+          "youtubeId": "lDWL_EEhReo",
+          "title": "Protein Isolation (Electrophoresis, Isoelectric Focusing, Chromatography) & Protein Analysis",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "An overview of the main techniques used to isolate and analyse proteins."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Basics of Enzymatic Assays for HTS (Assay Guidance Manual)",
+          "provider": "NCBI Bookshelf",
+          "type": "reference",
+          "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK92007/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A detailed professional guide on designing robust enzyme assays, initial rates and controls."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "See the chapters on enzyme kinetics and on purification of proteins."
+        },
+        {
+          "title": "Beer's Law Lab simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/beers-law-lab",
+          "free": true,
+          "level": "beginner",
+          "note": "Practise the absorbance-concentration relationship that underlies spectrophotometric assays."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A double-reciprocal plot of an enzyme with two substrates gives parallel lines when one substrate concentration is varied at several fixed concentrations of the other. What does this suggest?",
+          "options": [
+            "Ping-pong mechanism",
+            "Random sequential mechanism",
+            "Competitive inhibition",
+            "Ordered sequential mechanism"
+          ],
+          "answer": 0,
+          "explanation": "Parallel lines are the signature of a ping-pong (double-displacement) mechanism, in which a product is released before the second substrate binds."
+        },
+        {
+          "question": "An enzyme purification step takes 1 000 U and 500 mg protein to 600 U and 5 mg protein. What are the fold purification and yield?",
+          "options": [
+            "60-fold, 60% yield",
+            "100-fold, 40% yield",
+            "20-fold, 60% yield",
+            "60-fold, 40% yield"
+          ],
+          "answer": 0,
+          "explanation": "Specific activity rises from 2 U/mg to 120 U/mg, a 60-fold increase; yield is 600/1000 = 60%."
+        },
+        {
+          "question": "In a coupled assay, why should the coupling enzymes be present in excess?",
+          "options": [
+            "To make the progress curve curve upward",
+            "To inhibit the enzyme of interest",
+            "So that the coupling reaction is not rate-limiting and the signal reflects the first reaction",
+            "To raise the temperature"
+          ],
+          "answer": 2,
+          "explanation": "If the coupling step is slow, the measured signal reflects it rather than the reaction of interest."
+        },
+        {
+          "question": "Which is the best way to obtain an initial velocity?",
+          "options": [
+            "Measure the final absorbance after the reaction finishes",
+            "Measure the slope of product formation early, while less than about 10% of substrate has been used",
+            "Average all points on the progress curve",
+            "Use the highest temperature the enzyme tolerates"
+          ],
+          "answer": 1,
+          "explanation": "Initial velocity is the early linear part of the progress curve, before substrate depletion or product inhibition alter the rate."
+        }
+      ]
+    },
+    {
+      "id": "applied-enzymology",
+      "title": "Enzymes in medicine and industry, and engineering new ones",
+      "hours": 3,
+      "hook": "Your doctor can tell something about your liver from a drop of blood because damaged cells leak enzymes; a brewer, a baker and a detergent maker all depend on enzymes by the tonne; and engineers now breed new enzymes in the lab by mimicking evolution. Enzymology leaves the textbook here.",
+      "learningObjectives": [
+        "Explain how enzymes in plasma serve as diagnostic markers and give examples (ALT, AST, ALP, amylase, creatine kinase)",
+        "Describe examples of enzyme-targeting drugs and enzyme replacement therapy",
+        "Describe major industrial uses of enzymes (starch processing, detergents, dairy, biofuel) and why enzymes are attractive catalysts",
+        "Explain the principles of enzyme immobilisation and stability engineering",
+        "Describe directed evolution and rational design as ways of creating new enzyme properties",
+        "Discuss the limits and responsible use of enzyme technology"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Diagnostic (clinical) enzymology",
+          "definition": "Measuring enzyme activity in blood or other fluids to detect tissue damage or disease, because cell injury releases intracellular enzymes."
+        },
+        {
+          "term": "Alanine aminotransferase (ALT) and aspartate aminotransferase (AST)",
+          "definition": "Enzymes elevated in liver cell injury; ALT is more liver-specific and AST is also found in heart and muscle."
+        },
+        {
+          "term": "Isoenzyme pattern",
+          "definition": "Tissue-specific isoforms (such as creatine kinase MB in heart) improve the specificity of diagnosis."
+        },
+        {
+          "term": "Enzyme as drug target",
+          "definition": "Many drugs are enzyme inhibitors: ACE inhibitors, statins, HIV protease inhibitors and many antibiotics."
+        },
+        {
+          "term": "Enzyme replacement therapy",
+          "definition": "Administering a functional enzyme to compensate for a genetic deficiency, as used in some lysosomal storage diseases."
+        },
+        {
+          "term": "Industrial biocatalysis",
+          "definition": "Use of enzymes or whole cells to produce chemicals under mild conditions with high selectivity, as with amylases, proteases, lipases and glucose isomerase."
+        },
+        {
+          "term": "Immobilised enzyme",
+          "definition": "An enzyme attached to a solid support or entrapped in a matrix so it can be reused and separated easily from the product."
+        },
+        {
+          "term": "Directed evolution",
+          "definition": "Iterative cycles of random mutagenesis, expression and screening or selection to improve an enzyme's properties; recognised by the 2018 Nobel Prize in Chemistry."
+        },
+        {
+          "term": "Rational design",
+          "definition": "Using structural and mechanistic knowledge to choose specific mutations, often combined with computation."
+        },
+        {
+          "term": "Thermostable enzymes",
+          "definition": "Enzymes from organisms living at high temperature, such as Taq DNA polymerase used in PCR."
+        }
+      ],
+      "deeper": {
+        "beginner": "Cells leak when they are hurt, and the molecules that leak are a signal. A raised level of liver enzymes in blood is like finding the contents of a shop in the street: something has broken the shop windows. In the factory the same enzymes that do chemistry in cells are used as quiet, efficient workers: they unpick starch into sugar, remove stains from clothes and make cheese. And since evolution is just mutation and selection, a scientist can speed it up in a test tube. The leaking-shop analogy is imperfect because enzyme levels can rise for several reasons, so a result must be read in clinical context.",
+        "intermediate": "Clinical measurements use known kinetics: the activity is measured under saturating substrate so that rate reflects the amount of enzyme. Isoenzymes help locate the damaged tissue. Among drugs, ACE inhibitors such as captopril block angiotensin-converting enzyme, and statins block HMG-CoA reductase. In industry, enzymes replace harsh chemical processes and work at mild temperature and pH, saving energy and waste. Examples include amylases and glucose isomerase for sweetener production, proteases and lipases in detergents, and lactase to make lactose-free milk. Immobilisation and protein engineering improve stability. Directed evolution does not need detailed structural knowledge: a library of mutants is screened for the desired property, and the best are used as the starting point for the next round.",
+        "advanced": "Enzyme replacement therapy requires targeting of the enzyme to the correct compartment, for example by mannose-6-phosphate recognition for lysosomal enzymes, and faces the immunogenicity problem. In biocatalysis, process metrics include turnover number, total turnover number, space-time yield and enantiomeric excess, and cofactor regeneration is often required for oxidoreductases. Directed evolution, introduced by Arnold in the early 1990s, uses error-prone PCR, DNA shuffling and saturation mutagenesis; success depends on the quality of the screening or selection assay ('you get what you screen for'). Many beneficial mutations lie far from the active site and act through dynamics or stability. Combining computational design with directed evolution has produced enzymes for reactions unknown in biology, such as carbene transfer and Diels-Alder catalysis. Ribozymes and engineered nucleic acid enzymes extend the toolkit, and the discovery of CRISPR nucleases shows how basic enzymology can result in entirely new technologies."
+      },
+      "commonMistakes": [
+        "Reading a raised plasma enzyme level as proof of a specific disease; results depend on context, other tests and timing.",
+        "Assuming that a more thermostable enzyme is always better; stability may come at the cost of activity at lower temperature.",
+        "Believing directed evolution requires no understanding; designing the screen and interpreting the results demands careful thought.",
+        "Forgetting that industrial enzymes must be assessed on cost, stability and safety, not only activity."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Mdd7DtIQ3YQ",
+          "title": "5: Clinical Enzymology: Diagnostic, Therapeutic, Analytical uses of enzymes | Biochemistry",
+          "channel": "N'JOY Biochemistry",
+          "level": "intermediate",
+          "whyWatch": "Surveys diagnostic, therapeutic and analytical uses of enzymes."
+        },
+        {
+          "youtubeId": "c4CvXTYimck",
+          "title": "Liver and pancreatic enzymes explained | AST, ALT, GGT, ALP, Amylase & Lipase",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Explains what each commonly measured enzyme tells you about liver and pancreatic disease."
+        },
+        {
+          "youtubeId": "ZKfRWqGtBDY",
+          "title": "The 2018 Nobel Prize in Chemistry: Directed evolution & phage display - Speaking of Chemistry",
+          "channel": "Chemical & Engineering News",
+          "level": "beginner",
+          "whyWatch": "A short explainer on directed evolution and why it won a Nobel Prize."
+        },
+        {
+          "youtubeId": "Bmi8a_Ia_EM",
+          "title": "Enzymes, evolution and engineering with Nobel laureate Frances Arnold",
+          "channel": "Princeton University",
+          "level": "beginner",
+          "whyWatch": "A brief interview in which Arnold describes engineering enzymes by evolution."
+        },
+        {
+          "youtubeId": "6hOZ5e0g9Uo",
+          "title": "Frances H. Arnold: Nobel Lecture in Chemistry 2018",
+          "channel": "Nobel Prize",
+          "level": "advanced",
+          "whyWatch": "The full Nobel lecture on innovation by evolution in the test tube."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1002/anie.201708408",
+          "title": "Directed Evolution: Bringing New Chemistry to Life",
+          "authors": "Arnold FH",
+          "year": 2018,
+          "journal": "Angewandte Chemie International Edition",
+          "level": "intermediate",
+          "whyItMatters": "A first-person review of how directed evolution has been used to make enzymes that perform new reactions and work under industrial conditions. It is a good entry point for understanding the strategy and its achievements.",
+          "readingQuestions": [
+            "What makes a good screening assay for directed evolution?",
+            "Why can enzymes evolve new functions with only a few mutations?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "BRENDA enzyme database",
+          "provider": "BRENDA (Technische Universitat Braunschweig)",
+          "type": "database",
+          "url": "https://www.brenda-enzymes.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search enzymes by organism, application or inhibitor to explore properties useful in industry and medicine."
+        },
+        {
+          "title": "ExPASy ENZYME nomenclature database",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "database",
+          "url": "https://enzyme.expasy.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Quickly look up an EC number to learn reaction, cofactors and links to sequence data."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Find sequences, structures and annotations of the enzymes you meet in the clinic or in industry."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which enzyme is most specific for liver cell injury?",
+          "options": [
+            "ALT (alanine aminotransferase)",
+            "Lipase",
+            "Creatine kinase MM",
+            "Amylase"
+          ],
+          "answer": 0,
+          "explanation": "ALT is found mainly in liver cells and rises in hepatocellular injury, whereas AST also occurs in muscle and heart."
+        },
+        {
+          "question": "What is the basic cycle of directed evolution?",
+          "options": [
+            "Sequencing and publishing",
+            "Chemical modification of the substrate",
+            "Rational design of a single mutation, then testing",
+            "Random mutagenesis, screening or selection for the desired property, and repeat with the best variants"
+          ],
+          "answer": 3,
+          "explanation": "Directed evolution repeats rounds of generating diversity and selecting improved variants."
+        },
+        {
+          "question": "Why are immobilised enzymes used in industry?",
+          "options": [
+            "They change the equilibrium",
+            "They have higher intrinsic activity",
+            "They can be reused and are easily separated from the product",
+            "They no longer need substrate"
+          ],
+          "answer": 2,
+          "explanation": "Attachment to a support allows recovery and reuse and often improves stability, lowering cost."
+        },
+        {
+          "question": "Taq polymerase is widely used in PCR because it",
+          "options": [
+            "is cheap and unaffected by temperature changes",
+            "comes from a thermophile and survives the high denaturation temperature",
+            "does not need a template",
+            "makes RNA"
+          ],
+          "answer": 1,
+          "explanation": "Taq comes from Thermus aquaticus, a heat-loving bacterium, so it remains active over repeated cycles at about 95 degrees C."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "zdage-Lp8m4",
+      "title": "5. Enzymes and Catalysis",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A full lecture on enzyme catalysis that overlaps with several units of this course."
+    },
+    {
+      "youtubeId": "pkNwvhEm1GQ",
+      "title": "35. Enzyme catalysis",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A lecture on enzyme catalysis from a chemistry course, useful for a mechanistic perspective."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic text with chapters on catalytic strategies, enzyme kinetics and regulation."
+    },
+    {
+      "title": "LibreTexts Biochemistry",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free collection of biochemistry textbooks with enzyme chapters."
+    },
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A free introductory text for revising enzymes and metabolism."
+    }
+  ]
+}

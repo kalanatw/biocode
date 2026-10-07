@@ -1,0 +1,1421 @@
+{
+  "code": "ZL 4058",
+  "title": "Immunology",
+  "level": 4,
+  "semester": 1,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "How the body tells self from non-self, fights infection and cancer, and sometimes turns on itself.",
+  "overview": "This course covers the major concepts of immunology at BSc Honours level: the cells and organs of the immune system, innate immunity and complement, antibody structure and the generation of diversity, MHC and antigen presentation, T-cell and B-cell responses with immunological memory and vaccines, tolerance, autoimmunity and hypersensitivity, and finally immunodeficiency, transplantation and tumour immunology. The units follow the standard content of an undergraduate immunology course.",
+  "whyItMatters": "Immunology underpins vaccines, allergy and autoimmune disease treatment, transplantation, cancer immunotherapy and diagnostics. Infectious disease burdens such as dengue and tuberculosis in Sri Lanka also depend on how well we understand immune responses.",
+  "prerequisites": [
+    "MB 3022",
+    "BC 3025"
+  ],
+  "careerLinks": [
+    "Clinical and diagnostic immunology",
+    "Vaccine and biologics research",
+    "Biotech and pharmaceutical development",
+    "Medical research and public health",
+    "Academic research (MPhil/PhD)"
+  ],
+  "studyTips": [
+    "Draw the cell-cell interactions yourself (antigen-presenting cell, T cell, B cell) and label the receptors and cytokines at each step.",
+    "Make a table of cells, receptors, ligands and functions; immunology is a language of names, so a glossary pays off.",
+    "For each disease example, ask which arm of immunity is involved and what has gone wrong.",
+    "Link every concept to a clinical or experimental example, such as a vaccine, a knock-out mouse or a therapeutic antibody."
+  ],
+  "units": [
+    {
+      "id": "immune-system-overview",
+      "title": "The Immune System: Cells, Organs and the Big Picture",
+      "hours": 4,
+      "hook": "Every second your body is meeting microbes, and almost all of them lose. The reason is a layered defence made of barriers, fast generalist cells and slow, precise specialists with memory. Before details, you need the map: who the cells are, where they live and how the layers talk to each other.",
+      "learningObjectives": [
+        "Distinguish innate from adaptive immunity by speed, specificity and memory.",
+        "Name the main cells of the immune system and where they arise (haematopoiesis).",
+        "Describe primary and secondary lymphoid organs and what happens in each.",
+        "Explain how lymph and blood carry immune cells and antigens through the body.",
+        "Define antigen, epitope, pathogen-associated molecular pattern and cytokine.",
+        "Summarise clonal selection and why it explains specificity and memory."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Innate immunity",
+          "definition": "Fast, germline-encoded defences (barriers, phagocytes, complement, NK cells) that recognise broad microbial patterns and have no classical memory."
+        },
+        {
+          "term": "Adaptive immunity",
+          "definition": "Slower, antigen-specific responses by T and B lymphocytes, shaped by clonal selection and producing memory."
+        },
+        {
+          "term": "Haematopoiesis",
+          "definition": "The formation of all blood and immune cells from haematopoietic stem cells in the bone marrow, branching into myeloid and lymphoid lineages."
+        },
+        {
+          "term": "Primary lymphoid organs",
+          "definition": "Bone marrow and thymus, where lymphocytes develop and mature."
+        },
+        {
+          "term": "Secondary lymphoid organs",
+          "definition": "Lymph nodes, spleen and mucosa-associated tissue where naive lymphocytes meet antigen and are activated."
+        },
+        {
+          "term": "Antigen and epitope",
+          "definition": "An antigen is any molecule recognised by the adaptive immune system; an epitope is the specific part that is bound by an antibody or T-cell receptor."
+        },
+        {
+          "term": "Clonal selection",
+          "definition": "Each lymphocyte carries a unique receptor; antigen selects the cells with matching receptors, which expand into a clone."
+        },
+        {
+          "term": "Cytokine",
+          "definition": "A small signalling protein released by immune cells to coordinate responses (interleukins, interferons, TNF, chemokines)."
+        },
+        {
+          "term": "Lymph node",
+          "definition": "A filter and meeting place where dendritic cells bring antigen from tissues to T and B cells."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of immunity as a security system: locks and walls (barriers), guards patrolling at all hours (innate cells), and a detective agency that takes a few days to identify the culprit but then remembers it (adaptive). The agencies share information using chemical messengers, and a good response clears the threat without trashing the building.",
+        "intermediate": "Haematopoietic stem cells give rise to a common myeloid progenitor (neutrophils, monocytes and macrophages, dendritic cells, mast cells, eosinophils, basophils, platelets, erythrocytes) and a common lymphoid progenitor (T, B and NK cells). T cells mature in the thymus and B cells in the bone marrow. Naive cells recirculate through lymph nodes, where dendritic cells arriving from infected tissue present antigen; this is why lymph nodes swell during infection. The first (primary) adaptive response takes about 7-10 days, while a secondary response to the same antigen is faster, larger and of higher affinity.",
+        "advanced": "Innate and adaptive branches are intertwined: innate cells decide whether and how adaptive immunity starts, through antigen presentation, co-stimulation and cytokines, and adaptive cells in turn use innate effector mechanisms such as complement and phagocytosis. The concept of 'trained immunity' suggests that innate cells can show enhanced responses after prior exposure through epigenetic reprogramming, blurring the old distinction. Human immune variation is large and shaped by genetics, age, microbiota and environment, which matters for vaccine response and disease susceptibility."
+      },
+      "commonMistakes": [
+        "Describing innate immunity as 'non-specific': it is specific for conserved microbial patterns, just less diverse than adaptive receptors.",
+        "Thinking antibodies are made in response to need; clonal selection means pre-existing clones are chosen and expanded.",
+        "Treating the immune system as purely protective; excess or misdirected responses cause disease."
+      ],
+      "videos": [
+        {
+          "youtubeId": "CeVtPDjJBPU",
+          "title": "Your Immune System: Natural Born Killer - Crash Course Biology #32",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A lively 15-minute overview of the layers of immune defence."
+        },
+        {
+          "youtubeId": "lXfEK8G8CUI",
+          "title": "How The Immune System ACTUALLY Works - IMMUNE",
+          "channel": "Kurzgesagt - In a Nutshell",
+          "level": "beginner",
+          "whyWatch": "A vivid visual story of cells, signals and the logic of the response."
+        },
+        {
+          "youtubeId": "LSYED-7riNY",
+          "title": "Immunology Overview",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn map of innate and adaptive branches that doubles as a revision outline."
+        },
+        {
+          "youtubeId": "qkIfYwnaYqc",
+          "title": "Immunology | Immune System: Overview",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A longer whiteboard lecture linking cells, organs and responses."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nri.2016.125",
+          "title": "Human immune system variation",
+          "authors": "Brodin P, Davis MM",
+          "year": 2017,
+          "journal": "Nature Reviews Immunology",
+          "level": "intermediate",
+          "whyItMatters": "Explains how much healthy immune systems differ and which factors drive the differences, a useful corrective to textbook diagrams.",
+          "readingQuestions": [
+            "Which factors explain most of the variation between people?",
+            "Why does this matter for vaccines?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free earlier edition of the standard immunology text, readable online."
+        },
+        {
+          "title": "OpenStax Biology 2e: The Immune System",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/42-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear introductory chapter on innate and adaptive immunity."
+        },
+        {
+          "title": "Immunopaedia",
+          "provider": "Immunopaedia (University of Cape Town)",
+          "type": "interactive",
+          "url": "https://www.immunopaedia.org.za/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free interactive case-based immunology resource from an African academic group."
+        },
+        {
+          "title": "MIT OCW 7.016 Introductory Biology",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Course materials including immunology lecture notes and videos."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which organ is the site of T-cell maturation?",
+          "options": [
+            "Bone marrow",
+            "Thymus",
+            "Spleen",
+            "Lymph node"
+          ],
+          "answer": 1,
+          "explanation": "T cells arise from marrow precursors but mature in the thymus; B cells mature in the bone marrow."
+        },
+        {
+          "question": "Clonal selection means that",
+          "options": [
+            "Antigen instructs lymphocytes to make a matching receptor",
+            "Antigen selects pre-existing lymphocytes whose receptors fit it",
+            "All lymphocytes recognise all antigens",
+            "Antibodies are made before birth against all antigens"
+          ],
+          "answer": 1,
+          "explanation": "Each lymphocyte already has a unique receptor before it meets antigen; antigen selects and expands matching clones."
+        },
+        {
+          "question": "A secondary immune response differs from a primary response in being",
+          "options": [
+            "Slower and smaller",
+            "Faster, larger and of higher affinity",
+            "Entirely innate",
+            "Antigen non-specific"
+          ],
+          "answer": 1,
+          "explanation": "Memory cells respond quickly and produce more, higher-affinity antibodies."
+        }
+      ]
+    },
+    {
+      "id": "innate-immunity",
+      "title": "Innate Immunity: Barriers, Phagocytes, Pattern Recognition and Complement",
+      "hours": 4,
+      "hook": "In 1996-98 geneticists found that a fruit-fly gene called Toll protected flies against fungi and that a mutation in its mouse relative left mice unable to respond to bacterial endotoxin. The discovery that innate cells carry receptors for broad microbial patterns changed immunology and led to a Nobel Prize in 2011.",
+      "learningObjectives": [
+        "Describe physical, chemical and microbiological barriers and their roles.",
+        "Explain how neutrophils, macrophages, dendritic cells and NK cells detect and kill pathogens.",
+        "Name families of pattern recognition receptors (TLR, NLR, RLR, cGAS-STING) and their ligands.",
+        "Trace the three complement pathways to C3 convertase, opsonisation, inflammation and the membrane attack complex.",
+        "Describe the stages of acute inflammation and neutrophil extravasation.",
+        "Explain the role of type I interferons and NK cell missing-self recognition in antiviral defence."
+      ],
+      "keyConcepts": [
+        {
+          "term": "PAMP and PRR",
+          "definition": "Pathogen-associated molecular patterns are conserved microbial molecules (for example LPS, flagellin, viral RNA) recognised by pattern recognition receptors on innate cells."
+        },
+        {
+          "term": "Toll-like receptor",
+          "definition": "A family of PRRs; TLR4 with MD-2 detects LPS at the cell surface, while TLR3, 7, 8 and 9 sense nucleic acids in endosomes."
+        },
+        {
+          "term": "Inflammasome",
+          "definition": "A cytosolic complex (for example NLRP3) that activates caspase-1 to process IL-1 beta and IL-18 and can trigger pyroptosis."
+        },
+        {
+          "term": "Complement",
+          "definition": "A cascade of plasma proteins activated by classical, lectin and alternative pathways, converging on C3 convertase."
+        },
+        {
+          "term": "Opsonisation",
+          "definition": "Coating a pathogen with molecules such as C3b or antibody to enhance phagocytosis."
+        },
+        {
+          "term": "Membrane attack complex",
+          "definition": "C5b-C9 assembled on a cell surface to form pores and lyse susceptible targets, notably Neisseria."
+        },
+        {
+          "term": "Extravasation",
+          "definition": "The rolling, adhesion and transmigration of leukocytes out of blood vessels into infected tissue, mediated by selectins, integrins and chemokines."
+        },
+        {
+          "term": "Type I interferon",
+          "definition": "IFN-alpha and IFN-beta, produced after sensing viral nucleic acids, inducing an antiviral state in neighbouring cells."
+        },
+        {
+          "term": "Missing self",
+          "definition": "NK cells attack cells that lack inhibitory MHC class I signals, as can occur in virus-infected or tumour cells."
+        }
+      ],
+      "deeper": {
+        "beginner": "When a microbe breaks through a barrier, tissue-resident macrophages sense its molecular signature, raise the alarm with cytokines and call in neutrophils. Complement proteins in the blood coat microbes and punch holes in some. Infected cells warn their neighbours with interferons. All of this happens within minutes to hours and before any antibody exists.",
+        "intermediate": "TLR4 recognises LPS through MD-2 and CD14, signalling through MyD88 to NF-kB and through TRIF to IRF3, leading to pro-inflammatory cytokines (TNF, IL-1, IL-6) and type I interferon. Cytosolic sensors include RIG-I and MDA5 for viral RNA (signalling through MAVS), and cGAS for cytosolic DNA (signalling through STING). In complement, C1q binds antibody-antigen complexes (classical pathway), mannose-binding lectin binds microbial sugars (lectin pathway), and spontaneous C3 hydrolysis is amplified on microbial surfaces lacking regulators (alternative pathway). Cleavage of C3 yields C3b (opsonin) and C3a, and C5 cleavage yields C5a, a potent chemoattractant.",
+        "advanced": "Inflammation is double-edged. Excessive TLR or inflammasome signalling contributes to sepsis, gout (urate crystals activate NLRP3) and autoinflammatory diseases, whereas deficiencies increase infection risk. Host cells express regulators (CD55, CD59, factor H) to protect themselves from complement, and pathogens evade by capsules, complement-binding proteins and antigenic variation. Innate lymphoid cells and unconventional T cells extend innate-like responses in tissues. Dengue and other arboviral infections prevalent in Sri Lanka show how innate interferon responses and viral antagonism shape disease severity."
+      },
+      "commonMistakes": [
+        "Calling innate immunity non-specific and without receptors: it relies on a defined set of germline-encoded receptors.",
+        "Mixing up the three complement pathways: they differ in initiation but share C3 convertase and the terminal pathway.",
+        "Assuming all inflammation is harmful; it is a necessary part of defence and repair, and problems arise from dysregulation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "4rEgaOW7Exk",
+          "title": "Immunology - Innate Immunity (PAMP and PRR)",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "Introduces PAMPs and PRRs with clear diagrams."
+        },
+        {
+          "youtubeId": "JICySIEeSS8",
+          "title": "Immunology - Innate Immunity (Toll-Like Receptors)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Maps each TLR to its ligand and downstream signalling."
+        },
+        {
+          "youtubeId": "Uc4nq4Lazo4",
+          "title": "The Complement System: Classical, Lectin, and Alternative Pathways",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "A clear step-by-step trace of all three pathways to the membrane attack complex."
+        },
+        {
+          "youtubeId": "BSypUV6QUNw",
+          "title": "Tiny Bombs in your Blood - The Complement System",
+          "channel": "Kurzgesagt - In a Nutshell",
+          "level": "beginner",
+          "whyWatch": "An engaging animated tour of what complement does and why it is dangerous if unregulated."
+        },
+        {
+          "youtubeId": "k7mPJl4uhmc",
+          "title": "Natural Killer Cells: How Do They Kill Selectively?",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Explains activating and inhibitory signals and missing-self recognition."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.282.5396.2085",
+          "title": "Defective LPS Signaling in C3H/HeJ and C57BL/10ScCr Mice: Mutations in Tlr4 Gene",
+          "authors": "Poltorak A, He X, Smirnova I, et al.",
+          "year": 1998,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The genetic proof that TLR4 is the receptor that senses bacterial LPS, a turning point in innate immunity."
+        },
+        {
+          "doi": "10.1016/j.cell.2006.02.015",
+          "title": "Pathogen Recognition and Innate Immunity",
+          "authors": "Akira S, Uematsu S, Takeuchi O",
+          "year": 2006,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "A comprehensive review of PRR families and signalling pathways by a pioneer of the field."
+        },
+        {
+          "doi": "10.1038/nature07201",
+          "title": "Origin and physiological roles of inflammation",
+          "authors": "Medzhitov R",
+          "year": 2008,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "Frames inflammation as a response to infection, tissue damage and altered homeostasis, with a clear conceptual diagram."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on innate immunity and complement; diagrams are still useful."
+        },
+        {
+          "title": "OpenStax Microbiology: Chapter 17, Innate Nonspecific Host Defenses",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/microbiology/pages/17-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "Readable chapter on barriers, phagocytes, complement and inflammation."
+        },
+        {
+          "title": "ImmGen: Immunological Genome Project",
+          "provider": "ImmGen Consortium",
+          "type": "database",
+          "url": "https://www.immgen.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Browse gene expression of immune cell types to see which PRRs each cell expresses."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "TLR4 recognises which microbial component?",
+          "options": [
+            "Flagellin",
+            "Lipopolysaccharide (LPS)",
+            "Double-stranded DNA",
+            "Peptidoglycan only"
+          ],
+          "answer": 1,
+          "explanation": "TLR4, with MD-2 and CD14, is the main receptor for bacterial LPS."
+        },
+        {
+          "question": "Which complement component is the principal opsonin?",
+          "options": [
+            "C3b",
+            "C5a",
+            "C9",
+            "C1 inhibitor"
+          ],
+          "answer": 0,
+          "explanation": "C3b coats microbes, promoting phagocytosis via complement receptors."
+        },
+        {
+          "question": "NK cells kill target cells that",
+          "options": [
+            "Have high MHC class I",
+            "Lack inhibitory MHC class I signals or show stress ligands",
+            "Express CD4",
+            "Carry IgG"
+          ],
+          "answer": 1,
+          "explanation": "Missing self and activating ligands tip the balance towards NK killing."
+        }
+      ]
+    },
+    {
+      "id": "antibodies-and-diversity",
+      "title": "Antibodies, B-Cell Receptors and the Generation of Diversity",
+      "hours": 5,
+      "hook": "Your body can recognise perhaps billions of different molecular shapes, many of which it has never met, but you do not have billions of antibody genes. In 1976 Susumu Tonegawa showed that antibody genes are assembled by cutting and pasting DNA segments in individual B cells, an idea that reshaped our view of the genome as a fixed text.",
+      "learningObjectives": [
+        "Draw the structure of IgG and label heavy and light chains, variable and constant regions, CDRs, Fab and Fc.",
+        "Compare the five antibody classes and their functions (IgM, IgG, IgA, IgE, IgD).",
+        "Explain V(D)J recombination, including RAG1/2, recombination signal sequences, junctional diversity and TdT.",
+        "Distinguish somatic hypermutation, affinity maturation and class-switch recombination and the role of AID.",
+        "Describe effector functions of antibodies: neutralisation, opsonisation, complement activation, ADCC.",
+        "Explain how monoclonal antibodies are produced and used in diagnosis and therapy."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Immunoglobulin",
+          "definition": "A Y-shaped protein of two identical heavy chains and two identical light chains linked by disulphide bonds."
+        },
+        {
+          "term": "CDR",
+          "definition": "Complementarity-determining region: hypervariable loops in the variable domains that form the antigen-binding site."
+        },
+        {
+          "term": "Fab and Fc",
+          "definition": "Fab (fragment antigen-binding) contains the variable regions; Fc (fragment crystallisable) determines effector function and class."
+        },
+        {
+          "term": "V(D)J recombination",
+          "definition": "Somatic joining of V, D and J gene segments in developing lymphocytes, catalysed by RAG1/RAG2, to make unique receptor genes."
+        },
+        {
+          "term": "Junctional diversity",
+          "definition": "Variation created at segment joints by random nucleotide trimming and the addition of N nucleotides by TdT."
+        },
+        {
+          "term": "Somatic hypermutation",
+          "definition": "Activation-induced cytidine deaminase (AID)-driven point mutation of variable regions in germinal centre B cells."
+        },
+        {
+          "term": "Affinity maturation",
+          "definition": "Selection of B cells with higher-affinity mutated receptors, giving better antibodies over time."
+        },
+        {
+          "term": "Class switching",
+          "definition": "Replacement of the constant region (for example IgM to IgG) with the same variable region, directed by cytokines and AID."
+        },
+        {
+          "term": "Monoclonal antibody",
+          "definition": "An antibody from a single B-cell clone, made originally by fusing B cells with myeloma cells to form hybridomas."
+        }
+      ],
+      "deeper": {
+        "beginner": "An antibody is a molecular grappling hook with two identical hooks at one end (the variable regions) that fit a particular shape, and a handle at the other end (Fc) that tells other cells what to do. Billions of hook shapes are generated by shuffling and cutting gene segments in each developing B cell, then random edits at the joints add yet more variety.",
+        "intermediate": "In the heavy chain locus, one V, one D and one J segment are joined; in light chains (kappa or lambda), one V and one J. RAG proteins recognise recombination signal sequences with 12- or 23-base-pair spacers and follow the 12/23 rule. Combinatorial diversity (segment choice), heavy-light pairing and junctional diversity together give an enormous repertoire, estimated to be 10^11 or more unique receptors. After activation, AID introduces mutations in variable regions (somatic hypermutation) and drives class switching, and B cells with better binding compete for antigen and T-cell help in the germinal centre.",
+        "advanced": "Because V(D)J recombination involves double-strand DNA breaks, errors can lead to translocations and lymphoma, and defects in RAG or DNA repair genes cause severe combined immunodeficiency. Allelic exclusion ensures that each B cell expresses one heavy and one light chain, giving monospecificity. Therapeutic antibodies are now humanised or fully human (for example from phage display or transgenic mice) to reduce immunogenicity, and engineered formats include bispecifics, antibody-drug conjugates and Fc-engineered antibodies with altered half-life or effector function."
+      },
+      "commonMistakes": [
+        "Believing each antibody has its own gene in the germline; instead, gene segments are assembled in each cell.",
+        "Confusing somatic hypermutation (changes the variable region) with class switching (changes the constant region).",
+        "Assuming a bigger affinity always means a better antibody; neutralisation depends on the epitope as well."
+      ],
+      "videos": [
+        {
+          "youtubeId": "C_GRI3fxUWw",
+          "title": "Immunology - Introduction to Antibodies",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "Draws antibody structure, domains and the five classes."
+        },
+        {
+          "youtubeId": "zg61a3BoR8Y",
+          "title": "Immunology | Antibody Structure & Function",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A long lecture covering structure, isotype functions and the logic of effector mechanisms."
+        },
+        {
+          "youtubeId": "h9mqsllg1Cs",
+          "title": "Immunology - Antibody Somatic (VDJ) Recombination I",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Introduces gene segments and how heavy-chain recombination proceeds."
+        },
+        {
+          "youtubeId": "_D2x-dhh6Pg",
+          "title": "Immunology - Antibody Somatic (VDJ) Recombination II",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Continues with light chains and the sources of junctional diversity."
+        },
+        {
+          "youtubeId": "CNPwxbeP7B8",
+          "title": "Hybridoma Technology for the Production of Monoclonal Antibodies",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A quick animation of how hybridomas are made and selected."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/302575a0",
+          "title": "Somatic generation of antibody diversity",
+          "authors": "Tonegawa S",
+          "year": 1983,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The review by the Nobel laureate who showed that antibody genes are rearranged during B-cell development."
+        },
+        {
+          "doi": "10.1038/256495a0",
+          "title": "Continuous cultures of fused cells secreting antibody of predefined specificity",
+          "authors": "Kohler G, Milstein C",
+          "year": 1975,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The hybridoma paper that opened the era of monoclonal antibodies in research, diagnosis and medicine."
+        },
+        {
+          "doi": "10.1038/nri2941",
+          "title": "Recombination centres and the orchestration of V(D)J recombination",
+          "authors": "Schatz DG, Ji Y",
+          "year": 2011,
+          "journal": "Nature Reviews Immunology",
+          "level": "advanced",
+          "whyItMatters": "Explains how RAG proteins and chromatin organisation regulate which gene segments are joined."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on the structure of antibodies and the generation of lymphocyte antigen receptors."
+        },
+        {
+          "title": "IMGT, the international ImMunoGeneTics information system",
+          "provider": "IMGT",
+          "type": "database",
+          "url": "https://www.imgt.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "The reference database of immunoglobulin and T-cell receptor gene segments."
+        },
+        {
+          "title": "PDB-101: Antibodies",
+          "provider": "RCSB PDB",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Explore 3D structures of antibodies and antigen complexes."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which feature of an antibody determines its class and effector function?",
+          "options": [
+            "The variable region",
+            "The Fc region",
+            "The CDR3 loop",
+            "The light chain only"
+          ],
+          "answer": 1,
+          "explanation": "The heavy-chain constant region within Fc defines the isotype and which effector mechanisms are engaged."
+        },
+        {
+          "question": "The enzyme complex that initiates V(D)J recombination is",
+          "options": [
+            "RAG1/RAG2",
+            "AID",
+            "DNA ligase only",
+            "Reverse transcriptase"
+          ],
+          "answer": 0,
+          "explanation": "RAG1/RAG2 recognise recombination signals and introduce the DNA breaks."
+        },
+        {
+          "question": "Class-switch recombination changes",
+          "options": [
+            "The antigen specificity",
+            "The heavy-chain constant region",
+            "The light chain variable region",
+            "The MHC type"
+          ],
+          "answer": 1,
+          "explanation": "The variable region is retained, so antigen specificity remains, but the isotype changes."
+        }
+      ]
+    },
+    {
+      "id": "mhc-antigen-presentation-t-cells",
+      "title": "MHC, Antigen Presentation and T-Cell Development",
+      "hours": 5,
+      "hook": "Unlike antibodies, T cells cannot see a virus floating free. They only read short peptide fragments displayed in a molecular cradle on the surface of other cells. In 1974 Zinkernagel and Doherty found that T cells only kill infected cells that carry the right MHC type, a finding that explained why transplants are rejected and why immune responses depend on your HLA genes.",
+      "learningObjectives": [
+        "Compare MHC class I and II in structure, expression, peptide source and the T cells they engage.",
+        "Trace the class I pathway (proteasome, TAP, ER loading) and the class II pathway (endosome, invariant chain, HLA-DM).",
+        "Explain cross-presentation by dendritic cells.",
+        "Describe the T-cell receptor, CD3, CD4 and CD8 and what MHC restriction means.",
+        "Explain thymic positive and negative selection and the role of AIRE.",
+        "Discuss HLA polymorphism and its consequences for disease association and transplantation."
+      ],
+      "keyConcepts": [
+        {
+          "term": "MHC / HLA",
+          "definition": "Major histocompatibility complex (human leukocyte antigen) genes encode peptide-presenting molecules; they are the most polymorphic genes in the human genome."
+        },
+        {
+          "term": "MHC class I",
+          "definition": "Expressed on nearly all nucleated cells; presents peptides of about 8-10 amino acids from cytosolic proteins to CD8+ T cells."
+        },
+        {
+          "term": "MHC class II",
+          "definition": "Expressed on professional antigen-presenting cells; presents peptides of about 13-25 amino acids from endocytosed proteins to CD4+ T cells."
+        },
+        {
+          "term": "Proteasome and TAP",
+          "definition": "The proteasome cuts cytosolic proteins into peptides, and TAP transports them into the ER for loading onto MHC class I."
+        },
+        {
+          "term": "Invariant chain and CLIP",
+          "definition": "Blocks the class II groove in the ER; it is degraded to leave CLIP, which HLA-DM replaces with antigenic peptide."
+        },
+        {
+          "term": "Cross-presentation",
+          "definition": "A property of some dendritic cells that present exogenous antigen on MHC class I to prime CD8+ T cells."
+        },
+        {
+          "term": "MHC restriction",
+          "definition": "A T cell recognises peptide only when presented by a specific self-MHC molecule."
+        },
+        {
+          "term": "Positive and negative selection",
+          "definition": "In the thymus, T cells with receptors that bind self-MHC weakly survive (positive), and those that bind self-peptide-MHC strongly are deleted (negative)."
+        },
+        {
+          "term": "AIRE",
+          "definition": "A transcription regulator in thymic medullary epithelial cells that drives expression of tissue-specific antigens for negative selection."
+        }
+      ],
+      "deeper": {
+        "beginner": "MHC molecules are display cases. Class I cases carry fragments of whatever is being made inside the cell, so a virus-infected cell shows viral peptides. Class II cases carry fragments of what the cell has swallowed, displayed by cells that specialise in alerting helper T cells. The T cell checks both the case and the peptide it holds.",
+        "intermediate": "Immature T cells in the cortex of the thymus are double-positive for CD4 and CD8 and test their receptors against self-peptide-MHC on cortical epithelial cells; those with useful, low-affinity binding survive and commit to CD4 (class II-restricted) or CD8 (class I-restricted). In the medulla, strong binders to self-antigens are deleted or diverted to regulatory T cells. Because three class I genes (HLA-A, B, C) and three class II loci (DR, DP, DQ) are codominantly expressed and highly polymorphic, each person presents a distinct set of peptides, and populations are protected from extinction by a single pathogen.",
+        "advanced": "Many viruses interfere with presentation (for example by blocking TAP), and NK cells compensate by killing cells with reduced MHC class I. Certain HLA alleles are associated with disease, such as HLA-B27 with ankylosing spondylitis and HLA-DR3/DR4 with type 1 diabetes, showing how the peptide-binding groove influences autoimmunity. Neoantigen vaccines and T-cell therapies rely on understanding which peptides tumour MHC molecules present. HLA typing and matching are central in transplantation, and alloreactivity (direct recognition of foreign MHC) explains the unusually high frequency of T cells reacting to transplanted tissue."
+      },
+      "commonMistakes": [
+        "Mixing up CD4/class II and CD8/class I: a handy rule of eight is CD4 x MHC II (2) = 8 and CD8 x MHC I (1) = 8.",
+        "Believing T cells recognise whole proteins; they recognise peptide-MHC complexes.",
+        "Thinking MHC is only about transplants; its natural job is antigen presentation."
+      ],
+      "videos": [
+        {
+          "youtubeId": "t81EjpkCiss",
+          "title": "Antigen Presentation: MHC Class I vs. MHC Class II",
+          "channel": "AMBOSS: Medical Knowledge Distilled",
+          "level": "beginner",
+          "whyWatch": "A three-minute comparison of the two pathways."
+        },
+        {
+          "youtubeId": "soWtpAO1Nr0",
+          "title": "Immunology - MHC I Processing",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Follows a viral protein through the proteasome, TAP and ER loading."
+        },
+        {
+          "youtubeId": "TMnkihN6zVM",
+          "title": "Immunology - MHC II Processing",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Shows the endosomal route and the invariant chain exchange."
+        },
+        {
+          "youtubeId": "9E_UxnC_L2o",
+          "title": "T cell development in the thymus",
+          "channel": "Immunology Toronto",
+          "level": "intermediate",
+          "whyWatch": "A teaching video on thymic positive and negative selection."
+        },
+        {
+          "youtubeId": "JeV-HuPq7CI",
+          "title": "Immunology | T- Cell Development",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A full lecture on T-cell development from progenitor to single-positive T cell."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/329506a0",
+          "title": "Structure of the human class I histocompatibility antigen, HLA-A2",
+          "authors": "Bjorkman PJ, Saper MA, Samraoui B, et al.",
+          "year": 1987,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The first crystal structure of an MHC molecule, revealing the peptide-binding groove and explaining how one molecule can present many peptides."
+        },
+        {
+          "doi": "10.1038/248701a0",
+          "title": "Restriction of in vitro T cell-mediated cytotoxicity in lymphocytic choriomeningitis within a syngeneic or semiallogeneic system",
+          "authors": "Zinkernagel RM, Doherty PC",
+          "year": 1974,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The paper that discovered MHC restriction, still a model of a simple experiment with a transformative answer."
+        },
+        {
+          "doi": "10.1016/0092-8674(87)90568-X",
+          "title": "T cell tolerance by clonal elimination in the thymus",
+          "authors": "Kappler JW, Roehm N, Marrack P",
+          "year": 1987,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "Provided direct evidence that self-reactive T cells are deleted in the thymus."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on antigen presentation and the development of T cells."
+        },
+        {
+          "title": "IEDB: Immune Epitope Database",
+          "provider": "NIAID",
+          "type": "database",
+          "url": "https://www.iedb.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Search known T- and B-cell epitopes and MHC binding data."
+        },
+        {
+          "title": "Khan Academy: Immunity",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/biology/human-biology/immunity",
+          "free": true,
+          "level": "beginner",
+          "note": "Short introductory lessons on immune cells and responses."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "MHC class I presents peptides mainly to",
+          "options": [
+            "CD4+ T cells",
+            "CD8+ T cells",
+            "B cells",
+            "NK cells only"
+          ],
+          "answer": 1,
+          "explanation": "Class I presents to cytotoxic CD8+ T cells, which recognise cells making foreign proteins."
+        },
+        {
+          "question": "What is the function of TAP?",
+          "options": [
+            "Cleaving proteins",
+            "Transporting peptides into the ER",
+            "Displacing CLIP",
+            "Activating complement"
+          ],
+          "answer": 1,
+          "explanation": "TAP moves proteasome-generated peptides into the ER, where they load onto MHC class I."
+        },
+        {
+          "question": "Negative selection in the thymus removes T cells that",
+          "options": [
+            "Cannot bind MHC at all",
+            "Bind self-peptide-MHC too strongly",
+            "Express CD3",
+            "Recognise foreign antigen"
+          ],
+          "answer": 1,
+          "explanation": "Cells with strongly self-reactive receptors are deleted, reducing autoimmunity."
+        }
+      ]
+    },
+    {
+      "id": "adaptive-responses-memory-vaccines",
+      "title": "Adaptive Responses, Memory and Vaccines",
+      "hours": 5,
+      "hook": "A vaccine is a rehearsal. It shows the immune system a harmless version of a pathogen so that the first real encounter feels like the second. In 2020, mRNA vaccines turned a viral sequence into a human trial in a matter of weeks, but the principles they rely on, T-cell help, germinal centres and memory, were worked out over decades.",
+      "learningObjectives": [
+        "Describe the three signals for naive T-cell activation and the roles of CD28, CTLA-4 and PD-1.",
+        "Compare Th1, Th2, Th17, Tfh, Treg and cytotoxic T-cell functions and their signature cytokines and transcription factors.",
+        "Explain how B cells are activated with T-cell help, form germinal centres and give plasma cells and memory cells.",
+        "Compare primary and secondary responses and the roles of central and effector memory.",
+        "Describe the main vaccine types and what an adjuvant does.",
+        "Explain herd immunity and one example in which antibodies can worsen disease, such as antibody-dependent enhancement in dengue."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Three signals",
+          "definition": "Signal 1: TCR recognition of peptide-MHC; signal 2: co-stimulation (CD28 binding B7); signal 3: cytokines that direct differentiation."
+        },
+        {
+          "term": "CTLA-4 and PD-1",
+          "definition": "Inhibitory receptors on T cells that dampen responses; therapeutic targets for checkpoint blockade."
+        },
+        {
+          "term": "Th1 / Th2 / Th17",
+          "definition": "Helper T-cell subsets: Th1 (IFN-gamma, macrophage activation, intracellular pathogens), Th2 (IL-4, IL-5, IL-13, helminths and allergy), Th17 (IL-17, extracellular bacteria and fungi)."
+        },
+        {
+          "term": "Tfh",
+          "definition": "T follicular helper cells that help B cells in germinal centres via IL-21 and CD40L."
+        },
+        {
+          "term": "Cytotoxic T lymphocyte",
+          "definition": "A CD8+ effector that kills infected cells through perforin, granzymes and Fas ligand."
+        },
+        {
+          "term": "Germinal centre",
+          "definition": "A structure in lymphoid follicles in which B cells undergo hypermutation, selection and class switching."
+        },
+        {
+          "term": "Memory cells",
+          "definition": "Long-lived lymphocytes that respond faster and more strongly on re-encounter; subsets include central memory (lymph node homing) and effector memory (tissue patrolling)."
+        },
+        {
+          "term": "Adjuvant",
+          "definition": "A substance in a vaccine that enhances the immune response, for example by activating innate sensors."
+        },
+        {
+          "term": "Herd immunity",
+          "definition": "Indirect protection of unvaccinated people when a sufficient proportion of the population is immune, reducing transmission."
+        }
+      ],
+      "deeper": {
+        "beginner": "Naive T cells are like soldiers who need three confirmations before acting: a recognised target, a go-ahead from a dendritic cell, and instructions on what kind of response is needed. Once active, they multiply, direct other cells and, after the danger passes, leave behind a trained reserve. Vaccines work by creating that reserve safely.",
+        "intermediate": "CD4+ T-cell differentiation depends on the cytokine environment: IL-12 leads to Th1 (T-bet), IL-4 to Th2 (GATA3), TGF-beta with IL-6 to Th17 (RORgamma-t), IL-6/IL-21 to Tfh (Bcl6), and TGF-beta with IL-2 to Treg (Foxp3). In a T-dependent antibody response, B cells present antigen to Tfh cells and receive CD40 ligand and cytokine help, leading to short-lived plasmablasts and germinal centre reactions. Vaccine platforms include live attenuated (strong, long-lived), inactivated, subunit and conjugate vaccines (polysaccharide linked to a protein carrier to recruit T-cell help), toxoids, viral vectors and mRNA in lipid nanoparticles, in which the mRNA encodes an antigen such as the SARS-CoV-2 spike.",
+        "advanced": "Memory is heterogeneous: central memory T cells (CCR7+) recirculate through lymph nodes and proliferate on re-exposure, while effector memory cells patrol tissues and give rapid effector responses; resident memory cells stay in barrier tissues. Antibody-dependent enhancement occurs when non-neutralising antibodies from a prior infection with one dengue serotype facilitate uptake of a different serotype into Fc-receptor bearing cells, which is one reason dengue vaccine development is complicated. Original antigenic sin, immune imprinting and waning titres shape how vaccines must be updated, and correlates of protection vary by pathogen."
+      },
+      "commonMistakes": [
+        "Treating Th1 and Th2 as opposites in all contexts; responses are mixed and cells show plasticity.",
+        "Assuming a vaccine gives sterile immunity; many protect against severe disease more than against infection.",
+        "Confusing antibodies (humoral) and cytotoxic T cells (cellular) as alternative rather than complementary responses."
+      ],
+      "videos": [
+        {
+          "youtubeId": "6eMh0Vpyoik",
+          "title": "Immune Response Explained: T-Cell Activation",
+          "channel": "Demystifying Medicine McMaster",
+          "level": "intermediate",
+          "whyWatch": "A teaching video on how T cells are activated and what the signals mean."
+        },
+        {
+          "youtubeId": "Qs1H5P0SaLU",
+          "title": "Helper T Cells: TH1 cells, TH2 cells, TH17 cells, TFH cells and Treg cells (FL-Immuno/32)",
+          "channel": "Frank Lectures",
+          "level": "intermediate",
+          "whyWatch": "Compares helper T-cell subsets, cytokines and functions."
+        },
+        {
+          "youtubeId": "Bl6vWLqL2D0",
+          "title": "Immunology - Adaptive Immunity (B cell Activation, Hypermutation and Class Switching Overview)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Follows a B cell from activation to antibody secretion and affinity maturation."
+        },
+        {
+          "youtubeId": "JUq3K8rtcso",
+          "title": "B cell activation, differentiation, and contraction",
+          "channel": "Osmosis from Elsevier",
+          "level": "intermediate",
+          "whyWatch": "Explains T-dependent activation and the fate of B cells."
+        },
+        {
+          "youtubeId": "mvA9gs5gxNY",
+          "title": "mRNA vaccines, explained",
+          "channel": "Vox",
+          "level": "beginner",
+          "whyWatch": "A concise explanation of how an mRNA vaccine trains the immune system."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.4049/jimmunol.136.7.2348",
+          "title": "Two types of murine helper T cell clone. I. Definition according to profiles of lymphokine activities and secreted proteins",
+          "authors": "Mosmann TR, Cherwinski H, Bond MW, Giedlin MA, Coffman RL",
+          "year": 1986,
+          "journal": "The Journal of Immunology",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the Th1/Th2 concept, which changed how immunologists classify T-cell responses."
+        },
+        {
+          "doi": "10.1038/44385",
+          "title": "Two subsets of memory T lymphocytes with distinct homing potentials and effector functions",
+          "authors": "Sallusto F, Lenig D, Forster R, Lipp M, Lanzavecchia A",
+          "year": 1999,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Defined central and effector memory T cells and linked their homing to function."
+        },
+        {
+          "doi": "10.1146/annurev-immunol-020711-075032",
+          "title": "Germinal Centers",
+          "authors": "Victora GD, Nussenzweig MC",
+          "year": 2012,
+          "journal": "Annual Review of Immunology",
+          "level": "advanced",
+          "whyItMatters": "A review of how germinal centres select high-affinity B cells."
+        },
+        {
+          "doi": "10.1056/NEJMoa2034577",
+          "title": "Safety and Efficacy of the BNT162b2 mRNA Covid-19 Vaccine",
+          "authors": "Polack FP, Thomas SJ, Kitchin N, et al.",
+          "year": 2020,
+          "journal": "New England Journal of Medicine",
+          "level": "intermediate",
+          "whyItMatters": "The pivotal trial of an mRNA vaccine, an excellent case study in clinical design and efficacy reporting."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on T-cell-mediated immunity, humoral responses and vaccination."
+        },
+        {
+          "title": "MIT OCW 7.016 Introductory Biology",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes lectures on immunology and memory."
+        },
+        {
+          "title": "OpenStax Microbiology",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/microbiology/pages/18-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "Chapter on adaptive specific host defences and vaccines."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which co-stimulatory pair gives signal 2 to a naive T cell?",
+          "options": [
+            "CD28 on the T cell binding B7 (CD80/86)",
+            "CTLA-4 binding PD-L1",
+            "CD4 binding MHC I",
+            "CD3 binding IgG"
+          ],
+          "answer": 0,
+          "explanation": "CD28 binding to B7 on antigen-presenting cells provides co-stimulation; CTLA-4 competes and inhibits."
+        },
+        {
+          "question": "Tfh cells are important because they",
+          "options": [
+            "Kill virus-infected cells",
+            "Help B cells in germinal centres",
+            "Secrete IgE",
+            "Present antigen on MHC I"
+          ],
+          "answer": 1,
+          "explanation": "Tfh cells provide CD40L and IL-21 to B cells, supporting affinity maturation and class switching."
+        },
+        {
+          "question": "Conjugate vaccines work by",
+          "options": [
+            "Linking a polysaccharide to a protein carrier to recruit T-cell help",
+            "Using a live virus",
+            "Delivering mRNA",
+            "Containing only adjuvant"
+          ],
+          "answer": 0,
+          "explanation": "The carrier protein provides peptides for Tfh cells, turning a T-independent response into a T-dependent one."
+        }
+      ],
+      "animation": "immune-response"
+    },
+    {
+      "id": "tolerance-autoimmunity-hypersensitivity",
+      "title": "Tolerance, Autoimmunity and Hypersensitivity",
+      "hours": 4,
+      "hook": "Your immune system is built from random receptors, and roughly half of them would react to you. The reason you do not attack your own tissue is a multi-layered system of checks. When those checks fail you get autoimmunity, and when the system overreacts to harmless things, allergy.",
+      "learningObjectives": [
+        "Explain central and peripheral tolerance mechanisms (deletion, receptor editing, anergy, regulatory T cells).",
+        "Describe how Foxp3+ regulatory T cells suppress responses and what happens when they are absent.",
+        "Give examples of autoimmune diseases and the likely mechanisms by which tolerance fails.",
+        "Classify Gell and Coombs hypersensitivity types I-IV with examples and effector mechanisms.",
+        "Describe the sequence of events in an IgE-mediated allergic reaction and anaphylaxis.",
+        "Explain basic approaches to treatment (immunosuppression, biologics, allergen immunotherapy)."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Central tolerance",
+          "definition": "Elimination or editing of self-reactive lymphocytes in the thymus (T cells) and bone marrow (B cells)."
+        },
+        {
+          "term": "Peripheral tolerance",
+          "definition": "Mechanisms outside primary lymphoid organs: anergy, deletion, suppression by Treg cells and immune privilege."
+        },
+        {
+          "term": "Regulatory T cell",
+          "definition": "A CD4+ CD25+ Foxp3+ T cell that suppresses immune responses through IL-10, TGF-beta, CTLA-4 and IL-2 consumption."
+        },
+        {
+          "term": "Autoimmunity",
+          "definition": "An adaptive immune response against self-antigens that causes tissue damage."
+        },
+        {
+          "term": "Molecular mimicry",
+          "definition": "Cross-reactivity between a microbial antigen and a self-antigen that can trigger autoimmunity."
+        },
+        {
+          "term": "Type I hypersensitivity",
+          "definition": "IgE-mediated mast-cell degranulation releasing histamine and mediators, as in hay fever, asthma and anaphylaxis."
+        },
+        {
+          "term": "Type II hypersensitivity",
+          "definition": "Antibodies against cell-surface or matrix antigens, for example autoimmune haemolytic anaemia, Graves disease and myasthenia gravis."
+        },
+        {
+          "term": "Type III hypersensitivity",
+          "definition": "Immune complex deposition activating complement and neutrophils, as in SLE and serum sickness."
+        },
+        {
+          "term": "Type IV hypersensitivity",
+          "definition": "T-cell-mediated delayed responses such as contact dermatitis, the tuberculin test and much of type 1 diabetes pathology."
+        }
+      ],
+      "deeper": {
+        "beginner": "To avoid friendly fire, the immune system checks its soldiers repeatedly. Most dangerous self-reactive cells are removed in training, others are put to sleep if they escape, and a dedicated peacekeeping force of regulatory T cells monitors the tissues. Autoimmune disease is what happens when several of these safeguards fail at once, usually in people with a particular genetic predisposition and an environmental trigger.",
+        "intermediate": "AIRE-dependent expression of tissue antigens in the thymus enables deletion of self-reactive T cells, and AIRE mutations cause autoimmune polyendocrine syndrome type 1. Mutations in FOXP3 cause IPEX, a severe multi-organ autoimmune disease in which Treg cells are absent. Type I hypersensitivity requires prior sensitisation with production of IgE, which binds FcεRI on mast cells; re-exposure to allergen cross-links IgE and triggers degranulation within minutes, with a late phase involving eosinophils and Th2 cytokines. Anaphylaxis is a systemic type I reaction treated with intramuscular adrenaline.",
+        "advanced": "Autoimmunity is multifactorial: genetic risk (HLA alleles, PTPN22, CTLA4), infections, hormones, microbiome and loss of regulatory mechanisms. Epitope spreading broadens the response over time, which complicates therapy. Modern treatments aim to block specific pathways (anti-TNF, anti-CD20, IL-6 receptor blockade, JAK inhibitors) or to restore tolerance. In allergic disease, early-life microbial exposures, barrier defects and Th2-skewing contribute, and allergen immunotherapy shifts responses towards IgG4 and Treg cells."
+      },
+      "commonMistakes": [
+        "Equating autoantibodies in blood with disease; low-titre autoantibodies occur in healthy people.",
+        "Confusing the four hypersensitivity types: ask what is the effector (IgE, IgG/IgM on cells, immune complexes or T cells) and how quickly it acts.",
+        "Believing that autoimmunity is caused by a weak immune system; it is generally dysregulation, not weakness."
+      ],
+      "videos": [
+        {
+          "youtubeId": "efOW5NUTYB8",
+          "title": "When Your Body Attacks Itself - Autoimmune",
+          "channel": "Kurzgesagt - In a Nutshell",
+          "level": "beginner",
+          "whyWatch": "A short animated explanation of how tolerance breaks down and autoimmune disease develops."
+        },
+        {
+          "youtubeId": "jpL3wCxS-BM",
+          "title": "Peripheral Tolerance- causes, symptoms, diagnosis, treatment, pathology",
+          "channel": "Osmosis from Elsevier",
+          "level": "intermediate",
+          "whyWatch": "Explains anergy, deletion and regulatory suppression in peripheral tissues."
+        },
+        {
+          "youtubeId": "jXTW4F-8jd4",
+          "title": "Hypersensitivity, Overview of the 4 Types, Animation.",
+          "channel": "Alila Medical Media",
+          "level": "beginner",
+          "whyWatch": "A compact visual comparison of the four hypersensitivity types."
+        },
+        {
+          "youtubeId": "2tmw9x2Ot_Q",
+          "title": "Type I hypersensitivity (IgE-mediated hypersensitivity) - causes, symptoms, pathology",
+          "channel": "Osmosis from Elsevier",
+          "level": "intermediate",
+          "whyWatch": "Follows sensitisation and re-exposure in allergy and anaphylaxis."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.4049/jimmunol.155.3.1151",
+          "title": "Immunologic self-tolerance maintained by activated T cells expressing IL-2 receptor alpha-chains (CD25). Breakdown of a single mechanism of self-tolerance causes various autoimmune diseases",
+          "authors": "Sakaguchi S, Sakaguchi N, Asano M, Itoh M, Toda M",
+          "year": 1995,
+          "journal": "The Journal of Immunology",
+          "level": "advanced",
+          "whyItMatters": "The key paper identifying CD25+ regulatory T cells and showing that their absence causes autoimmunity; a Nobel Prize-recognised discovery area."
+        },
+        {
+          "doi": "10.1038/83784",
+          "title": "Disruption of a new forkhead/winged-helix protein, scurfin, results in the fatal lymphoproliferative disorder of the scurfy mouse",
+          "authors": "Brunkow ME, Jeffery EW, Hjerrild KA, et al.",
+          "year": 2001,
+          "journal": "Nature Genetics",
+          "level": "advanced",
+          "whyItMatters": "Identified Foxp3 as the gene mutated in scurfy mice, linking it to the human IPEX syndrome."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on tolerance, autoimmunity and allergy."
+        },
+        {
+          "title": "Immunopaedia",
+          "provider": "Immunopaedia (University of Cape Town)",
+          "type": "interactive",
+          "url": "https://www.immunopaedia.org.za/",
+          "free": true,
+          "level": "beginner",
+          "note": "Case-based material on allergy, autoimmunity and HIV with clinical context."
+        },
+        {
+          "title": "Khan Academy: Immunity",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/science/biology/human-biology/immunity",
+          "free": true,
+          "level": "beginner",
+          "note": "Introductory lessons on immune cells, tolerance and autoimmunity."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which hypersensitivity type is mediated by IgE and mast cells?",
+          "options": [
+            "Type I",
+            "Type II",
+            "Type III",
+            "Type IV"
+          ],
+          "answer": 0,
+          "explanation": "Type I (immediate) hypersensitivity is driven by IgE bound to mast cells."
+        },
+        {
+          "question": "A mutation in FOXP3 in humans causes",
+          "options": [
+            "SCID",
+            "IPEX, a severe autoimmune syndrome",
+            "Chronic granulomatous disease",
+            "Selective IgA deficiency"
+          ],
+          "answer": 1,
+          "explanation": "FOXP3 is the master regulator of Treg cells; loss of function causes IPEX."
+        },
+        {
+          "question": "Receptor editing is a mechanism of",
+          "options": [
+            "Peripheral T-cell tolerance",
+            "Central B-cell tolerance",
+            "Complement activation",
+            "Antibody class switching"
+          ],
+          "answer": 1,
+          "explanation": "Self-reactive immature B cells in the bone marrow can rearrange light chains to lose self-reactivity."
+        }
+      ]
+    },
+    {
+      "id": "immunodeficiency-transplantation-tumour-immunity",
+      "title": "Immunodeficiency, Transplantation and Tumour Immunology",
+      "hours": 3,
+      "hook": "In 1983 scientists in Paris isolated the retrovirus that later became known as HIV. Four decades on, one of the most striking stories in immunology is how the same checkpoints that restrain autoimmunity were re-engineered into cancer drugs. Both stories show what happens when immune function is lost or unleashed.",
+      "learningObjectives": [
+        "Differentiate primary from secondary immunodeficiencies with examples (SCID, XLA, CGD, HIV).",
+        "Describe the pathogenesis of HIV infection, including CD4 T-cell depletion and the CD4 count thresholds for AIDS.",
+        "Explain graft rejection (hyperacute, acute, chronic), graft-versus-host disease and the principles of immunosuppression.",
+        "Explain the role of HLA matching and ABO compatibility in transplantation.",
+        "Describe cancer immunosurveillance and immunoediting and the mechanisms by which tumours escape.",
+        "Summarise checkpoint blockade, CAR-T cells and cancer vaccines as immunotherapies."
+      ],
+      "keyConcepts": [
+        {
+          "term": "SCID",
+          "definition": "Severe combined immunodeficiency; defects such as ADA deficiency, RAG mutations or common gamma chain loss impair T and B cell function."
+        },
+        {
+          "term": "XLA",
+          "definition": "X-linked agammaglobulinaemia from BTK mutations: B cells fail to mature, causing absent antibodies and recurrent bacterial infections."
+        },
+        {
+          "term": "HIV",
+          "definition": "A retrovirus that infects CD4+ T cells, macrophages and dendritic cells using CD4 and the co-receptors CCR5 or CXCR4, leading to progressive immune failure."
+        },
+        {
+          "term": "AIDS",
+          "definition": "Acquired immunodeficiency syndrome: advanced HIV infection with CD4 counts below 200 per microlitre or AIDS-defining illnesses."
+        },
+        {
+          "term": "Allograft rejection",
+          "definition": "Immune destruction of a graft from a genetically different individual of the same species, driven mainly by T cells recognising foreign HLA."
+        },
+        {
+          "term": "Graft-versus-host disease",
+          "definition": "Donor T cells in a transplant (such as bone marrow) attack recipient tissues."
+        },
+        {
+          "term": "Immunosurveillance",
+          "definition": "The concept that the immune system detects and removes nascent tumour cells."
+        },
+        {
+          "term": "Immunoediting",
+          "definition": "Elimination, equilibrium and escape: the process by which immune pressure sculpts tumours, selecting variants that evade it."
+        },
+        {
+          "term": "Immune checkpoint inhibitor",
+          "definition": "An antibody blocking CTLA-4, PD-1 or PD-L1 to release the brakes on T-cell responses against tumours."
+        }
+      ],
+      "deeper": {
+        "beginner": "When the immune system is missing a part, specific infections become common, and the pattern of infections points to the missing part: antibody defects lead to recurrent bacterial infections, T-cell defects to viral and fungal infections. At the other extreme, a graft carries foreign MHC and is attacked, and a tumour that learns to hide can only be cleared if its disguise is stripped away.",
+        "intermediate": "HIV gp120 binds CD4 and then CCR5 or CXCR4; reverse transcription and integration establish a provirus that persists in latent reservoirs, which is why antiretroviral therapy suppresses but does not eradicate infection. CD4 counts fall over years in untreated infection, leaving patients vulnerable to opportunistic infections. For transplants, hyperacute rejection results from pre-existing antibodies (ABO or HLA), acute rejection from T cells in the first weeks to months, and chronic rejection from slower vascular and fibrotic changes. Calcineurin inhibitors (ciclosporin, tacrolimus), antimetabolites and steroids are standard immunosuppressants but raise infection and cancer risk.",
+        "advanced": "Tumours escape through loss of MHC class I, secretion of immunosuppressive cytokines (TGF-beta), recruitment of Treg and myeloid suppressor cells, and upregulation of PD-L1. Checkpoint blockade (ipilimumab against CTLA-4, then PD-1/PD-L1 antibodies) can produce durable responses but also immune-related adverse events resembling autoimmunity, and the 2018 Nobel Prize recognised this field. CAR-T cells are patient T cells engineered to express a chimeric antigen receptor and have shown dramatic responses in B-cell malignancies, but they face challenges in solid tumours, including antigen heterogeneity and a hostile microenvironment."
+      },
+      "commonMistakes": [
+        "Equating HIV infection with AIDS; the two are different stages, and treated infection need not progress.",
+        "Believing the immune system always protects against cancer; tumours can exploit immune mechanisms.",
+        "Assuming immunosuppressants are specific; they broadly reduce immune function and require careful monitoring."
+      ],
+      "videos": [
+        {
+          "youtubeId": "GoEXNXYWNsA",
+          "title": "Primary Immunodeficiency - Immunology | Lecturio",
+          "channel": "Lecturio Medical",
+          "level": "intermediate",
+          "whyWatch": "Classifies primary immunodeficiencies by the arm of immunity affected."
+        },
+        {
+          "youtubeId": "ma7MVU8sjkI",
+          "title": "Human Immunodeficiency Virus (HIV)",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A clear overview of the HIV life cycle and how it undermines CD4 T cells."
+        },
+        {
+          "youtubeId": "AEgIMrV9foE",
+          "title": "Transplant Medicine - Antibody mediated rejection",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Explains how antibodies and complement damage a graft."
+        },
+        {
+          "youtubeId": "B8Q_m7hnvRQ",
+          "title": "Cancer Immune Checkpoint Inhibitors",
+          "channel": "Harvard Medical School Continuing Education",
+          "level": "intermediate",
+          "whyWatch": "Explains how blocking checkpoints releases anti-tumour T cells."
+        },
+        {
+          "youtubeId": "zFhYJRqz_xk",
+          "title": "Your Body Killed Cancer 5 Minutes Ago",
+          "channel": "Kurzgesagt - In a Nutshell",
+          "level": "beginner",
+          "whyWatch": "An engaging story of cancer immunosurveillance and escape."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.6189183",
+          "title": "Isolation of a T-Lymphotropic Retrovirus from a Patient at Risk for Acquired Immune Deficiency Syndrome (AIDS)",
+          "authors": "Barre-Sinoussi F, Chermann JC, Rey F, et al.",
+          "year": 1983,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The original report of the virus now called HIV, a landmark of virology and a case study in how a new disease is traced to a cause."
+        },
+        {
+          "doi": "10.1056/NEJMoa1003466",
+          "title": "Improved Survival with Ipilimumab in Patients with Metastatic Melanoma",
+          "authors": "Hodi FS, O'Day SJ, McDermott DF, et al.",
+          "year": 2010,
+          "journal": "New England Journal of Medicine",
+          "level": "intermediate",
+          "whyItMatters": "The first randomised trial showing that blocking CTLA-4 improves survival in advanced melanoma."
+        },
+        {
+          "doi": "10.1126/science.1203486",
+          "title": "Cancer Immunoediting: Integrating Immunity's Roles in Cancer Suppression and Promotion",
+          "authors": "Schreiber RD, Old LJ, Smyth MJ",
+          "year": 2011,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "Presents the elimination-equilibrium-escape model of how immunity shapes tumours."
+        },
+        {
+          "doi": "10.1126/science.aaa8172",
+          "title": "The future of immune checkpoint therapy",
+          "authors": "Sharma P, Allison JP",
+          "year": 2015,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "A review by a Nobel laureate of mechanisms, successes and open questions in checkpoint therapy."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Immunobiology (Janeway), 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on failures of host defence, transplantation and tumour immunology."
+        },
+        {
+          "title": "Immunopaedia",
+          "provider": "Immunopaedia (University of Cape Town)",
+          "type": "interactive",
+          "url": "https://www.immunopaedia.org.za/",
+          "free": true,
+          "level": "beginner",
+          "note": "HIV immunology cases and learning modules designed for resource-limited settings."
+        },
+        {
+          "title": "OpenStax Microbiology: Chapter 19, Diseases of the Immune System",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/microbiology/pages/19-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "Covers hypersensitivity, autoimmunity, immunodeficiency and HIV."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which receptor, besides CD4, is commonly used by HIV for entry into T cells?",
+          "options": [
+            "CCR5 or CXCR4",
+            "TLR4",
+            "CD8",
+            "CD28"
+          ],
+          "answer": 0,
+          "explanation": "gp120 binds CD4 and then a chemokine co-receptor, CCR5 or CXCR4."
+        },
+        {
+          "question": "Hyperacute graft rejection is caused by",
+          "options": [
+            "Pre-existing antibodies against donor antigens",
+            "Th2 cells",
+            "NK cells only",
+            "Weak HLA matching alone"
+          ],
+          "answer": 0,
+          "explanation": "Pre-formed antibodies (ABO or HLA) activate complement within minutes to hours of grafting."
+        },
+        {
+          "question": "Ipilimumab acts by blocking",
+          "options": [
+            "PD-1",
+            "CTLA-4",
+            "IL-2",
+            "CD20"
+          ],
+          "answer": 1,
+          "explanation": "Ipilimumab is an anti-CTLA-4 antibody that releases a brake on T-cell activation."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "FpXIGTFD8Qs",
+      "title": "30. Immunology 1 - Diversity, Specificity, & B cells",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A full MIT lecture on antibody diversity and B-cell biology."
+    },
+    {
+      "youtubeId": "SqGmQ6CFYHw",
+      "title": "31. Immunology 2 - Memory, T cells, & Autoimmunity",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "The second MIT lecture, covering memory, T cells and autoimmunity."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Immunobiology (Janeway), 5th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK10757/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free earlier edition of the leading immunology textbook, readable online."
+    },
+    {
+      "title": "OpenStax Biology 2e: The Immune System",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/42-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "A free introductory chapter for first-pass reading."
+    },
+    {
+      "title": "OpenStax Microbiology",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/microbiology/pages/18-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "Free chapters on host defences, vaccines and immune disorders."
+    },
+    {
+      "title": "Immunopaedia",
+      "provider": "Immunopaedia (University of Cape Town)",
+      "type": "interactive",
+      "url": "https://www.immunopaedia.org.za/",
+      "free": true,
+      "level": "beginner",
+      "note": "Free interactive cases and learning resources."
+    }
+  ]
+}

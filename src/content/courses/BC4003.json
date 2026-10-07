@@ -1,0 +1,1534 @@
+{
+  "code": "BC 4003",
+  "title": "General Paper",
+  "level": 4,
+  "semester": 2,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "The capstone: bring the whole degree together and practise thinking like a biochemist under exam conditions.",
+  "overview": "BC 4003 is a capstone, integration course. Instead of introducing a new area, it asks you to connect what you have learned across the degree (molecules, enzymes, metabolism, genes, signalling, techniques and the ethics of the field) and to answer unfamiliar, cross-disciplinary questions in clear, exam-style prose. Because the questions are synthetic by design, these units are organised around themes that bridge courses: information flow, structure and function, energy and metabolism, whole-body integration, regulation and signalling, disease mechanisms, techniques and data interpretation, and critical evaluation.",
+  "whyItMatters": "Real problems, from a patient with unexplained hyperglycaemia to a failed experiment, never arrive labelled with a course code. Being able to bring enzymes, metabolism, genetics and statistics to bear on one question is what turns a graduate from someone who has studied biochemistry into someone who can work as a biochemist.",
+  "prerequisites": [],
+  "careerLinks": [
+    "Postgraduate study and research",
+    "Clinical and diagnostic laboratories",
+    "Biotechnology and pharmaceutical industry",
+    "Science teaching and communication",
+    "Regulatory, quality and policy roles"
+  ],
+  "studyTips": [
+    "Make one-page concept maps of each theme, linking courses, and redraw them from memory.",
+    "Practise answering a question in 20 minutes with a plan, a diagram and one example from each relevant area.",
+    "Use past papers, then rewrite weak answers using a model answer or a friend's feedback.",
+    "Study with classmates: explain a pathway or technique to each other and ask 'why does the cell do it this way?'",
+    "Revise from a general textbook so that you see how topics connect, then check detail in lecture notes."
+  ],
+  "units": [
+    {
+      "id": "integrative-answers",
+      "title": "Thinking and Writing Across the Degree: Exam Technique for Integrative Questions",
+      "hours": 4,
+      "hook": "A General Paper question rarely announces which course it belongs to. 'Why does a drug that blocks a kinase lower blood glucose?' touches enzymes, signalling, metabolism and perhaps pharmacology all at once. The skill being tested is not recall of one lecture but the ability to connect them.",
+      "learningObjectives": [
+        "Read an integrative question and identify the concepts and courses it draws on",
+        "Plan an answer with a short outline before writing",
+        "Link levels of explanation: molecule, pathway, cell, tissue, organism",
+        "Use diagrams and numbers to support a written answer",
+        "Allocate time across questions and avoid over-writing a favourite one",
+        "Review and improve your answers using a marking-style checklist"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Command words",
+          "definition": "Words such as 'explain', 'compare', 'evaluate' and 'discuss' tell you what kind of answer is required; 'describe' is not the same as 'explain'."
+        },
+        {
+          "term": "Integration",
+          "definition": "Connecting ideas from different topics into a single coherent explanation."
+        },
+        {
+          "term": "Levels of explanation",
+          "definition": "Answering at molecular, cellular, tissue and whole-organism scales and showing how they relate."
+        },
+        {
+          "term": "Answer plan",
+          "definition": "A few lines of bullet points written before the answer to organise structure and avoid omissions."
+        },
+        {
+          "term": "Evidence in answers",
+          "definition": "Using specific examples, experiments, numbers and named molecules rather than generalities."
+        },
+        {
+          "term": "Calibrated claims",
+          "definition": "Distinguishing what is established from what is hypothesised or disputed."
+        }
+      ],
+      "deeper": {
+        "beginner": "Underline the command word and the key nouns in the question. In two minutes, write the main points you want to make and the order in which they connect. Start with a clear direct answer, then support it with mechanism and an example. Draw a small pathway if it helps; label it.",
+        "intermediate": "Practise by taking a mechanism (for example insulin signalling) and writing how it would appear in questions from different courses: structure of the receptor, kinases, glucose transport, gene expression, diabetes. Build a one-page concept map for each major theme. Time yourself and mark answers against the question: did you answer what was asked?",
+        "advanced": "Learn to move between scales and to reason with unfamiliar data: when a question presents a new situation, use first principles (thermodynamics, kinetics, regulation, information flow) rather than searching for the memorised answer. Be explicit about assumptions and show how alternative explanations could be distinguished by a decisive experiment."
+      },
+      "commonMistakes": [
+        "Writing everything you know about a keyword rather than answering the question",
+        "Describing a pathway when the question asks to explain a regulatory logic",
+        "Spending most of the time on the first question",
+        "Leaving out units, direction of change or the cell/tissue in which something occurs"
+      ],
+      "videos": [
+        {
+          "youtubeId": "jeht_P2GBwI",
+          "title": "5 Rules for Answering ESSAY Questions on Exams",
+          "channel": "Thomas Frank",
+          "level": "beginner",
+          "whyWatch": "Concrete steps for planning and structuring an essay answer under time pressure."
+        },
+        {
+          "youtubeId": "ZoM_LQ6vdv4",
+          "title": "How to Plan a University Essay (Science Degrees)",
+          "channel": "Exam Busters ~ Biology with Gracie",
+          "level": "beginner",
+          "whyWatch": "A planning method designed for science essay questions."
+        },
+        {
+          "youtubeId": "Eqf3TaihsOI",
+          "title": "How I wrote 1st class essays at Cambridge University (how to write the best essay)",
+          "channel": "Doctor Shaene",
+          "level": "beginner",
+          "whyWatch": "Shows how argument and evidence are used in high-scoring essays."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Learning Center Tips and Tools",
+          "provider": "UNC Learning Center",
+          "type": "tutorial",
+          "url": "https://learningcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free handouts on studying, exam preparation and note-taking that apply to any course."
+        },
+        {
+          "title": "Biology 2e",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/biology-2e",
+          "free": true,
+          "level": "beginner",
+          "note": "A free, peer-reviewed college biology book that is useful for quick revision of fundamentals."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A question asks you to 'explain' how insulin lowers blood glucose. What is the best approach?",
+          "options": [
+            "List the structure of insulin",
+            "Describe the mechanism step by step and link receptor signalling to glucose transport and metabolism",
+            "Write the history of insulin",
+            "Draw only the chemical structure"
+          ],
+          "answer": 1,
+          "explanation": "'Explain' requires a causal account (how and why) rather than a list of facts."
+        },
+        {
+          "question": "Why make a plan before writing an answer?",
+          "options": [
+            "To impress examiners",
+            "To organise points, avoid omissions and save time overall",
+            "Planning is not permitted",
+            "To decrease the length"
+          ],
+          "answer": 1,
+          "explanation": "A short plan improves structure and prevents going off-topic."
+        },
+        {
+          "question": "A question gives data you have not seen. What is the most useful approach?",
+          "options": [
+            "Give up",
+            "Apply principles of enzymes, regulation and information flow to interpret the data",
+            "Recite a related lecture",
+            "Ignore the data"
+          ],
+          "answer": 1,
+          "explanation": "Examiners use new data to test understanding, not memory."
+        }
+      ]
+    },
+    {
+      "id": "information-flow",
+      "title": "Information Flow: From Gene to Protein to Phenotype",
+      "hours": 5,
+      "hook": "A single base change in one gene can alter a protein, which changes an enzyme, which changes a pathway, which changes how a child tolerates milk. Following information from DNA to organism is the thread that holds molecular biology together.",
+      "learningObjectives": [
+        "Explain replication, transcription and translation and their key enzymes and signals",
+        "Describe how the genetic code and mutations determine protein sequence",
+        "Compare prokaryotic and eukaryotic gene expression and processing",
+        "Predict the effect of a mutation at DNA, RNA and protein level",
+        "State what the central dogma does and does not say",
+        "Link gene expression to cell phenotype and disease"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Central dogma",
+          "definition": "Sequence information is transferred from nucleic acids to proteins; it is not transferred from protein back to nucleic acid or to another protein."
+        },
+        {
+          "term": "Transcription",
+          "definition": "Synthesis of RNA from a DNA template by RNA polymerase, regulated by promoters and transcription factors."
+        },
+        {
+          "term": "Translation",
+          "definition": "Synthesis of a protein on a ribosome, reading mRNA codons with tRNA adaptors."
+        },
+        {
+          "term": "Genetic code",
+          "definition": "A triplet code that is nearly universal and degenerate: most amino acids are encoded by more than one codon."
+        },
+        {
+          "term": "Missense, nonsense and frameshift",
+          "definition": "A missense mutation changes one amino acid, a nonsense mutation creates a stop codon and a frameshift (insertion or deletion not in multiples of three) alters the reading frame downstream."
+        },
+        {
+          "term": "RNA processing",
+          "definition": "In eukaryotes pre-mRNA is capped, spliced and polyadenylated before export."
+        },
+        {
+          "term": "Reverse transcription",
+          "definition": "Copying RNA into DNA, as in retroviruses; consistent with the central dogma as stated by Crick."
+        },
+        {
+          "term": "Post-translational modification",
+          "definition": "Chemical changes to proteins after synthesis, such as phosphorylation or glycosylation, that alter activity or location."
+        }
+      ],
+      "deeper": {
+        "beginner": "DNA is copied to make more DNA, transcribed into RNA, and RNA is translated into protein. Mutations alter the DNA, which may alter the RNA and protein. Not all changes matter: the code is degenerate, so some changes are silent. Ask three things of any mutation: where is it, what does it change, and what does the protein do?",
+        "intermediate": "Compare prokaryotes (coupled transcription and translation, operons) with eukaryotes (nucleus, splicing, capping, polyadenylation, chromatin). Use a mutation as a worked example: write the DNA, mRNA and protein sequences before and after, and decide whether the change is silent, missense, nonsense or frameshift. Link to function: a missense change in an active site can abolish activity, whereas one on the surface may be tolerated.",
+        "advanced": "Integrate regulation at each step: chromatin state, transcription factors and enhancers, RNA stability, microRNAs, alternative splicing, translational control and protein degradation. Recognise that the central dogma limits the direction of sequence information, not the existence of regulation or of RNA-to-DNA transfer by reverse transcriptase. In an exam, show how one defect propagates: for example a splice-site mutation altering exon inclusion, producing a truncated protein that is degraded, with consequences for a pathway."
+      },
+      "commonMistakes": [
+        "Stating that the central dogma says information only flows DNA to RNA to protein, with no exceptions",
+        "Forgetting that the genetic code is read in triplets from a start codon",
+        "Assuming every mutation changes the protein",
+        "Mixing up template and coding strands"
+      ],
+      "animation": "central-dogma",
+      "videos": [
+        {
+          "youtubeId": "6gUY5NoX1Lk",
+          "title": "DNA replication and RNA transcription and translation",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A single-lecture overview connecting replication, transcription and translation."
+        },
+        {
+          "youtubeId": "gG7uCskUOrA",
+          "title": "From DNA to protein - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A concise 3D animation of how a gene becomes a protein."
+        },
+        {
+          "youtubeId": "Yv94eGD7cUU",
+          "title": "Central dogma - revisited",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Revisits the central dogma, including exceptions such as reverse transcription."
+        },
+        {
+          "youtubeId": "ebIpkw3XapE",
+          "title": "Gene Expression and Regulation",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly review of how cells control which genes are expressed."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/227561a0",
+          "title": "Central Dogma of Molecular Biology",
+          "authors": "Crick F",
+          "year": 1970,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "Crick's own restatement of what the central dogma does and does not forbid: sequence information cannot flow back from protein to nucleic acid. It corrects the common but wrong idea that the dogma says information only runs DNA to RNA to protein."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Cell: A Molecular Approach (2nd ed.)",
+          "provider": "NCBI Bookshelf (Cooper)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable free text that is good for signalling, the cell cycle and cancer."
+        },
+        {
+          "title": "Molecular Biology of the Cell (4th ed.)",
+          "provider": "NCBI Bookshelf (Alberts et al.)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A full free textbook of cell and molecular biology to revise any topic in depth."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The central protein knowledgebase: function, domains, modifications and literature in one entry."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about the central dogma is accurate?",
+          "options": [
+            "Information can never flow from RNA to DNA",
+            "Sequence information cannot pass from protein back to nucleic acid",
+            "DNA is translated directly to protein",
+            "It says RNA is unimportant"
+          ],
+          "answer": 1,
+          "explanation": "Crick's formulation forbids transfer from protein back to nucleic acid; RNA to DNA by reverse transcriptase is allowed."
+        },
+        {
+          "question": "A single-base deletion in the middle of a coding sequence most likely causes:",
+          "options": [
+            "A silent change",
+            "A frameshift altering all downstream amino acids",
+            "A change in only one amino acid",
+            "No effect"
+          ],
+          "answer": 1,
+          "explanation": "Removing one base shifts the triplet reading frame for the rest of the message, usually producing a nonfunctional protein."
+        },
+        {
+          "question": "Why can a base substitution be silent?",
+          "options": [
+            "The genetic code is degenerate",
+            "RNA is not read",
+            "Ribosomes ignore mutations",
+            "DNA is repaired immediately"
+          ],
+          "answer": 0,
+          "explanation": "Several codons can encode the same amino acid, so some substitutions leave the protein unchanged."
+        }
+      ]
+    },
+    {
+      "id": "proteins-enzymes",
+      "title": "Proteins and Enzymes: Structure, Folding and Kinetics",
+      "hours": 5,
+      "hook": "An enzyme is a shape that happens to make a reaction one hundred million times faster. Understanding why requires putting together amino-acid chemistry, folding, binding energy and the equations that describe rate.",
+      "learningObjectives": [
+        "Relate amino-acid properties to secondary, tertiary and quaternary structure",
+        "Explain how sequence determines fold and why proteins misfold",
+        "Interpret Michaelis-Menten parameters Vmax and Km and Lineweaver-Burk plots",
+        "Distinguish competitive, uncompetitive and non-competitive inhibition",
+        "Describe allosteric regulation and covalent modification of enzymes",
+        "Use enzyme data to infer mechanisms or the effect of a mutation"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Primary to quaternary structure",
+          "definition": "Amino-acid sequence; local folds such as helices and sheets; the overall 3D fold; assembly of several chains."
+        },
+        {
+          "term": "Anfinsen's principle",
+          "definition": "For many small proteins the amino-acid sequence contains the information for the native fold under suitable conditions."
+        },
+        {
+          "term": "Active site",
+          "definition": "The region where substrate binds and the reaction is catalysed, formed by residues that may be distant in sequence."
+        },
+        {
+          "term": "Michaelis-Menten equation",
+          "definition": "v = Vmax[S]/(Km + [S]) describes the rate as a function of substrate concentration for many single-substrate enzymes."
+        },
+        {
+          "term": "Km and Vmax",
+          "definition": "Km is the substrate concentration at half Vmax (an apparent measure of affinity under defined conditions); Vmax is the rate when the enzyme is saturated."
+        },
+        {
+          "term": "Competitive inhibition",
+          "definition": "Inhibitor competes with substrate for the active site: apparent Km increases while Vmax is unchanged."
+        },
+        {
+          "term": "Allostery",
+          "definition": "Binding at one site changes activity at another, often producing a sigmoidal rate curve."
+        },
+        {
+          "term": "Chaperone",
+          "definition": "A protein that helps others fold and prevents aggregation."
+        }
+      ],
+      "deeper": {
+        "beginner": "Proteins fold because of the properties of their side chains: hydrophobic residues bury, charged ones face water, and many weak interactions add up. An enzyme speeds a reaction by binding the transition state well. Plot rate against substrate: at low substrate it rises steeply, then levels at Vmax.",
+        "intermediate": "Practise reading kinetic data. A competitive inhibitor raises apparent Km but does not change Vmax because excess substrate can outcompete it; a non-competitive inhibitor lowers Vmax. Use a Lineweaver-Burk plot to visualise but fit the data with nonlinear regression. Connect structure to function: a mutation in the active site changes Km or kcat, while one in the core may destabilise the fold.",
+        "advanced": "Link thermodynamics and kinetics: catalysts lower activation energy and do not change equilibrium. Consider kcat/Km as a measure of catalytic efficiency, the effect of pH and temperature, and the role of cooperativity and feedback inhibition in controlling metabolic flux. Understand how misfolding and aggregation underlie diseases, and how folding stability is tuned by chaperones and quality control."
+      },
+      "commonMistakes": [
+        "Saying an enzyme 'uses up' during catalysis",
+        "Interpreting Km as binding constant without conditions",
+        "Mixing up what competitive and non-competitive inhibitors do to Km and Vmax",
+        "Forgetting that enzymes do not alter equilibrium"
+      ],
+      "animation": "michaelis-menten",
+      "videos": [
+        {
+          "youtubeId": "hok2hyED9go",
+          "title": "Protein Structure and Folding",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly look at how protein structure levels arise and what unfolding means."
+        },
+        {
+          "youtubeId": "7u2MkbsE_dw",
+          "title": "Steady states and the Michaelis Menten equation",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Derives the Michaelis-Menten equation from steady-state assumptions."
+        },
+        {
+          "youtubeId": "4eLjRcHnMCk",
+          "title": "Biochemistry | Michaelis-Menten Equation",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A longer lecture with worked examples of Vmax, Km and plots."
+        },
+        {
+          "youtubeId": "X_YXTWU2maY",
+          "title": "An introduction to enzyme kinetics",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A short introduction to how enzymes affect reaction rates."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.181.4096.223",
+          "title": "Principles that Govern the Folding of Protein Chains",
+          "authors": "Anfinsen CB",
+          "year": 1973,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Anfinsen's Nobel lecture summarising the experiments showing that the amino-acid sequence alone can specify a protein's fold. It is the cleanest example of how structure follows from sequence and why denaturation experiments are informative."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PDB-101",
+          "provider": "RCSB PDB",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Illustrated structure stories and 'Molecule of the Month' articles for connecting structure to function."
+        },
+        {
+          "title": "Biochemistry (5th ed.)",
+          "provider": "NCBI Bookshelf (Berg, Tymoczko, Stryer)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A classic full-text biochemistry textbook; excellent for metabolism, enzymes and signalling."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The central protein knowledgebase: function, domains, modifications and literature in one entry."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A competitive inhibitor changes enzyme kinetics by:",
+          "options": [
+            "Lowering Vmax with no change in Km",
+            "Raising apparent Km with no change in Vmax",
+            "Lowering both Km and Vmax",
+            "Raising Vmax"
+          ],
+          "answer": 1,
+          "explanation": "Because it competes with substrate, enough substrate can still reach Vmax, but a higher substrate concentration is needed to reach half of it."
+        },
+        {
+          "question": "What did Anfinsen's experiments on ribonuclease suggest?",
+          "options": [
+            "Folding needs a ribosome",
+            "The amino-acid sequence can specify the native 3D structure",
+            "Proteins never refold",
+            "Disulphide bonds are irrelevant"
+          ],
+          "answer": 1,
+          "explanation": "After denaturation and removal of the denaturant, active enzyme reformed, showing that sequence encodes structure."
+        },
+        {
+          "question": "Which statement about catalysts is correct?",
+          "options": [
+            "They shift the equilibrium toward products",
+            "They lower activation energy without changing equilibrium",
+            "They are consumed",
+            "They change delta G of the reaction"
+          ],
+          "answer": 1,
+          "explanation": "Enzymes accelerate both directions equally and do not alter delta G or the equilibrium position."
+        }
+      ]
+    },
+    {
+      "id": "energy-metabolism",
+      "title": "Bioenergetics and Core Metabolism",
+      "hours": 5,
+      "hook": "Cells run on a trick: couple an unfavourable reaction to a favourable one, and move electrons downhill to pump protons uphill. Once you see that logic, glycolysis, the TCA cycle and oxidative phosphorylation stop being a list and become one machine.",
+      "learningObjectives": [
+        "Explain how ATP hydrolysis and coupling drive unfavourable reactions",
+        "Trace the fate of glucose through glycolysis, the TCA cycle and oxidative phosphorylation",
+        "Account for ATP yield and the regulation of key steps",
+        "Explain chemiosmosis and how uncouplers and inhibitors act",
+        "Compare aerobic and anaerobic routes and fermentation",
+        "Place fatty acid and amino acid catabolism into the same framework"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Free energy and coupling",
+          "definition": "A reaction proceeds if the overall delta G is negative; coupling links a favourable reaction to an unfavourable one."
+        },
+        {
+          "term": "ATP as energy currency",
+          "definition": "ATP hydrolysis is used to drive many reactions, but the free energy depends on cellular concentrations, not only the standard value."
+        },
+        {
+          "term": "Glycolysis",
+          "definition": "Conversion of glucose to pyruvate in the cytosol, with net ATP and NADH production, regulated at hexokinase, phosphofructokinase-1 and pyruvate kinase."
+        },
+        {
+          "term": "TCA cycle",
+          "definition": "Oxidises acetyl-CoA to CO2 in the mitochondrial matrix, generating NADH, FADH2 and GTP/ATP."
+        },
+        {
+          "term": "Electron transport chain",
+          "definition": "Electrons move through membrane complexes to oxygen, pumping protons across the inner membrane."
+        },
+        {
+          "term": "Chemiosmosis",
+          "definition": "ATP synthase uses the proton-motive force created by electron transport to make ATP."
+        },
+        {
+          "term": "Uncoupler",
+          "definition": "A compound that dissipates the proton gradient so that respiration continues but less ATP is made, releasing heat."
+        },
+        {
+          "term": "Fermentation",
+          "definition": "Regenerates NAD+ in the absence of oxygen so that glycolysis can continue."
+        }
+      ],
+      "deeper": {
+        "beginner": "Glucose is oxidised stepwise. Glycolysis makes a little ATP and carries electrons on NADH; the TCA cycle strips more electrons; the electron transport chain uses them to pump protons; ATP synthase lets protons flow back and makes ATP. Oxygen is the final electron acceptor.",
+        "intermediate": "Connect regulation to need: high ATP and citrate inhibit phosphofructokinase-1, AMP activates it. Use the proton-motive force to explain why cyanide (blocks complex IV) and oligomycin (blocks ATP synthase) both stop respiration but by different mechanisms, and why an uncoupler increases oxygen consumption. Estimate ATP yield but know that the numbers are approximate, depending on the shuttle systems and the proton to ATP ratio.",
+        "advanced": "Place energetics in context: standard and actual free energy, the role of mitochondrial transporters and shuttles, tissue differences, and the importance of reactive oxygen species. Consider how regulation by energy charge, redox state and substrate supply integrates catabolism with biosynthesis. Link to disease: mitochondrial disorders, ischaemia and the Warburg effect in tumours."
+      },
+      "commonMistakes": [
+        "Quoting a single 'textbook' ATP number as exact",
+        "Saying oxygen is used in the TCA cycle directly",
+        "Confusing substrate-level phosphorylation with oxidative phosphorylation",
+        "Thinking uncouplers stop electron transport"
+      ],
+      "animation": "chemiosmosis",
+      "videos": [
+        {
+          "youtubeId": "VxCdheLvrx4",
+          "title": "Cellular Respiration Part 3: The Electron Transport Chain and Oxidative Phosphorylation",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A short summary of how the electron transport chain drives ATP synthesis."
+        },
+        {
+          "youtubeId": "y3fyL3Zvn3U",
+          "title": "Electron Transport Chain - ATP Synthase, Chemiosmosis, & Oxidative Phosphorylation",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "intermediate",
+          "whyWatch": "A step-by-step review of the complexes and proton pumping."
+        },
+        {
+          "youtubeId": "WO-YKeJF_zc",
+          "title": "Human Metabolism Map - Cellular Respiration (Glycolysis and The Krebs Cycle)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Hand-drawn map showing how glycolysis and the TCA cycle fit together."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/191144a0",
+          "title": "Coupling of Phosphorylation to Electron and Hydrogen Transfer by a Chemi-Osmotic type of Mechanism",
+          "authors": "Mitchell P",
+          "year": 1961,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The original proposal that a proton gradient across a membrane links electron transport to ATP synthesis. Even skimming the argument shows how a bold idea was built from simple physical-chemical reasoning."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biochemistry (5th ed.)",
+          "provider": "NCBI Bookshelf (Berg, Tymoczko, Stryer)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A classic full-text biochemistry textbook; excellent for metabolism, enzymes and signalling."
+        },
+        {
+          "title": "KEGG Pathway Database",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Interactive maps of metabolism and signalling; useful for seeing how pathways connect."
+        },
+        {
+          "title": "Biological Chemistry (LibreTexts)",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Biological_Chemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "Open textbooks on biochemistry and related topics for self-study."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the final electron acceptor in the mitochondrial electron transport chain?",
+          "options": [
+            "NAD+",
+            "Oxygen",
+            "Pyruvate",
+            "Carbon dioxide"
+          ],
+          "answer": 1,
+          "explanation": "Oxygen accepts electrons at complex IV and is reduced to water."
+        },
+        {
+          "question": "What would an uncoupler do?",
+          "options": [
+            "Block ATP synthase and stop oxygen consumption",
+            "Dissipate the proton gradient, increasing oxygen consumption and heat while decreasing ATP production",
+            "Increase ATP yield",
+            "Block glycolysis"
+          ],
+          "answer": 1,
+          "explanation": "Uncouplers let protons leak back, so electron transport speeds up but ATP synthase has less driving force."
+        },
+        {
+          "question": "Which enzyme is a key control point of glycolysis?",
+          "options": [
+            "Phosphofructokinase-1",
+            "Citrate synthase only",
+            "ATP synthase",
+            "Catalase"
+          ],
+          "answer": 0,
+          "explanation": "PFK-1 is allosterically controlled by ATP, AMP and citrate among others."
+        }
+      ]
+    },
+    {
+      "id": "metabolic-integration",
+      "title": "Whole-Body Metabolic Integration and Diabetes",
+      "hours": 5,
+      "hook": "Between meals your liver quietly keeps your brain supplied with glucose, then after meals it stores the surplus. Insulin and glucagon coordinate organs that never touch each other. When that coordination fails, the result is diabetes: an integration problem as much as a single-enzyme problem.",
+      "learningObjectives": [
+        "Compare metabolism in the fed, fasting and prolonged-fasting states",
+        "Explain the roles of liver, muscle, adipose tissue and brain in fuel metabolism",
+        "Describe insulin and glucagon signalling and their effects on key enzymes",
+        "Explain gluconeogenesis, glycogen metabolism, lipolysis and ketogenesis in context",
+        "Explain how insulin resistance and insulin deficiency lead to hyperglycaemia",
+        "Predict metabolic consequences of a hormone, enzyme or transporter defect"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fed state",
+          "definition": "After a meal, insulin rises, promoting glucose uptake, glycogen and lipid synthesis."
+        },
+        {
+          "term": "Fasting state",
+          "definition": "Glucagon and low insulin promote liver glycogen breakdown, gluconeogenesis and release of fatty acids from adipose tissue."
+        },
+        {
+          "term": "Gluconeogenesis",
+          "definition": "Synthesis of glucose from non-carbohydrate precursors such as lactate, amino acids and glycerol, mainly in the liver."
+        },
+        {
+          "term": "Ketone bodies",
+          "definition": "Fatty-acid-derived fuels made by the liver during prolonged fasting that the brain and other tissues can use."
+        },
+        {
+          "term": "Cori and glucose-alanine cycles",
+          "definition": "Pathways that return carbon from muscle lactate or alanine to the liver for glucose synthesis."
+        },
+        {
+          "term": "Insulin signalling",
+          "definition": "Insulin binds a receptor tyrosine kinase, activating pathways such as PI3K-Akt that promote GLUT4 translocation in muscle and fat and alter enzyme activity."
+        },
+        {
+          "term": "Insulin resistance",
+          "definition": "Reduced response of tissues to insulin, requiring more hormone to achieve the same effect."
+        },
+        {
+          "term": "Hormone-sensitive control",
+          "definition": "Hormones act through phosphorylation and gene expression to switch key enzymes on or off."
+        }
+      ],
+      "deeper": {
+        "beginner": "After eating, blood glucose rises and insulin tells the liver, muscle and fat to store fuel. Between meals, insulin falls, glucagon rises and the liver releases glucose from glycogen and then makes new glucose. In long fasts, fat breakdown provides fatty acids and ketone bodies so that the body spares protein and the brain can use alternative fuel.",
+        "intermediate": "Use a diagram with four organs and arrows for each state. Include regulation: insulin activates glycogen synthase and inhibits gluconeogenic enzymes via covalent modification and gene expression; glucagon acts through cAMP and PKA. Apply to cases: in type 1 diabetes, absent insulin leads to unrestrained lipolysis and ketogenesis; in type 2 diabetes, insulin resistance and relative insulin deficiency lead to hyperglycaemia with usually less severe ketosis.",
+        "advanced": "Integrate substrate cycling, allosteric control (for example fructose-2,6-bisphosphate) and tissue-specific isoforms (hexokinase vs glucokinase, GLUT isoforms). Consider mechanisms of insulin resistance involving lipid intermediates and inflammation, the role of the pancreatic beta cell, and drug targets such as metformin, SGLT2 inhibitors, GLP-1 receptor agonists and insulin analogues. In an exam, move from molecule to patient: state the pathway change, the tissue and the physiological outcome."
+      },
+      "commonMistakes": [
+        "Treating tissues as if all had the same enzymes (liver vs muscle glycogen, for example)",
+        "Forgetting that the brain normally depends on glucose and only adapts to ketone bodies gradually",
+        "Confusing type 1 and type 2 diabetes mechanisms",
+        "Stating that fatty acids can be converted to glucose in humans"
+      ],
+      "videos": [
+        {
+          "youtubeId": "_Arg55jfC5E",
+          "title": "What happens to your body after eating a meal? | Metabolism",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "A clear walk through insulin-driven storage after a meal."
+        },
+        {
+          "youtubeId": "eRDnzU8M-vA",
+          "title": "Fed vs Fasting Metabolism",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A longer lecture that follows organs and pathways in fed and fasting states."
+        },
+        {
+          "youtubeId": "ZEm8cxKaas8",
+          "title": "Fed State",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A hand-drawn map of the fed state across tissues."
+        },
+        {
+          "youtubeId": "W0KPwTy0W9k",
+          "title": "Diabetes Type II Pathophysiology",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Explains insulin resistance and its metabolic consequences."
+        },
+        {
+          "youtubeId": "DHGxAvqT6tg",
+          "title": "Fasting - What does it do to your body?",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "Describes metabolic changes during fasting in plain language."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.nutr.26.061505.111258",
+          "title": "Fuel Metabolism in Starvation",
+          "authors": "Cahill GF",
+          "year": 2006,
+          "journal": "Annual Review of Nutrition",
+          "level": "intermediate",
+          "whyItMatters": "A classic review of how the human body shifts from glucose to fat and ketone use during prolonged fasting. It ties together liver, muscle, adipose tissue and brain in one story, which is exactly the integration skill examiners look for."
+        },
+        {
+          "doi": "10.1152/physrev.00063.2017",
+          "title": "Mechanisms of Insulin Action and Insulin Resistance",
+          "authors": "Petersen MC, Shulman GI",
+          "year": 2018,
+          "journal": "Physiological Reviews",
+          "level": "advanced",
+          "whyItMatters": "A comprehensive review of how insulin signals to liver, muscle and fat, and how lipid-driven defects can blunt that signal. A good bridge from textbook signalling to the biochemistry of type 2 diabetes."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biochemistry (5th ed.)",
+          "provider": "NCBI Bookshelf (Berg, Tymoczko, Stryer)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A classic full-text biochemistry textbook; excellent for metabolism, enzymes and signalling."
+        },
+        {
+          "title": "KEGG Pathway Database",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Interactive maps of metabolism and signalling; useful for seeing how pathways connect."
+        },
+        {
+          "title": "Reactome Pathway Knowledgebase",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Curated, peer-reviewed pathway diagrams with links to the underlying literature."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "During a short overnight fast, which process mainly maintains blood glucose?",
+          "options": [
+            "Fatty acid conversion to glucose",
+            "Liver glycogenolysis, followed by gluconeogenesis",
+            "Muscle glycogen releasing glucose directly into blood",
+            "Protein synthesis"
+          ],
+          "answer": 1,
+          "explanation": "The liver releases glucose from glycogen first, then begins gluconeogenesis; muscle lacks glucose-6-phosphatase and cannot export glucose."
+        },
+        {
+          "question": "Which is typical of type 2 diabetes?",
+          "options": [
+            "Complete absence of insulin from birth",
+            "Insulin resistance with inadequate compensation by beta cells",
+            "Autoimmune destruction of all beta cells only",
+            "Excess insulin secretion with low glucose"
+          ],
+          "answer": 1,
+          "explanation": "Type 2 diabetes involves reduced insulin responsiveness and insufficient insulin secretion to overcome it."
+        },
+        {
+          "question": "What do ketone bodies allow during prolonged fasting?",
+          "options": [
+            "Fat to be converted into glucose",
+            "The brain to use a fuel other than glucose, reducing protein breakdown",
+            "Glycogen synthesis in muscle",
+            "A rise in insulin"
+          ],
+          "answer": 1,
+          "explanation": "Ketones derived from fatty acids provide fuel for the brain and reduce the need for gluconeogenesis from muscle protein."
+        }
+      ]
+    },
+    {
+      "id": "regulation-signalling",
+      "title": "Regulation and Signalling: Operons, Receptors and Cascades",
+      "hours": 5,
+      "hook": "Cells are not bags of enzymes running at fixed speed; they sense, decide and adjust. From the lac operon in a bacterium to insulin receptors in a human, the logic is the same: detect a signal, change an activity, produce a response and switch off again.",
+      "learningObjectives": [
+        "Explain regulation of the lac operon by lactose and glucose",
+        "Describe the main classes of receptors and how they transmit signals",
+        "Explain second messengers and phosphorylation cascades",
+        "Describe how signals are terminated and amplified",
+        "Relate gene regulation to signalling and to development",
+        "Predict the effect of mutations in a signalling component"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Operon",
+          "definition": "A prokaryotic cluster of genes under one promoter and regulated together."
+        },
+        {
+          "term": "Repressor and inducer",
+          "definition": "A repressor binds DNA to block transcription; an inducer binds the repressor and releases it."
+        },
+        {
+          "term": "Catabolite repression",
+          "definition": "When glucose is available, low cAMP means CAP is inactive and lac genes are expressed poorly even if lactose is present."
+        },
+        {
+          "term": "GPCR",
+          "definition": "A receptor that activates heterotrimeric G proteins and downstream effectors such as adenylyl cyclase."
+        },
+        {
+          "term": "Receptor tyrosine kinase",
+          "definition": "A receptor that dimerises and autophosphorylates upon ligand binding, recruiting signalling proteins."
+        },
+        {
+          "term": "Second messenger",
+          "definition": "A small molecule such as cAMP, Ca2+ or IP3/DAG that spreads the signal inside the cell."
+        },
+        {
+          "term": "Kinase cascade",
+          "definition": "A series of phosphorylation steps (for example MAP kinase) that amplifies and modulates a signal."
+        },
+        {
+          "term": "Signal termination",
+          "definition": "Phosphatases, GTPase activity, receptor internalisation and second-messenger breakdown switch signals off."
+        }
+      ],
+      "deeper": {
+        "beginner": "The lac operon turns on only when lactose is present and glucose is low. Signalling in eukaryotes uses receptors at the cell surface that switch on internal messengers. Each step can amplify the signal, and each can be switched off.",
+        "intermediate": "Compare logic: lac operon is a transcriptional switch with two inputs (inducer and cAMP-CAP); GPCR signalling uses G proteins, cAMP and PKA; RTK signalling uses Ras and kinase cascades. Predict the effect of mutations: a repressor that cannot bind the inducer gives constitutive repression; a G protein unable to hydrolyse GTP gives constitutive activation. Draw both systems side by side.",
+        "advanced": "Consider network features: feedback, crosstalk, thresholds and ultrasensitivity, scaffold proteins and spatial organisation. Understand how oncogenic mutations or toxins (for example cholera toxin altering Gs) change signalling, and how drugs target kinases, receptors or second-messenger enzymes. Link signalling to gene expression via transcription factor activation."
+      },
+      "commonMistakes": [
+        "Believing that a repressor mutant that cannot bind DNA gives a repressed operon",
+        "Forgetting catabolite repression in the lac operon",
+        "Assuming all receptors work through G proteins",
+        "Overlooking signal termination"
+      ],
+      "animation": "lac-operon",
+      "videos": [
+        {
+          "youtubeId": "J9jhg90A7Lw",
+          "title": "Regulation of Gene Expression: Operons, Epigenetics, and Transcription Factors",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Overview of the lac operon and eukaryotic regulation."
+        },
+        {
+          "youtubeId": "-dbRterutHY",
+          "title": "Intro to Cell Signaling",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly introduction to signal reception, transduction and response."
+        },
+        {
+          "youtubeId": "VatdTJka3_M",
+          "title": "Receptors: Signal Transduction and Phosphorylation Cascade",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Explains receptors and phosphorylation cascades."
+        },
+        {
+          "youtubeId": "9sF_h-bAnIE",
+          "title": "Common cell signaling pathway",
+          "channel": "Osmosis from Elsevier",
+          "level": "intermediate",
+          "whyWatch": "Walks through GPCR and kinase-based pathways with examples."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/S0022-2836(61)80072-7",
+          "title": "Genetic regulatory mechanisms in the synthesis of proteins",
+          "authors": "Jacob F, Monod J",
+          "year": 1961,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "The paper that proposed the operon, repressors and messenger RNA in one framework. Read the logic of the mutant experiments to see how genetics was used to infer a regulatory circuit before the molecules were purified."
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Cell: A Molecular Approach (2nd ed.)",
+          "provider": "NCBI Bookshelf (Cooper)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable free text that is good for signalling, the cell cycle and cancer."
+        },
+        {
+          "title": "Reactome Pathway Knowledgebase",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Curated, peer-reviewed pathway diagrams with links to the underlying literature."
+        },
+        {
+          "title": "STRING",
+          "provider": "STRING Consortium",
+          "type": "tool",
+          "url": "https://string-db.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Explore protein-protein interaction networks to see how one protein sits in a larger system."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In the lac operon, when are the lac genes expressed most strongly?",
+          "options": [
+            "Lactose absent, glucose present",
+            "Lactose present, glucose absent",
+            "Both absent",
+            "Both present"
+          ],
+          "answer": 1,
+          "explanation": "Lactose (allolactose) inactivates the repressor, and low glucose gives high cAMP so CAP promotes transcription."
+        },
+        {
+          "question": "A G protein that cannot hydrolyse GTP would lead to:",
+          "options": [
+            "Reduced signalling",
+            "Prolonged activation of its effector",
+            "No change",
+            "Receptor degradation"
+          ],
+          "answer": 1,
+          "explanation": "GTP hydrolysis switches the G protein off; blocking it keeps the signal on."
+        },
+        {
+          "question": "What is the main purpose of a kinase cascade?",
+          "options": [
+            "To store energy",
+            "To amplify and regulate a signal",
+            "To replicate DNA",
+            "To transport glucose"
+          ],
+          "answer": 1,
+          "explanation": "Each activated kinase can activate many substrates, amplifying the signal and giving multiple points of control."
+        }
+      ]
+    },
+    {
+      "id": "cell-cycle-cancer",
+      "title": "The Cell Cycle, Cancer and Disease Mechanisms",
+      "hours": 5,
+      "hook": "Cancer is not one disease but a recurring set of failures in control: growth signals that never switch off, brakes that stop working and a repair system that has lost track. Seen this way, the whole of cell biology becomes a diagnostic tool.",
+      "learningObjectives": [
+        "Describe the cell cycle and its checkpoints with cyclins and CDKs",
+        "Distinguish oncogenes from tumour-suppressor genes with examples",
+        "Explain the role of p53 and Rb in cell-cycle control",
+        "Relate DNA damage and repair to mutation and cancer",
+        "Use the hallmarks of cancer to organise explanations",
+        "Evaluate the principle behind targeted therapies"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Cell cycle",
+          "definition": "G1, S, G2 and M phases, with checkpoints that ensure DNA is intact and replicated before division."
+        },
+        {
+          "term": "Cyclin-CDK",
+          "definition": "Cyclin-dependent kinases are activated by cyclins to drive progression through the cycle."
+        },
+        {
+          "term": "Oncogene",
+          "definition": "A gain-of-function version of a growth-promoting gene (for example mutant RAS)."
+        },
+        {
+          "term": "Tumour suppressor",
+          "definition": "A gene whose loss of function promotes cancer (for example TP53, RB1)."
+        },
+        {
+          "term": "Knudson two-hit model",
+          "definition": "Both alleles of a tumour-suppressor gene generally need to be inactivated for cancer to develop; one may be inherited."
+        },
+        {
+          "term": "p53",
+          "definition": "A transcription factor activated by DNA damage that causes cell-cycle arrest, repair or apoptosis."
+        },
+        {
+          "term": "Hallmarks of cancer",
+          "definition": "A framework of acquired capabilities such as sustained proliferative signalling, evasion of growth suppressors and resisting cell death."
+        },
+        {
+          "term": "Targeted therapy",
+          "definition": "A drug designed against a molecular defect in the tumour, such as a kinase inhibitor."
+        }
+      ],
+      "deeper": {
+        "beginner": "Normal cells divide only when told to, and check their DNA before they do. Cancer cells acquire changes that push the accelerator (oncogenes) and cut the brakes (tumour suppressors). Several changes accumulate over time.",
+        "intermediate": "Use examples: a hyperactive RAS keeps growth signalling on; loss of p53 allows damaged cells to proceed; Rb normally restrains the G1/S transition. Link to DNA repair: defects in mismatch repair or BRCA genes increase mutation rate. Then use the hallmarks as a checklist to explain how a given tumour might grow, evade death and spread.",
+        "advanced": "Think about evolution within a tumour: heterogeneity, selection and resistance to drugs. Consider epigenetic and metabolic changes, the microenvironment and immune evasion. Evaluate therapies by mechanism and biomarker: kinase inhibitors against BCR-ABL, receptor-targeting antibodies, PARP inhibitors exploiting synthetic lethality in BRCA-deficient cells and checkpoint inhibitors. Be clear about what each approach assumes."
+      },
+      "commonMistakes": [
+        "Saying all cancers are caused by a single gene",
+        "Treating p53 as only a gene that is 'bad' rather than a guardian of the genome",
+        "Confusing oncogene (dominant, gain of function) with tumour suppressor (recessive, loss of function)",
+        "Assuming mutation alone explains all aspects of cancer"
+      ],
+      "videos": [
+        {
+          "youtubeId": "1mo80kTZgW4",
+          "title": "Oncogenetics - Mechanism of Cancer (tumor suppressor genes and oncogenes)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A drawn overview of oncogenes, tumour suppressors and the steps of carcinogenesis."
+        },
+        {
+          "youtubeId": "lSyU9xMRZNU",
+          "title": "Hallmarks of Cancer | Pathophysiology",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "Explains the hallmarks framework with clear examples."
+        },
+        {
+          "youtubeId": "e0lNk-2Il_M",
+          "title": "Cell Cycle and Cancer: Phases, Hallmarks, and Development",
+          "channel": "AMBOSS: Medical Knowledge Distilled",
+          "level": "intermediate",
+          "whyWatch": "Links checkpoints to cancer development."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2011.02.013",
+          "title": "Hallmarks of Cancer: The Next Generation",
+          "authors": "Hanahan D, Weinberg RA",
+          "year": 2011,
+          "journal": "Cell",
+          "level": "intermediate",
+          "whyItMatters": "The widely cited framework that reduces the bewildering variety of cancers to a handful of shared acquired capabilities. It is the unifying thread for oncogenes, tumour suppressors, metabolism and the immune system.",
+          "openAccessUrl": "https://doi.org/10.1016/j.cell.2011.02.013"
+        },
+        {
+          "doi": "10.1158/2159-8290.CD-21-1059",
+          "title": "Hallmarks of Cancer: New Dimensions",
+          "authors": "Hanahan D",
+          "year": 2022,
+          "journal": "Cancer Discovery",
+          "level": "intermediate",
+          "whyItMatters": "An updated map of the capabilities tumours acquire, from sustained growth signalling to evading immunity. A good scaffold for organising any cancer question in an exam.",
+          "openAccessUrl": "https://infoscience.epfl.ch/handle/20.500.14299/185394"
+        }
+      ],
+      "resources": [
+        {
+          "title": "The Cell: A Molecular Approach (2nd ed.)",
+          "provider": "NCBI Bookshelf (Cooper)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable free text that is good for signalling, the cell cycle and cancer."
+        },
+        {
+          "title": "Molecular Biology of the Cell (4th ed.)",
+          "provider": "NCBI Bookshelf (Alberts et al.)",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A full free textbook of cell and molecular biology to revise any topic in depth."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement best describes an oncogene?",
+          "options": [
+            "A loss-of-function mutation in a growth-restraining gene",
+            "A gain-of-function version of a gene that promotes proliferation",
+            "A gene that repairs DNA",
+            "A gene that only exists in viruses"
+          ],
+          "answer": 1,
+          "explanation": "Oncogenes are activated forms of normal proto-oncogenes, typically acting dominantly."
+        },
+        {
+          "question": "What is a main role of p53 after DNA damage?",
+          "options": [
+            "To replicate DNA faster",
+            "To trigger arrest, repair or apoptosis",
+            "To translate mRNA",
+            "To degrade lipids"
+          ],
+          "answer": 1,
+          "explanation": "p53 acts as a transcription factor that controls responses to damage."
+        },
+        {
+          "question": "A person inherits one defective copy of a tumour-suppressor gene. Why does cancer risk rise?",
+          "options": [
+            "The gene turns into an oncogene",
+            "Only one further hit is needed to lose both functional copies in a cell",
+            "The defective copy is dominant negative always",
+            "It increases the mutation rate of every gene by itself"
+          ],
+          "answer": 1,
+          "explanation": "The inherited defect is the first hit; a second somatic event removes the remaining good copy."
+        }
+      ]
+    },
+    {
+      "id": "techniques-data",
+      "title": "Techniques and Data Interpretation",
+      "hours": 5,
+      "hook": "Examiners love a figure you have not seen. A gel with an odd band, a growth curve that plateaus early, a Western blot with a missing control. The skill is to ask what technique produced it, what it can measure and what it cannot.",
+      "learningObjectives": [
+        "Explain the principles of PCR, electrophoresis, blotting, cloning, sequencing and CRISPR editing",
+        "Choose a technique for a given question and justify the controls",
+        "Interpret gel, blot, graph and table data",
+        "Identify artefacts and limitations of common methods",
+        "Link results to hypotheses and propose follow-up experiments",
+        "Relate techniques across courses (molecular biology, protein biochemistry, genomics)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "PCR",
+          "definition": "Repeated cycles of denaturation, annealing and extension with a heat-stable DNA polymerase to amplify a defined DNA segment."
+        },
+        {
+          "term": "Gel electrophoresis",
+          "definition": "Separates molecules by size (and charge) in an electric field; compare with markers."
+        },
+        {
+          "term": "Western blot",
+          "definition": "Detects a specific protein on a membrane using an antibody after gel separation; needs a loading control."
+        },
+        {
+          "term": "Recombinant DNA",
+          "definition": "Cutting and joining DNA fragments, for example in plasmids, to express or study genes."
+        },
+        {
+          "term": "CRISPR-Cas9",
+          "definition": "An RNA-guided nuclease that cuts DNA at a chosen site, used for genome editing."
+        },
+        {
+          "term": "Loading control",
+          "definition": "A protein expected to be constant (for example a housekeeping protein) used to check equal sample loading."
+        },
+        {
+          "term": "Specificity and sensitivity",
+          "definition": "How well a method detects only the intended target and how low a level it can detect."
+        },
+        {
+          "term": "Artefact",
+          "definition": "A signal produced by the method rather than the biology."
+        }
+      ],
+      "deeper": {
+        "beginner": "For each technique, ask: what is separated or amplified, how is it detected and what would a control look like? In PCR, the product size reveals the amplified region, and a no-template control checks contamination. In a Western blot, equal loading is checked with a loading control. Always check labelled axes and units on graphs.",
+        "intermediate": "Practise reading data: if a band is absent in one lane, consider no protein, no loading, failed transfer or antibody problem, and use the controls to decide. For a growth curve, identify lag, log and stationary phases. For a dose-response, estimate EC50 or IC50 and ask whether replicates and error bars are shown. Propose a next experiment that distinguishes the competing explanations.",
+        "advanced": "Understand limitations: PCR bias and contamination, antibody specificity, off-target CRISPR cuts and the difference between knock-out and knock-down. Consider quantitative PCR normalisation, statistical analysis and the choice between in vitro and in vivo systems. Design a decisive experiment: for example, rescue by re-expressing the gene to show that a phenotype is caused by the loss of that gene."
+      },
+      "commonMistakes": [
+        "Interpreting a missing band as proof that the protein is absent without controls",
+        "Forgetting a no-template control in PCR",
+        "Reading logarithmic axes as linear",
+        "Assuming CRISPR edits only the intended site"
+      ],
+      "animation": "pcr-cycles",
+      "videos": [
+        {
+          "youtubeId": "a5jmdh9AnS4",
+          "title": "PCR (Polymerase Chain Reaction)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A clear animated explanation of each PCR step."
+        },
+        {
+          "youtubeId": "qT_AqI-MKJc",
+          "title": "Western Blot / Protein Immunoblot explained",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Walks through how a Western blot works and what the bands mean."
+        },
+        {
+          "youtubeId": "IiPL5HgPehs",
+          "title": "CRISPR-Cas9 Genome Editing Technology",
+          "channel": "Professor Dave Explains",
+          "level": "intermediate",
+          "whyWatch": "Explains how CRISPR-Cas9 finds and cuts DNA."
+        },
+        {
+          "youtubeId": "PNLHGUmkVEM",
+          "title": "Do you struggle on GRAPH EXAM QUESTIONS? Modelled answers & tips in this question walk-through",
+          "channel": "Miss Estruch Biology",
+          "level": "beginner",
+          "whyWatch": "Shows how to describe and interpret graph data in an exam."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.1225829",
+          "title": "A Programmable Dual-RNA-Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+          "authors": "Jinek M, Chylinski K, Fonfara I et al",
+          "year": 2012,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The in vitro study showing that Cas9, guided by an RNA, cuts DNA at a chosen site, and that the guide can be simplified to a single RNA. It is the origin of CRISPR genome editing and a model of mechanism-driven biochemistry."
+        },
+        {
+          "doi": "10.1126/science.1258096",
+          "title": "The new frontier of genome engineering with CRISPR-Cas9",
+          "authors": "Doudna JA, Charpentier E",
+          "year": 2014,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A review by two of the discoverers on how CRISPR-Cas9 works and what it can be used for. It is a good place to connect the mechanism to applications and ethical questions."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Gene Expression Omnibus (GEO)",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/geo/",
+          "free": true,
+          "level": "advanced",
+          "note": "Public repository of functional genomics datasets; practise re-analysing real data and see how data sharing works."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The central protein knowledgebase: function, domains, modifications and literature in one entry."
+        },
+        {
+          "title": "PDB-101",
+          "provider": "RCSB PDB",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Illustrated structure stories and 'Molecule of the Month' articles for connecting structure to function."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A PCR gives a band in the sample lane and also in the no-template control. What does this suggest?",
+          "options": [
+            "The reaction worked perfectly",
+            "Contamination with template or product",
+            "The primers are unnecessary",
+            "The gel is too long"
+          ],
+          "answer": 1,
+          "explanation": "A band without template means something amplifiable got into the reaction."
+        },
+        {
+          "question": "Why use a loading control in a Western blot?",
+          "options": [
+            "To increase signal",
+            "To check that equal amounts of protein were loaded and transferred",
+            "To reduce the size of the gel",
+            "To label the marker"
+          ],
+          "answer": 1,
+          "explanation": "Differences in band intensity are only interpretable if loading is equal."
+        },
+        {
+          "question": "What does the guide RNA do in CRISPR-Cas9?",
+          "options": [
+            "It cuts DNA",
+            "It directs Cas9 to a matching DNA sequence",
+            "It repairs the break",
+            "It translates mRNA"
+          ],
+          "answer": 1,
+          "explanation": "The guide RNA base-pairs with the target DNA and positions Cas9 to cut it."
+        }
+      ]
+    },
+    {
+      "id": "critical-evaluation-society",
+      "title": "Evaluating Evidence, and Biochemistry in Society",
+      "hours": 4,
+      "hook": "The final skill is judgement. Is this claim supported? Is this therapy ready? Should we edit this gene? Answers rarely sit in a single chapter, so you draw on evidence, mechanism and ethics together and say clearly where they stop.",
+      "learningObjectives": [
+        "Evaluate a scientific claim by examining design, controls, statistics and consistency",
+        "Explain reasons for irreproducibility and how good practice addresses them",
+        "Discuss ethical, legal and social issues of genetic technologies",
+        "Compare risks and benefits using evidence",
+        "Communicate a balanced position in a structured essay",
+        "Reflect on your own learning across the degree"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Reproducibility",
+          "definition": "The ability to obtain consistent results using the same data or methods; a cornerstone of trust."
+        },
+        {
+          "term": "Bias",
+          "definition": "Systematic error from design, selection, measurement or reporting."
+        },
+        {
+          "term": "Correlation vs causation",
+          "definition": "Association does not by itself show that one factor causes another."
+        },
+        {
+          "term": "Dual use",
+          "definition": "Research with legitimate benefits that could also be misused."
+        },
+        {
+          "term": "Germline vs somatic editing",
+          "definition": "Germline changes can be inherited; somatic changes affect only the treated individual."
+        },
+        {
+          "term": "Precautionary principle",
+          "definition": "Caution when potential harm is serious and evidence is uncertain."
+        },
+        {
+          "term": "Informed consent and equity",
+          "definition": "Respect for participants and fair access to benefits of research."
+        }
+      ],
+      "deeper": {
+        "beginner": "Ask of any claim: what was measured, compared with what, how many samples, and could chance or bias explain it? For questions about technology and society, list benefits, harms and who is affected, then give your own conclusion with reasons.",
+        "intermediate": "Use a framework: scientific validity, benefit and risk, consent and fairness. For gene editing, distinguish treating somatic disease in consenting patients from heritable changes, and discuss safety, off-target effects, access and governance. Support your position with specific facts and acknowledge opposing arguments.",
+        "advanced": "Engage with current issues: reproducibility in preclinical research, open data and preregistration, genomic data privacy and sharing in low- and middle-income countries, and regulation of new biotechnologies. Evaluate how scientific uncertainty should shape policy and how to communicate it to the public without exaggeration or false balance."
+      },
+      "commonMistakes": [
+        "Giving a one-sided essay on an ethical issue",
+        "Citing a single study as settled fact",
+        "Confusing what is technically possible with what is ethically acceptable",
+        "Ignoring who bears the risks and who gets the benefits"
+      ],
+      "videos": [
+        {
+          "youtubeId": "42QuXLucH3Q",
+          "title": "Is Most Published Research Wrong?",
+          "channel": "Veritasium",
+          "level": "beginner",
+          "whyWatch": "A popular account of bias, p-hacking and replication problems in science."
+        },
+        {
+          "youtubeId": "8Ijr1ccYPtI",
+          "title": "The ethics of CRISPR gene editing with Jennifer Doudna",
+          "channel": "UC Berkeley",
+          "level": "beginner",
+          "whyWatch": "A co-discoverer of CRISPR discusses ethical issues in genome editing."
+        },
+        {
+          "youtubeId": "sXFs18hDyQQ",
+          "title": "Ethics of editing: Is genetic engineering worth the risk?",
+          "channel": "Doha Debates",
+          "level": "intermediate",
+          "whyWatch": "A structured debate presenting several sides of gene editing."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pmed.0020124",
+          "title": "Why Most Published Research Findings Are False",
+          "authors": "Ioannidis JPA",
+          "year": 2005,
+          "journal": "PLoS Medicine",
+          "level": "advanced",
+          "whyItMatters": "A provocative argument that small studies, flexible analyses and a bias to publish positive results make many 'significant' findings unreliable. Whether or not you accept the strong claim, it gives you a checklist of reasons to doubt a result.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pmed.0020124"
+        },
+        {
+          "doi": "10.1038/533452a",
+          "title": "1,500 scientists lift the lid on reproducibility",
+          "authors": "Baker M",
+          "year": 2016,
+          "journal": "Nature",
+          "level": "beginner",
+          "whyItMatters": "A survey report showing that most researchers have failed to reproduce someone else's experiment, and many have failed to reproduce their own. It makes the case for careful records better than any lecture."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Writing Center Tips and Tools",
+          "provider": "UNC Writing Center",
+          "type": "tutorial",
+          "url": "https://writingcenter.unc.edu/tips-and-tools/",
+          "free": true,
+          "level": "beginner",
+          "note": "A large set of free handouts on argument, structure, editing and citation, written for students."
+        },
+        {
+          "title": "Points of Significance (Statistics for Biologists)",
+          "provider": "Nature Methods / Nature Collections",
+          "type": "reference",
+          "url": "https://www.nature.com/collections/qghhqm",
+          "free": true,
+          "level": "intermediate",
+          "note": "A series of concise columns on the statistics biologists actually use, written with clear figures."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why is correlation insufficient to show causation?",
+          "options": [
+            "Correlation is always false",
+            "A third factor or reverse causation could explain the association",
+            "Correlation cannot be measured",
+            "Causation does not exist"
+          ],
+          "answer": 1,
+          "explanation": "Confounding and reverse causation can produce associations without a direct causal link."
+        },
+        {
+          "question": "What distinguishes germline from somatic gene editing?",
+          "options": [
+            "Only germline uses CRISPR",
+            "Germline edits can be inherited by future generations",
+            "Somatic edits are not possible",
+            "There is no difference"
+          ],
+          "answer": 1,
+          "explanation": "Germline editing alters cells that pass changes to offspring, which raises additional ethical concerns."
+        },
+        {
+          "question": "A well-structured balanced essay on a controversial technology should:",
+          "options": [
+            "Ignore opposing views",
+            "Present evidence and arguments from several perspectives before reaching a justified conclusion",
+            "Only list facts",
+            "Avoid conclusions"
+          ],
+          "answer": 1,
+          "explanation": "Balanced evaluation shows understanding of the issue and defends a position with reasons."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "wJyUtbn0O5Y",
+      "title": "The Inner Life of the Cell Animation",
+      "channel": "XVIVO Scientific Animation",
+      "level": "beginner",
+      "whyWatch": "A famous animation that shows how many processes you have studied happen together in one cell."
+    },
+    {
+      "youtubeId": "6gUY5NoX1Lk",
+      "title": "DNA replication and RNA transcription and translation",
+      "channel": "Khan Academy",
+      "level": "beginner",
+      "whyWatch": "A compact revision of the flow of genetic information that underlies much of the paper."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (5th ed.)",
+      "provider": "NCBI Bookshelf (Berg, Tymoczko, Stryer)",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic full-text biochemistry textbook; excellent for metabolism, enzymes and signalling."
+    },
+    {
+      "title": "Molecular Biology of the Cell (4th ed.)",
+      "provider": "NCBI Bookshelf (Alberts et al.)",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21054/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A full free textbook of cell and molecular biology to revise any topic in depth."
+    },
+    {
+      "title": "The Cell: A Molecular Approach (2nd ed.)",
+      "provider": "NCBI Bookshelf (Cooper)",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9839/",
+      "free": true,
+      "level": "beginner",
+      "note": "A readable free text that is good for signalling, the cell cycle and cancer."
+    },
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A free, peer-reviewed college biology book that is useful for quick revision of fundamentals."
+    }
+  ]
+}

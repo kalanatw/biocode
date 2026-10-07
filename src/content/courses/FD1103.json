@@ -1,0 +1,1582 @@
+{
+  "code": "FD 1103",
+  "title": "Mathematics & Statistics for Biologists",
+  "level": 1,
+  "semester": 2,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "The logs, rates and statistical reasoning that turn lab measurements into trustworthy conclusions.",
+  "overview": "The content follows a standard first-year mathematics-and-statistics course for life scientists, with every example drawn from biochemistry and molecular biology. The first third covers the mathematics that appears in Level 3 equations (functions, logarithms and exponentials, derivatives as rates, integrals and simple differential equations such as first-order decay and growth). The rest builds statistical thinking from the ground up: describing data and drawing honest figures, probability and distributions, sampling and confidence intervals, hypothesis tests and their pitfalls, comparing several groups, and finally correlation, regression and calibration curves.",
+  "whyItMatters": "Enzyme kinetics, pH, binding curves, growth curves, qPCR and every Level 3 practical report ask you to use logarithms, rates and statistical tests correctly. A student who can plot a standard curve, choose the right test and say what a p-value does not mean will write better reports, and will be better equipped to judge published results and to design a research project in Level 4.",
+  "prerequisites": [],
+  "careerLinks": [
+    "Biostatistics and bioinformatics",
+    "Clinical trials and epidemiology",
+    "Quantitative research in molecular and cell biology",
+    "Quality control and regulatory science in pharmaceuticals and food",
+    "Data analysis and science policy roles"
+  ],
+  "studyTips": [
+    "Do the arithmetic by hand once (a mean, a standard deviation, a t statistic on five numbers), then let software do it afterwards; you will recognise nonsense output much faster.",
+    "For every test you meet, write down: the question it answers, its null hypothesis, its assumptions, and what you would use instead if the assumptions fail.",
+    "Always plot your data before computing anything; most statistical blunders are visible in a scatter or dot plot.",
+    "Use real data from the practicals you do: your own absorbance readings and colony counts make the ideas stick much more than textbook examples."
+  ],
+  "units": [
+    {
+      "id": "functions-logs-exponentials",
+      "title": "Functions, Logarithms and Exponentials",
+      "hours": 5,
+      "hook": "pH, decibels, the Richter scale and bacterial growth curves are all logarithmic, because nature's quantities often change by multiples rather than by steps. A biologist who is comfortable with logarithms reads a growth curve, a dose-response plot and a gene-expression fold-change at a glance.",
+      "learningObjectives": [
+        "Interpret and sketch linear, power, exponential and logarithmic functions and read their parameters from graphs.",
+        "Use the laws of exponents and logarithms to simplify and solve equations.",
+        "Convert between log10, ln and log2, and use them with pH, dilution factors and fold-changes.",
+        "Choose between linear, semi-log and log-log plots, and read straight-line behaviour from them.",
+        "Handle units, scientific notation and significant figures correctly in calculations."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Function",
+          "definition": "A rule assigning exactly one output to each input; in biology the input is often time, concentration or dose."
+        },
+        {
+          "term": "Exponential function",
+          "definition": "y = a e^(kx) (or a b^x), where a quantity changes by a constant factor per unit step; k > 0 is growth and k < 0 is decay."
+        },
+        {
+          "term": "Logarithm",
+          "definition": "The inverse of exponentiation: log_b(x) is the power to which b must be raised to give x; log of a product is the sum of logs, and log of a power is the exponent times the log."
+        },
+        {
+          "term": "log10, ln and log2",
+          "definition": "Logarithms with base 10, e and 2; log10 is used for pH and orders of magnitude, ln for natural growth and decay, and log2 for fold-changes and doubling."
+        },
+        {
+          "term": "Semi-log plot",
+          "definition": "A plot with a logarithmic y-axis; exponential growth or decay appears as a straight line, with slope giving the rate constant."
+        },
+        {
+          "term": "Doubling time and half-life",
+          "definition": "For y = y0 e^(kt), doubling time is ln 2 / k when k > 0 and half-life is ln 2 / |k| when k < 0."
+        },
+        {
+          "term": "Scientific notation and significant figures",
+          "definition": "A way to write very large or small numbers (for example 6.022 x 10^23) and to report only as many digits as the measurement justifies."
+        },
+        {
+          "term": "Dimensional analysis",
+          "definition": "Carrying units through every step of a calculation as a built-in check that the answer has the right dimensions."
+        }
+      ],
+      "deeper": {
+        "beginner": "A logarithm answers the question 'what power of 10 (or another base) gives this number?' So log10 of 1000 is 3, and pH 3 means a hydrogen-ion concentration of 10^-3 M. Logs turn multiplication into addition, which makes it easy to handle numbers that span many orders of magnitude, such as concentrations or cell counts. An exponential function describes something that multiplies by the same factor at each step, such as bacteria doubling every 30 minutes.",
+        "intermediate": "Key rules: log(ab) = log a + log b; log(a/b) = log a - log b; log(a^n) = n log a; and log_b(x) = ln x / ln b. For pH, [H+] = 3.2 x 10^-8 M gives pH = 8 - log10(3.2), about 7.5. To linearise y = a e^(kt), take logs: ln y = ln a + kt, a straight line against t. If a culture goes from 10^6 to 10^9 cells in 5 hours, ln(1000)/5 = 1.38 per hour, a doubling time of 0.693 / 1.38, about 30 minutes. In gene expression a log2 fold-change of 3 means 8-fold higher expression and -2 means a four-fold decrease, putting increases and decreases on a symmetric scale.",
+        "advanced": "The exponential function is the unique function equal to its own derivative, which is why it describes any process whose rate is proportional to the amount present (first-order kinetics, unlimited growth, radioactive decay). Taking logs of data also stabilises variance when errors are proportional to the size of the measurement, which is why many assays are analysed on a log scale; geometric means and ratios are then the natural summaries. Dose-response data are usually fitted with a sigmoidal function in log concentration, because binding is governed by ratios of concentrations to Kd. Care is needed when data include zeros or negative values, which have no log; adding a pseudocount changes results, and the choice needs to be reported."
+      },
+      "commonMistakes": [
+        "Assuming log(a + b) = log a + log b; the log rule applies to products, not sums.",
+        "Using log10 when the formula needs ln (or vice versa) without converting; the factor is 2.303.",
+        "Reading a straight line on a log axis as linear growth; it means constant percentage change per unit.",
+        "Reporting too many significant figures from a calculator display."
+      ],
+      "videos": [
+        {
+          "youtubeId": "mQTWzLpCcW0",
+          "title": "Introduction to Logarithms",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Builds the idea of a logarithm from exponents with simple numbers before you meet formulas."
+        },
+        {
+          "youtubeId": "zzu2POfYv0Y",
+          "title": "Logarithms, Explained",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A short, intuitive animation of what logarithms are for and how they compress huge ranges."
+        },
+        {
+          "youtubeId": "m5Tf6vgoJtQ",
+          "title": "Exponential growth and decay word problems",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Practises setting up and solving growth and decay problems like those in microbiology and kinetics."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Desmos Graphing Calculator",
+          "provider": "Desmos",
+          "type": "tool",
+          "url": "https://www.desmos.com/calculator",
+          "free": true,
+          "level": "beginner",
+          "note": "Plot y = a e^(kx) and log functions, and drag sliders for a and k to see their effect, a quick way to build intuition."
+        },
+        {
+          "title": "Algebra 2 (Exponential and logarithmic functions)",
+          "provider": "Khan Academy",
+          "type": "course",
+          "url": "https://www.khanacademy.org/math/algebra2",
+          "free": true,
+          "level": "beginner",
+          "note": "Step-by-step lessons and practice for exponents, logs and their properties with instant feedback."
+        },
+        {
+          "title": "Precalculus 2e",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/precalculus-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free textbook with a thorough treatment of exponential and logarithmic functions and many exercises."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A solution has [H+] = 1 x 10^-5 M. What is the [H+] of a solution with pH two units lower?",
+          "options": [
+            "1 x 10^-7 M",
+            "1 x 10^-3 M",
+            "2 x 10^-5 M",
+            "5 x 10^-6 M"
+          ],
+          "answer": 1,
+          "explanation": "The initial pH is 5; two units lower is pH 3, which means [H+] = 10^-3 M, a hundred times higher."
+        },
+        {
+          "question": "A bacterial culture starts at 10^3 cells and doubles every 30 minutes. How many cells are present after 3 hours (assuming unrestricted growth)?",
+          "options": [
+            "6 x 10^3",
+            "3.2 x 10^4",
+            "6.4 x 10^4",
+            "1 x 10^6"
+          ],
+          "answer": 2,
+          "explanation": "3 hours is six 30-minute doublings, so the culture grows by a factor of 2^6 = 64, giving 6.4 x 10^4 cells."
+        },
+        {
+          "question": "Gene X has a log2 fold-change of -3 in treated cells. What does this mean?",
+          "options": [
+            "Expression is three times lower",
+            "Expression is eight times lower",
+            "Expression is eight times higher",
+            "Expression is 30 percent lower"
+          ],
+          "answer": 1,
+          "explanation": "A log2 fold-change of -3 corresponds to a fold-change of 2^-3 = 1/8, so expression is 8-fold lower."
+        }
+      ]
+    },
+    {
+      "id": "derivatives-rates-of-change",
+      "title": "Derivatives and Rates of Change",
+      "hours": 5,
+      "hook": "Every rate in biochemistry is a slope: how fast product forms, how quickly a population grows, how steeply absorbance rises with time. The derivative is the tool that turns 'how fast is this changing right now?' into an exact number.",
+      "learningObjectives": [
+        "Explain the derivative as the instantaneous rate of change and the slope of a tangent line.",
+        "Differentiate polynomials, exponentials and logarithms, and use the product, quotient and chain rules.",
+        "Write reaction rates as derivatives of concentration with respect to time, with correct signs.",
+        "Find maxima and minima by setting the derivative to zero and interpret them (optimum pH, temperature).",
+        "Differentiate the Michaelis-Menten equation and interpret the slope at low and high substrate concentration."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Derivative",
+          "definition": "The limit of the average rate of change over a shrinking interval; geometrically the slope of the tangent to the curve at a point."
+        },
+        {
+          "term": "Derivative rules",
+          "definition": "d/dx(x^n) = n x^(n-1); d/dx(e^(kx)) = k e^(kx); d/dx(ln x) = 1/x; sum, product, quotient and chain rules extend these to combined functions."
+        },
+        {
+          "term": "Rate of reaction",
+          "definition": "v = d[P]/dt = -d[S]/dt for S going to P; sign tells you whether a quantity is rising or falling."
+        },
+        {
+          "term": "Stationary point",
+          "definition": "A point where dy/dx = 0; the second derivative tells you whether it is a maximum, minimum or inflection."
+        },
+        {
+          "term": "Initial rate",
+          "definition": "The slope of the product-versus-time curve at the start, before substrate depletion and product accumulation change the rate; the quantity measured in enzyme assays."
+        },
+        {
+          "term": "Partial derivative",
+          "definition": "The derivative of a function of several variables with respect to one variable while holding the others fixed, as when a rate depends on both temperature and concentration."
+        },
+        {
+          "term": "Linear approximation",
+          "definition": "Near a point, a smooth curve behaves like its tangent line, which justifies treating small changes as proportional."
+        },
+        {
+          "term": "Sensitivity",
+          "definition": "The derivative of an output with respect to a parameter, telling you how strongly the result depends on that parameter."
+        }
+      ],
+      "deeper": {
+        "beginner": "If you plot product concentration against time, the steepness of the curve at any point is the reaction rate at that moment. The derivative is a way of calculating that steepness exactly, rather than estimating it by drawing a tangent by eye. If a curve is rising, its derivative is positive; if it is flat, the derivative is zero; if falling, it is negative.",
+        "intermediate": "Rules to know by heart: d/dx(c) = 0, d/dx(x^n) = n x^(n-1), d/dx(e^(kt)) = k e^(kt). For first-order decay [A] = [A]0 e^(-kt), the rate -d[A]/dt = k[A]0 e^(-kt) = k[A], which proves rate is proportional to concentration. For the Michaelis-Menten equation v = Vmax[S]/(Km + [S]), the quotient rule gives dv/d[S] = Vmax Km / (Km + [S])^2, which is Vmax/Km at [S] = 0 (initial slope, the catalytic efficiency-like regime) and tends to zero as [S] becomes large (saturation). A temperature or pH optimum occurs where dv/dx = 0.",
+        "advanced": "The chain rule underlies change of variables in kinetics, as when converting between concentration and log-concentration scales: d/dlnx = x d/dx, which is why sensitivity analyses often use logarithmic (relative) sensitivities. Partial derivatives appear in thermodynamics (chemical potential as the derivative of G with respect to amount of substance) and in the error-propagation formula: for y = f(x1, x2), the variance of y is approximately the sum of (df/dxi)^2 times the variance of xi, assuming independent errors. Fitting models by least squares is itself an optimisation problem solved by setting partial derivatives of the sum of squares to zero, which connects this unit to the regression unit."
+      },
+      "commonMistakes": [
+        "Forgetting the chain rule: d/dt(e^(-kt)) = -k e^(-kt), not -e^(-kt).",
+        "Mixing up the sign: the rate of loss of substrate is -d[S]/dt, which is positive.",
+        "Applying the power rule to an exponential (treating e^x as x^e).",
+        "Concluding that dy/dx = 0 always means a maximum; check the second derivative or the plot."
+      ],
+      "videos": [
+        {
+          "youtubeId": "9vKqVkMQHKk",
+          "title": "The paradox of the derivative",
+          "channel": "3Blue1Brown",
+          "level": "beginner",
+          "whyWatch": "Explains what an instantaneous rate of change really means, visually and without algebra."
+        },
+        {
+          "youtubeId": "N2PpRnFqnqY",
+          "title": "Derivative as a concept",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Connects average rate of change, tangent slope and the derivative step by step."
+        },
+        {
+          "youtubeId": "S0_qX4VJhMQ",
+          "title": "Derivative formulas through geometry",
+          "channel": "3Blue1Brown",
+          "level": "intermediate",
+          "whyWatch": "Shows why the power, sum and product rules hold through pictures, so formulas are not just memorised."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/bi201284u",
+          "title": "The Original Michaelis Constant: Translation of the 1913 Michaelis-Menten Paper",
+          "authors": "Johnson KA, Goody RS",
+          "year": 2011,
+          "journal": "Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "An English translation of the 1913 paper that gave us the Michaelis-Menten equation, with commentary. It shows how a simple rate equation was derived and tested against data, and it is a perfect application of the calculus in this unit.",
+          "readingQuestions": [
+            "What assumption lets Michaelis and Menten treat the enzyme-substrate complex as in equilibrium?",
+            "How did they use initial rates?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Calculus Volume 1",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/calculus-volume-1",
+          "free": true,
+          "level": "intermediate",
+          "note": "A full free calculus textbook; chapters 3 and 4 cover derivatives and their applications with many practice problems."
+        },
+        {
+          "title": "PhET: Calculus Grapher",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/calculus-grapher",
+          "free": true,
+          "level": "beginner",
+          "note": "Draw a curve and see its derivative drawn live, which builds the link between a curve's shape and its slope."
+        },
+        {
+          "title": "18.01SC Single Variable Calculus",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+          "free": true,
+          "level": "advanced",
+          "note": "Complete lecture videos, notes and exercises for a first calculus course."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "For a first-order decay [A] = [A]0 e^(-kt), what is d[A]/dt?",
+          "options": [
+            "k [A]",
+            "-k [A]",
+            "-[A]0 e^(-kt)",
+            "[A]0 k t"
+          ],
+          "answer": 1,
+          "explanation": "By the chain rule d/dt (e^(-kt)) = -k e^(-kt), so d[A]/dt = -k [A]0 e^(-kt) = -k [A]; the rate of loss is proportional to the concentration."
+        },
+        {
+          "question": "For v = Vmax[S]/(Km + [S]), what is the slope dv/d[S] at [S] = 0?",
+          "options": [
+            "0",
+            "Vmax / Km",
+            "Vmax",
+            "Km / Vmax"
+          ],
+          "answer": 1,
+          "explanation": "dv/d[S] = Vmax Km / (Km + [S])^2; at [S] = 0 this is Vmax Km / Km^2 = Vmax / Km."
+        },
+        {
+          "question": "A curve of enzyme activity versus pH has a maximum at pH 7.4. What is true of the derivative at that point?",
+          "options": [
+            "It is positive",
+            "It is negative",
+            "It is zero",
+            "It is undefined"
+          ],
+          "answer": 2,
+          "explanation": "At a smooth maximum the tangent is horizontal, so the derivative is zero; it is positive before and negative after."
+        }
+      ]
+    },
+    {
+      "id": "integrals-differential-equations",
+      "title": "Integrals and Simple Differential Equations: Growth and Decay",
+      "hours": 5,
+      "hook": "A drug is injected and its concentration in blood falls away; a bacterial culture starts and explodes, then stalls when the broth runs out. Both stories are told by a differential equation, a statement about rates, and by integrating it you can predict the whole future from a single starting point.",
+      "learningObjectives": [
+        "Interpret the definite integral as accumulated change or area under a curve and find simple antiderivatives.",
+        "Set up and solve first-order growth and decay equations by separation of variables.",
+        "Relate half-life, doubling time and rate constants and apply them to kinetics and growth data.",
+        "Describe logistic growth and why exponential growth cannot continue indefinitely.",
+        "Estimate areas under curves numerically (trapezoid rule) as used for drug exposure (AUC)."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Antiderivative and indefinite integral",
+          "definition": "A function whose derivative is the given function; the integral includes a constant of integration, such as integral of e^(kt) dt = e^(kt)/k + C."
+        },
+        {
+          "term": "Definite integral",
+          "definition": "The signed area between a curve and the axis over an interval, equal to the total accumulated change of a quantity whose rate is given by the curve."
+        },
+        {
+          "term": "Differential equation",
+          "definition": "An equation relating a function to its derivatives; for example dN/dt = rN states that the growth rate is proportional to the population."
+        },
+        {
+          "term": "Separation of variables",
+          "definition": "A method for equations of the form dy/dt = f(y) g(t): move all y terms to one side and all t terms to the other, then integrate each."
+        },
+        {
+          "term": "Exponential growth and decay solution",
+          "definition": "dN/dt = kN has the solution N = N0 e^(kt); with k < 0 it describes first-order decay and with k > 0 unlimited growth."
+        },
+        {
+          "term": "Logistic growth",
+          "definition": "dN/dt = rN(1 - N/K): growth is nearly exponential at small N but slows to zero as N approaches the carrying capacity K."
+        },
+        {
+          "term": "Initial condition",
+          "definition": "The value of the function at the start (such as N0), needed to fix the constant of integration and so a particular solution."
+        },
+        {
+          "term": "Area under the curve (AUC)",
+          "definition": "The integral of concentration over time; in pharmacology a measure of total exposure to a drug."
+        }
+      ],
+      "deeper": {
+        "beginner": "If a derivative tells you how fast something is changing, an integral adds up all those changes to give you the total. A differential equation describes how fast something changes in terms of its present size: for example, 'each bacterium divides at the same rate, so the culture grows faster as it gets bigger.' Solving it gives a formula for the amount at any future time.",
+        "intermediate": "For dN/dt = rN, separate to dN/N = r dt and integrate: ln N = rt + C, so N = N0 e^(rt) where N0 is the starting value. Doubling time is ln 2 / r. For first-order decay of a drug with k = 0.2 per hour, the half-life is 0.693 / 0.2, about 3.5 hours, and after 10 hours the concentration is e^(-2), about 14 percent of the start. The area under the concentration-time curve for such a decay is C0/k, a result obtained by integrating C0 e^(-kt) from 0 to infinity. Logistic growth gives an S-shaped curve, which is the form of a bacterial growth curve in the exponential and stationary phases.",
+        "advanced": "The logistic equation has an analytical solution, N(t) = K / (1 + ((K - N0)/N0) e^(-rt)), whose inflection occurs at N = K/2, where growth is fastest. Monod's classic work linked the growth rate to limiting nutrient concentration with a saturation law of Michaelis-Menten form, mu = mu_max S/(Ks + S), which turns the simple exponential into a coupled system of equations for biomass and substrate. Most realistic systems (multi-step pathways, binding, pharmacokinetic compartments) give systems of differential equations without closed-form solutions, which are integrated numerically (Euler, Runge-Kutta); the stability of steady states is then analysed with the Jacobian matrix. The trapezoid rule's error shrinks with the square of step size, and for AUC the choice between linear and log-linear trapezoids on the declining phase affects accuracy."
+      },
+      "commonMistakes": [
+        "Forgetting the constant of integration, or failing to use the initial condition to determine it.",
+        "Confusing the rate constant r with the doubling time; they are inversely related (t_d = ln 2 / r).",
+        "Extrapolating exponential growth indefinitely; real populations are limited by resources.",
+        "Misreading time units: a rate of 0.2 per hour is not 0.2 per minute."
+      ],
+      "videos": [
+        {
+          "youtubeId": "rfG8ce4nNh0",
+          "title": "Integration and the fundamental theorem of calculus",
+          "channel": "3Blue1Brown",
+          "level": "beginner",
+          "whyWatch": "Builds the idea that integration is accumulation, and why it undoes differentiation."
+        },
+        {
+          "youtubeId": "DL-ozRGDlkY",
+          "title": "Separable differential equations introduction",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Teaches the separation-of-variables method used to solve growth and decay equations."
+        },
+        {
+          "youtubeId": "IYFkXWlgC_w",
+          "title": "Modeling population with simple differential equation",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Takes a verbal statement about population growth and turns it into a differential equation, then solves it."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.mi.03.100149.002103",
+          "title": "The growth of bacterial cultures",
+          "authors": "Monod J",
+          "year": 1949,
+          "journal": "Annual Review of Microbiology",
+          "level": "advanced",
+          "whyItMatters": "A classic review by a founder of molecular biology that describes the phases of bacterial growth and relates growth rate to nutrient concentration quantitatively. It is the best demonstration that the exponential and logistic equations describe real laboratory data.",
+          "readingQuestions": [
+            "How is the growth rate defined and measured?",
+            "How does the growth rate depend on limiting substrate concentration?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Calculus Volume 2",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/calculus-volume-2",
+          "free": true,
+          "level": "intermediate",
+          "note": "Covers integration techniques and differential equations (population models, separable equations) with exercises."
+        },
+        {
+          "title": "18.01SC Single Variable Calculus",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+          "free": true,
+          "level": "advanced",
+          "note": "Lecture videos on integration and applications, with problem sets and solutions."
+        },
+        {
+          "title": "GeoGebra Calculator Suite",
+          "provider": "GeoGebra",
+          "type": "tool",
+          "url": "https://www.geogebra.org/calculator",
+          "free": true,
+          "level": "beginner",
+          "note": "Plot exponential and logistic solutions and compute areas under curves to test your hand calculations."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A drug obeys first-order elimination with k = 0.2 per hour. Approximately what fraction remains after 10 hours?",
+          "options": [
+            "50 %",
+            "25 %",
+            "14 %",
+            "2 %"
+          ],
+          "answer": 2,
+          "explanation": "C/C0 = e^(-kt) = e^(-2), about 0.135 or 14 percent. The half-life is 3.5 hours so after 10 hours there are about 2.9 half-lives, and 2^-2.9 is also about 0.14."
+        },
+        {
+          "question": "What is the solution of dN/dt = rN with N(0) = N0?",
+          "options": [
+            "N = N0 + rt",
+            "N = N0 e^(rt)",
+            "N = N0 r t",
+            "N = N0 / r"
+          ],
+          "answer": 1,
+          "explanation": "Separating gives dN/N = r dt, so ln N = rt + C and, with the initial condition, N = N0 e^(rt)."
+        },
+        {
+          "question": "In logistic growth with carrying capacity K, at what population size is growth fastest?",
+          "options": [
+            "N close to 0",
+            "N = K/2",
+            "N = K",
+            "N = 2K"
+          ],
+          "answer": 1,
+          "explanation": "The growth rate rN(1 - N/K) is a parabola in N whose maximum is at N = K/2, which is the inflection point of the S-shaped curve."
+        }
+      ]
+    },
+    {
+      "id": "descriptive-statistics-data-visualisation",
+      "title": "Describing Data: Summaries and Honest Figures",
+      "hours": 5,
+      "hook": "A bar chart of means with tiny error bars can hide a bimodal pattern, one wild outlier or just six data points. The first job of any analysis is to look at the data honestly, and the best summaries and figures are the ones that let the reader see the raw values.",
+      "learningObjectives": [
+        "Classify variables as nominal, ordinal, discrete or continuous and choose appropriate summaries for each.",
+        "Calculate and interpret the mean, median, mode, variance, standard deviation and interquartile range.",
+        "Create and read histograms, box plots, dot plots and scatter plots, and recognise skew and outliers.",
+        "Explain why bar charts of means conceal information and how to show individual data points.",
+        "Distinguish biological from technical replicates and explain pseudoreplication."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Types of data",
+          "definition": "Nominal (categories), ordinal (ordered categories), discrete (counts) and continuous (measured on a scale); the type determines which summaries and tests are valid."
+        },
+        {
+          "term": "Mean, median and mode",
+          "definition": "Measures of centre: the average, the middle value and the most common value; the median resists outliers while the mean does not."
+        },
+        {
+          "term": "Variance and standard deviation",
+          "definition": "The (sample) variance is the sum of squared deviations from the mean divided by n - 1; the standard deviation is its square root, in the same units as the data."
+        },
+        {
+          "term": "Quartiles and IQR",
+          "definition": "Quartiles split ordered data into four equal parts; the interquartile range (Q3 - Q1) measures spread without being driven by extremes."
+        },
+        {
+          "term": "Skewness and outliers",
+          "definition": "A skewed distribution has a long tail on one side (for example concentrations and counts); outliers are values far from the rest and need investigating, not automatic deletion."
+        },
+        {
+          "term": "Box plot and dot plot",
+          "definition": "A box plot shows median, quartiles and range; a dot plot (or beeswarm) shows every data point, so both the summary and the raw data are visible."
+        },
+        {
+          "term": "Biological versus technical replicate",
+          "definition": "A biological replicate is an independent sample (a different animal, culture or preparation); technical replicates are repeated measurements of the same sample and do not capture biological variability."
+        },
+        {
+          "term": "Pseudoreplication",
+          "definition": "Treating non-independent measurements (for example three wells from one culture) as independent samples, inflating apparent sample size and producing false confidence."
+        }
+      ],
+      "deeper": {
+        "beginner": "Before doing any test, summarise and plot your data. The mean tells you the typical value, and the standard deviation tells you how spread out the individual values are. The median is the middle value and is better when the data are skewed or contain extreme values. A histogram or dot plot shows the shape, and a box plot gives a compact summary. Always show the individual points where you can.",
+        "intermediate": "For the values 4, 5, 5, 6, 10: the mean is 6, the median is 5, the deviations are -2, -1, -1, 0, 4, the squared deviations sum to 22, the sample variance is 22/4 = 5.5 and the standard deviation is about 2.35. The outlier 10 pulls the mean above the median. We divide by n - 1 rather than n because the sample mean is itself estimated from the data, which makes deviations from it slightly too small. For skewed positive data such as cell counts or concentrations, take logs before summarising; the mean of the logs back-transformed is the geometric mean. Distinguish n biological replicates from technical replicates when stating sample size: three wells from one flask are n = 1 for the biological question.",
+        "advanced": "Weissgerber and colleagues showed that bar charts of continuous data with error bars are common in physiology journals even though very different distributions can give identical bars, so showing raw points (or distributions for larger n) is a better default. Robust summaries such as the median and median absolute deviation resist outliers, and the choice between SD and IQR should reflect the distribution. Dropping outliers requires an a priori rule; otherwise it is a researcher degree of freedom. For multi-level designs (cells within animals within litters), the independent unit determines the valid n, and mixed-effects models or summary-per-animal approaches are required to avoid pseudoreplication. Visual perception matters too: avoid truncated axes on bar charts and 3D effects, and provide colour palettes that are readable for colour-blind viewers."
+      },
+      "commonMistakes": [
+        "Using the mean and SD to summarise strongly skewed data.",
+        "Treating technical replicates as independent samples in a statistical test.",
+        "Showing bar charts of means with error bars only, hiding the individual data.",
+        "Deleting outliers without a pre-stated criterion or a note in the report."
+      ],
+      "videos": [
+        {
+          "youtubeId": "SzZ6GpcfoQY",
+          "title": "Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Walks through computing mean, variance and standard deviation by hand, with the intuition for each step."
+        },
+        {
+          "youtubeId": "qBigTkBLU6g",
+          "title": "StatQuest: Histograms, Clearly Explained",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "A three-minute introduction to histograms and how bin width changes what you see."
+        },
+        {
+          "youtubeId": "fHLhBnmwUM0",
+          "title": "Boxplots are Awesome!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Explains how to read a box plot and why it often beats a bar chart."
+        },
+        {
+          "youtubeId": "qNKOi08NxHs",
+          "title": "Mean and standard deviation versus median and IQR",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Compares the two pairs of summaries and when each is appropriate."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1371/journal.pbio.1002128",
+          "title": "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm",
+          "authors": "Weissgerber TL, Milic NM, Winham SJ, Garovic VD",
+          "year": 2015,
+          "journal": "PLOS Biology",
+          "level": "intermediate",
+          "openAccessUrl": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128",
+          "whyItMatters": "Shows how very different datasets can produce identical bar charts, and argues for plots that display individual points. Essential reading before you make your first figure for a lab report.",
+          "readingQuestions": [
+            "Which kinds of data can hide behind the same bar graph?",
+            "What alternatives do the authors recommend for small samples?"
+          ]
+        },
+        {
+          "doi": "10.1038/nmeth.2813",
+          "title": "Visualizing samples with box plots",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2014,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "A two-page guide to what a box plot's box, whiskers and outliers mean and how conventions differ between software. Handy when you have to interpret box plots in papers."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Handbook of Biological Statistics",
+          "provider": "John H. McDonald, University of Delaware",
+          "type": "textbook",
+          "url": "http://www.biostathandbook.com/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A practical, readable guide written for biologists, with sections on descriptive statistics, graphing and choosing a test."
+        },
+        {
+          "title": "Seeing Theory",
+          "provider": "Brown University",
+          "type": "interactive",
+          "url": "https://seeing-theory.brown.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive visual introduction to basic statistics where you can change data and see mean, spread and distributions respond."
+        },
+        {
+          "title": "Statistics Done Wrong",
+          "provider": "Alex Reinhart",
+          "type": "textbook",
+          "url": "https://www.statisticsdonewrong.com/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A short free book on the common statistical errors in published science, including pseudoreplication and misuse of summaries."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "For the data 4, 5, 5, 6, 10, which statement is correct?",
+          "options": [
+            "Mean = 5, median = 6",
+            "Mean = 6, median = 5",
+            "Mean = median = 6",
+            "Mean = median = 5"
+          ],
+          "answer": 1,
+          "explanation": "The mean is (4+5+5+6+10)/5 = 6 and the median (middle value) is 5; the outlier 10 pulls the mean above the median."
+        },
+        {
+          "question": "You measure absorbance of the same culture sample in three wells. What is the sample size n for comparing two independent cultures?",
+          "options": [
+            "3 wells per culture, so n = 3",
+            "Each culture counts once, so n = 1 per culture",
+            "n = 9",
+            "n = 6"
+          ],
+          "answer": 1,
+          "explanation": "The three wells are technical replicates of one biological sample; the independent unit is the culture, so the three wells do not increase the biological n."
+        },
+        {
+          "question": "Why is the sample variance computed by dividing by n - 1 instead of n?",
+          "options": [
+            "To make the number smaller",
+            "Because the sample mean is estimated from the same data, so the raw deviations underestimate the spread",
+            "Because variance must be an integer",
+            "To account for outliers"
+          ],
+          "answer": 1,
+          "explanation": "Deviations from the sample mean are on average smaller than deviations from the true mean; dividing by n - 1 corrects this bias and gives an unbiased estimate of the population variance."
+        }
+      ]
+    },
+    {
+      "id": "probability-and-distributions",
+      "title": "Probability and Distributions",
+      "hours": 6,
+      "hook": "Mendel's 3 to 1 ratios, the number of colonies on a plate, the chance that a positive test result is actually correct: all are probability in action. Learn the handful of distributions that cover most lab data and you can reason about uncertainty instead of fearing it.",
+      "learningObjectives": [
+        "Apply the addition and multiplication rules and use conditional probability and Bayes' theorem.",
+        "Calculate binomial probabilities, for example for genetic crosses, and state the mean and variance of a binomial variable.",
+        "Describe when the Poisson distribution applies (counts of rare, independent events).",
+        "Use the normal distribution, z-scores and the 68-95-99.7 rule.",
+        "Explain why a positive result in a low-prevalence setting may still be probably wrong."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Probability rules",
+          "definition": "P(A or B) = P(A) + P(B) - P(A and B); for independent events P(A and B) = P(A) P(B); probabilities of all outcomes sum to 1."
+        },
+        {
+          "term": "Conditional probability and Bayes' theorem",
+          "definition": "P(A | B) = P(A and B)/P(B); Bayes' theorem reverses the conditioning: P(A | B) = P(B | A) P(A) / P(B)."
+        },
+        {
+          "term": "Binomial distribution",
+          "definition": "The number of successes in n independent trials, each with success probability p; mean np and variance np(1 - p)."
+        },
+        {
+          "term": "Poisson distribution",
+          "definition": "The number of independent events in a fixed interval when events occur at a constant average rate; its mean and variance are both equal to the rate."
+        },
+        {
+          "term": "Normal distribution",
+          "definition": "A symmetric bell-shaped distribution described by its mean and standard deviation; about 68 percent of values lie within 1 SD, 95 percent within 1.96 SD and 99.7 percent within 3 SD."
+        },
+        {
+          "term": "z-score",
+          "definition": "The number of standard deviations a value lies from the mean: z = (x - mean)/SD; it allows comparison across different scales."
+        },
+        {
+          "term": "Sensitivity, specificity and predictive value",
+          "definition": "Sensitivity is the probability of a positive test given disease, specificity the probability of a negative given no disease; the positive predictive value depends also on prevalence."
+        },
+        {
+          "term": "Random variable",
+          "definition": "A numerical outcome of a random process, described by a probability distribution; discrete (counts) or continuous (measurements)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Probability is a number between 0 and 1 that says how likely something is. Independent events multiply: the chance of getting two heads in a row is 0.5 x 0.5. Many lab measurements follow a bell-shaped (normal) distribution, centred on a mean, with most values close to the centre. Counts of rare events, like colonies on a plate, follow a different pattern called Poisson.",
+        "intermediate": "In a monohybrid cross Aa x Aa, each offspring has probability 3/4 of showing the dominant phenotype. The chance that exactly 3 of 4 offspring are dominant is C(4,3) x (0.75)^3 x (0.25) = 4 x 0.4219 x 0.25 = 0.42. For a normal variable with mean 100 and SD 15, about 95 percent of values lie between 70 and 130, and the z-score of 130 is 2. Bayes' theorem matters in diagnostics: with a disease prevalence of 1 percent, test sensitivity of 90 percent and specificity of 95 percent, the fraction of positives that are true is 0.009 / (0.009 + 0.0495), about 15 percent, because false positives from the large healthy group outnumber true positives.",
+        "advanced": "The normal distribution emerges as a limit of sums of many small independent effects, which is why measurement errors and many quantitative traits look normal; the central limit theorem formalises this. Counts of events from a constant-rate process follow a Poisson distribution, as in the Luria-Delbruck analysis of mutation rates and in read counts in sequencing, where the variance usually exceeds the mean (overdispersion) and a negative binomial model is used instead. Likelihood links probability models to data: the parameters that maximise the probability of the observed data are the maximum-likelihood estimates, which for the binomial give p_hat = k/n and for the normal give the sample mean and (biased) variance. Bayesian inference updates prior beliefs with data using Bayes' theorem and gives probability statements about parameters, which frequentist confidence intervals do not."
+      },
+      "commonMistakes": [
+        "Multiplying probabilities of events that are not independent.",
+        "Confusing P(positive test | disease) with P(disease | positive test); the 'prosecutor's fallacy'.",
+        "Assuming every biological measurement is normally distributed; concentrations and counts are often skewed.",
+        "Forgetting that the Poisson mean equals its variance, and treating over-dispersed counts as Poisson."
+      ],
+      "videos": [
+        {
+          "youtubeId": "uzkc-qNVoOk",
+          "title": "Probability explained | Independent and dependent events",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Introduces the multiplication rule and the idea of independence using simple examples."
+        },
+        {
+          "youtubeId": "oI3hZJqXJuc",
+          "title": "The Main Ideas behind Probability Distributions",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Explains what a probability distribution is and why different data types need different ones."
+        },
+        {
+          "youtubeId": "J8jNoF-K8E8",
+          "title": "The Binomial Distribution and Test, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Builds the binomial distribution from scratch and uses it for a simple test."
+        },
+        {
+          "youtubeId": "rzFX5NWojp0",
+          "title": "The Normal Distribution, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Shows what the mean and standard deviation mean for a bell curve in five minutes."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Seeing Theory: Basic Probability and Probability Distributions",
+          "provider": "Brown University",
+          "type": "interactive",
+          "url": "https://seeing-theory.brown.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive visualisations of probability, distributions and Bayesian inference where you can change parameters and watch results change."
+        },
+        {
+          "title": "PhET: Plinko Probability",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/plinko-probability",
+          "free": true,
+          "level": "beginner",
+          "note": "Drop balls through pegs and watch the binomial distribution turn into a bell curve as the number grows."
+        },
+        {
+          "title": "Introductory Statistics 2e",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/introductory-statistics-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free textbook with chapters on probability, discrete distributions (binomial, Poisson) and the normal distribution."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In a cross Aa x Aa, what is the probability that exactly 3 of 4 offspring show the dominant phenotype?",
+          "options": [
+            "0.25",
+            "0.42",
+            "0.75",
+            "0.32"
+          ],
+          "answer": 1,
+          "explanation": "Each offspring is dominant with p = 0.75, so P = C(4,3) (0.75)^3 (0.25) = 4 x 0.4219 x 0.25, about 0.42."
+        },
+        {
+          "question": "A trait is normally distributed with mean 100 and SD 15. About what proportion of individuals have values above 130?",
+          "options": [
+            "2.5 %",
+            "5 %",
+            "16 %",
+            "32 %"
+          ],
+          "answer": 0,
+          "explanation": "130 is two SDs above the mean; about 95 percent lie within two SDs, leaving about 5 percent in both tails, so roughly 2.5 percent above 130."
+        },
+        {
+          "question": "A disease affects 1 % of a population. A test has 90 % sensitivity and 95 % specificity. A person tests positive. About how likely is it that they have the disease?",
+          "options": [
+            "90 %",
+            "95 %",
+            "About 15 %",
+            "1 %"
+          ],
+          "answer": 2,
+          "explanation": "True positives are 0.01 x 0.90 = 0.009, false positives 0.99 x 0.05 = 0.0495; the share of positives that are true is 0.009/0.0585, about 15 percent."
+        }
+      ]
+    },
+    {
+      "id": "sampling-standard-error-confidence-intervals",
+      "title": "Sampling, Standard Error and Confidence Intervals",
+      "hours": 5,
+      "hook": "You can never measure every cell, mouse or patient; you measure a few and hope they speak for the rest. The mathematics that tells you how far your sample might be from the truth, and how that uncertainty shrinks as you collect more data, is the standard error and its close cousin, the confidence interval.",
+      "learningObjectives": [
+        "Distinguish a population parameter from a sample statistic and explain how bias arises in sampling.",
+        "Explain the sampling distribution of the mean and the central limit theorem.",
+        "Calculate the standard error of the mean and explain how it differs from the standard deviation.",
+        "Construct and correctly interpret a 95 % confidence interval for a mean.",
+        "Describe how sample size affects precision and why quadrupling n halves the standard error."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Population and sample",
+          "definition": "The population is everything you want to learn about; the sample is the part you measure; statistics describe samples and estimate population parameters."
+        },
+        {
+          "term": "Random sampling and bias",
+          "definition": "Random selection gives each unit a known chance of selection; non-random or self-selected samples produce systematic bias that no amount of data corrects."
+        },
+        {
+          "term": "Sampling distribution",
+          "definition": "The distribution of a statistic (such as the sample mean) over repeated samples from the same population; its spread tells you the precision of the estimate."
+        },
+        {
+          "term": "Standard error of the mean",
+          "definition": "SE = s / sqrt(n); it estimates the standard deviation of the sample mean, not of the data, and falls as n grows."
+        },
+        {
+          "term": "Central limit theorem",
+          "definition": "The distribution of sample means approaches a normal distribution as n increases, whatever the shape of the underlying data (given finite variance)."
+        },
+        {
+          "term": "Confidence interval",
+          "definition": "A range calculated from data, mean +/- t x SE, built so that 95 percent of intervals produced by the same procedure would contain the true mean."
+        },
+        {
+          "term": "t distribution",
+          "definition": "A bell-shaped distribution with heavier tails than the normal, used instead of z when the SD is estimated from a small sample; it approaches the normal as n increases."
+        },
+        {
+          "term": "Bootstrap",
+          "definition": "A computer-intensive method of estimating the uncertainty of a statistic by repeatedly resampling the observed data with replacement."
+        }
+      ],
+      "deeper": {
+        "beginner": "When you take a sample, its average will differ a bit from the true average of the whole population. If you took many samples, their averages would cluster around the true value, and the standard error describes how tightly. A larger sample gives a smaller standard error, so a more precise estimate. A confidence interval turns that into a range that is likely to include the true value.",
+        "intermediate": "SD describes the spread of individual measurements and does not shrink with n; SE = SD/sqrt(n) describes the uncertainty of the mean and does. For n = 9, s = 3, SE = 3/3 = 1. The 95 percent CI uses the t value with n - 1 = 8 degrees of freedom, 2.306, so the CI is mean +/- 2.31. For large samples the t value approaches 1.96. To halve the SE you need four times as many replicates, which is why precision is expensive. A 95 percent CI does not mean there is a 95 percent probability that this particular interval contains the true mean; it means the method captures the truth in 95 percent of repeats. Overlapping CIs for two means do not necessarily mean no difference exists.",
+        "advanced": "The CLT justifies using normal-theory intervals for means of non-normal data when n is moderate, but it is slow for heavy-tailed or highly skewed distributions, and does not apply to medians or variances. Bootstrap confidence intervals relax distributional assumptions at the cost of computation, and are often used for statistics with no simple formula (ratios, correlation coefficients). Interval estimates for proportions are badly approximated by the simple Wald formula for small n or extreme p, and Wilson or exact (Clopper-Pearson) intervals perform better. Bayesian credible intervals do allow a direct probability statement about the parameter, but depend on the prior. Whichever approach is used, confidence intervals communicate effect size and uncertainty together and are generally more informative than a bare p-value."
+      },
+      "commonMistakes": [
+        "Reporting SE as if it described the variability of the data; SE describes uncertainty about the mean.",
+        "Interpreting the 95 % CI as a 95 % probability that the true value lies in the observed interval.",
+        "Assuming a large sample from a biased sampling method gives a reliable answer.",
+        "Using 1.96 instead of the t critical value with small n, producing intervals that are too narrow."
+      ],
+      "videos": [
+        {
+          "youtubeId": "A82brFpdr9g",
+          "title": "Standard Deviation vs Standard Error, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "A short, clear contrast of the two quantities students most often confuse."
+        },
+        {
+          "youtubeId": "YAlJCEDH2uY",
+          "title": "The Central Limit Theorem, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Shows with a simulation why sample means look normal even when the data do not."
+        },
+        {
+          "youtubeId": "TqOeMYtOc1w",
+          "title": "Confidence Intervals, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Builds the idea of a confidence interval using intuitive examples and a correct interpretation."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nmeth.2613",
+          "title": "Importance of being uncertain",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2013,
+          "journal": "Nature Methods",
+          "level": "beginner",
+          "whyItMatters": "A two-page opener to the Points of Significance series that explains in simple terms how sampling creates uncertainty and how we estimate populations from samples. A very good short read before your first stats practical."
+        },
+        {
+          "doi": "10.1038/nmeth.2659",
+          "title": "Error bars",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2013,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "Explains how SD, SE and confidence interval error bars differ and what you can and cannot infer from overlap. Useful before you draw any error bar on a graph."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Statistics for Biologists (Nature collection)",
+          "provider": "Nature Publishing Group",
+          "type": "reference",
+          "url": "https://www.nature.com/collections/qghhqm",
+          "free": true,
+          "level": "intermediate",
+          "note": "A curated collection of short articles on core statistics topics for working biologists, including sampling, error bars and design."
+        },
+        {
+          "title": "Seeing Theory: Frequentist Inference",
+          "provider": "Brown University",
+          "type": "interactive",
+          "url": "https://seeing-theory.brown.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive demonstrations of the central limit theorem and confidence intervals so you can see the idea of repeated sampling."
+        },
+        {
+          "title": "Online Statistics Education: An Interactive Multimedia Course",
+          "provider": "Rice University and collaborators",
+          "type": "textbook",
+          "url": "https://onlinestatbook.com/",
+          "free": true,
+          "level": "beginner",
+          "note": "A free textbook with simulations on sampling distributions and confidence intervals that can be run in the browser."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A sample of n = 25 measurements has SD = 10. What is the standard error of the mean?",
+          "options": [
+            "10",
+            "5",
+            "2",
+            "0.4"
+          ],
+          "answer": 2,
+          "explanation": "SE = s / sqrt(n) = 10 / 5 = 2."
+        },
+        {
+          "question": "By what factor must you increase the sample size to halve the standard error of the mean?",
+          "options": [
+            "2",
+            "4",
+            "8",
+            "Cannot be done"
+          ],
+          "answer": 1,
+          "explanation": "SE is proportional to 1/sqrt(n); halving it requires sqrt(n) to double, so n must quadruple."
+        },
+        {
+          "question": "What is the correct interpretation of a 95 % confidence interval for a mean?",
+          "options": [
+            "95 % of the data lie within the interval",
+            "If the experiment were repeated many times, about 95 % of the intervals so constructed would contain the true mean",
+            "There is a 95 % probability that the sample mean is in the interval",
+            "The true mean changes 5 % of the time"
+          ],
+          "answer": 1,
+          "explanation": "The 95 percent refers to the long-run performance of the procedure, not to the data or to a probability statement about one fixed interval."
+        }
+      ]
+    },
+    {
+      "id": "hypothesis-testing-p-values",
+      "title": "Hypothesis Testing, p-Values and Errors",
+      "hours": 6,
+      "hook": "Test enough hypotheses and something will look significant by chance alone: with 20,000 genes and a cut-off of 0.05, even if nothing is real you should expect about 1,000 false hits. Understanding what a p-value is, and what it is not, is the main defence against fooling yourself.",
+      "learningObjectives": [
+        "State the null and alternative hypotheses for a research question and describe the logic of a significance test.",
+        "Define a p-value correctly and list common misinterpretations.",
+        "Distinguish Type I and Type II errors, and explain significance level, power and effect size.",
+        "Choose and carry out one-sample, two-sample (Welch) and paired t-tests and state their assumptions.",
+        "Explain the multiple-testing problem and how Bonferroni and false-discovery-rate procedures address it."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Null and alternative hypotheses",
+          "definition": "The null hypothesis (H0) usually states no effect or no difference; the alternative (H1) states that an effect exists. The test asks whether the data are surprising if H0 is true."
+        },
+        {
+          "term": "Test statistic",
+          "definition": "A number computed from the data (such as t) whose distribution under H0 is known, so that a probability can be calculated."
+        },
+        {
+          "term": "p-value",
+          "definition": "The probability, assuming H0 and the model assumptions are true, of obtaining data at least as extreme as those observed; it is not the probability that H0 is true."
+        },
+        {
+          "term": "Significance level alpha",
+          "definition": "The pre-set threshold (commonly 0.05) for rejecting H0; it equals the long-run rate of Type I errors when H0 is true."
+        },
+        {
+          "term": "Type I and Type II errors",
+          "definition": "A Type I error is rejecting a true null (false positive); a Type II error is failing to reject a false null (false negative), with probability beta."
+        },
+        {
+          "term": "Power and effect size",
+          "definition": "Power (1 - beta) is the probability of detecting a real effect of a given size; it increases with sample size, effect size and lower variability."
+        },
+        {
+          "term": "t-tests",
+          "definition": "Tests comparing means: one-sample (against a value), two-sample (independent groups, with Welch's version not assuming equal variances) and paired (the same units measured twice)."
+        },
+        {
+          "term": "Multiple testing correction",
+          "definition": "Adjustments for performing many tests: Bonferroni divides alpha by the number of tests; the Benjamini-Hochberg procedure controls the false discovery rate (the expected share of false positives among those called significant)."
+        }
+      ],
+      "deeper": {
+        "beginner": "A hypothesis test starts by assuming nothing is going on (the null hypothesis) and asks: how surprising are my data under that assumption? The p-value is a measure of that surprise: a small p-value means the data would be rare if there were no real effect. A cut-off such as 0.05 is a convention. A small p-value does not tell you how big or how important the effect is, only that it is unlikely to be pure chance.",
+        "intermediate": "For two independent groups the t statistic is the difference in means divided by its standard error; large absolute t gives a small p. Check assumptions: independent observations, roughly normal data (or large n) and, for the classic test, equal variances (use Welch to avoid this). Report the effect size and confidence interval as well as p. A non-significant result does not show there is no effect: it may reflect low power. If you test 20,000 genes at alpha = 0.05 and none truly differ, you expect about 1,000 'significant' genes; Bonferroni would use 0.05/20,000 = 2.5 x 10^-6, which is very strict, whereas FDR control at 5 percent accepts that some calls will be false but limits their share.",
+        "advanced": "A p-value is a statement about the data given the model and not about the hypothesis; the ASA statement warns that p < 0.05 should not be the sole basis for conclusions and that p-values do not measure effect size or importance. Ioannidis argued that, when prior probabilities of true effects are low, power is small and analytic flexibility is large, most 'significant' findings are likely to be false, which explains part of the reproducibility crisis. Remedies include pre-registration, adequate power calculations, reporting all analyses, and shifting focus to estimation. Equivalence and non-inferiority tests reverse the burden of proof when the aim is to show similarity. In large-scale biology, q-values (FDR-adjusted p) are standard, and empirical-Bayes variance shrinkage (as in limma) increases power by borrowing strength across genes."
+      },
+      "commonMistakes": [
+        "Describing p = 0.03 as 'a 3 % chance that the null hypothesis is true'.",
+        "Equating 'not significant' with 'no effect'; absence of evidence is not evidence of absence.",
+        "Running many tests and reporting only the significant ones (p-hacking).",
+        "Using an independent-samples t-test on paired data, or the reverse."
+      ],
+      "videos": [
+        {
+          "youtubeId": "0oc49DyA3hU",
+          "title": "Hypothesis Testing and The Null Hypothesis, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Explains the logic of null and alternative hypotheses with a worked example."
+        },
+        {
+          "youtubeId": "vemZtEM63GY",
+          "title": "p-values: What they are and how to interpret them",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Gives an intuitive and correct definition of the p-value and its common pitfalls."
+        },
+        {
+          "youtubeId": "Hdbbx7DIweQ",
+          "title": "Introduction to Type I and Type II errors",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Lays out the four outcomes of a test and what alpha and beta mean."
+        },
+        {
+          "youtubeId": "L3nlGfSyHV0",
+          "title": "False Discovery Rates, FDR, clearly explained",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "advanced",
+          "whyWatch": "Explains why multiple testing inflates false positives and how Benjamini-Hochberg adjusts for it, as used in genomics."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1080/00031305.2016.1154108",
+          "title": "The ASA Statement on p-Values: Context, Process, and Purpose",
+          "authors": "Wasserstein RL, Lazar NA",
+          "year": 2016,
+          "journal": "The American Statistician",
+          "level": "intermediate",
+          "openAccessUrl": "https://www.tandfonline.com/doi/full/10.1080/00031305.2016.1154108",
+          "whyItMatters": "The American Statistical Association's official guidance on what p-values do and do not mean, in six short principles. A reliable reference when someone claims that p < 0.05 'proves' something.",
+          "readingQuestions": [
+            "Which of the six principles do you think students violate most?",
+            "What do the authors suggest should accompany p-values?"
+          ]
+        },
+        {
+          "doi": "10.1371/journal.pmed.0020124",
+          "title": "Why Most Published Research Findings Are False",
+          "authors": "Ioannidis JPA",
+          "year": 2005,
+          "journal": "PLoS Medicine",
+          "level": "intermediate",
+          "openAccessUrl": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124",
+          "whyItMatters": "A highly influential argument that low power, bias and many tested hypotheses can make most positive findings in some fields wrong. It prompted the reproducibility debate and is worth reading with a sceptical but open mind."
+        },
+        {
+          "doi": "10.1038/nmeth.2698",
+          "title": "Significance, P values and t-tests",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2013,
+          "journal": "Nature Methods",
+          "level": "beginner",
+          "whyItMatters": "A concise, biologist-oriented explanation of significance testing and the t-test. Short enough to read between lectures."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Handbook of Biological Statistics: Hypothesis Testing and Multiple Comparisons",
+          "provider": "John H. McDonald, University of Delaware",
+          "type": "textbook",
+          "url": "http://www.biostathandbook.com/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Clear chapters on the null hypothesis, t-tests and the Benjamini-Hochberg procedure, with biological examples."
+        },
+        {
+          "title": "Statistics Done Wrong",
+          "provider": "Alex Reinhart",
+          "type": "textbook",
+          "url": "https://www.statisticsdonewrong.com/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Covers p-value misunderstandings, low power and multiple comparisons in accessible language."
+        },
+        {
+          "title": "Introduction to Probability and Statistics (18.05)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/",
+          "free": true,
+          "level": "advanced",
+          "note": "A full course with lectures and problem sets covering hypothesis testing and Bayesian alternatives."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which is the correct definition of a p-value?",
+          "options": [
+            "The probability that the null hypothesis is true",
+            "The probability of observing data at least as extreme as ours if the null hypothesis were true",
+            "The probability that the result is due to chance alone",
+            "The probability that the alternative hypothesis is false"
+          ],
+          "answer": 1,
+          "explanation": "A p-value is calculated assuming H0 and the model are true; it measures how surprising the data are, not the probability of H0."
+        },
+        {
+          "question": "You test 20,000 genes at alpha = 0.05 and none truly differ between groups. Approximately how many do you expect to be called significant?",
+          "options": [
+            "0",
+            "About 50",
+            "About 1,000",
+            "About 10,000"
+          ],
+          "answer": 2,
+          "explanation": "When H0 is true for all tests, 5 percent of p-values fall below 0.05, giving about 0.05 x 20,000 = 1,000 false positives."
+        },
+        {
+          "question": "A study with low power finds p = 0.20. What is the best conclusion?",
+          "options": [
+            "There is no effect",
+            "The result is inconclusive; the study may have lacked power to detect a real effect",
+            "The effect is large",
+            "The null hypothesis is true with 80 % probability"
+          ],
+          "answer": 1,
+          "explanation": "A non-significant result from an underpowered study is compatible with both no effect and a real effect, so it cannot prove the null."
+        }
+      ]
+    },
+    {
+      "id": "comparing-groups-anova-chi-square-nonparametric",
+      "title": "Comparing Several Groups: ANOVA, Chi-Square and Non-Parametric Tests",
+      "hours": 6,
+      "hook": "Three drug doses, five mutants, four time points: real experiments rarely stop at two groups. Running t-tests on every pair is the quickest road to false positives, so statisticians built tools that ask the overall question first and the pairwise ones second.",
+      "learningObjectives": [
+        "Explain one-way ANOVA as a comparison of between-group and within-group variance and interpret the F statistic.",
+        "Describe the need for post hoc comparisons (for example Tukey) and the assumptions of ANOVA.",
+        "Use a chi-square test for goodness-of-fit (for example Mendelian ratios) and for independence in a contingency table.",
+        "Choose non-parametric alternatives (Mann-Whitney, Wilcoxon signed-rank, Kruskal-Wallis) when assumptions fail.",
+        "Outline good experimental design: controls, randomisation, replication and blocking."
+      ],
+      "keyConcepts": [
+        {
+          "term": "One-way ANOVA",
+          "definition": "A test of whether the means of three or more groups are equal; it compares variability between group means to variability within groups."
+        },
+        {
+          "term": "F statistic",
+          "definition": "The ratio of between-group variance to within-group variance; if the group means are equal it is close to 1, and large values suggest a real difference."
+        },
+        {
+          "term": "Post hoc test",
+          "definition": "A follow-up comparison (such as Tukey's HSD) that identifies which groups differ while controlling the overall error rate."
+        },
+        {
+          "term": "ANOVA assumptions",
+          "definition": "Independent observations, approximately normal residuals and similar variances in all groups; ANOVA is fairly robust with equal group sizes."
+        },
+        {
+          "term": "Chi-square test",
+          "definition": "Compares observed counts with expected counts: chi-square = sum of (O - E)^2 / E; used for goodness-of-fit and for independence in contingency tables, and expected counts should generally be at least 5."
+        },
+        {
+          "term": "Non-parametric tests",
+          "definition": "Rank-based tests (Mann-Whitney for two independent groups, Wilcoxon signed-rank for paired data, Kruskal-Wallis for several groups) that do not assume normality."
+        },
+        {
+          "term": "Control, randomisation and blocking",
+          "definition": "Controls provide a comparison; randomisation spreads unknown influences evenly; blocking groups similar units (for example by day or plate) so that nuisance variation can be removed from the comparison."
+        },
+        {
+          "term": "Degrees of freedom",
+          "definition": "The number of independent pieces of information available to estimate variability, which determines the shape of the reference distribution for t, F and chi-square."
+        }
+      ],
+      "deeper": {
+        "beginner": "When you have more than two groups, a single overall test (ANOVA) asks: do the group averages differ by more than we would expect from random scatter? If it says yes, you follow up to see which pairs differ. For counts in categories, such as how many offspring have each trait, the chi-square test compares what you saw with what a theory predicts. When data are very skewed or very small, rank-based tests are a safe alternative.",
+        "intermediate": "In ANOVA the F statistic is the ratio of the mean square between groups to the mean square within groups. With F significant, use a post hoc test that corrects for multiple comparisons. Chi-square example: a 3:1 Mendelian cross gives 740 dominant and 260 recessive out of 1000. The expected counts are 750 and 250; chi-square = (10^2)/750 + (10^2)/250 = 0.133 + 0.400 = 0.53 with 1 degree of freedom, p about 0.47, so the data are consistent with 3:1. The Mann-Whitney test compares the ranks of values in two groups and is appropriate for ordinal or heavily skewed data. A good design randomises the order and position of samples (plate effects and days are real sources of variation) and includes positive and negative controls.",
+        "advanced": "ANOVA is a special case of the general linear model; the same framework handles two-way designs with interactions, blocking and covariates. A significant interaction means the effect of one factor depends on another, and main effects must then be interpreted with caution. Non-parametric tests are not assumption-free: Mann-Whitney assumes similar distribution shapes if interpreted as a test of medians, and they have lower power than parametric tests when the assumptions hold, though only modestly. For small expected counts in 2 x 2 tables, Fisher's exact test replaces chi-square. In repeated-measures designs, correlated observations require repeated-measures ANOVA or mixed-effects models; ignoring correlation inflates the Type I error rate. Randomised block designs reduce residual variance by removing differences between blocks, increasing power without increasing n."
+      },
+      "commonMistakes": [
+        "Running multiple pairwise t-tests instead of ANOVA plus a corrected post hoc test, inflating the false-positive rate.",
+        "Interpreting a significant ANOVA as meaning that all groups differ; it only says that at least one differs.",
+        "Using the chi-square test on percentages instead of counts, or when expected counts are tiny.",
+        "Using an unpaired test for paired data, or ignoring plate and batch effects in the design."
+      ],
+      "videos": [
+        {
+          "youtubeId": "oOuu8IBd-yo",
+          "title": "ANOVA: Crash Course Statistics #33",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Explains why we compare variances to compare means and what the F statistic is, with a clear running example."
+        },
+        {
+          "youtubeId": "7_cs1YlZoug",
+          "title": "Chi-Square Tests: Crash Course Statistics #29",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Introduces goodness-of-fit and independence chi-square tests with examples."
+        },
+        {
+          "youtubeId": "jABsbNBPXIk",
+          "title": "Chi-square statistic for hypothesis testing",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Works through computing the chi-square statistic and finding the p-value for a genetics-style question."
+        },
+        {
+          "youtubeId": "kkBDa-ICvyY",
+          "title": "Controlled Experiments: Crash Course Statistics #9",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "Covers controls, randomisation and blinding, the design ideas that make statistics meaningful."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nmeth.3005",
+          "title": "Analysis of variance and blocking",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2014,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "Explains ANOVA and the idea of blocking in a form designed for biologists. Shows how good design can remove nuisance variation and sharpen comparisons."
+        },
+        {
+          "doi": "10.1038/nmeth.2937",
+          "title": "Nonparametric tests",
+          "authors": "Krzywinski M, Altman N",
+          "year": 2014,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "Describes rank-based tests, when they are appropriate and what their limitations are. A short reference to consult when your data are clearly non-normal."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Handbook of Biological Statistics: One-way ANOVA, Chi-square, and Kruskal-Wallis",
+          "provider": "John H. McDonald, University of Delaware",
+          "type": "textbook",
+          "url": "http://www.biostathandbook.com/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Practical chapters with biological examples and advice on which test to use."
+        },
+        {
+          "title": "GraphPad Statistics Guide",
+          "provider": "GraphPad Software",
+          "type": "reference",
+          "url": "https://www.graphpad.com/guides/prism/latest/statistics/index.htm",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free online guide that explains how each common test works and how to interpret its output, useful when analysing practical data."
+        },
+        {
+          "title": "Introductory Statistics 2e",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/introductory-statistics-2e",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes chapters on chi-square tests and one-way ANOVA with worked examples and exercises."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why is ANOVA preferred over several pairwise t-tests when comparing five groups?",
+          "options": [
+            "t-tests cannot be used on groups",
+            "Multiple t-tests inflate the overall false-positive rate",
+            "ANOVA gives smaller p-values",
+            "ANOVA does not need assumptions"
+          ],
+          "answer": 1,
+          "explanation": "Five groups require 10 pairwise comparisons; at alpha = 0.05 each, the chance of at least one false positive is far above 5 percent. ANOVA tests the overall hypothesis with one test."
+        },
+        {
+          "question": "In a cross expected to give 3:1, you observe 740 dominant and 260 recessive of 1000. What is the chi-square statistic?",
+          "options": [
+            "0.13",
+            "0.53",
+            "4.0",
+            "10"
+          ],
+          "answer": 1,
+          "explanation": "Expected counts are 750 and 250. Chi-square = 10^2/750 + 10^2/250 = 0.133 + 0.400 = 0.53, well below the 3.84 critical value for 1 degree of freedom."
+        },
+        {
+          "question": "Which test is most appropriate to compare two independent groups when the data are strongly skewed and n is small?",
+          "options": [
+            "Paired t-test",
+            "Mann-Whitney U test",
+            "Chi-square goodness-of-fit",
+            "One-way ANOVA with five groups"
+          ],
+          "answer": 1,
+          "explanation": "The Mann-Whitney test uses ranks and does not assume normality, so it suits small, skewed, independent samples."
+        }
+      ]
+    },
+    {
+      "id": "correlation-regression-calibration",
+      "title": "Correlation, Regression and Calibration Curves",
+      "hours": 6,
+      "hook": "Almost every concentration you will ever report was not measured directly: you measured absorbance or fluorescence and read the answer off a straight line fitted to standards. Knowing how that line is fitted, how reliable it is, and where it stops being valid is part of making a measurement trustworthy.",
+      "learningObjectives": [
+        "Calculate and interpret Pearson's correlation coefficient and distinguish correlation from causation.",
+        "Fit a least-squares line, interpret slope, intercept and R-squared, and examine residuals.",
+        "Build and use a calibration curve to estimate unknown concentrations and recognise its linear range.",
+        "Explain why linearising transformations such as Lineweaver-Burk can distort errors, and when to use non-linear regression.",
+        "Describe how outliers and extrapolation can mislead regression."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Pearson correlation (r)",
+          "definition": "A measure of linear association between two continuous variables, from -1 to +1; it says nothing about causation or non-linear relationships."
+        },
+        {
+          "term": "Least-squares regression",
+          "definition": "A method of choosing the line y = a + bx that minimises the sum of squared vertical distances (residuals) between the data and the line."
+        },
+        {
+          "term": "Slope and intercept",
+          "definition": "The slope is the change in y per unit change in x; the intercept is the predicted y at x = 0, which may or may not be meaningful."
+        },
+        {
+          "term": "R-squared",
+          "definition": "The proportion of variance in y explained by the model; a high value does not prove the model is correct or the relationship causal."
+        },
+        {
+          "term": "Residuals",
+          "definition": "Differences between observed and fitted values; a plot of residuals against fitted values should show no pattern if the model fits."
+        },
+        {
+          "term": "Calibration (standard) curve",
+          "definition": "A fit of signal (for example absorbance) against known concentrations, used to estimate unknown concentrations by reading the line backward; valid only within the range of the standards."
+        },
+        {
+          "term": "Beer-Lambert law",
+          "definition": "Absorbance A = epsilon c l is linear in concentration c for a given path length l, up to a limit set by high concentrations and instrument stray light."
+        },
+        {
+          "term": "Non-linear regression",
+          "definition": "Fitting curves such as v = Vmax[S]/(Km + [S]) directly to the data by numerical optimisation, rather than linearising them by transformation."
+        }
+      ],
+      "deeper": {
+        "beginner": "Correlation tells you how closely two measurements move together. A regression line is the best straight line through the points, and it lets you predict one measurement from another. In the lab you prepare solutions of known concentration, measure their absorbance, fit a line, and then use that line to work out the concentration of an unknown. Remember that a line is only trustworthy for the range of concentrations you actually tested.",
+        "intermediate": "Pearson's r measures linear association, and r squared is the fraction of variance shared. Two variables can be strongly related yet have r near zero if the relation is curved (a U-shape, for example), and a correlation can arise from a third variable, so correlation is not causation. In least-squares regression the slope b = covariance(x, y) / variance(x). For a protein assay, plot absorbance against known standard concentrations, check the residuals for curvature, then calculate unknown concentrations from the fitted line; if an unknown's absorbance is above the highest standard, dilute and repeat rather than extrapolate. Lineweaver-Burk (1/v against 1/[S]) turns Michaelis-Menten into a line but gives the greatest weight to the least reliable points at low substrate concentration, so fitting v against [S] by non-linear regression is better.",
+        "advanced": "Ordinary least squares assumes that x is measured without error, errors in y are independent with constant variance, and the relationship is linear. Heteroscedastic errors (variance growing with signal, common in assays) are handled by weighted regression or by log-transforming. Anscombe's quartet shows four datasets with identical means, variances, correlation and regression line but very different shapes, showing why plots are essential. Inverse prediction from a calibration line has a confidence interval that widens toward the ends of the range. For limit of detection and quantification, regulatory guidance uses the residual standard deviation and slope of the calibration. Model comparison for non-linear fits uses residual analysis and information criteria, and parameter confidence intervals are obtained from the covariance matrix or from bootstrap or profile-likelihood methods."
+      },
+      "commonMistakes": [
+        "Concluding that correlation implies causation, or that no correlation means no relationship.",
+        "Extrapolating a calibration line beyond the range of the standards.",
+        "Judging a fit by R-squared alone without looking at the residuals or the scatter plot.",
+        "Fitting a line through the origin or forcing a zero intercept without justification, or deleting inconvenient calibration points."
+      ],
+      "videos": [
+        {
+          "youtubeId": "PaFPbb66DxQ",
+          "title": "The Main Ideas of Fitting a Line to Data (The Main Ideas of Least Squares and Linear Regression.)",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "A nine-minute intuitive explanation of fitting a line by least squares."
+        },
+        {
+          "youtubeId": "bMccdk8EdGo",
+          "title": "R-squared, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "beginner",
+          "whyWatch": "Explains what R-squared measures and how to interpret it correctly."
+        },
+        {
+          "youtubeId": "xZ_z8KWkhXE",
+          "title": "Pearson's Correlation, Clearly Explained!!!",
+          "channel": "StatQuest with Josh Starmer",
+          "level": "intermediate",
+          "whyWatch": "Shows what Pearson's r measures and the relation between correlation and regression."
+        },
+        {
+          "youtubeId": "FGesqq22TCM",
+          "title": "Calculating the equation of a regression line",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Walks through calculating slope and intercept from summary statistics."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nmeth.3627",
+          "title": "Simple linear regression",
+          "authors": "Altman N, Krzywinski M",
+          "year": 2015,
+          "journal": "Nature Methods",
+          "level": "intermediate",
+          "whyItMatters": "A short, careful explanation of linear regression with biological examples, including residuals and uncertainty in the fit. A good companion to your first calibration-curve practical."
+        },
+        {
+          "doi": "10.1038/nmeth.3587",
+          "title": "Association, correlation and causation",
+          "authors": "Altman N, Krzywinski M",
+          "year": 2015,
+          "journal": "Nature Methods",
+          "level": "beginner",
+          "whyItMatters": "Clarifies the difference between association, correlation and causation, with simple examples. A useful antidote to over-interpreting a high r."
+        },
+        {
+          "doi": "10.1021/ja01318a036",
+          "title": "The Determination of Enzyme Dissociation Constants",
+          "authors": "Lineweaver H, Burk D",
+          "year": 1934,
+          "journal": "Journal of the American Chemical Society",
+          "level": "advanced",
+          "whyItMatters": "The paper that introduced the double-reciprocal plot, a linearisation of enzyme kinetics that dominated textbooks for decades. Reading it helps you appreciate both why it was useful by hand and why modern non-linear fitting is preferable."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET: Least-Squares Regression",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/least-squares-regression",
+          "free": true,
+          "level": "beginner",
+          "note": "Drag data points and watch the line, residuals and correlation update, building intuition about leverage and outliers."
+        },
+        {
+          "title": "PhET: Beer's Law Lab",
+          "provider": "PhET Interactive Simulations, University of Colorado Boulder",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/beers-law-lab",
+          "free": true,
+          "level": "beginner",
+          "note": "Vary concentration and path length to see absorbance change, the physical basis of a spectrophotometric calibration curve."
+        },
+        {
+          "title": "R for Data Science (2e)",
+          "provider": "Hadley Wickham, Mine Cetinkaya-Rundel and Garrett Grolemund",
+          "type": "textbook",
+          "url": "https://r4ds.hadley.nz/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free book for learning to import, plot and model data in R, a good way to move from hand calculations to reproducible analysis."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A standard curve covers 0 to 100 micrograms/mL of protein. An unknown gives an absorbance above that of the highest standard. What is the best action?",
+          "options": [
+            "Extrapolate the line",
+            "Dilute the unknown so that it falls within the standard range and measure again",
+            "Use the highest standard concentration",
+            "Force the line through the origin"
+          ],
+          "answer": 1,
+          "explanation": "The line is only validated within the tested range, where the response is linear; diluting the sample brings it inside the range, and the dilution factor is applied afterward."
+        },
+        {
+          "question": "Two variables have r = 0.95. Which conclusion is justified?",
+          "options": [
+            "One causes the other",
+            "They are strongly linearly associated, but causation cannot be inferred from correlation alone",
+            "The relationship must be linear",
+            "There is no confounding"
+          ],
+          "answer": 1,
+          "explanation": "A high correlation shows strong linear association only; a third variable or reverse causation could explain it, and a curved relationship could still be present."
+        },
+        {
+          "question": "Why is non-linear regression of v against [S] generally preferred to a Lineweaver-Burk plot for estimating Km and Vmax?",
+          "options": [
+            "It is faster by hand",
+            "The reciprocal transformation distorts error structure and gives the most weight to the least reliable low-rate points",
+            "Lineweaver-Burk cannot give Km",
+            "Non-linear regression uses fewer data"
+          ],
+          "answer": 1,
+          "explanation": "Taking reciprocals magnifies the error in small velocities, which dominate the line fit; fitting the original hyperbola directly respects the data's error structure."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "WUvTyaaNkzM",
+      "title": "The essence of calculus",
+      "channel": "3Blue1Brown",
+      "level": "beginner",
+      "whyWatch": "A beautifully visual overview of what calculus is for, which makes the derivative and integral units feel natural."
+    },
+    {
+      "youtubeId": "sxQaBpKfDRk",
+      "title": "What Is Statistics: Crash Course Statistics #1",
+      "channel": "CrashCourse",
+      "level": "beginner",
+      "whyWatch": "Introduces the purpose of statistics and the big ideas of the course in a friendly way."
+    },
+    {
+      "youtubeId": "42QuXLucH3Q",
+      "title": "Is Most Published Research Wrong?",
+      "channel": "Veritasium",
+      "level": "intermediate",
+      "whyWatch": "A thoughtful look at p-values, replication and bias in science that frames why careful statistics matters."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Calculus Volume 1",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/calculus-volume-1",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free, peer-reviewed calculus textbook for the derivative and integral units."
+    },
+    {
+      "title": "Introductory Statistics 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/introductory-statistics-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A free introductory statistics text covering descriptive statistics, probability, estimation, hypothesis testing, ANOVA and regression."
+    },
+    {
+      "title": "Handbook of Biological Statistics",
+      "provider": "John H. McDonald, University of Delaware",
+      "type": "textbook",
+      "url": "http://www.biostathandbook.com/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A practical guide written for biologists that tells you which test to use and how to interpret it."
+    }
+  ]
+}

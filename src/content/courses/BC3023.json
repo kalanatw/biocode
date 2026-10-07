@@ -1,0 +1,1408 @@
+{
+  "code": "BC 3023",
+  "title": "Metabolism II",
+  "level": 3,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Fats, amino acids, nucleotides and light: the rest of the metabolic map, and how the body keeps it all in balance.",
+  "overview": "Metabolism II continues from Metabolism I (bioenergetics, glucose metabolism, the citric acid cycle and oxidative phosphorylation) into the remaining major areas of metabolism: the breakdown and synthesis of lipids including cholesterol and lipoproteins, the handling of amino acid nitrogen and carbon skeletons, nucleotide synthesis and degradation, photosynthesis in plants and, finally, the integration and regulation of metabolism across organs in feeding, fasting and exercise. The split between Metabolism I and II follows the usual BSc Honours division. Throughout the course the emphasis is on pathway logic, regulation and the clinical consequences of enzyme defects.",
+  "whyItMatters": "Cardiovascular disease, fatty liver, diabetes, gout, inborn errors of metabolism and cancer treatments such as methotrexate all depend on the pathways in this course. Photosynthesis connects the biochemistry of energy to agriculture and food security, and integration is the key to understanding how a whole organism, rather than a single cell, responds to a meal or a fast.",
+  "prerequisites": [
+    "BC 3022"
+  ],
+  "careerLinks": [
+    "Clinical biochemistry and newborn metabolic screening",
+    "Pharmaceutical research on lipid-lowering, antimetabolite and anti-diabetic drugs",
+    "Nutrition science, dietetics and public health",
+    "Plant biotechnology and crop improvement",
+    "Postgraduate research in metabolic disease, cancer metabolism and synthetic biology"
+  ],
+  "studyTips": [
+    "Build a one-page 'metabolic map' early in the course and add each new pathway to it in a different colour; links between pathways (acetyl-CoA, glutamate, oxaloacetate) are where most exam questions hide.",
+    "For each pathway, learn one disease or drug that interrupts it; clinical stories fix enzymes and regulation in memory much better than lists.",
+    "Practise tracing a specific carbon or nitrogen atom through several pathways; it exposes gaps in understanding quickly.",
+    "When you study regulation, always ask how the control suits the physiology of the tissue involved (liver, muscle, adipose, brain)."
+  ],
+  "units": [
+    {
+      "id": "fatty-acid-oxidation-and-ketone-bodies",
+      "title": "Fat mobilisation, beta-oxidation and ketone bodies",
+      "hours": 4,
+      "hook": "Fat is the body's long-term fuel tank: more than twice the energy per gram of carbohydrate, stored dry in adipose tissue. A marathon runner at the thirty-kilometre mark, or a person who has not eaten for three days, survives on the slow and steady burn of fatty acids that this unit follows from fat cell to mitochondrial matrix.",
+      "learningObjectives": [
+        "Describe mobilisation of triacylglycerol from adipose tissue and its hormonal control",
+        "Explain activation of fatty acids and the carnitine shuttle as the regulated entry into mitochondria",
+        "Write the four reactions of the beta-oxidation spiral and calculate the ATP yield from palmitate",
+        "Explain how odd-chain and unsaturated fatty acids need extra enzymes",
+        "Describe peroxisomal oxidation and the clinical significance of defects such as MCAD deficiency",
+        "Explain ketogenesis and ketolysis, why they occur in fasting and why uncontrolled ketosis causes acidosis"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hormone-sensitive and adipose triglyceride lipases",
+          "definition": "Intracellular lipases release fatty acids and glycerol from stored triacylglycerol; glucagon and adrenaline stimulate lipolysis through cAMP and PKA while insulin suppresses it."
+        },
+        {
+          "term": "Fatty acyl-CoA synthetase",
+          "definition": "Activates a fatty acid to acyl-CoA at the cost of ATP converted to AMP and pyrophosphate, equivalent to two high-energy phosphate bonds."
+        },
+        {
+          "term": "Carnitine shuttle",
+          "definition": "CPT1 on the outer mitochondrial membrane converts acyl-CoA to acylcarnitine, a translocase moves it across, and CPT2 regenerates acyl-CoA in the matrix; CPT1 is the regulated step and is inhibited by malonyl-CoA."
+        },
+        {
+          "term": "Beta-oxidation cycle",
+          "definition": "Four repeated reactions (acyl-CoA dehydrogenase with FAD, enoyl-CoA hydratase, 3-hydroxyacyl-CoA dehydrogenase with NAD+, thiolase) shorten the chain by two carbons as acetyl-CoA each cycle."
+        },
+        {
+          "term": "Yield from palmitate",
+          "definition": "Palmitoyl-CoA gives seven FADH2, seven NADH and eight acetyl-CoA; with current P/O ratios the net yield is about 106 ATP after subtracting the two equivalents used for activation."
+        },
+        {
+          "term": "Odd-chain and unsaturated fatty acids",
+          "definition": "Propionyl-CoA from odd-chain fatty acids is converted via methylmalonyl-CoA (requiring biotin and vitamin B12) to succinyl-CoA, while unsaturated fatty acids need isomerase and reductase enzymes to handle cis double bonds."
+        },
+        {
+          "term": "Peroxisomal oxidation",
+          "definition": "Very-long-chain fatty acids and branched chains such as phytanic acid are shortened in peroxisomes, where the first oxidation produces hydrogen peroxide rather than FADH2 for the respiratory chain."
+        },
+        {
+          "term": "MCAD deficiency",
+          "definition": "A common inborn error of medium-chain acyl-CoA dehydrogenase causing fasting hypoglycaemia with low ketones, as fatty acid oxidation cannot support gluconeogenesis and ketogenesis."
+        },
+        {
+          "term": "Ketogenesis",
+          "definition": "In liver mitochondria excess acetyl-CoA is condensed to HMG-CoA and cleaved to acetoacetate, which can be reduced to beta-hydroxybutyrate or spontaneously decarboxylate to acetone."
+        },
+        {
+          "term": "Ketolysis",
+          "definition": "Extrahepatic tissues such as brain, heart and muscle convert acetoacetate to acetoacetyl-CoA using succinyl-CoA:acetoacetate CoA transferase, an enzyme the liver lacks, so the liver makes but cannot use ketone bodies."
+        }
+      ],
+      "deeper": {
+        "beginner": "When the body needs fuel between meals, fat cells release fatty acids into the blood. Muscle and liver cells take them in and chop them, two carbons at a time, into acetyl-CoA, collecting NADH and FADH2 on the way. In prolonged fasting the liver turns some acetyl-CoA into ketone bodies that the brain can use, saving glucose and muscle protein.",
+        "intermediate": "Fatty acids must be activated in the cytosol but oxidised in the matrix, so the carnitine shuttle is needed, and malonyl-CoA (the first intermediate in fatty acid synthesis) inhibits CPT1 so that synthesis and oxidation do not run simultaneously in the same cell. The thiolase step uses CoA to cleave the chain, conserving the energy of the thioester. A large part of the energy yield comes from the many acetyl-CoA that go through the citric acid cycle, so fatty acid oxidation depends on adequate oxaloacetate and an intact respiratory chain. During fasting the liver makes ketones because acetyl-CoA accumulates when oxaloacetate is diverted to gluconeogenesis; the brain uses ketones increasingly after several days, reducing its glucose requirement and so the breakdown of muscle protein. In diabetic ketoacidosis, lack of insulin leads to unrestrained lipolysis, ketone overproduction and a fall in blood pH.",
+        "advanced": "Mitochondrial beta-oxidation uses chain-length-specific acyl-CoA dehydrogenases (very-long, long, medium, short) and a trifunctional protein for long-chain substrates, which explains why defects show distinct phenotypes including cardiomyopathy and hypoketotic hypoglycaemia. Electron transfer from acyl-CoA dehydrogenases goes through ETF and ETF-ubiquinone oxidoreductase, so defects there (multiple acyl-CoA dehydrogenase deficiency) affect many pathways. Regulation is transcriptional as well: PPAR alpha is activated by fatty acids and induces genes for oxidation and ketogenesis in fasting liver, with HMG-CoA synthase 2 as a rate-controlling step. Ketone bodies are now recognised as signalling metabolites, with beta-hydroxybutyrate inhibiting histone deacetylases and binding to receptors, as outlined in the Puchalska and Crawford review. Lipid oxidation also contributes to disease when intermediates accumulate, for example acylcarnitines in insulin resistance, so flux and capacity must be matched."
+      },
+      "commonMistakes": [
+        "Forgetting that activation costs two ATP-equivalents (ATP to AMP) and omitting it from the energy balance",
+        "Claiming that fatty acids can be converted to glucose in animals; acetyl-CoA cannot give net oxaloacetate",
+        "Saying the liver uses ketone bodies for energy; it lacks the transferase and exports them for other tissues",
+        "Confusing malonyl-CoA's role: it inhibits CPT1 and so blocks fatty acid entry to mitochondria, preventing a futile cycle with synthesis"
+      ],
+      "videos": [
+        {
+          "youtubeId": "OyQ1cgBw8HA",
+          "title": "Metabolism | Fatty Acid Oxidation: Part 1",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A detailed first part covering lipolysis, activation and the carnitine shuttle."
+        },
+        {
+          "youtubeId": "VI4xEXJZwXA",
+          "title": "Human Metabolism Map VII - Fatty Acid Degradation",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "A concise hand-drawn overview of the beta-oxidation spiral that is easy to copy as a revision sketch."
+        },
+        {
+          "youtubeId": "C-k_Ehv0jbs",
+          "title": "The Carnitine Shuttle | Cytosol-Mitochondrial Fatty Acid Transport",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Focuses on the CPT1/CPT2 steps and why the shuttle is the regulatory gateway."
+        },
+        {
+          "youtubeId": "bBzj4rCKSc8",
+          "title": "Human Metabolism Map VIII - Ketone Body Production",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "Short drawn explanation of ketogenesis in the liver and when it is triggered."
+        },
+        {
+          "youtubeId": "BlR9DkUAUkI",
+          "title": "Metabolism | Ketone Metabolism",
+          "channel": "Ninja Nerd",
+          "level": "advanced",
+          "whyWatch": "Covers ketogenesis, ketolysis and the clinical picture of ketoacidosis in depth."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1007/s10545-010-9061-2",
+          "title": "A general introduction to the biochemistry of mitochondrial fatty acid beta-oxidation",
+          "authors": "Houten SM, Wanders RJA",
+          "year": 2010,
+          "journal": "Journal of Inherited Metabolic Disease",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2950079/",
+          "whyItMatters": "A clear, well-illustrated review that links each enzymatic step to the inherited disorders that arise from its absence. It is a good bridge between the textbook cycle and clinical biochemistry.",
+          "readingQuestions": [
+            "Which enzyme deficiencies would you expect to cause cardiomyopathy and why?",
+            "How does the review explain the regulation of entry into the pathway?"
+          ]
+        },
+        {
+          "doi": "10.1016/j.cmet.2016.12.022",
+          "title": "Multi-dimensional Roles of Ketone Bodies in Fuel Metabolism, Signaling, and Therapeutics",
+          "authors": "Puchalska P, Crawford PA",
+          "year": 2017,
+          "journal": "Cell Metabolism",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5313038/",
+          "whyItMatters": "Shows that ketone bodies are more than an emergency fuel: they also act as signals that influence gene expression and inflammation. Useful if you want to see how a textbook pathway is being reinterpreted.",
+          "readingQuestions": [
+            "Which tissues oxidise ketone bodies and which cannot?",
+            "What non-fuel roles of beta-hydroxybutyrate are described?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Fatty Acid Metabolism chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Covers fatty acid oxidation, ketone bodies and their regulation with structures; locate the fatty acid metabolism chapter in the contents."
+        },
+        {
+          "title": "LIPID MAPS",
+          "provider": "LIPID MAPS Consortium",
+          "type": "database",
+          "url": "https://www.lipidmaps.org",
+          "free": true,
+          "level": "advanced",
+          "note": "A structured database of lipids with classification and pathway information, useful for looking up acylcarnitines and fatty acid structures."
+        },
+        {
+          "title": "MIT 5.07SC Biological Chemistry I",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "advanced",
+          "note": "Video lectures with a segment on fatty acid beta-oxidation and special cases."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which molecule inhibits CPT1 and thereby prevents newly made fatty acids from being oxidised straight away?",
+          "options": [
+            "Acetyl-CoA",
+            "Malonyl-CoA",
+            "Carnitine",
+            "Citrate"
+          ],
+          "answer": 1,
+          "explanation": "Malonyl-CoA, produced by acetyl-CoA carboxylase in fatty acid synthesis, inhibits CPT1, blocking entry of acyl groups into mitochondria and avoiding a futile cycle."
+        },
+        {
+          "question": "How many FADH2 and NADH are produced when palmitoyl-CoA (16 carbons) is completely converted to acetyl-CoA?",
+          "options": [
+            "8 FADH2 and 8 NADH",
+            "7 FADH2 and 7 NADH",
+            "16 FADH2 and 16 NADH",
+            "7 FADH2 and 8 NADH"
+          ],
+          "answer": 1,
+          "explanation": "Sixteen carbons need seven cleavage cycles to yield eight acetyl-CoA; each cycle gives one FADH2 and one NADH."
+        },
+        {
+          "question": "Why can the liver not use the ketone bodies it produces?",
+          "options": [
+            "It lacks succinyl-CoA:acetoacetate CoA transferase",
+            "It lacks HMG-CoA lyase",
+            "Ketone bodies cannot enter liver cells",
+            "Liver mitochondria lack the citric acid cycle"
+          ],
+          "answer": 0,
+          "explanation": "The liver does not express the transferase needed to activate acetoacetate to acetoacetyl-CoA, so it exports ketone bodies for use by brain, heart and muscle."
+        }
+      ]
+    },
+    {
+      "id": "lipid-biosynthesis-cholesterol-lipoproteins",
+      "title": "Lipid biosynthesis, cholesterol and lipoproteins",
+      "hours": 5,
+      "hook": "After a rich meal your liver turns surplus carbohydrate into fat, packages it with cholesterol into particles of VLDL and ships it to every tissue in the body. The same chain of events, when it is out of balance, narrows arteries; getting to the bottom of that story won two Nobel Prizes and gave us statins.",
+      "learningObjectives": [
+        "Describe how acetyl-CoA is exported from mitochondria as citrate and how NADPH is provided for lipogenesis",
+        "Outline the reactions of acetyl-CoA carboxylase and fatty acid synthase and how they are regulated",
+        "Explain elongation and desaturation and why linoleic and alpha-linolenic acids are essential",
+        "Describe the synthesis of triacylglycerols and the main glycerophospholipids",
+        "Outline cholesterol biosynthesis from acetyl-CoA through mevalonate and squalene and the regulation of HMG-CoA reductase",
+        "Describe the formation and fate of chylomicrons, VLDL, LDL and HDL and the LDL receptor pathway"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Citrate shuttle",
+          "definition": "Citrate exported from mitochondria is cleaved by ATP-citrate lyase to give cytosolic acetyl-CoA and oxaloacetate, linking carbohydrate abundance to fatty acid synthesis."
+        },
+        {
+          "term": "Acetyl-CoA carboxylase (ACC)",
+          "definition": "A biotin-dependent enzyme making malonyl-CoA, the committed step; it is activated by citrate and insulin-driven dephosphorylation and inhibited by palmitoyl-CoA and by AMPK or glucagon-linked phosphorylation."
+        },
+        {
+          "term": "Fatty acid synthase",
+          "definition": "In animals a large multifunctional enzyme that builds palmitate from one acetyl-CoA and seven malonyl-CoA using 14 NADPH, with the growing chain tethered to an acyl carrier protein domain."
+        },
+        {
+          "term": "NADPH supply",
+          "definition": "The pentose phosphate pathway and cytosolic malic enzyme provide the reducing power for lipogenesis."
+        },
+        {
+          "term": "Elongation and desaturation",
+          "definition": "Endoplasmic reticulum enzymes extend palmitate and introduce double bonds, but humans lack enzymes for double bonds beyond carbon 9, making linoleic acid and alpha-linolenic acid dietary essentials."
+        },
+        {
+          "term": "Triacylglycerol and phospholipid synthesis",
+          "definition": "Fatty acyl-CoA is added to glycerol 3-phosphate to form phosphatidic acid, which is dephosphorylated to diacylglycerol and then either acylated to give triacylglycerol or combined with activated head groups, such as CDP-choline, for phospholipids."
+        },
+        {
+          "term": "Cholesterol synthesis",
+          "definition": "Three acetyl-CoA form HMG-CoA, which HMG-CoA reductase converts to mevalonate, followed by isoprene units, squalene and cyclisation to lanosterol and finally cholesterol."
+        },
+        {
+          "term": "Regulation of HMG-CoA reductase",
+          "definition": "Controlled by SREBP-2-mediated transcription, sterol-induced degradation of the enzyme, phosphorylation by AMPK and inhibition by statins, which are competitive inhibitors."
+        },
+        {
+          "term": "Lipoproteins",
+          "definition": "Chylomicrons carry dietary fat from gut, VLDL carries hepatic triacylglycerol, LDL (from VLDL remnants) delivers cholesterol to cells and HDL returns cholesterol to the liver in reverse transport; apolipoproteins direct receptor binding and enzyme activation."
+        },
+        {
+          "term": "LDL receptor pathway",
+          "definition": "LDL binds its receptor through apoB-100, is internalised by endocytosis and releases cholesterol, which suppresses further synthesis; defects cause familial hypercholesterolaemia, and PCSK9 promotes receptor degradation."
+        }
+      ],
+      "deeper": {
+        "beginner": "When we eat more energy than we use, the liver and fat cells turn the extra into fat. The raw material is acetyl-CoA, which is built up two carbons at a time into fatty acids and then attached to glycerol to make triacylglycerol. Cholesterol is also made from acetyl-CoA and is vital for membranes and hormones, but too much of it in LDL particles can lead to blocked arteries.",
+        "intermediate": "Fatty acid synthesis is not the reverse of oxidation: it occurs in the cytosol, uses NADPH, malonyl-CoA and an acyl carrier protein, and is under reciprocal control with oxidation through malonyl-CoA. Acetyl-CoA carboxylase is controlled by allosteric effectors, phosphorylation (AMPK, PKA) and long-term induction by insulin and SREBP-1c. Triacylglycerols are exported from the liver in VLDL and cleared by lipoprotein lipase, activated by apoC-II, in capillaries; the remnants give rise to LDL. HDL particles collect cholesterol from tissues and, with LCAT esterifying it, return it to the liver. The LDL receptor pathway, discovered by Brown and Goldstein, shows how receptor-mediated endocytosis regulates cell cholesterol; statins reduce hepatic synthesis, which upregulates LDL receptors and lowers plasma LDL.",
+        "advanced": "HMG-CoA reductase is among the most tightly regulated enzymes known, controlled at transcription, translation, degradation (through Insig and ubiquitination in response to sterols and nonsterol isoprenoids) and phosphorylation. The two-step reduction uses two NADPH and proceeds through a thiohemiacetal, and statins mimic the HMG moiety. SREBP-1c, SREBP-2 and ChREBP are central transcriptional regulators: ChREBP responds to glucose metabolites, SREBP-1c to insulin and LXR, and SREBP-2 to cholesterol. In fatty liver disease, de novo lipogenesis is elevated and contributes to hepatic triacylglycerol accumulation despite insulin resistance in other pathways, a paradox known as selective insulin resistance. Lipoprotein metabolism is also a pharmacological hotbed: inhibitors of PCSK9 and CETP, and variants of ANGPTL3 and APOC3, show how human genetics guides drug targets, as covered in the Goldstein and Brown review."
+      },
+      "commonMistakes": [
+        "Describing fatty acid synthesis as the reverse of beta-oxidation; the enzymes, location, carrier and reductant all differ",
+        "Calling LDL 'bad' and HDL 'good' without explaining the transport direction: LDL delivers cholesterol to tissues, HDL helps return it to the liver",
+        "Believing statins block the whole pathway equally; they inhibit HMG-CoA reductase, so isoprenoid products as well as cholesterol are reduced",
+        "Forgetting that ATP-citrate lyase and the citrate shuttle link lipid synthesis to the energy state of the cell"
+      ],
+      "videos": [
+        {
+          "youtubeId": "nBFSz63T1c0",
+          "title": "Metabolism | Fatty Acid Synthesis: Part 1",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Draws the citrate shuttle, ACC and fatty acid synthase steps in order with their regulation."
+        },
+        {
+          "youtubeId": "wNjXvXtBWQQ",
+          "title": "Human Metabolism Map V - Fatty Acid Synthesis",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "A short drawn summary that helps you place fatty acid synthesis within the whole metabolic map."
+        },
+        {
+          "youtubeId": "nurZ2nNovp8",
+          "title": "Metabolism | Cholesterol Metabolism",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Follows cholesterol synthesis and regulation and what statins do to them."
+        },
+        {
+          "youtubeId": "9dghtf7Z7fw",
+          "title": "Cholesterol Metabolism, LDL, HDL and other Lipoproteins, Animation",
+          "channel": "Alila Medical Media",
+          "level": "beginner",
+          "whyWatch": "A short animation that makes the lipoprotein traffic between gut, liver and tissues easy to picture."
+        },
+        {
+          "youtubeId": "PkKH8lTxvzA",
+          "title": "Physiology of Lipoproteins Cholesterol",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "A drawn walk through chylomicrons, VLDL, LDL and HDL and their apolipoproteins."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2015.01.036",
+          "title": "A Century of Cholesterol and Coronaries: From Plaques to Genes to Statins",
+          "authors": "Goldstein JL, Brown MS",
+          "year": 2015,
+          "journal": "Cell",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4525717/",
+          "whyItMatters": "Written by the two scientists who uncovered the LDL receptor, this is both a history of how cholesterol biochemistry became medicine and a lesson in how basic research leads to drugs.",
+          "readingQuestions": [
+            "How did studying a rare genetic disease reveal a general mechanism for cholesterol regulation?",
+            "What was the logic behind developing an inhibitor of HMG-CoA reductase?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.3513311",
+          "title": "A Receptor-Mediated Pathway for Cholesterol Homeostasis",
+          "authors": "Brown MS, Goldstein JL",
+          "year": 1986,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The Nobel lecture in which Brown and Goldstein explain the LDL receptor pathway, with the experiments that built the model of feedback regulation by receptor-mediated endocytosis.",
+          "readingQuestions": [
+            "What did cells from patients with familial hypercholesterolaemia lack?",
+            "How does cholesterol released from LDL regulate synthesis and receptor expression?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.1161269",
+          "title": "The Crystal Structure of a Mammalian Fatty Acid Synthase",
+          "authors": "Maier T, Leibundgut M, Ban N",
+          "year": 2008,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The first complete structure of the animal fatty acid synthase showed how one giant protein arranges seven catalytic domains and a flexible carrier domain to build palmitate, making the assembly-line idea concrete.",
+          "readingQuestions": [
+            "How does the arrangement of domains in the homodimer allow the carrier domain to reach every active site?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Lipid Biosynthesis chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes fatty acid synthesis, membrane lipids, cholesterol and lipoprotein transport; search for the lipid biosynthesis chapter."
+        },
+        {
+          "title": "LIPID MAPS",
+          "provider": "LIPID MAPS Consortium",
+          "type": "database",
+          "url": "https://www.lipidmaps.org",
+          "free": true,
+          "level": "advanced",
+          "note": "Look up structures and classification for cholesterol, phospholipids and fatty acids."
+        },
+        {
+          "title": "MIT 5.08J Biological Chemistry II (cholesterol biosynthesis lectures)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-08j-biological-chemistry-ii-spring-2016/",
+          "free": true,
+          "level": "advanced",
+          "note": "A sequence of lectures on cholesterol biosynthesis and homeostasis suitable for going beyond the course."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which compound carries acetyl units from the mitochondrion to the cytosol for fatty acid synthesis?",
+          "options": [
+            "Acetyl-CoA directly",
+            "Citrate",
+            "Carnitine",
+            "Malate only"
+          ],
+          "answer": 1,
+          "explanation": "Acetyl-CoA cannot cross the inner mitochondrial membrane; it leaves as citrate, which ATP-citrate lyase cleaves in the cytosol back to acetyl-CoA and oxaloacetate."
+        },
+        {
+          "question": "How many NADPH are consumed to make one palmitate from acetyl-CoA and malonyl-CoA?",
+          "options": [
+            "7",
+            "8",
+            "14",
+            "16"
+          ],
+          "answer": 2,
+          "explanation": "Each of the seven rounds of elongation uses two reductive steps, each requiring one NADPH, giving fourteen in total."
+        },
+        {
+          "question": "Statins lower plasma LDL cholesterol mainly because they:",
+          "options": [
+            "Increase hepatic LDL receptors by lowering intracellular cholesterol synthesis",
+            "Block intestinal absorption of cholesterol directly",
+            "Degrade LDL particles in plasma",
+            "Increase beta-oxidation of cholesterol"
+          ],
+          "answer": 0,
+          "explanation": "By inhibiting HMG-CoA reductase, statins reduce hepatic cholesterol, which activates SREBP-2 and increases LDL receptor expression, so more LDL is cleared from plasma."
+        }
+      ]
+    },
+    {
+      "id": "amino-acid-catabolism-and-urea-cycle",
+      "title": "Amino acid catabolism and the urea cycle",
+      "hours": 4,
+      "hook": "Ammonia is a tiny molecule that is toxic to the brain, yet your body must constantly break down amino acids and deal with the nitrogen that comes off them. The urea cycle, discovered by Hans Krebs several years before the citric acid cycle, is the liver's elegant answer to the question of how to dispose of nitrogen safely.",
+      "learningObjectives": [
+        "Describe digestion of proteins and the intracellular turnover of proteins as sources of amino acids",
+        "Explain transamination and oxidative deamination, including the roles of PLP and glutamate dehydrogenase",
+        "Describe how ammonia is transported safely as glutamine and alanine",
+        "Write the reactions of the urea cycle and show where it links to the citric acid cycle",
+        "Explain the regulation of the urea cycle and the consequences of its defects",
+        "Classify amino acids as glucogenic or ketogenic and trace carbon skeletons to the seven entry points of central metabolism"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Transamination",
+          "definition": "Aminotransferases using pyridoxal phosphate shift an amino group from an amino acid to alpha-ketoglutarate, giving glutamate and a new keto acid; the reaction is freely reversible."
+        },
+        {
+          "term": "Glutamate dehydrogenase",
+          "definition": "A mitochondrial enzyme that oxidatively deaminates glutamate to alpha-ketoglutarate and ammonium, using NAD+ or NADP+; it collects nitrogen from many amino acids, and is allosterically activated by ADP and inhibited by GTP."
+        },
+        {
+          "term": "Ammonia toxicity",
+          "definition": "Free ammonia is toxic, particularly to the nervous system, so it is carried in blood in non-toxic forms such as glutamine and, from muscle, alanine."
+        },
+        {
+          "term": "Glutamine and alanine transport",
+          "definition": "Glutamine synthetase traps ammonia in tissues as glutamine, while the glucose-alanine cycle moves nitrogen from muscle to liver together with pyruvate carbon."
+        },
+        {
+          "term": "Carbamoyl phosphate synthetase I",
+          "definition": "The mitochondrial regulated enzyme of the urea cycle, which makes carbamoyl phosphate from ammonia, bicarbonate and two ATP and is activated by N-acetylglutamate."
+        },
+        {
+          "term": "Urea cycle",
+          "definition": "Ornithine transcarbamylase, argininosuccinate synthetase, argininosuccinate lyase and arginase convert ornithine to citrulline, argininosuccinate, arginine and urea, regenerating ornithine; one nitrogen comes from ammonia and one from aspartate."
+        },
+        {
+          "term": "Energy cost and link to citric acid cycle",
+          "definition": "Urea synthesis consumes four high-energy phosphate bonds per urea, and the fumarate released can enter the citric acid cycle, a connection sometimes called the Krebs bicycle."
+        },
+        {
+          "term": "Glucogenic and ketogenic amino acids",
+          "definition": "Amino acids whose skeletons become pyruvate or citric acid cycle intermediates can supply glucose, while leucine and lysine are exclusively ketogenic and some, such as phenylalanine and tyrosine, are both."
+        },
+        {
+          "term": "Inborn errors of amino acid catabolism",
+          "definition": "Phenylketonuria (phenylalanine hydroxylase) and maple syrup urine disease (branched-chain keto acid dehydrogenase) illustrate how a single enzyme defect disrupts a whole pathway and are detected by newborn screening."
+        },
+        {
+          "term": "Urea cycle disorders",
+          "definition": "Deficiencies of urea cycle enzymes cause hyperammonaemia with lethargy, vomiting and neurological damage, and are managed by diet and nitrogen-scavenging drugs."
+        }
+      ],
+      "deeper": {
+        "beginner": "When we eat more protein than we need, or break down our own proteins during fasting, the amino groups must be removed. Specific enzymes pass the amino group onto a carrier, finally forming ammonia, which the liver converts to urea, a harmless molecule that the kidneys excrete. The carbon left over is burned for energy or turned into glucose or fat.",
+        "intermediate": "Most amino acids are transaminated with alpha-ketoglutarate to give glutamate, concentrating nitrogen into one molecule, whose amino group is released as ammonium by glutamate dehydrogenase in liver mitochondria. Aspartate, formed by transamination of oxaloacetate, supplies the second urea nitrogen through argininosuccinate synthetase. The first two reactions occur in mitochondria and the rest in the cytosol, which means that citrulline and ornithine must be transported across the inner membrane. The cycle is regulated at CPS I by N-acetylglutamate, whose synthesis is stimulated by arginine and by high glutamate, and by enzyme induction when protein intake is high. Branched-chain amino acids are catabolised mainly in muscle, not liver, and their keto acid dehydrogenase resembles PDH, which is why thiamine and lipoate are relevant.",
+        "advanced": "PLP is a versatile cofactor forming a Schiff base (aldimine) with the lysine of the enzyme, then with the substrate, and acting as an electron sink to stabilise a carbanion intermediate; the same cofactor therefore supports transamination, decarboxylation, racemisation and elimination reactions, as detailed in the Eliot and Kirsch review. Hyperammonaemia affects the brain through glutamine accumulation in astrocytes, osmotic swelling and disruption of neurotransmitter balance. The urea cycle is only one example of nitrogen handling: in birds and reptiles uric acid is the main excretory product, and in fish ammonia is excreted directly, showing how nitrogen excretion tracks water availability. Hepatic zonation matters: periportal hepatocytes carry out the urea cycle and perivenous cells express glutamine synthetase, forming an ammonia detoxification relay. Catabolic pathways of individual amino acids are best organised by where their skeletons enter: acetyl-CoA, acetoacetyl-CoA, pyruvate, alpha-ketoglutarate, succinyl-CoA, fumarate and oxaloacetate."
+      },
+      "commonMistakes": [
+        "Describing transamination as removing ammonia; it only moves the amino group, and the nitrogen is released as ammonium by deamination",
+        "Placing the entire urea cycle in the mitochondrion; the first two steps are mitochondrial and the rest are cytosolic",
+        "Forgetting that aspartate provides the second nitrogen of urea",
+        "Treating leucine as a source of glucose; as a purely ketogenic amino acid it cannot give net glucose carbon"
+      ],
+      "videos": [
+        {
+          "youtubeId": "0M-B2dOfcUo",
+          "title": "Metabolism | Amino Acid Metabolism",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A broad lecture on transamination, deamination, ammonia transport and the fates of carbon skeletons."
+        },
+        {
+          "youtubeId": "XZEJ5PNvjkk",
+          "title": "Metabolism | Urea Cycle",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "Draws the urea cycle with locations, enzymes, regulation and associated disorders."
+        },
+        {
+          "youtubeId": "61ZVXmh6ae0",
+          "title": "PLP (Pyridoxal Phosphate) Reactions",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A lecture segment from MIT on the chemistry of PLP, explaining why the cofactor catalyses so many amino acid reactions."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.biochem.73.011303.074021",
+          "title": "Pyridoxal Phosphate Enzymes: Mechanistic, Structural, and Evolutionary Considerations",
+          "authors": "Eliot AC, Kirsch JF",
+          "year": 2004,
+          "journal": "Annual Review of Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "A comprehensive review of how one cofactor supports a whole family of enzymes; helpful for understanding the mechanism behind transamination and decarboxylation questions.",
+          "readingQuestions": [
+            "Why does the PLP-substrate adduct stabilise a negative charge on the alpha carbon?",
+            "How do enzymes direct PLP chemistry toward one reaction type rather than another?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Amino Acid Degradation and the Urea Cycle, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A full chapter with the reactions and regulation of amino acid catabolism and the urea cycle."
+        },
+        {
+          "title": "Reactome pathway browser",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org",
+          "free": true,
+          "level": "advanced",
+          "note": "Search for urea cycle or branched-chain amino acid catabolism to see compartments, enzymes and associated diseases."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which two molecules provide the two nitrogen atoms of urea?",
+          "options": [
+            "Ammonia and aspartate",
+            "Glutamine and glycine",
+            "Two molecules of ammonia",
+            "Alanine and glutamate"
+          ],
+          "answer": 0,
+          "explanation": "One nitrogen enters as ammonia through carbamoyl phosphate and the other is donated by aspartate in the argininosuccinate synthetase step."
+        },
+        {
+          "question": "Which enzyme is the allosterically regulated, committed step of the urea cycle?",
+          "options": [
+            "Arginase",
+            "Ornithine transcarbamylase",
+            "Carbamoyl phosphate synthetase I",
+            "Argininosuccinate lyase"
+          ],
+          "answer": 2,
+          "explanation": "CPS I needs N-acetylglutamate as an activator, linking urea formation to the supply of glutamate and arginine."
+        },
+        {
+          "question": "What is the main role of glutamine in nitrogen metabolism?",
+          "options": [
+            "It stores energy as a phosphate donor",
+            "It carries ammonia non-toxically in blood between tissues",
+            "It is the only amino acid made from ammonia in the liver",
+            "It transfers carbon units to folate"
+          ],
+          "answer": 1,
+          "explanation": "Glutamine synthetase adds ammonia to glutamate to make glutamine, a neutral molecule that can be transported safely and releases ammonia again in liver and kidney."
+        }
+      ]
+    },
+    {
+      "id": "amino-acid-biosynthesis-and-one-carbon-metabolism",
+      "title": "Amino acid biosynthesis, one-carbon metabolism and specialised products",
+      "hours": 4,
+      "hook": "Humans can make eleven of the twenty protein amino acids, and must get the other nine from food; plants and microbes can make all of them. Between those two facts sits a lot of elegant chemistry: how nitrogen gets into carbon skeletons, how single carbon atoms are passed around on folate, and how amino acids become neurotransmitters, haem and glutathione.",
+      "learningObjectives": [
+        "Describe how inorganic nitrogen enters organic molecules through glutamate dehydrogenase, glutamine synthetase and glutamate synthase",
+        "Explain biological nitrogen fixation and why it is energetically expensive",
+        "Outline the biosynthesis of non-essential amino acids from metabolic intermediates and list the essential amino acids",
+        "Describe the roles of tetrahydrofolate, S-adenosylmethionine and vitamin B12 in one-carbon transfers",
+        "Describe the conversion of amino acids into specialised biomolecules including haem, creatine, glutathione, catecholamines and nitric oxide",
+        "Relate defects or deficiencies, such as phenylketonuria and folate deficiency, to the underlying biochemistry"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Nitrogen fixation",
+          "definition": "Certain bacteria use nitrogenase to reduce atmospheric N2 to ammonia at the cost of large amounts of ATP and reducing power, and this ammonia is the ultimate source of biological nitrogen."
+        },
+        {
+          "term": "Glutamine synthetase and glutamate synthase",
+          "definition": "Glutamine synthetase uses ATP to add ammonia to glutamate, and glutamate synthase (GOGAT) transfers the amide nitrogen to alpha-ketoglutarate, assimilating nitrogen into the amino acid pool."
+        },
+        {
+          "term": "Essential amino acids",
+          "definition": "Histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan and valine cannot be synthesised by humans in adequate amounts and must be eaten."
+        },
+        {
+          "term": "Precursor families",
+          "definition": "Non-essential amino acids derive from a few intermediates: pyruvate (alanine), oxaloacetate (aspartate, asparagine), alpha-ketoglutarate (glutamate, glutamine, proline, arginine) and 3-phosphoglycerate (serine, glycine, cysteine with sulfur from methionine)."
+        },
+        {
+          "term": "Tyrosine from phenylalanine",
+          "definition": "Phenylalanine hydroxylase, which uses tetrahydrobiopterin and oxygen, converts phenylalanine to tyrosine, and a defect leads to phenylketonuria."
+        },
+        {
+          "term": "Tetrahydrofolate (THF)",
+          "definition": "A carrier of one-carbon units at different oxidation levels, with serine as the main donor, used in the synthesis of purines, thymidylate and methionine."
+        },
+        {
+          "term": "S-adenosylmethionine (SAM)",
+          "definition": "The universal methyl donor for methylation of DNA, RNA, proteins, phospholipids and small molecules, made from methionine and ATP."
+        },
+        {
+          "term": "Methionine cycle and vitamin B12",
+          "definition": "Methionine synthase uses B12 to transfer a methyl group from methyl-THF to homocysteine, regenerating methionine; B12 deficiency traps folate and causes megaloblastic anaemia."
+        },
+        {
+          "term": "Specialised derivatives",
+          "definition": "Glycine and succinyl-CoA give haem, arginine and glycine give creatine, glutamate-cysteine-glycine make glutathione, tyrosine gives catecholamines, tryptophan gives serotonin and arginine gives nitric oxide."
+        },
+        {
+          "term": "Transsulfuration",
+          "definition": "Homocysteine condenses with serine to eventually give cysteine, so cysteine is conditionally essential depending on methionine supply, and defects raise homocysteine."
+        }
+      ],
+      "deeper": {
+        "beginner": "Plants and bacteria build all their amino acids from simple starting materials, but humans have lost the ability to make about half of them, so we depend on protein in the diet. The nitrogen comes from ammonia, which is attached to carbon skeletons borrowed from sugar breakdown. Amino acids are also raw materials for many other molecules, such as haem in blood, adrenaline and the neurotransmitter serotonin.",
+        "intermediate": "Assimilation of ammonia into glutamate and glutamine is the gateway, and from these two almost all other nitrogen enters amino acids by transamination. The pathways for non-essential amino acids are short and run off central intermediates, whereas pathways for essential amino acids are long and often absent in animals. Tetrahydrofolate carries one-carbon units at the oxidation levels of methyl, methylene, methenyl and formyl, supplying carbon for purine rings, thymidylate and the regeneration of methionine. The methyl-folate trap explains why vitamin B12 deficiency produces a functional folate deficiency, and why folic acid supplements can mask the haematological sign of B12 deficiency. Specialised products illustrate how a few amino acids support large biochemical areas: haem, neurotransmitters, creatine, glutathione and nitric oxide.",
+        "advanced": "Serine hydroxymethyltransferase, together with the glycine cleavage system, is a major supplier of one-carbon units, and the compartmentalised mitochondrial and cytosolic one-carbon pathways are active in proliferating cells, as described by Ducker and Rabinowitz. Antifolates such as methotrexate inhibit dihydrofolate reductase and so deplete THF for thymidylate and purine synthesis, exploiting the high demand of dividing cells. Phenylalanine hydroxylase depends on tetrahydrobiopterin, so BH4 synthesis defects can cause hyperphenylalaninaemia that does not respond to dietary restriction alone. Methylation reactions linked to SAM feed into epigenetic regulation, making one-carbon metabolism a link between diet and gene expression. Glutamine is also a major anaplerotic and nitrogen donor in rapidly dividing cells, and glutaminase is a target in cancer research."
+      },
+      "commonMistakes": [
+        "Listing the essential amino acids as fixed for all circumstances; some, like arginine, are conditionally essential in growth or illness",
+        "Treating folate and vitamin B12 as unrelated; the methionine synthase reaction ties them together",
+        "Believing humans fix nitrogen; only certain prokaryotes carry nitrogenase",
+        "Forgetting that cysteine's sulfur comes from methionine in mammals"
+      ],
+      "videos": [
+        {
+          "youtubeId": "IlnI5-08U8E",
+          "title": "Metabolism | The Metabolic Map: Proteins",
+          "channel": "Ninja Nerd",
+          "level": "beginner",
+          "whyWatch": "A map-style overview of how amino acids are made, used and interconverted, to place the detailed pathways in context."
+        },
+        {
+          "youtubeId": "sXOuQY3Vrq0",
+          "title": "Biochemistry | Glutamine Synthetase - Biosynthesis of Glutamine",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Shows the mechanism of the key nitrogen-assimilating enzyme in a few clear minutes."
+        },
+        {
+          "youtubeId": "JmWrtzoe9pU",
+          "title": "One Carbon Metabolism | Tetrahydrofolate and the Folate Cycle",
+          "channel": "JJ Medicine",
+          "level": "intermediate",
+          "whyWatch": "Explains how THF carries carbon units and why folate and B12 interact."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cmet.2016.08.009",
+          "title": "One-Carbon Metabolism in Health and Disease",
+          "authors": "Ducker GS, Rabinowitz JD",
+          "year": 2017,
+          "journal": "Cell Metabolism",
+          "level": "advanced",
+          "whyItMatters": "A contemporary review of folate-dependent metabolism, explaining why one-carbon units are central to growth, methylation and redox balance, and how antifolate drugs work.",
+          "readingQuestions": [
+            "Which cellular compartments run parallel folate pathways, and why?",
+            "How is one-carbon metabolism altered in cancer cells?"
+          ]
+        },
+        {
+          "doi": "10.1007/s00726-009-0269-0",
+          "title": "Amino acids: metabolism, functions, and nutrition",
+          "authors": "Wu G",
+          "year": 2009,
+          "journal": "Amino Acids",
+          "level": "intermediate",
+          "whyItMatters": "A broad review of what amino acids do beyond making proteins, including regulation of gene expression, signalling and synthesis of specialised molecules; good for linking this unit to nutrition.",
+          "readingQuestions": [
+            "Which amino acids does the review describe as conditionally essential, and when?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Amino Acid Biosynthesis, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapter on the biosynthesis of amino acids and their products, including nitrogen fixation and one-carbon units."
+        },
+        {
+          "title": "KEGG PATHWAY database",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse the amino acid metabolism maps to see which species can make which amino acids."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which of the following is an essential amino acid for humans?",
+          "options": [
+            "Alanine",
+            "Tyrosine",
+            "Valine",
+            "Serine"
+          ],
+          "answer": 2,
+          "explanation": "Valine is one of the nine essential amino acids. Alanine and serine are made from glycolytic intermediates, and tyrosine is made from phenylalanine."
+        },
+        {
+          "question": "Why can vitamin B12 deficiency cause a megaloblastic anaemia that resembles folate deficiency?",
+          "options": [
+            "B12 is a precursor of folate",
+            "Methionine synthase needs B12, so folate is trapped as methyl-THF and is unavailable for nucleotide synthesis",
+            "B12 is needed to absorb dietary folate in the gut",
+            "B12 directly synthesises thymidylate"
+          ],
+          "answer": 1,
+          "explanation": "Without B12, methyl-THF cannot donate its methyl group to homocysteine, so the folate pool is trapped and THF forms needed for purines and thymidylate run short."
+        }
+      ]
+    },
+    {
+      "id": "nucleotide-metabolism",
+      "title": "Nucleotide metabolism",
+      "hours": 4,
+      "hook": "Every time a cell divides, it must make about six billion new nucleotides for its DNA alone, along with many more for RNA, ATP and signalling molecules. This demand is so characteristic of fast-growing cells that several of the most important cancer, antiviral and immunosuppressive drugs work simply by interfering with nucleotide biosynthesis.",
+      "learningObjectives": [
+        "Distinguish de novo and salvage pathways for purine and pyrimidine nucleotide synthesis",
+        "Outline de novo purine synthesis from PRPP to IMP and the branches to AMP and GMP",
+        "Outline de novo pyrimidine synthesis and the formation of UMP, CTP and dTMP",
+        "Explain the roles of ribonucleotide reductase and thymidylate synthase and how they are regulated and targeted by drugs",
+        "Describe purine and pyrimidine degradation, including uric acid formation",
+        "Relate clinical conditions such as gout, Lesch-Nyhan syndrome and ADA-SCID to specific enzyme defects"
+      ],
+      "keyConcepts": [
+        {
+          "term": "PRPP",
+          "definition": "5-phosphoribosyl-1-pyrophosphate, made from ribose 5-phosphate and ATP, is the activated ribose donor for de novo purine synthesis, pyrimidine synthesis and salvage reactions."
+        },
+        {
+          "term": "De novo purine synthesis",
+          "definition": "The purine ring is built step by step on the ribose phosphate of PRPP using glycine, glutamine, aspartate, formate carried on THF and CO2, to produce IMP, which is converted to AMP and GMP."
+        },
+        {
+          "term": "Feedback control of purine synthesis",
+          "definition": "The committed step of the pathway is inhibited by purine nucleotides, and the branch to AMP and GMP is cross-regulated, with GTP promoting AMP synthesis and ATP promoting GMP synthesis."
+        },
+        {
+          "term": "De novo pyrimidine synthesis",
+          "definition": "The pyrimidine ring is assembled first from carbamoyl phosphate (made by cytosolic CPS II) and aspartate to give orotate, and only then attached to ribose from PRPP to form OMP and then UMP."
+        },
+        {
+          "term": "Salvage pathways",
+          "definition": "Free bases are reattached to PRPP by enzymes such as HGPRT and APRT, which saves energy and is crucial in tissues with a limited capacity for de novo synthesis."
+        },
+        {
+          "term": "Ribonucleotide reductase",
+          "definition": "Converts ribonucleoside diphosphates to deoxyribonucleoside diphosphates through a radical mechanism; its activity and specificity are controlled by ATP and dATP and by substrate-specific allosteric effectors."
+        },
+        {
+          "term": "Thymidylate synthase and DHFR",
+          "definition": "Thymidylate synthase methylates dUMP to dTMP using methylene-THF, converting it to dihydrofolate, which DHFR then reduces back to THF; inhibitors of these enzymes (5-fluorouracil, methotrexate) are anticancer drugs."
+        },
+        {
+          "term": "Purine catabolism",
+          "definition": "Purine nucleotides are degraded to hypoxanthine and xanthine and then to uric acid by xanthine oxidase, which is excreted in urine; overproduction or under-excretion causes hyperuricaemia and gout."
+        },
+        {
+          "term": "Lesch-Nyhan syndrome",
+          "definition": "A severe X-linked disorder caused by HGPRT deficiency, in which failed salvage leaves excess PRPP and purines, resulting in uric acid overproduction and neurological features."
+        },
+        {
+          "term": "ADA deficiency",
+          "definition": "Adenosine deaminase deficiency causes accumulation of deoxyadenosine and dATP, which inhibits ribonucleotide reductase and kills lymphocytes, causing severe combined immunodeficiency."
+        }
+      ],
+      "deeper": {
+        "beginner": "Nucleotides are the building blocks of DNA and RNA, and also the carriers of energy such as ATP. Cells can build them from scratch using simple molecules like amino acids and CO2, or recycle the bases released from broken-down nucleic acids. Because rapidly dividing cells need so many nucleotides, drugs that block these pathways can slow cancers and infections.",
+        "intermediate": "In purine synthesis the ring is constructed atom by atom on PRPP, a strategy that is different from pyrimidine synthesis, where the ring is assembled first and then joined to ribose. Both pathways use glutamine, aspartate, CO2 and ATP, and folate derivatives contribute carbon to the purine ring and to thymidylate. Feedback inhibition at PRPP synthetase and the amidotransferase prevents wasteful overproduction, while carbamoyl phosphate synthetase II in animals is inhibited by UTP and activated by PRPP. Deoxyribonucleotides are made by reducing ribonucleoside diphosphates, a step that is tightly regulated so that the four dNTPs are balanced; dTMP requires the additional methylation of dUMP. Purine catabolism ends in uric acid in humans, so that excess urate crystals can form in joints and cause gout, a condition treated with allopurinol, a xanthine oxidase inhibitor.",
+        "advanced": "Ribonucleotide reductase of class I uses a tyrosyl radical generated by a di-iron centre, abstracts a hydrogen atom from the ribose 3' carbon and relies on thioredoxin or glutaredoxin to regenerate its active-site cysteines, as detailed in the Nordlund and Reichard review. Its two allosteric sites, one controlling overall activity (ATP versus dATP) and one controlling specificity, let the cell coordinate dNTP pools; imbalances increase mutation rates. De novo purine enzymes can cluster into a dynamic complex called the purinosome in cells under purine demand, suggesting substrate channelling, an area reviewed by Pedley and Benkovic. Pyrimidine synthesis in mammals uses the multifunctional CAD protein (CPS II, aspartate transcarbamylase, dihydroorotase) that is regulated by phosphorylation downstream of growth signalling (mTORC1 via S6K1), linking nucleotide supply to growth. Drugs such as mycophenolic acid (IMP dehydrogenase) and leflunomide (dihydroorotate dehydrogenase) exploit the dependence of lymphocytes on de novo synthesis."
+      },
+      "commonMistakes": [
+        "Saying the purine ring is made free and then attached to ribose; it is built on PRPP, unlike pyrimidines",
+        "Placing carbamoyl phosphate synthetase II in the mitochondria; the pyrimidine enzyme is cytosolic and uses glutamine, not the urea-cycle CPS I with ammonia",
+        "Assuming deoxyribonucleotides are made from deoxyribose sugars; they come from reduction of ribonucleotides",
+        "Treating uric acid as a waste product that is simply harmful; it is a normal end product and an antioxidant, harmful only in excess or when poorly excreted"
+      ],
+      "videos": [
+        {
+          "youtubeId": "4GFKdLy2fOE",
+          "title": "Metabolism | Nucleotide Synthesis | Purine and Pyrimidine Synthesis",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A long, careful lecture that draws both de novo pathways, with regulation and drugs, in one sitting."
+        },
+        {
+          "youtubeId": "sZTWmw14YZs",
+          "title": "Purine Synthesis",
+          "channel": "Dirty Medicine",
+          "level": "intermediate",
+          "whyWatch": "A condensed visual summary of the purine pathway that is useful for revision."
+        },
+        {
+          "youtubeId": "N7iu7lJVJCo",
+          "title": "Pyrimidine Synthesis",
+          "channel": "Dirty Medicine",
+          "level": "intermediate",
+          "whyWatch": "A short companion on pyrimidine synthesis and its regulation and related diseases."
+        },
+        {
+          "youtubeId": "6c1jkgSynrI",
+          "title": "Research Focus: Ribonucleotide Reductases (RNRs)",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "An MIT research spotlight explaining why RNR chemistry is unusual and still a drug target."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.biochem.75.103004.142443",
+          "title": "Ribonucleotide Reductases",
+          "authors": "Nordlund P, Reichard P",
+          "year": 2006,
+          "journal": "Annual Review of Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "Written by the scientist who discovered the enzyme's role in making deoxyribonucleotides, this review covers mechanism, structure and allosteric regulation of a pivotal enzyme.",
+          "readingQuestions": [
+            "How does allosteric regulation balance the four dNTPs?",
+            "Why does the radical mechanism make RNR unusual among enzymes?"
+          ]
+        },
+        {
+          "doi": "10.1016/j.tibs.2016.09.009",
+          "title": "A New View into the Regulation of Purine Metabolism: The Purinosome",
+          "authors": "Pedley AM, Benkovic SJ",
+          "year": 2017,
+          "journal": "Trends in Biochemical Sciences",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5272809/",
+          "whyItMatters": "Shows how metabolic enzymes may assemble reversibly into clusters under demand, an emerging idea about how cells organise pathways beyond the simple model of freely diffusing enzymes.",
+          "readingQuestions": [
+            "What evidence supports purinosome formation in cells?",
+            "What are the possible advantages of clustering the pathway enzymes?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Nucleotide Biosynthesis chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes both de novo pathways, salvage, RNR, thymidylate synthesis and their regulation."
+        },
+        {
+          "title": "KEGG PATHWAY database",
+          "provider": "Kanehisa Laboratories",
+          "type": "database",
+          "url": "https://www.genome.jp/kegg/pathway.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Maps for purine and pyrimidine metabolism show all enzymes, with human and other species versions."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about de novo purine synthesis is correct?",
+          "options": [
+            "The purine ring is built stepwise on a ribose phosphate backbone provided by PRPP",
+            "The base is synthesised first and then added to ribose",
+            "Carbamoyl phosphate is the starting point",
+            "It occurs only in the mitochondria"
+          ],
+          "answer": 0,
+          "explanation": "Purine synthesis begins by converting PRPP to phosphoribosylamine and building up the ring on it, producing IMP as the first fully formed nucleotide."
+        },
+        {
+          "question": "Allopurinol is used to treat gout because it inhibits:",
+          "options": [
+            "HGPRT",
+            "Xanthine oxidase",
+            "Ribonucleotide reductase",
+            "Thymidylate synthase"
+          ],
+          "answer": 1,
+          "explanation": "Allopurinol inhibits xanthine oxidase, reducing conversion of hypoxanthine and xanthine to uric acid."
+        },
+        {
+          "question": "Methotrexate impairs DNA synthesis mainly by inhibiting:",
+          "options": [
+            "Dihydrofolate reductase, depleting tetrahydrofolate needed for thymidylate and purines",
+            "Ribonucleotide reductase directly",
+            "Orotate phosphoribosyltransferase",
+            "Carbamoyl phosphate synthetase II"
+          ],
+          "answer": 0,
+          "explanation": "Methotrexate is a folate analogue that blocks DHFR, so cells cannot regenerate tetrahydrofolate and the supply of one-carbon units for dTMP and purine synthesis falls."
+        }
+      ]
+    },
+    {
+      "id": "photosynthesis",
+      "title": "Photosynthesis: light reactions and carbon fixation",
+      "hours": 5,
+      "hook": "Almost all the energy that runs the biosphere, including the rice on your plate and the tea in your cup, enters through one enzyme and one membrane: Rubisco, fixing carbon dioxide, and the thylakoid membrane, turning light into chemical energy. It is respiration run in reverse, with sunlight paying the energy bill.",
+      "learningObjectives": [
+        "Describe the organisation of the thylakoid membrane and the components of photosystems I and II",
+        "Trace electron flow in the Z-scheme and explain where water is oxidised, NADPH is made and a proton gradient is generated",
+        "Explain photophosphorylation by chloroplast ATP synthase and the role of cyclic electron flow",
+        "Write the three stages of the Calvin cycle (carboxylation, reduction, regeneration) and the ATP and NADPH requirement per CO2",
+        "Explain how the Calvin cycle is regulated by light",
+        "Explain photorespiration and compare C3, C4 and CAM strategies"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Thylakoid membrane",
+          "definition": "The internal membrane system of chloroplasts, housing photosystems, cytochrome b6f and ATP synthase, with light-driven proton pumping into the thylakoid lumen."
+        },
+        {
+          "term": "Photosystem II",
+          "definition": "Uses light energy absorbed at P680 to oxidise water at a manganese-calcium cluster, releasing oxygen and protons and passing electrons to plastoquinone."
+        },
+        {
+          "term": "Cytochrome b6f complex",
+          "definition": "Transfers electrons from plastoquinol to plastocyanin and pumps protons into the lumen, analogous to Complex III in mitochondria."
+        },
+        {
+          "term": "Photosystem I and NADPH",
+          "definition": "Light absorbed at P700 energises electrons that pass through ferredoxin to ferredoxin-NADP+ reductase, which reduces NADP+ to NADPH."
+        },
+        {
+          "term": "Z-scheme",
+          "definition": "The zig-zag energy diagram of non-cyclic electron flow showing two light-driven steps that raise electrons from water to NADPH."
+        },
+        {
+          "term": "Photophosphorylation",
+          "definition": "The proton gradient across the thylakoid, largely a pH difference, drives chloroplast ATP synthase to make ATP in the stroma, using the same chemiosmotic principle as in mitochondria."
+        },
+        {
+          "term": "Cyclic electron flow",
+          "definition": "Electrons from photosystem I return to cytochrome b6f, making ATP without NADPH or oxygen and adjusting the ATP to NADPH ratio."
+        },
+        {
+          "term": "Rubisco",
+          "definition": "Ribulose 1,5-bisphosphate carboxylase/oxygenase fixes CO2 onto ribulose 1,5-bisphosphate to give two molecules of 3-phosphoglycerate; it is slow, abundant and also reacts with oxygen."
+        },
+        {
+          "term": "Calvin cycle",
+          "definition": "Carboxylation, reduction of 3-phosphoglycerate to glyceraldehyde 3-phosphate with ATP and NADPH, and regeneration of ribulose 1,5-bisphosphate; fixing three CO2 to make one triose phosphate needs nine ATP and six NADPH."
+        },
+        {
+          "term": "Light regulation",
+          "definition": "Light raises stromal pH and Mg2+, reduces thioredoxin through ferredoxin, and activates Rubisco via Rubisco activase, so the Calvin cycle is active only when ATP and NADPH are being produced."
+        },
+        {
+          "term": "Photorespiration, C4 and CAM",
+          "definition": "Oxygenation of RuBP produces 2-phosphoglycolate, which must be salvaged at an energetic cost; C4 plants concentrate CO2 in bundle sheath cells using PEP carboxylase, while CAM plants separate carbon capture (night) from fixation (day)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Photosynthesis has two linked parts. In the light reactions, chlorophyll absorbs light, splits water to release oxygen, and the energy is stored in ATP and NADPH. In the Calvin cycle, enzymes use that ATP and NADPH to turn carbon dioxide from the air into sugar. Plants then use that sugar as fuel and as building material.",
+        "intermediate": "The light reactions mirror respiration in reverse: electrons move from water (via photosystem II, plastoquinone, cytochrome b6f, plastocyanin, photosystem I) to NADP+, with protons accumulating in the lumen, because water splitting and plastoquinol oxidation both release protons there. The proton-motive force is mostly a pH gradient, because counter-ion movements dissipate the electrical component, and the chloroplast ATP synthase uses it, giving roughly 14 protons per three ATP in the chloroplast c-ring. The Calvin cycle needs 3 ATP and 2 NADPH per CO2, which means the cycle needs a larger ATP supply than non-cyclic flow alone gives, a gap that cyclic flow helps close. Rubisco's oxygenase activity at current atmospheric concentrations wastes carbon, which C4 and CAM plants avoid by concentrating CO2; this is why sugarcane and maize (C4) and pineapple (CAM) do well in hot, dry climates.",
+        "advanced": "The oxygen-evolving complex cycles through S-states and Umena and colleagues' crystal structure at 1.9 angstroms revealed a Mn4CaO5 cluster with surrounding water molecules, which gives mechanistic insight into water oxidation. Photoprotection mechanisms, such as non-photochemical quenching with the PsbS protein and the xanthophyll cycle, dissipate excess excitation energy to avoid photodamage. Rubisco is the most abundant enzyme on Earth, with a mass estimated in hundreds of millions of tonnes as estimated by Bar-On and Milo, yet it has a low turnover, a feature that has driven interest in engineering photosynthesis for higher crop yield, as reviewed by Ort and colleagues. Calvin cycle control involves thioredoxin-mediated reduction of several enzymes (fructose bisphosphatase, sedoheptulose bisphosphatase, phosphoribulokinase) and the CP12 regulatory protein, which links enzyme activity to light, and the cycle's regeneration phase uses the same transketolase and transaldolase chemistry as the pentose phosphate pathway. C4 photosynthesis evolved independently many times, demonstrating convergent solutions to the Rubisco problem."
+      },
+      "commonMistakes": [
+        "Calling the Calvin cycle the 'dark reaction'; it does not use light directly but is switched on by light-driven signals and runs only in the light in most plants",
+        "Saying that the oxygen released in photosynthesis comes from CO2; it comes from water",
+        "Forgetting that photosynthesis also uses a proton gradient; the chloroplast ATP synthase works like the mitochondrial one",
+        "Thinking C4 and CAM plants do not use the Calvin cycle; they concentrate CO2 and then use the same Rubisco-based cycle"
+      ],
+      "videos": [
+        {
+          "youtubeId": "vEsAtC9d_MQ",
+          "title": "Conceptual overview of light dependent reactions",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A clear conceptual summary of what the light reactions produce and why."
+        },
+        {
+          "youtubeId": "yfR36PMWegg",
+          "title": "Photosynthesis: Light Reactions and Photophosphorylation",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Goes through the electron transport chain and the ATP synthase in the thylakoid with detailed drawings."
+        },
+        {
+          "youtubeId": "slm6D2VEXYs",
+          "title": "Photosynthesis: Calvin Cycle",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Explains the three phases of the Calvin cycle and the ATP and NADPH accounting."
+        },
+        {
+          "youtubeId": "EQvTEFCANTM",
+          "title": "Photorespiration",
+          "channel": "Khan Academy",
+          "level": "intermediate",
+          "whyWatch": "Shows why Rubisco's oxygenase activity is costly and sets up the logic behind C4 and CAM."
+        },
+        {
+          "youtubeId": "8oodcy8SEBk",
+          "title": "Types of Photosynthesis in Plants: C3, C4, and CAM",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "Quick comparison of the three strategies and the environments they suit."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.1816654116",
+          "title": "The global mass and average rate of rubisco",
+          "authors": "Bar-On YM, Milo R",
+          "year": 2019,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6410859/",
+          "whyItMatters": "Puts numbers on how much Rubisco exists on Earth and how fast it works on average, a useful reminder that a slow enzyme can still dominate the carbon cycle because there is so much of it.",
+          "readingQuestions": [
+            "How did the authors estimate the global quantity of Rubisco?",
+            "What does the low average turnover suggest about the enzyme's operation in nature?"
+          ]
+        },
+        {
+          "doi": "10.1038/nature09913",
+          "title": "Crystal structure of oxygen-evolving photosystem II at a resolution of 1.9 A",
+          "authors": "Umena Y, Kawakami K, Shen JR, Kamiya N",
+          "year": 2011,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "A landmark structure showing the manganese-calcium cluster where water is split, which turned a mysterious reaction into a chemically describable one.",
+          "readingQuestions": [
+            "What is the composition of the catalytic cluster and how is it coordinated by the protein?"
+          ]
+        },
+        {
+          "doi": "10.1073/pnas.1424031112",
+          "title": "Redesigning photosynthesis to sustainably meet global food and bioenergy demand",
+          "authors": "Ort DR, Merchant SS, Alric J, et al.",
+          "year": 2015,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4507207/",
+          "whyItMatters": "Explains where photosynthesis loses efficiency and how scientists hope to engineer improvements, connecting the biochemistry in this unit to food security."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Photosynthesis chapters, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Detailed chapters on the light reactions and the Calvin cycle, including photosystem structures and regulation."
+        },
+        {
+          "title": "Biology 2e: Photosynthesis",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/8-introduction",
+          "free": true,
+          "level": "beginner",
+          "note": "A readable first pass with labelled diagrams and a clear introduction to C3, C4 and CAM."
+        },
+        {
+          "title": "PDB-101 structure stories",
+          "provider": "RCSB PDB-101",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org",
+          "free": true,
+          "level": "intermediate",
+          "note": "Illustrated explanations of photosystem II and Rubisco structures that you can explore in 3D."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Where does the oxygen released in photosynthesis come from?",
+          "options": [
+            "Carbon dioxide",
+            "Water",
+            "Glucose",
+            "Rubisco"
+          ],
+          "answer": 1,
+          "explanation": "Photosystem II oxidises water at the manganese-calcium cluster, releasing O2, protons and electrons; the oxygen atoms of CO2 end up in carbohydrate and water."
+        },
+        {
+          "question": "How many ATP and NADPH are needed in the Calvin cycle to fix one CO2 into carbohydrate?",
+          "options": [
+            "1 ATP and 1 NADPH",
+            "2 ATP and 3 NADPH",
+            "3 ATP and 2 NADPH",
+            "6 ATP and 6 NADPH"
+          ],
+          "answer": 2,
+          "explanation": "Fixing three CO2 to make one triose phosphate requires nine ATP and six NADPH, which is three ATP and two NADPH per CO2."
+        },
+        {
+          "question": "What is the advantage of C4 photosynthesis in hot, dry conditions?",
+          "options": [
+            "It avoids the need for Rubisco",
+            "It concentrates CO2 around Rubisco, reducing photorespiration",
+            "It makes more ATP in the light reactions",
+            "It replaces the Calvin cycle with the pentose phosphate pathway"
+          ],
+          "answer": 1,
+          "explanation": "C4 plants fix CO2 first with PEP carboxylase and release it at high concentration to Rubisco in bundle sheath cells, so oxygenation by Rubisco is much reduced."
+        }
+      ]
+    },
+    {
+      "id": "integration-and-regulation-of-metabolism",
+      "title": "Integration and regulation of metabolism",
+      "hours": 4,
+      "hook": "No cell works alone: after breakfast the liver stores, the muscles take up glucose and fat cells fill up; by the next morning the roles are reversed and the liver is feeding the brain. This final unit pulls together every pathway of the course and shows how hormones and energy sensors conduct them like an orchestra.",
+      "learningObjectives": [
+        "Describe the metabolic specialisations of liver, skeletal muscle, heart, adipose tissue, brain and red blood cells",
+        "Compare metabolism in the fed state, early fasting, prolonged fasting and starvation",
+        "Explain the actions of insulin, glucagon, adrenaline and cortisol on key enzymes",
+        "Explain how AMPK and mTORC1 sense energy and nutrients and coordinate catabolism and anabolism",
+        "Describe metabolic adaptation in exercise",
+        "Explain how type 1 and type 2 diabetes represent breakdowns of metabolic integration"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Liver as metabolic hub",
+          "definition": "Receives all absorbed nutrients through the portal vein, buffers blood glucose, synthesises lipoproteins, ketone bodies and urea, and alters its pathways quickly in response to hormones."
+        },
+        {
+          "term": "Skeletal muscle",
+          "definition": "Uses glucose, fatty acids and, in fasting, ketones; stores glycogen for its own use, and supplies amino acids and lactate to the liver for gluconeogenesis."
+        },
+        {
+          "term": "Adipose tissue",
+          "definition": "Stores triacylglycerol after meals and releases fatty acids and glycerol during fasting under hormonal control."
+        },
+        {
+          "term": "Brain",
+          "definition": "Depends almost entirely on glucose in the fed state and can use ketone bodies for a large share of its energy after several days of fasting; it cannot oxidise fatty acids to a significant degree."
+        },
+        {
+          "term": "Red blood cells",
+          "definition": "Lack mitochondria and rely exclusively on glycolysis, so they need constant glucose supply and produce lactate for the Cori cycle."
+        },
+        {
+          "term": "Fed, fasting and starved states",
+          "definition": "After a meal insulin favours storage; in the first hours of fasting glycogen supplies glucose; after about a day gluconeogenesis and lipolysis dominate; in prolonged starvation ketone use spares glucose and protein."
+        },
+        {
+          "term": "Insulin and glucagon",
+          "definition": "Insulin promotes uptake and storage of fuel and inhibits lipolysis, gluconeogenesis and glycogenolysis; glucagon, acting mainly on liver, does the reverse; both work through second messengers and covalent modification."
+        },
+        {
+          "term": "Adrenaline and cortisol",
+          "definition": "Adrenaline mobilises glycogen and fat during stress or exercise, while cortisol promotes gluconeogenesis and protein breakdown over longer periods."
+        },
+        {
+          "term": "AMPK",
+          "definition": "A kinase activated by a rising AMP/ATP ratio, which switches on ATP-producing pathways (glucose uptake, fatty acid oxidation) and switches off ATP-consuming ones (fatty acid and cholesterol synthesis, protein synthesis)."
+        },
+        {
+          "term": "mTORC1",
+          "definition": "A kinase complex that integrates amino acid, growth factor and energy signals to promote protein, lipid and nucleotide synthesis and cell growth when nutrients are plentiful."
+        },
+        {
+          "term": "Metabolic flexibility",
+          "definition": "The ability to switch between fuels according to availability, which is impaired in insulin resistance and type 2 diabetes."
+        }
+      ],
+      "deeper": {
+        "beginner": "Your organs divide the metabolic work. After you eat, insulin tells the liver, muscle and fat to store the fuel; between meals, glucagon and other hormones tell them to release it. The brain needs a steady supply of glucose, and in a long fast the liver makes ketone bodies from fat so that the brain can use those as well. When this coordination fails, as in diabetes, blood glucose and fat metabolism become dangerously unbalanced.",
+        "intermediate": "Regulation operates at several time scales: allosteric effects act in seconds, covalent modification through hormone-triggered kinases and phosphatases in minutes, and changes in enzyme levels through transcription in hours to days. Insulin stimulates glucose transport in muscle and fat through GLUT4 translocation, and activates glycogen synthase, ACC and lipoprotein lipase, while suppressing hormone-sensitive lipase and gluconeogenic enzymes. During fasting, glucagon raises cAMP in liver, activating glycogen phosphorylase, then gluconeogenesis, and adipose lipolysis supplies fatty acids that fuel the liver and muscle and spare glucose for the brain. In prolonged fasting, ketone bodies reduce the brain's glucose requirement and so protein catabolism is minimised. In exercise, AMP, calcium and adrenaline combine to switch on fuel mobilisation matched to demand. In type 1 diabetes, absence of insulin leads to hyperglycaemia and ketoacidosis, whereas in type 2 diabetes tissues respond poorly to insulin and the pancreas eventually fails to compensate.",
+        "advanced": "AMPK is a heterotrimer sensing adenine nucleotides through its gamma subunit and activated by LKB1-mediated phosphorylation of the alpha subunit; its phosphorylation targets (ACC, HMG-CoA reductase, TSC2, raptor and ULK1) explain its coordinate switch from anabolism to catabolism, as reviewed by Hardie and colleagues. mTORC1 is recruited to lysosomes by Rag GTPases in response to amino acids and activated by Rheb in response to growth factors via the PI3K-Akt pathway, and the two kinases form a reciprocal pair, described in the Saxton and Sabatini review. Selective insulin resistance in liver, with continued lipogenesis but impaired suppression of gluconeogenesis, illustrates how branches of a signalling pathway can behave differently. Interorgan cycles such as the Cori, glucose-alanine and fatty acid-glycerol cycles allow tissues to share the metabolic burden, and metabolomics and isotope tracing now quantify these fluxes in intact organisms. A systems view treats metabolism as a regulated network where controlled variables (blood glucose, ATP, pH) are maintained by feedback, and where robustness is bought at the cost of vulnerability when several regulators fail at once."
+      },
+      "commonMistakes": [
+        "Describing hormones as acting on pathways in general; each acts on particular enzymes in particular tissues, with different effects in liver, muscle and fat",
+        "Saying the brain can use fatty acids as fuel; it uses glucose and, in prolonged fasting, ketone bodies",
+        "Treating insulin resistance and insulin deficiency as the same thing; type 1 lacks insulin and type 2 involves reduced response",
+        "Forgetting that metabolic control works on several time scales, not only by allosteric effects"
+      ],
+      "videos": [
+        {
+          "youtubeId": "_Arg55jfC5E",
+          "title": "What happens to your body after eating a meal? | Metabolism",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "A friendly introduction to the fed state and what insulin does in each tissue."
+        },
+        {
+          "youtubeId": "ZEm8cxKaas8",
+          "title": "Fed State",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "A drawn summary of fuel flows between organs in the fed state."
+        },
+        {
+          "youtubeId": "9wb-XexfkEY",
+          "title": "Fasted State",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "The complementary drawing for fasting, showing glycogenolysis, gluconeogenesis, lipolysis and ketones."
+        },
+        {
+          "youtubeId": "eRDnzU8M-vA",
+          "title": "Fed vs Fasting Metabolism",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A longer lecture that connects hormones and enzymes across tissues."
+        },
+        {
+          "youtubeId": "4G56m9fyNWY",
+          "title": "AMPK Signaling Pathway: Regulation and Downstream Effects",
+          "channel": "JJ Medicine",
+          "level": "intermediate",
+          "whyWatch": "Explains what activates AMPK and the targets through which it shifts metabolism."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nrm3311",
+          "title": "AMPK: a nutrient and energy sensor that maintains energy homeostasis",
+          "authors": "Hardie DG, Ross FA, Hawley SA",
+          "year": 2012,
+          "journal": "Nature Reviews Molecular Cell Biology",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5726489/",
+          "whyItMatters": "Shows how a single kinase reads the cell's energy state and rewires metabolism, tying together the enzyme-level regulation you learned across the course.",
+          "readingQuestions": [
+            "How does AMPK distinguish AMP and ADP from ATP?",
+            "Which targets of AMPK correspond to pathways you studied in this course?"
+          ]
+        },
+        {
+          "doi": "10.1016/j.cell.2017.02.004",
+          "title": "mTOR Signaling in Growth, Metabolism, and Disease",
+          "authors": "Saxton RA, Sabatini DM",
+          "year": 2017,
+          "journal": "Cell",
+          "level": "advanced",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5394987/",
+          "whyItMatters": "A clear map of how nutrients and growth factors converge on mTORC1 to switch on anabolic processes, a counterpart to AMPK signalling.",
+          "readingQuestions": [
+            "Which nutrient signals does mTORC1 respond to and how do they reach it?"
+          ]
+        },
+        {
+          "doi": "10.1146/annurev.nutr.26.061505.111258",
+          "title": "Fuel Metabolism in Starvation",
+          "authors": "Cahill GF Jr",
+          "year": 2006,
+          "journal": "Annual Review of Nutrition",
+          "level": "intermediate",
+          "whyItMatters": "A classic, readable account of how the body shifts between fuels in fasting, using human data; it is a perfect integrative case study for this unit.",
+          "readingQuestions": [
+            "How do ketone bodies reduce the need to break down protein?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Metabolic Homeostasis chapter, Biochemistry 5th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A late chapter of the textbook covers fuel choice, hormonal control and metabolic adaptation in fasting and exercise."
+        },
+        {
+          "title": "Metabolic Pathways chart",
+          "provider": "ExPASy / Biochemical Pathways",
+          "type": "reference",
+          "url": "https://web.expasy.org/pathways/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Use this chart to trace how carbohydrate, lipid, amino acid and nucleotide pathways connect at shared intermediates."
+        },
+        {
+          "title": "Reactome pathway browser",
+          "provider": "Reactome",
+          "type": "database",
+          "url": "https://reactome.org",
+          "free": true,
+          "level": "advanced",
+          "note": "Explore insulin signalling, AMPK and mTOR pathways with links to the enzymes they regulate."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "During prolonged fasting, why does the brain's use of ketone bodies matter for the rest of the body?",
+          "options": [
+            "It reduces the need for gluconeogenesis and so spares muscle protein",
+            "It allows the brain to oxidise fatty acids directly",
+            "It raises blood glucose",
+            "It stops lipolysis"
+          ],
+          "answer": 0,
+          "explanation": "As ketone bodies replace part of the brain's glucose requirement, less glucose has to be made from amino acids, so muscle protein breakdown is reduced."
+        },
+        {
+          "question": "Which of the following is an effect of AMPK activation?",
+          "options": [
+            "Increased fatty acid synthesis through ACC activation",
+            "Increased fatty acid oxidation through ACC inhibition and lower malonyl-CoA",
+            "Stimulation of cholesterol synthesis",
+            "Activation of mTORC1"
+          ],
+          "answer": 1,
+          "explanation": "AMPK phosphorylates and inhibits ACC, lowering malonyl-CoA, which relieves CPT1 inhibition and favours fatty acid oxidation over synthesis."
+        },
+        {
+          "question": "After an overnight fast, which statement describes liver metabolism?",
+          "options": [
+            "Glycogen synthesis and lipogenesis are high",
+            "Glycogenolysis and gluconeogenesis supply glucose, and ketogenesis begins to rise",
+            "Glycolysis is the main source of ATP",
+            "Urea synthesis stops"
+          ],
+          "answer": 1,
+          "explanation": "With low insulin and high glucagon, the liver releases glucose through glycogen breakdown and gluconeogenesis and begins to make ketone bodies from fatty acids."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "Lf4irlyN1eE",
+      "title": "Metabolism Overview",
+      "channel": "Dr Matt & Dr Mike",
+      "level": "beginner",
+      "whyWatch": "A concise review of how the major metabolic pathways connect, which helps tie this course to Metabolism I."
+    },
+    {
+      "youtubeId": "ziG0Jp9QaBo",
+      "title": "19. Cholesterol Biosynthesis 1",
+      "channel": "MIT OpenCourseWare",
+      "level": "advanced",
+      "whyWatch": "A full lecture on how cholesterol is made, useful if you want to go deeper than this course."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th edition",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free online textbook with chapters on all pathways covered in this course."
+    },
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/books/biology-2e/pages/8-introduction",
+      "free": true,
+      "level": "beginner",
+      "note": "A gentle, free introduction to metabolism and photosynthesis for revision of basic ideas."
+    },
+    {
+      "title": "Biochemistry bookshelf",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free community-written texts that give alternative explanations of tough topics."
+    }
+  ]
+}

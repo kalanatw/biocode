@@ -1,0 +1,1368 @@
+{
+  "code": "BC 3024",
+  "title": "Bio-Physical Chemistry",
+  "level": 3,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "The physics and physical chemistry that decide whether a biomolecule folds, binds, moves or lights up.",
+  "overview": "This course gives you the quantitative toolkit behind modern biochemistry. We begin with thermodynamics (free energy, equilibrium, coupling to ATP) and chemical kinetics (rate laws, activation energy), then turn to water and the weak interactions that hold biomolecules together, acids, bases and buffers. We then quantify molecular recognition (binding isotherms, cooperativity), look at diffusion, osmosis and membrane potentials, and finish with the experimental methods that put numbers on biomolecules: optical and magnetic spectroscopy, and centrifugation and electrophoresis. The units follow the standard content of a BSc Honours biophysical chemistry course.",
+  "whyItMatters": "Biochemistry becomes much more powerful when you can predict, not just describe: whether a reaction will run, how tightly a drug will bind, how fast a signal can diffuse. The same ideas underpin drug design, diagnostics, protein engineering and every instrument in the research lab.",
+  "prerequisites": [
+    "FD 1101",
+    "FD 2101"
+  ],
+  "careerLinks": [
+    "Drug discovery and pharmaceutical analysis",
+    "Structural biology and biophysics research",
+    "Analytical and quality-control laboratories",
+    "Biotechnology and bioprocess development",
+    "Medical and clinical laboratory science"
+  ],
+  "studyTips": [
+    "Keep a formula sheet, but write next to each equation what its symbols physically mean and the units; most errors are unit errors (kJ versus J, ln versus log10, kelvin versus Celsius).",
+    "Practise estimating before calculating: a tenfold change in K corresponds to about 5.7 kJ/mol at 25 C, and a pH unit away from pKa gives a tenfold ratio. These benchmarks catch silly mistakes.",
+    "For each technique (ITC, CD, FRET, AUC, SDS-PAGE), write one line: what is measured, what is learned, what can mislead.",
+    "Redo every worked example from lectures without looking, then change one number and redo it; that is what exam questions do."
+  ],
+  "units": [
+    {
+      "id": "free-energy-and-equilibrium",
+      "title": "Free energy, equilibrium and the energetics of life",
+      "hours": 4,
+      "hook": "A cell is not a test tube at equilibrium: it is an open system that burns fuel to stay improbably organised. The one quantity that tells you which way any reaction in that cell will drift, and how much work it can pay for, is the Gibbs free energy.",
+      "learningObjectives": [
+        "State the first and second laws of thermodynamics in terms a biochemist can use (energy, entropy, spontaneity)",
+        "Use delta G = delta H - T delta S to predict whether a process is spontaneous at a given temperature",
+        "Distinguish delta G from the standard value delta G0' and calculate one from the other using the reaction quotient",
+        "Convert between an equilibrium constant and delta G0' using delta G0' = -RT ln K'eq",
+        "Explain how coupling to ATP hydrolysis lets an unfavourable reaction proceed",
+        "Explain why the free energy of ATP hydrolysis inside a cell differs from its standard value"
+      ],
+      "keyConcepts": [
+        {
+          "term": "System, surroundings, open system",
+          "definition": "A living cell exchanges matter and energy with its surroundings, so it can hold a steady state far from equilibrium; a closed, isolated system cannot."
+        },
+        {
+          "term": "Enthalpy (H)",
+          "definition": "The heat exchanged at constant pressure; in biochemistry it mostly reflects bonds made or broken and the strength of non-covalent contacts."
+        },
+        {
+          "term": "Entropy (S)",
+          "definition": "A measure of the number of ways energy and matter can be arranged; it rises when a system becomes more disordered or when energy is dispersed over more states."
+        },
+        {
+          "term": "Gibbs free energy (G)",
+          "definition": "G = H - TS. At constant temperature and pressure a process can proceed spontaneously only if its delta G is negative."
+        },
+        {
+          "term": "delta G0' (standard transformed free energy)",
+          "definition": "The free-energy change when all reactants and products are at 1 M (except H+ fixed at pH 7) under defined standard conditions; a reference value, not what happens in the cell."
+        },
+        {
+          "term": "Reaction quotient (Q)",
+          "definition": "The ratio of product to reactant concentrations at any instant; the real delta G = delta G0' + RT ln Q, so concentrations in the cell can shift the sign."
+        },
+        {
+          "term": "Equilibrium constant and free energy",
+          "definition": "delta G0' = -RT ln K'eq. At 25 C a change of about 5.7 kJ/mol in delta G0' corresponds to a tenfold change in K'eq."
+        },
+        {
+          "term": "Coupled reactions",
+          "definition": "An energetically uphill reaction is driven by pairing it with a downhill one through a shared intermediate, so that the overall delta G is negative."
+        },
+        {
+          "term": "Group-transfer potential of ATP",
+          "definition": "ATP hydrolysis releases about -30.5 kJ/mol under standard conditions and considerably more (roughly -50 to -60 kJ/mol) at the concentrations found in cells."
+        }
+      ],
+      "deeper": {
+        "beginner": "Free energy is a bookkeeping number that answers the question: will this reaction go by itself, and how much useful work could it do? Negative means it can run on its own, positive means someone must pay. A ball rolling downhill releases energy; pushing it back up costs energy. Cells pay for uphill reactions by linking them to a big downhill one, most often the breaking of ATP. The analogy of a ball on a hill breaks down because it says nothing about how fast the ball rolls: free energy tells you direction and available work, not speed. A very favourable reaction can still be painfully slow until an enzyme steps in.",
+        "intermediate": "Spontaneity depends on both enthalpy and entropy: a reaction with a positive delta H can still be favourable if T delta S is large enough, as in the hydrophobic effect. delta G0' and K'eq are two faces of the same number, so a 'small' delta G0' of -11.4 kJ/mol at 298 K already means K'eq near 100. The real delta G in the cell equals delta G0' + RT ln Q, which is why reactions with modest or even positive delta G0' (such as many glycolytic steps) run forward when the product is removed quickly. Coupling works through a shared intermediate: hexokinase transfers phosphate from ATP to glucose, so the sum of glucose + Pi -> glucose-6-phosphate (about +13.8 kJ/mol) and ATP hydrolysis (about -30.5 kJ/mol) is about -16.7 kJ/mol.",
+        "advanced": "At constant T and P the criterion is delta G <= 0, but the derivation comes from the second law: total entropy of the universe cannot decrease. The standard-state convention matters: biochemists fix pH 7 (so [H+] is absorbed into delta G0') and often also fix [Mg2+] and ionic strength, which is why delta G0' and K'eq values depend on conditions and why ATP hydrolysis is more favourable at physiological [Mg2+]. The cellular delta G of ATP hydrolysis depends on the mass-action ratio [ADP][Pi]/[ATP], which cells keep far from equilibrium; the phosphorylation potential is therefore the practical measure of cellular energy charge. For transport and electrochemical processes the same logic extends with a work term, delta G = RT ln(c2/c1) + zF delta psi, which links this unit directly to membrane energetics later in the course. Enthalpy-entropy compensation in binding and folding means that large changes in delta H and T delta S can cancel, leaving small net delta G values."
+      },
+      "commonMistakes": [
+        "Confusing delta G with delta G0': a positive delta G0' does not forbid a reaction in the cell if the concentrations are right.",
+        "Thinking that a negative delta G means a reaction is fast; thermodynamics says nothing about rate.",
+        "Saying that ATP contains a 'high-energy bond' that releases energy when broken; the energy comes from the overall change (charge repulsion relief, solvation, resonance of products), and bond breaking itself costs energy.",
+        "Forgetting the sign convention: delta G refers to the direction as written, and reversing the reaction flips the sign."
+      ],
+      "videos": [
+        {
+          "youtubeId": "ViAmQivKif0",
+          "title": "Gibbs free energy and spontaneity | Chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "A clear walk-through of delta G = delta H - T delta S and how the sign of each term decides spontaneity."
+        },
+        {
+          "youtubeId": "76O8KpO_4Zw",
+          "title": "ATP hydrolysis: Gibbs free energy | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Shows how the free energy of ATP hydrolysis is used in a biochemical context."
+        },
+        {
+          "youtubeId": "OjhZYx1FbhI",
+          "title": "16. Thermodynamics: Gibbs Free Energy and Entropy",
+          "channel": "MIT OpenCourseWare",
+          "level": "intermediate",
+          "whyWatch": "A full lecture linking entropy, free energy and equilibrium with worked examples."
+        },
+        {
+          "youtubeId": "8N1BxHgsoOw",
+          "title": "The Laws of Thermodynamics, Entropy, and Gibbs Free Energy",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A compact recap of the laws of thermodynamics before you tackle the maths."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Chemistry 2e: Free Energy",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/chemistry-2e/pages/16-4-free-energy",
+          "free": true,
+          "level": "beginner",
+          "note": "A free, well-illustrated chapter that practises delta G, K and temperature dependence with worked problems."
+        },
+        {
+          "title": "Thermodynamics and Kinetics (5.60) course materials",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Complete physical-chemistry lecture notes and problem sets for when you want the derivations behind the formulae."
+        },
+        {
+          "title": "Thermodynamics (Chemistry)",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/chemistry/thermodynamics-chemistry",
+          "free": true,
+          "level": "beginner",
+          "note": "Short videos and practice questions to rebuild enthalpy, entropy and free energy from scratch."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A reaction has delta G0' = -11.4 kJ/mol at 298 K. What is the approximate K'eq? (RT ln 10 is about 5.7 kJ/mol.)",
+          "options": [
+            "About 10",
+            "About 100",
+            "About 1 000",
+            "About 0.01"
+          ],
+          "answer": 1,
+          "explanation": "delta G0' = -RT ln K'eq. A change of 5.7 kJ/mol equals a tenfold change in K'eq, so -11.4 kJ/mol (two such steps) gives K'eq of roughly 10 x 10 = 100."
+        },
+        {
+          "question": "A reaction is endothermic (delta H positive) but proceeds spontaneously at room temperature. What must be true?",
+          "options": [
+            "delta S is negative",
+            "T delta S is larger than delta H, so delta G is negative",
+            "delta G0' must be positive",
+            "The reaction is at equilibrium"
+          ],
+          "answer": 1,
+          "explanation": "Spontaneity needs delta G = delta H - T delta S < 0. If delta H is positive, an entropy gain large enough that T delta S exceeds delta H makes delta G negative."
+        },
+        {
+          "question": "Glucose + Pi -> glucose-6-phosphate has delta G0' of about +13.8 kJ/mol, and ATP hydrolysis about -30.5 kJ/mol. What is the approximate delta G0' of the coupled reaction glucose + ATP -> G6P + ADP?",
+          "options": [
+            "+44.3 kJ/mol",
+            "-16.7 kJ/mol",
+            "-44.3 kJ/mol",
+            "+16.7 kJ/mol"
+          ],
+          "answer": 1,
+          "explanation": "Free-energy changes of coupled reactions add: +13.8 + (-30.5) = -16.7 kJ/mol, which is why hexokinase can phosphorylate glucose."
+        },
+        {
+          "question": "Which statement about delta G0' and delta G inside a cell is correct?",
+          "options": [
+            "They are always identical",
+            "delta G depends on the actual concentrations through RT ln Q, so it can differ in sign from delta G0'",
+            "delta G0' depends on the enzyme present",
+            "delta G is only defined at equilibrium"
+          ],
+          "answer": 1,
+          "explanation": "delta G = delta G0' + RT ln Q. Concentrations in the cell are not 1 M, so the real driving force can differ greatly, and even change sign, relative to the standard value. An enzyme never changes delta G."
+        }
+      ]
+    },
+    {
+      "id": "chemical-kinetics",
+      "title": "Reaction rates, activation energy and temperature",
+      "hours": 4,
+      "hook": "Diamond is thermodynamically unstable relative to graphite, yet your ring will outlast you; and a sugar that could release plenty of energy sits happily in the sugar bowl. Whether a reaction is possible and how fast it actually goes are two entirely different questions, and life depends on that gap.",
+      "learningObjectives": [
+        "Write rate laws for zero-, first- and second-order reactions and identify the order from data",
+        "Use integrated rate laws and half-lives for first-order processes, including radioactive and protein-decay examples",
+        "Explain the Arrhenius equation and extract an activation energy from a plot of ln k versus 1/T",
+        "Distinguish reaction order from molecularity",
+        "Describe the transition-state view of catalysis and why a catalyst changes rate but not equilibrium",
+        "Recognise when a pseudo-first-order approximation is valid"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Rate law",
+          "definition": "An experimentally determined equation relating the reaction rate to reactant concentrations, such as rate = k[A]^m[B]^n."
+        },
+        {
+          "term": "Reaction order",
+          "definition": "The exponent of a concentration term in the rate law; the overall order is the sum. It must be measured, not read off the balanced equation."
+        },
+        {
+          "term": "Molecularity",
+          "definition": "The number of molecules that collide in an elementary step (uni-, bi-, termolecular); defined only for elementary steps."
+        },
+        {
+          "term": "First-order reaction",
+          "definition": "Rate is proportional to one concentration; ln[A] falls linearly with time and the half-life, t1/2 = ln 2 / k, does not depend on concentration."
+        },
+        {
+          "term": "Second-order reaction",
+          "definition": "Rate depends on the square of one concentration or the product of two; 1/[A] rises linearly with time for the one-reactant case."
+        },
+        {
+          "term": "Pseudo-first-order conditions",
+          "definition": "When one reactant is in large excess its concentration is effectively constant, so the reaction appears first order in the other; widely used in binding and enzyme kinetics."
+        },
+        {
+          "term": "Activation energy (Ea)",
+          "definition": "The energy barrier between reactants and the transition state; it controls how strongly the rate constant rises with temperature."
+        },
+        {
+          "term": "Arrhenius equation",
+          "definition": "k = A exp(-Ea/RT). A plot of ln k against 1/T gives a straight line of slope -Ea/R."
+        },
+        {
+          "term": "Transition state",
+          "definition": "The highest-energy arrangement along the reaction path; it is a fleeting configuration, not a stable intermediate."
+        },
+        {
+          "term": "Catalyst",
+          "definition": "A species that speeds a reaction by providing a lower-barrier route; it is regenerated and does not change delta G or K'eq."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine a hiker wanting to cross from one valley to another. The valleys' heights tell you which one is lower (thermodynamics), but the height of the mountain pass tells you how long the trip will take (kinetics). Warming the system gives more hikers enough energy to clear the pass, so reactions speed up with temperature. A catalyst is a lower pass, not a lowered valley. The analogy breaks down because molecules do not make a single deliberate trip: huge numbers of them collide at random and only a tiny fraction have enough energy at any instant.",
+        "intermediate": "For a first-order process A -> P, the rate is k[A], and [A] = [A]0 exp(-kt). The half-life t1/2 = 0.693/k is constant, which is why drug elimination and radioactive decay are described with half-lives. Second-order reactions have a half-life that depends on starting concentration. To find the order, test which plot is straight: ln[A] versus t for first order, 1/[A] versus t for second order, [A] versus t for zero order. The Arrhenius equation links k to temperature: raising a reaction with Ea of about 50 kJ/mol from 25 C to 35 C increases k by a factor of roughly two, which is the origin of the rule of thumb Q10 near 2 for many biological rates (a rule of thumb, not a law).",
+        "advanced": "Collision theory gives the pre-exponential A the meaning of collision frequency times an orientation factor; transition-state theory writes k = (kB T/h) exp(-delta G double-dagger / RT), so rate constants map directly onto an activation free energy and the Eyring plot separates activation enthalpy and entropy. Complex mechanisms are analysed with the steady-state approximation, treating the concentration of a reactive intermediate as constant; this is exactly the step used in the Briggs-Haldane treatment of enzymes in BC 3027. Catalysis lowers delta G double-dagger by stabilising the transition state more than the ground state; the scale of the effect is dramatic, with uncatalysed reactions in water that would take millions of years being accelerated by enzymes by many orders of magnitude (see the Radzicka and Wolfenden paper). Because a catalyst accelerates forward and reverse reactions equally, the equilibrium constant is unchanged, a consequence of microscopic reversibility."
+      },
+      "commonMistakes": [
+        "Reading the order from the stoichiometric coefficients; order comes from experiment unless the step is elementary.",
+        "Believing a catalyst makes an impossible reaction happen or shifts equilibrium; it only gets you to the same equilibrium faster.",
+        "Using ln k versus T instead of ln k versus 1/T for an Arrhenius plot, or forgetting to use temperature in kelvin.",
+        "Assuming enzymes follow the Arrhenius law at all temperatures; above the optimum, denaturation destroys the enzyme and the rate drops."
+      ],
+      "videos": [
+        {
+          "youtubeId": "e4qci9b2d3U",
+          "title": "Half-life of a first-order reaction | Kinetics | AP Chemistry | Khan Academy",
+          "channel": "Khan Academy Organic Chemistry",
+          "level": "beginner",
+          "whyWatch": "Shows why first-order half-lives are constant and how to calculate them."
+        },
+        {
+          "youtubeId": "16fFjAcxJSc",
+          "title": "Arrhenius Equation Activation Energy and Rate Constant K Explained",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "intermediate",
+          "whyWatch": "Works through the Arrhenius equation, including the two-temperature form and linear plot."
+        },
+        {
+          "youtubeId": "jX4dEOFwaLQ",
+          "title": "Collision Theory - Arrhenius Equation & Activation Energy - Chemical Kinetics",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "intermediate",
+          "whyWatch": "Connects collision theory with activation energy before the maths."
+        },
+        {
+          "youtubeId": "7I0Xg92_eA4",
+          "title": "Integrated Rate Laws - Zero, First, & Second Order Reactions - Chemical Kinetics",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "intermediate",
+          "whyWatch": "A long problem-solving session on rate laws and integrated equations you can pause and replay."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.7809611",
+          "title": "A Proficient Enzyme",
+          "authors": "Radzicka A, Wolfenden R",
+          "year": 1995,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "The authors measured how slowly some biologically important reactions run in plain water and compared that with the enzyme-catalysed rate. The enormous gaps they report make the point that catalysis is a kinetic, not a thermodynamic, achievement.",
+          "readingQuestions": [
+            "Why must the uncatalysed reaction rate be measured at high temperature and extrapolated?",
+            "How does the quoted rate enhancement relate to a change in the activation free energy?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Chemistry 2e: Rate Laws",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-3-rate-laws",
+          "free": true,
+          "level": "beginner",
+          "note": "A free chapter explaining rate laws and reaction order, with problems to check your understanding."
+        },
+        {
+          "title": "Reactions and Rates simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/reactions-and-rates",
+          "free": true,
+          "level": "beginner",
+          "note": "Lets you change temperature, concentration and barrier height to see how collisions and rates respond."
+        },
+        {
+          "title": "Thermodynamics and Kinetics (5.60) course materials",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/",
+          "free": true,
+          "level": "advanced",
+          "note": "Later lectures in this course cover kinetics and transition-state theory."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A first-order reaction has k = 0.0693 per minute. What is its half-life?",
+          "options": [
+            "1 minute",
+            "10 minutes",
+            "6.93 minutes",
+            "100 minutes"
+          ],
+          "answer": 1,
+          "explanation": "t1/2 = ln 2 / k = 0.693 / 0.0693 = 10 minutes, and this does not depend on the starting concentration."
+        },
+        {
+          "question": "In an Arrhenius plot of ln k versus 1/T, what does the slope equal?",
+          "options": [
+            "A",
+            "-ln A",
+            "Ea",
+            "-Ea/R"
+          ],
+          "answer": 3,
+          "explanation": "Taking logs of k = A exp(-Ea/RT) gives ln k = ln A - (Ea/R)(1/T), so the slope is -Ea/R and the intercept is ln A."
+        },
+        {
+          "question": "An enzyme lowers the activation energy of a reaction. What happens to the equilibrium constant?",
+          "options": [
+            "It becomes infinite",
+            "It increases",
+            "It decreases",
+            "It is unchanged"
+          ],
+          "answer": 3,
+          "explanation": "A catalyst lowers the barrier for the forward and reverse reactions equally, so it affects how quickly equilibrium is reached but not where equilibrium lies."
+        },
+        {
+          "question": "Which plot is linear for a reaction that is second order in a single reactant A?",
+          "options": [
+            "[A] versus t",
+            "ln[A] versus t",
+            "1/[A] versus t",
+            "[A] versus 1/t"
+          ],
+          "answer": 2,
+          "explanation": "The integrated rate law for a second-order process in A is 1/[A] = 1/[A]0 + kt, so 1/[A] versus t is a straight line."
+        }
+      ]
+    },
+    {
+      "id": "weak-interactions-water-ph",
+      "title": "Water, weak interactions, acids and bases",
+      "hours": 5,
+      "hook": "Every protein you will ever meet is held together by forces that are individually weaker than a shove from a passing water molecule, and yet the sum is stable enough to last for years. Water itself, odd and cohesive, is the stage and the director of nearly everything biochemical.",
+      "learningObjectives": [
+        "Compare the strengths and distance dependence of ionic, hydrogen-bond, van der Waals and hydrophobic interactions",
+        "Explain why water is such a good solvent for polar molecules and why non-polar groups cluster in water",
+        "Describe the hydrophobic effect in thermodynamic terms (entropy of ordered water) rather than as an attraction",
+        "Use the Henderson-Hasselbalch equation to calculate pH, pKa and the ratio of base to acid",
+        "Interpret a titration curve, identify buffering regions and the isoelectric point",
+        "Choose a suitable buffer for a given pH and explain how ionic strength affects behaviour"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Hydrogen bond",
+          "definition": "An attraction between a hydrogen covalently bound to an electronegative atom (N, O) and a lone pair on another; directional and roughly 10 to 30 kJ/mol in biological settings."
+        },
+        {
+          "term": "Electrostatic (ionic) interaction",
+          "definition": "Attraction between opposite charges; strong in vacuum but strongly weakened by water, so salt bridges contribute modestly in solution."
+        },
+        {
+          "term": "van der Waals (London dispersion) forces",
+          "definition": "Weak, short-range attractions between transient dipoles; individually tiny (about 0.4 to 4 kJ/mol) but significant when many atoms pack closely."
+        },
+        {
+          "term": "Hydrophobic effect",
+          "definition": "The tendency of non-polar groups to be sequestered away from water. It is driven mainly by the entropy gain of releasing ordered water, not by attraction between the non-polar groups themselves."
+        },
+        {
+          "term": "Amphipathic molecule",
+          "definition": "A molecule with both polar and non-polar regions, such as phospholipids and detergents; it self-assembles into micelles or bilayers in water."
+        },
+        {
+          "term": "pKa",
+          "definition": "The pH at which an acid is half dissociated; a quantitative measure of acid strength for each ionisable group."
+        },
+        {
+          "term": "Henderson-Hasselbalch equation",
+          "definition": "pH = pKa + log([A-]/[HA]); it is the working equation for buffers and for the charge state of a group."
+        },
+        {
+          "term": "Buffer",
+          "definition": "A mixture of a weak acid and its conjugate base that resists changes in pH; most effective within about one pH unit of its pKa."
+        },
+        {
+          "term": "Isoelectric point (pI)",
+          "definition": "The pH at which a molecule carries no net charge; for a simple amino acid it is the average of the two pKa values on either side of the neutral form."
+        },
+        {
+          "term": "Ionic strength",
+          "definition": "A measure of the total concentration of ions in solution, weighted by charge squared; it screens electrostatic interactions and shifts effective pKa values."
+        }
+      ],
+      "deeper": {
+        "beginner": "Water molecules love to hold hands with each other. A greasy molecule dropped into water cannot join in, so water gathers into an orderly cage around it, and that order is costly. Pushing the greasy molecules together frees the water from the cages, and the disorder it gains is what drives them to cluster. That is why oil droplets merge and why the oily amino acids of a protein hide in its core. The picture of water hugging a greasy molecule is only a convenient story: the effect is really about the statistics of many hydrogen-bond arrangements.",
+        "intermediate": "Non-covalent interactions work through their sum, not their individual strength: a folded protein is held by hundreds of hydrogen bonds, van der Waals contacts and the burial of non-polar surface. At the surface of a protein the electrostatic energy of a salt bridge is weakened by the high dielectric constant of water (around 80), whereas in a hydrophobic interior the same interaction is much stronger. For acids and bases the Henderson-Hasselbalch equation makes calculations simple: at pH = pKa the acid and base forms are equal, and a shift of one pH unit changes the ratio tenfold. Titration curves show buffering plateaus around each pKa; amino-acid side chains such as histidine (pKa near 6) are useful at near-physiological pH. Remember that real pKa values inside proteins can shift by several units depending on the local environment.",
+        "advanced": "The hydrophobic effect at room temperature is entropic at the molecular scale (ordering of water), but the apparent enthalpy and entropy contributions change with temperature because of the large heat-capacity change on transfer of non-polar groups; this is why the effect is strongest near room temperature and weakens on cooling, as proposed by Kauzmann. For small hydrophobic solutes the water network can wrap around the solute; for large surfaces the water is depleted at the interface and the physics changes, which is why theories of hydrophobicity differ at different length scales. pKa shifts in proteins reflect desolvation and nearby charges and can be probed by NMR titration; catalytic residues often have strikingly perturbed pKa values. Debye-Huckel theory describes how ionic strength screens charges, and buffer choice affects experiments: phosphate precipitates calcium, Tris pKa is strongly temperature dependent, and some buffers bind metals or inhibit enzymes."
+      },
+      "commonMistakes": [
+        "Describing the hydrophobic effect as an attraction between non-polar groups; it is a solvent-driven effect.",
+        "Adding strong acid or base to a buffer problem without first checking the stoichiometry; do the neutralisation arithmetic before using Henderson-Hasselbalch.",
+        "Assuming a buffer works at any pH; it is effective only within roughly pKa +/- 1.",
+        "Treating pKa values from a table as fixed; in proteins the local environment can shift them substantially.",
+        "Calling a hydrogen bond a covalent bond; it is far weaker and has no fixed bond order."
+      ],
+      "animation": "titration-curve",
+      "videos": [
+        {
+          "youtubeId": "Nwyf6G_IVXM",
+          "title": "The Hydrophobic Effect and Entropy Biochemistry MADE SUPER SIMPLE!",
+          "channel": "Science Simplified",
+          "level": "beginner",
+          "whyWatch": "A short explanation of why hydrophobic groups cluster in water in terms of entropy."
+        },
+        {
+          "youtubeId": "lIgLgMnl-1I",
+          "title": "Ionic and Covalent Bonds, Hydrogen Bonds, van der Waals - 4 types of Chemical Bonds in Biology",
+          "channel": "Socratica",
+          "level": "beginner",
+          "whyWatch": "Compares the main bond types in biology with clear diagrams."
+        },
+        {
+          "youtubeId": "7QgtdYiWH50",
+          "title": "Henderson-Hasselbalch equation | Acids and bases | AP Chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Derives and uses the Henderson-Hasselbalch equation in worked examples."
+        },
+        {
+          "youtubeId": "6L1VulMjedI",
+          "title": "Titration curves, pKa, pI, and Buffering regions",
+          "channel": "Bialecki Biology",
+          "level": "intermediate",
+          "whyWatch": "A longer lecture that reads titration curves, buffering regions and isoelectric points off the graph."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1021/bi00483a001",
+          "title": "Dominant forces in protein folding",
+          "authors": "Dill KA",
+          "year": 1990,
+          "journal": "Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "A classic review that asks which non-covalent forces really stabilise folded proteins, and concludes that hydrophobic interactions dominate with hydrogen bonds playing a more subtle role. It teaches you to think about folding as a balance of many small contributions.",
+          "readingQuestions": [
+            "Why does the author argue that hydrogen bonds contribute less to stability than you might expect?",
+            "What evidence supports the hydrophobic effect as the dominant driving force?"
+          ]
+        },
+        {
+          "doi": "10.1016/S0065-3233(08)60608-7",
+          "title": "Some Factors in the Interpretation of Protein Denaturation",
+          "authors": "Kauzmann W",
+          "year": 1959,
+          "journal": "Advances in Protein Chemistry",
+          "level": "advanced",
+          "whyItMatters": "Kauzmann's article introduced the idea that burying non-polar side chains is a major driving force for folding. It is a landmark in how we think about hydrophobic interactions."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PhET pH Scale simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/ph-scale",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive way to see how concentration of H+ and OH- relates to pH and how dilution behaves."
+        },
+        {
+          "title": "Acids and bases (Chemistry)",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/chemistry/acids-and-bases-topic",
+          "free": true,
+          "level": "beginner",
+          "note": "Step-by-step lessons on pH, buffers and titrations with practice questions."
+        },
+        {
+          "title": "Biochemistry (Jakubowski and Flatt) and related texts",
+          "provider": "LibreTexts Biochemistry",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free library of biochemistry textbooks; look for the sections on water, buffers and weak interactions."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What mainly drives the hydrophobic effect?",
+          "options": [
+            "Increase in entropy when ordered water around non-polar groups is released",
+            "Formation of covalent bonds between side chains",
+            "Electrostatic attraction of non-polar groups to water",
+            "Strong attraction between non-polar groups"
+          ],
+          "answer": 0,
+          "explanation": "Non-polar groups force water into ordered cages; clustering the groups releases those water molecules and increases the entropy of the system. The groups themselves attract each other only weakly."
+        },
+        {
+          "question": "A buffer has acetic acid (pKa 4.76). At pH 5.76, what is the ratio [acetate]/[acetic acid]?",
+          "options": [
+            "0.1",
+            "1",
+            "10",
+            "100"
+          ],
+          "answer": 2,
+          "explanation": "pH - pKa = 1, so log([A-]/[HA]) = 1 and the ratio is 10."
+        },
+        {
+          "question": "For which pH range would a buffer with pKa 7.2 be most useful?",
+          "options": [
+            "pH 3 to 4",
+            "pH 6.2 to 8.2",
+            "pH 9.5 to 11",
+            "pH 1 to 2"
+          ],
+          "answer": 1,
+          "explanation": "Buffers work best within about one unit either side of the pKa, where appreciable amounts of both the acid and base forms are present."
+        },
+        {
+          "question": "The pKa values of the two acidic groups of a simple amino acid with a neutral side chain are 2.3 and 9.7. What is its isoelectric point?",
+          "options": [
+            "2.3",
+            "6.0",
+            "7.0",
+            "9.7"
+          ],
+          "answer": 1,
+          "explanation": "For an amino acid with a non-ionisable side chain the pI is the average of the pKa values flanking the neutral zwitterion: (2.3 + 9.7)/2 = 6.0."
+        }
+      ]
+    },
+    {
+      "id": "ligand-binding-cooperativity",
+      "title": "Ligand binding, affinity and cooperativity",
+      "hours": 4,
+      "hook": "Nearly every event in biology starts with one molecule recognising another: an oxygen atom landing on haem, a hormone finding its receptor, a drug sticking in an enzyme pocket. How tightly and how cooperatively they stick is something we can put numbers on.",
+      "learningObjectives": [
+        "Define the dissociation constant Kd and relate it to the fraction of sites occupied",
+        "Derive and use the binding isotherm for a single-site system and read Kd from a saturation curve",
+        "Interpret linearised plots (Scatchard, double-reciprocal) and state their limitations",
+        "Define the Hill coefficient and use it to distinguish positive, negative and no cooperativity",
+        "Describe the MWC (concerted) and KNF (sequential) models of allostery",
+        "Explain what isothermal titration calorimetry and surface plasmon resonance measure"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Dissociation constant (Kd)",
+          "definition": "For P + L <-> PL, Kd = [P][L]/[PL]; equal to the free ligand concentration at which half the binding sites are occupied. Smaller Kd means tighter binding."
+        },
+        {
+          "term": "Fractional saturation (theta)",
+          "definition": "The fraction of binding sites occupied; for a single independent site theta = [L]/(Kd + [L])."
+        },
+        {
+          "term": "Association constant (Ka)",
+          "definition": "The reciprocal of Kd; related to the binding free energy by delta G0 = -RT ln Ka."
+        },
+        {
+          "term": "Scatchard plot",
+          "definition": "A linearisation of binding data (bound/free against bound); useful for visual diagnosis but distorts the error, so non-linear fitting is preferred."
+        },
+        {
+          "term": "Cooperativity",
+          "definition": "When binding of one ligand changes the affinity of other sites on the same macromolecule: positive if affinity increases, negative if it decreases."
+        },
+        {
+          "term": "Hill equation and coefficient (nH)",
+          "definition": "theta = [L]^n / (K^n + [L]^n); nH equal to 1 means no cooperativity, nH above 1 positive cooperativity, below 1 negative cooperativity. nH cannot exceed the number of sites."
+        },
+        {
+          "term": "Allostery",
+          "definition": "Regulation of a protein's function by a ligand binding at a site other than the active site, mediated by conformational change."
+        },
+        {
+          "term": "MWC model",
+          "definition": "A concerted model in which all subunits switch together between a low-affinity T and high-affinity R state, with ligand shifting the equilibrium towards R."
+        },
+        {
+          "term": "KNF model",
+          "definition": "A sequential model in which each subunit changes conformation upon binding and influences its neighbours, so intermediate states exist."
+        },
+        {
+          "term": "Isothermal titration calorimetry (ITC)",
+          "definition": "Measures the heat of binding during stepwise injections, giving Kd, stoichiometry and delta H in one experiment; delta G and T delta S then follow."
+        }
+      ],
+      "deeper": {
+        "beginner": "Binding is a fast handshake that keeps being made and broken. Kd tells you how much of the ligand you need floating around before half the hands are held at any moment. In a cooperative system the first handshake makes the others easier, like a crowd that grows suddenly once a few people start clapping. Haemoglobin works this way, which is why it loads oxygen in the lungs and dumps it in tissues over a narrow range of oxygen pressure. The clapping analogy breaks down because in a protein the 'coupling' is a physical shift in shape, not social imitation.",
+        "intermediate": "For a single independent site, theta = [L]/(Kd + [L]), a rectangular hyperbola: half of the sites are occupied when [L] = Kd, and 90% occupancy needs [L] = 9 Kd. Cooperative binding gives a sigmoidal curve. The Hill coefficient is read from a plot of log(theta/(1 - theta)) against log[L], the slope at mid-point. Haemoglobin has nH of about 2.8 for four sites, not 4, because cooperativity is incomplete. Myoglobin, a single site, binds oxygen non-cooperatively with a hyperbolic curve and higher affinity than haemoglobin. ITC and SPR give complementary information: ITC gives a thermodynamic signature (delta H, Kd, n) while SPR gives association and dissociation rate constants (kon and koff), with Kd = koff/kon.",
+        "advanced": "The MWC model explains cooperativity with two global states and an equilibrium constant L0 = [T]/[R] in the absence of ligand, plus the ratio c of affinities; the sigmoidal binding curve arises from the ligand preferentially binding R and shifting the equilibrium. The KNF model allows the state of each subunit to depend on neighbours. Real systems often show features of both; haemoglobin is better described by modifications of MWC (for example, tertiary two-state ideas). Hill's coefficient is a descriptive index of the steepness at mid-saturation, not the number of interacting sites; the Adair equation, with stepwise constants, is the rigorous approach for multi-site binding. Thermodynamic analysis by ITC separates enthalpy and entropy contributions, but compensation often means that very different binding modes give similar delta G. Errors in the Scatchard plot arise because both axes include the measured bound concentration, violating assumptions of ordinary regression."
+      },
+      "commonMistakes": [
+        "Confusing Kd with Ka; high affinity means small Kd and large Ka.",
+        "Reading the Hill coefficient as the number of binding sites; it is a measure of cooperativity and is bounded above by the number of sites.",
+        "Assuming a sigmoidal curve always means cooperativity; check for ligand depletion and heterogeneity of sites.",
+        "Using a Scatchard plot with data that deplete ligand (when protein concentration is not much lower than Kd), which distorts the fit."
+      ],
+      "videos": [
+        {
+          "youtubeId": "3UHJ9gnpqB0",
+          "title": "Kd, the Dissociation Constant: What is it?",
+          "channel": "Catalyst University",
+          "level": "beginner",
+          "whyWatch": "A clear short explanation of what Kd means and how it relates to occupancy."
+        },
+        {
+          "youtubeId": "5xp9lI_fXDo",
+          "title": "Cooperativity | Biomolecules | MCAT | Khan Academy",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Introduces cooperative binding with the haemoglobin example."
+        },
+        {
+          "youtubeId": "mJt5w5KdVPs",
+          "title": "Enzyme Cooperatively & Hill's Coefficient | Oxygen-Hemoglobin Dissection Curve",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Explains how the Hill coefficient is read from a curve and what it tells you."
+        },
+        {
+          "youtubeId": "bIkEfNfJbbE",
+          "title": "Isothermal Titration Calorimetry (ITC) - Yale CBIC",
+          "channel": "Yale CBIC",
+          "level": "advanced",
+          "whyWatch": "A core-facility tutorial on how an ITC experiment is run and read."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/S0022-2836(65)80285-6",
+          "title": "On the nature of allosteric transitions: A plausible model",
+          "authors": "Monod J, Wyman J, Changeux JP",
+          "year": 1965,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "The paper that proposed the concerted two-state model for allostery. Even if the maths is dense, the central idea of a pre-existing equilibrium between states that ligands select is worth seeing in its original form.",
+          "readingQuestions": [
+            "What are the key assumptions of the model?",
+            "Why does the model predict sigmoidal binding curves?"
+          ]
+        },
+        {
+          "doi": "10.1021/bi00865a047",
+          "title": "Comparison of Experimental Binding Data and Theoretical Models in Proteins Containing Subunits",
+          "authors": "Koshland DE, Nemethy G, Filmer D",
+          "year": 1966,
+          "journal": "Biochemistry",
+          "level": "advanced",
+          "whyItMatters": "The sequential-model counterpart to MWC. Reading it next to the MWC paper shows how two different mechanisms can fit the same binding data, and why distinguishing them takes careful experiments."
+        },
+        {
+          "doi": "10.1038/228726a0",
+          "title": "Stereochemistry of Cooperative Effects in Haemoglobin: Haem-Haem Interaction and the Problem of Allostery",
+          "authors": "Perutz MF",
+          "year": 1970,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Perutz connected the abstract allosteric models to the actual atomic changes in haemoglobin seen by X-ray crystallography. It shows how structure explains cooperativity."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Lecture videos and notes on protein-ligand binding and allostery from a full introductory biochemistry course."
+        },
+        {
+          "title": "Membranes and transport",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/biology/membranes-and-transport",
+          "free": true,
+          "level": "beginner",
+          "note": "Background reading on receptors and transporters that provides biological examples for binding."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A full classic biochemistry text; use the chapters on haemoglobin and allosteric regulation to see binding theory applied."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A protein has Kd of 2 uM for a ligand and a single independent binding site. At a free ligand concentration of 2 uM, what fraction of sites are occupied?",
+          "options": [
+            "10%",
+            "25%",
+            "50%",
+            "90%"
+          ],
+          "answer": 2,
+          "explanation": "theta = [L]/(Kd + [L]) = 2/(2 + 2) = 0.5; by definition Kd is the free ligand concentration at half-saturation."
+        },
+        {
+          "question": "Haemoglobin's Hill coefficient for oxygen is about 2.8 although it has four binding sites. What does this tell you?",
+          "options": [
+            "Negative cooperativity",
+            "Only three sites are functional",
+            "No cooperativity",
+            "Strong but not perfect positive cooperativity"
+          ],
+          "answer": 3,
+          "explanation": "nH above 1 indicates positive cooperativity, and nH below the number of sites means the cooperativity is incomplete. nH of 4 would mean all-or-none binding."
+        },
+        {
+          "question": "Which pair of values do surface plasmon resonance experiments typically give directly?",
+          "options": [
+            "Vmax and Km",
+            "delta H and delta S",
+            "kon and koff",
+            "pI and pKa"
+          ],
+          "answer": 2,
+          "explanation": "SPR follows binding in real time and yields association and dissociation rate constants, from which Kd = koff/kon. ITC, by contrast, gives delta H, Kd and stoichiometry."
+        },
+        {
+          "question": "In the MWC model, what does ligand binding do?",
+          "options": [
+            "Induces each subunit independently to change shape",
+            "Shifts the equilibrium between T and R states towards the state it binds more tightly",
+            "Creates new subunits",
+            "Lowers the number of binding sites"
+          ],
+          "answer": 1,
+          "explanation": "In the concerted model both states exist before ligand arrives; the ligand binds preferentially to R, which pulls the entire population towards R and produces sigmoidal binding."
+        }
+      ]
+    },
+    {
+      "id": "diffusion-membrane-potential",
+      "title": "Diffusion, osmosis and electrochemical gradients across membranes",
+      "hours": 4,
+      "hook": "At rest, the inside of a nerve cell sits about 70 millivolts below the outside, a tiny battery charged by ion gradients and spent each time you think a thought. The physics that explains this battery is the same physics that governs why a drop of ink spreads in water.",
+      "learningObjectives": [
+        "Explain diffusion with Fick's first law and relate the diffusion coefficient to molecular size and viscosity",
+        "Estimate how diffusion time scales with distance and why it limits cell size",
+        "Define osmotic pressure and use the van't Hoff relation to predict water movement",
+        "Calculate the free-energy cost of moving a solute against a concentration gradient",
+        "Use the Nernst equation to compute an equilibrium potential for an ion",
+        "Describe how the Goldman equation and selective permeability produce a resting membrane potential"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fick's first law",
+          "definition": "The diffusion flux is proportional to the concentration gradient: J = -D dC/dx. Matter moves from high to low concentration."
+        },
+        {
+          "term": "Diffusion coefficient (D)",
+          "definition": "A measure of how quickly a species spreads; for a sphere D = kBT/(6 pi eta r) (Stokes-Einstein), so it falls with size and viscosity."
+        },
+        {
+          "term": "Time to diffuse",
+          "definition": "In one dimension the mean-square displacement is about 2Dt, so diffusion time grows with the square of the distance."
+        },
+        {
+          "term": "Osmosis and osmotic pressure",
+          "definition": "Net water movement across a semipermeable membrane towards higher solute concentration; for a dilute solution pi = iMRT (van't Hoff)."
+        },
+        {
+          "term": "Chemical potential gradient",
+          "definition": "The true driving force for movement of a solute is the gradient in its chemical potential; for uncharged solutes it gives delta G = RT ln(c2/c1)."
+        },
+        {
+          "term": "Electrochemical potential",
+          "definition": "For charged species the driving force includes the membrane potential: delta G = RT ln(c2/c1) + zF delta psi."
+        },
+        {
+          "term": "Nernst equation",
+          "definition": "The membrane potential at which an ion is at equilibrium: E = (RT/zF) ln([out]/[in]), about 61.5 mV x log10 of the concentration ratio for a monovalent ion at 37 C."
+        },
+        {
+          "term": "Goldman-Hodgkin-Katz equation",
+          "definition": "Gives the membrane potential when several ions are permeant, weighting each ion's concentrations by its relative permeability."
+        },
+        {
+          "term": "Passive versus active transport",
+          "definition": "Passive transport follows the electrochemical gradient (diffusion, channels, carriers); active transport uses an energy source (ATP, ion gradient) to move solute against it."
+        }
+      ],
+      "deeper": {
+        "beginner": "Ink in water spreads because molecules jostle randomly and there is simply more room for them to wander into than back into the crowd. That random walk, repeated billions of times, looks like a smooth flow from crowded to empty regions. Cells use this for short distances but cannot rely on it over long ones, because diffusion slows down dramatically as distance increases. Membranes add a twist: if the membrane lets only potassium through, potassium leaks out until the electrical charge it leaves behind pulls back as hard as the concentration difference pushes out. The analogy of random jostling is faithful, but real cells also use active pumps, so not everything is passive.",
+        "intermediate": "Diffusion is fast over the scale of a cell (micrometres, milliseconds) but hopeless over centimetres (hours to days), which is why large organisms need circulatory systems. Osmosis explains cell swelling and shrinking and the use of isotonic solutions: pi = iMRT, so a 0.15 M NaCl solution, which dissociates into roughly two particles per formula unit, is close to the osmolarity of plasma at about 300 mOsm. For ions the Nernst equation gives the voltage at which diffusion and electrical forces balance. For potassium with 5 mM outside and 140 mM inside at 37 C: E = 61.5 log10(5/140) is about -89 mV. The resting potential in a cell (typically -60 to -70 mV) lies close to E_K because the resting membrane is mostly permeable to K+, with some contribution from Na+ and Cl-, as the Goldman equation shows.",
+        "advanced": "Fick's law follows from the chemical-potential gradient in the dilute limit; Einstein's relation connects D with mobility and thermal energy. Diffusion in the cytoplasm is slower than in water because of crowding and binding; the effective D of a GFP-sized protein in a cell is several-fold lower than in water. The free energy to move an uncharged solute 10-fold up a gradient at 37 C is RT ln 10, about 5.9 kJ/mol; for ions the electrical term adds zF delta psi, with F = 96 485 C/mol. The Goldman-Hodgkin-Katz voltage equation assumes a constant field across the membrane and independent ion movement, and its steady-state rather than equilibrium nature means energy (the Na+/K+ ATPase) is needed to maintain the gradients. The Hodgkin-Huxley model extended this reasoning to time-dependent conductances, explaining the action potential quantitatively."
+      },
+      "commonMistakes": [
+        "Treating diffusion as 'motion with a purpose'; each molecule moves randomly and only the net flux is directional.",
+        "Forgetting that the Nernst equation applies to a single ion at equilibrium, while the resting potential reflects several ions and is not an equilibrium state.",
+        "Using natural log and log10 interchangeably; the 61.5 mV form uses log10.",
+        "Saying that osmosis moves solute; it is the water that moves across a membrane impermeable to the solute."
+      ],
+      "videos": [
+        {
+          "youtubeId": "hk09AkV5_Kc",
+          "title": "Resting membrane potential - definition, examples",
+          "channel": "Osmosis from Elsevier",
+          "level": "beginner",
+          "whyWatch": "A short introduction to why cells have a resting potential and how ion gradients create it."
+        },
+        {
+          "youtubeId": "E14hzilwOsc",
+          "title": "Nernst Equation and Goldman Equation STEP BY STEP || Nernst Potential || Equilibrium Potential",
+          "channel": "Nonstop Neuron",
+          "level": "intermediate",
+          "whyWatch": "Works through calculations with the Nernst and Goldman equations step by step."
+        },
+        {
+          "youtubeId": "r9n_LtrXctY",
+          "title": "Resting Membrane Potential | Nervous System",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "beginner",
+          "whyWatch": "Explains the contributions of K+ and Na+ leak channels and the pump in a friendly, clear way."
+        },
+        {
+          "youtubeId": "U61e-dFpkuE",
+          "title": "Diffusion and Osmosis - Passive and Active Transport With Facilitated Diffusion",
+          "channel": "The Organic Chemistry Tutor",
+          "level": "beginner",
+          "whyWatch": "Covers diffusion, osmosis and facilitated transport with plenty of worked examples."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1113/jphysiol.1952.sp004764",
+          "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+          "authors": "Hodgkin AL, Huxley AF",
+          "year": 1952,
+          "journal": "The Journal of Physiology",
+          "level": "advanced",
+          "whyItMatters": "The paper that turned nerve excitation into an equation-based theory from ion conductances. You will not follow all of the maths on a first read, but it is a model of how physical chemistry explains a biological phenomenon.",
+          "openAccessUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/",
+          "readingQuestions": [
+            "Which ions carry current during the rising and falling phases of the action potential?",
+            "What assumptions let the authors separate sodium and potassium currents?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "Neuron simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/neuron",
+          "free": true,
+          "level": "beginner",
+          "note": "Lets you open channels and run the Na+/K+ pump to watch the membrane potential change."
+        },
+        {
+          "title": "Membrane Channels simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/membrane-channels",
+          "free": true,
+          "level": "beginner",
+          "note": "Shows how concentration gradients and channel gating produce net ion movement."
+        },
+        {
+          "title": "Membranes and transport",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/biology/membranes-and-transport",
+          "free": true,
+          "level": "beginner",
+          "note": "Basic lessons on diffusion, osmosis and transport proteins to anchor the quantitative treatment."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Using the Nernst equation with 61.5 mV x log10([out]/[in]) for a monovalent cation at 37 C, what is E_K if [K+] out is 5 mM and in is 140 mM?",
+          "options": [
+            "About +89 mV",
+            "About -89 mV",
+            "About -30 mV",
+            "About 0 mV"
+          ],
+          "answer": 1,
+          "explanation": "E = 61.5 x log10(5/140) = 61.5 x (-1.447) is about -89 mV. Potassium is more concentrated inside, so the equilibrium potential is negative."
+        },
+        {
+          "question": "A solute is moved from 1 mM to 10 mM across a membrane with no electrical potential. At 37 C (RT = 2.58 kJ/mol), what is the minimum free-energy cost per mole?",
+          "options": [
+            "About 0.6 kJ",
+            "About 5.9 kJ",
+            "About 25 kJ",
+            "About 59 kJ"
+          ],
+          "answer": 1,
+          "explanation": "delta G = RT ln(10) = 2.58 x 2.303 is about 5.9 kJ/mol."
+        },
+        {
+          "question": "If the distance a molecule must diffuse is doubled, the diffusion time increases by approximately",
+          "options": [
+            "2 times",
+            "4 times",
+            "8 times",
+            "no change"
+          ],
+          "answer": 1,
+          "explanation": "Mean-square displacement grows linearly with time (about 2Dt in one dimension), so time scales with the square of distance: doubling distance means four times as long."
+        },
+        {
+          "question": "Why is the resting membrane potential of most neurons not exactly equal to E_K?",
+          "options": [
+            "Potassium is not permeant",
+            "The membrane also has some permeability to other ions, notably Na+",
+            "Nernst potentials are not defined for K+",
+            "The Na+/K+ ATPase reverses potassium flow"
+          ],
+          "answer": 1,
+          "explanation": "The Goldman equation shows that the potential is a permeability-weighted average of ion equilibrium potentials, so a small Na+ leak pulls the resting value slightly above E_K."
+        }
+      ]
+    },
+    {
+      "id": "spectroscopy",
+      "title": "Optical and magnetic spectroscopy of biomolecules",
+      "hours": 5,
+      "hook": "You cannot see a protein fold, but you can shine light on it and listen to how it responds. A tryptophan that moves from water into the protein core glows a different colour, and the wavy fingerprint of a helix shows up in how a solution twists circularly polarised light.",
+      "learningObjectives": [
+        "Apply the Beer-Lambert law to determine protein, nucleic acid or NADH concentration from absorbance",
+        "Explain how light absorption excites electronic transitions and why aromatic residues absorb near 280 nm",
+        "Describe fluorescence and how emission differs from absorption (Stokes shift) and what quenching and FRET report",
+        "Explain what circular dichroism measures and how far-UV spectra report secondary structure",
+        "Outline the principle of NMR spectroscopy for biomolecules and what chemical shifts and NOEs reveal",
+        "Choose a suitable technique for a given biophysical question (concentration, folding, binding, structure)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Absorbance (A)",
+          "definition": "The logarithm of the ratio of incident to transmitted light intensity, A = log10(I0/I); it is dimensionless."
+        },
+        {
+          "term": "Beer-Lambert law",
+          "definition": "A = epsilon c l: absorbance is proportional to the molar absorption coefficient, the concentration and the path length."
+        },
+        {
+          "term": "Molar absorption coefficient (epsilon)",
+          "definition": "A property of a molecule at a given wavelength and conditions; for NADH at 340 nm it is about 6 220 M^-1 cm^-1, which makes it a convenient reporter in enzyme assays."
+        },
+        {
+          "term": "Chromophore",
+          "definition": "The part of a molecule that absorbs light; in proteins the peptide bond (below about 230 nm) and aromatic side chains (Trp, Tyr, Phe) absorb in the UV."
+        },
+        {
+          "term": "Fluorescence",
+          "definition": "Emission of light from an excited singlet state at a longer wavelength than absorbed; tryptophan fluorescence is sensitive to the polarity of its environment."
+        },
+        {
+          "term": "Quenching",
+          "definition": "Reduction of fluorescence intensity by interaction with another molecule or process; used to probe accessibility and binding."
+        },
+        {
+          "term": "FRET (Forster resonance energy transfer)",
+          "definition": "Non-radiative energy transfer from a donor to an acceptor fluorophore; efficiency falls with the sixth power of the distance, so it acts as a molecular ruler on the nanometre scale."
+        },
+        {
+          "term": "Circular dichroism (CD)",
+          "definition": "The difference in absorption of left and right circularly polarised light by chiral molecules; far-UV CD reports on secondary structure, with alpha helices showing minima near 208 and 222 nm."
+        },
+        {
+          "term": "NMR chemical shift",
+          "definition": "The resonance frequency of a nucleus relative to a reference, determined by its local electronic environment; it acts as a fingerprint for each atom."
+        },
+        {
+          "term": "NOE (nuclear Overhauser effect)",
+          "definition": "A through-space interaction between nuclei closer than about 5 angstroms, giving the distance restraints used to calculate protein structure in solution."
+        }
+      ],
+      "deeper": {
+        "beginner": "Spectroscopy is a way of questioning molecules with light or radio waves. Shine UV light on a protein solution and the aromatic rings absorb it; the more protein, the darker the shadow. Make the same rings glow and the colour of the glow tells you how watery or greasy their surroundings are. A magnet and a radio pulse can go further and tell you which atoms are neighbours. The analogy of a shadow works for absorbance, but in reality what is measured depends strongly on wavelength and environment, so the same molecule can look different in different buffers.",
+        "intermediate": "The Beer-Lambert law is the workhorse of the lab: for a protein with known epsilon at 280 nm (from its tryptophan and tyrosine content), concentration is A280/(epsilon x path length). It fails at high concentration because of light scattering and molecular interactions, and you should keep absorbance below about 1. Fluorescence is much more sensitive than absorbance, and the emission maximum of tryptophan shifts from about 350 nm in water to about 330 nm in a hydrophobic interior, a convenient indicator of unfolding. In CD, a spectrum with strong negative bands at 208 and 222 nm indicates a helical protein, while a single minimum near 218 nm suggests beta sheets. NMR measures nuclear spin transitions in a magnetic field; for proteins, 15N and 13C labelling allows multidimensional experiments and structure determination up to a modest size.",
+        "advanced": "Absorption involves transitions between electronic states governed by the Franck-Condon principle; molar absorption coefficients of proteins can be estimated from the content of Trp, Tyr and cystine (the Pace method). In fluorescence, Kasha's rule and the Stokes shift explain why emission is red-shifted, and time-resolved decay measurements give lifetimes that report dynamics. FRET efficiency E = 1/(1 + (R/R0)^6), where R0 (Forster radius, usually 3 to 6 nm) depends on spectral overlap and orientation; single-molecule FRET lets you follow conformational dynamics of individual molecules. CD spectra are deconvoluted against reference databases to estimate secondary-structure content, with caveats on accuracy; near-UV CD (250 to 320 nm) reports on tertiary structure. In NMR, relaxation measurements report dynamics from picoseconds to seconds, and chemical-shift perturbation mapping upon ligand addition identifies binding sites. Choice of technique depends on sample amount, size and whether the question is global (CD) or atom-resolved (NMR)."
+      },
+      "commonMistakes": [
+        "Using a plastic cuvette or buffer that absorbs in the UV range; quartz is needed below about 300 nm and the blank must contain the same buffer.",
+        "Estimating protein concentration by A280 when nucleic acid contamination is present; it also absorbs near 260 to 280 nm.",
+        "Quoting absorbance values above about 1.5 to 2 as reliable; the linear range of the law is limited.",
+        "Treating CD as giving atomic structure; it provides an average over the whole molecule.",
+        "Assuming FRET efficiency alone gives an absolute distance without checking the Forster radius and orientation assumptions."
+      ],
+      "videos": [
+        {
+          "youtubeId": "zuUvQN8KXOk",
+          "title": "Spectrophotometry and Beer's Law",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A quick explanation of how a spectrophotometer turns absorbance into concentration."
+        },
+        {
+          "youtubeId": "fJRJLUYZe9c",
+          "title": "Spectrophotometry and the Beer-Lambert Law | AP Chemistry | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Works through the Beer-Lambert equation with examples."
+        },
+        {
+          "youtubeId": "aOTq81l8VmA",
+          "title": "Tutorial of Circular dichroism",
+          "channel": "NSERC PROMOTE McGill",
+          "level": "intermediate",
+          "whyWatch": "A tutorial on how CD spectra are measured and interpreted."
+        },
+        {
+          "youtubeId": "4aF36-QeYgU",
+          "title": "Single-molecule FRET Imaging at St. Jude",
+          "channel": "St. Jude Children's Research Hospital",
+          "level": "intermediate",
+          "whyWatch": "A short look at how FRET lets researchers watch individual molecules change shape."
+        },
+        {
+          "youtubeId": "t8JIBwLsCGA",
+          "title": "Methods for Determining Atomic Structures: NMR Spectroscopy (from PDB-101)",
+          "channel": "RCSBProteinDataBank",
+          "level": "beginner",
+          "whyWatch": "A very brief PDB-101 animation of how NMR gives protein structures."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Beer's Law Lab simulation",
+          "provider": "PhET Interactive Simulations (University of Colorado Boulder)",
+          "type": "interactive",
+          "url": "https://phet.colorado.edu/en/simulations/beers-law-lab",
+          "free": true,
+          "level": "beginner",
+          "note": "Change concentration, path length and wavelength to see how absorbance responds."
+        },
+        {
+          "title": "Methods for Determining Structure",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/methods-for-determining-structure",
+          "free": true,
+          "level": "beginner",
+          "note": "Puts spectroscopic methods like NMR in context alongside crystallography and cryo-EM."
+        },
+        {
+          "title": "Physical and Theoretical Chemistry Textbook Maps",
+          "provider": "LibreTexts Chemistry",
+          "type": "textbook",
+          "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free physical-chemistry texts with chapters on absorption, fluorescence and magnetic resonance."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A solution of NADH in a 1 cm cuvette has A340 = 0.311. Using epsilon = 6 220 M^-1 cm^-1, what is the concentration?",
+          "options": [
+            "5 uM",
+            "50 uM",
+            "500 uM",
+            "5 mM"
+          ],
+          "answer": 1,
+          "explanation": "c = A/(epsilon l) = 0.311/6 220 = 5.0 x 10^-5 M = 50 uM."
+        },
+        {
+          "question": "A protein shows strong negative CD bands at 208 and 222 nm. What does this indicate?",
+          "options": [
+            "Random coil only",
+            "Disulphide-bonded structure",
+            "Predominantly beta sheet",
+            "Predominantly alpha helix"
+          ],
+          "answer": 3,
+          "explanation": "Those two minima are the signature of alpha-helical secondary structure; beta sheets give a single minimum near 218 nm."
+        },
+        {
+          "question": "If the distance between FRET donor and acceptor doubles (and nothing else changes), by approximately how much does the transfer rate fall?",
+          "options": [
+            "2 times",
+            "8 times",
+            "64 times",
+            "It does not change"
+          ],
+          "answer": 2,
+          "explanation": "The FRET rate depends on 1/R^6, so doubling R reduces it by 2^6 = 64."
+        },
+        {
+          "question": "Which absorbs strongly near 280 nm in proteins?",
+          "options": [
+            "Glycine and alanine side chains",
+            "Tryptophan and tyrosine",
+            "The phosphodiester backbone",
+            "Disulphide bonds only"
+          ],
+          "answer": 1,
+          "explanation": "The aromatic rings of tryptophan and, to a lesser extent, tyrosine account for most of the 280 nm absorbance of proteins."
+        }
+      ]
+    },
+    {
+      "id": "hydrodynamics-separations",
+      "title": "Size, shape and charge: centrifugation and electrophoresis",
+      "hours": 4,
+      "hook": "Spin a tube fast enough and a cell homogenate sorts itself into nuclei, mitochondria and ribosomes in layers; put a protein in a gel with an electric field and it crawls to a position that reports its mass. These workhorse methods are applied physics in a lab coat.",
+      "learningObjectives": [
+        "Describe the forces acting on a particle in a centrifugal field and define the sedimentation coefficient and Svedberg unit",
+        "Explain how mass, shape and density affect sedimentation and diffusion of macromolecules",
+        "Distinguish differential, rate-zonal and equilibrium (isopycnic) centrifugation and give an application of each",
+        "Explain what analytical ultracentrifugation can reveal about molecular weight, shape and association",
+        "Explain how SDS-PAGE separates proteins by size and how native PAGE and isoelectric focusing differ",
+        "Plan a simple strategy that combines these techniques to purify and characterise a protein"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Sedimentation coefficient (s)",
+          "definition": "The velocity of a particle per unit centrifugal acceleration; expressed in Svedberg units (S = 10^-13 s)."
+        },
+        {
+          "term": "Svedberg equation",
+          "definition": "M = sRT/(D(1 - v-bar rho)); relates molar mass to sedimentation and diffusion coefficients, partial specific volume v-bar and solvent density rho."
+        },
+        {
+          "term": "Buoyancy factor (1 - v-bar rho)",
+          "definition": "Accounts for the upward force of displaced solvent; a particle sinks only if it is denser than the medium."
+        },
+        {
+          "term": "Differential centrifugation",
+          "definition": "Sequential spins at increasing speed that pellet progressively smaller components; the standard way to make subcellular fractions."
+        },
+        {
+          "term": "Rate-zonal (velocity) centrifugation",
+          "definition": "Particles are layered on a gradient and separated by how fast they sediment, mainly by size; the run is stopped before they reach the bottom."
+        },
+        {
+          "term": "Isopycnic (equilibrium) centrifugation",
+          "definition": "Particles move in a density gradient until they reach the position where their density equals the medium; the Meselson-Stahl experiment used CsCl gradients."
+        },
+        {
+          "term": "Analytical ultracentrifugation (AUC)",
+          "definition": "A centrifuge with optical detection that records sedimentation in real time, giving molar mass, shape and binding stoichiometry in solution."
+        },
+        {
+          "term": "SDS-PAGE",
+          "definition": "Polyacrylamide gel electrophoresis with the detergent SDS, which denatures proteins and coats them with a similar charge per unit mass, so migration depends mainly on size."
+        },
+        {
+          "term": "Isoelectric focusing",
+          "definition": "Separation in a pH gradient where each protein migrates until its net charge is zero, at its pI."
+        },
+        {
+          "term": "Electrophoretic mobility",
+          "definition": "Velocity of a charged species per unit field; increases with charge and decreases with size and friction."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine pouring a handful of sand, pebbles and fine silt into a jar of water: the pebbles sink first, then the sand, while the silt hangs about. A centrifuge makes this happen for molecules by pretending gravity is hundreds of thousands of times stronger. Electrophoresis is a race down a molecular obstacle course: tiny proteins slip through the mesh, large ones are held back. The sand analogy fails because molecules also diffuse: for small proteins thermal motion fights sedimentation and shapes the result.",
+        "intermediate": "The sedimentation coefficient depends on mass, shape and density: a compact, heavy particle sediments faster than a bulky, elongated one of the same mass. Ribosomal subunits are named by their S values (30S, 50S in bacteria; 40S, 60S in eukaryotes), and they do not add up simply (30S + 50S gives a 70S ribosome) because s depends on shape as well as mass. In SDS-PAGE, SDS binds proteins at about 1.4 g per gram, giving a uniform charge-to-mass ratio, so a plot of log molecular weight against relative mobility is nearly linear. Native PAGE keeps proteins folded and so reflects charge, shape and size together. The combination of ion-exchange, size-exclusion and affinity chromatography is the usual route to a pure protein, with SDS-PAGE used to monitor each step.",
+        "advanced": "In AUC sedimentation velocity experiments, the evolution of the concentration boundary is fitted with the Lamm equation to extract the distribution of s and D, giving the size distribution and shape (frictional ratio) without any matrix; sedimentation equilibrium gives absolute molar mass independent of shape, and is the gold standard for oligomeric state and association constants. The relationship between s, D and the frictional coefficient f is s = M(1 - v-bar rho)/(N_A f) and D = kBT/f, so measuring both gives M. Electrophoresis in free solution is described by mobility mu = q/f; in a gel the sieving effect dominates (Ferguson plots allow separation of charge and size effects). In SDS-PAGE anomalous migration occurs for heavily glycosylated, very basic or membrane proteins that bind SDS atypically. Combining AUC, size-exclusion with light scattering and native mass spectrometry gives cross-validated measures of oligomeric state."
+      },
+      "commonMistakes": [
+        "Reading S values as additive; they depend on shape and friction as well as mass.",
+        "Assuming SDS-PAGE gives an exact molecular weight; glycosylation, high charge or membrane proteins can run anomalously.",
+        "Forgetting to balance the rotor; centrifuge tubes must be balanced by mass opposite one another, or the rotor can fail.",
+        "Confusing rate-zonal with isopycnic separation; the first separates by size and must be stopped in time, the second by density and runs to equilibrium.",
+        "Mixing up native and SDS conditions when interpreting gel bands (for example, expecting a multimeric protein to appear as one band in SDS-PAGE)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "sv4qFs3JTRM",
+          "title": "Analytical Ultracentrifugation - Stephen McLaughlin",
+          "channel": "MRC Laboratory of Molecular Biology",
+          "level": "advanced",
+          "whyWatch": "A full talk from a leading structural biology laboratory on how AUC works and what it reveals."
+        },
+        {
+          "youtubeId": "oxiB3UoRc0E",
+          "title": "Centrifugation and Sedimentation Coefficient",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Walks through the physical meaning of the sedimentation coefficient and the effect of mass and shape."
+        },
+        {
+          "youtubeId": "D9Th5N-ubJ8",
+          "title": "Density gradient centrifugation",
+          "channel": "Quick Biochemistry Basics",
+          "level": "beginner",
+          "whyWatch": "A short animation of how density-gradient centrifugation separates particles."
+        },
+        {
+          "youtubeId": "MILiO1XnuqQ",
+          "title": "SDS-PAGE explained - Protein Separation Technique",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "A concise explanation of how SDS-PAGE separates proteins by size and how to read a gel."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Biological Chemistry I (5.07SC)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes lectures on protein purification and characterisation techniques."
+        },
+        {
+          "title": "General Biochemistry (7.05)",
+          "provider": "MIT OpenCourseWare",
+          "type": "course",
+          "url": "https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A second full course that places these techniques in the context of studying real proteins."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "See the chapter on exploring proteins for centrifugation, electrophoresis and chromatography."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In SDS-PAGE, why does migration depend mainly on size?",
+          "options": [
+            "SDS denatures proteins and gives them a roughly constant charge-to-mass ratio",
+            "SDS removes all charge",
+            "SDS makes all proteins the same shape and mass",
+            "SDS cleaves proteins into equal pieces"
+          ],
+          "answer": 0,
+          "explanation": "SDS unfolds proteins and binds in proportion to their length, masking intrinsic charge, so the gel's sieving effect separates mainly by size."
+        },
+        {
+          "question": "Which technique separates particles by their buoyant density, running until each particle stops at the position where its density equals that of the medium?",
+          "options": [
+            "Isopycnic (equilibrium) centrifugation",
+            "SDS-PAGE",
+            "Differential centrifugation",
+            "Rate-zonal centrifugation"
+          ],
+          "answer": 0,
+          "explanation": "Isopycnic centrifugation uses a density gradient and ends at equilibrium, for example the CsCl gradient in the Meselson-Stahl experiment."
+        },
+        {
+          "question": "A 30S and a 50S ribosomal subunit combine to give a 70S ribosome. Why is 30 + 50 not 80?",
+          "options": [
+            "Because some mass is lost on association",
+            "Because S depends on shape and friction, not just mass",
+            "Because Svedberg units are logarithmic",
+            "Because the 70S ribosome is a different species"
+          ],
+          "answer": 1,
+          "explanation": "The sedimentation coefficient is not proportional to mass; a more compact assembly experiences proportionally less frictional drag, so s does not add."
+        },
+        {
+          "question": "Which measurement gives absolute molar mass of a protein complex in solution independent of shape?",
+          "options": [
+            "Sedimentation equilibrium in AUC",
+            "SDS-PAGE",
+            "Isoelectric focusing",
+            "Fluorescence emission wavelength"
+          ],
+          "answer": 0,
+          "explanation": "At sedimentation equilibrium the concentration profile depends on molar mass and buoyancy factor only, not on frictional properties, so it gives mass independent of shape."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "kLqduWF6GXE",
+      "title": "Lec 1 | MIT 5.60 Thermodynamics & Kinetics, Spring 2008",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "The opening lecture of a full thermodynamics and kinetics course, to see how the physical chemistry is built from first principles."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic, freely readable biochemistry text with chapters on thermodynamics, binding and techniques."
+    },
+    {
+      "title": "Chemistry 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/chemistry-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A free general chemistry book covering thermodynamics, kinetics, equilibrium and acid-base chemistry."
+    },
+    {
+      "title": "Physical and Theoretical Chemistry Textbook Maps",
+      "provider": "LibreTexts Chemistry",
+      "type": "textbook",
+      "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps",
+      "free": true,
+      "level": "intermediate",
+      "note": "Free physical chemistry texts to deepen thermodynamics, kinetics and spectroscopy."
+    }
+  ]
+}

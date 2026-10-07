@@ -1,0 +1,1521 @@
+{
+  "code": "FD 2103",
+  "title": "Microbiology and Laboratory Methods",
+  "level": 2,
+  "semester": 2,
+  "credits": 3,
+  "hours": "45L",
+  "kind": "lecture",
+  "provenance": "provisional",
+  "tagline": "Meet the invisible majority of life, and learn how to grow it, count it, control it and identify it safely.",
+  "overview": "A foundation module in microbiology for biochemistry and molecular biology students. It follows the standard path of an introductory microbiology course: the microbial world and laboratory safety, prokaryotic cell structure with microscopy and staining, nutrition and culture media with aseptic technique, growth and its measurement, control of microbes (sterilisation, disinfection and antimicrobials), bacterial genetics and resistance, viruses and bacteriophages, and the identification and applications of microbes. The topics are the established content for a Level 2 microbiology and laboratory-methods course. Laboratory methods are woven through every unit so that each concept ends in something you could actually do at the bench.",
+  "whyItMatters": "Bacteria are the workhorses of biochemistry: E. coli gave us the genetic code, the lac operon, restriction enzymes and the recombinant proteins used throughout your later modules. Beyond the lab, microbes decide the safety of water and food, the success of fermentations, and the course of infections and antibiotic resistance, so every graduate in this field needs a working grasp of how they live and how to handle them safely.",
+  "prerequisites": [
+    "FD 1102"
+  ],
+  "careerLinks": [
+    "Quality control and food or water microbiology laboratories",
+    "Pharmaceutical and biotechnology industry (sterility testing, fermentation, bioprocess)",
+    "Clinical and public-health microbiology and infection control",
+    "Research in molecular biology, synthetic biology and biotechnology",
+    "Environmental and agricultural microbiology, including soil and waste management"
+  ],
+  "studyTips": [
+    "Draw every structure and every growth curve from memory, then compare with your notes. Microbiology is a visual subject.",
+    "For every technique ask three questions: what is the principle, what could go wrong, and what is the control? Examiners and employers both love this trio.",
+    "Link every organism name to a feature you can recall (Gram reaction, shape, oxygen need, one test, one disease or use). Names without hooks do not stick.",
+    "Practice calculations (dilutions, colony counts, generation time) with real numbers until you can do them without a formula sheet.",
+    "Learn the rules of laboratory safety as if you were already employed; they will be assessed in practicals and are the basis of professional trust."
+  ],
+  "units": [
+    {
+      "id": "microbial-world-biosafety",
+      "title": "The Microbial World and Working Safely",
+      "hours": 5,
+      "hook": "Your own body carries roughly as many bacterial cells as human ones, and the oceans, soils and hot springs hold lineages we have barely named. Before you handle any of them, you learn who they are, how they were discovered, and the rules that keep both you and them safe.",
+      "learningObjectives": [
+        "Summarise how Leeuwenhoek, Pasteur, Koch and others established microbiology and the germ theory of disease",
+        "Describe the three domains of life and place bacteria, archaea, fungi, protists, algae and viruses in the picture",
+        "Explain why most microbes are beneficial or harmless and name examples of their roles in ecosystems, industry and the human body",
+        "State Koch's postulates and describe their limitations",
+        "Describe biosafety levels, risk assessment and the basic rules of microbiology laboratory behaviour",
+        "Recognise correct handling, labelling, disposal and spill procedures for cultures"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Germ theory",
+          "definition": "The principle that specific microorganisms cause specific infectious diseases, established by Pasteur's and Koch's work in the nineteenth century and replacing earlier ideas of spontaneous generation and miasma."
+        },
+        {
+          "term": "Koch's postulates",
+          "definition": "A set of criteria for linking a microbe to a disease: found in all cases, isolated in pure culture, causes the disease when introduced into a healthy host, and recovered again. Limits: some pathogens cannot be cultured, and asymptomatic carriers exist."
+        },
+        {
+          "term": "Three domains",
+          "definition": "Bacteria, Archaea and Eukarya, proposed from ribosomal RNA sequence comparisons. Archaea resemble bacteria in cell organisation but share features of gene expression with eukaryotes."
+        },
+        {
+          "term": "Prokaryote vs eukaryote",
+          "definition": "Prokaryotes lack a membrane-bound nucleus and organelles; eukaryotes have them. It is a description of cell organisation rather than a family tree, since bacteria and archaea are distinct lineages."
+        },
+        {
+          "term": "Normal flora (microbiota)",
+          "definition": "The communities of microbes living on and in healthy people. Most are harmless or helpful, and they train the immune system and compete with pathogens."
+        },
+        {
+          "term": "Pathogen vs opportunist",
+          "definition": "A pathogen causes disease in healthy hosts; an opportunist causes disease mainly when host defences are weakened or the microbe reaches an unusual site."
+        },
+        {
+          "term": "Biosafety levels (BSL 1 to 4)",
+          "definition": "Graded sets of laboratory practices, safety equipment and facility design matched to the risk of the organisms handled. Teaching labs work at BSL-1 or BSL-2."
+        },
+        {
+          "term": "Risk assessment",
+          "definition": "A structured judgement of the hazard (the organism, the procedure, the person) that decides what controls are needed; modern guidance, including the WHO manual, emphasises it over fixed risk-group lists."
+        },
+        {
+          "term": "Universal precautions in the lab",
+          "definition": "Treat every culture as potentially infectious: wear a lab coat and gloves, no eating or drinking, wash hands, disinfect benches before and after, and never pipette by mouth."
+        }
+      ],
+      "deeper": {
+        "beginner": "Microbes are the oldest and most abundant living things on Earth, and only a small number cause disease. Think of the microbial world as a city that you can only see through a microscope: most inhabitants quietly run the infrastructure (recycling carbon and nitrogen, digesting food), a few are troublemakers. Safety rules exist because you cannot tell a harmless culture from a harmful one just by looking. Where the analogy breaks: microbes are not fixed 'good' or 'bad' characters; the same E. coli species includes harmless gut residents and dangerous strains.",
+        "intermediate": "The history of microbiology is a lesson in experimental design: Pasteur's swan-neck flask experiments disproved spontaneous generation, and Koch's pure-culture methods (including solid media) made it possible to link organisms to diseases. Molecular tools later revealed that most microbes cannot yet be grown in the lab, and that cultured organisms are a biased sample of diversity; DNA-based surveys of 16S rRNA genes uncovered this unseen majority. Practical safety points: learn the BSL-1 and BSL-2 requirements, the meaning of biohazard labels and the correct response to a spill (cover with absorbent material, apply disinfectant, allow contact time, clean up, report). Dispose of cultures by autoclaving or chemical decontamination before they leave the lab.",
+        "advanced": "Phylogenomic work, such as the metagenomic reconstruction of a 'tree of life' dominated by uncultivated bacterial lineages (including the candidate phyla radiation), shows how little culture-based microbiology covers of total diversity. Archaea were recognised as a separate domain through rRNA signature sequences, and later work has placed eukaryotes within or alongside archaeal lineages, a topic still actively debated. The quantitative picture of the human microbiome has also been revised: current estimates put bacterial cells and human cells in the body at roughly comparable numbers (on the order of one to one), not the older ten-to-one figure. In safety practice, modern frameworks such as the WHO Laboratory Biosafety Manual (4th edition) emphasise evidence-based risk assessment, with controls selected for the specific procedure and organism, over simple lists of risk groups."
+      },
+      "commonMistakes": [
+        "Describing prokaryote as a single phylogenetic group; bacteria and archaea are different domains.",
+        "Believing microbes are mostly harmful, or that Koch's postulates are universally applicable.",
+        "Treating biosafety rules as bureaucracy and not as protection for yourself and others; skipping hand-washing or bench disinfection.",
+        "Using the old claim that bacterial cells in the body outnumber human cells ten to one."
+      ],
+      "videos": [
+        {
+          "youtubeId": "2JdBH2tys6M",
+          "title": "Micro-Biology: Crash Course History of Science #24",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A lively story of how microscopes, Pasteur and Koch founded microbiology, with context about disease and public health."
+        },
+        {
+          "youtubeId": "vAR47-g6tlA",
+          "title": "Old & Odd: Archaea, Bacteria & Protists - CrashCourse Biology #35",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A quick, clear tour of the major microbial groups and what makes each distinct."
+        },
+        {
+          "youtubeId": "N9LC-3ZKiok",
+          "title": "How a few scientists transformed the way we think about disease - Tien Nguyen",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "Short animation on the germ theory and Koch's postulates, useful for revision."
+        },
+        {
+          "youtubeId": "ge8I4fSdbPM",
+          "title": "BSL 1 & BSL 2 Safety - Intro to the Lab Bench",
+          "channel": "Addgene",
+          "level": "beginner",
+          "whyWatch": "Shows what practical BSL-1 and BSL-2 working habits look like at a real bench, which is exactly what you will practise."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.87.12.4576",
+          "title": "Towards a natural system of organisms: proposal for the domains Archaea, Bacteria, and Eucarya",
+          "authors": "Woese CR, Kandler O, Wheelis ML",
+          "year": 1990,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The paper that formally proposed the three-domain system based on ribosomal RNA. Reading the introduction shows how molecular sequences replaced appearance as the basis for classifying life."
+        },
+        {
+          "doi": "10.1038/nmicrobiol.2016.48",
+          "title": "A new view of the tree of life",
+          "authors": "Hug LA, Baker BJ, Anantharaman K et al",
+          "year": 2016,
+          "journal": "Nature Microbiology",
+          "level": "intermediate",
+          "whyItMatters": "A tree built from many newly discovered, mostly uncultured bacteria shows that bacterial diversity dwarfs the part we grow in laboratories.",
+          "openAccessUrl": "https://doi.org/10.1038/nmicrobiol.2016.48"
+        },
+        {
+          "doi": "10.1371/journal.pbio.1002533",
+          "title": "Revised Estimates for the Number of Human and Bacteria Cells in the Body",
+          "authors": "Sender R, Fuchs S, Milo R",
+          "year": 2016,
+          "journal": "PLOS Biology",
+          "level": "beginner",
+          "whyItMatters": "Corrects the popular myth of ten bacteria for each human cell with a transparent calculation, a good example of how to question a famous number.",
+          "openAccessUrl": "https://doi.org/10.1371/journal.pbio.1002533"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax)",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "A free, peer-reviewed introductory textbook; chapters 1 to 3 match this unit and later chapters match the rest of the course."
+        },
+        {
+          "title": "Laboratory biosafety manual, 4th edition",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240011311",
+          "free": true,
+          "level": "intermediate",
+          "note": "The international standard for biosafety practice with the modern risk-assessment approach; read the core document for the logic behind your lab rules."
+        },
+        {
+          "title": "NCBI Taxonomy browser",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/taxonomy",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up any organism's lineage to see where it sits among the domains."
+        },
+        {
+          "title": "List of Prokaryotic names with Standing in Nomenclature (LPSN)",
+          "provider": "DSMZ",
+          "type": "database",
+          "url": "https://lpsn.dsmz.de/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The authoritative source for valid bacterial and archaeal names, so you can check that a name you read is current."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about the three-domain system is correct?",
+          "options": [
+            "Archaea are a type of bacteria",
+            "Bacteria, Archaea and Eukarya are separate domains, and archaea share some features of gene expression with eukaryotes",
+            "All prokaryotes belong to one domain",
+            "Viruses are one of the three domains"
+          ],
+          "answer": 1,
+          "explanation": "Archaea and Bacteria are separate domains of prokaryotic cells; archaea resemble eukaryotes in some molecular machinery. Viruses are not placed in the cellular domains."
+        },
+        {
+          "question": "Which is a recognised limitation of Koch's postulates?",
+          "options": [
+            "They require a microscope",
+            "Some pathogens cannot be grown in pure culture and carriers can be healthy",
+            "They were never used",
+            "They only apply to fungi"
+          ],
+          "answer": 1,
+          "explanation": "Obligate intracellular organisms and asymptomatic carriers do not fit the original criteria neatly."
+        },
+        {
+          "question": "A culture plate cracks and spills in the teaching laboratory. What is the correct first response?",
+          "options": [
+            "Wipe it with a dry paper towel and bin it",
+            "Cover the spill with absorbent material, apply disinfectant, allow contact time, then clean up and report it",
+            "Leave it for the technician next week",
+            "Wash it down the sink"
+          ],
+          "answer": 1,
+          "explanation": "Disinfectant needs contact time to work, and spills must be reported so exposure can be assessed."
+        }
+      ]
+    },
+    {
+      "id": "prokaryotic-cell-staining-microscopy",
+      "title": "Prokaryotic Cell Structure, Microscopy and Staining",
+      "hours": 6,
+      "hook": "A bacterium is about a thousandth of a millimetre long, yet it has a wall that decides which antibiotics work on it and which colour it turns in the most famous stain in medicine. To see it at all you need light, glass and a little chemistry.",
+      "learningObjectives": [
+        "Describe the structure and function of the main bacterial components: cell wall, membrane, nucleoid, ribosomes, plasmids, flagella, pili, capsule and endospores",
+        "Compare the cell envelopes of Gram-positive and Gram-negative bacteria and explain how this affects staining and drug susceptibility",
+        "Explain the principle and steps of the Gram stain and interpret the result",
+        "Use a compound light microscope correctly, including oil immersion, and explain resolution and magnification",
+        "Distinguish simple, differential and special stains (acid-fast, endospore, capsule) and say when each is used",
+        "Prepare, fix and stain a smear and troubleshoot common errors"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Peptidoglycan",
+          "definition": "A mesh of sugar chains (N-acetylglucosamine and N-acetylmuramic acid) cross-linked by short peptides that forms the rigid wall of most bacteria; the target of beta-lactam antibiotics and lysozyme."
+        },
+        {
+          "term": "Gram-positive envelope",
+          "definition": "A thick peptidoglycan layer with teichoic acids, outside a single cytoplasmic membrane."
+        },
+        {
+          "term": "Gram-negative envelope",
+          "definition": "A thin peptidoglycan layer sandwiched between an inner membrane and an outer membrane whose outer leaflet carries lipopolysaccharide (LPS); the periplasm lies between the two membranes."
+        },
+        {
+          "term": "Nucleoid and plasmids",
+          "definition": "The bacterial chromosome is usually a single circular DNA molecule in a region without a membrane (the nucleoid). Plasmids are small extra DNA circles that often carry resistance or virulence genes."
+        },
+        {
+          "term": "Ribosome (70S)",
+          "definition": "Bacterial ribosomes have 30S and 50S subunits, different from the eukaryotic 80S, which is why many antibiotics can inhibit bacterial protein synthesis selectively."
+        },
+        {
+          "term": "Endospore",
+          "definition": "A dormant, highly resistant structure formed by some Gram-positive genera (such as Bacillus and Clostridium) under nutrient stress; spores survive boiling and many disinfectants."
+        },
+        {
+          "term": "Resolution",
+          "definition": "The smallest distance at which two points can be seen as separate. For a light microscope the practical limit is about 0.2 micrometres, so magnification beyond that adds no detail."
+        },
+        {
+          "term": "Oil immersion",
+          "definition": "Placing immersion oil between the slide and the 100x objective raises the effective numerical aperture and so improves resolution, as less light is lost by bending away from the lens."
+        },
+        {
+          "term": "Differential stain",
+          "definition": "A stain that separates cell types by a chemical property, as the Gram stain (cell wall) and acid-fast stain (waxy mycolic acids in mycobacteria) do."
+        }
+      ],
+      "deeper": {
+        "beginner": "A bacterial cell is a small, tough bag of cytoplasm with a flexible membrane inside a rigid wall, like a balloon inside a wicker basket. The Gram stain sorts bacteria by how well that basket holds a purple dye when you try to wash it out: thick walls keep it (Gram-positive, purple), thin walls lose it and take up the pink counterstain (Gram-negative, pink). Where the analogy breaks: the wall is not just a basket, it is a living structure that is built and rebuilt as the cell grows, and that is why drugs that block its synthesis kill growing cells.",
+        "intermediate": "Hands-on (practical): Prepare a smear from a loop of broth or a very small colony in a drop of water, air dry, heat or methanol fix, then stain. Gram stain steps: crystal violet, Gram's iodine (forms a complex), decolourise briefly with alcohol or acetone, then counterstain with safranin. The decolourisation step is critical: too long and Gram-positive cells look negative, too short and negatives look positive. Always include known controls (a Gram-positive such as Staphylococcus or Bacillus and a Gram-negative such as E. coli). Use a young culture, because older Gram-positive cells often stain as Gram-negative. For the microscope: start at low power, focus, increase to 40x, then apply oil and use the 100x objective with only the fine focus; total magnification is the objective times the eyepiece (for example 1000x). Practise reporting shape (cocci, bacilli, spirilla), arrangement (chains, clusters) and Gram reaction in one line.",
+        "advanced": "Why the Gram reaction works: the crystal violet-iodine complex is retained in cells where the thick, cross-linked peptidoglycan is dehydrated and shrunk by the alcohol, trapping the dye; in Gram-negatives, the solvent also disrupts the outer membrane and the thin wall cannot retain the complex. Not all bacteria fit neatly: mycobacteria have mycolic-acid-rich walls and are identified by acid-fast stains; mycoplasmas lack a wall; archaea have a distinct wall chemistry (pseudomurein or S-layers) and are unaffected by penicillin. Resolution is described by the Abbe limit, d = 0.61 lambda / NA, so with visible light and a numerical aperture near 1.4 the limit is about 0.2 micrometres. Beyond bright-field, phase-contrast and fluorescence microscopy let you see live or labelled cells, while electron microscopy resolves viruses and cell envelopes; each technique has trade-offs between resolution, sample preparation artefacts and whether cells remain alive."
+      },
+      "commonMistakes": [
+        "Over-decolourising or using old cultures in the Gram stain and misclassifying the organism.",
+        "Calling all rod-shaped bacteria Gram-negative, or confusing shape with Gram reaction; they are independent properties.",
+        "Using the coarse focus under the oil-immersion objective, which can crush the slide and damage the lens.",
+        "Believing higher magnification always gives more detail; resolution is limited by the wavelength of light and numerical aperture."
+      ],
+      "videos": [
+        {
+          "youtubeId": "b15Hy3jCPDs",
+          "title": "Bacterial Structure and Functions",
+          "channel": "Osmosis from Elsevier",
+          "level": "beginner",
+          "whyWatch": "A tidy visual summary of bacterial components and what each does."
+        },
+        {
+          "youtubeId": "FgsgpoFhleA",
+          "title": "Bacterial characteristics - Gram staining | Cells | MCAT",
+          "channel": "khanacademymedicine",
+          "level": "beginner",
+          "whyWatch": "Clear explanation of the Gram-positive and Gram-negative cell wall difference and the stain result."
+        },
+        {
+          "youtubeId": "sxa46xKfIOY",
+          "title": "Gram Staining",
+          "channel": "Bio-Rad Laboratories",
+          "level": "beginner",
+          "whyWatch": "A step-by-step laboratory demonstration of the whole Gram staining procedure, with the timing of each reagent."
+        },
+        {
+          "youtubeId": "tVcEEw6qbBQ",
+          "title": "Microscopes and How to Use a Light Microscope",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Introduces the parts of a compound microscope and correct focusing and handling."
+        },
+        {
+          "youtubeId": "ORB866QSGv8",
+          "title": "Bacteria (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly overview of bacterial shapes, structure and ways of living, good for revision."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Prokaryotic Diversity and Cell Structure chapters",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Figures of the Gram-positive and Gram-negative envelopes and stain procedures that match the lecture content."
+        },
+        {
+          "title": "Microbiology (OpenStax) on LibreTexts",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)",
+          "free": true,
+          "level": "beginner",
+          "note": "The same textbook in a searchable web form with embedded activities, helpful for quick lookup."
+        },
+        {
+          "title": "Medical Microbiology, 4th edition (Baron, ed.)",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK7627/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free chapters on bacterial structure and classification written for clinical students."
+        },
+        {
+          "title": "Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive visual modules on cells and microbes that help with the three-dimensional picture of the cell."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which feature is present in Gram-negative but absent in Gram-positive bacteria?",
+          "options": [
+            "A cell membrane",
+            "Peptidoglycan",
+            "An outer membrane containing lipopolysaccharide",
+            "Ribosomes"
+          ],
+          "answer": 2,
+          "explanation": "Gram-negative bacteria have an outer membrane with LPS outside a thin peptidoglycan layer; Gram-positives have a thick peptidoglycan layer and no outer membrane."
+        },
+        {
+          "question": "In the Gram stain, what is the role of the alcohol or acetone step?",
+          "options": [
+            "It kills the cells",
+            "It removes the crystal violet-iodine complex from Gram-negative cells but not Gram-positive cells",
+            "It stains the cells pink",
+            "It fixes the smear to the slide"
+          ],
+          "answer": 1,
+          "explanation": "Decolourisation distinguishes the groups; the complex is retained by the thick wall of Gram-positive cells but washed out of Gram-negatives, which then take up safranin."
+        },
+        {
+          "question": "What is the approximate limit of resolution of a good light microscope?",
+          "options": [
+            "0.2 nanometres",
+            "0.2 micrometres",
+            "2 micrometres",
+            "20 micrometres"
+          ],
+          "answer": 1,
+          "explanation": "Visible light limits resolution to about 0.2 micrometres; smaller structures such as viruses need electron microscopy."
+        }
+      ]
+    },
+    {
+      "id": "nutrition-media-aseptic",
+      "title": "Microbial Nutrition, Culture Media and Aseptic Technique",
+      "hours": 6,
+      "hook": "Every successful experiment with bacteria starts with two things: food that suits them and a technique that keeps everything else out. One stray spore from your hair or the air and a month of work becomes a plate of the wrong organism.",
+      "learningObjectives": [
+        "Classify microbes by carbon source and energy source (autotroph, heterotroph, phototroph, chemotroph) and by oxygen relationship",
+        "Explain the nutritional requirements and growth factors of bacteria",
+        "Distinguish defined, complex, selective, differential and enriched media, with examples (nutrient agar, MacConkey, mannitol salt, blood agar)",
+        "Describe how agar works as a solidifying agent and how media are prepared and sterilised",
+        "Perform and explain aseptic technique: flaming or sterilising loops, handling tubes and plates, avoiding aerosols",
+        "Isolate a pure culture by the streak-plate method and recognise colony morphology"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Carbon and energy source",
+          "definition": "Autotrophs fix carbon dioxide; heterotrophs use organic carbon. Phototrophs use light and chemotrophs use chemical energy; the combination (for example chemoheterotroph) describes a lifestyle."
+        },
+        {
+          "term": "Oxygen requirement",
+          "definition": "Obligate aerobes need oxygen; obligate anaerobes are harmed by it; facultative anaerobes grow with or without it; aerotolerant anaerobes ignore it; microaerophiles need low levels."
+        },
+        {
+          "term": "Defined (synthetic) medium",
+          "definition": "A medium whose exact chemical composition is known. Useful for physiology experiments in which you control every ingredient."
+        },
+        {
+          "term": "Complex medium",
+          "definition": "A medium containing digests of yeast, meat or soy so exact composition is unknown; supports rapid growth of many organisms (for example LB or nutrient broth)."
+        },
+        {
+          "term": "Selective medium",
+          "definition": "Contains agents that inhibit unwanted organisms, for example bile salts and crystal violet in MacConkey agar favour Gram-negative bacteria."
+        },
+        {
+          "term": "Differential medium",
+          "definition": "Contains indicators that reveal metabolic differences; on MacConkey agar lactose-fermenting colonies turn pink to red because acid changes a pH indicator."
+        },
+        {
+          "term": "Agar",
+          "definition": "A polysaccharide from red algae that melts near the temperature of boiling water and sets as a gel at about 40 degrees Celsius; most bacteria cannot digest it, so it provides a stable solid surface."
+        },
+        {
+          "term": "Aseptic technique",
+          "definition": "A set of habits that prevents contamination of cultures and the environment: work near a flame or in a safety cabinet, sterilise tools, keep lids on, minimise time open, and use controls."
+        },
+        {
+          "term": "Pure culture and colony",
+          "definition": "A pure culture contains one species, usually established from a single colony that arises from one cell (or a few of the same kind) on solid medium."
+        }
+      ],
+      "deeper": {
+        "beginner": "Growing bacteria is like cooking for guests with very specific tastes. A rich broth (complex medium) feeds almost anyone, a recipe with one added ingredient (selective medium) keeps out unwanted guests, and a recipe with a colour indicator (differential medium) lets you tell the guests apart by what they do with the food. Aseptic technique is the kitchen hygiene that stops uninvited organisms joining the dinner. Where the analogy breaks: unlike food, you must also protect yourself from the culture, and everything you discard must be sterilised first.",
+        "intermediate": "Hands-on (practical): Prepare nutrient agar by dissolving the powder in water, adjusting where required, and sterilising by autoclave at 121 degrees Celsius for the validated cycle; cool to about 50 degrees before pouring to avoid condensation. Streak-plate: sterilise the loop, take a small inoculum, spread over the first quadrant, re-sterilise and drag through the previous area into the second quadrant, repeat for the third and fourth, incubate inverted so that condensation does not drip on the agar. After incubation, describe colonies (size, shape, margin, elevation, colour, surface) and select a well-isolated colony for subculture. Compare growth on nutrient agar, MacConkey and mannitol salt agar for E. coli and a Staphylococcus strain, and explain each result in terms of selective and differential ingredients. Always set up a sterility control (an uninoculated plate) and a positive control.",
+        "advanced": "Media design reflects physiology: complex media often supply amino acids and vitamins that auxotrophic strains lack, and defined media with minimal salts and a single carbon source (for example M9 with glucose) are used for growth-rate and metabolic studies. Selective agents have mechanisms: bile salts and crystal violet disrupt many Gram-positives, while high salt in mannitol salt agar exploits the salt tolerance of staphylococci. Many microbes cannot be cultivated on standard media because they need unknown growth factors, co-culture partners or slow growth; techniques such as diffusion chambers and extended incubation have expanded what can be isolated. Aseptic work in cabinets uses laminar airflow with HEPA filtration; class II biological safety cabinets protect the user, the product and the environment, while a clean bench protects only the product. Autoclave validation uses biological indicators (spores of Geobacillus stearothermophilus) and chemical indicators, not just a temperature reading."
+      },
+      "commonMistakes": [
+        "Describing selective and differential media as the same thing; many media are both, but the two functions are distinct.",
+        "Incubating plates lid-up so condensation drips and ruins isolated colonies.",
+        "Not re-sterilising the loop between streak quadrants, which defeats the dilution that gives isolated colonies.",
+        "Assuming a colony is pure without subculturing and checking morphology and Gram stain."
+      ],
+      "videos": [
+        {
+          "youtubeId": "bRadiLXkqoU",
+          "title": "Aseptic Technique",
+          "channel": "Bio-Rad Laboratories",
+          "level": "beginner",
+          "whyWatch": "A concise demonstration of the habits that keep cultures pure, before you try them yourself."
+        },
+        {
+          "youtubeId": "FutAgWDymAM",
+          "title": "Four Quadrant Streak procedure - How to properly streak a Petri plate for isolated colonies",
+          "channel": "Hardy Diagnostics",
+          "level": "beginner",
+          "whyWatch": "Shows the exact motions of the four-quadrant streak, which are far easier to learn by watching than reading."
+        },
+        {
+          "youtubeId": "4OR9KSN_mZk",
+          "title": "Selective and Differential Agar - Explained!",
+          "channel": "TheRubinLab",
+          "level": "beginner",
+          "whyWatch": "Clarifies the difference between selective and differential media with common examples."
+        },
+        {
+          "youtubeId": "bzvASJ_ynKI",
+          "title": "Culture Media: Microbiology Growth Pre-Nursing, Pre-Med & Health Field Careers",
+          "channel": "Level Up RN",
+          "level": "beginner",
+          "whyWatch": "A quick overview of media types and the logic of choosing among them."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Microbial Growth and Nutrition",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Covers nutritional types, media and aseptic technique with helpful tables."
+        },
+        {
+          "title": "Medical Microbiology, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK7627/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes clinical use of culture media for isolating pathogens."
+        },
+        {
+          "title": "Microbiology topic collection",
+          "provider": "LibreTexts Biology",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Open textbooks and laboratory manuals, including step-by-step bench exercises you can adapt for your practical write-ups."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "On MacConkey agar, a colony is pink. What does this indicate?",
+          "options": [
+            "The organism is Gram-positive",
+            "The organism ferments lactose and acidifies the medium",
+            "The organism is an obligate anaerobe",
+            "The medium is contaminated"
+          ],
+          "answer": 1,
+          "explanation": "MacConkey agar is selective for Gram-negatives and differential for lactose fermentation; acid from lactose turns the indicator and colonies pink."
+        },
+        {
+          "question": "Why are agar plates incubated upside down (lid down)?",
+          "options": [
+            "To speed up growth",
+            "To prevent condensation from dripping onto the agar surface and spreading colonies",
+            "To increase oxygen",
+            "To keep the plate sterile"
+          ],
+          "answer": 1,
+          "explanation": "Condensation collects on the lid; inverting the plate keeps droplets from falling onto the surface and merging colonies."
+        },
+        {
+          "question": "An organism grows throughout a tube of thioglycollate medium, with slightly denser growth at the top. It is most likely a:",
+          "options": [
+            "Obligate aerobe",
+            "Obligate anaerobe",
+            "Facultative anaerobe",
+            "Microaerophile"
+          ],
+          "answer": 2,
+          "explanation": "Facultative anaerobes grow with or without oxygen, often best near the top where aerobic respiration is possible."
+        }
+      ]
+    },
+    {
+      "id": "growth-measurement",
+      "title": "Microbial Growth and How to Measure It",
+      "hours": 6,
+      "hook": "Under ideal conditions an E. coli cell can divide about every twenty minutes. Left unchecked, that would bury the planet within days; in reality, the culture runs out of something and stops. The growth curve is the story of that rise and fall, and counting cells is how you read it.",
+      "learningObjectives": [
+        "Explain binary fission and calculate generation time and number of generations from counts",
+        "Describe the four phases of a batch-culture growth curve and what happens physiologically in each",
+        "Explain how temperature, pH, water activity and oxygen affect growth and classify microbes accordingly",
+        "Perform viable counts by serial dilution and spread or pour plating, and calculate colony-forming units per millilitre",
+        "Measure growth by optical density, and explain its calibration and limits",
+        "Compare direct counts, viable counts, turbidity, dry weight and molecular methods"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Binary fission",
+          "definition": "Bacterial reproduction in which a cell replicates its chromosome, elongates, and divides into two genetically identical cells."
+        },
+        {
+          "term": "Generation (doubling) time",
+          "definition": "The time for a population to double during exponential growth; it varies from minutes to many hours with organism and conditions."
+        },
+        {
+          "term": "Exponential growth equation",
+          "definition": "N = N0 x 2^n, where n is the number of generations. Taking logarithms gives n = (log N - log N0) / log 2 and generation time g = t / n."
+        },
+        {
+          "term": "Lag, log, stationary and death phases",
+          "definition": "Lag: cells adapt and synthesise components with little division. Log (exponential): constant doubling. Stationary: growth balances death as nutrients or space run out or wastes accumulate. Death (decline): viable numbers fall."
+        },
+        {
+          "term": "Colony-forming unit (CFU)",
+          "definition": "A viable cell, or cluster of cells, that gives rise to one colony; viable counts therefore report CFU and not exact cell numbers."
+        },
+        {
+          "term": "Serial dilution",
+          "definition": "A stepwise dilution (often tenfold) that brings a dense culture to a range that produces a countable plate, usually 30 to 300 colonies."
+        },
+        {
+          "term": "Optical density (OD600)",
+          "definition": "Turbidity measured at 600 nm. It reflects light scattering by all cells, live or dead, and is approximately proportional to cell mass only over a limited range unique to each instrument and organism."
+        },
+        {
+          "term": "Cardinal temperatures",
+          "definition": "Minimum, optimum and maximum growth temperatures. Psychrophiles, mesophiles, thermophiles and hyperthermophiles are grouped by their optima."
+        },
+        {
+          "term": "Water activity and osmotolerance",
+          "definition": "The availability of water for microbial growth. Many foods are preserved by lowering it (salting, drying, sugaring); halophiles and xerotolerant fungi are exceptions."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine one cell that becomes two, then four, then eight. Early on you see almost nothing; later the numbers explode. In a flask the explosion eventually stops because food runs out or waste builds up. That is the growth curve: a slow start, a steep climb, a plateau and a decline. Where the analogy breaks: real populations do not all behave identically, and stationary phase is an active physiological state with changes in gene expression and stress resistance, not just a stop.",
+        "intermediate": "Hands-on (practical): Prepare a ten-fold serial dilution (1 mL into 9 mL diluent each time) of an overnight E. coli culture to 10^-6 or 10^-7. Plate 0.1 mL of the last three dilutions on nutrient agar, spread, incubate overnight and count plates with 30 to 300 colonies. Calculate CFU/mL = colonies / (volume plated in mL x dilution factor). Example: 150 colonies from 0.1 mL of the 10^-6 dilution gives 150 / (0.1 x 10^-6) = 1.5 x 10^9 CFU/mL. For the growth curve, inoculate fresh broth to a low OD600, incubate at a fixed temperature with shaking, and read OD at regular intervals; plot ln OD against time and use the slope of the straight part to compute the specific growth rate and doubling time. Compare to plate counts at several time points, and discuss why OD and CFU can diverge in stationary and death phases.",
+        "advanced": "Monod's classic work showed that the growth rate of a culture depends hyperbolically on the concentration of the limiting nutrient, mu = mu_max S / (Ks + S), a relationship that underlies chemostat design and fermentation engineering. Diauxic growth, in which a culture consumes a preferred sugar first and then a second after a lag, led to the discovery of catabolite repression and the lac operon. Optical density is linear with cell concentration only at low density because of multiple scattering, so dilute dense samples before reading and generate a calibration curve for your strain and instrument. Viable counting underestimates the population when cells are viable-but-not-culturable or form aggregates, whereas flow cytometry and quantitative PCR measure cells and genomes without the need to grow them. Measurements in non-steady states (for example nutrient shifts) require careful definitions of growth rate."
+      },
+      "commonMistakes": [
+        "Counting plates outside the 30 to 300 range, or forgetting to include the dilution factor and plated volume in the CFU calculation.",
+        "Treating optical density as a direct count of living cells; it also measures dead cells and debris and is non-linear at high density.",
+        "Using the wrong diluent or contaminating the dilution series by reusing a tip.",
+        "Describing stationary phase as no activity; cells remain metabolically active and change their physiology."
+      ],
+      "videos": [
+        {
+          "youtubeId": "7Lh-M-rX86Q",
+          "title": "Microbiology - Bacteria Growth, Reproduction, Classification",
+          "channel": "Armando Hasudungan",
+          "level": "beginner",
+          "whyWatch": "Hand-drawn walkthrough of binary fission, the growth curve and the conditions that affect growth."
+        },
+        {
+          "youtubeId": "8AhDxAQaDOA",
+          "title": "Bacterial Growth Curve & Generation time Calculation",
+          "channel": "Microbiology Mantra",
+          "level": "intermediate",
+          "whyWatch": "Works through generation time calculations from the exponential phase, a favourite exam skill."
+        },
+        {
+          "youtubeId": "pmRUBYlPMBM",
+          "title": "Serial Dilution and Plate Counts",
+          "channel": "Bio-Rad Laboratories",
+          "level": "beginner",
+          "whyWatch": "A real laboratory demonstration of serial dilution and plating, so the calculation makes sense."
+        },
+        {
+          "youtubeId": "_Ql1Xn_IBVo",
+          "title": "Standard plate count",
+          "channel": "Microbial Zoo (smtiquia)",
+          "level": "intermediate",
+          "whyWatch": "Explains how to select countable plates and convert counts to CFU per millilitre."
+        },
+        {
+          "youtubeId": "JlHZXogdowg",
+          "title": "How to perform serial dilutions and make microbial suspensions using McFarland Standards",
+          "channel": "Hardy Diagnostics",
+          "level": "intermediate",
+          "whyWatch": "Links turbidity standards to cell density and shows how labs standardise inocula."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1146/annurev.mi.03.100149.002103",
+          "title": "The growth of bacterial cultures",
+          "authors": "Monod J",
+          "year": 1949,
+          "journal": "Annual Review of Microbiology",
+          "level": "advanced",
+          "whyItMatters": "A classic, readable review by a future Nobel laureate that set out how bacterial growth should be measured and described quantitatively, including the relation between growth rate and nutrient concentration."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Microbial Growth chapter",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Clear diagrams of the growth curve and the environmental factors that govern growth."
+        },
+        {
+          "title": "Microbiology (OpenStax) on LibreTexts",
+          "provider": "LibreTexts",
+          "type": "textbook",
+          "url": "https://bio.libretexts.org/Bookshelves/Microbiology/Microbiology_(OpenStax)",
+          "free": true,
+          "level": "beginner",
+          "note": "Searchable web version for quick checks of definitions and worked examples."
+        },
+        {
+          "title": "Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive activities that help visualise exponential growth and bacterial populations."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A culture starts at 2 x 10^3 cells/mL and reaches 2 x 10^6 cells/mL in 100 minutes of exponential growth. About how many generations occurred?",
+          "options": [
+            "5",
+            "10",
+            "20",
+            "100"
+          ],
+          "answer": 1,
+          "explanation": "A thousand-fold increase is about 2^10, so there were about 10 generations, giving a generation time near 10 minutes."
+        },
+        {
+          "question": "A plate from the 10^-5 dilution, spread with 0.1 mL, has 80 colonies. What is the CFU/mL of the original culture?",
+          "options": [
+            "8 x 10^5",
+            "8 x 10^6",
+            "8 x 10^7",
+            "8 x 10^8"
+          ],
+          "answer": 2,
+          "explanation": "CFU/mL = colonies / (volume plated x dilution factor) = 80 / (0.1 x 10^-5) = 80 / 10^-6 = 8 x 10^7."
+        },
+        {
+          "question": "Why might optical density overestimate the number of living cells in a late stationary or death-phase culture?",
+          "options": [
+            "OD only measures live cells",
+            "Dead cells and debris still scatter light",
+            "OD is independent of cell number",
+            "The spectrophotometer is calibrated for dead cells"
+          ],
+          "answer": 1,
+          "explanation": "Turbidity reports all particles that scatter light, whether the cells are alive or dead."
+        }
+      ]
+    },
+    {
+      "id": "control-of-microbes",
+      "title": "Controlling Microbes: Sterilisation, Disinfection and Antimicrobials",
+      "hours": 6,
+      "hook": "A surgeon's instruments, a bottle of intravenous fluid and a packet of milk all need microbes removed or tamed, but each in a different way and to a different degree. Knowing which method suits which job is a surprisingly practical form of biochemistry.",
+      "learningObjectives": [
+        "Define sterilisation, disinfection, antisepsis, sanitisation and decontamination and give an example of each",
+        "Explain how heat (moist and dry), filtration, radiation and chemicals kill or remove microbes",
+        "Describe how an autoclave works and how its effectiveness is verified",
+        "Explain factors affecting disinfectant efficacy (concentration, contact time, organic load, biofilms, spores)",
+        "Classify antibiotics by target and by spectrum and distinguish bacteriostatic from bactericidal action",
+        "Perform and interpret a disk diffusion test and define MIC"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Sterilisation",
+          "definition": "Elimination of all viable microorganisms including spores; an absolute term (something is sterile or it is not)."
+        },
+        {
+          "term": "Disinfection and antisepsis",
+          "definition": "Disinfectants reduce microbes on inanimate objects; antiseptics are safe enough for living tissue. Neither guarantees sterility."
+        },
+        {
+          "term": "Moist heat (autoclave)",
+          "definition": "Steam under pressure reaches 121 degrees Celsius (about 15 psi above atmospheric) and denatures proteins far more effectively than dry heat; typical cycles hold for 15 to 20 minutes depending on load, with validation."
+        },
+        {
+          "term": "Pasteurisation",
+          "definition": "Controlled heating that reduces pathogens and spoilage organisms without sterilising; for example high-temperature short-time (about 72 degrees Celsius for 15 seconds) treatment of milk."
+        },
+        {
+          "term": "Filtration",
+          "definition": "Heat-labile liquids can be sterilised by passing them through membrane filters with pore size of 0.22 micrometres, which retains bacteria but not viruses."
+        },
+        {
+          "term": "Ionising and UV radiation",
+          "definition": "Gamma rays and electron beams sterilise heat-sensitive items; UV-C damages DNA but penetrates poorly, so it disinfects surfaces and air only."
+        },
+        {
+          "term": "Chemical agents",
+          "definition": "Alcohols (60 to 90 percent), chlorine and iodine compounds, quaternary ammonium compounds, aldehydes and hydrogen peroxide act by denaturing proteins or disrupting membranes."
+        },
+        {
+          "term": "Minimum inhibitory concentration (MIC)",
+          "definition": "The lowest concentration of an antimicrobial that prevents visible growth of an organism under standard conditions."
+        },
+        {
+          "term": "Antibiotic targets",
+          "definition": "Cell wall synthesis (beta-lactams, glycopeptides), protein synthesis on 30S or 50S ribosomal subunits (aminoglycosides, tetracyclines, macrolides), nucleic acid synthesis (fluoroquinolones target DNA gyrase; rifampicin targets RNA polymerase), folate metabolism (sulfonamides, trimethoprim) and membranes (polymyxins)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of microbial control as a ladder of intensity. Washing hands and wiping a bench reduce numbers (sanitising and disinfecting); pressure-cooking instruments at high temperature wipes everything out (sterilising). Antibiotics are medicines that exploit differences between bacterial and human cells, such as the cell wall or the 70S ribosome, so they can hurt bacteria while sparing us. Where the analogy breaks: higher rungs are not always better or safer; strong chemicals can be toxic or corrode instruments, and overusing antibiotics selects for resistance.",
+        "intermediate": "Hands-on (practical): Test the effect of disinfectants by placing paper discs soaked in different agents on a lawn of bacteria and measuring zones of inhibition, remembering that a bigger zone reflects diffusion as well as potency. Perform the Kirby-Bauer disk diffusion test: standardise the inoculum to a 0.5 McFarland standard, swab a Mueller-Hinton plate evenly in three directions, apply antibiotic discs, incubate and measure zones; interpret results as susceptible, intermediate or resistant using the breakpoint tables of a standards body (CLSI or EUCAST). Check an autoclave run with chemical indicator tape and discuss how biological indicators confirm sterilisation. In class, evaluate case scenarios: which method would you use for agar medium, heat-sensitive serum, laboratory waste, a work surface, or a wound?",
+        "advanced": "Kill kinetics are usually approximately first order, characterised by the decimal reduction time (D-value, time at a given temperature to reduce the population tenfold) and the z-value (temperature change to alter D tenfold); sterilisation processes are designed to give many log reductions with a safety margin. Prions resist standard autoclaving and need special procedures. Biofilms protect cells through an extracellular matrix, slower growth and altered physiology, raising tolerance to disinfectants and antibiotics; this is why surface cleaning must remove organic matter before disinfection. In antibiotic therapy, bacteriostatic versus bactericidal labels depend on organism and concentration, and pharmacodynamics (time above MIC for beta-lactams, peak to MIC for aminoglycosides) guides dosing. Susceptibility testing relies on standardised conditions because medium, inoculum and incubation all affect zone sizes and MIC."
+      },
+      "commonMistakes": [
+        "Using sterilisation, disinfection and cleaning as synonyms.",
+        "Trusting a disinfectant on a visibly dirty surface; organic matter inactivates many agents and prevents contact.",
+        "Assuming boiling sterilises; boiling kills most vegetative cells but not all spores.",
+        "Comparing zones of inhibition across different antibiotics directly; zone size must be interpreted against the specific breakpoint for each drug and organism."
+      ],
+      "videos": [
+        {
+          "youtubeId": "TRUOullTMTs",
+          "title": "Difference between Sterilization, Disinfection, Antisepsis, Decontamination | Microbiology",
+          "channel": "biologyexams4u",
+          "level": "beginner",
+          "whyWatch": "Short and exact definitions of the terms students most often confuse."
+        },
+        {
+          "youtubeId": "w-k-HkJVha4",
+          "title": "Sterilization and Disinfection",
+          "channel": "Clinical Lab Science Videos",
+          "level": "intermediate",
+          "whyWatch": "Surveys physical and chemical methods with the principles behind each, including autoclaving."
+        },
+        {
+          "youtubeId": "IVBCrzjOl40",
+          "title": "Microbiology - Antibiotics Mechanisms of Action",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Illustrated tour of where each antibiotic class hits the bacterial cell."
+        },
+        {
+          "youtubeId": "gqoqexfqoBM",
+          "title": "Antibiotic Classes in 7 minutes!!",
+          "channel": "Dr Matt & Dr Mike",
+          "level": "intermediate",
+          "whyWatch": "A compact review of classes, mechanisms and spectrum for revision."
+        },
+        {
+          "youtubeId": "4eLcjk3Iv9Y",
+          "title": "How to do a Kirby-Bauer Disk Diffusion Antimicrobial Susceptibility Test",
+          "channel": "Hardy Diagnostics",
+          "level": "intermediate",
+          "whyWatch": "A full lab demonstration of the test you will perform, including inoculum preparation and zone measurement."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.284.5418.1318",
+          "title": "Bacterial Biofilms: A Common Cause of Persistent Infections",
+          "authors": "Costerton JW, Stewart PS, Greenberg EP",
+          "year": 1999,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Explains why bacteria in biofilms survive treatments that kill free-floating cells, which is the reason disinfection often fails when surfaces are not cleaned first."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Control of Microbial Growth and Antimicrobial Drugs",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Tables of physical and chemical agents and antimicrobial classes that match this unit."
+        },
+        {
+          "title": "EUCAST: European Committee on Antimicrobial Susceptibility Testing",
+          "provider": "EUCAST",
+          "type": "reference",
+          "url": "https://www.eucast.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Breakpoint tables and disk diffusion methods used worldwide; browse to see how susceptible and resistant are defined."
+        },
+        {
+          "title": "Laboratory biosafety manual, 4th edition",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240011311",
+          "free": true,
+          "level": "intermediate",
+          "note": "Sections on decontamination and disinfection give practical guidance for a working laboratory."
+        },
+        {
+          "title": "Medical Microbiology, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK7627/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on antibacterial agents and the principles of sterilisation and disinfection."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which method is most suitable for sterilising a heat-labile protein solution?",
+          "options": [
+            "Autoclaving at 121 degrees Celsius",
+            "Filtration through a 0.22 micrometre membrane",
+            "Boiling for 10 minutes",
+            "Wiping with 70 percent alcohol"
+          ],
+          "answer": 1,
+          "explanation": "Membrane filtration removes bacteria without heat, so it is suitable for heat-labile solutions (though it does not remove viruses)."
+        },
+        {
+          "question": "Why are 70 percent alcohol solutions often better than 100 percent for disinfecting surfaces?",
+          "options": [
+            "70 percent is cheaper",
+            "The water content slows evaporation and helps the alcohol penetrate and denature proteins",
+            "100 percent alcohol is explosive",
+            "100 percent alcohol has no effect on any microbe"
+          ],
+          "answer": 1,
+          "explanation": "Some water is needed for effective protein denaturation, and slower evaporation allows adequate contact time; 100 percent alcohol may coagulate surface proteins and limit penetration."
+        },
+        {
+          "question": "Which antibiotic class acts by inhibiting cell wall synthesis?",
+          "options": [
+            "Aminoglycosides",
+            "Fluoroquinolones",
+            "Beta-lactams",
+            "Tetracyclines"
+          ],
+          "answer": 2,
+          "explanation": "Beta-lactams (penicillins, cephalosporins) inhibit the cross-linking enzymes that build peptidoglycan; the others act on ribosomes or DNA gyrase."
+        }
+      ]
+    },
+    {
+      "id": "bacterial-genetics-resistance",
+      "title": "Bacterial Genetics, Gene Transfer and Antimicrobial Resistance",
+      "hours": 6,
+      "hook": "Bacteria do not need sex to share genes. They swallow DNA from their surroundings, accept it through a bridge from a neighbour, or get it delivered by a virus. This is how a resistance gene that appears once in one hospital can show up in species on the other side of the world.",
+      "learningObjectives": [
+        "Describe the organisation of bacterial genomes, plasmids and mobile genetic elements",
+        "Explain how mutations arise and how the Luria-Delbruck experiment showed that they occur before selection",
+        "Distinguish transformation, transduction and conjugation and give an experimental example of each",
+        "Explain the main biochemical mechanisms of antibiotic resistance",
+        "Describe how resistance spreads and what drives selection in clinical and agricultural settings",
+        "Evaluate strategies to slow resistance, including stewardship and infection control"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Plasmid",
+          "definition": "A small, usually circular DNA molecule that replicates independently of the chromosome and often carries accessory genes such as antibiotic resistance."
+        },
+        {
+          "term": "Transposon and integron",
+          "definition": "Mobile elements that move within or between DNA molecules; integrons capture gene cassettes (frequently resistance genes) and express them from a common promoter."
+        },
+        {
+          "term": "Spontaneous mutation",
+          "definition": "Random changes in DNA that occur independently of the selective agent; selection then favours those that confer an advantage."
+        },
+        {
+          "term": "Transformation",
+          "definition": "Uptake and incorporation of free DNA from the environment by competent cells, as in Griffith's experiment with pneumococcus."
+        },
+        {
+          "term": "Transduction",
+          "definition": "Transfer of bacterial DNA from one cell to another by a bacteriophage that mistakenly packages host DNA."
+        },
+        {
+          "term": "Conjugation",
+          "definition": "Direct transfer of DNA (often a plasmid) through a pilus-mediated cell-to-cell contact, as with the F plasmid of E. coli."
+        },
+        {
+          "term": "Resistance mechanisms",
+          "definition": "Enzymatic inactivation (such as beta-lactamases), altered targets (such as the modified penicillin-binding protein PBP2a of MRSA), reduced uptake, efflux pumps that expel drugs, and bypass pathways."
+        },
+        {
+          "term": "Selection pressure",
+          "definition": "Use of antimicrobials favours resistant variants. Resistance can spread even without a drug present through linked genes on mobile elements."
+        },
+        {
+          "term": "Horizontal vs vertical transfer",
+          "definition": "Vertical transfer passes genes from parent to daughter cells; horizontal transfer moves them between cells that are not in a parent-offspring relationship, even across species."
+        }
+      ],
+      "deeper": {
+        "beginner": "A bacterial population is like a very large, very fast-changing crowd that swaps notes. Random typos (mutations) create new versions, and mobile elements and gene transfer let useful notes spread quickly. When an antibiotic is present, only the variants with a protective note survive and multiply, so the crowd becomes resistant. Where the analogy breaks: no individual cell decides to become resistant; selection acts on pre-existing diversity.",
+        "intermediate": "Hands-on and tutorial ideas: (1) Examine the data from a Luria-Delbruck-style fluctuation test and explain why the large variance between cultures shows mutations arise before exposure. (2) Interpret an experiment where a donor with a resistance plasmid is mixed with a recipient strain and transconjugants are selected on plates containing two antibiotics (one selecting the plasmid, one the recipient). (3) Compare the genome sizes and plasmid content of a typical E. coli K-12 strain with a pathogenic strain. (4) Use a table of resistance mechanisms to predict whether a given gene (for example blaTEM-1 or mecA) will confer resistance to penicillin, a cephalosporin or a carbapenem. Tackle exam-style cases that give a phenotype and ask for the most probable mechanism.",
+        "advanced": "The Luria-Delbruck result rules out an adaptive-mutation model by showing a jackpot distribution of mutant counts across independent cultures, a statistical test still taught as a model of experimental reasoning. Genomic sequencing of pathogens now maps outbreaks and tracks resistance genes through plasmids and clonal lineages; plasmids of the same incompatibility group can move between species and carry multiple resistance determinants. Fitness cost of resistance can be offset by compensatory mutations, so resistance does not necessarily disappear when drug use stops. Global burden estimates show the scale of the problem: bacterial antimicrobial resistance was associated with several million deaths worldwide in 2019, and it affects low- and middle-income countries disproportionately. Responses include antimicrobial stewardship, rapid diagnostics, surveillance, infection prevention, new drugs and non-antibiotic approaches such as phage therapy, each with its own limits."
+      },
+      "commonMistakes": [
+        "Saying bacteria mutate in response to antibiotics; mutations arise randomly and selection picks the survivors.",
+        "Confusing the three transfer mechanisms or forgetting that transduction requires a phage vector.",
+        "Treating antibiotic resistance as something only in hospitals, ignoring agriculture, wastewater and community use.",
+        "Assuming resistant bacteria are always less fit and will vanish when the drug is withdrawn."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Y1LKHx_GrsY",
+          "title": "Bacterial DNA & Genetics: Crash Course Biology #38",
+          "channel": "CrashCourse",
+          "level": "beginner",
+          "whyWatch": "A fast overview of how bacteria organise DNA and share genes."
+        },
+        {
+          "youtubeId": "7tLV20dk-FM",
+          "title": "Transformation, Transduction and Conjugation (Horizontal Gene Transfer in Bacteria)",
+          "channel": "Henrik's Lab",
+          "level": "beginner",
+          "whyWatch": "Clear animation separating the three routes of horizontal gene transfer."
+        },
+        {
+          "youtubeId": "ReKG-vuYHY4",
+          "title": "Mechanisms of antibiotic resistance",
+          "channel": "Osmosis from Elsevier",
+          "level": "intermediate",
+          "whyWatch": "Summarises the main biochemical resistance mechanisms with examples."
+        },
+        {
+          "youtubeId": "znnp-Ivj2ek",
+          "title": "What causes antibiotic resistance? - Kevin Wu",
+          "channel": "TED-Ed",
+          "level": "beginner",
+          "whyWatch": "A well-told story of how selection pressure and gene transfer drive resistance."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/genetics/28.6.491",
+          "title": "Mutations of bacteria from virus sensitivity to virus resistance",
+          "authors": "Luria SE, Delbruck M",
+          "year": 1943,
+          "journal": "Genetics",
+          "level": "intermediate",
+          "whyItMatters": "A landmark experiment showing that mutations arise spontaneously, before selection. It is a model of how a clever experiment and statistics can settle a conceptual debate."
+        },
+        {
+          "doi": "10.1038/158558a0",
+          "title": "Gene Recombination in Escherichia coli",
+          "authors": "Lederberg J, Tatum EL",
+          "year": 1946,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The first evidence of genetic exchange in bacteria, which opened the door to bacterial genetics and later to conjugation and recombinant DNA."
+        },
+        {
+          "doi": "10.1128/MMBR.00016-10",
+          "title": "Origins and Evolution of Antibiotic Resistance",
+          "authors": "Davies J, Davies D",
+          "year": 2010,
+          "journal": "Microbiology and Molecular Biology Reviews",
+          "level": "intermediate",
+          "whyItMatters": "A clear review showing that resistance genes pre-date the clinical use of antibiotics and describing how they mobilise and spread.",
+          "openAccessUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/2937522"
+        },
+        {
+          "doi": "10.1016/S0140-6736(21)02724-0",
+          "title": "Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis",
+          "authors": "Murray CJL, Ikuta KS, Sharara F et al",
+          "year": 2022,
+          "journal": "The Lancet",
+          "level": "intermediate",
+          "whyItMatters": "The most cited estimate of the global death toll linked to resistant bacteria, with breakdowns by region and pathogen that show why this is a public-health priority.",
+          "openAccessUrl": "https://doi.org/10.1016/s0140-6736(21)02724-0"
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Microbial Genetics and Mechanisms of Drug Resistance",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Chapters on genetic exchange and drug resistance with clear diagrams."
+        },
+        {
+          "title": "EUCAST",
+          "provider": "EUCAST",
+          "type": "reference",
+          "url": "https://www.eucast.org/",
+          "free": true,
+          "level": "advanced",
+          "note": "Expert rules and resistance mechanism guidance used by clinical laboratories."
+        },
+        {
+          "title": "WHO publications portal",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for global action plans and surveillance reports on antimicrobial resistance."
+        },
+        {
+          "title": "Medical Microbiology, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK7627/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on bacterial genetics and antibiotic action."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which process transfers bacterial DNA using a bacteriophage as the carrier?",
+          "options": [
+            "Conjugation",
+            "Transformation",
+            "Transduction",
+            "Binary fission"
+          ],
+          "answer": 2,
+          "explanation": "In transduction a phage particle accidentally packages bacterial DNA and delivers it to a new host."
+        },
+        {
+          "question": "What did the Luria-Delbruck fluctuation test show?",
+          "options": [
+            "Mutations are induced by the selective agent",
+            "Resistance mutations arise spontaneously before exposure to the selective agent",
+            "Phage cannot infect bacteria",
+            "Mutation rates are zero"
+          ],
+          "answer": 1,
+          "explanation": "The wide variation in resistant colony counts between independent cultures fits spontaneous mutations occurring at random times during growth."
+        },
+        {
+          "question": "Methicillin-resistant Staphylococcus aureus (MRSA) owes its resistance mainly to:",
+          "options": [
+            "Overproduction of efflux pumps only",
+            "An altered penicillin-binding protein (PBP2a) with low affinity for beta-lactams",
+            "Loss of its cell wall",
+            "A thicker outer membrane"
+          ],
+          "answer": 1,
+          "explanation": "mecA encodes PBP2a, which keeps building peptidoglycan despite beta-lactam presence. S. aureus is Gram-positive and has no outer membrane."
+        }
+      ]
+    },
+    {
+      "id": "viruses-bacteriophages",
+      "title": "Viruses and Bacteriophages",
+      "hours": 5,
+      "hook": "A virus is not quite alive and not quite dead: a package of nucleic acid in a protein coat that does nothing until it finds the right cell. Bacteriophages, the viruses of bacteria, gave molecular biology some of its most decisive experiments, and may yet give medicine a new weapon.",
+      "learningObjectives": [
+        "Describe virus structure (capsid, envelope, genome type) and the classification of viruses by genome",
+        "Explain why viruses are considered obligate intracellular parasites",
+        "Outline the stages of the lytic cycle and the lysogenic cycle of bacteriophages, and compare with animal virus replication",
+        "Explain the Hershey-Chase experiment and what it showed about genetic material",
+        "Perform and interpret a plaque assay and calculate titre in plaque-forming units",
+        "Discuss phage biology in transduction, bacterial evolution and phage therapy"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Virion",
+          "definition": "The infectious virus particle: a nucleic acid genome (DNA or RNA, single or double stranded) inside a protein capsid, sometimes surrounded by a lipid envelope."
+        },
+        {
+          "term": "Obligate intracellular parasite",
+          "definition": "A virus lacks its own ribosomes and metabolism and depends on the host cell machinery for replication."
+        },
+        {
+          "term": "Baltimore classification",
+          "definition": "A system grouping viruses into seven classes by genome type and the route to mRNA, such as dsDNA, ssRNA(+) or retroviruses with reverse transcriptase."
+        },
+        {
+          "term": "Lytic cycle",
+          "definition": "Adsorption, injection of the genome, hijacking of host synthesis, assembly of new particles, and lysis of the cell to release progeny."
+        },
+        {
+          "term": "Lysogenic cycle",
+          "definition": "The phage genome integrates as a prophage into the host chromosome and replicates with it until induction triggers the lytic cycle (the classic example is phage lambda)."
+        },
+        {
+          "term": "Plaque and titre",
+          "definition": "A plaque is a clear zone in a lawn of bacteria where phage have lysed cells. Titre is plaque-forming units (PFU) per millilitre, calculated like CFU."
+        },
+        {
+          "term": "Hershey-Chase experiment",
+          "definition": "Radioactively labelling phage protein (35S) and DNA (32P) showed that DNA, not protein, enters the cell and carries the genetic information of the phage."
+        },
+        {
+          "term": "Phage therapy",
+          "definition": "The use of phages to treat bacterial infections. Advantages include high specificity; challenges include narrow host range, regulatory issues and bacterial resistance to phage."
+        }
+      ],
+      "deeper": {
+        "beginner": "A virus is like a USB stick carrying instructions: useless alone, but plugged into a cell, it commands the cell to make more sticks. A phage injects its genome into a bacterium, the bacterium reads it and builds hundreds of new phages, then bursts. In the lysogenic route the instructions go into the cell's own genome and wait. Where the analogy breaks: viruses evolve and are shaped by selection, and the lysogenic phage can change what the bacterium does, including making it more dangerous.",
+        "intermediate": "Hands-on (practical): Perform a phage plaque assay. Make serial dilutions of a phage lysate, mix each dilution with a host culture and molten soft agar (top agar), pour over a hard-agar plate, incubate, and count plaques on plates with 30 to 300 plaques. Calculate titre = plaques / (volume plated in mL x dilution factor). Compare the appearance of plaques (clear or turbid) and discuss what a turbid plaque implies about lysogeny. Discuss the Hershey-Chase design: why were sulfur and phosphorus chosen (proteins contain sulfur but not phosphorus, DNA the opposite), and why was a blender used? Compare phage replication with that of an RNA virus and a retrovirus.",
+        "advanced": "Specialised transduction by lambda arises from imprecise excision of the prophage taking adjacent host genes, whereas generalised transduction by P1 or P22 packages random host fragments. Many bacterial toxins (diphtheria, cholera, Shiga toxin) are encoded by prophages, so lysogeny contributes to virulence. CRISPR-Cas systems, discovered as an adaptive immune system against phage, have become a major tool in biotechnology, and phages counter with anti-CRISPR proteins; this arms race illustrates fast co-evolution. Phage display and phage-based cloning vectors are part of the molecular biology toolkit. Clinical phage therapy requires well-characterised lytic phages, cocktails to prevent resistance, and attention to endotoxin release and regulatory pathways."
+      },
+      "commonMistakes": [
+        "Calling viruses cells or living organisms in the same sense as bacteria; they lack metabolism and replicate only within a host.",
+        "Mixing up lytic and lysogenic cycles, or saying a lysogenic phage is inactive; its genes may still be expressed and affect the host.",
+        "Counting plaque plates outside the countable range or forgetting the dilution factor.",
+        "Believing Hershey-Chase proved DNA is the genetic material of all organisms; it showed it for the phage, supporting the broader conclusion alongside other evidence."
+      ],
+      "videos": [
+        {
+          "youtubeId": "8FqlTslU22s",
+          "title": "Viruses (Updated)",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "Introduces virus structure and replication in a friendly way, good first step."
+        },
+        {
+          "youtubeId": "EuJQmHCcyMc",
+          "title": "Lytic and lysogenic cycles | Viruses | High school biology",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Compares the two phage life cycles with clear diagrams."
+        },
+        {
+          "youtubeId": "s8jhJXgC-bk",
+          "title": "Microbiology - Viruses (Structure, Types and Bacteriophage Replication)",
+          "channel": "Armando Hasudungan",
+          "level": "intermediate",
+          "whyWatch": "Hand-drawn survey of virus structure, classification and phage replication."
+        },
+        {
+          "youtubeId": "YI3tsmFsrOg",
+          "title": "The Deadliest Being on Planet Earth - The Bacteriophage",
+          "channel": "Kurzgesagt - In a Nutshell",
+          "level": "beginner",
+          "whyWatch": "A vivid account of the scale of phage populations and their ecological role, plus the idea of phage therapy."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1085/jgp.36.1.39",
+          "title": "Independent functions of viral protein and nucleic acid in growth of bacteriophage",
+          "authors": "Hershey AD, Chase M",
+          "year": 1952,
+          "journal": "Journal of General Physiology",
+          "level": "intermediate",
+          "whyItMatters": "The 'blender experiment' that showed phage DNA enters the host cell while most protein stays outside, a key step in accepting DNA as genetic material. The experimental logic is clear even for beginners."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Acellular Pathogens",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear treatment of virus structure, replication and classification."
+        },
+        {
+          "title": "Medical Microbiology, 4th edition",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK7627/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Chapters on virus structure, classification and replication strategies."
+        },
+        {
+          "title": "Learn.Genetics",
+          "provider": "University of Utah",
+          "type": "interactive",
+          "url": "https://learn.genetics.utah.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Includes interactive material on viruses and how DNA is analysed."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In the Hershey-Chase experiment, which label ended up inside infected bacterial cells?",
+          "options": [
+            "35S (protein label)",
+            "32P (DNA label)",
+            "Both equally",
+            "Neither"
+          ],
+          "answer": 1,
+          "explanation": "Most 32P-labelled DNA entered the cells, while most 35S-labelled protein stayed outside and was removed by blending."
+        },
+        {
+          "question": "What defines the lysogenic cycle of a temperate phage?",
+          "options": [
+            "The host cell is immediately lysed",
+            "The phage genome integrates into the host chromosome and replicates with it as a prophage",
+            "The phage cannot infect bacteria",
+            "The phage replicates without nucleic acid"
+          ],
+          "answer": 1,
+          "explanation": "Lysogeny is the state in which the prophage replicates passively with the host genome until induction triggers the lytic cycle."
+        },
+        {
+          "question": "A plate receiving 0.1 mL of a 10^-7 dilution of phage has 45 plaques. What is the titre?",
+          "options": [
+            "4.5 x 10^7 PFU/mL",
+            "4.5 x 10^8 PFU/mL",
+            "4.5 x 10^9 PFU/mL",
+            "4.5 x 10^6 PFU/mL"
+          ],
+          "answer": 2,
+          "explanation": "Titre = plaques / (volume plated x dilution factor) = 45 / (0.1 x 10^-7) = 45 / 10^-8 = 4.5 x 10^9 PFU/mL."
+        }
+      ]
+    },
+    {
+      "id": "identification-applied-microbiology",
+      "title": "Identifying Microbes and Applied Microbiology",
+      "hours": 5,
+      "hook": "A water sample from a village well, a batch of fermented milk, a swab from a wound: each poses the same first question, which organisms are in there? Identification moves from the simple (shape, Gram stain, a few biochemical tests) to the molecular (16S sequencing), and what you learn decides whether the water is safe and the treatment works.",
+      "learningObjectives": [
+        "Design a logical identification scheme for an unknown bacterium using morphology, Gram stain and biochemical tests",
+        "Explain the principle of tests such as catalase, oxidase, coagulase, indole, methyl red, Voges-Proskauer, citrate and urease (IMViC)",
+        "Describe how 16S rRNA gene sequencing identifies bacteria and how it complements phenotypic methods",
+        "Explain the logic of indicator organisms in water quality testing and perform a membrane filtration count",
+        "Outline the roles of microbes in food fermentation, spoilage, the environment and biotechnology",
+        "Write a concise laboratory report that documents method, controls, results and limitations"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Catalase test",
+          "definition": "Catalase breaks hydrogen peroxide into water and oxygen; bubbling on adding peroxide to a colony indicates a catalase-positive organism (for example Staphylococcus, as opposed to Streptococcus)."
+        },
+        {
+          "term": "Oxidase test",
+          "definition": "Detects cytochrome c oxidase; a colour change with the reagent separates oxidase-positive organisms such as Pseudomonas from Enterobacteriaceae, which are oxidase-negative."
+        },
+        {
+          "term": "IMViC",
+          "definition": "A group of tests (indole, methyl red, Voges-Proskauer, citrate) used to differentiate enteric bacteria by metabolic pathways, such as mixed-acid fermentation or use of citrate as sole carbon source."
+        },
+        {
+          "term": "Coagulase test",
+          "definition": "Detects an enzyme that clots plasma; it separates Staphylococcus aureus (positive) from most other staphylococci."
+        },
+        {
+          "term": "16S rRNA gene sequencing",
+          "definition": "The gene for the small ribosomal subunit RNA contains conserved regions (for primers) and variable regions (for discrimination); sequences are compared with reference databases to identify or classify organisms."
+        },
+        {
+          "term": "Indicator organism",
+          "definition": "A microbe whose presence signals possible faecal contamination, such as E. coli and thermotolerant coliforms; used because testing for every pathogen is impractical."
+        },
+        {
+          "term": "Membrane filtration",
+          "definition": "A measured volume of water is passed through a 0.45 micrometre filter, which is placed on a selective medium and incubated; colonies are counted per 100 mL."
+        },
+        {
+          "term": "Fermentation in food",
+          "definition": "Lactic acid bacteria acidify milk, vegetables and dough, preserving food and adding flavour; yeasts convert sugars to ethanol and carbon dioxide."
+        },
+        {
+          "term": "Controls in microbiology",
+          "definition": "Positive and negative controls and uninoculated media validate that a test works and that results are due to the sample."
+        }
+      ],
+      "deeper": {
+        "beginner": "Identifying a bacterium is like working out who a stranger is with a short questionnaire: what shape are you, what colour do you stain, what do you do with oxygen, what sugars do you eat? Each answer narrows the field. Sequencing a gene is like reading their ID card. Where the analogy breaks: bacteria evolve and strain-level differences matter; a name from one test or one sequence is a probability, not a certainty, especially for closely related species.",
+        "intermediate": "Hands-on (practical): You are given an unknown culture. Plan and run (1) colony morphology on nutrient agar and MacConkey, (2) Gram stain and cell shape, (3) catalase and oxidase tests, (4) IMViC or a similar panel suited to your organism, and (5) a flowchart or key to arrive at a provisional identification, stating the controls used. Separately, carry out a membrane filtration test on a water sample (for example from a local source or a spiked sample), incubate on a selective medium for coliforms, count the colonies and express the result per 100 mL. Compare the result with a drinking-water guideline value (for example, the WHO guideline is that E. coli should not be detectable in any 100 mL sample of drinking water) and write a short report stating what you can and cannot conclude. In class, discuss fermented foods such as curd and sourdough and the safety requirements for each.",
+        "advanced": "Phenotypic tests are cheap but limited by variable gene expression and slow turnaround; MALDI-TOF mass spectrometry of ribosomal proteins and whole-genome sequencing have changed clinical practice, with the latter giving species identity, resistance genes and relatedness for outbreak investigation. The 16S gene has limited discrimination at species level for some genera, so additional markers or average nucleotide identity from whole genomes are used. Culture-independent community profiling (16S amplicon sequencing, shotgun metagenomics) reveals members that cannot be grown, with caveats about primer bias, copy number variation and compositional data. Water quality monitoring balances sensitivity, speed and cost; indicator organisms do not always correlate with pathogens like viruses or protozoa. Industrial and environmental microbiology apply defined starter cultures, controlled fermentation and bioremediation, and require control of contaminants and safe handling of genetically modified strains."
+      },
+      "commonMistakes": [
+        "Naming an organism from a single test result, rather than combining several independent features and controls.",
+        "Applying tests to old or mixed cultures; use a pure, young culture and verify purity first.",
+        "Reading Voges-Proskauer or oxidase results after the specified time, which gives false positives.",
+        "Interpreting a water count without considering sample volume, holding time, or whether the filter had too many colonies to count."
+      ],
+      "videos": [
+        {
+          "youtubeId": "krHqynVe6-g",
+          "title": "How to Perform the Catalase Test - Staphylococcus vs Streptococcus",
+          "channel": "Hardy Diagnostics",
+          "level": "beginner",
+          "whyWatch": "A clean demonstration of one of the quickest tests in the identification toolbox."
+        },
+        {
+          "youtubeId": "Ng1s2wsGeJQ",
+          "title": "IMViC Tests | Procedure and Principle | Microbiology",
+          "channel": "Microbiology Mantra",
+          "level": "intermediate",
+          "whyWatch": "Explains the biochemical logic behind indole, methyl red, Voges-Proskauer and citrate tests with expected results."
+        },
+        {
+          "youtubeId": "B1AVxzccS5Q",
+          "title": "Membrane filtration to test for faecal contamination of water samples",
+          "channel": "WEDC Publications",
+          "level": "intermediate",
+          "whyWatch": "From a water and development centre, it shows membrane filtration in a practical, resource-aware setting similar to what you will do."
+        },
+        {
+          "youtubeId": "ONGdehkB8jU",
+          "title": "DNA Sequencing - 3D",
+          "channel": "yourgenome",
+          "level": "beginner",
+          "whyWatch": "A clear animation of how DNA is sequenced, the principle behind 16S-based identification."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.74.11.5088",
+          "title": "Phylogenetic structure of the prokaryotic domain: The primary kingdoms",
+          "authors": "Woese CR, Fox GE",
+          "year": 1977,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "intermediate",
+          "whyItMatters": "The paper that used ribosomal RNA comparisons to reveal the archaea as a separate lineage, and so launched sequence-based identification and classification of microbes."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Microbiology (OpenStax): Microbial Identification and Environmental Microbiology chapters",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/details/books/microbiology",
+          "free": true,
+          "level": "beginner",
+          "note": "Describes biochemical tests and molecular identification, with tables you can use in the practical."
+        },
+        {
+          "title": "LPSN",
+          "provider": "DSMZ",
+          "type": "database",
+          "url": "https://lpsn.dsmz.de/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Check the current valid name and taxonomy of any bacterium you identify."
+        },
+        {
+          "title": "NCBI Taxonomy browser",
+          "provider": "NCBI / NLM",
+          "type": "database",
+          "url": "https://www.ncbi.nlm.nih.gov/taxonomy",
+          "free": true,
+          "level": "beginner",
+          "note": "Use after sequencing to place an organism in its lineage."
+        },
+        {
+          "title": "Laboratory biosafety manual, 4th edition",
+          "provider": "World Health Organization",
+          "type": "reference",
+          "url": "https://www.who.int/publications/i/item/9789240011311",
+          "free": true,
+          "level": "intermediate",
+          "note": "Useful when handling unknown cultures from clinical or environmental samples."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A Gram-positive coccus in clusters produces bubbles with hydrogen peroxide and clots plasma. The most likely identification is:",
+          "options": [
+            "Streptococcus pyogenes",
+            "Staphylococcus aureus",
+            "Escherichia coli",
+            "Bacillus subtilis"
+          ],
+          "answer": 1,
+          "explanation": "Gram-positive cocci in clusters that are catalase-positive and coagulase-positive fit Staphylococcus aureus; streptococci are catalase-negative."
+        },
+        {
+          "question": "Why is E. coli used as an indicator for drinking-water safety?",
+          "options": [
+            "It is the most dangerous waterborne pathogen",
+            "Its presence indicates faecal contamination and is easier to test for than many pathogens",
+            "It cannot grow in water",
+            "It is a virus"
+          ],
+          "answer": 1,
+          "explanation": "E. coli lives in the gut of warm-blooded animals, so its detection signals faecal contamination, and it is cheaper and faster to measure than individual pathogens."
+        },
+        {
+          "question": "Which feature makes the 16S rRNA gene useful for bacterial identification?",
+          "options": [
+            "It is absent in most bacteria",
+            "It contains conserved regions (for primers) and variable regions (for discrimination)",
+            "It is identical in all species",
+            "It encodes a toxin"
+          ],
+          "answer": 1,
+          "explanation": "Conserved regions let you amplify the gene from many species, and variable regions give signature differences for identification."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "ayFiGn2fYi8",
+      "title": "Bacteria | Structure and Function",
+      "channel": "Ninja Nerd",
+      "level": "intermediate",
+      "whyWatch": "A long, board-based lecture on bacterial structure, growth and classification that works as a complete refresher."
+    },
+    {
+      "youtubeId": "mg6tXQaiBaI",
+      "title": "Bacterial Genetics",
+      "channel": "Ninja Nerd",
+      "level": "intermediate",
+      "whyWatch": "A full lecture covering mutation, gene transfer and resistance, tying together several units of the course."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Microbiology (OpenStax)",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/microbiology",
+      "free": true,
+      "level": "beginner",
+      "note": "A free, peer-reviewed textbook that covers nearly every topic in this course with good diagrams."
+    },
+    {
+      "title": "Medical Microbiology, 4th edition (Baron, ed.)",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK7627/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Freely accessible clinical microbiology text with strong chapters on bacteria, viruses and antimicrobial agents."
+    },
+    {
+      "title": "Microbiology topic collection",
+      "provider": "LibreTexts Biology",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Microbiology",
+      "free": true,
+      "level": "beginner",
+      "note": "Open textbooks and laboratory manuals for bench-level guidance."
+    },
+    {
+      "title": "Laboratory biosafety manual, 4th edition",
+      "provider": "World Health Organization",
+      "type": "reference",
+      "url": "https://www.who.int/publications/i/item/9789240011311",
+      "free": true,
+      "level": "intermediate",
+      "note": "The standard reference for laboratory safety practice and risk assessment."
+    }
+  ]
+}

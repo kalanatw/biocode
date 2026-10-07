@@ -1,0 +1,1440 @@
+{
+  "code": "BC 3025",
+  "title": "Protein Structure and Function",
+  "level": 3,
+  "semester": 2,
+  "credits": 2,
+  "hours": "30L",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "From a string of amino acids to a machine: how shape gives a protein its job.",
+  "overview": "This course follows a protein from sequence to function. It begins with the chemistry of amino acids and the peptide bond, then builds the levels of structure: secondary elements and the Ramachandran map, tertiary and quaternary organisation, and the folding problem. We then look at how structures are actually determined (X-ray, NMR, cryo-EM, the Protein Data Bank), study myoglobin and haemoglobin as the classic structure-function case, survey domains, fibrous proteins and antibodies, and finish with misfolding, aggregation and modern structure prediction. The units follow the standard content of a BSc Honours course of this title.",
+  "whyItMatters": "Proteins carry out almost every task in the cell, and when they fail, disease follows. Understanding how a sequence becomes a shape and a shape becomes a function is the basis for drug design, enzyme engineering, vaccine development and interpreting genetic variants.",
+  "prerequisites": [
+    "FD 2101",
+    "CH 3033"
+  ],
+  "careerLinks": [
+    "Structural biology and protein science research",
+    "Drug discovery and biopharmaceutical development",
+    "Bioinformatics and computational biology",
+    "Diagnostics and antibody-based therapeutics",
+    "Food and industrial biotechnology"
+  ],
+  "studyTips": [
+    "Open a real structure in a viewer (PDB, iCn3D or Proteopedia) for every example; seeing a helix, a haem pocket or a disulphide makes the vocabulary stick.",
+    "For each level of structure, write down the forces that stabilise it and the experiments that reveal it; exam questions often ask for exactly this pairing.",
+    "Learn the amino-acid properties by grouping, not by rote: ask where each class goes in a folded protein and why.",
+    "Use the haemoglobin story as a template: structure, binding curve, regulation, mutation. Apply the same template to any other protein."
+  ],
+  "units": [
+    {
+      "id": "amino-acids-and-peptides",
+      "title": "Amino acids, peptides and the primary structure",
+      "hours": 4,
+      "hook": "Twenty small molecules, strung together in a chosen order, build everything from the keratin in your hair to the haemoglobin in your blood. The whole secret of a protein is written in that order, and in the chemistry of each link.",
+      "learningObjectives": [
+        "Draw the general structure of an alpha-amino acid and classify the 20 standard amino acids by side-chain properties",
+        "Predict the charge of an amino acid or short peptide at a given pH and calculate its isoelectric point",
+        "Describe the formation, geometry and partial double-bond character of the peptide bond",
+        "Explain why the primary structure (sequence) determines higher-order structure",
+        "Name common modifications and non-standard residues (disulphide bonds, hydroxyproline, selenocysteine)",
+        "Use a sequence-analysis tool to compute properties such as molecular weight and pI"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Alpha-amino acid",
+          "definition": "A molecule with an amino group, a carboxyl group, a hydrogen and a variable side chain (R) all bonded to the alpha carbon; all standard amino acids except glycine are chiral."
+        },
+        {
+          "term": "L-amino acid",
+          "definition": "The stereoisomer found in ribosomally made proteins; D-amino acids occur in some bacterial peptides and cell walls."
+        },
+        {
+          "term": "Zwitterion",
+          "definition": "A molecule with both a positive and a negative charge but zero net charge, which is the dominant form of a free amino acid near neutral pH."
+        },
+        {
+          "term": "Side-chain classes",
+          "definition": "Non-polar aliphatic, aromatic, polar uncharged, positively charged (Lys, Arg, His) and negatively charged (Asp, Glu); the class governs where a residue sits in a folded protein."
+        },
+        {
+          "term": "pKa and pI",
+          "definition": "Each ionisable group has a pKa; the isoelectric point is the pH at which the net charge is zero, found by averaging the two pKa values around the neutral species."
+        },
+        {
+          "term": "Peptide bond",
+          "definition": "The amide linkage between the carboxyl of one residue and the amino group of the next, formed with loss of water."
+        },
+        {
+          "term": "Planarity of the peptide unit",
+          "definition": "Resonance gives the C-N bond partial double-bond character, so the six atoms around it lie in one plane, usually in the trans arrangement (omega near 180 degrees)."
+        },
+        {
+          "term": "Primary structure",
+          "definition": "The linear sequence of amino acids from the N-terminus to the C-terminus."
+        },
+        {
+          "term": "Disulphide bond",
+          "definition": "A covalent S-S link between two cysteine side chains formed by oxidation; common in secreted proteins but rare in the reducing cytosol."
+        },
+        {
+          "term": "Post-translational modification",
+          "definition": "A chemical change after synthesis (phosphorylation, glycosylation, hydroxylation and others) that alters stability, location or activity."
+        }
+      ],
+      "deeper": {
+        "beginner": "An amino acid is a small tile with two identical connectors (an amino end and a carboxyl end) and a decorated face, the side chain. Link the tiles end to end and you get a chain, and the pattern of decorations along it is the protein's identity. Some faces are oily, some are charged, some are bulky, some tiny, and these differences decide how the chain will fold. The tile analogy breaks down because real tiles are rigid, whereas each link in the chain can rotate, which is exactly why a chain can adopt so many shapes.",
+        "intermediate": "At neutral pH most amino acids are zwitterions. The pKa of the alpha-carboxyl is about 2 and of the alpha-amino about 9 to 10, so glycine, whose pKa values are 2.34 and 9.60, has an isoelectric point of about 6.0. Side chains add further ionisable groups: for aspartate and glutamate the pI lies between the two acidic pKa values, for lysine and arginine between the two basic ones. Histidine's side chain pKa of about 6 makes it a useful acid-base catalyst near physiological pH. The peptide bond is planar and normally trans because of its partial double-bond character; proline is the exception where cis forms are significantly populated. The only freedom left in the backbone is rotation about the N-Calpha (phi) and Calpha-C (psi) bonds, which leads directly to the Ramachandran analysis in the next unit.",
+        "advanced": "Sequence determines structure only in the context of its environment: the same residue can have different pKa values in different local settings, and proteins can switch fold depending on conditions (metamorphic proteins) or may need chaperones. Edman degradation, once the standard for sequencing, has largely been replaced by mass spectrometry and by DNA sequencing of the gene. Mass spectrometry (peptide mass fingerprinting and tandem MS) can identify post-translational modifications by mass shifts: phosphorylation adds 79.97 Da. Evolutionary conservation, rather than raw physical properties alone, tells which residues matter: sequence families such as the globins differ in over 70 percent of positions yet share a fold. Selenocysteine is the 21st encoded amino acid, inserted at a UGA codon by a special mechanism, and pyrrolysine the 22nd in some archaea."
+      },
+      "commonMistakes": [
+        "Writing sequences from the C-terminus; by convention the N-terminus is on the left.",
+        "Using the zwitterion at the wrong pH; the net charge depends on pH, and pI is a property of the whole molecule.",
+        "Treating the peptide bond as freely rotating; it is planar, and flexibility lies in phi and psi.",
+        "Assuming a polar side chain is always on the surface; many polar residues are buried in functionally important sites."
+      ],
+      "animation": "titration-curve",
+      "videos": [
+        {
+          "youtubeId": "J6R8zDAl_vw",
+          "title": "Amino Acids",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A tight overview of amino acid structure and the main classes."
+        },
+        {
+          "youtubeId": "YyFXsHF7jPo",
+          "title": "Titration of Amino Acids - pH, pKa1 and pKa2 - Isoelectric Point - Amino Acids (Part 4)",
+          "channel": "Medicosis Perfectionalis",
+          "level": "intermediate",
+          "whyWatch": "Reads the titration curve of an amino acid and shows how to get the pI."
+        },
+        {
+          "youtubeId": "nv2kfBFkv4s",
+          "title": "Peptide bond formation | Macromolecules | Biology | Khan Academy",
+          "channel": "Khan Academy",
+          "level": "beginner",
+          "whyWatch": "Shows the condensation reaction that links two amino acids."
+        },
+        {
+          "youtubeId": "KW8Uo8jsiGY",
+          "title": "Primary Structure of Proteins",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains the peptide bond, sequence notation and what the primary structure tells you."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "ExPASy ProtParam",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "tool",
+          "url": "https://web.expasy.org/protparam/",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste a sequence and it calculates molecular weight, theoretical pI and amino-acid composition, which makes the unit's concepts concrete."
+        },
+        {
+          "title": "Biology 2e: Proteins",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+          "free": true,
+          "level": "beginner",
+          "note": "A clear free summary of amino acids and the four levels of structure."
+        },
+        {
+          "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+          "provider": "NCBI Bookshelf",
+          "type": "textbook",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The standard text for amino-acid chemistry and protein structure; use the chapter on protein composition and structure."
+        },
+        {
+          "title": "Macromolecules",
+          "provider": "Khan Academy",
+          "type": "tutorial",
+          "url": "https://www.khanacademy.org/science/biology/macromolecules",
+          "free": true,
+          "level": "beginner",
+          "note": "Short lessons with practice questions on amino acids and protein structure."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Alanine has pKa values of about 2.3 and 9.7 for its alpha-carboxyl and alpha-amino groups and a non-ionisable side chain. What is its approximate pI?",
+          "options": [
+            "2.3",
+            "6.0",
+            "7.0",
+            "9.7"
+          ],
+          "answer": 1,
+          "explanation": "For an amino acid with a non-ionisable side chain the pI is the mean of the two pKa values: (2.3 + 9.7)/2 = 6.0."
+        },
+        {
+          "question": "Why is the peptide unit planar?",
+          "options": [
+            "Hydrogen bonds fix the geometry",
+            "Disulphide bridges hold it flat",
+            "Steric hindrance between side chains",
+            "Resonance gives the C-N bond partial double-bond character"
+          ],
+          "answer": 3,
+          "explanation": "Delocalisation of the nitrogen lone pair into the carbonyl gives the C-N bond partial double-bond character, preventing rotation and keeping the six atoms in one plane."
+        },
+        {
+          "question": "Which amino acid side chain has a pKa near physiological pH and is therefore often found in enzyme active sites?",
+          "options": [
+            "Tryptophan",
+            "Leucine",
+            "Histidine",
+            "Serine"
+          ],
+          "answer": 2,
+          "explanation": "The imidazole ring of histidine has a pKa of about 6, so it can readily donate or accept a proton near neutral pH."
+        },
+        {
+          "question": "A disulphide bond is formed between which two residues?",
+          "options": [
+            "Two methionines",
+            "Two cysteines",
+            "A cysteine and a serine",
+            "Two histidines"
+          ],
+          "answer": 1,
+          "explanation": "Oxidation of the thiol (-SH) groups of two cysteine residues produces the covalent S-S bond (cystine)."
+        }
+      ]
+    },
+    {
+      "id": "secondary-structure",
+      "title": "Secondary structure: helices, sheets and the Ramachandran map",
+      "hours": 4,
+      "hook": "In 1951 Linus Pauling and colleagues predicted the alpha helix and beta sheet by building models and following a few simple rules about bond geometry and hydrogen bonding, before anyone had seen one in a real protein. The rules were so good that the structures turned up almost exactly as predicted.",
+      "learningObjectives": [
+        "Describe the geometry of the alpha helix and beta sheet (parallel and antiparallel), including the hydrogen-bonding pattern",
+        "Interpret a Ramachandran plot and explain which regions are allowed and why",
+        "Explain why glycine and proline behave differently in secondary structure",
+        "Recognise turns, loops and other common motifs such as the beta hairpin",
+        "Relate amino-acid propensities to secondary structure preferences",
+        "Explain why the backbone hydrogen bonds are key to secondary structure while side chains decide which type forms"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Secondary structure",
+          "definition": "Regular local conformations of the polypeptide backbone, stabilised by backbone hydrogen bonds."
+        },
+        {
+          "term": "Alpha helix",
+          "definition": "A right-handed coil with 3.6 residues per turn, a rise of 1.5 angstroms per residue and a 5.4 angstrom pitch; the C=O of residue i bonds to the N-H of residue i+4."
+        },
+        {
+          "term": "Beta strand and sheet",
+          "definition": "An extended backbone (rise about 3.3 angstroms per residue) in which neighbouring strands hydrogen bond to form a sheet, either parallel or antiparallel."
+        },
+        {
+          "term": "Phi and psi angles",
+          "definition": "The torsion angles around the N-Calpha and Calpha-C bonds; they are the main degrees of freedom of the backbone."
+        },
+        {
+          "term": "Ramachandran plot",
+          "definition": "A plot of psi against phi for each residue; steric clashes forbid most of the plane, leaving allowed regions for helices, strands and a few others."
+        },
+        {
+          "term": "Beta turn",
+          "definition": "A tight reversal of chain direction over about four residues, often stabilised by a hydrogen bond; Gly and Pro are common."
+        },
+        {
+          "term": "Proline",
+          "definition": "Its ring locks phi near -60 degrees and lacks an amide hydrogen, so it breaks helices and favours turns."
+        },
+        {
+          "term": "Glycine",
+          "definition": "With only a hydrogen as its side chain it can access a much larger part of the Ramachandran plot, giving flexibility."
+        },
+        {
+          "term": "Amphipathic helix",
+          "definition": "A helix with one face hydrophobic and the other polar, common at protein surfaces and interfaces and in coiled coils."
+        },
+        {
+          "term": "Secondary-structure propensity",
+          "definition": "The statistical tendency of an amino acid to occur in helices (Ala, Leu, Glu), strands (Val, Ile, Tyr) or turns (Gly, Pro, Asn)."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of the backbone as a chain of flat tiles joined by swivel points. Only two swivels per residue let the chain bend, and not all angles are possible because atoms bump into each other. Where the chain is allowed to coil it forms a spiral staircase, the alpha helix, held by hydrogen bonds between turns. Where it stretches out, side-by-side strands form pleated sheets, held by hydrogen bonds between strands. The staircase picture breaks down because helices wobble and breathe in solution; they are not rigid springs.",
+        "intermediate": "In the alpha helix every backbone carbonyl points along the axis and hydrogen bonds to the amide four residues ahead, so the backbone satisfies its own hydrogen-bonding needs and the side chains point outwards. Typical angles are phi near -57 degrees and psi near -47 degrees. In a beta sheet the hydrogen bonds link separate strands, and side chains alternate above and below the sheet. Ramachandran plots show three principal allowed regions: right-handed helix, beta region and a small left-handed helix region populated mainly by glycine. Proline's rigid ring and lack of an N-H make it a helix breaker in the middle of a helix, though common at the N-terminal turn. Helices are common in membrane proteins as transmembrane segments because the backbone hydrogen bonds are satisfied internally.",
+        "advanced": "The Ramachandran map arises from hard-sphere steric exclusion between atoms of adjacent residues; with realistic van der Waals radii it reproduces the observed distribution of phi and psi in high-resolution structures, and deviations point to errors or strain. Cooperative hydrogen bonding in helices is why helix-coil transitions are steep, described by Zimm-Bragg or Lifson-Roig theory: nucleation is unfavourable, propagation favourable. Variants include the 3-10 helix (i to i+3) and pi helix (i to i+5), and the polyproline II helix, a left-handed extended helix common in unfolded proteins and collagen. Beta sheets show a right-handed twist when viewed along the strands and often curl into barrels. Secondary-structure prediction from sequence reached roughly 80 percent accuracy with modern deep-learning methods, and the quantitative content of experimental structures can be assigned from hydrogen-bond patterns by algorithms such as DSSP, or estimated by CD spectroscopy."
+      },
+      "commonMistakes": [
+        "Confusing the pitch of the helix (5.4 angstroms per turn) with the rise per residue (1.5 angstroms).",
+        "Thinking the alpha helix is stabilised by side-chain hydrogen bonds; it is the backbone N-H and C=O that bond.",
+        "Assuming all residues sit in allowed regions of the Ramachandran plot; glycine can be outside the ranges allowed for others.",
+        "Believing secondary structure is fixed by sequence alone; context and tertiary interactions matter."
+      ],
+      "videos": [
+        {
+          "youtubeId": "hok2hyED9go",
+          "title": "Protein Structure and Folding",
+          "channel": "Amoeba Sisters",
+          "level": "beginner",
+          "whyWatch": "A friendly overview of the levels of protein structure, setting up helices and sheets."
+        },
+        {
+          "youtubeId": "aO0l1PReGo0",
+          "title": "How to Interpret Ramachandran Plots",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Explains how phi and psi angles map onto allowed regions and structure types."
+        },
+        {
+          "youtubeId": "JyUMLSsbecI",
+          "title": "Understanding PHI and PSI Angles, Ramachandran Plots, & Newman Projections",
+          "channel": "Molecular Memory",
+          "level": "intermediate",
+          "whyWatch": "Builds up the geometric picture behind the plot with Newman projections."
+        },
+        {
+          "youtubeId": "fst8oSeAQ98",
+          "title": "Lecture 02, concept 11: Phi/psi torsions, Ramachandran diagrams",
+          "channel": "Erik Lindahl",
+          "level": "advanced",
+          "whyWatch": "A short lecture segment on torsions and the steric reasoning behind the Ramachandran map."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1073/pnas.37.4.205",
+          "title": "The structure of proteins: Two hydrogen-bonded helical configurations of the polypeptide chain",
+          "authors": "Pauling L, Corey RB, Branson HR",
+          "year": 1951,
+          "journal": "Proceedings of the National Academy of Sciences",
+          "level": "advanced",
+          "whyItMatters": "This is the paper that put the alpha helix on the map. It shows how a handful of well-chosen constraints (planar peptide bonds, good hydrogen bonds) were enough to predict a structure that was later found in nature.",
+          "readingQuestions": [
+            "Which constraints did the authors impose to find the helix?",
+            "Why did they expect the helix to have a non-integral number of residues per turn?"
+          ]
+        },
+        {
+          "doi": "10.1016/S0022-2836(63)80023-6",
+          "title": "Stereochemistry of polypeptide chain configurations",
+          "authors": "Ramachandran GN, Ramakrishnan C, Sasisekharan V",
+          "year": 1963,
+          "journal": "Journal of Molecular Biology",
+          "level": "advanced",
+          "whyItMatters": "The original Ramachandran paper, using atomic contact distances to work out which phi and psi combinations are possible. Its plot is still used every day to check protein structures."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Guide to Understanding PDB Data: Methods for Determining Structure",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/methods-for-determining-structure",
+          "free": true,
+          "level": "beginner",
+          "note": "Context for how helices and sheets are observed experimentally and how coordinates are built."
+        },
+        {
+          "title": "Proteopedia",
+          "provider": "Proteopedia",
+          "type": "interactive",
+          "url": "https://proteopedia.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Interactive 3D views of real proteins where you can rotate a helix or sheet and see the hydrogen bonds."
+        },
+        {
+          "title": "iCn3D structure viewer",
+          "provider": "NCBI",
+          "type": "tool",
+          "url": "https://www.ncbi.nlm.nih.gov/Structure/icn3d/",
+          "free": true,
+          "level": "beginner",
+          "note": "Browser-based viewer to colour a structure by secondary structure and inspect backbone hydrogen bonds."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In an alpha helix, the carbonyl oxygen of residue i hydrogen bonds to the amide N-H of residue:",
+          "options": [
+            "i + 2",
+            "i + 4",
+            "i + 7",
+            "i - 1"
+          ],
+          "answer": 1,
+          "explanation": "The characteristic i to i+4 pattern closes a 13-atom hydrogen-bonded loop and gives 3.6 residues per turn."
+        },
+        {
+          "question": "Why is proline usually found in turns or at helix N-termini rather than in the middle of a helix?",
+          "options": [
+            "It is always charged",
+            "It forms disulphide bonds",
+            "It is too hydrophobic",
+            "Its ring restricts phi and it lacks an amide hydrogen to donate a hydrogen bond"
+          ],
+          "answer": 3,
+          "explanation": "Proline's side chain loops back to the backbone nitrogen, locking phi near -60 degrees and removing the N-H needed for helix hydrogen bonding."
+        },
+        {
+          "question": "Which statement about the Ramachandran plot is correct?",
+          "options": [
+            "It requires the protein to be an alpha helix",
+            "It shows allowed combinations of phi and psi, and glycine occupies a larger region than other residues",
+            "It plots bond lengths against bond angles",
+            "It is used only for beta sheets"
+          ],
+          "answer": 1,
+          "explanation": "The plot reflects steric limits on phi and psi. Glycine lacks a side chain and so can adopt conformations forbidden to other residues."
+        },
+        {
+          "question": "Which describes the hydrogen bonding in a beta sheet?",
+          "options": [
+            "Between residues four apart in the same strand",
+            "Between backbone groups of neighbouring strands",
+            "Between side chains of the same residue",
+            "Only between water molecules"
+          ],
+          "answer": 1,
+          "explanation": "In a sheet the backbone N-H and C=O groups of adjacent strands pair up, with strands running parallel or antiparallel."
+        }
+      ]
+    },
+    {
+      "id": "tertiary-quaternary-folding",
+      "title": "Tertiary and quaternary structure, and the problem of folding",
+      "hours": 5,
+      "hook": "A protein chain of 100 residues could in principle adopt more shapes than there are atoms in the universe, yet in a cell it finds the right one in about a second. How does a chain find its way, and what happens to the ones that get lost?",
+      "learningObjectives": [
+        "Define tertiary and quaternary structure and give examples of the forces that stabilise each",
+        "Describe Anfinsen's experiment and the thermodynamic hypothesis of folding",
+        "Explain Levinthal's paradox and how the funnel-shaped energy landscape resolves it",
+        "Describe the role of molecular chaperones (Hsp70, chaperonins) and disulphide isomerases in folding",
+        "Explain how proteins are denatured and what the stability measured as delta G of unfolding means",
+        "Recognise common tertiary folds and the idea of domains"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Tertiary structure",
+          "definition": "The overall three-dimensional arrangement of a single polypeptide chain, including the packing of secondary-structure elements and side chains."
+        },
+        {
+          "term": "Quaternary structure",
+          "definition": "The arrangement of several polypeptide subunits in a multi-subunit protein, as in haemoglobin (alpha2 beta2)."
+        },
+        {
+          "term": "Hydrophobic core",
+          "definition": "The cluster of buried non-polar side chains that forms in a folded water-soluble protein, contributing the main driving force for folding."
+        },
+        {
+          "term": "Anfinsen's dogma (thermodynamic hypothesis)",
+          "definition": "The native structure of a small protein is the minimum free-energy state under physiological conditions and is determined by its sequence."
+        },
+        {
+          "term": "Levinthal's paradox",
+          "definition": "The observation that random search of all conformations would take impossibly long, implying that folding follows directed pathways."
+        },
+        {
+          "term": "Folding funnel",
+          "definition": "A model in which the energy landscape narrows towards the native state, so many different routes lead downhill."
+        },
+        {
+          "term": "Molten globule",
+          "definition": "A compact partially folded state with native-like secondary structure but fluctuating tertiary contacts, seen as a folding intermediate."
+        },
+        {
+          "term": "Molecular chaperone",
+          "definition": "A protein that helps others fold or avoid aggregation without becoming part of the final structure; many are heat-shock proteins (Hsp70, GroEL/ES)."
+        },
+        {
+          "term": "Domain",
+          "definition": "A compact, independently folding unit of about 50 to 300 residues; large proteins are often built from several domains."
+        },
+        {
+          "term": "Denaturation",
+          "definition": "Loss of native structure by heat, extremes of pH, chaotropes such as urea or guanidinium, or detergents; it may be reversible for small proteins."
+        }
+      ],
+      "deeper": {
+        "beginner": "Folding is like crumpling a long string of magnets and beads in a bag of water and finding that it always ends up in the same neat shape. The oily beads scurry to the middle away from the water, the charged ones stay on the surface, and the chain locks into a shape that holds together. Chaperones are like helpers who keep the string from tangling with its neighbours while it finds its shape. The analogy fails because the bag has no thermal motion; a real protein is jostled constantly and is always on the move around its average shape.",
+        "intermediate": "Anfinsen showed that ribonuclease A, unfolded with urea and a reducing agent, regains its activity when the denaturant is removed and the disulphides reform, so the sequence holds all the information for folding. The chain finds its fold through a funnel-like energy landscape rather than a random search, collapsing quickly around hydrophobic residues and then rearranging. Many proteins fold in seconds or less, but larger ones or those with problematic regions need chaperones. In the cell, Hsp70 binds exposed hydrophobic segments of nascent chains and releases them in an ATP-dependent cycle, while chaperonins such as GroEL/GroES provide an enclosed chamber in which a protein can fold in isolation. The stability of a typical small protein is modest, a delta G of unfolding of only 20 to 60 kJ/mol, equal to a few hydrogen bonds.",
+        "advanced": "The net stability is a small difference between large opposing terms: the favourable burial of non-polar surface and van der Waals packing against the loss of conformational entropy of the chain. Folding kinetics can be approached with two-state models (chevron plots as a function of denaturant) and the contact order of the native state correlates with folding rate. Anfinsen's result holds for small single-domain proteins; large proteins may be kinetically trapped and require chaperones to reach the minimum, and some proteins (for example certain serpins) fold to a metastable state not the global minimum. Co-translational folding in the ribosome exit tunnel, protein disulphide isomerase and peptidyl-prolyl isomerases speed up rate-limiting steps. Intrinsically disordered proteins challenge the structure-function paradigm because they function without a stable fold, often folding upon binding to a partner."
+      },
+      "commonMistakes": [
+        "Saying that folding is driven by hydrogen bonds; both folded and unfolded forms make hydrogen bonds (to each other or to water), and the hydrophobic effect and packing are decisive.",
+        "Reading Levinthal's paradox as proving that proteins cannot fold; it shows that folding must be directed, not random.",
+        "Assuming denaturation is always irreversible; many small proteins refold on removal of the denaturant.",
+        "Believing chaperones carry the folding information; they only prevent mis-association and the sequence still determines the fold."
+      ],
+      "animation": "protein-folding",
+      "videos": [
+        {
+          "youtubeId": "EweuU2fEgjw",
+          "title": "Protein Structure",
+          "channel": "Professor Dave Explains",
+          "level": "beginner",
+          "whyWatch": "A concise review of primary to quaternary structure and the forces that stabilise each."
+        },
+        {
+          "youtubeId": "pZee0XCCqH4",
+          "title": "Anfinsen's Experiment of Protein Folding",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains Anfinsen's ribonuclease experiment and what it proved."
+        },
+        {
+          "youtubeId": "ESC3CSApNnk",
+          "title": "CHAPERONES AND MISFOLDED PROTEINS",
+          "channel": "Neural Academy",
+          "level": "beginner",
+          "whyWatch": "A short look at what chaperones do and what happens when proteins misfold."
+        },
+        {
+          "youtubeId": "4fbcS3tzxH0",
+          "title": "Lecture 04, concept 08: Protein folding is initially a hydrophobic collapse",
+          "channel": "Erik Lindahl",
+          "level": "advanced",
+          "whyWatch": "A short lecture segment on hydrophobic collapse as the first step of folding."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.181.4096.223",
+          "title": "Principles that Govern the Folding of Protein Chains",
+          "authors": "Anfinsen CB",
+          "year": 1973,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Anfinsen's Nobel lecture article summarises the experiments showing that the amino-acid sequence of a small protein contains everything needed to fold. Reading it shows how simple, elegant experiments can establish a principle.",
+          "readingQuestions": [
+            "What evidence showed that the native disulphide pairing is not random?",
+            "Why was the presence of the right conditions (pH, temperature, ions) important for refolding?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.1219021",
+          "title": "The Protein-Folding Problem, 50 Years On",
+          "authors": "Dill KA, MacCallum JL",
+          "year": 2012,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "A readable review of how our understanding of folding has progressed from Levinthal's paradox to energy landscapes and computer prediction. It explains why the problem is really three problems: the physical code, the search, and the prediction."
+        }
+      ],
+      "resources": [
+        {
+          "title": "PDB-101: Molecule of the Month",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-by-title",
+          "free": true,
+          "level": "beginner",
+          "note": "Short illustrated stories of individual proteins, including chaperones such as GroEL, showing real structures."
+        },
+        {
+          "title": "Biology 2e: Proteins",
+          "provider": "OpenStax",
+          "type": "textbook",
+          "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+          "free": true,
+          "level": "beginner",
+          "note": "Clear overview of the levels of protein structure and denaturation."
+        },
+        {
+          "title": "Proteopedia",
+          "provider": "Proteopedia",
+          "type": "interactive",
+          "url": "https://proteopedia.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Browse annotated 3D structures and see domain organisation and quaternary assemblies."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In Anfinsen's experiment, what happened to ribonuclease A when urea and the reducing agent were removed slowly?",
+          "options": [
+            "It refolded and regained activity",
+            "It formed aggregates",
+            "It was digested",
+            "It stayed unfolded"
+          ],
+          "answer": 0,
+          "explanation": "The enzyme regained catalytic activity, showing that the sequence contains the information needed to fold into the active structure."
+        },
+        {
+          "question": "What does Levinthal's paradox imply?",
+          "options": [
+            "Folding must follow guided pathways rather than a random search",
+            "All proteins need chaperones",
+            "Proteins fold by random search",
+            "Proteins cannot fold"
+          ],
+          "answer": 0,
+          "explanation": "A random search of all conformations would take longer than the age of the universe, yet proteins fold in milliseconds to seconds, so folding must be funnelled by the energy landscape."
+        },
+        {
+          "question": "Which best describes the role of GroEL/GroES?",
+          "options": [
+            "It carries the sequence information for folding",
+            "It cleaves misfolded proteins",
+            "It provides an enclosed ATP-dependent chamber where a protein can fold without aggregating",
+            "It adds the sugar groups to proteins"
+          ],
+          "answer": 2,
+          "explanation": "Chaperonins encapsulate an unfolded protein in a cage, isolating it from others while it folds, using ATP cycles to open and close the chamber."
+        },
+        {
+          "question": "A small protein has delta G of unfolding of 40 kJ/mol. What does this tell you?",
+          "options": [
+            "Folding is spontaneous and the folded form is favoured only modestly",
+            "It is extremely stable and cannot be denatured",
+            "The unfolded state is favoured",
+            "It requires ATP"
+          ],
+          "answer": 0,
+          "explanation": "A positive delta G of unfolding means the folded state is more stable, but 40 kJ/mol is small compared with the sum of many interactions; proteins are marginally stable."
+        }
+      ]
+    },
+    {
+      "id": "determining-structure",
+      "title": "How we know: X-ray crystallography, NMR, cryo-EM and the PDB",
+      "hours": 4,
+      "hook": "Every picture of a protein in a textbook started life as a cloud of data points, not a photograph. Knowing how the picture was made tells you how much to trust it, and which parts are solid and which are guesses.",
+      "learningObjectives": [
+        "Describe the principle of X-ray crystallography, including crystals, diffraction and the phase problem",
+        "Explain how NMR gives structures in solution and the role of distance restraints",
+        "Explain how single-particle cryo-EM works and why it has transformed structural biology",
+        "Interpret resolution, R-factors, B-factors and map quality when judging a structure",
+        "Retrieve and inspect a structure from the Protein Data Bank and interpret the key metadata",
+        "Choose a method suited to a given protein (size, crystallisability, flexibility)"
+      ],
+      "keyConcepts": [
+        {
+          "term": "X-ray crystallography",
+          "definition": "Determines atomic structure from the diffraction pattern of X-rays scattered by an ordered crystal; the pattern gives amplitudes, from which an electron-density map is calculated."
+        },
+        {
+          "term": "Phase problem",
+          "definition": "Diffraction experiments record intensities but not the phases of the waves, so phases must be obtained by other means (molecular replacement, heavy-atom derivatives, anomalous scattering)."
+        },
+        {
+          "term": "Resolution",
+          "definition": "The smallest detail resolved in the data, in angstroms; below about 2 angstroms side-chain and water positions are reliable, and above 3.5 angstroms only the fold may be clear."
+        },
+        {
+          "term": "B-factor",
+          "definition": "An atom-specific measure of how smeared its electron density is, from thermal motion or disorder."
+        },
+        {
+          "term": "NMR structure determination",
+          "definition": "Uses isotope-labelled protein in solution and measures through-space (NOE) and bond (J-coupling) restraints to calculate a family of structures consistent with the data."
+        },
+        {
+          "term": "Single-particle cryo-EM",
+          "definition": "Images of many frozen-hydrated particles in random orientations are classified and averaged computationally to reconstruct a three-dimensional density map."
+        },
+        {
+          "term": "Direct electron detectors",
+          "definition": "Cameras with high sensitivity that, with motion correction, enabled the near-atomic resolution cryo-EM structures of the 'resolution revolution'."
+        },
+        {
+          "term": "Protein Data Bank (PDB)",
+          "definition": "The global archive of experimentally determined structures of biological macromolecules, each with a four-character ID."
+        },
+        {
+          "term": "Validation",
+          "definition": "Checks of geometry, Ramachandran statistics, clashes and fit to the data that indicate how reliable a model is."
+        },
+        {
+          "term": "Electron density map",
+          "definition": "A three-dimensional map into which atoms are built; the model is an interpretation of the map, not the map itself."
+        }
+      ],
+      "deeper": {
+        "beginner": "To see a molecule too small for any microscope, we do something indirect. In crystallography a million identical molecules are stacked in a crystal, and when X-rays pass through, they scatter into a pattern of spots from which a computer works backwards to a 3D map. In NMR we place the protein in a strong magnet and listen to atoms that are neighbours 'talk' to each other. In cryo-EM we flash-freeze molecules and photograph thousands of them from different angles. The picture is a model fitted to data, and the data have limits.",
+        "intermediate": "X-ray crystallography needs a well-ordered crystal, which is often the hardest step; membrane proteins and flexible proteins are difficult. The diffraction pattern depends on the crystal's repeating unit, and the structure is built into the electron density. NMR works for smaller proteins (typically up to about 30 to 50 kDa) in solution, gives information about dynamics and does not need crystals, but the structure is an ensemble. Cryo-EM requires no crystals, works well for large complexes and increasingly for smaller proteins, and can capture multiple conformational states. When using a PDB structure, check the method, resolution, date and ligands present, and look at validation reports before drawing conclusions from the details of side-chain positions.",
+        "advanced": "In crystallography the electron density is the Fourier transform of structure factors whose amplitudes come from the intensities; molecular replacement uses a related model to estimate phases, while anomalous scattering from selenomethionine or heavy atoms gives experimental phases. Refinement minimises the difference between observed and calculated amplitudes, tracked by R-work and the cross-validation R-free; a large gap between them signals overfitting. Cryo-EM recovers three-dimensional information by assuming particles are identical copies in random orientations, with the contrast transfer function corrected; resolution is judged by the Fourier shell correlation. Cryo-electron tomography extends this to cells. Integrative methods combine crystal, NMR, EM, cross-linking mass spectrometry and modelling for large assemblies. The 2017 Nobel Prize in Chemistry recognised Dubochet, Frank and Henderson for developing cryo-EM, and the 1962 prize recognised Kendrew and Perutz for the first protein structures."
+      },
+      "commonMistakes": [
+        "Treating a PDB model as direct observation; it is a model fitted to experimental data, with uncertainties.",
+        "Comparing resolution numbers across methods without caution; resolution means different things in X-ray, NMR and cryo-EM.",
+        "Assuming a crystal structure shows the protein exactly as in solution; crystal packing and ligands can influence conformations.",
+        "Ignoring B-factors and missing residues; disordered regions often lack coordinates or are poorly defined."
+      ],
+      "videos": [
+        {
+          "youtubeId": "LioYrxinn28",
+          "title": "Protein structure by X-ray crystallography",
+          "channel": "EPFL School of Life Sciences",
+          "level": "beginner",
+          "whyWatch": "A short animation of the main steps in crystallography from crystal to model."
+        },
+        {
+          "youtubeId": "Enda859ftFQ",
+          "title": "Lecture 9.3: How can NMR be used to determine protein structures?",
+          "channel": "Ben McFarland",
+          "level": "intermediate",
+          "whyWatch": "A lecture segment on how NMR restraints turn into a structure."
+        },
+        {
+          "youtubeId": "Qq8DO-4BnIY",
+          "title": "What is Cryo-Electron Microscopy (Cryo-EM)?",
+          "channel": "UC San Francisco (UCSF)",
+          "level": "beginner",
+          "whyWatch": "A two-minute explanation of cryo-EM from a leading cryo-EM centre."
+        },
+        {
+          "youtubeId": "osC2osUu2To",
+          "title": "Using CryoEM to Determine 3-D Protein Structure",
+          "channel": "Phillip Compeau",
+          "level": "intermediate",
+          "whyWatch": "Explains how thousands of noisy two-dimensional images are combined into a 3D reconstruction."
+        },
+        {
+          "youtubeId": "klB4T0X-sVU",
+          "title": "The Protein Data Bank (PDB) - a user's guide",
+          "channel": "the bumbling biochemist",
+          "level": "intermediate",
+          "whyWatch": "A long, careful walk through the PDB, how to read an entry and how to judge a structure's quality."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/181662a0",
+          "title": "A Three-Dimensional Model of the Myoglobin Molecule Obtained by X-Ray Analysis",
+          "authors": "Kendrew JC, Bodo G, Dintzis HM, Parrish RG, Wyckoff H, Phillips DC",
+          "year": 1958,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The first atomic-level model of a protein, which showed that proteins are compact, irregular-looking folds rather than idealised shapes. It is the origin of structural biology as we know it.",
+          "readingQuestions": [
+            "What surprised the authors about the overall shape of myoglobin?",
+            "What resolution did they reach, and what could they see at that resolution?"
+          ]
+        },
+        {
+          "doi": "10.1126/science.1251652",
+          "title": "The Resolution Revolution",
+          "authors": "Kuhlbrandt W",
+          "year": 2014,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "A short, accessible perspective on how new electron detectors and software turned cryo-EM into a method that regularly reaches near-atomic resolution. It explains the technical advance behind the Nobel Prize."
+        }
+      ],
+      "resources": [
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB PDB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Search any protein, view it in 3D, and read the experimental method, resolution and validation report."
+        },
+        {
+          "title": "Methods for Determining Structure",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/methods-for-determining-structure",
+          "free": true,
+          "level": "beginner",
+          "note": "A concise comparison of X-ray, NMR and cryo-EM for students."
+        },
+        {
+          "title": "PDBe (Protein Data Bank in Europe)",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/pdbe/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The European PDB resource with excellent structure summaries and validation graphics."
+        },
+        {
+          "title": "UCSF ChimeraX",
+          "provider": "UCSF Resource for Biocomputing, Visualization, and Informatics",
+          "type": "tool",
+          "url": "https://www.cgl.ucsf.edu/chimerax/",
+          "free": true,
+          "level": "advanced",
+          "note": "A free molecular visualisation program for exploring density maps and models on your own computer."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "What is the 'phase problem' in X-ray crystallography?",
+          "options": [
+            "Detectors record intensities but not the phases of diffracted waves",
+            "Proteins change phase in the beam",
+            "X-rays cannot penetrate crystals",
+            "Crystals melt during the experiment"
+          ],
+          "answer": 0,
+          "explanation": "To calculate an electron-density map we need both amplitudes and phases of the diffracted waves, but only intensities (and thus amplitudes) are measured, so phases must be found indirectly."
+        },
+        {
+          "question": "Which method does not require the protein to be crystallised and is well suited to large, flexible complexes?",
+          "options": [
+            "Powder diffraction",
+            "Edman degradation",
+            "Single-particle cryo-EM",
+            "X-ray crystallography"
+          ],
+          "answer": 2,
+          "explanation": "Cryo-EM images vitrified (frozen) single particles in random orientations, so no crystal is needed, and it can classify different conformations."
+        },
+        {
+          "question": "A PDB entry reports resolution 3.8 angstroms. What should you be cautious about?",
+          "options": [
+            "The overall fold may be reliable, but side-chain and water positions will be uncertain",
+            "The structure is guaranteed to be wrong",
+            "All atoms are located to 0.1 angstrom",
+            "The protein is a monomer"
+          ],
+          "answer": 0,
+          "explanation": "At this resolution the backbone trace is usually clear, but details like side-chain rotamers, ligand positions and water molecules cannot be trusted."
+        },
+        {
+          "question": "NMR structure determination relies mainly on which kind of information?",
+          "options": [
+            "Diffraction intensities from a crystal",
+            "Distance restraints between nearby nuclei (such as NOEs) in solution",
+            "Mass-to-charge ratios",
+            "Electron scattering from frozen particles"
+          ],
+          "answer": 1,
+          "explanation": "NOEs report through-space proximity (under about 5 angstroms), and many such restraints are used to calculate an ensemble of structures."
+        }
+      ]
+    },
+    {
+      "id": "myoglobin-haemoglobin",
+      "title": "Structure meets function: myoglobin and haemoglobin",
+      "hours": 5,
+      "hook": "Myoglobin and haemoglobin are cousins that do almost the same job in very different ways. One stores oxygen in muscle; the other loads it in the lungs and unloads it where it is needed. The difference between them is the best textbook case of how protein structure produces behaviour.",
+      "learningObjectives": [
+        "Describe the globin fold and the haem group, including the proximal and distal histidines",
+        "Compare oxygen-binding curves of myoglobin and haemoglobin and explain them with P50 and cooperativity",
+        "Describe the T-to-R transition and how oxygen binding triggers it",
+        "Explain how H+, CO2 and 2,3-bisphosphoglycerate regulate oxygen affinity (Bohr effect, allosteric effectors)",
+        "Relate specific mutations (for example HbS) to structural and functional change",
+        "Link the oxygen-binding example to the general principles of ligand binding and allostery"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Globin fold",
+          "definition": "A compact all-helical fold of about eight helices (A to H) that forms a pocket for the haem group; shared by myoglobin and the haemoglobin subunits."
+        },
+        {
+          "term": "Haem",
+          "definition": "An iron-protoporphyrin IX group whose Fe2+ binds oxygen reversibly; held in the protein by a proximal histidine (F8)."
+        },
+        {
+          "term": "Distal histidine (E7)",
+          "definition": "Sits on the oxygen side of the haem, stabilising bound O2 by a hydrogen bond and limiting binding of carbon monoxide."
+        },
+        {
+          "term": "P50",
+          "definition": "The oxygen partial pressure at which a protein is half saturated; about 2.8 mmHg for myoglobin and about 26 mmHg for adult haemoglobin in blood."
+        },
+        {
+          "term": "Cooperative oxygen binding",
+          "definition": "Binding of O2 to one haemoglobin subunit increases the affinity of the others, giving a sigmoidal curve."
+        },
+        {
+          "term": "T and R states",
+          "definition": "The low-affinity tense (deoxy) and high-affinity relaxed (oxy) quaternary states of haemoglobin."
+        },
+        {
+          "term": "Bohr effect",
+          "definition": "Lower pH and higher CO2 decrease the oxygen affinity of haemoglobin, helping release O2 in metabolically active tissue."
+        },
+        {
+          "term": "2,3-Bisphosphoglycerate (2,3-BPG)",
+          "definition": "A small anionic effector that binds in the central cavity of deoxyhaemoglobin and stabilises the T state, lowering oxygen affinity."
+        },
+        {
+          "term": "Fetal haemoglobin (HbF)",
+          "definition": "Alpha2 gamma2 tetramer that binds 2,3-BPG less strongly and so has a higher oxygen affinity than adult haemoglobin, helping oxygen transfer across the placenta."
+        },
+        {
+          "term": "Sickle-cell haemoglobin (HbS)",
+          "definition": "A beta-chain Glu6 to Val substitution creates a sticky hydrophobic patch that makes deoxy-HbS polymerise into fibres and distort red cells."
+        }
+      ],
+      "deeper": {
+        "beginner": "Myoglobin is a single pocket that grabs oxygen firmly, a good store in muscle. Haemoglobin is four such pockets in one assembly, and they talk to each other: when the first one catches an oxygen, the whole assembly shifts shape and the others catch theirs more easily. In the tissues, where oxygen is scarce and the environment more acidic, the reverse happens and oxygen is released. The picture of four pockets passing messages breaks down because the 'message' is a physical change in the shape of the whole protein, not a signal sent along a wire.",
+        "intermediate": "The oxygen-binding curve of myoglobin is a simple hyperbola, while that of haemoglobin is sigmoidal. At the lung's oxygen partial pressure (about 100 mmHg) haemoglobin is nearly saturated; at the tissue partial pressure (about 20 to 40 mmHg) it gives up a large fraction of its oxygen, a steep part of the curve. When oxygen binds to Fe2+ the iron moves into the plane of the haem and pulls on the proximal histidine, shifting helix F and altering the contacts at the alpha1-beta2 interface, tipping the tetramer from T to R. The Bohr effect arises because protons bind more tightly to deoxyhaemoglobin (T state). 2,3-BPG binds in the central cavity of the T state and is important for adaptation to altitude. Sickle-cell disease arises from a single amino-acid change, an example of how one residue can alter a whole system.",
+        "advanced": "Perutz's crystal structures of oxy- and deoxyhaemoglobin identified salt bridges that form in the T state and break upon the transition, correlating the structural change with the thermodynamics of cooperativity. The MWC model captures the sigmoidal binding curve with allosteric constant L and the ratio of affinities, while more refined treatments (tertiary two-state models) account for the change in affinity within each quaternary state. The energetic cost of the T to R switch is paid by binding energy, and the free-energy of cooperativity, a few kJ/mol, is the difference between the successive binding steps. The Bohr effect has contributions from several residues (such as the C-terminal His146 of the beta chain); CO2 binds reversibly as carbamate at the N-termini. Myoglobin's distal pocket reduces CO affinity relative to free haem, but CO still binds around 200 times more tightly than O2 in haemoglobin, which is why carbon-monoxide poisoning is dangerous. HbS polymerisation is a nucleation-controlled process with a strong concentration dependence, which is why clinical severity depends on the time red cells spend deoxygenated."
+      },
+      "commonMistakes": [
+        "Thinking myoglobin and haemoglobin are structurally unrelated; they are evolutionary relatives with the same fold.",
+        "Describing haemoglobin as four independent myoglobins; cooperativity depends on subunit interactions.",
+        "Mixing up the direction of the Bohr effect: acid and CO2 lower the oxygen affinity so oxygen is released in active tissue.",
+        "Assuming that tighter oxygen binding is always better; the useful property is the ability to load and unload over a physiological range."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Qv-KExGKAYw",
+          "title": "HEMOGLOBIN AND MYOGLOBIN BIOCHEMISTRY",
+          "channel": "Neural Academy",
+          "level": "beginner",
+          "whyWatch": "A short side-by-side of myoglobin and haemoglobin structure and function."
+        },
+        {
+          "youtubeId": "LKvQLasB6jw",
+          "title": "T-State and R-State of Hemoglobin",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains the structural transition behind cooperativity."
+        },
+        {
+          "youtubeId": "vwdT15oc3IE",
+          "title": "The Bohr Effect and Hemoglobin",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Shows how pH and CO2 shift oxygen affinity and why."
+        },
+        {
+          "youtubeId": "6JOb0De8dO8",
+          "title": "2,3-bisphosphoglycerate (2,3-BPG) & its effects on hemoglobin (inc. fetal Hb & altitude) - overview",
+          "channel": "the bumbling biochemist",
+          "level": "advanced",
+          "whyWatch": "Details how 2,3-BPG alters affinity and connects it to fetal haemoglobin and life at altitude."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/228726a0",
+          "title": "Stereochemistry of Cooperative Effects in Haemoglobin: Haem-Haem Interaction and the Problem of Allostery",
+          "authors": "Perutz MF",
+          "year": 1970,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Perutz used his crystal structures of oxy- and deoxyhaemoglobin to propose how moving one subunit tugs on the others. It remains the classic example of explaining a physiological behaviour in atomic terms.",
+          "readingQuestions": [
+            "Which interactions are broken or formed in the T-to-R transition?",
+            "How does the movement of iron into the haem plane lead to a change at the subunit interface?"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "title": "PDB-101: Molecule of the Month (Hemoglobin and Myoglobin)",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-by-title",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up the haemoglobin and myoglobin entries for short illustrated stories and links to structures."
+        },
+        {
+          "title": "Proteopedia",
+          "provider": "Proteopedia",
+          "type": "interactive",
+          "url": "https://proteopedia.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search for haemoglobin to explore the T and R forms interactively in 3D."
+        },
+        {
+          "title": "UCSF ChimeraX",
+          "provider": "UCSF Resource for Biocomputing, Visualization, and Informatics",
+          "type": "tool",
+          "url": "https://www.cgl.ucsf.edu/chimerax/",
+          "free": true,
+          "level": "advanced",
+          "note": "Download deoxy and oxy haemoglobin structures from the PDB and superimpose them to see the change yourself."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which curve shape describes oxygen binding to myoglobin?",
+          "options": [
+            "Hyperbolic",
+            "Linear",
+            "Bell-shaped",
+            "Sigmoidal"
+          ],
+          "answer": 0,
+          "explanation": "Myoglobin is a monomer with one independent binding site, so occupancy follows a hyperbola; haemoglobin's cooperativity makes its curve sigmoidal."
+        },
+        {
+          "question": "In metabolically active tissue the pH falls and CO2 rises. How does this affect haemoglobin?",
+          "options": [
+            "Has no effect",
+            "Destroys the haem group",
+            "Increases oxygen affinity",
+            "Decreases oxygen affinity, promoting oxygen release"
+          ],
+          "answer": 3,
+          "explanation": "This is the Bohr effect: protons and CO2 stabilise the T state, so haemoglobin releases more oxygen where it is most needed."
+        },
+        {
+          "question": "What is the molecular basis of sickle-cell haemoglobin (HbS)?",
+          "options": [
+            "Loss of the haem group",
+            "A Glu to Val substitution at position 6 of the beta chain creating a hydrophobic patch that promotes polymerisation of deoxy-HbS",
+            "A deletion of the alpha chain",
+            "Overproduction of 2,3-BPG"
+          ],
+          "answer": 1,
+          "explanation": "The single amino-acid change exposes a hydrophobic contact that fits a pocket on another deoxy-HbS molecule, leading to fibre formation."
+        },
+        {
+          "question": "Fetal haemoglobin has higher oxygen affinity than adult haemoglobin mainly because",
+          "options": [
+            "it has more haem groups",
+            "it binds 2,3-BPG less strongly",
+            "it lacks quaternary structure",
+            "it binds CO preferentially"
+          ],
+          "answer": 1,
+          "explanation": "HbF (alpha2 gamma2) has reduced interaction with 2,3-BPG, which raises its oxygen affinity and enables oxygen transfer from maternal to fetal blood."
+        }
+      ]
+    },
+    {
+      "id": "domains-fibrous-antibodies",
+      "title": "Built for the job: domains, fibrous proteins and antibodies",
+      "hours": 5,
+      "hook": "A rope, a lock and a key are built from the same twenty amino acids. Collagen's triple helix gives strength to skin and bone, while the immunoglobulin fold of an antibody builds a flexible, endlessly variable grasp. Looking at them side by side shows how evolution reuses a few structural themes.",
+      "learningObjectives": [
+        "Describe the structure of collagen and explain the importance of glycine, proline and hydroxyproline",
+        "Compare fibrous proteins (collagen, keratin, silk) with globular proteins in structure and properties",
+        "Describe the immunoglobulin fold and the domain organisation of an IgG antibody",
+        "Explain how the hypervariable loops (CDRs) give antibodies their specificity",
+        "Explain how domains and motifs are shared among proteins and how structure-based classification (CATH, SCOP) works",
+        "Explain how post-translational modifications and metal or cofactor binding diversify protein function"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Fibrous protein",
+          "definition": "A protein with an elongated structure built from repeating elements and often serving a structural role, such as collagen, keratin and silk fibroin."
+        },
+        {
+          "term": "Collagen triple helix",
+          "definition": "Three left-handed polyproline II-type chains wound into a right-handed superhelix, with Gly at every third position facing the crowded centre (Gly-X-Y repeat)."
+        },
+        {
+          "term": "Hydroxyproline",
+          "definition": "Proline hydroxylated after synthesis by a vitamin C dependent enzyme; it stabilises the triple helix, and its lack causes scurvy."
+        },
+        {
+          "term": "Keratin",
+          "definition": "An alpha-helical coiled-coil fibrous protein cross-linked with disulphide bonds, found in hair and nails."
+        },
+        {
+          "term": "Immunoglobulin fold",
+          "definition": "A beta-sandwich of two sheets (about 110 residues) usually stabilised by a conserved disulphide bond; present in antibodies and many other recognition proteins."
+        },
+        {
+          "term": "IgG architecture",
+          "definition": "Two heavy and two light chains joined by disulphide bonds into a Y-shaped molecule with two antigen-binding Fab arms and an Fc stem."
+        },
+        {
+          "term": "Complementarity-determining regions (CDRs)",
+          "definition": "Hypervariable loops at the tips of antibody variable domains that form the antigen-binding site."
+        },
+        {
+          "term": "Motif",
+          "definition": "A small, recurring arrangement of secondary-structure elements, such as the helix-turn-helix or the zinc finger, often tied to a function."
+        },
+        {
+          "term": "Domain families",
+          "definition": "Domains with common ancestry recognisable by sequence or structure; resources such as CATH, SCOP and InterPro classify them."
+        },
+        {
+          "term": "Prosthetic group / cofactor",
+          "definition": "A non-protein component (haem, metal, flavin and others) tightly bound to a protein and required for its function."
+        }
+      ],
+      "deeper": {
+        "beginner": "A protein is not always a crumpled ball. Collagen is a rope: three chains twisted together, with the tiniest amino acid, glycine, tucked in the centre where there is no room for anything bigger. Antibodies are a pair of grippers, each built from bead-like domains with a flexible hinge, and the tips of the grippers are variable loops that can be reshaped to recognise almost any target. The rope and gripper analogies break down because both are made of the same polymer, and each grips and bends in ways dictated by the same underlying chemistry.",
+        "intermediate": "In collagen the Gly-X-Y repeat is essential because only glycine fits in the tightly packed centre of the triple helix; replacing it with a larger residue causes disease such as osteogenesis imperfecta. Hydroxylation of proline needs ascorbic acid, and without it collagen is weak, producing the symptoms of scurvy. Keratin coils helices into ropes cross-linked by disulphide bonds, which is why hair can be set by chemically breaking and reforming those bonds. In antibodies each domain has the immunoglobulin fold, and the variable domains at the tip of each arm carry the CDR loops; the constant region (Fc) determines effector function. Domains are like building blocks that evolution reshuffles, so many proteins are mosaics.",
+        "advanced": "Collagen's polyproline II helices have no intrachain hydrogen bonds; stability comes from interchain hydrogen bonds between Gly N-H and X-position C=O, plus stereoelectronic effects of hydroxyproline in the Y position. Collagen folds from the C-terminus with the help of propeptides, and each triple helix is later cross-linked by lysyl oxidase chemistry. The immunoglobulin fold appears in hundreds of protein families, including T-cell receptors, cell-adhesion molecules and muscle proteins such as titin. The enormous repertoire of antibodies is generated by V(D)J recombination and somatic hypermutation; recombinant antibodies and nanobodies exploit the stable immunoglobulin scaffold. Classification schemes such as CATH (Class, Architecture, Topology, Homologous superfamily) group domains hierarchically; most structure space is populated by a limited number of folds, which suggests that evolution reuses structures. Cofactors and metal ions expand chemical capability: zinc stabilises structure in zinc fingers, haem carries oxygen, and iron-sulphur clusters transfer electrons."
+      },
+      "commonMistakes": [
+        "Assuming all proteins are globular; fibrous proteins have very different shapes and properties.",
+        "Forgetting that hydroxylation of collagen proline happens after translation and requires vitamin C.",
+        "Calling an antibody a single polypeptide; IgG is a heterotetramer of two heavy and two light chains.",
+        "Equating similar fold with similar function; the same fold can support very different functions, and similar function can arise from different folds."
+      ],
+      "videos": [
+        {
+          "youtubeId": "U039xiuW44s",
+          "title": "Structure and types of collagen",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains the Gly-X-Y repeat, hydroxylation and the main collagen types."
+        },
+        {
+          "youtubeId": "Prd5ixp3_Vc",
+          "title": "Antibody Structure: The Immunoglobulin Fold and Antibody-Antigen Interactions",
+          "channel": "Molecular Memory",
+          "level": "intermediate",
+          "whyWatch": "Shows the immunoglobulin fold and how antibodies recognise antigens."
+        },
+        {
+          "youtubeId": "zg61a3BoR8Y",
+          "title": "Immunology | Antibody Structure & Function",
+          "channel": "Ninja Nerd",
+          "level": "intermediate",
+          "whyWatch": "A detailed lecture on antibody domains, chains and what each region does."
+        },
+        {
+          "youtubeId": "6ROBp57G2ZI",
+          "title": "12. Introduction to Protein Structure; Structure Comparison and Classification",
+          "channel": "MIT OpenCourseWare",
+          "level": "advanced",
+          "whyWatch": "A full lecture on how protein structures are compared and classified into families."
+        }
+      ],
+      "papers": [],
+      "resources": [
+        {
+          "title": "CATH protein structure classification",
+          "provider": "UCL / CATH-Gene3D",
+          "type": "database",
+          "url": "https://www.cathdb.info/",
+          "free": true,
+          "level": "advanced",
+          "note": "Browse the hierarchy of protein domain classification to see how different folds are grouped."
+        },
+        {
+          "title": "InterPro",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/interpro/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Submit a sequence to see which domains and families it contains."
+        },
+        {
+          "title": "UniProt",
+          "provider": "UniProt Consortium",
+          "type": "database",
+          "url": "https://www.uniprot.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "The central protein knowledge base; use it to see domains, modifications and function for a protein of interest."
+        },
+        {
+          "title": "PDB-101: Molecule of the Month",
+          "provider": "RCSB PDB-101",
+          "type": "tutorial",
+          "url": "https://pdb101.rcsb.org/motm/motm-by-title",
+          "free": true,
+          "level": "beginner",
+          "note": "Illustrated stories include collagen, antibodies and other structural proteins."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Why must glycine occupy every third position in the collagen triple helix?",
+          "options": [
+            "Only the small glycine side chain fits in the crowded centre of the triple helix",
+            "Glycine forms disulphide bonds",
+            "Glycine is hydroxylated",
+            "Glycine is the only amino acid that is charged"
+          ],
+          "answer": 0,
+          "explanation": "The three chains pack so tightly at the axis that any larger side chain would clash, so the Gly-X-Y repeat is required."
+        },
+        {
+          "question": "Which vitamin is required for hydroxylation of proline in collagen?",
+          "options": [
+            "Vitamin A",
+            "Vitamin B12",
+            "Vitamin C",
+            "Vitamin K"
+          ],
+          "answer": 2,
+          "explanation": "Prolyl hydroxylase needs ascorbic acid (vitamin C) to keep its iron in the reduced state; lack of it causes scurvy."
+        },
+        {
+          "question": "Which parts of an antibody determine antigen specificity?",
+          "options": [
+            "The glycosylation on the constant domains",
+            "The Fc region",
+            "The complementarity-determining regions in the variable domains",
+            "The hinge disulphides"
+          ],
+          "answer": 2,
+          "explanation": "The hypervariable CDR loops at the tips of the variable domains of heavy and light chains form the antigen-binding site."
+        },
+        {
+          "question": "What best describes the immunoglobulin fold?",
+          "options": [
+            "A beta-sandwich of two sheets stabilised by a conserved disulphide bond",
+            "A single long alpha helix",
+            "A triple helix of three polyproline chains",
+            "A cluster of zinc-binding loops"
+          ],
+          "answer": 0,
+          "explanation": "It is a roughly 110-residue beta-sandwich, a very common domain found in antibodies and many other recognition proteins."
+        }
+      ]
+    },
+    {
+      "id": "misfolding-prediction",
+      "title": "When folding fails, and predicting structure from sequence",
+      "hours": 4,
+      "hook": "Some proteins fold wrongly and then pass that shape on, a process behind prion diseases and thought to contribute to Alzheimer's and Parkinson's. At the same time, computers have recently learned to predict many protein shapes from sequence alone; folding is both a source of disease and a problem that has largely moved from impossible to routine.",
+      "learningObjectives": [
+        "Describe the main types of protein misfolding and aggregation, including amyloid fibrils",
+        "Explain how prions propagate and why PrPSc differs structurally from PrPC",
+        "Describe cellular quality control: chaperones, the ubiquitin-proteasome system and autophagy",
+        "Explain the principle of deep-learning structure prediction (AlphaFold) and its strengths and limits",
+        "Use the AlphaFold Database and confidence scores (pLDDT) to evaluate a predicted model",
+        "Discuss the idea of protein design and engineering as the inverse of the folding problem"
+      ],
+      "keyConcepts": [
+        {
+          "term": "Misfolding",
+          "definition": "Adoption of a non-native conformation that is non-functional and often prone to aggregation."
+        },
+        {
+          "term": "Amyloid fibril",
+          "definition": "An ordered aggregate rich in cross-beta structure, with strands perpendicular to the fibre axis; associated with Alzheimer's disease, type 2 diabetes and others."
+        },
+        {
+          "term": "Prion",
+          "definition": "An infectious protein particle: the misfolded PrPSc form, rich in beta sheet, converts normal alpha-helical PrPC into more PrPSc."
+        },
+        {
+          "term": "Protein quality control",
+          "definition": "Cellular systems that detect misfolded proteins and either refold them (chaperones) or destroy them (ubiquitin-proteasome, autophagy)."
+        },
+        {
+          "term": "Unfolded protein response",
+          "definition": "A signalling response to accumulation of misfolded proteins in the endoplasmic reticulum, increasing chaperone production and slowing translation."
+        },
+        {
+          "term": "Intrinsically disordered protein",
+          "definition": "A protein or region that lacks a stable fold under physiological conditions but is functional, often by binding partners."
+        },
+        {
+          "term": "Homology modelling",
+          "definition": "Predicting a structure by aligning the sequence to a related protein of known structure and building a model on that template."
+        },
+        {
+          "term": "AlphaFold",
+          "definition": "A deep-learning system that predicts three-dimensional structure from sequence, using evolutionary coupling from multiple sequence alignments and a neural network that outputs atomic coordinates."
+        },
+        {
+          "term": "pLDDT",
+          "definition": "AlphaFold's per-residue confidence score; high values (above 90) indicate high confidence and low values (below 50) often indicate disordered regions."
+        },
+        {
+          "term": "Protein design",
+          "definition": "Creating new sequences intended to fold into a desired structure or perform a desired function."
+        }
+      ],
+      "deeper": {
+        "beginner": "Folding is a delicate balance, and sometimes a chain falls into a trap: a shape that is stable but useless, and sticky. These shapes can gather into fibres that clog cells. Prions are the extreme case in which a wrongly folded protein converts its normal neighbours into the wrong shape. On the other hand, a machine-learning model trained on known structures can now often predict the right shape just from the sequence, as long as there is enough evolutionary information. The prediction is a computer model, not an experiment, and cannot yet tell you everything about the real protein in its cell.",
+        "intermediate": "In misfolded proteins hydrophobic regions that should be buried are exposed, so they stick to each other to form oligomers and fibrils. Cells guard against this with chaperones, which help refold, and the ubiquitin-proteasome system, which destroys proteins that cannot be rescued. When these systems are overwhelmed or fail, aggregates accumulate, as in neurodegenerative diseases. Prion diseases are unusual because the misfolded form is infectious. AlphaFold predicts structures with high accuracy for many proteins, and the AlphaFold Database provides predicted models for hundreds of millions of sequences. The pLDDT colouring tells you which parts to trust: low-confidence regions are often flexible or disordered.",
+        "advanced": "Amyloid fibrils share a cross-beta architecture regardless of the sequence, supporting the idea that the amyloid state is a generic polypeptide property that evolution has to avoid in most proteins; Dobson argued that this makes aggregation a central constraint on protein sequences. Aggregation kinetics typically show a lag phase (primary nucleation), exponential growth (secondary nucleation and fibril elongation) and plateau. Prion strains encode distinct conformations that propagate faithfully, a form of protein-based inheritance also seen in yeast. For prediction, AlphaFold2 combined evolutionary information from multiple sequence alignments with a transformer-like architecture (Evoformer) and a structure module; in CASP14 (2020) it achieved median accuracy near experimental. Limitations: it predicts a single static state, is less reliable for orphan proteins with few homologues, does not model the effects of point mutations on stability well, and does not by itself explain the folding pathway. The 2024 Nobel Prize in Chemistry recognised both computational design (Baker) and structure prediction (Hassabis and Jumper)."
+      },
+      "commonMistakes": [
+        "Believing a predicted structure is as reliable as a high-resolution experimental one everywhere; check the confidence scores.",
+        "Saying that prions contain no information; the information is in the conformation of the protein, not in a nucleic acid.",
+        "Assuming that all aggregates are amyloid fibrils; amorphous aggregates and soluble oligomers also occur and may be the most toxic species.",
+        "Thinking AlphaFold has solved the folding problem; it predicts the native structure but does not simulate how or how fast the chain folds."
+      ],
+      "videos": [
+        {
+          "youtubeId": "Chs7ixRstQk",
+          "title": "Prions and Protein Misfolding",
+          "channel": "Andrey K",
+          "level": "intermediate",
+          "whyWatch": "Explains how a misfolded protein can template its own propagation."
+        },
+        {
+          "youtubeId": "R2VW2OXICsg",
+          "title": "2-Minute Neuroscience: Prion Diseases",
+          "channel": "Neuroscientifically Challenged",
+          "level": "beginner",
+          "whyWatch": "A very short overview of prion diseases and why they are special."
+        },
+        {
+          "youtubeId": "7q8Uw3rmXyE",
+          "title": "What Is AlphaFold?",
+          "channel": "NEJM Group",
+          "level": "beginner",
+          "whyWatch": "A five-minute introduction to what AlphaFold does and why it matters for biology and medicine."
+        },
+        {
+          "youtubeId": "P_fHJIYENdI",
+          "title": "AlphaFold - The Most Useful Thing AI Has Ever Done",
+          "channel": "Veritasium",
+          "level": "beginner",
+          "whyWatch": "A popular but careful account of the protein-folding problem and how AlphaFold made progress on it."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1126/science.6801762",
+          "title": "Novel Proteinaceous Infectious Particles Cause Scrapie",
+          "authors": "Prusiner SB",
+          "year": 1982,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "The paper that proposed that the scrapie agent is a protein without nucleic acid, naming the prion. It was controversial at the time and led to a Nobel Prize, and it changed our understanding of infectious agents.",
+          "readingQuestions": [
+            "What evidence suggested that nucleic acid is not needed for infectivity?",
+            "What experiments would you do to test the protein-only hypothesis?"
+          ]
+        },
+        {
+          "doi": "10.1038/nature02261",
+          "title": "Protein folding and misfolding",
+          "authors": "Dobson CM",
+          "year": 2003,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "A review that links folding principles to disease, showing how misfolding and aggregation are an inherent risk of polypeptide chains. It is an accessible starting point for the subject."
+        },
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A, et al.",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The AlphaFold2 paper, reporting accuracy comparable to experimental structures in CASP14. Read it for what the system does and for the honest discussion of where it works less well.",
+          "openAccessUrl": "https://www.nature.com/articles/s41586-021-03819-2"
+        }
+      ],
+      "resources": [
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI and Google DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up your favourite protein, view the predicted structure and read the confidence colours."
+        },
+        {
+          "title": "AlphaFold course",
+          "provider": "EMBL-EBI Training",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A free online course on what AlphaFold does, how to read predictions and how to use them responsibly."
+        },
+        {
+          "title": "SWISS-MODEL",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "tool",
+          "url": "https://swissmodel.expasy.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A homology-modelling server so you can build a model of a protein from a template and compare approaches."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "In prion disease, what is the key difference between PrPC and PrPSc?",
+          "options": [
+            "Different conformation, with PrPSc rich in beta sheet",
+            "Different nucleic acid content",
+            "PrPSc is not a protein",
+            "Different amino-acid sequence"
+          ],
+          "answer": 0,
+          "explanation": "The two forms have the same sequence; PrPSc is a misfolded, beta-sheet-rich isoform that can convert PrPC into more PrPSc."
+        },
+        {
+          "question": "An AlphaFold model has a stretch of residues with pLDDT below 50. What is the best interpretation?",
+          "options": [
+            "It proves the residues form a helix",
+            "It shows the region is a transmembrane domain",
+            "It is a highly accurate region",
+            "The prediction is unreliable there, and the region may be disordered"
+          ],
+          "answer": 3,
+          "explanation": "Low pLDDT scores indicate low confidence, which often corresponds to flexible or intrinsically disordered segments."
+        },
+        {
+          "question": "Which pair of systems helps cells deal with misfolded proteins?",
+          "options": [
+            "Kinases and phosphatases",
+            "Chaperones and the ubiquitin-proteasome system",
+            "Ribosomes and tRNA",
+            "Helicases and ligases"
+          ],
+          "answer": 1,
+          "explanation": "Chaperones try to refold them; if that fails, ubiquitination targets them to the proteasome for degradation."
+        },
+        {
+          "question": "Which is a recognised limitation of AlphaFold-type predictions?",
+          "options": [
+            "They never work for any protein",
+            "They give a single static structure and are poor at predicting the stability effect of point mutations",
+            "They require a crystal structure to run",
+            "They predict only secondary structure"
+          ],
+          "answer": 1,
+          "explanation": "AlphaFold predicts a native-like structure from sequence but does not model dynamics or reliably quantify the energetic effect of a single substitution."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "oOya3cFmAMc",
+      "title": "3. Structures of Amino Acids, Peptides, and Proteins",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A full lecture covering amino acids, peptides and protein structure as an overview of the course."
+    },
+    {
+      "youtubeId": "tEMkDHV2uU8",
+      "title": "R1. Determining, Analyzing, and Understanding Protein Structures",
+      "channel": "MIT OpenCourseWare",
+      "level": "intermediate",
+      "whyWatch": "A recitation that shows how to read and analyse protein structures in practice."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "Biochemistry (Berg, Tymoczko, Stryer), 5th ed.",
+      "provider": "NCBI Bookshelf",
+      "type": "textbook",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/",
+      "free": true,
+      "level": "intermediate",
+      "note": "A classic text with clear chapters on protein composition, structure and haemoglobin; freely readable online."
+    },
+    {
+      "title": "Biology 2e",
+      "provider": "OpenStax",
+      "type": "textbook",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "free": true,
+      "level": "beginner",
+      "note": "A free introductory text for revising amino acids, protein structure and cell context."
+    },
+    {
+      "title": "LibreTexts Biochemistry",
+      "provider": "LibreTexts",
+      "type": "textbook",
+      "url": "https://bio.libretexts.org/Bookshelves/Biochemistry",
+      "free": true,
+      "level": "intermediate",
+      "note": "A free collection of biochemistry textbooks with sections on protein structure and function."
+    }
+  ]
+}

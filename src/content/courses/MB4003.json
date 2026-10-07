@@ -1,0 +1,2017 @@
+{
+  "code": "MB 4003",
+  "title": "Molecular Evolution, Modelling and Computer-Based Drug Design",
+  "level": 4,
+  "semester": 1,
+  "credits": 3,
+  "hours": "30L 30P",
+  "kind": "lecture",
+  "provenance": "official",
+  "tagline": "Trace how sequences evolve, predict how proteins fold and move, and use computers to find molecules that fit them.",
+  "overview": "This course joins three connected fields: molecular evolution (substitution models, alignment, phylogenetics, selection and gene duplication), molecular modelling (homology modelling, AlphaFold and molecular dynamics) and computer-aided drug design (docking, virtual screening, QSAR, pharmacophores, ADMET and machine learning). Each unit includes a hands-on computational component, reflecting the 30 hours of lectures and 30 hours of practical work: BLAST and EMBOSS, Clustal Omega and IQ-TREE or MEGA, SWISS-MODEL and AlphaFold DB, GROMACS, AutoDock Vina, SwissADME and RDKit. The topics follow the standard content of the course title at BSc Honours level.",
+  "whyItMatters": "Computational modelling now guides decisions in drug discovery, vaccine design, enzyme engineering and pathogen surveillance. Knowing how to build and critique a tree, a model or a docking experiment lets you evaluate claims in the literature and run credible in silico projects of your own.",
+  "prerequisites": [
+    "BC 3053",
+    "BC 3025",
+    "MB 3022"
+  ],
+  "careerLinks": [
+    "Computational drug discovery",
+    "Bioinformatics and structural biology",
+    "Pharmaceutical and biotech research",
+    "Evolutionary and pathogen genomics",
+    "Academic research (MPhil/PhD)"
+  ],
+  "studyTips": [
+    "Do every practical twice: once following a tutorial, then again on your own protein or gene to prove you understand it.",
+    "Keep a lab notebook (or a Jupyter notebook) with exact commands, versions and parameters so results are reproducible.",
+    "For every result, ask what would make it wrong: a bad alignment, a wrong protonation state, a leaky test set.",
+    "Learn the basics of the command line and Python early; they pay off in every unit."
+  ],
+  "units": [
+    {
+      "id": "molecular-evolution-foundations",
+      "title": "Foundations of Molecular Evolution",
+      "hours": 5,
+      "hook": "When Zuckerkandl and Pauling compared haemoglobins from different species in the 1960s, they noticed that the number of amino acid differences grew roughly in step with the time since the species split. Proteins seemed to carry a faint ticking clock. Why they tick, and why the ticking is not always steady, is the foundation of everything else in this course.",
+      "learningObjectives": [
+        "Explain how mutation, drift and selection together determine the fate of a new variant.",
+        "State the central claim of the neutral theory and how it differs from a purely selectionist view.",
+        "Explain the molecular clock hypothesis and list reasons it can be violated.",
+        "Describe nucleotide substitution models (JC69, K80, HKY85, GTR) and why we correct for multiple hits.",
+        "Distinguish synonymous from non-synonymous substitutions and say why they evolve at different rates.",
+        "Calculate a simple p-distance and a Jukes-Cantor corrected distance from an alignment."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Substitution",
+          "definition": "A mutation that has spread through a population until it is fixed; the unit of long-term molecular evolution."
+        },
+        {
+          "term": "Genetic drift",
+          "definition": "Random change in allele frequencies from sampling in finite populations; the dominant force for neutral variants."
+        },
+        {
+          "term": "Neutral theory",
+          "definition": "Kimura's proposal that most fixed molecular differences between species are due to random drift of selectively neutral mutations, not positive selection."
+        },
+        {
+          "term": "Nearly neutral theory",
+          "definition": "Ohta's extension: slightly deleterious mutations behave as neutral in small populations but are removed by selection in large ones."
+        },
+        {
+          "term": "Molecular clock",
+          "definition": "The hypothesis that substitutions accumulate at a roughly constant rate for a given gene, so genetic distance can be used to estimate divergence times."
+        },
+        {
+          "term": "Purifying selection",
+          "definition": "Selection that removes deleterious variants and keeps functionally important sites conserved."
+        },
+        {
+          "term": "Multiple hits (saturation)",
+          "definition": "Several substitutions at the same site over time, so observed differences underestimate the true number of changes."
+        },
+        {
+          "term": "Transition vs transversion",
+          "definition": "Transitions swap purine with purine or pyrimidine with pyrimidine (A-G, C-T) and occur more often than transversions."
+        },
+        {
+          "term": "Relaxed clock",
+          "definition": "A model in which substitution rates vary among lineages, estimated statistically while dating a tree."
+        }
+      ],
+      "deeper": {
+        "beginner": "Imagine copying a manuscript by hand over thousands of years. Most copying slips make no difference to the meaning, a few damage it and are removed, and very rarely one improves it. Counting the differences between two copies tells you roughly how long ago they separated, as long as the scribes copied at a steady speed. The analogy breaks because real evolutionary rates change with generation time, population size and selection.",
+        "intermediate": "Under neutral evolution, the rate of substitution equals the neutral mutation rate, independent of population size. This gives the clock its logic, but generation time effects mean that rates per year differ between mice and humans. Synonymous sites generally evolve faster than non-synonymous sites because most amino acid changes are mildly harmful. Observed differences (p-distance) are corrected for unseen multiple hits with models; the Jukes-Cantor correction is d = -(3/4) ln(1 - 4p/3), and more realistic models add unequal base frequencies (HKY85), different transition and transversion rates, and gamma-distributed rate variation among sites.",
+        "advanced": "Calibrating a molecular clock needs independent dates (fossils, geological events), and uncertainty in calibrations propagates into all dated nodes; Bayesian relaxed-clock methods (BEAST, MCMCTree) jointly estimate rates and times. Selection for protein function means that rates vary among sites; amino acid models (JTT, WAG, LG) and site-heterogeneous mixtures (CAT, C60) capture this. Practical (about 3 h): compute p-distance and corrected distance for a set of globin sequences in MEGA and compare them with the number of observed differences to see saturation."
+      },
+      "commonMistakes": [
+        "Believing neutral theory says selection is unimportant; it says most molecular differences are neutral, not that adaptation never happens.",
+        "Using raw p-distance for distantly related sequences; ignoring multiple hits underestimates divergence.",
+        "Assuming one clock rate applies to all genes and lineages."
+      ],
+      "videos": [
+        {
+          "youtubeId": "cQVjL50kK0k",
+          "title": "Neutral Theory of Molecular Evolution",
+          "channel": "Anders Gorm Pedersen",
+          "level": "intermediate",
+          "whyWatch": "A lecturer builds the neutral theory from drift and mutation."
+        },
+        {
+          "youtubeId": "ro2MFmVZypQ",
+          "title": "Models of evolution",
+          "channel": "Anders Gorm Pedersen",
+          "level": "intermediate",
+          "whyWatch": "Explains how substitution models are built, from Jukes-Cantor to GTR."
+        },
+        {
+          "youtubeId": "zIftg3cM4BM",
+          "title": "4. Neutral Evolution: Genetic Drift",
+          "channel": "YaleCourses",
+          "level": "beginner",
+          "whyWatch": "A Yale lecture on drift and neutral variation with good intuition for population size effects."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/217624a0",
+          "title": "Evolutionary Rate at the Molecular Level",
+          "authors": "Kimura M",
+          "year": 1968,
+          "journal": "Nature",
+          "level": "intermediate",
+          "whyItMatters": "The paper that proposed the neutral theory after noticing that substitution rates were too high to be driven by selection alone."
+        },
+        {
+          "doi": "10.1016/b978-1-4832-2734-4.50017-6",
+          "title": "Evolutionary Divergence and Convergence in Proteins",
+          "authors": "Zuckerkandl E, Pauling L",
+          "year": 1965,
+          "journal": "Evolving Genes and Proteins",
+          "level": "intermediate",
+          "whyItMatters": "The origin of the molecular clock idea, and a good example of an early evolutionary argument made from protein sequences."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Rosalind: Learn Bioinformatics by Problem Solving",
+          "provider": "Rosalind",
+          "type": "interactive",
+          "url": "https://rosalind.info/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Practise computing distances and counting substitutions with real problems."
+        },
+        {
+          "title": "MEGA software",
+          "provider": "Kumar, Stecher, Tamura",
+          "type": "tool",
+          "url": "https://www.megasoftware.net/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free GUI software for distances, alignment and trees, ideal for the practical sessions."
+        },
+        {
+          "title": "EMBL-EBI Training",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free online courses on sequence and phylogenetic resources."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "According to the neutral theory, most fixed differences between species are",
+          "options": [
+            "Adaptive",
+            "Selectively neutral and fixed by drift",
+            "Caused only by recombination",
+            "Caused by horizontal gene transfer"
+          ],
+          "answer": 1,
+          "explanation": "Kimura proposed that the majority of fixed molecular changes are neutral and spread by random drift."
+        },
+        {
+          "question": "Why does the p-distance underestimate divergence between distantly related sequences?",
+          "options": [
+            "Because of multiple substitutions at the same site",
+            "Because DNA mutates only once",
+            "Because gaps are counted twice",
+            "Because proteins cannot change"
+          ],
+          "answer": 0,
+          "explanation": "Hidden multiple hits mean the observed fraction of differences is smaller than the true number of events."
+        },
+        {
+          "question": "Synonymous sites typically evolve faster than non-synonymous sites because",
+          "options": [
+            "They are never in genes",
+            "Most amino acid changes are mildly deleterious and removed",
+            "They are not translated",
+            "Their mutation rate is higher"
+          ],
+          "answer": 1,
+          "explanation": "Purifying selection removes many non-synonymous changes while synonymous changes are less constrained."
+        }
+      ]
+    },
+    {
+      "id": "sequence-alignment-and-blast",
+      "title": "Sequence Alignment and Database Searching (Practical)",
+      "hours": 7,
+      "hook": "A single BLAST search can tell you that a protein you just sequenced from a Sri Lankan soil bacterium looks like an enzyme from a hot-spring microbe on another continent. That search is built on a dynamic-programming idea from 1970 and a heuristic that made it fast enough to run against every known sequence.",
+      "learningObjectives": [
+        "Explain the logic of global (Needleman-Wunsch) and local (Smith-Waterman) alignment using dynamic programming.",
+        "Choose and interpret a substitution matrix (PAM, BLOSUM) and gap penalties.",
+        "Distinguish identity, similarity and homology.",
+        "Run BLASTn, BLASTp and tBLASTn and interpret bit score, E-value, query coverage and percent identity.",
+        "Explain how BLAST uses seeds to be fast and what it can miss (remote homologs, PSI-BLAST, profile HMMs).",
+        "Perform a pairwise alignment with EMBOSS Needle/Water and a Biopython script and compare outputs."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Global alignment",
+          "definition": "Aligns two sequences end to end; Needleman-Wunsch finds the optimal score by dynamic programming."
+        },
+        {
+          "term": "Local alignment",
+          "definition": "Finds the best-scoring segments within sequences; Smith-Waterman, the basis of searches for shared domains."
+        },
+        {
+          "term": "Substitution matrix",
+          "definition": "A table of log-odds scores for aligning each pair of residues; BLOSUM62 is the default for protein searches."
+        },
+        {
+          "term": "Gap penalty",
+          "definition": "A cost for opening and extending a gap, usually affine (open plus extend), reflecting that indels are rarer than substitutions."
+        },
+        {
+          "term": "E-value",
+          "definition": "The number of alignments with score at least as good that are expected by chance in a database of that size; smaller means more significant."
+        },
+        {
+          "term": "Bit score",
+          "definition": "A normalised alignment score independent of the scoring matrix, allowing comparison between searches."
+        },
+        {
+          "term": "Homology",
+          "definition": "Shared ancestry; an all-or-none statement. Percent identity is a measure of similarity, not of homology."
+        },
+        {
+          "term": "BLAST seed",
+          "definition": "A short word match (for example 3 residues for proteins) with a threshold score, extended to a full alignment if it passes."
+        },
+        {
+          "term": "PSI-BLAST / profile HMM",
+          "definition": "Iterated search using a position-specific scoring matrix or hidden Markov model to detect remote homologs."
+        }
+      ],
+      "deeper": {
+        "beginner": "To align two sequences you try every way of sliding them against each other and inserting gaps, scoring matches up and mismatches and gaps down, and keep the best. Dynamic programming does this without trying every combination by filling a grid. BLAST makes the process fast by first looking for short exact-ish words and extending only those.",
+        "intermediate": "Substitution matrices reflect observed amino acid replacements in conserved blocks: BLOSUM62 is derived from blocks clustered at 62 percent identity and suits moderately divergent sequences. For a protein in the twilight zone (roughly 20-35 percent identity) a high identity can still be insignificant if the alignment is short, so always read E-value and coverage. Hands-on (about 4 h): run BLASTp for a protein of interest against Swiss-Prot and nr, record top hits, change the matrix and the word size, align two homologs with EMBOSS Needle (global) and Water (local), and compare.",
+        "advanced": "E-values depend on the database size and statistical parameters (Karlin-Altschul), so the same alignment has a different E-value in a bigger database. Low-complexity regions are masked to avoid spurious hits. Remote homology detection improves with profile methods (PSI-BLAST, HMMER, HHblits) that use many sequences to capture position-specific conservation, and with structure-based searches such as Foldseek. In Biopython, PairwiseAligner reproduces the dynamic-programming matrices so students can verify hand calculations."
+      },
+      "commonMistakes": [
+        "Equating percent identity with homology: sequences are either homologous or not, while identity is graded.",
+        "Reading E-values without checking query coverage; a tiny, perfect match can have a low E-value but cover a small fraction of the query.",
+        "Using BLASTn for distant relationships; protein-level searches are far more sensitive for divergent genes."
+      ],
+      "videos": [
+        {
+          "youtubeId": "k9SnaTMHEvI",
+          "title": "Needleman-Wunsch Sequence Alignment",
+          "channel": "Dr. T's Biology Class",
+          "level": "beginner",
+          "whyWatch": "A short worked example of filling the dynamic-programming grid."
+        },
+        {
+          "youtubeId": "ipp-pNRIp4g",
+          "title": "Global Sequence Alignment & Needleman-Wunsch || Algorithm and Example",
+          "channel": "Bioinformatica",
+          "level": "intermediate",
+          "whyWatch": "Walks through scoring, the traceback and the meaning of gaps."
+        },
+        {
+          "youtubeId": "WRKQGwh_Mw0",
+          "title": "How to Use BLAST for Finding and Aligning DNA or Protein Sequences",
+          "channel": "Science Buddies",
+          "level": "beginner",
+          "whyWatch": "A screen-recorded tutorial of running BLAST at NCBI and reading the output."
+        },
+        {
+          "youtubeId": "RzC-V67z5LA",
+          "title": "Analyzing Gene Sequence Results with BLAST",
+          "channel": "Catalyst University",
+          "level": "intermediate",
+          "whyWatch": "Explains how to interpret scores, E-values and alignments in a BLAST report."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/0022-2836(70)90057-4",
+          "title": "A general method applicable to the search for similarities in the amino acid sequence of two proteins",
+          "authors": "Needleman SB, Wunsch CD",
+          "year": 1970,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "The original dynamic-programming alignment algorithm, still taught because it is the clearest example of the idea."
+        },
+        {
+          "doi": "10.1016/S0022-2836(05)80360-2",
+          "title": "Basic local alignment search tool",
+          "authors": "Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ",
+          "year": 1990,
+          "journal": "Journal of Molecular Biology",
+          "level": "intermediate",
+          "whyItMatters": "The BLAST paper, one of the most cited papers in biology, explaining the word-seed heuristic."
+        },
+        {
+          "doi": "10.1093/nar/25.17.3389",
+          "title": "Gapped BLAST and PSI-BLAST: a new generation of protein database search programs",
+          "authors": "Altschul SF, Madden TL, Schaffer AA, et al.",
+          "year": 1997,
+          "journal": "Nucleic Acids Research",
+          "level": "advanced",
+          "whyItMatters": "Introduces gapped alignment in BLAST and PSI-BLAST, which finds distant relatives by iterating with a profile."
+        }
+      ],
+      "resources": [
+        {
+          "title": "NCBI BLAST",
+          "provider": "NCBI",
+          "type": "tool",
+          "url": "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+          "free": true,
+          "level": "beginner",
+          "note": "Run BLASTn, BLASTp and others; try changing parameters and see how the results change."
+        },
+        {
+          "title": "Rosalind: Learn Bioinformatics by Problem Solving",
+          "provider": "Rosalind",
+          "type": "interactive",
+          "url": "https://rosalind.info/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Practise coding global and local alignment from scratch."
+        },
+        {
+          "title": "Biopython Tutorial and Cookbook",
+          "provider": "Biopython",
+          "type": "tutorial",
+          "url": "https://biopython.org/DIST/docs/tutorial/Tutorial.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Includes the chapters on pairwise alignment and running and parsing BLAST."
+        },
+        {
+          "title": "InterPro",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/interpro/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Find domains and families for a BLAST hit to put alignments in a functional context."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which statement about homology is correct?",
+          "options": [
+            "It is measured by percent identity",
+            "Sequences are either homologous or not",
+            "It means the sequences are identical",
+            "It requires 100 percent coverage"
+          ],
+          "answer": 1,
+          "explanation": "Homology means common ancestry, which is inferred from significant similarity; it is not a percentage."
+        },
+        {
+          "question": "A BLAST hit with E-value 1e-50 means",
+          "options": [
+            "There is a 1e-50 chance the sequences are unrelated",
+            "About 1e-50 alignments this good would be expected by chance",
+            "The sequences are 50 percent identical",
+            "The query is 50 residues long"
+          ],
+          "answer": 1,
+          "explanation": "The E-value is the expected number of chance hits with at least that score in a database of this size."
+        },
+        {
+          "question": "Which method is best for detecting distant protein homologs?",
+          "options": [
+            "BLASTn with a short word size",
+            "PSI-BLAST or profile HMM searches",
+            "A global alignment of random sequences",
+            "Counting amino acids"
+          ],
+          "answer": 1,
+          "explanation": "Profiles capture position-specific conservation and are more sensitive for remote relationships."
+        }
+      ],
+      "animation": "sequence-alignment"
+    },
+    {
+      "id": "multiple-alignment-and-phylogenetics",
+      "title": "Multiple Sequence Alignment and Phylogenetic Trees (Practical)",
+      "hours": 7,
+      "hook": "A phylogenetic tree is a hypothesis about who is related to whom, and it is only as good as the alignment and model behind it. In a few hours you can take genes from a dozen species, align them and watch a tree appear, and then learn how to doubt it properly.",
+      "learningObjectives": [
+        "Describe progressive multiple sequence alignment (Clustal Omega, MUSCLE, MAFFT) and when to trim alignments.",
+        "Read a phylogenetic tree: tips, nodes, branches, clades, root and outgroup.",
+        "Compare distance (UPGMA, neighbour-joining), parsimony, maximum likelihood and Bayesian methods.",
+        "Select a substitution model with ModelFinder or MEGA's model test and justify the choice.",
+        "Assess support using bootstrap and posterior probability and say what they do and do not mean.",
+        "Build, annotate and interpret a tree from raw sequences using Clustal Omega, IQ-TREE or MEGA and iTOL."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Multiple sequence alignment",
+          "definition": "An alignment of three or more homologous sequences that places homologous residues in the same column."
+        },
+        {
+          "term": "Clade",
+          "definition": "A group consisting of an ancestor and all its descendants (monophyletic group)."
+        },
+        {
+          "term": "Outgroup",
+          "definition": "A lineage known to have diverged earlier than the group of interest, used to root the tree."
+        },
+        {
+          "term": "Neighbour-joining",
+          "definition": "A fast distance method that builds a tree by repeatedly joining the pair of nodes that minimises total tree length; produces an unrooted tree."
+        },
+        {
+          "term": "Maximum parsimony",
+          "definition": "Chooses the tree needing the fewest evolutionary changes; can be misled by long branches."
+        },
+        {
+          "term": "Maximum likelihood",
+          "definition": "Chooses the tree and parameters that make the observed alignment most probable under an explicit substitution model."
+        },
+        {
+          "term": "Bayesian inference",
+          "definition": "Estimates the posterior distribution of trees via MCMC, giving posterior probabilities for clades."
+        },
+        {
+          "term": "Bootstrap support",
+          "definition": "The percentage of resampled alignments in which a clade appears; a measure of how consistently the data support it."
+        },
+        {
+          "term": "Long-branch attraction",
+          "definition": "An artefact in which fast-evolving lineages group together because of chance similarities, not shared ancestry."
+        }
+      ],
+      "deeper": {
+        "beginner": "A tree is built by aligning sequences column by column and asking what pattern of ancestry best explains the differences. Branch lengths tell you how much change has happened; where the branches join tells you the order of splitting. Rotating branches at a node does not change the tree, just as turning a mobile does not change which pieces are attached to which.",
+        "intermediate": "Alignment errors propagate directly into the tree, so inspect and, where necessary, trim poorly aligned regions (trimAl, Gblocks). Maximum likelihood with a good model (selected by AIC or BIC) is the usual default; IQ-TREE adds ultrafast bootstrap, where support of 95 percent or more is considered fairly reliable. Hands-on (about 4 h): fetch orthologous sequences from UniProt, align with Clustal Omega, run model selection and ML in MEGA or IQ-TREE, and visualise and annotate in iTOL.",
+        "advanced": "Support values are not probabilities of truth: bootstrap measures the stability of a result under resampling, and it can be high for a wrong tree if the model is badly misspecified. Gene trees differ from species trees because of incomplete lineage sorting, duplication, loss and horizontal transfer, and coalescent-based methods (ASTRAL) or concatenation with partitioned models are used for species-level trees. Dating a tree requires a clock model and calibrations, as in BEAST."
+      },
+      "commonMistakes": [
+        "Reading species relationships from the order of tips; only the branching pattern matters.",
+        "Treating a gene tree as the species tree.",
+        "Using an alignment of non-homologous or poorly aligned regions and trusting the tree anyway."
+      ],
+      "videos": [
+        {
+          "youtubeId": "AZkHWdl2oAw",
+          "title": "Trees: Terminology and Representation",
+          "channel": "Anders Gorm Pedersen",
+          "level": "beginner",
+          "whyWatch": "A precise glossary of tree terms with clear diagrams."
+        },
+        {
+          "youtubeId": "gXb_WuLCD8g",
+          "title": "Maximum Parsimony",
+          "channel": "Anders Gorm Pedersen",
+          "level": "intermediate",
+          "whyWatch": "Shows how parsimony counts changes and where it fails."
+        },
+        {
+          "youtubeId": "xDKUIegYpWM",
+          "title": "Maximum likelihood",
+          "channel": "Anders Gorm Pedersen",
+          "level": "intermediate",
+          "whyWatch": "Builds intuition for how likelihood evaluates a tree under a substitution model."
+        },
+        {
+          "youtubeId": "4WSrcwLm2B0",
+          "title": "Phylogenetics Tutorial - Maximum Likelihood Analysis with MEGA",
+          "channel": "MillyQ Tutorials",
+          "level": "beginner",
+          "whyWatch": "A hands-on screen recording of building an ML tree in MEGA with bootstrapping."
+        },
+        {
+          "youtubeId": "mgU5aioDGqk",
+          "title": "Neighbour Joining Method: Phylogenetic Tree(Step-by-Step Guide)",
+          "channel": "BIOPATHWAY",
+          "level": "beginner",
+          "whyWatch": "Works a small neighbour-joining example by hand."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/oxfordjournals.molbev.a040454",
+          "title": "The neighbor-joining method: a new method for reconstructing phylogenetic trees",
+          "authors": "Saitou N, Nei M",
+          "year": 1987,
+          "journal": "Molecular Biology and Evolution",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced neighbour-joining, still the basis of quick tree building."
+        },
+        {
+          "doi": "10.1093/nar/22.22.4673",
+          "title": "CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice",
+          "authors": "Thompson JD, Higgins DG, Gibson TJ",
+          "year": 1994,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "The paper behind the classic progressive alignment approach and its design choices."
+        },
+        {
+          "doi": "10.1093/molbev/msaa015",
+          "title": "IQ-TREE 2: New Models and Efficient Methods for Phylogenetic Inference in the Genomic Era",
+          "authors": "Minh BQ, Schmidt HA, Chernomor O, et al.",
+          "year": 2020,
+          "journal": "Molecular Biology and Evolution",
+          "level": "advanced",
+          "whyItMatters": "Describes the widely used ML software, its model selection and ultrafast bootstrap."
+        },
+        {
+          "doi": "10.1093/molbev/msab120",
+          "title": "MEGA11: Molecular Evolutionary Genetics Analysis Version 11",
+          "authors": "Tamura K, Stecher G, Kumar S",
+          "year": 2021,
+          "journal": "Molecular Biology and Evolution",
+          "level": "beginner",
+          "whyItMatters": "The latest update of the GUI package used in the practicals."
+        }
+      ],
+      "resources": [
+        {
+          "title": "Clustal Omega",
+          "provider": "EMBL-EBI",
+          "type": "tool",
+          "url": "https://www.ebi.ac.uk/jdispatcher/msa/clustalo",
+          "free": true,
+          "level": "beginner",
+          "note": "Web-based multiple alignment, with a Jalview option to inspect the result."
+        },
+        {
+          "title": "IQ-TREE",
+          "provider": "IQ-TREE team",
+          "type": "tool",
+          "url": "http://www.iqtree.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Download the software and tutorials for ML trees with ModelFinder and ultrafast bootstrap."
+        },
+        {
+          "title": "iTOL: Interactive Tree of Life",
+          "provider": "EMBL",
+          "type": "tool",
+          "url": "https://itol.embl.de/",
+          "free": true,
+          "level": "beginner",
+          "note": "Upload a Newick file to annotate, colour and export publication-quality trees."
+        },
+        {
+          "title": "MEGA software",
+          "provider": "Kumar, Stecher, Tamura",
+          "type": "tool",
+          "url": "https://www.megasoftware.net/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free GUI package for alignment, model selection and trees."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A clade is",
+          "options": [
+            "Any two sister taxa",
+            "An ancestor and all of its descendants",
+            "A group of fast-evolving lineages",
+            "A bootstrap value over 70"
+          ],
+          "answer": 1,
+          "explanation": "A clade (monophyletic group) includes an ancestor and every descendant."
+        },
+        {
+          "question": "Which method requires an explicit substitution model?",
+          "options": [
+            "Maximum likelihood",
+            "Neighbour-joining without correction",
+            "UPGMA of raw counts",
+            "Visual inspection"
+          ],
+          "answer": 0,
+          "explanation": "Likelihood methods compute the probability of the data under a model; distance methods may also use models for corrections."
+        },
+        {
+          "question": "A bootstrap value of 95 on a branch means",
+          "options": [
+            "There is a 95 percent chance the clade is true",
+            "The clade appears in 95 percent of resampled data sets",
+            "The branch is 95 percent identical",
+            "The clade is 95 million years old"
+          ],
+          "answer": 1,
+          "explanation": "Bootstrap measures consistency under resampling, not the probability that the clade is true."
+        }
+      ]
+    },
+    {
+      "id": "selection-duplication-hgt",
+      "title": "Detecting Selection, Gene Duplication and Horizontal Transfer (Practical)",
+      "hours": 6,
+      "hook": "Some amino acid positions in a viral surface protein change so quickly that they leave a statistical fingerprint of an arms race. Others, like the active site of a metabolic enzyme, barely change over billions of years. Reading those fingerprints, and tracing how genes duplicate and jump between species, shows how new functions arise.",
+      "learningObjectives": [
+        "Calculate and interpret dN, dS and the ratio omega (dN/dS).",
+        "Explain codon-based likelihood tests for positive selection (site and branch models).",
+        "Describe the fates of duplicated genes: pseudogenisation, neofunctionalisation and subfunctionalisation.",
+        "Distinguish orthologs, paralogs, xenologs and in-paralogs and their implications for functional annotation.",
+        "Describe horizontal gene transfer mechanisms and evidence (atypical composition, phylogenetic incongruence).",
+        "Run a codeml or MEGA-based selection test on a small data set and report it with appropriate caution."
+      ],
+      "keyConcepts": [
+        {
+          "term": "dN and dS",
+          "definition": "The number of non-synonymous (or synonymous) substitutions per non-synonymous (or synonymous) site."
+        },
+        {
+          "term": "omega (dN/dS)",
+          "definition": "Values below 1 indicate purifying selection, near 1 neutral evolution, and above 1 positive (diversifying) selection acting on amino acid changes."
+        },
+        {
+          "term": "Site model",
+          "definition": "A likelihood model allowing omega to vary among codons; M2a and M8 allow a class with omega over 1."
+        },
+        {
+          "term": "Likelihood ratio test",
+          "definition": "Comparing nested models by twice the difference in log-likelihood against a chi-squared distribution."
+        },
+        {
+          "term": "Neofunctionalisation",
+          "definition": "One duplicate acquires a new function while the other retains the old."
+        },
+        {
+          "term": "Subfunctionalisation",
+          "definition": "The ancestral functions are partitioned between duplicates by complementary degenerative mutations."
+        },
+        {
+          "term": "Whole-genome duplication",
+          "definition": "A doubling of the entire genome, an important source of raw genetic material in vertebrate and plant evolution."
+        },
+        {
+          "term": "Horizontal gene transfer",
+          "definition": "Transfer of genetic material between organisms by means other than reproduction, by transformation, transduction or conjugation."
+        },
+        {
+          "term": "Gene tree / species tree reconciliation",
+          "definition": "Fitting a gene tree inside a species tree to infer duplication, loss and transfer events."
+        }
+      ],
+      "deeper": {
+        "beginner": "Selection leaves a signature in the ratio of changes that alter the protein to those that do not. If non-synonymous changes are as common as silent ones, nothing is holding the protein back; if they are rarer, selection is protecting it; and if they are more common at some sites, something is pushing the protein to change. Duplication and horizontal transfer supply the raw material that selection can work on.",
+        "intermediate": "Averaging omega over a whole gene hides signals because most sites are under purifying selection even in genes with a few adaptive sites. Site models in PAML codeml compare M1a (nearly neutral) with M2a (positive selection) and M7 (beta) with M8 (beta and omega) using likelihood ratio tests; Bayes empirical Bayes then identifies the candidate sites. Hands-on (about 3.5 h): align coding sequences as codons, build a tree, and run M1a vs M2a on a gene such as an immune or viral surface protein.",
+        "advanced": "Tests of selection can give false positives when there is recombination, alignment errors or saturation of synonymous sites, so results should be checked with several methods (HyPhy: FEL, MEME, aBSREL). Gene duplication leads to dosage and redundancy effects; Lynch and Conery found that duplicate genes are lost or silenced at a high rate and that retained pairs often diverge in function. In bacteria, HGT shapes the pangenome and spreads antibiotic resistance genes through plasmids and integrative elements, which can be detected by unusual GC content, codon usage or phylogenetic conflict."
+      },
+      "commonMistakes": [
+        "Concluding positive selection from an average omega over an entire gene.",
+        "Applying dN/dS to closely related populations (within species), where polymorphism and deleterious variants distort the ratio.",
+        "Annotating a gene by its best BLAST hit without checking whether it is an ortholog or a paralog."
+      ],
+      "videos": [
+        {
+          "youtubeId": "oQdLVKRHJf0",
+          "title": "Measuring Selection - Purifying vs. Diversifying: Harmit Malik (FHCRC/HHMI)",
+          "channel": "iBiology Techniques",
+          "level": "intermediate",
+          "whyWatch": "A working evolutionary geneticist explains how dN/dS reveals purifying versus diversifying selection."
+        },
+        {
+          "youtubeId": "YYoo1vUO4ME",
+          "title": "Introduction to computer exercise: detection of selection",
+          "channel": "Anders Gorm Pedersen",
+          "level": "intermediate",
+          "whyWatch": "Sets up the computational exercise for detecting selection with codon models."
+        },
+        {
+          "youtubeId": "TiKbMw_bKEk",
+          "title": "Homolog vs paralog vs ortholog vs analog in 4 minutes | Genetics for beginners",
+          "channel": "Biology Lectures",
+          "level": "beginner",
+          "whyWatch": "A short, clear contrast of the four relationships between genes."
+        },
+        {
+          "youtubeId": "f-ABaPap4x4",
+          "title": "Gene duplication: The formation of new genes... genes... genes",
+          "channel": "The Genetic Basis of Stuff and Things",
+          "level": "beginner",
+          "whyWatch": "Explains how duplicated genes can acquire new functions."
+        },
+        {
+          "youtubeId": "BiRc2FGh71o",
+          "title": "What is Horizontal Gene Transfer?",
+          "channel": "Stated Clearly",
+          "level": "beginner",
+          "whyWatch": "A friendly animated overview of how genes cross species boundaries."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1093/oxfordjournals.molbev.a040410",
+          "title": "Simple methods for estimating the numbers of synonymous and nonsynonymous nucleotide substitutions",
+          "authors": "Nei M, Gojobori T",
+          "year": 1986,
+          "journal": "Molecular Biology and Evolution",
+          "level": "intermediate",
+          "whyItMatters": "The classic counting method for dN and dS, ideal for understanding what the ratio actually measures."
+        },
+        {
+          "doi": "10.1093/molbev/msm088",
+          "title": "PAML 4: Phylogenetic Analysis by Maximum Likelihood",
+          "authors": "Yang Z",
+          "year": 2007,
+          "journal": "Molecular Biology and Evolution",
+          "level": "advanced",
+          "whyItMatters": "The paper behind codeml, which is used for codon-based selection tests."
+        },
+        {
+          "doi": "10.1126/science.290.5494.1151",
+          "title": "The Evolutionary Fate and Consequences of Duplicate Genes",
+          "authors": "Lynch M, Conery JS",
+          "year": 2000,
+          "journal": "Science",
+          "level": "intermediate",
+          "whyItMatters": "Quantifies how often duplicate genes are lost or retained and links gene duplication to evolutionary innovation."
+        }
+      ],
+      "resources": [
+        {
+          "title": "MEGA software",
+          "provider": "Kumar, Stecher, Tamura",
+          "type": "tool",
+          "url": "https://www.megasoftware.net/",
+          "free": true,
+          "level": "beginner",
+          "note": "Includes codon-based Z-tests of selection suitable for first practicals."
+        },
+        {
+          "title": "Ensembl genome browser",
+          "provider": "EMBL-EBI / Wellcome Sanger",
+          "type": "database",
+          "url": "https://www.ensembl.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "View orthologs, paralogs and gene trees for any gene via the Compara pages."
+        },
+        {
+          "title": "InterPro",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/interpro/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Check which domains are conserved between duplicates."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "An omega (dN/dS) value of 0.1 across a gene suggests",
+          "options": [
+            "Positive selection",
+            "Strong purifying selection",
+            "Neutral evolution",
+            "No mutation"
+          ],
+          "answer": 1,
+          "explanation": "Omega well below 1 means non-synonymous changes are being removed by selection."
+        },
+        {
+          "question": "After a gene duplication, subfunctionalisation means",
+          "options": [
+            "One copy is lost",
+            "The original functions are divided between the copies",
+            "A new function evolves in one copy",
+            "The copies fuse"
+          ],
+          "answer": 1,
+          "explanation": "Complementary loss of subfunctions makes both copies necessary to provide the ancestral roles."
+        },
+        {
+          "question": "Which observation can suggest horizontal gene transfer in a bacterial genome?",
+          "options": [
+            "A gene with GC content and codon usage unlike the rest of the genome",
+            "A gene that is highly expressed",
+            "A gene with introns",
+            "A gene near the origin of replication"
+          ],
+          "answer": 0,
+          "explanation": "Foreign genes often keep the composition of their donor; phylogenetic incongruence provides more direct evidence."
+        }
+      ]
+    },
+    {
+      "id": "structure-prediction-homology-modelling",
+      "title": "Protein Structure Prediction and Homology Modelling (Practical)",
+      "hours": 7,
+      "hook": "For fifty years the 'protein folding problem' was a grand challenge: given a sequence, can you predict its three-dimensional structure? In 2020 AlphaFold2 came close enough to being a solution that it changed how structural biologists work. Yet the older idea of building a model from a related known structure is still taught because it explains why prediction works and when to be careful.",
+      "learningObjectives": [
+        "Explain why sequence determines structure and why structure is more conserved than sequence.",
+        "Carry out template-based (homology) modelling: template search, alignment, model building, refinement and validation.",
+        "Interpret AlphaFold outputs, especially pLDDT and predicted aligned error (PAE).",
+        "Validate models using Ramachandran plots, clash scores (MolProbity) and QMEAN or similar scores.",
+        "Compare a homology model with an AlphaFold model and an experimental structure in a viewer.",
+        "State the limitations of predicted structures for drug design (conformational states, ligands, side chains)."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Template",
+          "definition": "An experimentally solved protein structure used as the basis for modelling a related sequence."
+        },
+        {
+          "term": "Homology modelling",
+          "definition": "Building a 3D model of a target protein from its alignment to one or more templates; reliable when sequence identity is above about 30 percent."
+        },
+        {
+          "term": "AlphaFold",
+          "definition": "A deep-learning system that predicts protein structure from sequence and multiple sequence alignment, with per-residue confidence estimates."
+        },
+        {
+          "term": "pLDDT",
+          "definition": "Predicted local distance difference test (0-100); above 90 very high confidence, 70-90 confident, 50-70 low and below 50 often disordered."
+        },
+        {
+          "term": "PAE",
+          "definition": "Predicted aligned error: expected position error in Angstroms of one residue when the structure is aligned on another; reveals confidence in domain arrangement."
+        },
+        {
+          "term": "Ramachandran plot",
+          "definition": "A plot of backbone phi and psi angles showing which combinations are sterically allowed."
+        },
+        {
+          "term": "Model validation",
+          "definition": "Checking stereochemistry, packing, clashes and statistical potential to judge model quality."
+        },
+        {
+          "term": "Protein Data Bank",
+          "definition": "The archive of experimentally determined macromolecular structures (X-ray, NMR, cryo-EM)."
+        },
+        {
+          "term": "Intrinsically disordered region",
+          "definition": "A protein segment lacking a stable fold, which predictors tend to give low confidence."
+        }
+      ],
+      "deeper": {
+        "beginner": "If you know the structure of a protein, you have a very good idea of what its cousin looks like, because structure changes more slowly than sequence. Homology modelling aligns your sequence to the known structure and rebuilds the differences. AlphaFold learned the patterns from hundreds of thousands of known structures and millions of sequences, and can often predict the fold without a close template.",
+        "intermediate": "In SWISS-MODEL the workflow is: paste the sequence, search templates by BLAST and HHblits against the SWISS-MODEL template library, choose by coverage, sequence identity and GMQE, build the model, and check QMEAN. Models from templates with over 50 percent identity usually have backbone errors of about 1-2 Angstroms in conserved regions, while loops and side chains are less accurate. Hands-on (about 4 h): build a homology model of a protein of interest, retrieve the AlphaFold model from the AlphaFold Database, superimpose them in ChimeraX or PyMOL, colour by pLDDT, and run MolProbity.",
+        "advanced": "AlphaFold2 predicts one confident conformation, which may be neither the apo nor the ligand-bound state, and it does not place ligands, cofactors or ions (newer systems extend to complexes and ligands). High pLDDT does not guarantee the correct relative orientation of domains, which PAE addresses. For docking, predicted structures can work well when binding site side chains are accurate but may need refinement, induced fit or molecular dynamics. Alternatives and complements include RoseTTAFold, ESMFold (language-model based and fast), and Foldseek for structure-based searching."
+      },
+      "commonMistakes": [
+        "Treating high-confidence regions as proof of function; confidence is about the fold, not biology.",
+        "Using a model without validating it or checking that the template covers the region of interest.",
+        "Assuming AlphaFold structures show ligand-bound or physiologically specific conformations."
+      ],
+      "videos": [
+        {
+          "youtubeId": "7q8Uw3rmXyE",
+          "title": "What Is AlphaFold? | NEJM",
+          "channel": "NEJM Group",
+          "level": "beginner",
+          "whyWatch": "A five-minute overview of what AlphaFold does and why structure prediction matters for medicine."
+        },
+        {
+          "youtubeId": "gg7WjuFs8F4",
+          "title": "AlphaFold: The making of a scientific breakthrough",
+          "channel": "Google DeepMind",
+          "level": "beginner",
+          "whyWatch": "The DeepMind team and CASP assessors describe the advance and what it enables."
+        },
+        {
+          "youtubeId": "kfMpOnnBjP8",
+          "title": "Homology modelling using SWISS-MODEL web server",
+          "channel": "Shayon Bhattacharya",
+          "level": "intermediate",
+          "whyWatch": "A full walk-through of template choice, model building and quality reports."
+        },
+        {
+          "youtubeId": "x9WAcaQw_Oc",
+          "title": "Homology Modeling Tutorial- PART 1",
+          "channel": "Sanket Bapat",
+          "level": "intermediate",
+          "whyWatch": "Shows the stages of homology modelling in practice."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/s41586-021-03819-2",
+          "title": "Highly accurate protein structure prediction with AlphaFold",
+          "authors": "Jumper J, Evans R, Pritzel A, et al.",
+          "year": 2021,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "The AlphaFold2 paper; focus on the figures showing accuracy and the confidence metrics rather than the network architecture."
+        },
+        {
+          "doi": "10.1093/nar/gky427",
+          "title": "SWISS-MODEL: homology modelling of protein structures and complexes",
+          "authors": "Waterhouse A, Bertoni M, Bienert S, et al.",
+          "year": 2018,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Describes the automated homology-modelling workflow and the scores used to judge models."
+        },
+        {
+          "doi": "10.1093/nar/gkab1061",
+          "title": "AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models",
+          "authors": "Varadi M, Anyango S, Deshpande M, et al.",
+          "year": 2021,
+          "journal": "Nucleic Acids Research",
+          "level": "intermediate",
+          "whyItMatters": "Explains how to use the open database of predicted structures and how to read its confidence scores."
+        },
+        {
+          "doi": "10.1126/science.abj8754",
+          "title": "Accurate prediction of protein structures and interactions using a three-track neural network",
+          "authors": "Baek M, DiMaio F, Anishchenko I, et al.",
+          "year": 2021,
+          "journal": "Science",
+          "level": "advanced",
+          "whyItMatters": "RoseTTAFold, an independent deep-learning predictor developed at the same time as AlphaFold2."
+        }
+      ],
+      "resources": [
+        {
+          "title": "SWISS-MODEL",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "tool",
+          "url": "https://swissmodel.expasy.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Automated homology modelling server with built-in quality estimates."
+        },
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI / DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "beginner",
+          "note": "Search any UniProt entry and download the predicted structure with pLDDT and PAE."
+        },
+        {
+          "title": "EMBL-EBI: AlphaFold online course",
+          "provider": "EMBL-EBI",
+          "type": "course",
+          "url": "https://www.ebi.ac.uk/training/online/courses/alphafold/",
+          "free": true,
+          "level": "beginner",
+          "note": "A free short course on using and interpreting AlphaFold predictions."
+        },
+        {
+          "title": "UCSF ChimeraX",
+          "provider": "UCSF",
+          "type": "tool",
+          "url": "https://www.cgl.ucsf.edu/chimerax/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free molecular viewer with commands for superposition, colouring by confidence and measurement."
+        },
+        {
+          "title": "PDB-101",
+          "provider": "RCSB PDB",
+          "type": "interactive",
+          "url": "https://pdb101.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Beginner-friendly guides to reading and understanding protein structures."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Homology modelling is generally most reliable when the target and template share",
+          "options": [
+            "Less than 10 percent identity",
+            "More than about 30 percent sequence identity over the aligned region",
+            "No sequence similarity",
+            "Only a common name"
+          ],
+          "answer": 1,
+          "explanation": "Above roughly 30 percent identity, alignments are usually correct enough to give a good backbone model."
+        },
+        {
+          "question": "A region with pLDDT below 50 in an AlphaFold model is usually",
+          "options": [
+            "Very high confidence",
+            "Likely disordered or unreliable",
+            "A ligand-binding site",
+            "A transmembrane helix"
+          ],
+          "answer": 1,
+          "explanation": "Very low pLDDT often corresponds to intrinsically disordered or poorly predicted regions."
+        },
+        {
+          "question": "Which is a limitation of a standard AlphaFold2 model for drug design?",
+          "options": [
+            "It gives no 3D coordinates",
+            "It does not model the bound ligand or alternative conformations",
+            "It is always wrong",
+            "It only works for enzymes"
+          ],
+          "answer": 1,
+          "explanation": "AlphaFold2 gives a single predicted conformation without ligands, so the binding site may need refinement."
+        }
+      ]
+    },
+    {
+      "id": "molecular-dynamics",
+      "title": "Molecular Dynamics Simulation (Practical)",
+      "hours": 6,
+      "hook": "A crystal structure is a snapshot. Real proteins breathe, flex and sometimes open a hidden pocket for a fleeting moment. Molecular dynamics is a computational microscope that applies Newton's laws to every atom and shows the movie that the snapshot could only suggest.",
+      "learningObjectives": [
+        "Explain the basic MD algorithm: forces from a force field, integration of equations of motion, time step.",
+        "Describe force-field terms (bonded and non-bonded) and name commonly used force fields.",
+        "Explain periodic boundary conditions, long-range electrostatics (PME), thermostats and barostats.",
+        "Set up and run the GROMACS lysozyme-in-water workflow: topology, box, solvation, ions, minimisation, NVT, NPT and production.",
+        "Analyse a trajectory with RMSD, RMSF, radius of gyration and hydrogen bonds.",
+        "Discuss sampling limits and when enhanced sampling or free-energy methods are needed."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Force field",
+          "definition": "A set of functions and parameters describing the potential energy of a system as a function of atom positions (for example AMBER, CHARMM, OPLS, GROMOS)."
+        },
+        {
+          "term": "Bonded terms",
+          "definition": "Energy terms for bond stretching, angle bending and torsion (dihedral) rotation."
+        },
+        {
+          "term": "Non-bonded terms",
+          "definition": "Lennard-Jones (van der Waals) and Coulomb electrostatic interactions between atoms not directly bonded."
+        },
+        {
+          "term": "Time step",
+          "definition": "The interval between successive force calculations, typically 2 fs when bonds to hydrogen are constrained."
+        },
+        {
+          "term": "Periodic boundary conditions",
+          "definition": "The simulation box is replicated in space so a molecule leaving one side re-enters the opposite side, avoiding surface artefacts."
+        },
+        {
+          "term": "Particle mesh Ewald",
+          "definition": "A method for accurate handling of long-range electrostatics in periodic systems."
+        },
+        {
+          "term": "Equilibration (NVT/NPT)",
+          "definition": "Stages that bring the system to the target temperature (constant volume) and pressure (constant pressure) before the production run."
+        },
+        {
+          "term": "RMSD / RMSF",
+          "definition": "Root-mean-square deviation from a reference structure over time; root-mean-square fluctuation per residue."
+        },
+        {
+          "term": "Enhanced sampling",
+          "definition": "Methods such as metadynamics, replica exchange or umbrella sampling to cross energy barriers that plain MD rarely crosses."
+        }
+      ],
+      "deeper": {
+        "beginner": "In MD the computer calculates the force on each atom from every other atom, moves them a tiny step, recalculates and repeats millions of times. The result is a trajectory showing how the protein moves in water at body temperature. Simulations are only as good as the force field and the time they run; many important events are slower than what can be simulated.",
+        "intermediate": "A typical protein-in-water system has tens of thousands of atoms, mostly water. After energy minimisation to remove clashes, NVT equilibration (about 100 ps) stabilises temperature and NPT equilibration stabilises pressure and density, then production runs of tens to hundreds of nanoseconds follow. Hands-on (about 4 h): follow the GROMACS lysozyme tutorial, then plot potential energy, temperature, pressure, RMSD of the backbone and RMSF per residue, and examine the structure in a viewer. A flat RMSD plateau suggests equilibrium on that timescale, not proof of convergence.",
+        "advanced": "Accuracy depends on the force field and water model (TIP3P, TIP4P-Ew); intrinsically disordered proteins and charged groups can be poorly represented in some combinations. Ligands need compatible parameters (GAFF, CGenFF), generated and checked carefully. Binding free energies can be estimated with MM-PBSA (cheap, approximate) or alchemical methods (FEP, TI), which are more rigorous but expensive. GPU acceleration has brought microsecond simulations within reach of single workstations."
+      },
+      "commonMistakes": [
+        "Treating a single short trajectory as proof of stability or a binding mode; use replicates and longer runs.",
+        "Skipping equilibration or ignoring warnings during grompp.",
+        "Interpreting RMSD alone; per-residue fluctuations and structural features matter too."
+      ],
+      "videos": [
+        {
+          "youtubeId": "O3YgILmo5V8",
+          "title": "Lecture 06, concept 01: From static structures to simulations",
+          "channel": "Erik Lindahl",
+          "level": "beginner",
+          "whyWatch": "Short introduction from a GROMACS developer on why simulation complements static structures."
+        },
+        {
+          "youtubeId": "XrLfl_b4X5k",
+          "title": "Lecture 06, concept 02: Molecular dynamics as prediction of motion - challenges",
+          "channel": "Erik Lindahl",
+          "level": "intermediate",
+          "whyWatch": "Explains the time-step, sampling and accuracy challenges in MD."
+        },
+        {
+          "youtubeId": "1oQlCIUm0Bo",
+          "title": "Introduction to Force Fields FF for Molecular Dynamics and Monte Carlo",
+          "channel": "The Computational Chemist",
+          "level": "intermediate",
+          "whyWatch": "Describes the terms of a force field and where they come from."
+        },
+        {
+          "youtubeId": "8oGZn1NdvbY",
+          "title": "GROMACS Tutorial 1: Lysozyme in water",
+          "channel": "GROMACS",
+          "level": "intermediate",
+          "whyWatch": "A full walkthrough of the standard lysozyme tutorial used in this practical."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nsb0902-646",
+          "title": "Molecular dynamics simulations of biomolecules",
+          "authors": "Karplus M, McCammon JA",
+          "year": 2002,
+          "journal": "Nature Structural Biology",
+          "level": "intermediate",
+          "whyItMatters": "A concise review by two pioneers of how MD works and what it has taught us about proteins."
+        },
+        {
+          "doi": "10.1016/j.softx.2015.06.001",
+          "title": "GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers",
+          "authors": "Abraham MJ, Murtola T, Schulz R, et al.",
+          "year": 2015,
+          "journal": "SoftwareX",
+          "level": "intermediate",
+          "whyItMatters": "Describes the software used in the practical and its parallel design."
+        },
+        {
+          "doi": "10.1063/1.445869",
+          "title": "Comparison of simple potential functions for simulating liquid water",
+          "authors": "Jorgensen WL, Chandrasekhar J, Madura JD, Impey RW, Klein ML",
+          "year": 1983,
+          "journal": "The Journal of Chemical Physics",
+          "level": "advanced",
+          "whyItMatters": "Introduced the TIP3P and TIP4P water models still in everyday use."
+        }
+      ],
+      "resources": [
+        {
+          "title": "GROMACS tutorials (Lemkul)",
+          "provider": "Justin A. Lemkul",
+          "type": "tutorial",
+          "url": "http://www.mdtutorials.com/gmx/",
+          "free": true,
+          "level": "intermediate",
+          "note": "The standard step-by-step tutorial series, starting with lysozyme in water."
+        },
+        {
+          "title": "UCSF ChimeraX",
+          "provider": "UCSF",
+          "type": "tool",
+          "url": "https://www.cgl.ucsf.edu/chimerax/",
+          "free": true,
+          "level": "intermediate",
+          "note": "View trajectories and measure distances and angles."
+        },
+        {
+          "title": "TeachOpenCADD",
+          "provider": "Volkamer Lab",
+          "type": "tutorial",
+          "url": "https://projects.volkamerlab.org/teachopencadd/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Python notebooks on cheminformatics and structural bioinformatics, including MD analysis topics."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Constraining bonds to hydrogen allows a time step of about",
+          "options": [
+            "0.01 fs",
+            "2 fs",
+            "2 ns",
+            "1 s"
+          ],
+          "answer": 1,
+          "explanation": "With hydrogen bonds constrained, the fastest vibrations are removed and 2 fs steps become stable."
+        },
+        {
+          "question": "The purpose of NPT equilibration is to",
+          "options": [
+            "Add ions",
+            "Bring pressure and density to the target value",
+            "Minimise the energy",
+            "Write the topology"
+          ],
+          "answer": 1,
+          "explanation": "NPT lets the box volume adjust so pressure and density stabilise before production."
+        },
+        {
+          "question": "A plateau in backbone RMSD during a short simulation",
+          "options": [
+            "Proves the protein is fully converged",
+            "Suggests stability on that timescale but not proof of convergence",
+            "Means the force field is correct",
+            "Means the simulation failed"
+          ],
+          "answer": 1,
+          "explanation": "A plateau is encouraging but longer runs and replicates are needed to claim convergence."
+        }
+      ]
+    },
+    {
+      "id": "drug-discovery-pipeline-and-targets",
+      "title": "The Drug Discovery Pipeline and Target Selection",
+      "hours": 5,
+      "hook": "Imatinib, the pill that turned a fatal leukaemia into a manageable condition for many patients, began as a protein-kinase inhibitor idea and ended as a landmark of rational design. Behind every approved drug are years of target choices, failed compounds and carefully designed experiments, and computers now help at nearly every stage.",
+      "learningObjectives": [
+        "Outline the stages from target identification to approval and the typical time, cost and attrition.",
+        "Describe how targets are identified and validated (genetics, omics, knock-down, CRISPR).",
+        "Explain hit finding strategies: HTS, fragment-based, virtual screening, natural products.",
+        "Distinguish hit, lead and candidate and the properties optimised in lead optimisation.",
+        "Compare structure-based and ligand-based drug design and when each is used.",
+        "Navigate PDB, UniProt, ChEMBL and PubChem to collect target and ligand information."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Target",
+          "definition": "A biomolecule (usually a protein) whose modulation is expected to give a therapeutic benefit."
+        },
+        {
+          "term": "Target validation",
+          "definition": "Evidence that modulating the target changes disease-relevant biology, from genetics, cell models and animal models."
+        },
+        {
+          "term": "High-throughput screening",
+          "definition": "Automated testing of hundreds of thousands of compounds in a biochemical or cellular assay to find hits."
+        },
+        {
+          "term": "Fragment-based design",
+          "definition": "Screening small low-affinity fragments and growing or linking them into potent leads guided by structure."
+        },
+        {
+          "term": "Hit-to-lead",
+          "definition": "Optimising confirmed hits for potency, selectivity and drug-like properties."
+        },
+        {
+          "term": "Structure-based drug design",
+          "definition": "Using the 3D structure of the target (and docking) to design or select ligands."
+        },
+        {
+          "term": "Ligand-based drug design",
+          "definition": "Using known active compounds, for example pharmacophores and QSAR, when the target structure is unknown."
+        },
+        {
+          "term": "Attrition",
+          "definition": "The loss of candidates during development, mostly in clinical trials due to lack of efficacy or toxicity."
+        },
+        {
+          "term": "Polypharmacology",
+          "definition": "The property of a drug acting on multiple targets, which may be beneficial or cause side effects."
+        }
+      ],
+      "deeper": {
+        "beginner": "Developing a drug resembles solving a puzzle with many pieces that must fit at once: the molecule must bind its target tightly, avoid other targets, reach the right tissue, survive the body's metabolism and not harm the patient. Early computational filters save time and money by discarding hopeless candidates before anyone makes them in a lab.",
+        "intermediate": "From target identification to market approval typically takes 10-15 years and well over a billion US dollars when failures are included, and most candidates entering clinical trials fail. Human genetic evidence (for example loss-of-function variants that protect against disease) increases the chance that a target will succeed. Computational methods fall into structure-based (docking, MD, FEP) and ligand-based (similarity, pharmacophore, QSAR) approaches, and large public databases (ChEMBL, PubChem, PDB) supply the data. Natural-product libraries from local biodiversity offer chemical diversity but need careful dereplication and ADMET evaluation.",
+        "advanced": "Targets are often classified by druggability, with GPCRs, kinases, ion channels, nuclear receptors and proteases historically the most tractable; protein-protein interactions and transcription factors have been harder to drug but new modalities (PROTACs, molecular glues, covalent inhibitors, antibodies) are expanding what is druggable. Phenotypic screening rediscovered many first-in-class drugs, so target-based and phenotypic strategies are complementary. Network pharmacology argues that effective drugs often act on several nodes of a disease network, and computational polypharmacology tries to predict these profiles."
+      },
+      "commonMistakes": [
+        "Believing computers can replace experiments; they prioritise compounds, which still have to be made and tested.",
+        "Assuming a tight binder is a good drug without considering ADMET and selectivity.",
+        "Confusing a target with a drug, or in vitro potency with clinical efficacy."
+      ],
+      "videos": [
+        {
+          "youtubeId": "4ZzJ-wYyiCU",
+          "title": "Lecture 3 Target and Lead Identification",
+          "channel": "NPTEL-NOC IITM",
+          "level": "intermediate",
+          "whyWatch": "A lecture on how targets and leads are identified in computer-aided drug design."
+        },
+        {
+          "youtubeId": "s4Tz5gl477A",
+          "title": "Insight Into Science 2025 - Drug Discovery",
+          "channel": "Balliol College, Oxford",
+          "level": "beginner",
+          "whyWatch": "An Oxford talk on the full drug discovery process and its challenges."
+        },
+        {
+          "youtubeId": "3_ChCUnPW3w",
+          "title": "Drug Discovery and Development | Detailed Explanation of Preclinical and Clinical Steps",
+          "channel": "Biology Lectures",
+          "level": "beginner",
+          "whyWatch": "A structured overview of each stage from discovery to clinical trials."
+        },
+        {
+          "youtubeId": "fMbVB_huh28",
+          "title": "Drug Discovery: What's the difference between structure based and ligand based virtual screening?",
+          "channel": "CCDCCambridge",
+          "level": "beginner",
+          "whyWatch": "A short, clear comparison of the two computational strategies."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1038/nchembio.118",
+          "title": "Network pharmacology: the next paradigm in drug discovery",
+          "authors": "Hopkins AL",
+          "year": 2008,
+          "journal": "Nature Chemical Biology",
+          "level": "advanced",
+          "whyItMatters": "Argues that effective drugs often act on multiple targets and that we should design for polypharmacology."
+        },
+        {
+          "doi": "10.1038/nrd3078",
+          "title": "How to improve R&D productivity: the pharmaceutical industry's grand challenge",
+          "authors": "Paul SM, Mytelka DS, Dunwiddie CT, et al.",
+          "year": 2010,
+          "journal": "Nature Reviews Drug Discovery",
+          "level": "intermediate",
+          "whyItMatters": "A model of attrition, cost and cycle time that explains why drug discovery is so expensive."
+        },
+        {
+          "doi": "10.1124/pr.112.007336",
+          "title": "Computational Methods in Drug Discovery",
+          "authors": "Sliwoski G, Kothiwale S, Meiler J, Lowe EW",
+          "year": 2014,
+          "journal": "Pharmacological Reviews",
+          "level": "intermediate",
+          "whyItMatters": "A broad review of structure- and ligand-based methods and where they fit in the pipeline."
+        }
+      ],
+      "resources": [
+        {
+          "title": "ChEMBL",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chembl/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Search bioactivity data for millions of compounds against thousands of targets."
+        },
+        {
+          "title": "PubChem",
+          "provider": "NCBI",
+          "type": "database",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/",
+          "free": true,
+          "level": "beginner",
+          "note": "Look up any compound's structure, properties and bioassay data."
+        },
+        {
+          "title": "RCSB Protein Data Bank",
+          "provider": "RCSB",
+          "type": "database",
+          "url": "https://www.rcsb.org/",
+          "free": true,
+          "level": "beginner",
+          "note": "Find experimental structures of targets, often with a bound ligand."
+        },
+        {
+          "title": "TeachOpenCADD",
+          "provider": "Volkamer Lab",
+          "type": "tutorial",
+          "url": "https://projects.volkamerlab.org/teachopencadd/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free Python notebooks that follow a computer-aided drug design workflow."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which stage typically has the highest attrition?",
+          "options": [
+            "Target identification",
+            "Clinical trials",
+            "Literature search",
+            "Patent filing"
+          ],
+          "answer": 1,
+          "explanation": "Most candidates fail in clinical trials, usually due to lack of efficacy or safety problems."
+        },
+        {
+          "question": "Ligand-based design is most appropriate when",
+          "options": [
+            "Many active compounds are known but the target structure is unavailable",
+            "The target structure is known and no ligands exist",
+            "No experimental data are available at all",
+            "You want to synthesise a protein"
+          ],
+          "answer": 0,
+          "explanation": "Ligand-based methods learn from known actives and do not need the 3D structure of the target."
+        },
+        {
+          "question": "Target validation aims to",
+          "options": [
+            "Show that modulating the target changes disease-relevant biology",
+            "Dock a ligand",
+            "Predict toxicity of a compound",
+            "Obtain a patent"
+          ],
+          "answer": 0,
+          "explanation": "Validation gives evidence that hitting the target should be therapeutically useful."
+        }
+      ]
+    },
+    {
+      "id": "docking-virtual-screening",
+      "title": "Molecular Docking and Virtual Screening (Practical)",
+      "hours": 7,
+      "hook": "Docking asks a deceptively simple question: if I place this small molecule into that pocket, how would it sit, and how snugly? Run a million times against a compound library it becomes virtual screening, a way to cherry-pick a few dozen candidates for the lab from a vast chemical space.",
+      "learningObjectives": [
+        "Explain the two components of docking: conformational search and scoring.",
+        "Prepare a receptor and ligands properly (remove waters selectively, add hydrogens, assign charges, protonation, tautomers).",
+        "Define a search box around a binding site and run AutoDock Vina.",
+        "Validate a docking protocol by redocking a co-crystallised ligand and computing RMSD.",
+        "Evaluate virtual screening with decoys, enrichment factor and ROC curves.",
+        "Interpret docking poses by visualising hydrogen bonds, hydrophobic and pi interactions and be aware of scoring limitations."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Docking",
+          "definition": "Predicting the binding pose and estimating the affinity of a ligand within a receptor site."
+        },
+        {
+          "term": "Scoring function",
+          "definition": "A function estimating binding free energy from the pose; force-field based, empirical, knowledge-based or machine-learned."
+        },
+        {
+          "term": "Search box",
+          "definition": "The region of the receptor in which the ligand is allowed to move during docking."
+        },
+        {
+          "term": "Redocking",
+          "definition": "Docking the co-crystallised ligand back into its own structure; success is typically an RMSD under 2 Angstroms."
+        },
+        {
+          "term": "Rigid vs flexible docking",
+          "definition": "Treating the receptor as fixed (common) or allowing selected side chains or backbone to move."
+        },
+        {
+          "term": "Virtual screening",
+          "definition": "Ranking large compound libraries by predicted binding to prioritise compounds for testing."
+        },
+        {
+          "term": "Enrichment factor",
+          "definition": "How many more actives are found in the top fraction of a ranked list than would be expected by chance."
+        },
+        {
+          "term": "PDBQT",
+          "definition": "The file format used by AutoDock Vina holding coordinates, partial charges and atom types, plus torsion information for ligands."
+        },
+        {
+          "term": "Decoys",
+          "definition": "Property-matched compounds presumed inactive, used to test whether a docking method can separate actives from inactives."
+        }
+      ],
+      "deeper": {
+        "beginner": "Think of the receptor pocket as a lock and the ligand as a key that can wiggle. The search algorithm tries many orientations and bends; the scoring function guesses how good each fit is. Scores help you rank, but the fits are only as reliable as the structure and the scoring function. Analogy break: real binding also depends on water, protein flexibility and entropy, which most scoring functions treat crudely.",
+        "intermediate": "Preparation matters more than the program. Retain structurally important waters, choose protonation states for His, Asp, Glu at pH 7.4, and generate 3D ligand conformers with RDKit or Open Babel; convert to PDBQT with ADFR tools or Meeko. Hands-on (about 4.5 h): choose a PDB entry with a ligand, redock it with Vina and report RMSD, dock a small set of known actives and decoys, rank by score, and visualise the top pose. Vina scores are in kcal/mol, but the numbers only roughly correlate with experimental affinity, so use them for ranking, not for absolute predictions.",
+        "advanced": "Scoring functions are tuned to reproduce poses and rank ligands but are poor at predicting absolute affinities, especially for charged or metal-binding ligands. Ultra-large library docking (Lyu et al. 2019) screened hundreds of millions of virtual molecules and found potent new chemotypes, showing how scale increases hit rates but also the number of false positives. Rescoring with MM-GBSA, MD simulations or free-energy calculations improves ranking for a short list. Always compare against appropriate controls, inspect poses for plausible interactions, and confirm hits experimentally."
+      },
+      "commonMistakes": [
+        "Taking a Vina score as a measured binding energy.",
+        "Skipping validation: always redock a known ligand and test enrichment before screening.",
+        "Docking with an unprepared structure (wrong protonation, missing atoms, a bound ligand left in place)."
+      ],
+      "videos": [
+        {
+          "youtubeId": "7mcBQPsgB98",
+          "title": "Lecture 12, concept 22: Docking scoring functions can be physical, empirical, or knowledge-based",
+          "channel": "Erik Lindahl",
+          "level": "intermediate",
+          "whyWatch": "Explains the three classes of scoring function and their trade-offs."
+        },
+        {
+          "youtubeId": "BLbXkhqbebs",
+          "title": "Autodock Vina Tutorial - Molecular Docking",
+          "channel": "Farhan Haq",
+          "level": "beginner",
+          "whyWatch": "A step-by-step AutoDock Vina session from protein preparation to results."
+        },
+        {
+          "youtubeId": "Sux91FJ3Xe8",
+          "title": "Molecular Docking Tutorial: AUTODOCK VINA - PART 1 | Beginners to Advanced",
+          "channel": "Sanket Bapat",
+          "level": "beginner",
+          "whyWatch": "Another detailed walk-through of preparing files and running Vina."
+        },
+        {
+          "youtubeId": "fMbVB_huh28",
+          "title": "Drug Discovery: What's the difference between structure based and ligand based virtual screening?",
+          "channel": "CCDCCambridge",
+          "level": "beginner",
+          "whyWatch": "Places docking in the wider virtual screening landscape."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1002/jcc.21334",
+          "title": "AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading",
+          "authors": "Trott O, Olson AJ",
+          "year": 2010,
+          "journal": "Journal of Computational Chemistry",
+          "level": "intermediate",
+          "whyItMatters": "The paper behind the docking program used in the practical; explains its scoring function and optimisation."
+        },
+        {
+          "doi": "10.1038/nrd1549",
+          "title": "Docking and scoring in virtual screening for drug discovery: methods and applications",
+          "authors": "Kitchen DB, Decornez H, Furr JR, Bajorath J",
+          "year": 2004,
+          "journal": "Nature Reviews Drug Discovery",
+          "level": "intermediate",
+          "whyItMatters": "A balanced review of docking algorithms, scoring and the pitfalls of virtual screening."
+        },
+        {
+          "doi": "10.1038/s41586-019-0917-9",
+          "title": "Ultra-large library docking for discovering new chemotypes",
+          "authors": "Lyu J, Wang S, Balius TE, et al.",
+          "year": 2019,
+          "journal": "Nature",
+          "level": "advanced",
+          "whyItMatters": "Demonstrates docking of over 100 million molecules and experimental validation of hits."
+        }
+      ],
+      "resources": [
+        {
+          "title": "AutoDock Vina",
+          "provider": "Scripps Research",
+          "type": "tool",
+          "url": "https://vina.scripps.edu/",
+          "free": true,
+          "level": "beginner",
+          "note": "Free docking software with documentation and tutorials."
+        },
+        {
+          "title": "TeachOpenCADD",
+          "provider": "Volkamer Lab",
+          "type": "tutorial",
+          "url": "https://projects.volkamerlab.org/teachopencadd/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Python tutorials for ligand preparation, docking-related analysis and virtual screening."
+        },
+        {
+          "title": "ZINC20",
+          "provider": "Irwin and Shoichet Labs",
+          "type": "database",
+          "url": "https://zinc20.docking.org/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Free database of purchasable compounds for virtual screening."
+        },
+        {
+          "title": "UCSF ChimeraX",
+          "provider": "UCSF",
+          "type": "tool",
+          "url": "https://www.cgl.ucsf.edu/chimerax/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Visualise poses and interactions and measure distances."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Redocking a co-crystallised ligand is used to",
+          "options": [
+            "Prove the drug works clinically",
+            "Validate that the docking protocol reproduces the known pose",
+            "Increase the binding affinity",
+            "Measure solubility"
+          ],
+          "answer": 1,
+          "explanation": "If the program cannot reproduce the experimental pose (RMSD below about 2 Angstroms), the setup should be revised."
+        },
+        {
+          "question": "Docking scores are best used for",
+          "options": [
+            "Absolute binding free energy prediction",
+            "Ranking compounds and generating hypotheses",
+            "Replacing experiments",
+            "Measuring toxicity"
+          ],
+          "answer": 1,
+          "explanation": "Scores correlate only roughly with affinity and are most useful for prioritisation."
+        },
+        {
+          "question": "An enrichment factor of 10 at the top 1 percent means",
+          "options": [
+            "10 percent of actives are in the top 1 percent",
+            "The top 1 percent contains 10 times more actives than random selection",
+            "Ten compounds were tested",
+            "The top 1 percent has 10 percent inhibition"
+          ],
+          "answer": 1,
+          "explanation": "EF compares the active fraction in the selected subset with the active fraction in the whole library."
+        }
+      ]
+    },
+    {
+      "id": "qsar-pharmacophore-admet",
+      "title": "Ligand-Based Design, QSAR, Pharmacophores and ADMET (Practical)",
+      "hours": 6,
+      "hook": "Sometimes you do not have the structure of the target, only a handful of molecules that work and many that do not. The ligand-based toolkit learns what the actives have in common, predicts new ones and checks whether they can survive the journey through a human body.",
+      "learningObjectives": [
+        "Calculate molecular descriptors and fingerprints and use Tanimoto similarity.",
+        "Build and validate a simple QSAR model and describe its applicability domain.",
+        "Develop a pharmacophore hypothesis from actives and use it to screen compounds.",
+        "Apply Lipinski's rule of five, Veber rules and PAINS filters and know their limits.",
+        "Predict ADMET properties with SwissADME and interpret results critically.",
+        "Write a short RDKit script that reads SMILES, computes properties and applies filters."
+      ],
+      "keyConcepts": [
+        {
+          "term": "SMILES",
+          "definition": "A text notation for molecular structures that can be parsed by software such as RDKit."
+        },
+        {
+          "term": "Molecular descriptor",
+          "definition": "A numerical property calculated from structure, such as molecular weight, logP, topological polar surface area or hydrogen-bond donors."
+        },
+        {
+          "term": "Fingerprint",
+          "definition": "A bit-string encoding of structural features, such as Morgan (ECFP) circular fingerprints; used for similarity searching."
+        },
+        {
+          "term": "Tanimoto coefficient",
+          "definition": "A similarity measure between two fingerprints: shared bits divided by the union of bits."
+        },
+        {
+          "term": "QSAR",
+          "definition": "Quantitative structure-activity relationship: a model relating descriptors to biological activity."
+        },
+        {
+          "term": "Applicability domain",
+          "definition": "The chemical space in which a QSAR model's predictions are reliable."
+        },
+        {
+          "term": "Pharmacophore",
+          "definition": "The 3D arrangement of features (donor, acceptor, hydrophobic, aromatic, charged) required for activity."
+        },
+        {
+          "term": "Rule of five",
+          "definition": "Lipinski's guideline for oral bioavailability: molecular weight up to 500, logP up to 5, no more than 5 H-bond donors and 10 acceptors."
+        },
+        {
+          "term": "ADMET",
+          "definition": "Absorption, distribution, metabolism, excretion and toxicity: properties that determine whether an active molecule becomes a usable drug."
+        }
+      ],
+      "deeper": {
+        "beginner": "Ligand-based design is a pattern-finding game. If every active compound shares a hydrogen-bond donor three Angstroms from an aromatic ring, then a new molecule with the same arrangement is a good candidate. ADMET filters then ask whether the molecule can be absorbed, avoid being destroyed or toxic and reach where it is needed.",
+        "intermediate": "A QSAR model is only as good as its data: a few dozen consistent assay results from a single series can support a local model, but predicting across diverse chemotypes needs thousands of compounds. Validate with cross-validation and an external test set that the model has never seen, and report both R2 and Q2 or RMSE. Hands-on (about 4 h): in RDKit, load SMILES for known inhibitors of a target from ChEMBL, compute Lipinski descriptors and Morgan fingerprints, cluster by Tanimoto similarity, train a random-forest regressor on pIC50, and test on a held-out set; then run SwissADME on the top compounds and compare predictions.",
+        "advanced": "Lipinski's rules were derived from orally administered drugs in clinical development in the 1990s and do not apply well to natural products, peptides, antibiotics or modern modalities (so-called beyond-rule-of-five space). QSAR faces activity cliffs, where small structural changes cause large activity changes, violating the similar-property principle, and random splits overestimate performance, so scaffold or time splits are better. The OECD principles for QSAR validation (defined endpoint, unambiguous algorithm, applicability domain, appropriate validation, mechanistic interpretation) are a useful checklist."
+      },
+      "commonMistakes": [
+        "Believing a molecule that passes Lipinski's rules is a drug; the rules only filter for likely oral absorption.",
+        "Evaluating a QSAR model on its training data or on a random split of near-duplicate compounds.",
+        "Trusting predicted ADMET values as measured properties."
+      ],
+      "videos": [
+        {
+          "youtubeId": "dOi8KwcecoM",
+          "title": "Lecture 12, concept 15: Quantitative structure-activity relationship (QSAR) tries to predict drugs",
+          "channel": "Erik Lindahl",
+          "level": "intermediate",
+          "whyWatch": "A short, rigorous introduction to the idea and limits of QSAR."
+        },
+        {
+          "youtubeId": "ME9yr2qCYwc",
+          "title": "Lecture 12, concept 17: An example pharmacophore",
+          "channel": "Erik Lindahl",
+          "level": "intermediate",
+          "whyWatch": "A concrete pharmacophore example showing how features are defined and used."
+        },
+        {
+          "youtubeId": "ulPPr0knauc",
+          "title": "Lecture 12, concept 08: Lipinski's rule(s) of 5",
+          "channel": "Erik Lindahl",
+          "level": "beginner",
+          "whyWatch": "Explains where the rule of five comes from and how it is used."
+        },
+        {
+          "youtubeId": "22UJxdx4tsY",
+          "title": "ADME & Lipinski's rules for drugs",
+          "channel": "Chem Help ASAP",
+          "level": "beginner",
+          "whyWatch": "A tutorial-style summary of ADME concepts and drug-likeness rules."
+        },
+        {
+          "youtubeId": "wOcIUkfFOqU",
+          "title": "SwissADME Complete Tutorial | ADME, Lipinski Rule, LogP, TPSA Explained for Drug Discovery",
+          "channel": "LearnBio360",
+          "level": "beginner",
+          "whyWatch": "A screen walk-through of entering SMILES and reading SwissADME outputs."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/S0169-409X(96)00423-1",
+          "title": "Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings",
+          "authors": "Lipinski CA, Lombardo F, Dominy BW, Feeney PJ",
+          "year": 1997,
+          "journal": "Advanced Drug Delivery Reviews",
+          "level": "intermediate",
+          "whyItMatters": "The paper that introduced the rule of five; reading the original shows the reasoning and its stated limits."
+        },
+        {
+          "doi": "10.1038/srep42717",
+          "title": "SwissADME: a free web tool to evaluate pharmacokinetics, drug-likeness and medicinal chemistry friendliness of small molecules",
+          "authors": "Daina A, Michielin O, Zoete V",
+          "year": 2017,
+          "journal": "Scientific Reports",
+          "level": "intermediate",
+          "whyItMatters": "Describes the tool used in the practical and the predictive models behind it."
+        },
+        {
+          "doi": "10.1021/jm4004285",
+          "title": "QSAR Modeling: Where Have You Been? Where Are You Going To?",
+          "authors": "Cherkasov A, Muratov EN, Fourches D, et al.",
+          "year": 2014,
+          "journal": "Journal of Medicinal Chemistry",
+          "level": "advanced",
+          "whyItMatters": "A critical overview of QSAR practice, validation and common mistakes."
+        }
+      ],
+      "resources": [
+        {
+          "title": "SwissADME",
+          "provider": "SIB Swiss Institute of Bioinformatics",
+          "type": "tool",
+          "url": "http://www.swissadme.ch/",
+          "free": true,
+          "level": "beginner",
+          "note": "Paste SMILES and get drug-likeness, pharmacokinetic predictions and the BOILED-Egg plot."
+        },
+        {
+          "title": "RDKit: Getting Started in Python",
+          "provider": "RDKit",
+          "type": "tutorial",
+          "url": "https://www.rdkit.org/docs/GettingStartedInPython.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "The official tutorial for reading molecules, computing descriptors and fingerprints."
+        },
+        {
+          "title": "TeachOpenCADD",
+          "provider": "Volkamer Lab",
+          "type": "tutorial",
+          "url": "https://projects.volkamerlab.org/teachopencadd/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Python notebooks on ligand-based screening, pharmacophores and compound filtering."
+        },
+        {
+          "title": "ChEMBL",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chembl/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Download curated bioactivity data to build a real QSAR data set."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "Which of these is a Lipinski rule-of-five criterion?",
+          "options": [
+            "Molecular weight at most 500",
+            "At least 20 rotatable bonds",
+            "Charge of exactly zero",
+            "Presence of a halogen"
+          ],
+          "answer": 0,
+          "explanation": "The rule of five: MW up to 500, logP up to 5, up to 5 H-bond donors and up to 10 acceptors."
+        },
+        {
+          "question": "A QSAR model should be evaluated on",
+          "options": [
+            "The training set only",
+            "An external test set not used in training",
+            "The compounds with the highest activity",
+            "Random noise"
+          ],
+          "answer": 1,
+          "explanation": "Performance on unseen data is the real test of predictive power."
+        },
+        {
+          "question": "A pharmacophore describes",
+          "options": [
+            "The exact sequence of a protein",
+            "The spatial arrangement of features needed for biological activity",
+            "The synthetic route to a drug",
+            "The patent status"
+          ],
+          "answer": 1,
+          "explanation": "It abstracts essential interaction features (donors, acceptors, hydrophobic and aromatic groups) in 3D."
+        }
+      ]
+    },
+    {
+      "id": "ai-machine-learning-and-mini-project",
+      "title": "Machine Learning in Drug Design and Integrated Mini-Project (Practical)",
+      "hours": 4,
+      "hook": "In 2020 a neural network trained on a few thousand molecules flagged halicin, a compound that had been sitting in a library, as a potent antibiotic with a novel structure, and experiments confirmed it. Machine learning is now woven into every stage of computational drug design, and the best results come from people who know exactly what could go wrong.",
+      "learningObjectives": [
+        "Explain how graph neural networks and fingerprint-based models represent molecules.",
+        "Describe generative models for molecules and what they can and cannot guarantee.",
+        "Identify common failure modes: data leakage, biased training sets, activity cliffs and over-optimistic validation.",
+        "Describe how AI-predicted structures and models fit into the structure-based pipeline.",
+        "Plan and run an integrated mini-project: choose a target, retrieve or model its structure, dock and rank compounds, filter by ADMET and write a short report.",
+        "Present results with appropriate uncertainty and propose experimental validation."
+      ],
+      "keyConcepts": [
+        {
+          "term": "Graph neural network",
+          "definition": "A neural network that learns directly from the molecular graph (atoms as nodes, bonds as edges)."
+        },
+        {
+          "term": "Generative model",
+          "definition": "A model that proposes new molecules, for example by sampling from a learned chemical space or by optimising a property."
+        },
+        {
+          "term": "Data leakage",
+          "definition": "When information from the test set leaks into training, giving unrealistic performance estimates."
+        },
+        {
+          "term": "Scaffold split",
+          "definition": "Splitting data so that test molecules have different core scaffolds from the training molecules, a stricter test of generalisation."
+        },
+        {
+          "term": "Activity cliff",
+          "definition": "A pair of similar compounds with very different activity, which challenges similarity-based models."
+        },
+        {
+          "term": "Explainability",
+          "definition": "Methods that show which features drive a prediction, helping chemists decide whether it is plausible."
+        },
+        {
+          "term": "Active learning",
+          "definition": "An iterative process in which a model selects the most informative compounds to test next."
+        },
+        {
+          "term": "Reproducible workflow",
+          "definition": "Documented, version-controlled steps with fixed random seeds and recorded software versions so others can repeat the analysis."
+        },
+        {
+          "term": "Applicability domain",
+          "definition": "The region of chemical space where a trained model's predictions can be trusted."
+        }
+      ],
+      "deeper": {
+        "beginner": "A machine-learning model is a very flexible curve-fitter. If you feed it good, diverse, well-measured data it learns real structure-activity patterns; if you feed it a biased or leaky data set, it will confidently learn the wrong thing. The ability to tell the two situations apart is the key skill of computational drug design in the AI era.",
+        "intermediate": "In practice the pipeline is: collect data (ChEMBL), curate it (standardise structures, remove duplicates, check assay comparability), choose a representation (fingerprints, descriptors or graphs), train with proper splits and report uncertainty. Mini-project (about 3 h of practical time plus self-study): choose a well-characterised target with a PDB structure and known actives, validate docking by redocking, screen 50-100 compounds including known actives and decoys, apply drug-likeness filters, and write a one-page report that states what is predicted, what is validated and what would need testing.",
+        "advanced": "Models trained on public data inherit their biases, such as an over-representation of well-studied targets and chemotypes, and ChEMBL assay data come from different labs with different protocols. Generative models often propose molecules that are hard to synthesise, so synthesisability scores and retrosynthesis tools are used alongside property optimisation. Prospective validation (testing predictions for compounds not yet made) is far more convincing than retrospective benchmarking, and the halicin and ultra-large docking papers are good examples of the former. The best workflows combine physics-based (docking, MD) and data-driven methods."
+      },
+      "commonMistakes": [
+        "Reporting performance on a random split of a data set with near-duplicate compounds.",
+        "Accepting a model's confident prediction without examining its training data or applicability domain.",
+        "Treating AI-generated molecules as ready-to-use: synthesisability, toxicity and novelty all need checking."
+      ],
+      "videos": [
+        {
+          "youtubeId": "IspBSwWCQ5Q",
+          "title": "Machine Learning in Drug Discovery: Ava Amini",
+          "channel": "Broad Institute",
+          "level": "intermediate",
+          "whyWatch": "A researcher explains how ML models are trained on molecular data and what they can do."
+        },
+        {
+          "youtubeId": "m1kTpZ2Ly5g",
+          "title": "Machine learning in drug discovery: what can go wrong? - Vikram Sundar",
+          "channel": "Churchill College, University of Cambridge",
+          "level": "intermediate",
+          "whyWatch": "A frank discussion of pitfalls such as data leakage and overfitting."
+        },
+        {
+          "youtubeId": "YQjqLwJe3OI",
+          "title": "Machine learning in action during drug discovery",
+          "channel": "Novartis",
+          "level": "beginner",
+          "whyWatch": "A short industry perspective on where ML helps in discovery projects."
+        }
+      ],
+      "papers": [
+        {
+          "doi": "10.1016/j.cell.2020.01.021",
+          "title": "A Deep Learning Approach to Antibiotic Discovery",
+          "authors": "Stokes JM, Yang K, Swanson K, et al.",
+          "year": 2020,
+          "journal": "Cell",
+          "level": "advanced",
+          "whyItMatters": "A prospective study in which a graph neural network helped find halicin and other new antibiotic candidates that were then tested in the lab."
+        },
+        {
+          "doi": "10.1038/s41573-019-0024-5",
+          "title": "Applications of machine learning in drug discovery and development",
+          "authors": "Vamathevan J, Clark D, Czodrowski P, et al.",
+          "year": 2019,
+          "journal": "Nature Reviews Drug Discovery",
+          "level": "intermediate",
+          "whyItMatters": "A balanced review of where ML is used across the pipeline and the practical challenges."
+        },
+        {
+          "doi": "10.1038/s42256-020-00236-4",
+          "title": "Drug discovery with explainable artificial intelligence",
+          "authors": "Jimenez-Luna J, Grisoni F, Schneider G",
+          "year": 2020,
+          "journal": "Nature Machine Intelligence",
+          "level": "advanced",
+          "whyItMatters": "Discusses why explainability matters for AI models used in chemistry and drug design."
+        }
+      ],
+      "resources": [
+        {
+          "title": "TeachOpenCADD",
+          "provider": "Volkamer Lab",
+          "type": "tutorial",
+          "url": "https://projects.volkamerlab.org/teachopencadd/",
+          "free": true,
+          "level": "intermediate",
+          "note": "A complete set of Python notebooks that can be adapted for your mini-project."
+        },
+        {
+          "title": "RDKit: Getting Started in Python",
+          "provider": "RDKit",
+          "type": "tutorial",
+          "url": "https://www.rdkit.org/docs/GettingStartedInPython.html",
+          "free": true,
+          "level": "intermediate",
+          "note": "Use for descriptor calculation, filters and fingerprints in the project."
+        },
+        {
+          "title": "AlphaFold Protein Structure Database",
+          "provider": "EMBL-EBI / DeepMind",
+          "type": "database",
+          "url": "https://alphafold.ebi.ac.uk/",
+          "free": true,
+          "level": "beginner",
+          "note": "If your target has no experimental structure, start here and check pLDDT at the binding site."
+        },
+        {
+          "title": "ChEMBL",
+          "provider": "EMBL-EBI",
+          "type": "database",
+          "url": "https://www.ebi.ac.uk/chembl/",
+          "free": true,
+          "level": "intermediate",
+          "note": "Source of bioactivity data for training and benchmarking."
+        }
+      ],
+      "selfCheck": [
+        {
+          "question": "A scaffold split is used to",
+          "options": [
+            "Speed up training",
+            "Test generalisation to new chemical series",
+            "Increase the data set size",
+            "Improve docking"
+          ],
+          "answer": 1,
+          "explanation": "Test molecules with different scaffolds give a stricter estimate of how a model performs on new chemotypes."
+        },
+        {
+          "question": "Data leakage in model evaluation means",
+          "options": [
+            "The data set is too small",
+            "Information from the test set influences training",
+            "The model is too simple",
+            "The data are public"
+          ],
+          "answer": 1,
+          "explanation": "Leakage produces overly optimistic performance estimates that fail on genuinely new data."
+        },
+        {
+          "question": "Prospective validation of an AI-generated compound means",
+          "options": [
+            "Testing it experimentally after it was predicted",
+            "Checking it against the training set",
+            "Docking it again",
+            "Publishing the SMILES"
+          ],
+          "answer": 0,
+          "explanation": "Prospective studies test predictions on compounds not used to build the model, ideally in the lab."
+        }
+      ]
+    }
+  ],
+  "courseVideos": [
+    {
+      "youtubeId": "hEUj-ZcxkcM",
+      "title": "Lecture 1 Introduction",
+      "channel": "NPTEL-NOC IITM",
+      "level": "intermediate",
+      "whyWatch": "The opening lecture of a course on computer-aided drug design."
+    },
+    {
+      "youtubeId": "TDzzvKoDOuQ",
+      "title": "Lecture 01, class introduction: From life to molecular biophysics",
+      "channel": "Erik Lindahl",
+      "level": "intermediate",
+      "whyWatch": "Introduces the molecular simulation and biophysics framework behind modelling and docking."
+    }
+  ],
+  "textbooks": [
+    {
+      "title": "TeachOpenCADD",
+      "provider": "Volkamer Lab",
+      "type": "tutorial",
+      "url": "https://projects.volkamerlab.org/teachopencadd/",
+      "free": true,
+      "level": "intermediate",
+      "note": "Open notebooks covering the full computer-aided drug design workflow."
+    },
+    {
+      "title": "GROMACS tutorials (Lemkul)",
+      "provider": "Justin A. Lemkul",
+      "type": "tutorial",
+      "url": "http://www.mdtutorials.com/gmx/",
+      "free": true,
+      "level": "intermediate",
+      "note": "The standard introduction to running MD simulations."
+    },
+    {
+      "title": "Biopython Tutorial and Cookbook",
+      "provider": "Biopython",
+      "type": "tutorial",
+      "url": "https://biopython.org/DIST/docs/tutorial/Tutorial.html",
+      "free": true,
+      "level": "intermediate",
+      "note": "Practical coding for alignment, phylogenetics and structure analysis."
+    }
+  ]
+}
